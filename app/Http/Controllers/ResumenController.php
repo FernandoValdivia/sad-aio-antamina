@@ -8,7 +8,7 @@ class ResumenController extends Controller
 {
     public function index() 
     {
-        $ugt_valle = \DB::table('distritos')->select(
+        $ugt_valle = DB::table('distritos')->select(
             'indice',
             'ugt',
             'distrito',
@@ -17,7 +17,7 @@ class ResumenController extends Controller
         ->where('ugt','UGT Valle Fortaleza')
         ->get();
 
-        $ugt_huall = \DB::table('distritos')->select(
+        $ugt_huall = DB::table('distritos')->select(
             'indice',
             'ugt',
             'distrito',
@@ -28,7 +28,7 @@ class ResumenController extends Controller
         ->where('ugt','UGT Huallanca')
         ->get();
 
-        $ugt_mina = \DB::table('distritos')->select(
+        $ugt_mina = DB::table('distritos')->select(
             'indice',
             'ugt',
             'distrito',
@@ -37,7 +37,7 @@ class ResumenController extends Controller
         ->where('ugt','UGT Mina / San Marcos')
         ->get();
 
-        $ugt_huarmey = \DB::table('distritos')->select(
+        $ugt_huarmey = DB::table('distritos')->select(
             'indice',
             'ugt',
             'distrito',
@@ -48,7 +48,7 @@ class ResumenController extends Controller
 
 
 
-        $proyectos = \DB::table('proyectos')->select(
+        $proyectos = DB::table('proyectos')->select(
             'departamento',
             'provincia',
             'distrito',
