@@ -10,10 +10,21 @@ return new class extends Migration
      * Run the migrations.
      *
      * @return void
+     * 
      */
+    protected $table = 'distritos';
+
     public function up()
     {
-        //
+        Schema::create('distritos',function(Blueprint $table){
+            $table->id();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->integer('phone_number');
+            $table->ipAddress('address')->nullable();
+            $table->rememberToken();
+
+      });
     }
 
     /**
@@ -23,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('distrito');
     }
 };
