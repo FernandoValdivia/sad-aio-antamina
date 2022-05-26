@@ -331,11 +331,11 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Quick Wins</td>
+                                <td>Short Term</td>
                                 <td class="text-center">
                                 <?php
                                     $count = DB::table('proyectos')
-                                            ->where('time_frame','Quick Wins')
+                                            ->where('time_frame','Short Term')
                                             ->count();
                                             echo $count;
                                 ?>
@@ -343,7 +343,7 @@
                                 <td class="text-center">
                                 <?php
                                     $sum = DB::table('proyectos')
-                                            ->where('time_frame','Quick Wins')
+                                            ->where('time_frame','Short Term')
                                             ->sum('monto_actualizado');
                                             echo number_format(round($sum,0));
                                 ?>
@@ -518,19 +518,7 @@
     <script src="js/main.js"></script>
     <!-- Script Map -->
     <script src="{{ asset('js/map-rsm.js')  }}"></script>
-    
-    <?php
-        //Funcion Calcular la cantidad de proyectos por distrito
-        function cantidadXDistrito($dis)
-        {
-            $cant_proy = DB::table('proyectos')
-                    ->where('distrito',$dis)
-                    ->count();
-                    echo $cant_proy;
-        }
-        
-    ?>
-
+    {{-- FlyTo --}}
     <script type="text/javascript">
         //Filtro para moverse entre ubicaciones
         document.getElementById('select-location').addEventListener('change', function(e){

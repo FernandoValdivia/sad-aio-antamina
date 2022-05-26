@@ -148,7 +148,7 @@
                                         <select id="time_frame" name="time_frame">
                                             <option value="Todos">Todos</option>
                                             <option value="First Engagement">First Engagement</option>
-                                            <option value="Quick Wins">Quick Wins</option>
+                                            <option value="Short Term">Short Term</option>
                                             <option value="Medium Term">Medium Term</option>
                                             <option value="Long Term">Long Term</option>
                                         </select>
@@ -344,7 +344,7 @@
                 case "First Engagement":
                     return 1;
                     break;
-                case "Quick Wins":
+                case "Short Term":
                     return 2;
                     break;
                 case "Medium Term":
