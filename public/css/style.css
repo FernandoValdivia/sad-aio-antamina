@@ -1115,7 +1115,7 @@ h3{
     padding-bottom: 10%;
     display: grid;
     gap: 7px;
-    grid-template-columns: 25% 23% 29% auto;
+    grid-template-columns: 25% 30% 26% auto;
     grid-template-rows: auto 10% 10% 10% 10% 10% 10% 14% 14%;
 }
 
