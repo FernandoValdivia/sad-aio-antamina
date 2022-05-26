@@ -1444,8 +1444,7 @@ h3{
 }
 
 .img-pt{
-    width: auto;
-    height: 100%;
+    width: 90%;
 }
 
 h5,h6 {
@@ -1543,6 +1542,10 @@ h5,h6 {
     border-radius: 15px;
     display: flex;
     align-items: center;
+}
+
+#img-potencialidad {
+    border-radius: 15px;
 }
 
 /* Map */

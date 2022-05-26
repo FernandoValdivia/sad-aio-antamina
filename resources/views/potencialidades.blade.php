@@ -104,7 +104,7 @@
                         </div>
                         <div class="col-4">
                             <div class="row"  id="select-location">
-                                <label id="label" for="unit">Unidad territorial</label>
+                                <label for="location">Unidad territorial</label>
                                 <select name="location" id="location" class="select">
                                     <option value="AIO">AIO</option>
                                     <optgroup label="UGT Huallanca">
@@ -141,7 +141,7 @@
                     </div>
                     <div class="row">
                         <div class="col-5 mb-2">
-                            <img src="img/Cadenas.png" alt="cadenas productivas" class="img-fluid">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581396/ccd/potencialidades/aquia_xsxyk8.png" alt="Potencialidades" class="img-fluid" id="img-potencialidad">
                         </div>
                         <div class="col-7 mb-2">
                             <div id="map-pt"></div>
@@ -211,7 +211,58 @@
 
     <!-- Script Map -->
     <script src="{{ asset('js/map-pt.js')  }}"></script>
+    <script src="{{ asset('js/map-proy.js')  }}"></script>
 
+    {{-- Markers --}}
+    <?php
+        $num = 0;
+        //Función para saber el tipo de time_frame para el marcador 
+        function markerType($type)
+        {
+            switch ($type) {
+                case "First Engagement":
+                    return 1;
+                    break;
+                case "Short Term":
+                    return 2;
+                    break;
+                case "Medium Term":
+                    return 3;
+                    break;
+                case "Long Term":
+                    return 4;
+                    break;
+                default:
+                    return 0;
+                    break;
+            }
+        }
+        
+        //Bucle para colocar marcadores en el mapa según el time_frame
+        foreach ($proyectos as $proy) {
+            $p = '['.$proy->latitud.','.$proy->longitud.']';
+            echo '<script type="text/javascript">',
+                'var marker',
+                $num,
+                ' = L.marker(',
+                $p,
+                ',{icon:marker',
+                markerType($proy->time_frame),
+                '}).addTo(mappt).bindPopup("<strong>Time frame: </strong>',
+                    $proy->time_frame,
+                    '</br><strong>Distrito: </strong>',
+                    $proy->distrito,
+                    '</br><strong>Monto Actualizado: </strong>',
+                    round($proy->monto_actualizado,2),
+                    '</br><strong>Proyecto: </strong>',
+                    $proy->producto_proyecto,
+                    '");',
+                '</script>';
+            $num = $num + $num;
+        }
+    ?>
+
+    {{-- FlyTo --}}
     <script type="text/javascript">
         //Filtro para moverse entre ubicaciones
         document.getElementById('select-location').addEventListener('change', function(e){
@@ -227,9 +278,9 @@
 
             //Si el select es AIO muestra todo el mapa, sino muestra solo la zona seleccionada
             if (coords=="AIO") {
-                map.flyTo([-9.979670961528786,-77.4041748046875], 9);
+                mappt.flyTo([-9.979670961528786,-77.4041748046875], 9);
             } else {
-                map.flyTo(coords, 15);
+                mappt.flyTo(coords, 15);
             }
             });
     </script>

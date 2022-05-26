@@ -157,34 +157,34 @@
                                 {{-- Factores --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label id="label" for="fac">Factores</label>
-                                        <select id="select" name="fac" id="fc">
-                                            <option value="">Todos</option>
-                                            <option value="">Educación</option>
-                                            <option value="">Institucionalidad</option>
-                                            <option value="">Nivel de vida digno (ingresos)</option>
-                                            <option value="">Nivel de vida digno (servicios básicos)</option>
-                                            <option value="">Salud</option>
+                                        <label for="fac">Factores</label>
+                                        <select id="factores" name="fac">
+                                            <option value="Todos">Todos</option>
+                                            <option value="Educación">Educación</option>
+                                            <option value="Institucionalidad">Institucionalidad</option>
+                                            <option value="Nivel de vida digno (ingresos)">Nivel de vida digno (ingresos)</option>
+                                            <option value="Nivel de vida digno (servicios básicos)">Nivel de vida digno (servicios básicos)</option>
+                                            <option value="Salud">Salud</option>
                                         </select>
                                     </div> 
                                 </div>
                                 {{-- Modalidad de inversión --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label id="label" for="mod">Modalidad de inversión</label>
-                                        <select id="select" name="mod" id="md">
-                                            <option value="">Todas</option>
-                                            <option value="">Inversión Pública (GL/GR/GN)</option>
-                                            <option value="">Inversión Social Directa Antamina: Proyectos Sociales</option>
-                                            <option value="">Inversión Social Gestión Pública y Privada</option>
+                                        <label for="mod">Modalidad de inversión</label>
+                                        <select id="modalidad" name="mod">
+                                            <option value="Todas">Todas</option>
+                                            <option value="Inversión Pública (GL/GR/GN)">Inversión Pública (GL/GR/GN)</option>
+                                            <option value="Inversión Social Directa Antamina: Proyectos Sociales">Inversión Social Directa Antamina: Proyectos Sociales</option>
+                                            <option value="Inversión Social Gestión Pública y Privada (Obras por impuesto)">Inversión Social Gestión Pública y Privada (Obras por impuesto)</option>
                                         </select>
                                     </div>
                                 </div>
                                 {{-- Año --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label id="label" for="unit">Año</label>
-                                        <select id="select" name="unit" id="ut">
+                                        <label for="unit">Año</label>
+                                        <select id="year" name="year">
                                             <option value="2017">2017</option>
                                             <option value="2021">2021</option>
                                             <option value="2022">2022</option>
@@ -335,6 +335,7 @@
     <!-- Script Map -->
     <script src="{{ asset('js/map-proy.js')  }}"></script>
 
+    {{-- Markers --}}
     <?php
         $num = 0;
         //Función para saber el tipo de time_frame para el marcador 
@@ -383,6 +384,7 @@
         }
     ?>
 
+    {{-- FlyTO --}}
     <script type="text/javascript">
         //Filtro para moverse entre ubicaciones
         document.getElementById('select-location').addEventListener('change', function(e){

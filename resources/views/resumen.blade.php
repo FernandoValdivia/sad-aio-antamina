@@ -169,7 +169,7 @@
                     <!-- Filtros -->
                     <div class="grid-rsm-9">
                         <div class="row" id="select-location">
-                            <label id="label" for="unit">Unidad territorial</label>
+                            <label for="location">Unidad territorial</label>
                             <select name="location" id="location" class="select">
                                 <option value="AIO">AIO</option>
                                 <optgroup label="UGT Huallanca">
@@ -201,7 +201,7 @@
                                     @endphp
                                 </optgroup>
                             </select>
-                            <label id="label" for="years" class="mt-3">Años</label>
+                            <label for="years" class="mt-3">Años</label>
                             <select name="years" id="yrs">
                                 <option value="Todos">Todos</option>
                                 <option value="2017">2017</option>
@@ -213,8 +213,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="grid-rsm-10">
-                    </div>
+                    <div class="grid-rsm-10"></div>
                     <!-- Potencialidades -->
                     <div class="grid-rsm-11">
                         <table>
@@ -236,8 +235,8 @@
                             <tr>
                                 <td>
                                     <div class="row mb-2" id="bg-pt-c">
-                                        <div class="col-3" id="img-pt-c">
-                                            <img src="img/cuy.svg" alt="" class="img-pt">
+                                        <div class="col-3">
+                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581398/ccd/potencialidades/cuy_g4xf4s.png" alt="Cuy" class="img-pt">
                                         </div>
                                         <div class="col-9 black-text">
                                             Cuyes y animales menores
@@ -261,7 +260,7 @@
                                 <td>
                                     <div class="row mb-2" id="bg-pt-m">
                                         <div class="col-3">
-                                            <img src="img/mine.svg" alt="" class="img-pt">
+                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581397/ccd/potencialidades/casco_xdimef.png" alt="" class="img-pt">
                                         </div>
                                         <div class="col-9">
                                             Mineria

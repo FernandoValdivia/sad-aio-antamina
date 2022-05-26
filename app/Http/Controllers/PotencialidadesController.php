@@ -46,6 +46,29 @@ class PotencialidadesController extends Controller
         ->where('ugt','UGT Huarmey')
         ->get();
 
-        return view('potencialidades', compact('ugt_valle','ugt_huall','ugt_mina','ugt_huarmey'));
+        $proyectos = \DB::table('proyectos')->select(
+            'departamento',
+            'provincia',
+            'distrito',
+            'ugt',
+            'codigo_unico',
+            'producto_proyecto',
+            'time_frame',
+            'entidad',
+            'tipo_de_inversion',
+            'a2021',
+            'monto_actualizado',
+            'a2022',
+            'a2023',
+            'a2024',
+            'a2025',
+            'latitud',
+            'longitud',
+            'anio',
+            'factores'
+        )
+        ->get();
+
+        return view('potencialidades', compact('proyectos','ugt_valle','ugt_huall','ugt_mina','ugt_huarmey'));
     }
 }
