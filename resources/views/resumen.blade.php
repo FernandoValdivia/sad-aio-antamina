@@ -222,62 +222,62 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="row mb-2" id="bg-pt-a">
-                                        <div class="col-3">
-                                            <img src="img/plant.svg" alt="" class="img-pt">
-                                        </div>
-                                        <div class="col-9">
-                                            Agroindustria
-                                        </div>
+                                <div class="row mb-2" id="bg-pt-a">
+                                    <div class="col-3">
+                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653588324/ccd/potencialidades/agro_fm7a4o.png" alt="Agroindustria" class="img-pt">
                                     </div>
+                                    <div class="col-9">
+                                        Agroindustria
+                                    </div>
+                                </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="row mb-2" id="bg-pt-c">
-                                        <div class="col-3">
-                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581398/ccd/potencialidades/cuy_g4xf4s.png" alt="Cuy" class="img-pt">
-                                        </div>
-                                        <div class="col-9 black-text">
-                                            Cuyes y animales menores
-                                        </div>
+                                <div class="row mb-2" id="bg-pt-c">
+                                    <div class="col-3">
+                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581398/ccd/potencialidades/cuy_g4xf4s.png" alt="Cuy" class="img-pt">
                                     </div>
+                                    <div class="col-9 black-text">
+                                        Cuyes y animales menores
+                                    </div>
+                                </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="row mb-2" id="bg-pt-l">
-                                        <div class="col-3">
-                                            <img src="img/milk.svg" alt="" class="img-pt">
-                                        </div>
-                                        <div class="col-9">
-                                            Lácteos
-                                        </div>
+                                <div class="row mb-2" id="bg-pt-l">
+                                    <div class="col-3">
+                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653588324/ccd/potencialidades/lacteo_wmvaye.png" alt="Lácteos" class="img-pt">
                                     </div>
+                                    <div class="col-9">
+                                        Lácteos
+                                    </div>
+                                </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="row mb-2" id="bg-pt-m">
-                                        <div class="col-3">
-                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581397/ccd/potencialidades/casco_xdimef.png" alt="" class="img-pt">
-                                        </div>
-                                        <div class="col-9">
-                                            Mineria
-                                        </div>
+                                <div class="row mb-2" id="bg-pt-m">
+                                    <div class="col-3">
+                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581397/ccd/potencialidades/casco_xdimef.png" alt="Mineria" class="img-pt">
                                     </div>
+                                    <div class="col-9">
+                                        Mineria
+                                    </div>
+                                </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="row mb-2" id="bg-pt-t">
-                                        <div class="col-3">
-                                            <img src="img/tourist.svg" alt="" class="img-pt">
-                                        </div>
-                                        <div class="col-9">
-                                            Turismo
-                                        </div>
+                                <div class="row mb-2" id="bg-pt-t">
+                                    <div class="col-3">
+                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653588444/ccd/potencialidades/turismo_vj5dsq.png" alt="Turismo" class="img-pt">
                                     </div>
+                                    <div class="col-9">
+                                        Turismo
+                                    </div>
+                                </div>
                                 </td>
                             </tr>
                         </table>
@@ -517,31 +517,5 @@
     <script src="js/main.js"></script>
     <!-- Script Map -->
     <script src="{{ asset('js/map-rsm.js')  }}"></script>
-    {{-- FlyTo --}}
-    <script type="text/javascript">
-        //Filtro para moverse entre ubicaciones
-        document.getElementById('select-location').addEventListener('change', function(e){
-            let coords = e.target.value.split(',');
-            
-            //Obtener el dato (texto) del filtro seleccionado
-            var select = document.getElementById("location"), //El <select>
-            value = select.value, //El valor seleccionado
-            distr = select.options[select.selectedIndex].innerText; //El texto de la opción seleccionada
-            
-            //Cambiar título dinámicamente
-            if (distr=="AIO") {
-                document.getElementById('titulo').textContent='IDH distritos del '+distr;
-            } else {
-                document.getElementById('titulo').textContent='IDH de '+distr;
-            }
-            
-            //Si el select es AIO muestra todo el mapa, sino muestra solo la zona seleccionada
-            if (coords=="AIO") {
-                map.flyTo([-9.979670961528786,-77.4041748046875], 9);
-            } else {
-                map.flyTo(coords, 13);
-            }
-        });
-    </script>
 </body>
 </html>

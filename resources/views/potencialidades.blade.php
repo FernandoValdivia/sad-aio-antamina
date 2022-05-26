@@ -139,11 +139,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-5 mb-2">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581396/ccd/potencialidades/aquia_xsxyk8.png" alt="Potencialidades" class="img-fluid" id="img-potencialidad">
+                    <div class="row mb-2">
+                        {{-- Imagen --}}
+                        <div class="col-5">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581394/ccd/potencialidades/antonio_raymondi_nhy0vm.png" alt="Potencialidades" class="img-fluid" id="img-potencialidad">
                         </div>
-                        <div class="col-7 mb-2">
+                        {{-- Mapa --}}
+                        <div class="col-7">
                             <div id="map-pt"></div>
                         </div>
                     </div>
@@ -211,7 +213,6 @@
 
     <!-- Script Map -->
     <script src="{{ asset('js/map-pt.js')  }}"></script>
-    <script src="{{ asset('js/map-proy.js')  }}"></script>
 
     {{-- Markers --}}
     <?php
@@ -261,28 +262,6 @@
             $num = $num + $num;
         }
     ?>
-
-    {{-- FlyTo --}}
-    <script type="text/javascript">
-        //Filtro para moverse entre ubicaciones
-        document.getElementById('select-location').addEventListener('change', function(e){
-            let coords = e.target.value.split(',');
-            
-            //Obtener el dato (texto) del filtro seleccionado
-            var select = document.getElementById("location"), //El <select>
-            value = select.value, //El valor seleccionado
-            distr = select.options[select.selectedIndex].innerText; //El texto de la opción seleccionada
-            
-            //Cambiar título dinámicamente
-            document.getElementById('titulo').textContent='Cadenas productivas en '+distr;
-
-            //Si el select es AIO muestra todo el mapa, sino muestra solo la zona seleccionada
-            if (coords=="AIO") {
-                mappt.flyTo([-9.979670961528786,-77.4041748046875], 9);
-            } else {
-                mappt.flyTo(coords, 15);
-            }
-            });
-    </script>
 </body>
 </html>
+

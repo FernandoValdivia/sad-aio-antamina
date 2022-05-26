@@ -13,21 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//
 Route::get('/', function () {
     return view('index');
 });
-
+//resumen
 Route::get('/resumen','ResumenController@index');
-
-Route::get('/brechas', function () {
-    return view('brechas');
-});
-
+//brechas
+Route::get('/brechas', 'BrechasController@index');
+//proyectos
 Route::get('/proyectos', 'ProyectosController@index');
 Route::post('/proyectos', 'ProyectosController@index');
-
+//recursos
 Route::get('/recursos', function () {
     return view('recursos');
 });
-
+//potencialidades
 Route::get('/potencialidades', 'PotencialidadesController@index');

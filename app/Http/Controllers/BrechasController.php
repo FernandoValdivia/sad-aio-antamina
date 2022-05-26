@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ResumenController extends Controller
+class BrechasController extends Controller
 {
     public function index() 
     {
@@ -68,6 +68,6 @@ class ResumenController extends Controller
             'factores'
         )
         ->get();
-        return view('resumen', compact('proyectos','ugt_valle','ugt_huall','ugt_mina','ugt_huarmey'));
+        return view('brechas', compact('proyectos','ugt_valle','ugt_huall','ugt_mina','ugt_huarmey'));
     }
 }

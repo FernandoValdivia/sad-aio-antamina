@@ -56,6 +56,30 @@ function getColor(d) {
                                         '#ffffff';
 }
 
+//FlyTo -> Filtro para moverse entre ubicaciones
+document.getElementById('select-location').addEventListener('change', function(e){
+    let coords = e.target.value.split(',');
+    
+    //Obtener el dato (texto) del filtro seleccionado
+    var select = document.getElementById("location"), //El <select>
+    value = select.value, //El valor seleccionado
+    distr = select.options[select.selectedIndex].innerText; //El texto de la opción seleccionada
+    
+    //Cambiar título dinámicamente
+    if (distr=="AIO") {
+        document.getElementById('titulo').textContent='IDH distritos del '+distr;
+    } else {
+        document.getElementById('titulo').textContent='IDH de '+distr;
+    }
+    
+    //Si el select es AIO muestra todo el mapa, sino muestra solo la zona seleccionada
+    if (coords=="AIO") {
+        map.flyTo([-9.979670961528786,-77.4041748046875], 9);
+    } else {
+        map.flyTo(coords, 13);
+    }
+});
+
 //Función para mostrar los colores
 function style(feature){ 
     return {
