@@ -82,10 +82,10 @@
                         <div class="col-lg-6 text-center text-lg-start">
                             <p class="display-3 animated slideInLeft text-white" id="home-text">Dales calidad, <br>es el mejor tipo de publicidad</p>
                             <p class="text-white animated slideInLeft mb-4 pb-2">El centro para la Competitividad y el Desarrollo (CCD) es una institución cuyo fin es promover el desarrollo sostenible del país en base al principio de la competitividad y de esta forma mejorar la calidad de vida de los ciudadanos.</p>
-                            <a href="/resumen" class="link me-3 animated slideInLeft"><strong>SAD AIO Antamina</strong><img src="img/arrow.svg" alt="Resumen" class="img-fluid ms-2"></a>
+                            <a href="/resumen" class="link me-3 animated slideInLeft"><strong>SAD AIO Antamina</strong><img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653584421/ccd/arrow_g6j19c.svg" alt="Flecha inicio" class="img-fluid ms-2"></a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid" src="img/home.png" alt="">
+                            <img class="img-fluid" src="https://res.cloudinary.com/lvaldivia/image/upload/v1653583881/ccd/home_fosq4i.png" alt="Volquete">
                         </div>
                     </div>
                 </div>

@@ -103,7 +103,7 @@
                             <p id="titulo" name="titulo">Cadenas productivas en AIO</p>
                         </div>
                         <div class="col-4">
-                            <div class="row"  id="select-location">
+                            <div class="row" id="select-location">
                                 <label for="location">Unidad territorial</label>
                                 <select name="location" id="location" class="select">
                                     <option value="AIO">AIO</option>
