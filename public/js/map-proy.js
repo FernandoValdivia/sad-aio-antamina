@@ -74,7 +74,7 @@ lengend.onAdd = function() {
                 '</tr>'+
                 '<tr>'+
                     '<td><img class="img-fluid" src="https://res.cloudinary.com/lvaldivia/image/upload/v1652367551/ccd/marker1_hdqypn.png"></td>'+
-                    '<td><h6>Quick Wins</h6></td>'+
+                    '<td><h6>Short Term</h6></td>'+
                 '</tr>'+
                 '<tr>'+
                     '<td><img class="img-fluid" src="https://res.cloudinary.com/lvaldivia/image/upload/v1652367551/ccd/marker2_weqa0n.png"></td>'+
