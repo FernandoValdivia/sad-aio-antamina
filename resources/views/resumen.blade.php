@@ -554,7 +554,7 @@
             } else {
                 map.flyTo(coords, 13);
             }
-            });
+        });
     </script>
 </body>
 </html>

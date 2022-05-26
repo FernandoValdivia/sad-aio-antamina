@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-/* Route::get('/resumen', function () {
-    return view('resumen');
-}); */
-
 Route::get('/resumen','ResumenController@index');
 
 Route::get('/brechas', function () {
