@@ -83,7 +83,7 @@
         </div>
         <!-- Navbar End -->
 
-        <!-- Resumen Start -->
+        <!-- Proyectos Start -->
         <div class="container-xxl py-5">
             <div class="container-fluid">
                 <div class="row g-5 align-items-center">
@@ -94,7 +94,7 @@
                     <div class="row" id="proy-card">
                         <!-- Filtros -->
                         <div class="row pt-3">
-                            <form class="filtros" action="/proyectos" method="post">
+                            <form action="/proyectos" method="post">
                                 @csrf
                                 {{-- Unidad territorial --}}
                                 <div class="col-2">
@@ -149,7 +149,7 @@
                                 {{-- Factores --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label for="fac">Factores</label>
+                                        <label id="label" for="fac">Factores</label>
                                         <select id="factores" name="fac">
                                             <option value="Todos">Todos</option>
                                             <option value="Educación">Educación</option>
@@ -163,7 +163,7 @@
                                 {{-- Modalidad de inversión --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label for="mod">Modalidad de inversión</label>
+                                        <label id="label" for="mod">Modalidad de inversión</label>
                                         <select id="modalidad" name="mod">
                                             <option value="Todas">Todas</option>
                                             <option value="Inversión Pública (GL/GR/GN)">Inversión Pública (GL/GR/GN)</option>
@@ -175,7 +175,7 @@
                                 {{-- Año --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label for="unit">Año</label>
+                                        <label id="label" for="unit">Año</label>
                                         <select id="year" name="year">
                                             <option value="2017">2017</option>
                                             <option value="2021">2021</option>
@@ -265,7 +265,7 @@
                 </div>
             </div>
         </div>
-        <!-- Resumen End -->
+        <!-- Proyectos End -->
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -375,26 +375,5 @@
             $num = $num + $num;
         }
     ?>
-
-    {{-- FlyTO --}}
-    <script type="text/javascript">
-        //Filtro para moverse entre ubicaciones
-        document.getElementById('select-location').addEventListener('change', function(e){
-            let coords = e.target.value.split(',');
-            
-            //Obtener el dato (texto) del filtro seleccionado
-            var select = document.getElementById("location"), //El <select>
-            value = select.value, //El valor seleccionado
-            distr = select.options[select.selectedIndex].innerText; //El texto de la opción seleccionada
-            
-            //Si el select es AIO muestra todo, sino muestra el seleccionado
-            if (coords=="AIO") {
-                mapp.flyTo([-9.979670961528786,-77.4041748046875], 9);
-            } else {
-                mapp.flyTo(coords, 13);
-            }
-            });
-    </script>
-
 </body>
 </html>

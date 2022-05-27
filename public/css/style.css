@@ -1645,7 +1645,10 @@ div .legendp img {
     border: #ddebfc 3px solid;
     border-radius: 10px;
     padding: 7px 10px 7px;
-    
+}
+
+#proy-card form {
+    align-items: flex-end;
 }
 
 #mapproy{

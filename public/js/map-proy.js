@@ -59,6 +59,18 @@ function style(_feature){
     };
 }
 
+//FlyTO -> Filtro para moverse entre ubicaciones
+document.getElementById('select-location').addEventListener('change', function(e){
+    let coords = e.target.value.split(',');
+
+    //Si el select es AIO muestra todo, sino muestra el seleccionado
+    if (coords=="AIO") {
+        mapp.flyTo([-9.979670961528786,-77.4041748046875], 9);
+    } else {
+        mapp.flyTo(coords, 13);
+    }
+});
+
 //Leyenda proyectos
 var lengend = L.control({ position: 'bottomleft' });
 
