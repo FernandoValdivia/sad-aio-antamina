@@ -217,66 +217,66 @@
                     <div class="grid-rsm-11">
                         <table>
                             <tr>
-                                <th><h5>Potencialidades</h5></th>
+                                <th><h5 class="mt-2">Potencialidades</h5></th>
                             </tr>
                             <tr>
                                 <td>
-                                <div class="row mb-2" id="bg-pt-a">
-                                    <div class="col-3">
-                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653588324/ccd/potencialidades/agro_fm7a4o.png" alt="Agroindustria" class="img-pt">
+                                    <div class="row mb-2" id="pot1">
+                                        <div class="col-3">
+                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653671407/ccd/potencialidades/agroindustria_xhbwig.png" alt="Agroindustria" class="img-pt">
+                                        </div>
+                                        <div class="col-9">
+                                            <p>Agroindustria</p>
+                                        </div>
                                     </div>
-                                    <div class="col-9">
-                                        Agroindustria
-                                    </div>
-                                </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                <div class="row mb-2" id="bg-pt-c">
-                                    <div class="col-3">
-                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581398/ccd/potencialidades/cuy_g4xf4s.png" alt="Cuy" class="img-pt">
+                                    <div class="row mb-2" id="pot2">
+                                        <div class="col-3">
+                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653671406/ccd/potencialidades/turismo_hsv6nn.png" alt="Turismo" class="img-pt">
+                                        </div>
+                                        <div class="col-9">
+                                            <p>Turismo</p>
+                                        </div>
                                     </div>
-                                    <div class="col-9 black-text">
-                                        Cuyes y animales menores
-                                    </div>
-                                </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                <div class="row mb-2" id="bg-pt-l">
-                                    <div class="col-3">
-                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653588324/ccd/potencialidades/lacteo_wmvaye.png" alt="Lácteos" class="img-pt">
+                                    <div class="row mb-2" id="pot3">
+                                        <div class="col-3">
+                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653671406/ccd/potencialidades/mineria_zmwczj.png" alt="Mineria" class="img-pt">
+                                        </div>
+                                        <div class="col-9">
+                                            <p>Mineria</p>
+                                        </div>
                                     </div>
-                                    <div class="col-9">
-                                        Lácteos
-                                    </div>
-                                </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                <div class="row mb-2" id="bg-pt-m">
-                                    <div class="col-3">
-                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581397/ccd/potencialidades/casco_xdimef.png" alt="Mineria" class="img-pt">
+                                    <div class="row mb-2" id="pot4">
+                                        <div class="col-3">
+                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653588324/ccd/potencialidades/lacteo_wmvaye.png" alt="Lácteos" class="img-pt">
+                                        </div>
+                                        <div class="col-9">
+                                            <p>Lácteos</p>
+                                        </div>
                                     </div>
-                                    <div class="col-9">
-                                        Mineria
-                                    </div>
-                                </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                <div class="row mb-2" id="bg-pt-t">
-                                    <div class="col-3">
-                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653588444/ccd/potencialidades/turismo_vj5dsq.png" alt="Turismo" class="img-pt">
+                                    <div class="row mb-2" id="pot5">
+                                        <div class="col-3" id="img-pt-c">
+                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581398/ccd/potencialidades/cuy_g4xf4s.png" alt="Cuy" class="img-pt">
+                                        </div>
+                                        <div class="col-9 mt-3">
+                                            <p>Cuyes y animales menores</p>
+                                        </div>
                                     </div>
-                                    <div class="col-9">
-                                        Turismo
-                                    </div>
-                                </div>
                                 </td>
                             </tr>
                         </table>

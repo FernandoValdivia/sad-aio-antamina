@@ -505,37 +505,51 @@ div .divlogo .col-9 {
     align-items: center;
 }
 
+#pot1 .col-9 {
+    padding: 4% 0 0 0;
+}
+
 #pot2 {
-    background-color: #F5E132;
+    background-color: #C0504D;
     border-radius: 15px;
     display: flex;
     align-items: center;
 }
 
-#pot2 p{
-    color: #000;
+#pot2 .col-9 {
+    padding: 4% 0 0 0;
 }
 
 #pot3 {
-    background-color: #BF0000;
+    background-color: #E46C0A;
     border-radius: 15px;
     display: flex;
     align-items: center;
+}
+
+#pot3 .col-9 {
+    padding: 4% 0 0 0;
 }
 
 #pot4 {
-    background-color: #6FA457;
+    background-color: #C00000;
     border-radius: 15px;
     display: flex;
     align-items: center;
 }
 
+#pot4 .col-9 {
+    padding: 4% 0 0 0;
+}
+
 #pot5 {
-    background-color: #F5895A;
+    background-color: #8064A2;
     border-radius: 15px;
     display: flex;
     align-items: center;
 }
+
+/**/
 
 .grid-br-21{
     grid-column: 3 / span 1;
@@ -1286,13 +1300,17 @@ h3{
     grid-column: 4 / span 1;
     grid-row: 6 / span 5;
     background-color: #00666680;
-    padding: 7%;
+    padding: 0 7% 0 7%;
     border-radius: 15px;
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 }
 
 .grid-rsm-11 td{
     color: #fff;
+}
+
+.grid-rsm-11 table{
+    height: 100%;
 }
 
 .grid-rsm-12{
@@ -1502,46 +1520,6 @@ h5,h6 {
     padding: 10%;
     color: #fff;
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-}
-
-#bg-pt-a {
-    padding: 3%;
-    background-color: #008080;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-}
-
-#bg-pt-c {
-    padding: 3%;
-    background-color: #F5E132;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-}
-
-#bg-pt-l {
-    padding: 3%;
-    background-color: #BF0000;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-}
-
-#bg-pt-m {
-    padding: 3%;
-    background-color: #6FA457;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-}
-
-#bg-pt-t {
-    padding: 3%;
-    background-color: #F5895A;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
 }
 
 #img-potencialidad {
