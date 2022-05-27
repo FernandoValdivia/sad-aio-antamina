@@ -1271,7 +1271,7 @@ h3{
 
 .grid-rsm-9{
     grid-column: 4 / span 1;
-    grid-row: 2 / span 3;
+    grid-row: 2 / span 4;
     height: 80%;
     background-color: #bad9fd81;
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
@@ -1282,6 +1282,17 @@ h3{
     padding: 7%;
 }
 
+.grid-rsm-9 input{
+    background-color: #bad9fd;
+    border: #ddebfc 3px solid;
+    border-radius: 10px;
+    padding: 7px 10px 7px;
+}
+
+.grid-rsm-9 input:hover{
+    background-color: #a9d1ff;
+}
+
 /* Select - Dropdown */
 .grid-rsm-9 select {
     background-color: #bad9fd;
@@ -1290,11 +1301,6 @@ h3{
     padding: 7px 10px 7px;
 }
 /**/
-
-.grid-rsm-10{
-    grid-column: 4 / span 1;
-    grid-row: 4 / span 2;
-}
 
 .grid-rsm-11{
     grid-column: 4 / span 1;

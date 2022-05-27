@@ -36,14 +36,6 @@
 </head>
 <body>
     <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Cargando...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
@@ -90,7 +82,7 @@
             </div>
         </div>
         <!-- Navbar & Hero End -->
-
+        
         <!-- Resumen Start -->
         <div class="container-xxl">
             <div class="container-fluid">
@@ -111,7 +103,13 @@
                             <small>(Índice)</small>
                         </div>
                         <div class="col-3">
-                            <h4>0,41</h4>
+                            <h4>
+                            <?php
+                            $idh = DB::table('idh')
+                                    ->avg('idh');
+                                echo sprintf('%.2f',$idh);
+                            ?>
+                            </h4>
                         </div>
                     </div>
                     <!-- Ingresos per cápita -->
@@ -121,7 +119,13 @@
                             <small>(Soles mensual)</small>
                         </div>
                         <div class="col-3">
-                            <h4>194</h4>
+                            <h4>
+                            <?php
+                            $ingr = DB::table('idh')
+                                    ->avg('ingreso_per_capita');
+                                echo sprintf('%.0f',$ingr);
+                            ?>
+                            </h4>
                         </div>
                     </div>
                     <!-- Brecha física -->
@@ -210,9 +214,9 @@
                                 <option value="2024">2024</option>
                                 <option value="2025">2025</option>
                             </select>
+                            <input type="submit" class="mt-3" value="Filtrar">
                         </div>
                     </div>
-                    <div class="grid-rsm-10"></div>
                     <!-- Potencialidades -->
                     <div class="grid-rsm-11">
                         <table>

@@ -68,6 +68,22 @@ class ResumenController extends Controller
             'factores'
         )
         ->get();
-        return view('resumen', compact('proyectos','ugt_valle','ugt_huall','ugt_mina','ugt_huarmey'));
+
+        $idh = \DB::table('idh')->select(
+            'distrito',
+            'idh',
+            'ingreso_per_capita',
+            'anio'
+        )
+        ->get();
+
+        return view('resumen', 
+            compact('proyectos',
+                    'ugt_valle',
+                    'ugt_huall',
+                    'ugt_mina',
+                    'ugt_huarmey',
+                    'idh'
+                ));
     }
 }
