@@ -204,7 +204,6 @@
                             <label for="years" class="mt-3">Años</label>
                             <select name="years" id="yrs">
                                 <option value="Todos">Todos</option>
-                                <option value="2017">2017</option>
                                 <option value="2021">2021</option>
                                 <option value="2022">2022</option>
                                 <option value="2023">2023</option>
