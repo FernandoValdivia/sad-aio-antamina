@@ -392,7 +392,7 @@
                     <div class="grid-rsm-13">
                         <table>
                             <tr>
-                                <th><h5>Modalidad de intervención</h5></th>
+                                <th><h5>Modalidad de <br>intervención</h5></th>
                                 <th class="text-center"><h6>Número</h6></th>
                                 <td class="text-center">
                                     <h6>Monto</h6>
