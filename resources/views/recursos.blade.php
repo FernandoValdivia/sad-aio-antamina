@@ -98,22 +98,35 @@
                         {{-- Filtros --}}
                         <div class="col-3 filters">
                             <label id="label" for="unit">Unidad territorial:</label>
-                            <select name="unit" id="ut">
+                            <select name="location" id="location" class="select">
                                 <option value="AIO">AIO</option>
                                 <optgroup label="UGT Huallanca">
-                                    <option value="">Aquia (Bolognesi / Áncash)</option>
-                                    <option value="">Chiquián (Bolognesi / Áncash)</option>
+                                    @php
+                                    foreach ($ugt_huall as $ugt) {
+                                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                    }
+                                    @endphp
                                 </optgroup>
                                 <optgroup label="UGT Huarmey">
-                                    <option value="">Huarmey (Huarmey / Áncash)</option>
+                                    @php
+                                    foreach ($ugt_huarmey as $ugt) {
+                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                    }
+                                    @endphp
                                 </optgroup>
                                 <optgroup label="UGT Mina / San Marcos">
-                                    <option value="">Chavín de Huántar (Huari / Áncash)</option>
-                                    <option value="">Huachis (Huari / Áncash)</option>
+                                    @php
+                                    foreach ($ugt_mina as $ugt) {
+                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                    }
+                                    @endphp
                                 </optgroup>
                                 <optgroup label="UGT Valle Fortaleza">
-                                    <option value="">Antonio Raymondi (Bolognesi / Áncash)</option>
-                                    <option value="">Cajacay (Bolognesi / Áncash)</option>
+                                    @php
+                                    foreach ($ugt_valle as $ugt) {
+                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                    }
+                                    @endphp
                                 </optgroup>
                             </select>
                         </div>

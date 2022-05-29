@@ -25,8 +25,6 @@ Route::get('/brechas', 'BrechasController@index');
 Route::get('/proyectos', 'ProyectosController@index');
 Route::post('/proyectos', 'ProyectosController@index');
 //recursos
-Route::get('/recursos', function () {
-    return view('recursos');
-});
+Route::get('/recursos', 'RecursosController@index');
 //potencialidades
 Route::get('/potencialidades', 'PotencialidadesController@index');
