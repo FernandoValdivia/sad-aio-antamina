@@ -100,33 +100,33 @@
                                 <div class="col-2">
                                     <div class="row"  id="select-location">
                                     <label id="label" for="unit">Unidad territorial</label>
-                                    <select name="location" id="location" class="select">
+                                    <select id="location" name="location" class="select">
                                         <option value="AIO">AIO</option>
                                         <optgroup label="UGT Huallanca">
                                             @php
                                             foreach ($ugt_huall as $ugt) {
-                                                    echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                                    echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
                                             }
                                             @endphp
                                         </optgroup>
                                         <optgroup label="UGT Huarmey">
                                             @php
                                             foreach ($ugt_huarmey as $ugt) {
-                                                echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
                                             }
                                             @endphp
                                         </optgroup>
                                         <optgroup label="UGT Mina / San Marcos">
                                             @php
                                             foreach ($ugt_mina as $ugt) {
-                                                echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
                                             }
                                             @endphp
                                         </optgroup>
                                         <optgroup label="UGT Valle Fortaleza">
                                             @php
                                             foreach ($ugt_valle as $ugt) {
-                                                echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
                                             }
                                             @endphp
                                         </optgroup>
@@ -149,8 +149,8 @@
                                 {{-- Factores --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label id="label" for="fac">Factores</label>
-                                        <select id="factores" name="fac">
+                                        <label id="label" for="factores">Factores</label>
+                                        <select id="factores" name="factores">
                                             <option value="Todos">Todos</option>
                                             <option value="Educación">Educación</option>
                                             <option value="Institucionalidad">Institucionalidad</option>
@@ -163,8 +163,8 @@
                                 {{-- Modalidad de inversión --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label id="label" for="mod">Modalidad de inversión</label>
-                                        <select id="modalidad" name="mod">
+                                        <label id="label" for="modalidad">Modalidad de inversión</label>
+                                        <select id="modalidad" name="modalidad">
                                             <option value="Todas">Todas</option>
                                             <option value="Inversión Pública (GL/GR/GN)">Inversión Pública (GL/GR/GN)</option>
                                             <option value="Inversión Social Directa Antamina: Proyectos Sociales">Inversión Social Directa Antamina: Proyectos Sociales</option>
@@ -175,7 +175,7 @@
                                 {{-- Año --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label id="label" for="unit">Año</label>
+                                        <label id="label" for="year">Año</label>
                                         <select id="year" name="year">
                                             <option value="2017">2017</option>
                                             <option value="2021">2021</option>
@@ -204,21 +204,25 @@
                                 <div class="row" id="card-info">
                                     <h2>
                                     <?php
-                                    if (isset($_POST['time_frame'])) {
+                                    if (isset($_POST['time_frame']) and isset($_POST['location']) and isset($_POST['factores']) and isset($_POST['modalidad']) and isset($_POST['year'])) {
                                         //Obtener el dato del select
-                                        $timeframe=$_POST['time_frame'];
-                                        if ($timeframe=='Todos') {
-                                            //Obtener el total de cantidad
-                                            $cant = DB::table('proyectos')
+                                        $timeframe = $_POST['time_frame'];
+                                        $location = $_POST['location'];
+                                        $factor = $_POST['factores'];
+                                        $modalidad = $_POST['modalidad'];
+                                        $anio = $_POST['year'];
+
+                                        $distrito = explode(",",$location);
+                                        $distrito_nom = $distrito[2];
+                                        
+                                        $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad, 'anio' => $anio];
+
+                                        //Obtener el total de cantidad
+                                        $cant = DB::table('proyectos')
+                                                    ->where($query)
                                                     ->count();
                                                     echo $cant;
-                                        } else {
-                                            //Obtener la cantidad segun el select
-                                            $cant = DB::table('proyectos')
-                                                    ->where('time_frame',$timeframe)
-                                                    ->count();
-                                                    echo $cant;
-                                        }
+                                        
                                     } else {
                                         //Obtener el total de cantidad
                                         $cant = DB::table('proyectos')
@@ -233,26 +237,30 @@
                                 <div class="row mt-1" id="card-info">
                                     <h2>
                                     <?php
-                                    if (isset($_POST['time_frame'])) {
+                                    if (isset($_POST['time_frame']) and isset($_POST['location']) and isset($_POST['factores']) and isset($_POST['modalidad']) and isset($_POST['year'])) {
                                         //Obtener el dato del select
-                                        $timeframe=$_POST['time_frame'];
-                                        if ($timeframe=='Todos') {
-                                            //Obtener el total de cantidad
-                                            $sum = DB::table('proyectos')
+                                        $timeframe = $_POST['time_frame'];
+                                        $location = $_POST['location'];
+                                        $factor = $_POST['factores'];
+                                        $modalidad = $_POST['modalidad'];
+                                        $anio = $_POST['year'];
+
+                                        $distrito = explode(",",$location);
+                                        $distrito_nom = $distrito[2];
+                                        
+                                        $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad, 'anio' => $anio];
+
+                                        //Obtener el monto segun los filtros
+                                        $sum = DB::table('proyectos')
+                                                    ->where($query)
                                                     ->sum('monto_actualizado');
-                                                    echo number_format($sum);
-                                        } else {
-                                            //Obtener la cantidad segun el select
-                                            $sum = DB::table('proyectos')
-                                                    ->where('time_frame',$timeframe)
-                                                    ->sum('monto_actualizado');
-                                                    echo number_format($sum);
-                                        }
+                                                    echo sprintf('%.2f',$sum);
+                                        
                                     } else {
-                                        //Obtener el total de cantidad
+                                        //Obtener el monto total
                                         $sum = DB::table('proyectos')
                                                 ->sum('monto_actualizado');
-                                                echo number_format($sum);
+                                                echo number_format(sprintf('%.2f',$sum));
                                     }
                                     ?>
                                     </h2>

@@ -61,8 +61,10 @@ document.getElementById('select-location').addEventListener('change', function(e
     
     //Si el select es AIO muestra todo el mapa, sino muestra solo la zona seleccionada
     if (coords=="AIO") {
+        document.getElementById('img-potencialidad').style.width = '100%';
         mappt.flyTo([-9.979670961528786,-77.4041748046875], 9);
     } else {
+        document.getElementById('img-potencialidad').style.width = '60%';
         mappt.flyTo(coords, 15);
     }
     
@@ -70,67 +72,67 @@ document.getElementById('select-location').addEventListener('change', function(e
     url = 'https://res.cloudinary.com/lvaldivia/image/upload/';
     switch (distr) {
         case 'Antonio Raymondi (Bolognesi / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581394/ccd/potencialidades/antonio_raymondi_nhy0vm.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022680/ccd/potencialidades/distritos/antonio_raymondi_uyoldv.png';
             break;
         case 'Aquia (Bolognesi / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581396/ccd/potencialidades/aquia_xsxyk8.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022677/ccd/potencialidades/distritos/aquia_s2in8s.png';
             break;
         case 'Cajacay (Bolognesi / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581394/ccd/potencialidades/cajacay_qgxlby.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022680/ccd/potencialidades/distritos/cajacay_hi3f1v.png';
             break;
         case 'Cátac (Recuay / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581395/ccd/potencialidades/catac_ydr82r.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022679/ccd/potencialidades/distritos/catac_gzh9aw.png';
             break;
         case 'Chavín de Huántar (Huari / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581397/ccd/potencialidades/chavin_de_huantar_zkve0p.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022679/ccd/potencialidades/distritos/chavin_de_huantar_ds6n5j.png';
             break;
         case 'Chiquián (Bolognesi / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581396/ccd/potencialidades/chiquian_x5fq0l.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022677/ccd/potencialidades/distritos/chiquian_wv1z96.png';
             break;
         case 'Colquioc (Bolognesi / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581402/ccd/potencialidades/colquioc_odho1e.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022679/ccd/potencialidades/distritos/colquioc_dvtqov.png';
             break;
         case 'Huachis (Huari / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581398/ccd/potencialidades/huachis_bxxdfw.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022678/ccd/potencialidades/distritos/huachis_shdv4o.png';
             break;
         case 'Huallanca (Bolognesi / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581399/ccd/potencialidades/huallanca_tviayx.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022679/ccd/potencialidades/distritos/huallanca_mt0bag.png';
             break;
         case 'Huarmey (Huarmey / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581400/ccd/potencialidades/huarmey_xedikr.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022679/ccd/potencialidades/distritos/huarmey_ij2grh.png';
             break;
         case 'Huayllacayán (Bolognesi / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581396/ccd/potencialidades/huayllacayan_wkmnl9.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022680/ccd/potencialidades/distritos/huayllacayan_p8fkwb.png';
             break;
         case 'Llacllín (Recuay / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581401/ccd/potencialidades/llacllin_rvirrq.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022679/ccd/potencialidades/distritos/llacllin_cf4bvz.png';
             break;
         case 'Llata (Huamalíes / Huánuco)':
-            document.getElementById("img-potencialidad").src=url+'v1653581397/ccd/potencialidades/llata_bpvxts.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022681/ccd/potencialidades/distritos/llata_s1d0bv.png';
             break;
         case 'Marca (Recuay / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581396/ccd/potencialidades/marca_ahdpof.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022681/ccd/potencialidades/distritos/marca_dsylh1.png';
             break;
         case 'Pampas Chico (Recuay / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581396/ccd/potencialidades/pampas_chico_xaj4yv.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022681/ccd/potencialidades/distritos/pampas_chico_vmmvql.png';
             break;
         case 'Paramonga (Barranca / Lima)':
-            document.getElementById("img-potencialidad").src=url+'v1653581399/ccd/potencialidades/paramonga_otixtu.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022679/ccd/potencialidades/distritos/paramonga_zkaajz.png';
             break;
         case 'Pararín (Recuay / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581399/ccd/potencialidades/pararin_nvpxer.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022680/ccd/potencialidades/distritos/pararin_coffnk.png';
             break;
         case 'Puños (Huamalíes / Huánuco)':
-            document.getElementById("img-potencialidad").src=url+'v1653581397/ccd/potencialidades/punos_wcaywp.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022677/ccd/potencialidades/distritos/punios_bjm0vt.png';
             break;
         case 'San Marcos (Huari / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581399/ccd/potencialidades/san_marcos_yu0lxg.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022678/ccd/potencialidades/distritos/san_marcos_q8t4je.png';
             break;
         case 'San Pedro de Chaná (Huari / Áncash)':
-            document.getElementById("img-potencialidad").src=url+'v1653581399/ccd/potencialidades/san_pedro_de_chana_qqjdit.png';
+            document.getElementById("img-potencialidad").src=url+'v1654022678/ccd/potencialidades/distritos/san_pedro_de_chana_mpihgb.png';
             break;
         case 'AIO':
-            document.getElementById("img-potencialidad").src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/No_image_available_450_x_600.svg/450px-No_image_available_450_x_600.svg.png';
+            document.getElementById("img-potencialidad").src=url+'v1654021921/ccd/General-AOI_iyrrbu.png';
             break;
         default:
             document.getElementById("img-potencialidad").src='';

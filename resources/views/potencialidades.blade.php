@@ -85,7 +85,7 @@
         </div>
         <!-- Navbar End -->
 
-        <!-- Resumen Start -->
+        <!-- Potencialidades -->
         <div class="container-xxl py-5">
             <div class="container-hor">
                 <div class="row g-5 align-items-center">
@@ -131,20 +131,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mb-2">
+                    <div class="row mb-2" id="img-map">
                         {{-- Imagen --}}
-                        <div class="col-5">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581394/ccd/potencialidades/antonio_raymondi_nhy0vm.png" alt="Potencialidades" class="img-fluid" id="img-potencialidad">
-                        </div>
+                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1654021921/ccd/General-AOI_iyrrbu.png" alt="Potencialidades"  id="img-potencialidad">
                         {{-- Mapa --}}
-                        <div class="col-7">
-                            <div id="map-pt"></div>
-                        </div>
+                        <div id="map-pt"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Resumen End -->
+        <!-- Potencialidades End -->
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -254,6 +250,9 @@
             $num = $num + $num;
         }
     ?>
+    {{-- Zoom Libraries --}}
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js" ></script>
+    <script src="{{ asset('js/zoom.js')  }}"></script>
 </body>
 </html>
 
