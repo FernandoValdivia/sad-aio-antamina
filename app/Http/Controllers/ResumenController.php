@@ -77,13 +77,37 @@ class ResumenController extends Controller
         )
         ->get();
 
+        $canon = \DB::table('canon')->select(
+            'distrito',
+            'monto',
+            'anio'
+        )
+        ->get();
+
+        $inversion = \DB::table('inversion_social')->select(
+            'distrito',
+            'monto',
+            'anio'
+        )
+        ->get();
+
+        $potencialidades = \DB::table('potencialidades')->select(
+            'distrito',
+            'potencialidad',
+            'url'
+        )
+        ->get();
+
         return view('resumen', 
             compact('proyectos',
                     'ugt_valle',
                     'ugt_huall',
                     'ugt_mina',
                     'ugt_huarmey',
-                    'idh'
+                    'idh',
+                    'canon',
+                    'inversion',
+                    'potencialidades'
                 ));
     }
 }

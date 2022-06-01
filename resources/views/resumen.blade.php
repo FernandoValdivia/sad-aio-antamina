@@ -172,50 +172,62 @@
                     </div>
                     <!-- Filtros -->
                     <div class="grid-rsm-9">
-                        <div class="row" id="select-location">
-                            <label for="location">Unidad territorial</label>
-                            <select name="location" id="location" class="select">
-                                <option value="AIO">AIO</option>
-                                <optgroup label="UGT Huallanca">
-                                    @php
-                                       foreach ($ugt_huall as $ugt) {
-                                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                       }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Huarmey">
-                                    @php
-                                       foreach ($ugt_huarmey as $ugt) {
-                                           echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                       }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Mina / San Marcos">
-                                    @php
-                                       foreach ($ugt_mina as $ugt) {
-                                           echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                       }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Valle Fortaleza">
-                                    @php
-                                       foreach ($ugt_valle as $ugt) {
-                                           echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                       }
-                                    @endphp
-                                </optgroup>
-                            </select>
-                            <label for="years" class="mt-3">Años</label>
-                            <select name="years" id="yrs">
-                                <option value="Todos">Todos</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                            </select>
-                            <input type="submit" class="mt-3" value="Filtrar">
-                        </div>
+                        <form action="/resumen" method="POST">
+                            @csrf
+                            <div class="row" id="select-location">
+                                <label for="location">Unidad territorial</label>
+                                <select name="location" id="location" class="select">
+                                    <option value="AIO">AIO</option>
+                                    <optgroup label="UGT Huallanca">
+                                        @php
+                                        foreach ($ugt_huall as $ugt) {
+                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'"> 
+                                                    <?php
+                                                    if(isset($_POST[`location`])){
+                                                        if ($_POST[`location`]=='.$ugt->coords.','.$ugt->distrito.'){
+                                                            echo "selected=`selected`";
+                                                        }
+                                                    } else { echo "selected=`selected`";}
+                                                    ?>
+                                                    '.$ugt->distrito.'</option>';
+                                        }
+                                        @endphp
+                                        
+                                    </optgroup>
+                                    <optgroup label="UGT Huarmey">
+                                        @php
+                                        foreach ($ugt_huarmey as $ugt) {
+                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
+                                        }
+                                        @endphp
+                                    </optgroup>
+                                    <optgroup label="UGT Mina / San Marcos">
+                                        @php
+                                        foreach ($ugt_mina as $ugt) {
+                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
+                                        }
+                                        @endphp
+                                    </optgroup>
+                                    <optgroup label="UGT Valle Fortaleza">
+                                        @php
+                                        foreach ($ugt_valle as $ugt) {
+                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
+                                        }
+                                        @endphp
+                                    </optgroup>
+                                </select>
+                                <label for="years" class="mt-3">Años</label>
+                                <select name="years" id="yrs">
+                                    <option value="Todos">Todos</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                </select>
+                                <input type="submit" class="mt-3" value="Filtrar">
+                            </div>
+                        </form>
                     </div>
                     <!-- Potencialidades -->
                     <div class="grid-rsm-11">
@@ -223,66 +235,44 @@
                             <tr>
                                 <th><h5 class="mt-2">Potencialidades</h5></th>
                             </tr>
-                            <tr>
-                                <td>
-                                    <div class="row mb-2" id="pot1">
-                                        <div class="col-3">
-                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653671407/ccd/potencialidades/agroindustria_xhbwig.png" alt="Agroindustria" class="img-pt">
+                            <?php                           
+                                if (isset($_POST['location'])) {
+                                    $location = $_POST['location'];
+                                    $distrito = explode(",",$location);
+                                    $distrito_nom = $distrito[2];
+                                    $potencialidad = DB::table('potencialidades')->select(
+                                        'distrito',
+                                        'potencialidad',
+                                        'url',
+                                        'hexcolor'
+                                    )
+                                    ->where('distrito',$distrito_nom)
+                                    ->get();
+                                } else {
+                                    $potencialidad = DB::table('potencialidades')->select(
+                                        'distrito',
+                                        'potencialidad',
+                                        'url',
+                                        'hexcolor'
+                                    )
+                                    ->where('distrito','Huachis (Huari / Áncash)')
+                                    ->get();
+                                }
+                            ?>
+                            @foreach ($potencialidad as $poten)
+                                <tr>
+                                    <td>
+                                        <div class="row mb-2" id="pot1" style="background-color: {{$poten->hexcolor}};">
+                                            <div class="col-3">
+                                                <img src="{{ $poten->url }}" class="img-pt">
+                                            </div>
+                                            <div class="col-9">
+                                                <p id="idpotencialidad">{{ $poten->potencialidad }}</p>
+                                            </div>
                                         </div>
-                                        <div class="col-9">
-                                            <p>Agroindustria</p>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="row mb-2" id="pot2">
-                                        <div class="col-3">
-                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653671406/ccd/potencialidades/turismo_hsv6nn.png" alt="Turismo" class="img-pt">
-                                        </div>
-                                        <div class="col-9">
-                                            <p>Turismo</p>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="row mb-2" id="pot3">
-                                        <div class="col-3">
-                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653671406/ccd/potencialidades/mineria_zmwczj.png" alt="Mineria" class="img-pt">
-                                        </div>
-                                        <div class="col-9">
-                                            <p>Mineria</p>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="row mb-2" id="pot4">
-                                        <div class="col-3">
-                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653588324/ccd/potencialidades/lacteo_wmvaye.png" alt="Lácteos" class="img-pt">
-                                        </div>
-                                        <div class="col-9">
-                                            <p>Lácteos</p>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="row mb-2" id="pot5">
-                                        <div class="col-3" id="img-pt-c">
-                                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581398/ccd/potencialidades/cuy_g4xf4s.png" alt="Cuy" class="img-pt">
-                                        </div>
-                                        <div class="col-9 mt-3">
-                                            <p>Cuyes y animales menores</p>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </table>
                     </div>
                     <!-- Proyectos -->
@@ -309,7 +299,7 @@
                                 <?php
                                     $sum = DB::table('proyectos')
                                             ->sum('monto_actualizado');
-                                            echo number_format(round($sum,0));
+                                            echo number_format($sum,0);
                                 ?>
                                 </strong></th>
                             </tr>
@@ -328,7 +318,7 @@
                                     $sum = DB::table('proyectos')
                                             ->where('time_frame','First Engagement')
                                             ->sum('monto_actualizado');
-                                            echo number_format(round($sum,0));
+                                            echo number_format($sum,0);
                                 ?>  
                                 </td>
                             </tr>
@@ -347,7 +337,7 @@
                                     $sum = DB::table('proyectos')
                                             ->where('time_frame','Short Term')
                                             ->sum('monto_actualizado');
-                                            echo number_format(round($sum,0));
+                                            echo number_format($sum,0);
                                 ?>
                                 </td>
                             </tr>
@@ -366,7 +356,7 @@
                                     $sum = DB::table('proyectos')
                                             ->where('time_frame','Medium Term')
                                             ->sum('monto_actualizado');
-                                            echo number_format(round($sum,0));
+                                            echo number_format($sum,0);
                                 ?> 
                                 </td>
                             </tr>
@@ -385,7 +375,7 @@
                                     $sum = DB::table('proyectos')
                                             ->where('time_frame','Long Term')
                                             ->sum('monto_actualizado');
-                                            echo number_format(round($sum,0));
+                                            echo number_format($sum,0);
                                 ?> 
                                 </td>
                             </tr>
@@ -404,18 +394,66 @@
                             </tr>
                             <tr>
                                 <td>Proyectos sociales</td>
-                                <td class="text-center">83</td>
-                                <td class="text-center">101</td>
+                                {{-- Cantidad --}}
+                                <td class="text-center">
+                                <?php
+                                    $cant = DB::table('proyectos')
+                                            ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                            ->count();
+                                            echo $cant;
+                                ?>
+                                </td>
+                                {{-- Monto --}}
+                                <td class="text-center">
+                                <?php
+                                    $sum = DB::table('proyectos')
+                                            ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                            ->sum('monto_actualizado');
+                                            echo number_format($sum,0);
+                                ?>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Pública y privada</td>
-                                <td class="text-center">52</td>
-                                <td class="text-center">1.369</td>
+                                {{-- Cantidad --}}
+                                <td class="text-center">
+                                <?php
+                                    $cant = DB::table('proyectos')
+                                            ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                            ->count();
+                                            echo $cant;
+                                ?>
+                                </td>
+                                {{-- Monto --}}
+                                <td class="text-center">
+                                <?php
+                                    $sum = DB::table('proyectos')
+                                            ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                            ->sum('monto_actualizado');
+                                            echo number_format($sum,0);
+                                ?>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Inversión pública</td>
-                                <td class="text-center">701</td>
-                                <td class="text-center">2.447</td>
+                                {{-- Cantidad --}}
+                                <td class="text-center">
+                                <?php
+                                    $cant = DB::table('proyectos')
+                                            ->where('tipo_de_inversion','Inversión Pública (GL/GR/GN)')
+                                            ->count();
+                                            echo $cant;
+                                ?>
+                                </td>
+                                {{-- Monto --}}
+                                <td class="text-center">
+                                <?php
+                                    $sum = DB::table('proyectos')
+                                            ->where('tipo_de_inversion','Inversión Pública (GL/GR/GN)')
+                                            ->sum('monto_actualizado');
+                                            echo number_format($sum,0);
+                                ?>
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -433,9 +471,35 @@
                                     <h5>Mineria y otros</h5>
                                     <small>(Millones de Soles)</small>
                                 </th>
-                                <td class="text-center">3.818</td>
-                                <td class="text-center">813</td>
-                                <td class="text-center">7.909</td>
+                                {{-- 2007-2021 --}}
+                                <td class="text-center">
+                                <?php
+                                    $sum = DB::table('canon')
+                                            ->where('anio','<=',2021,'and')
+                                            ->where('anio','>=',2007)
+                                            ->sum('monto');
+                                            echo number_format($sum,0);
+                                ?> 
+                                </td>
+                                {{-- 2022 --}}
+                                <td class="text-center">
+                                <?php
+                                    $sum = DB::table('canon')
+                                            ->where('anio',2022)
+                                            ->sum('monto');
+                                            echo number_format($sum,0);
+                                ?> 
+                                </td>
+                                {{-- 2023-2036 --}}
+                                <td class="text-center">
+                                <?php
+                                    $sum = DB::table('canon')
+                                            ->where('anio','<=',2036,'and')
+                                            ->where('anio','>=',2023)
+                                            ->sum('monto');
+                                            echo number_format($sum,0);
+                                ?> 
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -452,8 +516,24 @@
                                     <h5>Directa Antamina</h5>
                                     <small>(Millones de Soles)</small>
                                 </th>
-                                <td class="text-center">101</td>
-                                <td class="text-center">108</td>
+                                {{-- 2022 --}}
+                                <td class="text-center">
+                                <?php
+                                    $is_sum = DB::table('inversion_social')
+                                            ->where('anio',2022)
+                                            ->sum('monto');
+                                            echo number_format($is_sum,0);
+                                ?> 
+                                </td>
+                                {{-- 2023 --}}
+                                <td class="text-center">
+                                <?php
+                                    $is_sum2 = DB::table('inversion_social')
+                                            ->where('anio',2023)
+                                            ->sum('monto');
+                                            echo number_format($is_sum2,0);
+                                ?>
+                                </td>
                             </tr>
                         </table>
                     </div>

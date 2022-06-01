@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 //resumen
 Route::get('/resumen','ResumenController@index');
+Route::post('/resumen','ResumenController@index');
 //brechas
 Route::get('/brechas', 'BrechasController@index');
 //proyectos

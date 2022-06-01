@@ -507,7 +507,11 @@ class ComposerStaticInit67fe81661db5d4dfa48cf70503d1d3fd
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\BrechasController' => __DIR__ . '/../..' . '/app/Http/Controllers/BrechasController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\PotencialidadesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PotencialidadesController.php',
+        'App\\Http\\Controllers\\ProyectosController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProyectosController.php',
+        'App\\Http\\Controllers\\RecursosController' => __DIR__ . '/../..' . '/app/Http/Controllers/RecursosController.php',
         'App\\Http\\Controllers\\ResumenController' => __DIR__ . '/../..' . '/app/Http/Controllers/ResumenController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',

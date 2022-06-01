@@ -203,66 +203,78 @@
                                 {{-- Cantidad de proyectos --}}
                                 <div class="row" id="card-info">
                                     <h2>
-                                    <?php
-                                    if (isset($_POST['time_frame']) and isset($_POST['location']) and isset($_POST['factores']) and isset($_POST['modalidad']) and isset($_POST['year'])) {
-                                        //Obtener el dato del select
-                                        $timeframe = $_POST['time_frame'];
-                                        $location = $_POST['location'];
-                                        $factor = $_POST['factores'];
-                                        $modalidad = $_POST['modalidad'];
-                                        $anio = $_POST['year'];
+        <?php
+        if (isset($_POST['time_frame']) and isset($_POST['location']) and isset($_POST['factores']) and isset($_POST['modalidad']) and isset($_POST['year'])) {
+            //Obtener el dato del select
+            $timeframe = $_POST['time_frame'];
+            $location = $_POST['location'];
+            $factor = $_POST['factores'];
+            $modalidad = $_POST['modalidad'];
+            $anio = $_POST['year'];
 
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        
-                                        $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad, 'anio' => $anio];
-
-                                        //Obtener el total de cantidad
-                                        $cant = DB::table('proyectos')
-                                                    ->where($query)
-                                                    ->count();
-                                                    echo $cant;
-                                        
-                                    } else {
-                                        //Obtener el total de cantidad
-                                        $cant = DB::table('proyectos')
-                                                ->count();
-                                                echo $cant;
-                                    }
-                                    ?>
+            if (isset($distrito[2])) {
+                //Todos los filtros
+                $distrito = explode(",",$location);
+                $distrito_nom = $distrito[2];
+                $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad, 'anio' => $anio];
+                
+                //Obtener el monto segun los filtros
+                $cant = DB::table('proyectos')
+                            ->where($query)
+                            ->count();
+                            echo $cant;
+            } else {
+                //Total
+                $cant = DB::table('proyectos')
+                            ->count();
+                            echo $cant;
+            }
+        } else {
+            //Obtener el monto total
+            $cant = DB::table('proyectos')
+                    ->count();
+                    echo $cant;
+        }
+        ?>
                                     </h2>
                                     <p>Cantidad de proyectos</p>
                                 </div>
                                 {{-- Monto actualizado --}}
                                 <div class="row mt-1" id="card-info">
                                     <h2>
-                                    <?php
-                                    if (isset($_POST['time_frame']) and isset($_POST['location']) and isset($_POST['factores']) and isset($_POST['modalidad']) and isset($_POST['year'])) {
-                                        //Obtener el dato del select
-                                        $timeframe = $_POST['time_frame'];
-                                        $location = $_POST['location'];
-                                        $factor = $_POST['factores'];
-                                        $modalidad = $_POST['modalidad'];
-                                        $anio = $_POST['year'];
+        <?php
+        if (isset($_POST['time_frame']) and isset($_POST['location']) and isset($_POST['factores']) and isset($_POST['modalidad']) and isset($_POST['year'])) {
+            //Obtener el dato del select
+            $timeframe = $_POST['time_frame'];
+            $location = $_POST['location'];
+            $factor = $_POST['factores'];
+            $modalidad = $_POST['modalidad'];
+            $anio = $_POST['year'];
 
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        
-                                        $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad, 'anio' => $anio];
-
-                                        //Obtener el monto segun los filtros
-                                        $sum = DB::table('proyectos')
-                                                    ->where($query)
-                                                    ->sum('monto_actualizado');
-                                                    echo sprintf('%.2f',$sum);
-                                        
-                                    } else {
-                                        //Obtener el monto total
-                                        $sum = DB::table('proyectos')
-                                                ->sum('monto_actualizado');
-                                                echo number_format(sprintf('%.2f',$sum));
-                                    }
-                                    ?>
+            if (isset($distrito[2])) {
+                //Todos los filtros
+                $distrito = explode(",",$location);
+                $distrito_nom = $distrito[2];
+                $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad, 'anio' => $anio];
+                
+                //Obtener el monto segun los filtros
+                $sum = DB::table('proyectos')
+                            ->where($query)
+                            ->sum('monto_actualizado');
+                            echo number_format($sum,0);
+            } else {
+                //Total
+                $sum = DB::table('proyectos')
+                            ->sum('monto_actualizado');
+                            echo number_format($sum,0);
+            }
+        } else {
+            //Obtener el monto total
+            $sum = DB::table('proyectos')
+                    ->sum('monto_actualizado');
+                    echo number_format($sum,0);
+        }
+        ?>
                                     </h2>
                                     <p>Monto actualizado</p>
                                     <small>(S/ millones)</small>

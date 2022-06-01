@@ -493,8 +493,8 @@ div .divlogo .col-9 {
     color: #fff;
 }
 
-#pot1 {
-    background-color: #008080;
+#pot1 {/* 
+    background-color: #008080; */
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -502,46 +502,6 @@ div .divlogo .col-9 {
 
 #pot1 .col-9 {
     padding: 4% 0 0 0;
-}
-
-#pot2 {
-    background-color: #C0504D;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-}
-
-#pot2 .col-9 {
-    padding: 4% 0 0 0;
-}
-
-#pot3 {
-    background-color: #E46C0A;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-}
-
-#pot3 .col-9 {
-    padding: 4% 0 0 0;
-}
-
-#pot4 {
-    background-color: #C00000;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-}
-
-#pot4 .col-9 {
-    padding: 4% 0 0 0;
-}
-
-#pot5 {
-    background-color: #8064A2;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
 }
 
 /**/
@@ -1124,7 +1084,7 @@ h3{
     padding-bottom: 10%;
     display: grid;
     gap: 7px;
-    grid-template-columns: 25% 30% 26% auto;
+    grid-template-columns: 25% 28% 28% auto;
     grid-template-rows: auto 10% 10% 10% 10% 10% 10% 14% 14%;
 }
 
