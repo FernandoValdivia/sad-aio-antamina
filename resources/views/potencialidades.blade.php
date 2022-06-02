@@ -92,7 +92,7 @@
                     <div class="row">
                         <div class="col-8">
                             <h3>Potencialidades</h3>
-                            <p id="titulo" name="titulo">Cadenas productivas en AIO</p>
+                            <p id="titulo" name="titulo">Cadenas productivas en Huallanca (Bolognesi / Áncash)</p>
                         </div>
                         <div class="col-4">
                             <div class="row" id="select-location">
@@ -102,7 +102,7 @@
                                     <optgroup label="UGT Huallanca">
                                         @php
                                         foreach ($ugt_huall as $ugt) {
-                                                echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                                echo '<option value="'.$ugt->coords.'" selected>'.$ugt->distrito.'</option>';
                                         }
                                         @endphp
                                     </optgroup>
@@ -133,7 +133,7 @@
                     </div>
                     <div class="row mb-2" id="img-map">
                         {{-- Imagen --}}
-                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1654021921/ccd/General-AOI_iyrrbu.png" alt="Potencialidades"  id="img-potencialidad">
+                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1654022678/ccd/potencialidades/distritos/san_marcos_q8t4je.png" alt="Potencialidades"  id="img-potencialidad">
                         {{-- Mapa --}}
                         <div id="map-pt"></div>
                     </div>
