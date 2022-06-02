@@ -84,7 +84,6 @@
             </div>
         </div>
         <!-- Navbar End -->
-        
         <!-- Resumen Start -->
         <div class="container-xxl py-3">
             <div class="grid-container">
@@ -284,66 +283,56 @@
                         <tr>
                             <th><h5>Potencialidades</h5></th>
                         </tr>
-                        <tr>
-                            <td>
-                                <div class="row mb-1" id="pot1">
-                                    <div class="col-3">
-                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653671407/ccd/potencialidades/agroindustria_xhbwig.png" alt="Agroindustria" class="img-pt">
+                        <?php
+                            if (isset($_POST['location'])) {
+                                if ($_POST['location']=="AIO") {
+                                    //Todas las potencialidades
+                                    $potencialidad = DB::table('aiopotenc')->select(
+                                        'distrito',
+                                        'potencialidad',
+                                        'url',
+                                        'hexcolor'
+                                    )
+                                    ->get();
+                                } else {
+                                    //Potencialidades de X distrito
+                                    $location = $_POST['location'];
+                                    $distrito = explode(",",$location);
+                                    $distrito_nom = $distrito[2];
+                                    $potencialidad = DB::table('potencialidades')->select(
+                                        'distrito',
+                                        'potencialidad',
+                                        'url',
+                                        'hexcolor'
+                                    )
+                                    ->where('distrito',$distrito_nom)
+                                    ->get();
+                                }
+                            } else {
+                                //Todas las potencialidades
+                                $potencialidad = DB::table('aiopotenc')->select(
+                                        'distrito',
+                                        'potencialidad',
+                                        'url',
+                                        'hexcolor'
+                                    )
+                                    ->get();
+                            }
+                        ?>
+                        @foreach ($potencialidad as $poten)
+                            <tr>
+                                <td>
+                                    <div class="row mb-2" id="potb" style="background-color: {{$poten->hexcolor}};">
+                                        <div class="col-3">
+                                            <img src="{{ $poten->url }}" class="img-pt">
+                                        </div>
+                                        <div class="col-9">
+                                            <p id="idpotencialidad">{{ $poten->potencialidad }}</p>
+                                        </div>
                                     </div>
-                                    <div class="col-9">
-                                        <p>Agroindustria</p>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="row mb-1" id="pot2">
-                                    <div class="col-3">
-                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653671406/ccd/potencialidades/turismo_hsv6nn.png" alt="Turismo" class="img-pt">
-                                    </div>
-                                    <div class="col-9">
-                                        <p>Turismo</p>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="row mb-1" id="pot3">
-                                    <div class="col-3">
-                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653671406/ccd/potencialidades/mineria_zmwczj.png" alt="Mineria" class="img-pt">
-                                    </div>
-                                    <div class="col-9">
-                                        <p>Mineria</p>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="row mb-1" id="pot4">
-                                    <div class="col-3">
-                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653588324/ccd/potencialidades/lacteo_wmvaye.png" alt="Lácteos" class="img-pt">
-                                    </div>
-                                    <div class="col-9">
-                                        <p>Lácteos</p>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="row  mb-2" id="pot5">
-                                    <div class="col-3" id="img-pt-c">
-                                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653581398/ccd/potencialidades/cuy_g4xf4s.png" alt="Cuy" class="img-pt">
-                                    </div>
-                                    <div class="col-9">
-                                        <p>Cuyes y animales menores</p>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                        @endforeach
                     </table>
                 </div>
                 {{-- Vida larga y saludable --}}
@@ -518,63 +507,72 @@
                 <div class="grid-br-36"></div>
                 {{-- Filtros --}}
                 <div class="grid-br-37">
-                    {{-- Unidad Territorial --}}
-                    <div class="row">
-                        <label for="location">Unidad Territorial</label>
-                        <select name="location" id="location" class="select">
-                            <option value="AIO">AIO</option>
-                            <optgroup label="UGT Huallanca">
-                                @php
-                                   foreach ($ugt_huall as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                   }
-                                @endphp
-                            </optgroup>
-                            <optgroup label="UGT Huarmey">
-                                @php
-                                   foreach ($ugt_huarmey as $ugt) {
-                                       echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                   }
-                                @endphp
-                            </optgroup>
-                            <optgroup label="UGT Mina / San Marcos">
-                                @php
-                                   foreach ($ugt_mina as $ugt) {
-                                       echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                   }
-                                @endphp
-                            </optgroup>
-                            <optgroup label="UGT Valle Fortaleza">
-                                @php
-                                   foreach ($ugt_valle as $ugt) {
-                                       echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                   }
-                                @endphp
-                            </optgroup>
-                        </select>
-                    </div>
-                    {{-- Año --}}
-                    <div class="row">
-                        <label id="label2" for="">Año</label>
-                        <select name="">
-                            <option value="2017">2017</option>
-                            <option value="2021">2021</option>
-                            <option value="2022">2022</option>
-                            <option value="2023">2023</option>
-                            <option value="2024">2024</option>
-                            <option value="2025">2025</option>
-                        </select>
-                    </div>
-                    {{-- Modalidad de inversión --}}
-                    <div class="row">
-                        <label for="mod">Modalidad de inversión</label>
-                        <select id="modalidad" name="mod">
-                            <option value="Todas">Todas</option>
-                            <option value="Inversión Pública (GL/GR/GN)">Inversión Pública (GL/GR/GN)</option>
-                            <option value="Inversión Social Directa Antamina: Proyectos Sociales">Inversión Social Directa Antamina: Proyectos Sociales</option>
-                            <option value="Inversión Social Gestión Pública y Privada (Obras por impuesto)">Inversión Social Gestión Pública y Privada (Obras por impuesto)</option>
-                        </select>
-                    </div>
+                    <form action="/brechas" method="POST">
+                        @csrf
+                        <div>
+                            {{-- Unidad Territorial --}}
+                            <div class="row">
+                                <label for="location">Unidad Territorial</label>
+                                <select name="location" id="location" class="select">
+                                    <option value="AIO">AIO</option>
+                                    <optgroup label="UGT Huallanca">
+                                        @php
+                                        foreach ($ugt_huall as $ugt) {
+                                            echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
+                                        }
+                                        @endphp
+                                    </optgroup>
+                                    <optgroup label="UGT Huarmey">
+                                        @php
+                                        foreach ($ugt_huarmey as $ugt) {
+                                            echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
+                                        }
+                                        @endphp
+                                    </optgroup>
+                                    <optgroup label="UGT Mina / San Marcos">
+                                        @php
+                                        foreach ($ugt_mina as $ugt) {
+                                            echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
+                                        }
+                                        @endphp
+                                    </optgroup>
+                                    <optgroup label="UGT Valle Fortaleza">
+                                        @php
+                                        foreach ($ugt_valle as $ugt) {
+                                            echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
+                                        }
+                                        @endphp
+                                    </optgroup>
+                                </select>
+                            </div>
+                            {{-- Año --}}
+                            <div class="row">
+                                <label id="label2" for="">Año</label>
+                                <select name="">
+                                    <option value="2017">2017</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                </select>
+                            </div>
+                            {{-- Modalidad de inversión --}}
+                            <div class="row">
+                                <label for="mod">Modalidad de inversión</label>
+                                <select id="modalidad" name="mod">
+                                    <option value="Todas">Todas</option>
+                                    <option value="Inversión Pública (GL/GR/GN)">Inversión Pública (GL/GR/GN)</option>
+                                    <option value="Inversión Social Directa Antamina: Proyectos Sociales">Inversión Social Directa Antamina: Proyectos Sociales</option>
+                                    <option value="Inversión Social Gestión Pública y Privada (Obras por impuesto)">Inversión Social Gestión Pública y Privada (Obras por impuesto)</option>
+                                </select>
+                            </div>
+                            {{-- Boton --}}
+                            <div class="row mt-3">
+                                <input type="submit" value="Filtrar">
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="grid-br-38"></div>
                 {{-- Pilar 4 --}}

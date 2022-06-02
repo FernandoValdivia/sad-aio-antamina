@@ -504,6 +504,17 @@ div .divlogo .col-9 {
     padding: 4% 0 0 0;
 }
 
+#potb {/* 
+    background-color: #008080; */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#potb .col-9 {
+    padding: 3% 0 0 0;
+}
+
 /**/
 
 .grid-br-21{
@@ -849,6 +860,14 @@ div .divlogo .col-9 {
 .grid-br-37{
     grid-column: 8 / span 2;
     grid-row: 7 / span 3;
+}
+
+.grid-br-37 input {
+    padding: 2%;
+}
+
+.grid-br-37 input:hover {
+    background-color: #bad9fd85;
 }
 
 .grid-br-37 select {
@@ -1268,10 +1287,6 @@ h3{
 
 .grid-rsm-11 td{
     color: #fff;
-}
-
-.grid-rsm-11 table{
-    height: 100%;
 }
 
 .grid-rsm-12{

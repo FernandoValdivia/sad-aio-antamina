@@ -103,10 +103,63 @@
                         </div>
                         <div class="col-3">
                             <h4>
-                            <?php
-                            $idh = DB::table('idh')
-                                    ->avg('idh');
-                                echo sprintf('%.2f',$idh);
+                            <?php                           
+                                //filtro año y distrito
+                                if (isset($_POST['location']) or isset($_POST['years'])) {
+                                    //solo distrito
+                                    if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                        if ($_POST['location']=="AIO") {
+                                        //Promedio idh
+                                        $idh = DB::table('idh')
+                                                ->avg('idh');
+                                            echo number_format($idh,2);
+                                        } else {
+                                            //Potencialidades de X distrito
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            //
+                                            $idh = DB::table('idh')
+                                                    ->where('distrito',$distrito_nom)
+                                                    ->avg('idh');
+                                                echo number_format($idh,2);
+                                        }
+                                    //solo año
+                                    } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                        if ($_POST['years']=="Todos") {
+                                        //Promedio idh
+                                        $idh = DB::table('idh')
+                                                ->avg('idh');
+                                            echo number_format($idh,2);
+                                        } else {
+                                            //Potencialidades de X distrito
+                                            $anio = $_POST['years'];
+                                            //
+                                            $idh = DB::table('idh')
+                                                    ->where('anio',$anio)
+                                                    ->avg('idh');
+                                                echo number_format($idh,2);
+                                        }
+                                    //distrito y año
+                                    } else {
+                                        //Potencialidades de X distrito y año
+                                        $location = $_POST['location'];
+                                        $distrito = explode(",",$location);
+                                        $distrito_nom = $distrito[2];
+                                        $anio = $_POST['years'];
+                                        //Query
+                                        $query = ['distrito' => $distrito_nom, 'anio' => $anio];
+                                        //
+                                        $idh = DB::table('idh')
+                                                ->where($query)
+                                                ->avg('idh');
+                                            echo number_format($idh,2);
+                                    }
+                                } else {
+                                    $idh = DB::table('idh')
+                                                ->avg('idh');
+                                            echo number_format($idh,2);
+                                }
                             ?>
                             </h4>
                         </div>
@@ -120,9 +173,62 @@
                         <div class="col-3">
                             <h4>
                             <?php
-                            $ingr = DB::table('idh')
-                                    ->avg('ingreso_per_capita');
-                                echo sprintf('%.0f',$ingr);
+                                //filtro año y distrito
+                                if (isset($_POST['location']) or isset($_POST['years'])) {
+                                    //solo distrito
+                                    if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                        if ($_POST['location']=="AIO") {
+                                        //Promedio idh
+                                        $ingr = DB::table('idh')
+                                                ->avg('ingreso_per_capita');
+                                            echo number_format($ingr,0);
+                                        } else {
+                                            //Potencialidades de X distrito
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            //
+                                            $ingr = DB::table('idh')
+                                                    ->where('distrito',$distrito_nom)
+                                                    ->avg('ingreso_per_capita');
+                                                echo number_format($ingr,0);
+                                        }
+                                    //solo año
+                                    } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                        if ($_POST['years']=="Todos") {
+                                        //Promedio idh
+                                        $ingr = DB::table('idh')
+                                                ->avg('ingreso_per_capita');
+                                            echo number_format($ingr,0);
+                                        } else {
+                                            //Potencialidades de X distrito
+                                            $anio = $_POST['years'];
+                                            //
+                                            $ingr = DB::table('idh')
+                                                    ->where('anio',$anio)
+                                                    ->avg('ingreso_per_capita');
+                                                echo number_format($ingr,0);
+                                        }
+                                    //distrito y año
+                                    } else {
+                                        //Potencialidades de X distrito y año
+                                        $location = $_POST['location'];
+                                        $distrito = explode(",",$location);
+                                        $distrito_nom = $distrito[2];
+                                        $anio = $_POST['years'];
+                                        //Query
+                                        $query = ['distrito' => $distrito_nom, 'anio' => $anio];
+                                        //
+                                        $ingr = DB::table('idh')
+                                                ->where($query)
+                                                ->avg('ingreso_per_capita');
+                                            echo number_format($ingr,0);
+                                    }
+                                } else {
+                                    $ingr = DB::table('idh')
+                                                ->avg('ingreso_per_capita');
+                                            echo number_format($ingr,0);
+                                }
                             ?>
                             </h4>
                         </div>
@@ -228,10 +334,10 @@
                     <!-- Potencialidades -->
                     <div class="grid-rsm-11">
                         <table>
-                            <tr>
+                            <thead>
                                 <th><h5 class="mt-2">Potencialidades</h5></th>
-                            </tr>
-                            <?php                           
+                            </thead>
+                            <?php
                                 if (isset($_POST['location'])) {
                                     if ($_POST['location']=="AIO") {
                                         //Todas las potencialidades
@@ -298,16 +404,124 @@
                                 <th><h4>Total</h4></th>
                                 <th class="txt"><strong>
                                 <?php
-                                    $count1 = DB::table('proyectos')
-                                            ->count();
-                                            echo $count1;
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where('anio',$anio)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio];
+                                            //
+                                            $count1 = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->count();
+                                                    echo $count1;
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $count1 = DB::table('proyectos')
+                                                ->count();
+                                                echo $count1;
+                                    }
                                 ?>
                                 </strong></th>
                                 <th class="txt"><strong>
                                 <?php
-                                    $sum = DB::table('proyectos')
-                                            ->sum('monto_actualizado');
-                                            echo number_format($sum,0);
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where('anio',$anio)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio];
+                                            //
+                                            $sum = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $sum = DB::table('proyectos')
+                                                ->sum('monto_actualizado');
+                                                echo number_format($sum,0);
+                                    }
                                 ?>
                                 </strong></th>
                             </tr>
@@ -315,37 +529,269 @@
                                 <td>First Engagement</td>
                                 <td class="text-center">
                                 <?php
-                                    $count = DB::table('proyectos')
-                                            ->where('time_frame','First Engagement')
-                                            ->count();
-                                            echo $count;
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('time_frame','First Engagement')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'First Engagement'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('time_frame','First Engagement')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'First Engagement'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'First Engagement'];
+                                            //
+                                            $count1 = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->count();
+                                                    echo $count1;
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $count1 = DB::table('proyectos')
+                                                ->where('time_frame','First Engagement')
+                                                ->count();
+                                                echo $count1;
+                                    }
                                 ?>
                                 </td>
                                 <td class="text-center">
                                 <?php
-                                    $sum = DB::table('proyectos')
-                                            ->where('time_frame','First Engagement')
-                                            ->sum('monto_actualizado');
-                                            echo number_format($sum,0);
-                                ?>  
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('time_frame','First Engagement')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'First Engagement'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('time_frame','First Engagement')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'First Engagement'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'First Engagement'];
+                                            //
+                                            $sum = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $sum = DB::table('proyectos')
+                                                ->where('time_frame','First Engagement')
+                                                ->sum('monto_actualizado');
+                                                echo number_format($sum,0);
+                                    }
+                                ?>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Short Term</td>
                                 <td class="text-center">
                                 <?php
-                                    $count = DB::table('proyectos')
-                                            ->where('time_frame','Short Term')
-                                            ->count();
-                                            echo $count;
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('time_frame','Short Term')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Short Term'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('time_frame','Short Term')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'Short Term'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Short Term'];
+                                            //
+                                            $count1 = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->count();
+                                                    echo $count1;
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $count1 = DB::table('proyectos')
+                                                ->where('time_frame','Short Term')
+                                                ->count();
+                                                echo $count1;
+                                    }
                                 ?>
                                 </td>
                                 <td class="text-center">
                                 <?php
-                                    $sum = DB::table('proyectos')
-                                            ->where('time_frame','Short Term')
-                                            ->sum('monto_actualizado');
-                                            echo number_format($sum,0);
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('time_frame','Short Term')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Short Term'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('time_frame','Short Term')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'Short Term'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Short Term'];
+                                            //
+                                            $sum = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $sum = DB::table('proyectos')
+                                                ->where('time_frame','Short Term')
+                                                ->sum('monto_actualizado');
+                                                echo number_format($sum,0);
+                                    }
                                 ?>
                                 </td>
                             </tr>
@@ -353,38 +799,270 @@
                                 <td>Medium Term</td>
                                 <td class="text-center">
                                 <?php
-                                    $count = DB::table('proyectos')
-                                            ->where('time_frame','Medium Term')
-                                            ->count();
-                                            echo $count;
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('time_frame','Medium Term')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Medium Term'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('time_frame','Medium Term')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'Medium Term'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Medium Term'];
+                                            //
+                                            $count1 = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->count();
+                                                    echo $count1;
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $count1 = DB::table('proyectos')
+                                                ->where('time_frame','Medium Term')
+                                                ->count();
+                                                echo $count1;
+                                    }
                                 ?>
                                 </td>
                                 <td class="text-center">
                                 <?php
-                                    $sum = DB::table('proyectos')
-                                            ->where('time_frame','Medium Term')
-                                            ->sum('monto_actualizado');
-                                            echo number_format($sum,0);
-                                ?> 
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('time_frame','Medium Term')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Medium Term'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('time_frame','Medium Term')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'Medium Term'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Medium Term'];
+                                            //
+                                            $sum = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $sum = DB::table('proyectos')
+                                                ->where('time_frame','Medium Term')
+                                                ->sum('monto_actualizado');
+                                                echo number_format($sum,0);
+                                    }
+                                ?>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Long Term</td>
                                 <td class="text-center">
                                 <?php
-                                    $count = DB::table('proyectos')
-                                            ->where('time_frame','Long Term')
-                                            ->count();
-                                            echo $count;
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('time_frame','Long Term')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Long Term'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('time_frame','Long Term')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'Long Term'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Long Term'];
+                                            //
+                                            $count1 = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->count();
+                                                    echo $count1;
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $count1 = DB::table('proyectos')
+                                                ->where('time_frame','Long Term')
+                                                ->count();
+                                                echo $count1;
+                                    }
                                 ?>
                                 </td>
                                 <td class="text-center">
                                 <?php
-                                    $sum = DB::table('proyectos')
-                                            ->where('time_frame','Long Term')
-                                            ->sum('monto_actualizado');
-                                            echo number_format($sum,0);
-                                ?> 
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('time_frame','Long Term')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Long Term'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('time_frame','Long Term')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'Long Term'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Long Term'];
+                                            //
+                                            $sum = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $sum = DB::table('proyectos')
+                                                ->where('time_frame','Long Term')
+                                                ->sum('monto_actualizado');
+                                                echo number_format($sum,0);
+                                    }
+                                ?>
                                 </td>
                             </tr>
                         </table>
@@ -405,19 +1083,135 @@
                                 {{-- Cantidad --}}
                                 <td class="text-center">
                                 <?php
-                                    $cant = DB::table('proyectos')
-                                            ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
-                                            ->count();
-                                            echo $cant;
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'tipo_de_inversion' => 'Inversión Social Directa Antamina: Proyectos sociales'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Directa Antamina: Proyectos sociales'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Directa Antamina: Proyectos sociales'];
+                                            //
+                                            $count1 = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->count();
+                                                    echo $count1;
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $count1 = DB::table('proyectos')
+                                                ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                                ->count();
+                                                echo $count1;
+                                    }
                                 ?>
                                 </td>
                                 {{-- Monto --}}
                                 <td class="text-center">
                                 <?php
-                                    $sum = DB::table('proyectos')
-                                            ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
-                                            ->sum('monto_actualizado');
-                                            echo number_format($sum,0);
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'tipo_de_inversion' => 'Inversión Social Directa Antamina: Proyectos sociales'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Directa Antamina: Proyectos sociales'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Directa Antamina: Proyectos sociales'];
+                                            //
+                                            $sum = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $sum = DB::table('proyectos')
+                                                ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                                ->sum('monto_actualizado');
+                                                echo number_format($sum,0);
+                                    }
                                 ?>
                                 </td>
                             </tr>
@@ -426,19 +1220,135 @@
                                 {{-- Cantidad --}}
                                 <td class="text-center">
                                 <?php
-                                    $cant = DB::table('proyectos')
-                                            ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
-                                            ->count();
-                                            echo $cant;
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada'];
+                                            //
+                                            $count1 = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->count();
+                                                    echo $count1;
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $count1 = DB::table('proyectos')
+                                                ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                                ->count();
+                                                echo $count1;
+                                    }
                                 ?>
                                 </td>
                                 {{-- Monto --}}
                                 <td class="text-center">
                                 <?php
-                                    $sum = DB::table('proyectos')
-                                            ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
-                                            ->sum('monto_actualizado');
-                                            echo number_format($sum,0);
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada'];
+                                            //
+                                            $sum = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $sum = DB::table('proyectos')
+                                                ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                                ->sum('monto_actualizado');
+                                                echo number_format($sum,0);
+                                    }
                                 ?>
                                 </td>
                             </tr>
@@ -447,19 +1357,135 @@
                                 {{-- Cantidad --}}
                                 <td class="text-center">
                                 <?php
-                                    $cant = DB::table('proyectos')
-                                            ->where('tipo_de_inversion','Inversión Pública (GL/GR/GN)')
-                                            ->count();
-                                            echo $cant;
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('tipo_de_inversion','Inversión Pública (GL/GR/GN)')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'tipo_de_inversion' => 'Inversión Pública (GL/GR/GN)'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $count1 = DB::table('proyectos')
+                                                    ->where('tipo_de_inversion','Inversión Pública (GL/GR/GN)')
+                                                    ->count();
+                                                    echo $count1;
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'tipo_de_inversion' => 'Inversión Pública (GL/GR/GN)'];
+                                                //
+                                                $count1 = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->count();
+                                                        echo $count1;
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'tipo_de_inversion' => 'Inversión Pública (GL/GR/GN)'];
+                                            //
+                                            $count1 = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->count();
+                                                    echo $count1;
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $count1 = DB::table('proyectos')
+                                                ->where('tipo_de_inversion','Inversión Pública (GL/GR/GN)')
+                                                ->count();
+                                                echo $count1;
+                                    }
                                 ?>
                                 </td>
                                 {{-- Monto --}}
                                 <td class="text-center">
                                 <?php
-                                    $sum = DB::table('proyectos')
-                                            ->where('tipo_de_inversion','Inversión Pública (GL/GR/GN)')
-                                            ->sum('monto_actualizado');
-                                            echo number_format($sum,0);
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('tipo_de_inversion','Inversión Pública (GL/GR/GN)')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $query = ['distrito' => $distrito_nom, 'tipo_de_inversion' => 'Inversión Pública (GL/GR/GN)'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $sum = DB::table('proyectos')
+                                                    ->where('tipo_de_inversion','Inversión Pública (GL/GR/GN)')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                $query = ['anio' => $anio, 'tipo_de_inversion' => 'Inversión Pública (GL/GR/GN)'];
+                                                //
+                                                $sum = DB::table('proyectos')
+                                                        ->where($query)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'tipo_de_inversion' => 'Inversión Pública (GL/GR/GN)'];
+                                            //
+                                            $sum = DB::table('proyectos')
+                                                    ->where($query)
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($sum,0);
+                                        }
+                                    } else {
+                                        //Total de proyectos
+                                        $sum = DB::table('proyectos')
+                                                ->where('tipo_de_inversion','Inversión Pública (GL/GR/GN)')
+                                                ->sum('monto_actualizado');
+                                                echo number_format($sum,0);
+                                    }
                                 ?>
                                 </td>
                             </tr>
@@ -482,31 +1508,104 @@
                                 {{-- 2007-2021 --}}
                                 <td class="text-center">
                                 <?php
-                                    $sum = DB::table('canon')
-                                            ->where('anio','<=',2021,'and')
-                                            ->where('anio','>=',2007)
-                                            ->sum('monto');
-                                            echo number_format($sum,0);
-                                ?> 
+                                    //filtro año y distrito
+                                    if (isset($_POST['location'])) {
+                                        if ($_POST['location']=="AIO") {
+                                            //Total canon
+                                            $canon = DB::table('canon')
+                                                    ->where('anio','<=',2021,'and')
+                                                    ->where('anio','>=',2007)
+                                                    ->sum('monto');
+                                                    echo number_format($canon,0);
+                                            } else {
+                                                //Canon por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //
+                                                $canon = DB::table('canon')
+                                                        ->where('anio','<=',2021,'and')
+                                                        ->where('anio','>=',2007, 'and')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->sum('monto');
+                                                        echo number_format($canon,0);
+                                            }
+                                    } else {
+                                        //Total canon
+                                        $canon = DB::table('canon')
+                                                    ->where('anio','<=',2021,'and')
+                                                    ->where('anio','>=',2007)
+                                                    ->sum('monto');
+                                                    echo number_format($canon,0);
+                                    }
+                                ?>
                                 </td>
                                 {{-- 2022 --}}
                                 <td class="text-center">
                                 <?php
-                                    $sum = DB::table('canon')
-                                            ->where('anio',2022)
-                                            ->sum('monto');
-                                            echo number_format($sum,0);
-                                ?> 
+                                    //filtro año y distrito
+                                    if (isset($_POST['location'])) {
+                                        if ($_POST['location']=="AIO") {
+                                            //Total canon
+                                            $canon = DB::table('canon')
+                                                    ->where('anio',2022)
+                                                    ->sum('monto');
+                                                    echo number_format($canon,0);
+                                            } else {
+                                                //Canon por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //
+                                                $canon = DB::table('canon')
+                                                        ->where('anio',2022,'and')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->sum('monto');
+                                                        echo number_format($canon,0);
+                                            }
+                                    } else {
+                                        //Total canon
+                                        $canon = DB::table('canon')
+                                                    ->where('anio',2022)
+                                                    ->sum('monto');
+                                                    echo number_format($canon,0);
+                                    }
+                                ?>
                                 </td>
                                 {{-- 2023-2036 --}}
                                 <td class="text-center">
                                 <?php
-                                    $sum = DB::table('canon')
-                                            ->where('anio','<=',2036,'and')
-                                            ->where('anio','>=',2023)
-                                            ->sum('monto');
-                                            echo number_format($sum,0);
-                                ?> 
+                                    //filtro año y distrito
+                                    if (isset($_POST['location'])) {
+                                        if ($_POST['location']=="AIO") {
+                                            //Total canon
+                                            $canon = DB::table('canon')
+                                                    ->where('anio','<=',2036,'and')
+                                                    ->where('anio','>=',2023)
+                                                    ->sum('monto');
+                                                    echo number_format($canon,0);
+                                            } else {
+                                                //Canon por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //
+                                                $canon = DB::table('canon')
+                                                        ->where('anio','<=',2036,'and')
+                                                        ->where('anio','>=',2023,'and')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->sum('monto');
+                                                        echo number_format($canon,0);
+                                            }
+                                    } else {
+                                        //Total canon
+                                        $canon = DB::table('canon')
+                                                    ->where('anio','<=',2036,'and')
+                                                    ->where('anio','>=',2023)
+                                                    ->sum('monto');
+                                                    echo number_format($canon,0);
+                                    }
+                                ?>
                                 </td>
                             </tr>
                         </table>
@@ -527,19 +1626,65 @@
                                 {{-- 2022 --}}
                                 <td class="text-center">
                                 <?php
-                                    $is_sum = DB::table('inversion_social')
-                                            ->where('anio',2022)
-                                            ->sum('monto');
-                                            echo number_format($is_sum,0);
-                                ?> 
+                                    //filtro año y distrito
+                                    if (isset($_POST['location'])) {
+                                        if ($_POST['location']=="AIO") {
+                                            //Total canon
+                                            $is_sum = DB::table('inversion_social')
+                                                    ->where('anio',2022)
+                                                    ->sum('monto');
+                                                    echo number_format($is_sum,0);
+                                            } else {
+                                                //Canon por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //
+                                                $is_sum = DB::table('inversion_social')
+                                                        ->where('anio',2022, 'and')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->sum('monto');
+                                                        echo number_format($is_sum,0);
+                                            }
+                                    } else {
+                                        //Total canon
+                                        $is_sum = DB::table('inversion_social')
+                                                ->where('anio',2022)
+                                                ->sum('monto');
+                                                echo number_format($is_sum,0);
+                                    }
+                                ?>
                                 </td>
                                 {{-- 2023 --}}
                                 <td class="text-center">
                                 <?php
-                                    $is_sum2 = DB::table('inversion_social')
-                                            ->where('anio',2023)
-                                            ->sum('monto');
-                                            echo number_format($is_sum2,0);
+                                    //filtro año y distrito
+                                    if (isset($_POST['location'])) {
+                                        if ($_POST['location']=="AIO") {
+                                            //Total canon
+                                            $is_sum = DB::table('inversion_social')
+                                                    ->where('anio',2023)
+                                                    ->sum('monto');
+                                                    echo number_format($is_sum,0);
+                                            } else {
+                                                //Canon por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //
+                                                $is_sum = DB::table('inversion_social')
+                                                        ->where('anio',2023, 'and')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->sum('monto');
+                                                        echo number_format($is_sum,0);
+                                            }
+                                    } else {
+                                        //Total canon
+                                        $is_sum = DB::table('inversion_social')
+                                                ->where('anio',2023)
+                                                ->sum('monto');
+                                                echo number_format($is_sum,0);
+                                    }
                                 ?>
                                 </td>
                             </tr>
