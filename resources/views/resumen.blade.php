@@ -82,7 +82,6 @@
             </div>
         </div>
         <!-- Navbar & Hero End -->
-        
         <!-- Resumen Start -->
         <div class="container-xxl">
             <div class="container-fluid">
@@ -181,15 +180,12 @@
                                     <optgroup label="UGT Huallanca">
                                         @php
                                         foreach ($ugt_huall as $ugt) {
-                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'"> 
-                                                    <?php
-                                                    if(isset($_POST[`location`])){
-                                                        if ($_POST[`location`]=='.$ugt->coords.','.$ugt->distrito.'){
-                                                            echo "selected=`selected`";
-                                                        }
-                                                    } else { echo "selected=`selected`";}
-                                                    ?>
-                                                    '.$ugt->distrito.'</option>';
+                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
+                                                /* if(!empty($_POST[`location`])){
+                                                    if ($_POST[`location`]==$ugt->coords.','.$ugt->distrito){
+                                                        echo " selected";
+                                                    }
+                                                } */
                                         }
                                         @endphp
                                         
@@ -237,26 +233,38 @@
                             </tr>
                             <?php                           
                                 if (isset($_POST['location'])) {
-                                    $location = $_POST['location'];
-                                    $distrito = explode(",",$location);
-                                    $distrito_nom = $distrito[2];
-                                    $potencialidad = DB::table('potencialidades')->select(
-                                        'distrito',
-                                        'potencialidad',
-                                        'url',
-                                        'hexcolor'
-                                    )
-                                    ->where('distrito',$distrito_nom)
-                                    ->get();
+                                    if ($_POST['location']=="AIO") {
+                                        //Todas las potencialidades
+                                        $potencialidad = DB::table('aiopotenc')->select(
+                                            'distrito',
+                                            'potencialidad',
+                                            'url',
+                                            'hexcolor'
+                                        )
+                                        ->get();
+                                    } else {
+                                        //Potencialidades de X distrito
+                                        $location = $_POST['location'];
+                                        $distrito = explode(",",$location);
+                                        $distrito_nom = $distrito[2];
+                                        $potencialidad = DB::table('potencialidades')->select(
+                                            'distrito',
+                                            'potencialidad',
+                                            'url',
+                                            'hexcolor'
+                                        )
+                                        ->where('distrito',$distrito_nom)
+                                        ->get();
+                                    }
                                 } else {
-                                    $potencialidad = DB::table('potencialidades')->select(
-                                        'distrito',
-                                        'potencialidad',
-                                        'url',
-                                        'hexcolor'
-                                    )
-                                    ->where('distrito','Huachis (Huari / Áncash)')
-                                    ->get();
+                                    //Todas las potencialidades
+                                    $potencialidad = DB::table('aiopotenc')->select(
+                                            'distrito',
+                                            'potencialidad',
+                                            'url',
+                                            'hexcolor'
+                                        )
+                                        ->get();
                                 }
                             ?>
                             @foreach ($potencialidad as $poten)
