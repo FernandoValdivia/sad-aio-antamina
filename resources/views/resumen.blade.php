@@ -1626,7 +1626,7 @@
                                 {{-- 2022 --}}
                                 <td class="text-center">
                                 <?php
-                                    //filtro año y distrito
+                                    //filtro distrito
                                     if (isset($_POST['location'])) {
                                         if ($_POST['location']=="AIO") {
                                             //Total canon
@@ -1751,7 +1751,258 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
     <!-- Script Map -->
+    <script>
+    //Color por IDH
+        function getColor(d) {
+            switch (d) {
+                case "PARARIN":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Pararín (Recuay / Áncash)') ->avg('idh'); echo $idharray; } else {  $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Pararín (Recuay / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Pararín (Recuay / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "LLACLLIN":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Llacllín (Recuay / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Llacllín (Recuay / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Llacllín (Recuay / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "MARCA":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Marca (Recuay / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Marca (Recuay / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Marca (Recuay / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "ANTONIO RAYMONDI":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Antonio Raymondi (Bolognesi / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Antonio Raymondi (Bolognesi / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Antonio Raymondi (Bolognesi / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "CAJACAY":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Cajacay (Bolognesi / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Cajacay (Bolognesi / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Cajacay (Bolognesi / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "HUAYLLACAYAN":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Huayllacayán (Bolognesi / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Huayllacayán (Bolognesi / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Huayllacayán (Bolognesi / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "PAMPAS CHICO":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Huayllacayán (Bolognesi / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Huayllacayán (Bolognesi / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Huayllacayán (Bolognesi / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "CATAC":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Cátac (Recuay / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Cátac (Recuay / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Cátac (Recuay / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "AQUIA":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Aquia (Bolognesi / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Aquia (Bolognesi / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Aquia (Bolognesi / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "HUALLANCA":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Huallanca (Bolognesi / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Huallanca (Bolognesi / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Huallanca (Bolognesi / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "LLATA":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Llata (Huamalíes / Huánuco)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Llata (Huamalíes / Huánuco)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Llata (Huamalíes / Huánuco)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "CHAVIN DE HUANTAR":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Chavín de Huántar (Huari / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Chavín de Huántar (Huari / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Chavín de Huántar (Huari / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "PUÑOS":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Puños (Huamalíes / Huánuco)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Puños (Huamalíes / Huánuco)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Puños (Huamalíes / Huánuco)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "SAN PEDRO DE CHANA":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','San Pedro de Chaná (Huari / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','San Pedro de Chaná (Huari / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','San Pedro de Chaná (Huari / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "HUACHIS":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Huachis (Huari / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Huachis (Huari / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Huachis (Huari / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "HUARMEY":
+                    idh = "<?php if (isset($_POST['years'])) { if ($_POST['years']=='Todos') { $idharray = DB::table('idh') ->where('distrito','Huarmey (Huarmey / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Huarmey (Huarmey / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Huarmey (Huarmey / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "COLQUIOC":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Colquioc (Bolognesi / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Colquioc (Bolognesi / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Colquioc (Bolognesi / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "CHIQUIAN":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Chiquián (Bolognesi / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Chiquián (Bolognesi / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Chiquián (Bolognesi / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "SAN MARCOS":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','San Marcos (Huari / Áncash)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','San Marcos (Huari / Áncash)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','San Marcos (Huari / Áncash)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                case "PARAMONGA":
+                    idh = "<?php  if (isset($_POST['years'])) { if ($_POST['years']=='Todos') {  $idharray = DB::table('idh') ->where('distrito','Paramonga (Barranca / Lima)') ->avg('idh'); echo $idharray; } else { $anio = $_POST['years']; $idharray = DB::table('idh') ->where('distrito','Paramonga (Barranca / Lima)', 'and') ->where('anio',$anio) ->avg('idh'); echo $idharray; }} else { $idharray = DB::table('idh') ->where('distrito','Paramonga (Barranca / Lima)')->avg('idh'); echo $idharray; }?>";
+                    if (idh < 0.51) {
+                        return '#FF7F7F';
+                    } else if(idh < 0.59) {
+                        return '#FAC090';
+                    } else if(idh < 1) {
+                        return '#57CB8C';
+                    } else {
+                        return '#ffffff';
+                    }
+                    break;
+                default:
+                    return '#ffffff';
+                    break;
+            }
+        }   
+    </script>
     <script src="{{ asset('js/map-rsm.js')  }}"></script>
 </body>
 </html>
