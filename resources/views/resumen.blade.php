@@ -1,4 +1,32 @@
-<?php   
+<?php 
+error_reporting(E_ALL);
+session_start();
+//variables de select 
+function getName(){
+    $distrito = "";
+    $anio = "";
+
+    if (isset($_POST['location'],$_POST['years'])) {
+        $_SESSION['distrito'] = $distrito = $_POST['location'];
+        $_SESSION['anio'] = $anio = $_POST['years'];
+    } elseif (isset($_SESSION['distrito'],$_SESSION['anio'])) {
+        $distrito = $_SESSION['distrito'];
+        $anio = $_SESSION['anio'];
+    }
+
+    if ($distrito=="AIO") {
+        echo "IDH distritos del AIO";
+    } elseif (isset($_POST['location'])) {
+        $distrito = $_POST['location'];
+        $nombre = explode(",",$distrito);
+        $distrito_nom = $nombre[2];
+        echo "IDH de ".$distrito_nom;
+    } else {
+        echo "IDH distritos del AIO";
+    }
+}
+
+
 //variables
     //1ra dosis = CALCULATE(AVERAGE(Base[Brecha]);Base[Variable] = "Vacunación 1ra dosis")
     //filtro año y distrito
@@ -492,7 +520,7 @@
                     <!-- titulo -->
                     <div class="grid-rsm-2">
                         <div class="row text-center">
-                            <h3 id="titulo">IDH distritos del AIO</h3>
+                            <h3 id="titulo"><?=getName();?></h3>
                             <p>(Comparación relativa)</p>
                         </div>
                     </div>
@@ -646,7 +674,7 @@
                                 <td>
                                     <h5>
                                     <?php
-                                        /* //filtro año y distrito
+                                        /*//filtro año y distrito
                                         if (isset($_POST['location']) or isset($_POST['years'])) {
                                             //solo distrito
                                             if (isset($_POST['location']) and $_POST['years']=='Todos') {
@@ -702,7 +730,7 @@
                                             $br = DB::table('brechas')
                                                         ->avg('porcentaje');
                                                     echo number_format($br,0);
-                                        } */
+                                        }*/
                                         echo $total_avg;
                                     ?>
                                     </h5>
@@ -810,11 +838,11 @@
                                 <label for="years" class="mt-3">Años</label>
                                 <select name="years" id="yrs">
                                     <option value="Todos">Todos</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2024">2024</option>
-                                    <option value="2025">2025</option>
+                                    <option value="2021" <?php if (isset($_POST['years'])){ if($_POST['years']=="2021") echo 'selected';}?> >2021</option>
+                                    <option value="2022" <?php if (isset($_POST['years'])){ if($_POST['years']=="2022") echo 'selected';}?> >2022</option>
+                                    <option value="2023" <?php if (isset($_POST['years'])){ if($_POST['years']=="2023") echo 'selected';}?> >2023</option>
+                                    <option value="2024" <?php if (isset($_POST['years'])){ if($_POST['years']=="2024") echo 'selected';}?> >2024</option>
+                                    <option value="2025" <?php if (isset($_POST['years'])){ if($_POST['years']=="2025") echo 'selected';}?> >2025</option>
                                 </select>
                                 <input type="submit" class="mt-3" value="Filtrar">
                             </div>

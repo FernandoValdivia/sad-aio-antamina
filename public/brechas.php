@@ -2,6 +2,8 @@
 
 //variables
     //1ra dosis = CALCULATE(AVERAGE(Base[Brecha]);Base[Variable] = "Vacunación 1ra dosis")
+
+
     $dosis1 = DB::table('brechas')
         ->where('variable','Vacunación 1ra dosis')
         ->avg('porcentaje');
