@@ -68,6 +68,23 @@ class BrechasController extends Controller
             'factores'
         )
         ->get();
-        return view('brechas', compact('proyectos','ugt_valle','ugt_huall','ugt_mina','ugt_huarmey'));
+
+        $brechas = \DB::table('brechas')->select(
+            'variable',
+            'distrito',
+            'modalidad_de_internvencion',
+            'anio',
+            'porcentaje'
+        )
+        ->get();
+
+        return view('brechas', 
+        compact('proyectos',
+                'ugt_valle',
+                'ugt_huall',
+                'ugt_mina',
+                'ugt_huarmey',
+                'brechas'
+            ));
     }
 }
