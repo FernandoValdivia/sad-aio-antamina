@@ -797,36 +797,39 @@ function getName(){
                             @csrf
                             <div class="row" id="select-location">
                                 <label for="location">Unidad territorial</label>
-                                <select name="location" id="location" class="select">
+                                <select id="location" name="location" class="select">
                                     <option value="AIO">AIO</option>
                                     <optgroup label="UGT Huallanca">
+                                        @foreach ($ugt_huall as $ugt)
                                         @php
-                                        foreach ($ugt_huall as $ugt) {                                                
-                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                        }
+                                            $value = $ugt->coords.",".$ugt->distrito;
                                         @endphp
-                                        
+                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                        @endforeach
                                     </optgroup>
                                     <optgroup label="UGT Huarmey">
+                                        @foreach ($ugt_huarmey as $ugt)
                                         @php
-                                        foreach ($ugt_huarmey as $ugt) {
-                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                        }
+                                            $value = $ugt->coords.",".$ugt->distrito;
                                         @endphp
+                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                        @endforeach
                                     </optgroup>
                                     <optgroup label="UGT Mina / San Marcos">
+                                        @foreach ($ugt_mina as $ugt)
                                         @php
-                                        foreach ($ugt_mina as $ugt) {
-                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                        }
+                                            $value = $ugt->coords.",".$ugt->distrito;
                                         @endphp
+                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                        @endforeach
                                     </optgroup>
                                     <optgroup label="UGT Valle Fortaleza">
+                                        @foreach ($ugt_valle as $ugt)
                                         @php
-                                        foreach ($ugt_valle as $ugt) {
-                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                        }
+                                            $value = $ugt->coords.",".$ugt->distrito;
                                         @endphp
+                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                        @endforeach
                                     </optgroup>
                                 </select>
                                 <label for="years" class="mt-3">Años</label>

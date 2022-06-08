@@ -103,32 +103,36 @@
                                     <select id="location" name="location" class="select">
                                         <option value="AIO">AIO</option>
                                         <optgroup label="UGT Huallanca">
+                                            @foreach ($ugt_huall as $ugt)
                                             @php
-                                            foreach ($ugt_huall as $ugt) {
-                                                    echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                            }
+                                                $value = $ugt->coords.",".$ugt->distrito;
                                             @endphp
+                                            <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                            @endforeach
                                         </optgroup>
                                         <optgroup label="UGT Huarmey">
+                                            @foreach ($ugt_huarmey as $ugt)
                                             @php
-                                            foreach ($ugt_huarmey as $ugt) {
-                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                            }
+                                                $value = $ugt->coords.",".$ugt->distrito;
                                             @endphp
+                                            <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                            @endforeach
                                         </optgroup>
                                         <optgroup label="UGT Mina / San Marcos">
+                                            @foreach ($ugt_mina as $ugt)
                                             @php
-                                            foreach ($ugt_mina as $ugt) {
-                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                            }
+                                                $value = $ugt->coords.",".$ugt->distrito;
                                             @endphp
+                                            <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                            @endforeach
                                         </optgroup>
                                         <optgroup label="UGT Valle Fortaleza">
+                                            @foreach ($ugt_valle as $ugt)
                                             @php
-                                            foreach ($ugt_valle as $ugt) {
-                                                echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                            }
+                                                $value = $ugt->coords.",".$ugt->distrito;
                                             @endphp
+                                            <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                            @endforeach
                                         </optgroup>
                                     </select>
                                     </div> 
@@ -139,10 +143,10 @@
                                         <label id="label" for="unit">Time frame</label>
                                         <select id="time_frame" name="time_frame">
                                             <option value="Todos">Todos</option>
-                                            <option value="First Engagement">First Engagement</option>
-                                            <option value="Short Term">Short Term</option>
-                                            <option value="Medium Term">Medium Term</option>
-                                            <option value="Long Term">Long Term</option>
+                                            <option value="First Engagement" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="First Engagement") echo 'selected';}?>>First Engagement</option>
+                                            <option value="Short Term" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Short Term") echo 'selected';}?>>Short Term</option>
+                                            <option value="Medium Term" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Medium Term") echo 'selected';}?>>Medium Term</option>
+                                            <option value="Long Term" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Long Term") echo 'selected';}?>>Long Term</option>
                                         </select>
                                     </div> 
                                 </div>
@@ -152,11 +156,11 @@
                                         <label id="label" for="factores">Factores</label>
                                         <select id="factores" name="factores">
                                             <option value="Todos">Todos</option>
-                                            <option value="Educación">Educación</option>
-                                            <option value="Institucionalidad">Institucionalidad</option>
-                                            <option value="Nivel de vida digno (ingresos)">Nivel de vida digno (ingresos)</option>
-                                            <option value="Nivel de vida digno (servicios básicos)">Nivel de vida digno (servicios básicos)</option>
-                                            <option value="Salud">Salud</option>
+                                            <option value="Educación" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Educación") echo 'selected';}?>>Educación</option>
+                                            <option value="Institucionalidad" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Institucionalidad") echo 'selected';}?>>Institucionalidad</option>
+                                            <option value="Nivel de vida digno (ingresos)" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Nivel de vida digno (ingresos)") echo 'selected';}?>>Nivel de vida digno (ingresos)</option>
+                                            <option value="Nivel de vida digno (servicios básicos)" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Nivel de vida digno (servicios básicos)") echo 'selected';}?>>Nivel de vida digno (servicios básicos)</option>
+                                            <option value="Salud" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Salud") echo 'selected';}?>>Salud</option>
                                         </select>
                                     </div> 
                                 </div>
@@ -166,9 +170,9 @@
                                         <label id="label" for="modalidad">Modalidad de inversión</label>
                                         <select id="modalidad" name="modalidad">
                                             <option value="Todas">Todas</option>
-                                            <option value="Inversión Pública (GL/GR/GN)">Inversión Pública (GL/GR/GN)</option>
-                                            <option value="Inversión Social Directa Antamina: Proyectos Sociales">Inversión Social Directa Antamina: Proyectos Sociales</option>
-                                            <option value="Inversión Social Gestión Pública y Privada (Obras por impuesto)">Inversión Social Gestión Pública y Privada (Obras por impuesto)</option>
+                                            <option value="Inversión Pública (GL/GR/GN)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Pública (GL/GR/GN)") echo 'selected';}?>>Inversión Pública (GL/GR/GN)</option>
+                                            <option value="Inversión Social Directa Antamina: Proyectos Sociales" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Directa Antamina: Proyectos Sociales") echo 'selected';}?>>Inversión Social Directa Antamina: Proyectos Sociales</option>
+                                            <option value="Inversión Social Gestión Pública y Privada" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Gestión Pública y Privada") echo 'selected';}?>>Inversión Social Gestión Pública y Privada (Obras por impuesto)</option>
                                         </select>
                                     </div>
                                 </div>
@@ -177,12 +181,12 @@
                                     <div class="row">
                                         <label id="label" for="year">Año</label>
                                         <select id="year" name="year">
-                                            <option value="2017">2017</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                            <option value="2025">2025</option>
+                                            <option value="2017" <?php if(isset($_POST['year'])){ if($_POST['year']=="2017") echo 'selected';}?>>2017</option>
+                                            <option value="2021" <?php if(isset($_POST['year'])){ if($_POST['year']=="2021") echo 'selected';}?>>2021</option>
+                                            <option value="2022" <?php if(isset($_POST['year'])){ if($_POST['year']=="2022") echo 'selected';}?>>2022</option>
+                                            <option value="2023" <?php if(isset($_POST['year'])){ if($_POST['year']=="2023") echo 'selected';}?>>2023</option>
+                                            <option value="2024" <?php if(isset($_POST['year'])){ if($_POST['year']=="2024") echo 'selected';}?>>2024</option>
+                                            <option value="2025" <?php if(isset($_POST['year'])){ if($_POST['year']=="2025") echo 'selected';}?>>2025</option>
                                         </select>
                                     </div>
                                 </div>
@@ -204,7 +208,7 @@
                                 <div class="row" id="card-info">
                                     <h2>
         <?php
-        if (isset($_POST['time_frame']) and isset($_POST['location']) and isset($_POST['factores']) and isset($_POST['modalidad']) and isset($_POST['year'])) {
+        if (isset($_POST['time_frame'],$_POST['location'],$_POST['factores'],$_POST['modalidad'],$_POST['year'])) {
             //Obtener el dato del select
             $timeframe = $_POST['time_frame'];
             $location = $_POST['location'];
