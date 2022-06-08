@@ -784,7 +784,67 @@ function getName(){
                             <small>(Millones de Soles)</small>
                         </div>
                         <div class="col-4">
-                            <h4>125,103</h4>
+                            <h4>
+                                @php
+                                    //filtro año y distrito
+                                    if (isset($_POST['location']) or isset($_POST['years'])) {
+                                        //solo distrito
+                                        if (isset($_POST['location']) and $_POST['years']=='Todos') {
+                                            if ($_POST['location']=="AIO") {
+                                            //Total de brecha financiera
+                                            $financiera = DB::table('brecha_financiera')
+                                                    ->avg('monto');
+                                                    echo number_format($financiera,2);
+                                            } else {
+                                                //Brecha financiera por distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //
+                                                $financiera = DB::table('brecha_financiera')
+                                                    ->where('distrito',$distrito_nom)
+                                                    ->avg('monto');
+                                                    echo number_format($financiera,2);
+                                            }
+                                        //solo año
+                                        } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
+                                            if ($_POST['years']=="Todos") {
+                                            //Total de proyectos
+                                            $financiera = DB::table('brecha_financiera')
+                                                    ->avg('monto');
+                                                    echo number_format($financiera,2);
+                                            } else {
+                                                //Proyectos por año
+                                                $anio = $_POST['years'];
+                                                //
+                                                $financiera = DB::table('brecha_financiera')
+                                                    ->where('anio',$anio)
+                                                    ->avg('monto');
+                                                    echo number_format($financiera,2);
+                                            }
+                                        //distrito y año
+                                        } else {
+                                            //proyectos por distrito y año
+                                            $location = $_POST['location'];
+                                            $distrito = explode(",",$location);
+                                            $distrito_nom = $distrito[2];
+                                            $anio = $_POST['years'];
+                                            //Query
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio];
+                                            //
+                                            $financiera = DB::table('brecha_financiera')
+                                                    ->where($query)
+                                                    ->avg('monto');
+                                                    echo number_format($financiera,2);
+                                        }
+                                    } else {
+                                        //Total de brecha financiera
+                                        $financiera = DB::table('brecha_financiera')
+                                                    ->avg('monto');
+                                                    echo number_format($financiera,2);
+                                    }
+                                @endphp
+                            </h4>
                         </div>
                     </div>
                     <!-- Map -->
