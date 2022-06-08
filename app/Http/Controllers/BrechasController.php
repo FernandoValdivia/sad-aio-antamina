@@ -72,7 +72,7 @@ class BrechasController extends Controller
         $brechas = \DB::table('brechas')->select(
             'variable',
             'distrito',
-            'modalidad_de_internvencion',
+            'modalidad_de_intervencion',
             'anio',
             'porcentaje'
         )

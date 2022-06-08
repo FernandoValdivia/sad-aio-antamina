@@ -26,7 +26,6 @@ function getName(){
     }
 }
 
-
 //variables
     //1ra dosis = CALCULATE(AVERAGE(Base[Brecha]);Base[Variable] = "Vacunación 1ra dosis")
     //filtro año y distrito
@@ -802,13 +801,8 @@ function getName(){
                                     <option value="AIO">AIO</option>
                                     <optgroup label="UGT Huallanca">
                                         @php
-                                        foreach ($ugt_huall as $ugt) {
+                                        foreach ($ugt_huall as $ugt) {                                                
                                                 echo '<option value="'.$ugt->coords.','.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                                /* if(!empty($_POST[`location`])){
-                                                    if ($_POST[`location`]==$ugt->coords.','.$ugt->distrito){
-                                                        echo " selected";
-                                                    }
-                                                } */
                                         }
                                         @endphp
                                         
