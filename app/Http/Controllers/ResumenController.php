@@ -1,12 +1,13 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+ini_set('max_execution_time', 180);
+
 class ResumenController extends Controller
 {
-    public function index() 
+    public function index()
     {
         $ugt_valle = \DB::table('distritos')->select(
             'indice',
