@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+ini_set('max_execution_time', 180);
+
 class BrechasController extends Controller
 {
     public function index() 
