@@ -107,7 +107,7 @@
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                         // AIO and Todos and Todos
-                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio total
                                             //variables
                                                 $dosis1 = DB::table('brechas')
@@ -303,7 +303,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($institucionalidad,0);
                                         } // AIO and Todos and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por modalidad
                                             $modalidad = $_POST['modalidad'];
                                             //variables
@@ -554,7 +554,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($institucionalidad,0);
                                         } // AIO and Año and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por año y modalidad
                                             $anio = $_POST['year'];
                                             $modalidad = $_POST['modalidad'];
@@ -808,7 +808,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($institucionalidad,0);
                                         } // distrito and Año and Modalidad 
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por distrito, año y modalidad
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
@@ -1065,7 +1065,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($institucionalidad,0);
                                         } // distrito and Todos and Todos
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por distrito y modalidad
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
@@ -1321,7 +1321,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($institucionalidad,0);
                                         } // AIO and Año and Todos 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por año
                                             $anio = $_POST['year'];
                                             $query = ['anio' => $anio];
@@ -4050,7 +4050,7 @@
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                         // AIO and Todos and Todos
-                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio total
                                             //variables
                                                 $dosis1 = DB::table('brechas')
@@ -4246,7 +4246,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         } // AIO and Todos and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por modalidad
                                             $modalidad = $_POST['modalidad'];
                                             //variables
@@ -4497,7 +4497,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         } // AIO and Año and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por año y modalidad
                                             $anio = $_POST['year'];
                                             $modalidad = $_POST['modalidad'];
@@ -4751,7 +4751,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         } // distrito and Año and Modalidad 
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por distrito, año y modalidad
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
@@ -5008,7 +5008,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         } // distrito and Todos and Todos
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por distrito y modalidad
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
@@ -5264,7 +5264,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         } // AIO and Año and Todos 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por año
                                             $anio = $_POST['year'];
                                             $query = ['anio' => $anio];
@@ -5983,7 +5983,7 @@
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                         // AIO and Todos and Todos
-                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio total
                                             //variables
                                                 $dosis1 = DB::table('brechas')
@@ -6180,7 +6180,7 @@
                                                 $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                             echo number_format($oportunidades,0);
                                         } // AIO and Todos and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por modalidad
                                             $modalidad = $_POST['modalidad'];
                                             //variables
@@ -6432,7 +6432,7 @@
                                                 $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                             echo number_format($oportunidades,0);
                                         } // AIO and Año and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por año y modalidad
                                             $anio = $_POST['year'];
                                             $modalidad = $_POST['modalidad'];
@@ -6687,7 +6687,7 @@
                                                 $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                             echo number_format($oportunidades,0);
                                         } // distrito and Año and Modalidad 
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por distrito, año y modalidad
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
@@ -6945,7 +6945,7 @@
                                                 $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                             echo number_format($oportunidades,0);
                                         } // distrito and Todos and Todos
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por distrito y modalidad
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
@@ -7202,7 +7202,7 @@
                                                 $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                             echo number_format($oportunidades,0);
                                         } // AIO and Año and Todos 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por año
                                             $anio = $_POST['year'];
                                             $query = ['anio' => $anio];
@@ -8078,7 +8078,7 @@
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                         // AIO and Todos and Todos
-                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio total
                                             //variables
                                                 $dosis1 = DB::table('brechas')
@@ -8277,7 +8277,7 @@
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                             echo number_format($infraestructura_social,0);
                                         } // AIO and Todos and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por modalidad
                                             $modalidad = $_POST['modalidad'];
                                             //variables
@@ -8531,7 +8531,7 @@
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                             echo number_format($infraestructura_social,0);
                                         } // AIO and Año and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por año y modalidad
                                             $anio = $_POST['year'];
                                             $modalidad = $_POST['modalidad'];
@@ -8788,7 +8788,7 @@
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                             echo number_format($infraestructura_social,0);
                                         } // distrito and Año and Modalidad 
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por distrito, año y modalidad
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
@@ -9048,7 +9048,7 @@
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                             echo number_format($infraestructura_social,0);
                                         } // distrito and Todos and Todos
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por distrito y modalidad
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
@@ -9307,7 +9307,7 @@
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                             echo number_format($infraestructura_social,0);
                                         } // AIO and Año and Todos 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por año
                                             $anio = $_POST['year'];
                                             $query = ['anio' => $anio];
@@ -10236,7 +10236,7 @@
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                         // AIO and Todos and Todos
-                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio total
                                             //variables
                                                 $dosis1 = DB::table('brechas')
@@ -10432,7 +10432,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($capital_humano,0);
                                         } // AIO and Todos and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por modalidad
                                             $modalidad = $_POST['modalidad'];
                                             //variables
@@ -10683,7 +10683,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($capital_humano,0);
                                         } // AIO and Año and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por año y modalidad
                                             $anio = $_POST['year'];
                                             $modalidad = $_POST['modalidad'];
@@ -10937,7 +10937,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($capital_humano,0);
                                         } // distrito and Año and Modalidad 
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por distrito, año y modalidad
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
@@ -11194,7 +11194,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($capital_humano,0);
                                         } // distrito and Todos and Todos
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por distrito y modalidad
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
@@ -11450,7 +11450,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($capital_humano,0);
                                         } // AIO and Año and Todos 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por año
                                             $anio = $_POST['year'];
                                             $query = ['anio' => $anio];
@@ -12197,7 +12197,7 @@
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                         // AIO and Todos and Todos
-                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio total
                                             //variables
                                                 $dosis1 = DB::table('brechas')
@@ -12393,7 +12393,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vacunacion,0);
                                         } // AIO and Todos and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por modalidad
                                             $modalidad = $_POST['modalidad'];
                                             //variables
@@ -12644,7 +12644,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vacunacion,0);
                                         } // AIO and Año and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por año y modalidad
                                             $anio = $_POST['year'];
                                             $modalidad = $_POST['modalidad'];
@@ -12898,7 +12898,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vacunacion,0);
                                         } // distrito and Año and Modalidad 
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por distrito, año y modalidad
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
@@ -13155,7 +13155,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vacunacion,0);
                                         } // distrito and Todos and Todos
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por distrito y modalidad
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
@@ -13411,7 +13411,7 @@
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vacunacion,0);
                                         } // AIO and Año and Todos 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
+                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por año
                                             $anio = $_POST['year'];
                                             $query = ['anio' => $anio];
