@@ -284,7 +284,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -299,7 +300,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($institucionalidad,0);
                                         } // AIO and Todos and Modalidad 
@@ -535,7 +535,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -550,7 +551,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($institucionalidad,0);
                                         } // AIO and Año and Modalidad 
@@ -789,7 +789,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -804,7 +805,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($institucionalidad,0);
                                         } // distrito and Año and Modalidad 
@@ -1046,7 +1046,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -1061,7 +1062,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($institucionalidad,0);
                                         } // distrito and Todos and Todos
@@ -1302,7 +1302,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -1317,7 +1318,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($institucionalidad,0);
                                         } // AIO and Año and Todos 
@@ -1555,7 +1555,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -1570,7 +1571,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($institucionalidad,0);
                                         } else {
@@ -1808,7 +1808,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -1823,7 +1824,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($institucionalidad,0);
                                         }
@@ -2004,7 +2004,8 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                             $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -2019,7 +2020,6 @@
                                             $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                             $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                         echo number_format($institucionalidad,0);
                                     }
@@ -2035,1701 +2035,1897 @@
                             <th><h6>Canon Minero, Regalía Minera y otros para el desarrollo</h6></th>
                             <td>
                                 <h6>
-                                <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
-                                        // AIO and Todos and Todos
-                                        if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                                //Promedio total
+                                                //variables
+                                                    $dosis1 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 1ra dosis')
+                                                        ->avg('porcentaje');
+                                                    $dosis2 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 2da dosis')
+                                                        ->avg('porcentaje');
+                                                    $dosis3 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 3ra dosis')
+                                                        ->avg('porcentaje');
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos')
+                                                        ->avg('porcentaje');
+                                                    $seguro_salud = DB::table('brechas')
+                                                        ->where('variable','Población afiliada a algún tipo de seguro')
+                                                        ->avg('porcentaje');
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
+                                                        ->avg('porcentaje');
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
+                                                        ->avg('porcentaje');
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
+                                                        ->avg('porcentaje');
+                                                    $anemia = DB::table('brechas')
+                                                        ->where('variable','Anemia')
+                                                        ->avg('porcentaje');
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias')
+                                                        ->avg('porcentaje');
+                                                    $cl_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria')
+                                                        ->avg('porcentaje');
+                                                    $cl_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','CL-Satisfactorio 4To primaria')
+                                                        ->avg('porcentaje');
+                                                    $inicial = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial')
+                                                        ->avg('porcentaje');
+                                                    $climasocial = DB::table('brechas')
+                                                        ->where('variable','Clima social')
+                                                        ->avg('porcentaje');
+                                                    $dci = DB::table('brechas')
+                                                        ->where('variable','Desnutrición crónica infantil')
+                                                        ->avg('porcentaje');
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda')
+                                                        ->avg('porcentaje');
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación')
+                                                        ->avg('porcentaje');
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública')
+                                                        ->avg('porcentaje');
+                                                    $esperanza = DB::table('brechas')
+                                                        ->where('variable','Esperanza de vida')
+                                                        ->avg('porcentaje');
+                                                    $gestion = DB::table('brechas')
+                                                        ->where('variable','Ejecución presupuestal en inversiones')
+                                                        ->avg('porcentaje');
+                                                    $juntos = DB::table('brechas')
+                                                        ->where('variable','Juntos, hogares afiliados')
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar')
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)')
+                                                        ->avg('porcentaje');
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)')
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE')
+                                                        ->avg('porcentaje');
+                                                    $mat_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria')
+                                                        ->avg('porcentaje');
+                                                    $mat_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','Mat-Satisfactorio 4To primaria')
+                                                        ->avg('porcentaje');
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados')
+                                                        ->avg('porcentaje');
+                                                    $pea = DB::table('brechas')
+                                                        ->where('variable','Poblacion economicante activa - PEA')
+                                                        ->avg('porcentaje');
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada')
+                                                        ->avg('porcentaje');
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados')
+                                                        ->avg('porcentaje');
+                                                    $pension_65 = DB::table('brechas')
+                                                        ->where('variable','Pensión 65, usuarios')
+                                                        ->avg('porcentaje');
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados')
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_tecnica = DB::table('brechas')
+                                                        ->where('variable','Población con educación técnica superior')
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_universitaria = DB::table('brechas')
+                                                        ->where('variable','Población con educación universitaria superior')
+                                                        ->avg('porcentaje');
+                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa')
+                                                        ->avg('porcentaje');
+                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa')
+                                                        ->avg('porcentaje');
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados')
+                                                        ->avg('porcentaje');
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT')
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS')
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior')
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total')
+                                                        ->avg('porcentaje');
+                                                    $primaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
+                                                        ->avg('porcentaje');
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->avg('porcentaje');
+                                                    $recursos_desarrollo = DB::table('brechas')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
+                                                        ->avg('porcentaje');
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
+                                                        ->avg('porcentaje');
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
+                                                        ->avg('porcentaje');
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento')
+                                                        ->avg('porcentaje');
+                                                    $secundaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria')
+                                                        ->avg('porcentaje');
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet')
+                                                        ->avg('porcentaje');
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular')
+                                                        ->avg('porcentaje');
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte')
+                                                        ->avg('porcentaje');
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje')
+                                                        ->avg('porcentaje');
+
+                                                //calculos y operaciones
+                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
+                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
+                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
+                                                echo number_format($total_avg,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $dosis1 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 1ra dosis','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $dosis2 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 2da dosis','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $dosis3 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 3ra dosis','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $seguro_salud = DB::table('brechas')
+                                                        ->where('variable','Población afiliada a algún tipo de seguro','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $anemia = DB::table('brechas')
+                                                        ->where('variable','Anemia','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $cl_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $cl_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','CL-Satisfactorio 4To primaria','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $inicial = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $climasocial = DB::table('brechas')
+                                                        ->where('variable','Clima social','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $dci = DB::table('brechas')
+                                                        ->where('variable','Desnutrición crónica infantil','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $esperanza = DB::table('brechas')
+                                                        ->where('variable','Esperanza de vida','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $gestion = DB::table('brechas')
+                                                        ->where('variable','Ejecución presupuestal en inversiones','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $juntos = DB::table('brechas')
+                                                        ->where('variable','Juntos, hogares afiliados','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $mat_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $mat_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','Mat-Satisfactorio 4To primaria','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $pea = DB::table('brechas')
+                                                        ->where('variable','Poblacion economicante activa - PEA','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $pension_65 = DB::table('brechas')
+                                                        ->where('variable','Pensión 65, usuarios','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_tecnica = DB::table('brechas')
+                                                        ->where('variable','Población con educación técnica superior','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_universitaria = DB::table('brechas')
+                                                        ->where('variable','Población con educación universitaria superior','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $primaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $recursos_desarrollo = DB::table('brechas')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $secundaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
+                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
+                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
+                                                echo number_format($total_avg,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $dosis1 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 1ra dosis','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $dosis2 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 2da dosis','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $dosis3 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 3ra dosis','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $seguro_salud = DB::table('brechas')
+                                                        ->where('variable','Población afiliada a algún tipo de seguro','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $anemia = DB::table('brechas')
+                                                        ->where('variable','Anemia','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $cl_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $cl_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','CL-Satisfactorio 4To primaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $inicial = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $climasocial = DB::table('brechas')
+                                                        ->where('variable','Clima social','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $dci = DB::table('brechas')
+                                                        ->where('variable','Desnutrición crónica infantil','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $esperanza = DB::table('brechas')
+                                                        ->where('variable','Esperanza de vida','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $gestion = DB::table('brechas')
+                                                        ->where('variable','Ejecución presupuestal en inversiones','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $juntos = DB::table('brechas')
+                                                        ->where('variable','Juntos, hogares afiliados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mat_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mat_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','Mat-Satisfactorio 4To primaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pea = DB::table('brechas')
+                                                        ->where('variable','Poblacion economicante activa - PEA','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pension_65 = DB::table('brechas')
+                                                        ->where('variable','Pensión 65, usuarios','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_tecnica = DB::table('brechas')
+                                                        ->where('variable','Población con educación técnica superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_universitaria = DB::table('brechas')
+                                                        ->where('variable','Población con educación universitaria superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $primaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $recursos_desarrollo = DB::table('brechas')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $secundaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+
+                                                //calculos y operaciones
+                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
+                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
+                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
+                                                echo number_format($total_avg,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $dosis1 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 1ra dosis','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $dosis2 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 2da dosis','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $dosis3 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 3ra dosis','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $seguro_salud = DB::table('brechas')
+                                                        ->where('variable','Población afiliada a algún tipo de seguro','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $anemia = DB::table('brechas')
+                                                        ->where('variable','Anemia','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $cl_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $cl_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','CL-Satisfactorio 4To primaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $inicial = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $climasocial = DB::table('brechas')
+                                                        ->where('variable','Clima social','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $dci = DB::table('brechas')
+                                                        ->where('variable','Desnutrición crónica infantil','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $esperanza = DB::table('brechas')
+                                                        ->where('variable','Esperanza de vida','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $gestion = DB::table('brechas')
+                                                        ->where('variable','Ejecución presupuestal en inversiones','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $juntos = DB::table('brechas')
+                                                        ->where('variable','Juntos, hogares afiliados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mat_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mat_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','Mat-Satisfactorio 4To primaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pea = DB::table('brechas')
+                                                        ->where('variable','Poblacion economicante activa - PEA','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pension_65 = DB::table('brechas')
+                                                        ->where('variable','Pensión 65, usuarios','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_tecnica = DB::table('brechas')
+                                                        ->where('variable','Población con educación técnica superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_universitaria = DB::table('brechas')
+                                                        ->where('variable','Población con educación universitaria superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $primaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $recursos_desarrollo = DB::table('brechas')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $secundaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+
+                                                //calculos y operaciones
+                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
+                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
+                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
+                                                echo number_format($total_avg,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $dosis1 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 1ra dosis','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $dosis2 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 2da dosis','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $dosis3 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 3ra dosis','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $seguro_salud = DB::table('brechas')
+                                                        ->where('variable','Población afiliada a algún tipo de seguro','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $anemia = DB::table('brechas')
+                                                        ->where('variable','Anemia','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $cl_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $cl_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','CL-Satisfactorio 4To primaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $inicial = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $climasocial = DB::table('brechas')
+                                                        ->where('variable','Clima social','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $dci = DB::table('brechas')
+                                                        ->where('variable','Desnutrición crónica infantil','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $esperanza = DB::table('brechas')
+                                                        ->where('variable','Esperanza de vida','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $gestion = DB::table('brechas')
+                                                        ->where('variable','Ejecución presupuestal en inversiones','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $juntos = DB::table('brechas')
+                                                        ->where('variable','Juntos, hogares afiliados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mat_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mat_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','Mat-Satisfactorio 4To primaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pea = DB::table('brechas')
+                                                        ->where('variable','Poblacion economicante activa - PEA','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pension_65 = DB::table('brechas')
+                                                        ->where('variable','Pensión 65, usuarios','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_tecnica = DB::table('brechas')
+                                                        ->where('variable','Población con educación técnica superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_universitaria = DB::table('brechas')
+                                                        ->where('variable','Población con educación universitaria superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $primaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $recursos_desarrollo = DB::table('brechas')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $secundaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+
+                                                //calculos y operaciones
+                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
+                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
+                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
+                                                echo number_format($total_avg,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $dosis1 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 1ra dosis','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $dosis2 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 2da dosis','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $dosis3 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 3ra dosis','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $seguro_salud = DB::table('brechas')
+                                                        ->where('variable','Población afiliada a algún tipo de seguro','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $anemia = DB::table('brechas')
+                                                        ->where('variable','Anemia','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $cl_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $cl_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','CL-Satisfactorio 4To primaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $inicial = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $climasocial = DB::table('brechas')
+                                                        ->where('variable','Clima social','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $dci = DB::table('brechas')
+                                                        ->where('variable','Desnutrición crónica infantil','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $esperanza = DB::table('brechas')
+                                                        ->where('variable','Esperanza de vida','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $gestion = DB::table('brechas')
+                                                        ->where('variable','Ejecución presupuestal en inversiones','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $juntos = DB::table('brechas')
+                                                        ->where('variable','Juntos, hogares afiliados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mat_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mat_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','Mat-Satisfactorio 4To primaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pea = DB::table('brechas')
+                                                        ->where('variable','Poblacion economicante activa - PEA','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pension_65 = DB::table('brechas')
+                                                        ->where('variable','Pensión 65, usuarios','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_tecnica = DB::table('brechas')
+                                                        ->where('variable','Población con educación técnica superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_universitaria = DB::table('brechas')
+                                                        ->where('variable','Población con educación universitaria superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $primaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $recursos_desarrollo = DB::table('brechas')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $secundaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+
+                                                //calculos y operaciones
+                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
+                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
+                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
+                                                echo number_format($total_avg,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $dosis1 = DB::table('brechas')
+                                                                ->where('variable','Vacunación 1ra dosis')
+                                                                ->where('distrito',$distrito_nom)
+                                                                ->avg('porcentaje');
+                                                    $dosis2 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 2da dosis')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $dosis3 = DB::table('brechas')
+                                                        ->where('variable','Vacunación 3ra dosis')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $seguro_salud = DB::table('brechas')
+                                                        ->where('variable','Población afiliada a algún tipo de seguro')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $anemia = DB::table('brechas')
+                                                        ->where('variable','Anemia')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $cl_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $cl_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','CL-Satisfactorio 4To primaria')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $inicial = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $climasocial = DB::table('brechas')
+                                                        ->where('variable','Clima social')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $dci = DB::table('brechas')
+                                                        ->where('variable','Desnutrición crónica infantil')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $esperanza = DB::table('brechas')
+                                                        ->where('variable','Esperanza de vida')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $gestion = DB::table('brechas')
+                                                        ->where('variable','Ejecución presupuestal en inversiones')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $juntos = DB::table('brechas')
+                                                        ->where('variable','Juntos, hogares afiliados')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $mat_2dosecundaria = DB::table('brechas')
+                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $mat_4toprimaria = DB::table('brechas')
+                                                        ->where('variable','Mat-Satisfactorio 4To primaria')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $pea = DB::table('brechas')
+                                                        ->where('variable','Poblacion economicante activa - PEA')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $pension_65 = DB::table('brechas')
+                                                        ->where('variable','Pensión 65, usuarios')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_tecnica = DB::table('brechas')
+                                                        ->where('variable','Población con educación técnica superior')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_edu_universitaria = DB::table('brechas')
+                                                        ->where('variable','Población con educación universitaria superior')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
+                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $primaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $recursos_desarrollo = DB::table('brechas')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $secundaria = DB::table('brechas')
+                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+
+                                                //calculos y operaciones
+                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
+                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
+                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
+                                                echo number_format($total_avg,0);
+                                            }
+                                        } else {
                                             //Promedio total
                                             //variables
                                                 $dosis1 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 1ra dosis')
-                                                    ->avg('porcentaje');
-                                                $dosis2 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 2da dosis')
-                                                    ->avg('porcentaje');
-                                                $dosis3 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 3ra dosis')
-                                                    ->avg('porcentaje');
-                                                $acceso_salud = DB::table('brechas')
-                                                    ->where('variable','Camas de Hospitalización e internamientos')
-                                                    ->avg('porcentaje');
-                                                $seguro_salud = DB::table('brechas')
-                                                    ->where('variable','Población afiliada a algún tipo de seguro')
-                                                    ->avg('porcentaje');
-                                                $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
-                                                    ->avg('porcentaje');
-                                                $agropecuario = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
-                                                    ->avg('porcentaje');
-                                                $agua = DB::table('brechas')
-                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
-                                                    ->avg('porcentaje');
-                                                $anemia = DB::table('brechas')
-                                                    ->where('variable','Anemia')
-                                                    ->avg('porcentaje');
-                                                $bicicletas = DB::table('brechas')
-                                                    ->where('variable','Bicicletas Rutas Solidarias')
-                                                    ->avg('porcentaje');
-                                                $cl_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria')
-                                                    ->avg('porcentaje');
-                                                $cl_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','CL-Satisfactorio 4To primaria')
-                                                    ->avg('porcentaje');
-                                                $inicial = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial')
-                                                    ->avg('porcentaje');
-                                                $climasocial = DB::table('brechas')
-                                                    ->where('variable','Clima social')
-                                                    ->avg('porcentaje');
-                                                $dci = DB::table('brechas')
-                                                    ->where('variable','Desnutrición crónica infantil')
-                                                    ->avg('porcentaje');
-                                                $desague = DB::table('brechas')
-                                                    ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda')
-                                                    ->avg('porcentaje');
-                                                $educacion = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Educación')
-                                                    ->avg('porcentaje');
-                                                $electricidad = DB::table('brechas')
-                                                    ->where('variable','Viviendas con alumbrado eléctrico por red pública')
-                                                    ->avg('porcentaje');
-                                                $esperanza = DB::table('brechas')
-                                                    ->where('variable','Esperanza de vida')
-                                                    ->avg('porcentaje');
-                                                $gestion = DB::table('brechas')
-                                                    ->where('variable','Ejecución presupuestal en inversiones')
-                                                    ->avg('porcentaje');
-                                                $juntos = DB::table('brechas')
-                                                    ->where('variable','Juntos, hogares afiliados')
-                                                    ->avg('porcentaje');
-                                                $kitescolar = DB::table('brechas')
-                                                    ->where('variable','Kit de higiene escolar')
-                                                    ->avg('porcentaje');
-                                                $localesbuenestado = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)')
-                                                    ->avg('porcentaje');
-                                                $mlplazo = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)')
-                                                    ->avg('porcentaje');
-                                                $mant_iiee = DB::table('brechas')
-                                                    ->where('variable','Mantenimiento de IIEE')
-                                                    ->avg('porcentaje');
-                                                $mat_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria')
-                                                    ->avg('porcentaje');
-                                                $mat_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','Mat-Satisfactorio 4To primaria')
-                                                    ->avg('porcentaje');
-                                                $pdlc = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PDLC Actualizados')
-                                                    ->avg('porcentaje');
-                                                $pea = DB::table('brechas')
-                                                    ->where('variable','Poblacion economicante activa - PEA')
-                                                    ->avg('porcentaje');
-                                                $pea_ocupada = DB::table('brechas')
-                                                    ->where('variable','PEA Ocupada')
-                                                    ->avg('porcentaje');
-                                                $pei = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PEI Actualizados')
-                                                    ->avg('porcentaje');
-                                                $pension_65 = DB::table('brechas')
-                                                    ->where('variable','Pensión 65, usuarios')
-                                                    ->avg('porcentaje');
-                                                $pmi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PMI Actualizados')
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_tecnica = DB::table('brechas')
-                                                    ->where('variable','Población con educación técnica superior')
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_universitaria = DB::table('brechas')
-                                                    ->where('variable','Población con educación universitaria superior')
-                                                    ->avg('porcentaje');
-                                                $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa')
-                                                    ->avg('porcentaje');
-                                                $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa')
-                                                    ->avg('porcentaje');
-                                                $poi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: POI Actualizados')
-                                                    ->avg('porcentaje');
-                                                $presencia_ept = DB::table('brechas')
-                                                    ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT')
-                                                    ->avg('porcentaje');
-                                                $presencia_cetpros = DB::table('brechas')
-                                                    ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS')
-                                                    ->avg('porcentaje');
-                                                $presencia_institutos = DB::table('brechas')
-                                                    ->where('variable','Presencia de Institutos de Educación Superior')
-                                                    ->avg('porcentaje');
-                                                $presencia_universidades = DB::table('brechas')
-                                                    ->where('variable','Presencia de Universidades Total')
-                                                    ->avg('porcentaje');
-                                                $primaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
-                                                    ->avg('porcentaje');
-                                                $ptar = DB::table('brechas')
-                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
-                                                    ->avg('porcentaje');
-                                                $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
-                                                    ->avg('porcentaje');
-                                                $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Red vial departamental - Pavimentado')
-                                                    ->avg('porcentaje');
-                                                $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Red vial nacional - Pavimentado')
-                                                    ->avg('porcentaje');
-                                                $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Red vial vecinal - Pavimentado')
-                                                    ->avg('porcentaje');
-                                                $salud = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
-                                                    ->avg('porcentaje');
-                                                $saneamiento = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento')
-                                                    ->avg('porcentaje');
-                                                $secundaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria')
-                                                    ->avg('porcentaje');
-                                                $servicio_internet = DB::table('brechas')
-                                                    ->where('variable','Hogares con internet')
-                                                    ->avg('porcentaje');
-                                                $telefonia_movil = DB::table('brechas')
-                                                    ->where('variable','Hogares con telefonía celular')
-                                                    ->avg('porcentaje');
-                                                $transporte = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte')
-                                                    ->avg('porcentaje');
-                                                $turistica = DB::table('brechas')
-                                                    ->where('variable','Número de establecimientos de hospedaje')
-                                                    ->avg('porcentaje');
-
-                                            //calculos y operaciones
-                                                $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo number_format($total_avg,0);
-                                        } // AIO and Todos and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
-                                            //Promedio por modalidad
-                                            $modalidad = $_POST['modalidad'];
-                                            //variables
-                                                $dosis1 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 1ra dosis','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $dosis2 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 2da dosis','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $dosis3 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 3ra dosis','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $acceso_salud = DB::table('brechas')
-                                                    ->where('variable','Camas de Hospitalización e internamientos','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $seguro_salud = DB::table('brechas')
-                                                    ->where('variable','Población afiliada a algún tipo de seguro','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $agropecuario = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $agua = DB::table('brechas')
-                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $anemia = DB::table('brechas')
-                                                    ->where('variable','Anemia','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $bicicletas = DB::table('brechas')
-                                                    ->where('variable','Bicicletas Rutas Solidarias','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $cl_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $cl_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','CL-Satisfactorio 4To primaria','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $inicial = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $climasocial = DB::table('brechas')
-                                                    ->where('variable','Clima social','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $dci = DB::table('brechas')
-                                                    ->where('variable','Desnutrición crónica infantil','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $desague = DB::table('brechas')
-                                                    ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $educacion = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $electricidad = DB::table('brechas')
-                                                    ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $esperanza = DB::table('brechas')
-                                                    ->where('variable','Esperanza de vida','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $gestion = DB::table('brechas')
-                                                    ->where('variable','Ejecución presupuestal en inversiones','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $juntos = DB::table('brechas')
-                                                    ->where('variable','Juntos, hogares afiliados','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $kitescolar = DB::table('brechas')
-                                                    ->where('variable','Kit de higiene escolar','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $localesbuenestado = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $mlplazo = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $mant_iiee = DB::table('brechas')
-                                                    ->where('variable','Mantenimiento de IIEE','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $mat_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $mat_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','Mat-Satisfactorio 4To primaria','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $pdlc = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PDLC Actualizados','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $pea = DB::table('brechas')
-                                                    ->where('variable','Poblacion economicante activa - PEA','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $pea_ocupada = DB::table('brechas')
-                                                    ->where('variable','PEA Ocupada','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $pei = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PEI Actualizados','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $pension_65 = DB::table('brechas')
-                                                    ->where('variable','Pensión 65, usuarios','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $pmi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PMI Actualizados','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_tecnica = DB::table('brechas')
-                                                    ->where('variable','Población con educación técnica superior','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_universitaria = DB::table('brechas')
-                                                    ->where('variable','Población con educación universitaria superior','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $poi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: POI Actualizados','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $presencia_ept = DB::table('brechas')
-                                                    ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $presencia_cetpros = DB::table('brechas')
-                                                    ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $presencia_institutos = DB::table('brechas')
-                                                    ->where('variable','Presencia de Institutos de Educación Superior','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $presencia_universidades = DB::table('brechas')
-                                                    ->where('variable','Presencia de Universidades Total','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $primaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $ptar = DB::table('brechas')
-                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Red vial departamental - Pavimentado','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Red vial nacional - Pavimentado','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Red vial vecinal - Pavimentado','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $salud = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $saneamiento = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $secundaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $servicio_internet = DB::table('brechas')
-                                                    ->where('variable','Hogares con internet','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $telefonia_movil = DB::table('brechas')
-                                                    ->where('variable','Hogares con telefonía celular','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $transporte = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                                $turistica = DB::table('brechas')
-                                                    ->where('variable','Número de establecimientos de hospedaje','and')
-                                                    ->where('modalidad_de_intervencion',$modalidad)
-                                                    ->avg('porcentaje');
-                                            //calculos y operaciones
-                                                $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo number_format($total_avg,0);
-                                        } // AIO and Año and Modalidad 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
-                                            //Promedio por año y modalidad
-                                            $anio = $_POST['year'];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
-                                            //variables
-                                                $dosis1 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 1ra dosis','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $dosis2 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 2da dosis','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $dosis3 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 3ra dosis','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $acceso_salud = DB::table('brechas')
-                                                    ->where('variable','Camas de Hospitalización e internamientos','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $seguro_salud = DB::table('brechas')
-                                                    ->where('variable','Población afiliada a algún tipo de seguro','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $agropecuario = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $agua = DB::table('brechas')
-                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $anemia = DB::table('brechas')
-                                                    ->where('variable','Anemia','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $bicicletas = DB::table('brechas')
-                                                    ->where('variable','Bicicletas Rutas Solidarias','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $cl_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $cl_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','CL-Satisfactorio 4To primaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $inicial = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $climasocial = DB::table('brechas')
-                                                    ->where('variable','Clima social','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $dci = DB::table('brechas')
-                                                    ->where('variable','Desnutrición crónica infantil','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $desague = DB::table('brechas')
-                                                    ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $educacion = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $electricidad = DB::table('brechas')
-                                                    ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $esperanza = DB::table('brechas')
-                                                    ->where('variable','Esperanza de vida','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $gestion = DB::table('brechas')
-                                                    ->where('variable','Ejecución presupuestal en inversiones','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $juntos = DB::table('brechas')
-                                                    ->where('variable','Juntos, hogares afiliados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $kitescolar = DB::table('brechas')
-                                                    ->where('variable','Kit de higiene escolar','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $localesbuenestado = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mlplazo = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mant_iiee = DB::table('brechas')
-                                                    ->where('variable','Mantenimiento de IIEE','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mat_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mat_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','Mat-Satisfactorio 4To primaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pdlc = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PDLC Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pea = DB::table('brechas')
-                                                    ->where('variable','Poblacion economicante activa - PEA','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pea_ocupada = DB::table('brechas')
-                                                    ->where('variable','PEA Ocupada','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pei = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PEI Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pension_65 = DB::table('brechas')
-                                                    ->where('variable','Pensión 65, usuarios','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pmi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PMI Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_tecnica = DB::table('brechas')
-                                                    ->where('variable','Población con educación técnica superior','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_universitaria = DB::table('brechas')
-                                                    ->where('variable','Población con educación universitaria superior','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: POI Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_ept = DB::table('brechas')
-                                                    ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_cetpros = DB::table('brechas')
-                                                    ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_institutos = DB::table('brechas')
-                                                    ->where('variable','Presencia de Institutos de Educación Superior','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_universidades = DB::table('brechas')
-                                                    ->where('variable','Presencia de Universidades Total','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $primaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $ptar = DB::table('brechas')
-                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Red vial departamental - Pavimentado','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Red vial nacional - Pavimentado','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Red vial vecinal - Pavimentado','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $salud = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $saneamiento = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $secundaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $servicio_internet = DB::table('brechas')
-                                                    ->where('variable','Hogares con internet','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $telefonia_movil = DB::table('brechas')
-                                                    ->where('variable','Hogares con telefonía celular','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $transporte = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $turistica = DB::table('brechas')
-                                                    ->where('variable','Número de establecimientos de hospedaje','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-
-                                            //calculos y operaciones
-                                                $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo number_format($total_avg,0);
-                                        } // distrito and Año and Modalidad 
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
-                                            //Promedio por distrito, año y modalidad
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['year'];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
-                                            //variables
-                                                $dosis1 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 1ra dosis','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $dosis2 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 2da dosis','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $dosis3 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 3ra dosis','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $acceso_salud = DB::table('brechas')
-                                                    ->where('variable','Camas de Hospitalización e internamientos','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $seguro_salud = DB::table('brechas')
-                                                    ->where('variable','Población afiliada a algún tipo de seguro','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $agropecuario = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $agua = DB::table('brechas')
-                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $anemia = DB::table('brechas')
-                                                    ->where('variable','Anemia','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $bicicletas = DB::table('brechas')
-                                                    ->where('variable','Bicicletas Rutas Solidarias','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $cl_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $cl_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','CL-Satisfactorio 4To primaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $inicial = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $climasocial = DB::table('brechas')
-                                                    ->where('variable','Clima social','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $dci = DB::table('brechas')
-                                                    ->where('variable','Desnutrición crónica infantil','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $desague = DB::table('brechas')
-                                                    ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $educacion = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $electricidad = DB::table('brechas')
-                                                    ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $esperanza = DB::table('brechas')
-                                                    ->where('variable','Esperanza de vida','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $gestion = DB::table('brechas')
-                                                    ->where('variable','Ejecución presupuestal en inversiones','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $juntos = DB::table('brechas')
-                                                    ->where('variable','Juntos, hogares afiliados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $kitescolar = DB::table('brechas')
-                                                    ->where('variable','Kit de higiene escolar','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $localesbuenestado = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mlplazo = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mant_iiee = DB::table('brechas')
-                                                    ->where('variable','Mantenimiento de IIEE','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mat_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mat_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','Mat-Satisfactorio 4To primaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pdlc = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PDLC Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pea = DB::table('brechas')
-                                                    ->where('variable','Poblacion economicante activa - PEA','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pea_ocupada = DB::table('brechas')
-                                                    ->where('variable','PEA Ocupada','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pei = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PEI Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pension_65 = DB::table('brechas')
-                                                    ->where('variable','Pensión 65, usuarios','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pmi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PMI Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_tecnica = DB::table('brechas')
-                                                    ->where('variable','Población con educación técnica superior','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_universitaria = DB::table('brechas')
-                                                    ->where('variable','Población con educación universitaria superior','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: POI Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_ept = DB::table('brechas')
-                                                    ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_cetpros = DB::table('brechas')
-                                                    ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_institutos = DB::table('brechas')
-                                                    ->where('variable','Presencia de Institutos de Educación Superior','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_universidades = DB::table('brechas')
-                                                    ->where('variable','Presencia de Universidades Total','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $primaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $ptar = DB::table('brechas')
-                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Red vial departamental - Pavimentado','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Red vial nacional - Pavimentado','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Red vial vecinal - Pavimentado','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $salud = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $saneamiento = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $secundaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $servicio_internet = DB::table('brechas')
-                                                    ->where('variable','Hogares con internet','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $telefonia_movil = DB::table('brechas')
-                                                    ->where('variable','Hogares con telefonía celular','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $transporte = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $turistica = DB::table('brechas')
-                                                    ->where('variable','Número de establecimientos de hospedaje','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-
-                                            //calculos y operaciones
-                                                $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo number_format($total_avg,0);
-                                        } // distrito and Todos and Todos
-                                        elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
-                                            //Promedio por distrito y modalidad
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
-                                            //variables
-                                                $dosis1 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 1ra dosis','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $dosis2 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 2da dosis','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $dosis3 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 3ra dosis','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $acceso_salud = DB::table('brechas')
-                                                    ->where('variable','Camas de Hospitalización e internamientos','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $seguro_salud = DB::table('brechas')
-                                                    ->where('variable','Población afiliada a algún tipo de seguro','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $agropecuario = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $agua = DB::table('brechas')
-                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $anemia = DB::table('brechas')
-                                                    ->where('variable','Anemia','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $bicicletas = DB::table('brechas')
-                                                    ->where('variable','Bicicletas Rutas Solidarias','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $cl_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $cl_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','CL-Satisfactorio 4To primaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $inicial = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $climasocial = DB::table('brechas')
-                                                    ->where('variable','Clima social','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $dci = DB::table('brechas')
-                                                    ->where('variable','Desnutrición crónica infantil','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $desague = DB::table('brechas')
-                                                    ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $educacion = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $electricidad = DB::table('brechas')
-                                                    ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $esperanza = DB::table('brechas')
-                                                    ->where('variable','Esperanza de vida','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $gestion = DB::table('brechas')
-                                                    ->where('variable','Ejecución presupuestal en inversiones','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $juntos = DB::table('brechas')
-                                                    ->where('variable','Juntos, hogares afiliados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $kitescolar = DB::table('brechas')
-                                                    ->where('variable','Kit de higiene escolar','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $localesbuenestado = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mlplazo = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mant_iiee = DB::table('brechas')
-                                                    ->where('variable','Mantenimiento de IIEE','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mat_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mat_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','Mat-Satisfactorio 4To primaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pdlc = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PDLC Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pea = DB::table('brechas')
-                                                    ->where('variable','Poblacion economicante activa - PEA','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pea_ocupada = DB::table('brechas')
-                                                    ->where('variable','PEA Ocupada','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pei = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PEI Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pension_65 = DB::table('brechas')
-                                                    ->where('variable','Pensión 65, usuarios','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pmi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PMI Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_tecnica = DB::table('brechas')
-                                                    ->where('variable','Población con educación técnica superior','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_universitaria = DB::table('brechas')
-                                                    ->where('variable','Población con educación universitaria superior','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: POI Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_ept = DB::table('brechas')
-                                                    ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_cetpros = DB::table('brechas')
-                                                    ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_institutos = DB::table('brechas')
-                                                    ->where('variable','Presencia de Institutos de Educación Superior','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_universidades = DB::table('brechas')
-                                                    ->where('variable','Presencia de Universidades Total','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $primaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $ptar = DB::table('brechas')
-                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Red vial departamental - Pavimentado','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Red vial nacional - Pavimentado','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Red vial vecinal - Pavimentado','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $salud = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $saneamiento = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $secundaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $servicio_internet = DB::table('brechas')
-                                                    ->where('variable','Hogares con internet','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $telefonia_movil = DB::table('brechas')
-                                                    ->where('variable','Hogares con telefonía celular','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $transporte = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $turistica = DB::table('brechas')
-                                                    ->where('variable','Número de establecimientos de hospedaje','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-
-                                            //calculos y operaciones
-                                                $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo number_format($total_avg,0);
-                                        } // AIO and Año and Todos 
-                                        elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['year'];
-                                            $query = ['anio' => $anio];
-                                            //variables
-                                                $dosis1 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 1ra dosis','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $dosis2 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 2da dosis','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $dosis3 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 3ra dosis','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $acceso_salud = DB::table('brechas')
-                                                    ->where('variable','Camas de Hospitalización e internamientos','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $seguro_salud = DB::table('brechas')
-                                                    ->where('variable','Población afiliada a algún tipo de seguro','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $agropecuario = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $agua = DB::table('brechas')
-                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $anemia = DB::table('brechas')
-                                                    ->where('variable','Anemia','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $bicicletas = DB::table('brechas')
-                                                    ->where('variable','Bicicletas Rutas Solidarias','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $cl_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $cl_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','CL-Satisfactorio 4To primaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $inicial = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $climasocial = DB::table('brechas')
-                                                    ->where('variable','Clima social','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $dci = DB::table('brechas')
-                                                    ->where('variable','Desnutrición crónica infantil','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $desague = DB::table('brechas')
-                                                    ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $educacion = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $electricidad = DB::table('brechas')
-                                                    ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $esperanza = DB::table('brechas')
-                                                    ->where('variable','Esperanza de vida','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $gestion = DB::table('brechas')
-                                                    ->where('variable','Ejecución presupuestal en inversiones','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $juntos = DB::table('brechas')
-                                                    ->where('variable','Juntos, hogares afiliados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $kitescolar = DB::table('brechas')
-                                                    ->where('variable','Kit de higiene escolar','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $localesbuenestado = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mlplazo = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mant_iiee = DB::table('brechas')
-                                                    ->where('variable','Mantenimiento de IIEE','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mat_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $mat_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','Mat-Satisfactorio 4To primaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pdlc = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PDLC Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pea = DB::table('brechas')
-                                                    ->where('variable','Poblacion economicante activa - PEA','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pea_ocupada = DB::table('brechas')
-                                                    ->where('variable','PEA Ocupada','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pei = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PEI Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pension_65 = DB::table('brechas')
-                                                    ->where('variable','Pensión 65, usuarios','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $pmi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PMI Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_tecnica = DB::table('brechas')
-                                                    ->where('variable','Población con educación técnica superior','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_universitaria = DB::table('brechas')
-                                                    ->where('variable','Población con educación universitaria superior','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $poi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: POI Actualizados','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_ept = DB::table('brechas')
-                                                    ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_cetpros = DB::table('brechas')
-                                                    ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_institutos = DB::table('brechas')
-                                                    ->where('variable','Presencia de Institutos de Educación Superior','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $presencia_universidades = DB::table('brechas')
-                                                    ->where('variable','Presencia de Universidades Total','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $primaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $ptar = DB::table('brechas')
-                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Red vial departamental - Pavimentado','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Red vial nacional - Pavimentado','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Red vial vecinal - Pavimentado','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $salud = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $saneamiento = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $secundaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $servicio_internet = DB::table('brechas')
-                                                    ->where('variable','Hogares con internet','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $telefonia_movil = DB::table('brechas')
-                                                    ->where('variable','Hogares con telefonía celular','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $transporte = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-                                                $turistica = DB::table('brechas')
-                                                    ->where('variable','Número de establecimientos de hospedaje','and')
-                                                    ->where($query)
-                                                    ->avg('porcentaje');
-
-                                            //calculos y operaciones
-                                                $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo number_format($total_avg,0);
-                                        } else {
-                                            //Promedio de brechas de X distrito
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            //variables
-                                                $dosis1 = DB::table('brechas')
                                                             ->where('variable','Vacunación 1ra dosis')
-                                                            ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                 $dosis2 = DB::table('brechas')
                                                     ->where('variable','Vacunación 2da dosis')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $dosis3 = DB::table('brechas')
                                                     ->where('variable','Vacunación 3ra dosis')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $acceso_salud = DB::table('brechas')
                                                     ->where('variable','Camas de Hospitalización e internamientos')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $seguro_salud = DB::table('brechas')
                                                     ->where('variable','Población afiliada a algún tipo de seguro')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $agropecuaria = DB::table('brechas')
                                                     ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $agropecuario = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $agua = DB::table('brechas')
                                                     ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $anemia = DB::table('brechas')
                                                     ->where('variable','Anemia')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $bicicletas = DB::table('brechas')
                                                     ->where('variable','Bicicletas Rutas Solidarias')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $cl_2dosecundaria = DB::table('brechas')
                                                     ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $cl_4toprimaria = DB::table('brechas')
                                                     ->where('variable','CL-Satisfactorio 4To primaria')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $inicial = DB::table('brechas')
                                                     ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $climasocial = DB::table('brechas')
                                                     ->where('variable','Clima social')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $dci = DB::table('brechas')
                                                     ->where('variable','Desnutrición crónica infantil')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $desague = DB::table('brechas')
                                                     ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $educacion = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Educación')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $electricidad = DB::table('brechas')
                                                     ->where('variable','Viviendas con alumbrado eléctrico por red pública')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $esperanza = DB::table('brechas')
                                                     ->where('variable','Esperanza de vida')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $gestion = DB::table('brechas')
                                                     ->where('variable','Ejecución presupuestal en inversiones')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $juntos = DB::table('brechas')
                                                     ->where('variable','Juntos, hogares afiliados')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $kitescolar = DB::table('brechas')
                                                     ->where('variable','Kit de higiene escolar')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $localesbuenestado = DB::table('brechas')
                                                     ->where('variable','Locales públicos en buen estado (% del total)')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $mlplazo = DB::table('brechas')
                                                     ->where('variable','Locales públicos en buen estado (% del total)')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $mant_iiee = DB::table('brechas')
                                                     ->where('variable','Mantenimiento de IIEE')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $mat_2dosecundaria = DB::table('brechas')
                                                     ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $mat_4toprimaria = DB::table('brechas')
                                                     ->where('variable','Mat-Satisfactorio 4To primaria')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $pdlc = DB::table('brechas')
                                                     ->where('variable','Planeamiento: PDLC Actualizados')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $pea = DB::table('brechas')
                                                     ->where('variable','Poblacion economicante activa - PEA')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $pea_ocupada = DB::table('brechas')
                                                     ->where('variable','PEA Ocupada')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $pei = DB::table('brechas')
                                                     ->where('variable','Planeamiento: PEI Actualizados')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $pension_65 = DB::table('brechas')
                                                     ->where('variable','Pensión 65, usuarios')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $pmi = DB::table('brechas')
                                                     ->where('variable','Planeamiento: PMI Actualizados')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $poblacion_edu_tecnica = DB::table('brechas')
                                                     ->where('variable','Población con educación técnica superior')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $poblacion_edu_universitaria = DB::table('brechas')
                                                     ->where('variable','Población con educación universitaria superior')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $poblacion_rural_edu_17_20 = DB::table('brechas')
                                                     ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $poblacion_urbana_edu_17_20 = DB::table('brechas')
                                                     ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $poi = DB::table('brechas')
                                                     ->where('variable','Planeamiento: POI Actualizados')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $presencia_ept = DB::table('brechas')
                                                     ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $presencia_cetpros = DB::table('brechas')
                                                     ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $presencia_institutos = DB::table('brechas')
                                                     ->where('variable','Presencia de Institutos de Educación Superior')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $presencia_universidades = DB::table('brechas')
                                                     ->where('variable','Presencia de Universidades Total')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $primaria = DB::table('brechas')
                                                     ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $ptar = DB::table('brechas')
                                                     ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $recursos_desarrollo = DB::table('brechas')
                                                     ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $red_vial_departamental = DB::table('brechas')
                                                     ->where('variable','Red vial departamental - Pavimentado')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $red_vial_nacional = DB::table('brechas')
                                                     ->where('variable','Red vial nacional - Pavimentado')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $red_vial_vecinal = DB::table('brechas')
                                                     ->where('variable','Red vial vecinal - Pavimentado')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $salud = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $saneamiento = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $secundaria = DB::table('brechas')
                                                     ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $servicio_internet = DB::table('brechas')
                                                     ->where('variable','Hogares con internet')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $telefonia_movil = DB::table('brechas')
                                                     ->where('variable','Hogares con telefonía celular')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $transporte = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
                                                 $turistica = DB::table('brechas')
                                                     ->where('variable','Número de establecimientos de hospedaje')
-                                                    ->where('distrito',$distrito_nom)
                                                     ->avg('porcentaje');
 
                                             //calculos y operaciones
@@ -3740,7 +3936,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -3755,207 +3952,10 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         }
-                                    } else {
-                                        //Promedio total
-                                        //variables
-                                            $dosis1 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 1ra dosis')
-                                                        ->avg('porcentaje');
-                                            $dosis2 = DB::table('brechas')
-                                                ->where('variable','Vacunación 2da dosis')
-                                                ->avg('porcentaje');
-                                            $dosis3 = DB::table('brechas')
-                                                ->where('variable','Vacunación 3ra dosis')
-                                                ->avg('porcentaje');
-                                            $acceso_salud = DB::table('brechas')
-                                                ->where('variable','Camas de Hospitalización e internamientos')
-                                                ->avg('porcentaje');
-                                            $seguro_salud = DB::table('brechas')
-                                                ->where('variable','Población afiliada a algún tipo de seguro')
-                                                ->avg('porcentaje');
-                                            $agropecuaria = DB::table('brechas')
-                                                ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
-                                                ->avg('porcentaje');
-                                            $agropecuario = DB::table('brechas')
-                                                ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
-                                                ->avg('porcentaje');
-                                            $agua = DB::table('brechas')
-                                                ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
-                                                ->avg('porcentaje');
-                                            $anemia = DB::table('brechas')
-                                                ->where('variable','Anemia')
-                                                ->avg('porcentaje');
-                                            $bicicletas = DB::table('brechas')
-                                                ->where('variable','Bicicletas Rutas Solidarias')
-                                                ->avg('porcentaje');
-                                            $cl_2dosecundaria = DB::table('brechas')
-                                                ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria')
-                                                ->avg('porcentaje');
-                                            $cl_4toprimaria = DB::table('brechas')
-                                                ->where('variable','CL-Satisfactorio 4To primaria')
-                                                ->avg('porcentaje');
-                                            $inicial = DB::table('brechas')
-                                                ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial')
-                                                ->avg('porcentaje');
-                                            $climasocial = DB::table('brechas')
-                                                ->where('variable','Clima social')
-                                                ->avg('porcentaje');
-                                            $dci = DB::table('brechas')
-                                                ->where('variable','Desnutrición crónica infantil')
-                                                ->avg('porcentaje');
-                                            $desague = DB::table('brechas')
-                                                ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda')
-                                                ->avg('porcentaje');
-                                            $educacion = DB::table('brechas')
-                                                ->where('variable','Calidad de gasto presupuestal en inversiones - Educación')
-                                                ->avg('porcentaje');
-                                            $electricidad = DB::table('brechas')
-                                                ->where('variable','Viviendas con alumbrado eléctrico por red pública')
-                                                ->avg('porcentaje');
-                                            $esperanza = DB::table('brechas')
-                                                ->where('variable','Esperanza de vida')
-                                                ->avg('porcentaje');
-                                            $gestion = DB::table('brechas')
-                                                ->where('variable','Ejecución presupuestal en inversiones')
-                                                ->avg('porcentaje');
-                                            $juntos = DB::table('brechas')
-                                                ->where('variable','Juntos, hogares afiliados')
-                                                ->avg('porcentaje');
-                                            $kitescolar = DB::table('brechas')
-                                                ->where('variable','Kit de higiene escolar')
-                                                ->avg('porcentaje');
-                                            $localesbuenestado = DB::table('brechas')
-                                                ->where('variable','Locales públicos en buen estado (% del total)')
-                                                ->avg('porcentaje');
-                                            $mlplazo = DB::table('brechas')
-                                                ->where('variable','Locales públicos en buen estado (% del total)')
-                                                ->avg('porcentaje');
-                                            $mant_iiee = DB::table('brechas')
-                                                ->where('variable','Mantenimiento de IIEE')
-                                                ->avg('porcentaje');
-                                            $mat_2dosecundaria = DB::table('brechas')
-                                                ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria')
-                                                ->avg('porcentaje');
-                                            $mat_4toprimaria = DB::table('brechas')
-                                                ->where('variable','Mat-Satisfactorio 4To primaria')
-                                                ->avg('porcentaje');
-                                            $pdlc = DB::table('brechas')
-                                                ->where('variable','Planeamiento: PDLC Actualizados')
-                                                ->avg('porcentaje');
-                                            $pea = DB::table('brechas')
-                                                ->where('variable','Poblacion economicante activa - PEA')
-                                                ->avg('porcentaje');
-                                            $pea_ocupada = DB::table('brechas')
-                                                ->where('variable','PEA Ocupada')
-                                                ->avg('porcentaje');
-                                            $pei = DB::table('brechas')
-                                                ->where('variable','Planeamiento: PEI Actualizados')
-                                                ->avg('porcentaje');
-                                            $pension_65 = DB::table('brechas')
-                                                ->where('variable','Pensión 65, usuarios')
-                                                ->avg('porcentaje');
-                                            $pmi = DB::table('brechas')
-                                                ->where('variable','Planeamiento: PMI Actualizados')
-                                                ->avg('porcentaje');
-                                            $poblacion_edu_tecnica = DB::table('brechas')
-                                                ->where('variable','Población con educación técnica superior')
-                                                ->avg('porcentaje');
-                                            $poblacion_edu_universitaria = DB::table('brechas')
-                                                ->where('variable','Población con educación universitaria superior')
-                                                ->avg('porcentaje');
-                                            $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa')
-                                                ->avg('porcentaje');
-                                            $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa')
-                                                ->avg('porcentaje');
-                                            $poi = DB::table('brechas')
-                                                ->where('variable','Planeamiento: POI Actualizados')
-                                                ->avg('porcentaje');
-                                            $presencia_ept = DB::table('brechas')
-                                                ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT')
-                                                ->avg('porcentaje');
-                                            $presencia_cetpros = DB::table('brechas')
-                                                ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS')
-                                                ->avg('porcentaje');
-                                            $presencia_institutos = DB::table('brechas')
-                                                ->where('variable','Presencia de Institutos de Educación Superior')
-                                                ->avg('porcentaje');
-                                            $presencia_universidades = DB::table('brechas')
-                                                ->where('variable','Presencia de Universidades Total')
-                                                ->avg('porcentaje');
-                                            $primaria = DB::table('brechas')
-                                                ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
-                                                ->avg('porcentaje');
-                                            $ptar = DB::table('brechas')
-                                                ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
-                                                ->avg('porcentaje');
-                                            $recursos_desarrollo = DB::table('brechas')
-                                                ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
-                                                ->avg('porcentaje');
-                                            $red_vial_departamental = DB::table('brechas')
-                                                ->where('variable','Red vial departamental - Pavimentado')
-                                                ->avg('porcentaje');
-                                            $red_vial_nacional = DB::table('brechas')
-                                                ->where('variable','Red vial nacional - Pavimentado')
-                                                ->avg('porcentaje');
-                                            $red_vial_vecinal = DB::table('brechas')
-                                                ->where('variable','Red vial vecinal - Pavimentado')
-                                                ->avg('porcentaje');
-                                            $salud = DB::table('brechas')
-                                                ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
-                                                ->avg('porcentaje');
-                                            $saneamiento = DB::table('brechas')
-                                                ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento')
-                                                ->avg('porcentaje');
-                                            $secundaria = DB::table('brechas')
-                                                ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria')
-                                                ->avg('porcentaje');
-                                            $servicio_internet = DB::table('brechas')
-                                                ->where('variable','Hogares con internet')
-                                                ->avg('porcentaje');
-                                            $telefonia_movil = DB::table('brechas')
-                                                ->where('variable','Hogares con telefonía celular')
-                                                ->avg('porcentaje');
-                                            $transporte = DB::table('brechas')
-                                                ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte')
-                                                ->avg('porcentaje');
-                                            $turistica = DB::table('brechas')
-                                                ->where('variable','Número de establecimientos de hospedaje')
-                                                ->avg('porcentaje');
-
-                                        //calculos y operaciones
-                                            $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                            $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                            $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                            $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                            $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                            $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                            $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                            $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                            $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                            $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                            $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                            $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                            $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                            $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                            $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                            $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                            $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                            $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                            $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                            $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                            $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                            $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                        echo number_format($total_avg,0);
-                                    }
-                                ?>
+                                    ?>
                                 </h6>
                             </td>
                         </tr>
@@ -3982,11 +3982,205 @@
                     <table>
                         <tr>
                             <th><h6>PDLC</h6></th>
-                            <td><h6>95</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados')
+                                                        ->avg('porcentaje');
+                                                echo number_format($pdlc,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pdlc,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pdlc,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pdlc,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pdlc,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pdlc,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $pdlc = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PDLC Actualizados')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pdlc,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $pdlc = DB::table('brechas')
+                                                    ->where('variable','Planeamiento: PDLC Actualizados')
+                                                    ->avg('porcentaje');
+                                            echo number_format($pdlc,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                         <tr>
                             <th><h6>Saneamiento</h6></th>
-                            <td><h6>51</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento')
+                                                        ->avg('porcentaje');
+                                                echo number_format($saneamiento,0);
+                                            } // AIO and Todos and Modalidad
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($saneamiento,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($saneamiento,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($saneamiento,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($saneamiento,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($saneamiento,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $saneamiento = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($saneamiento,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $saneamiento = DB::table('brechas')
+                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento')
+                                                    ->avg('porcentaje');
+                                            echo number_format($saneamiento,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -3995,11 +4189,205 @@
                     <table>
                         <tr>
                             <th><h6>POI</h6></th>
-                            <td><h6>80</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados')
+                                                        ->avg('porcentaje');
+                                                echo number_format($poi,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($poi,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($poi,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($poi,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($poi,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($poi,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $poi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: POI Actualizados')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($poi,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $poi = DB::table('brechas')
+                                                    ->where('variable','Planeamiento: POI Actualizados')
+                                                    ->avg('porcentaje');
+                                            echo number_format($poi,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                         <tr>
                             <th><h6>Transporte</h6></th>
-                            <td><h6>46</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte')
+                                                        ->avg('porcentaje');
+                                                echo number_format($transporte,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($transporte,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($transporte,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($transporte,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($transporte,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($transporte,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $transporte = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($transporte,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $transporte = DB::table('brechas')
+                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte')
+                                                    ->avg('porcentaje');
+                                            echo number_format($transporte,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -4008,11 +4396,205 @@
                     <table>
                         <tr>
                             <th><h6>PEI</h6></th>
-                            <td><h6>85</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados')
+                                                        ->avg('porcentaje');
+                                                echo number_format($pei,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pei,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($capital_humano,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pei,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pei,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pei,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $pei = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PEI Actualizados')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pei,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $pei = DB::table('brechas')
+                                                    ->where('variable','Planeamiento: PEI Actualizados')
+                                                    ->avg('porcentaje');
+                                            echo number_format($pei,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                         <tr>
                             <th><h6>Agropecuario</h6></th>
-                            <td><h6>52</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuario,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuario,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuario,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuario,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuario,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuario,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $agropecuario = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuario,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $agropecuario = DB::table('brechas')
+                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
+                                                    ->avg('porcentaje');
+                                            echo number_format($agropecuario,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -4021,11 +4603,205 @@
                     <table>
                         <tr>
                             <th><h6>PMI</h6></th>
-                            <td><h6>5</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados')
+                                                        ->avg('porcentaje');
+                                                echo number_format($pmi,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pmi,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pmi,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pmi,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pmi,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pmi,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $pmi = DB::table('brechas')
+                                                        ->where('variable','Planeamiento: PMI Actualizados')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($pmi,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $pmi = DB::table('brechas')
+                                                    ->where('variable','Planeamiento: PMI Actualizados')
+                                                    ->avg('porcentaje');
+                                            echo number_format($pmi,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                         <tr>
                             <th><h6>Educación</h6></th>
-                            <td><h6>62</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación')
+                                                        ->avg('porcentaje');
+                                                echo number_format($educacion,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($educacion,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($educacion,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($educacion,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($educacion,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($educacion,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $educacion = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($educacion,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $educacion = DB::table('brechas')
+                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Educación')
+                                                    ->avg('porcentaje');
+                                            echo number_format($educacion,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -4034,7 +4810,104 @@
                     <table>
                         <tr>
                             <th><h6>Salud</h6></th>
-                            <td><h6>74</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
+                                                        ->avg('porcentaje');
+                                                echo number_format($salud,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($salud,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($salud,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($salud,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($salud,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($salud,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $salud = DB::table('brechas')
+                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($salud,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $salud = DB::table('brechas')
+                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
+                                                    ->avg('porcentaje');
+                                            echo number_format($salud,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -4227,7 +5100,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -4242,7 +5116,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         } // AIO and Todos and Modalidad 
@@ -4478,7 +5351,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -4493,7 +5367,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         } // AIO and Año and Modalidad 
@@ -4732,7 +5605,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -4747,7 +5621,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         } // distrito and Año and Modalidad 
@@ -4989,7 +5862,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -5004,7 +5878,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         } // distrito and Todos and Todos
@@ -5245,7 +6118,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -5260,7 +6134,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         } // AIO and Año and Todos 
@@ -5498,7 +6371,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -5513,7 +6387,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         } else {
@@ -5751,7 +6624,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -5766,7 +6640,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
                                         }
@@ -5947,7 +6820,8 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                             $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -5962,7 +6836,6 @@
                                             $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                             $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                         echo number_format($total_avg,0);
                                     }
@@ -6160,7 +7033,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -6175,7 +7049,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                             echo number_format($oportunidades,0);
@@ -6412,7 +7285,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -6427,7 +7301,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                             echo number_format($oportunidades,0);
@@ -6667,7 +7540,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -6682,7 +7556,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                             echo number_format($oportunidades,0);
@@ -6925,7 +7798,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -6940,7 +7814,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                             echo number_format($oportunidades,0);
@@ -7182,7 +8055,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -7197,7 +8071,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                             echo number_format($oportunidades,0);
@@ -7436,7 +8309,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -7451,7 +8325,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                             echo number_format($oportunidades,0);
@@ -7690,7 +8563,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -7705,7 +8579,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                             echo number_format($oportunidades,0);
@@ -7887,7 +8760,8 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                             $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -7902,7 +8776,6 @@
                                             $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                             $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
                                         echo number_format($oportunidades,0);
@@ -8102,7 +8975,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -8117,7 +8991,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($educacion_ebr,0);
                                             } else {
@@ -8355,7 +9228,8 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                     $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -8370,7 +9244,6 @@
                                                     $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                     $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                     $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                     $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 echo number_format($educacion_ebr,0);
                                             }
@@ -8553,7 +9426,8 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                     $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -8568,7 +9442,6 @@
                                                     $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                     $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                     $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                     $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 echo number_format($educacion_ebr,0);
                                             } else {
@@ -8804,7 +9677,8 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                     $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -8819,7 +9693,6 @@
                                                     $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                     $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                     $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                     $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 echo number_format($educacion_ebr,0);
                                             }
@@ -9061,7 +9934,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -9076,7 +9950,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($educacion_ebr,0);
                                         }
@@ -9257,7 +10130,8 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                             $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -9272,7 +10146,6 @@
                                             $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                             $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                         echo number_format($educacion_ebr,0);
                                     }
@@ -9581,7 +10454,8 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                     $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -9596,7 +10470,6 @@
                                                     $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                     $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                     $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                     $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 echo number_format($vida_larga_saludable,0);
                                                 } else {
@@ -9834,7 +10707,8 @@
                                                         $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                         $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                         $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                        $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                        $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                        $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                         $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                         $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                         $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -9849,7 +10723,6 @@
                                                         $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                         $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                         $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                        $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                         $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                     echo number_format($vida_larga_saludable,0);
                                                 }
@@ -10032,7 +10905,8 @@
                                                         $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                         $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                         $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                        $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                        $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                        $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                         $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                         $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                         $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -10047,7 +10921,6 @@
                                                         $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                         $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                         $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                        $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                         $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                     echo number_format($vida_larga_saludable,0);
                                                 } else {
@@ -10283,7 +11156,8 @@
                                                         $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                         $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                         $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                        $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                        $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                        $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                         $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                         $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                         $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -10298,7 +11172,6 @@
                                                         $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                         $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                         $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                        $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                         $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                     echo number_format($vida_larga_saludable,0);
                                                 }
@@ -10540,7 +11413,8 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                     $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -10555,7 +11429,6 @@
                                                     $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                     $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                     $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                     $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 echo number_format($vida_larga_saludable,0);
                                             }
@@ -10736,7 +11609,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -10751,7 +11625,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vida_larga_saludable,0);
                                         }
@@ -10971,7 +11844,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -10986,7 +11860,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -11225,7 +12098,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -11240,7 +12114,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -11482,7 +12355,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -11497,7 +12371,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -11742,7 +12615,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -11757,7 +12631,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -12001,7 +12874,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -12016,7 +12890,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -12257,7 +13130,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -12272,7 +13146,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -12513,7 +13386,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -12528,7 +13402,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -12712,7 +13585,8 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                             $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -12727,7 +13601,6 @@
                                             $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                             $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                             $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -12928,7 +13801,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -12943,7 +13817,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -13182,7 +14055,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -13197,7 +14071,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -13439,7 +14312,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -13454,7 +14328,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -13699,7 +14572,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -13714,7 +14588,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -13958,7 +14831,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -13973,7 +14847,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -14214,7 +15087,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -14229,7 +15103,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -14470,7 +15343,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -14485,7 +15359,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -14669,7 +15542,8 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                             $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -14684,7 +15558,6 @@
                                             $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                             $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                             $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -14701,11 +15574,321 @@
                     <table>
                         <tr>
                             <th><h6>Colegios: Adecuado Estado IIEE</h6></th>
-                            <td><h6>91</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias')
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar')
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)')
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE')
+                                                        ->avg('porcentaje');
+
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                echo number_format($adecuado_estado_iiee,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                echo number_format($adecuado_estado_iiee,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                echo number_format($adecuado_estado_iiee,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                echo number_format($adecuado_estado_iiee,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                echo number_format($adecuado_estado_iiee,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                echo number_format($adecuado_estado_iiee,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $localesbuenestado = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                echo number_format($adecuado_estado_iiee,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $bicicletas = DB::table('brechas')
+                                                    ->where('variable','Bicicletas Rutas Solidarias')
+                                                    ->avg('porcentaje');
+                                                $kitescolar = DB::table('brechas')
+                                                    ->where('variable','Kit de higiene escolar')
+                                                    ->avg('porcentaje');
+                                                $localesbuenestado = DB::table('brechas')
+                                                    ->where('variable','Locales públicos en buen estado (% del total)')
+                                                    ->avg('porcentaje');
+                                                $mant_iiee = DB::table('brechas')
+                                                    ->where('variable','Mantenimiento de IIEE')
+                                                    ->avg('porcentaje');
+                                            //calculos y operaciones
+                                                $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                            echo number_format($adecuado_estado_iiee,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                         <tr>
                             <th><h6>Hospitales: Camas por mil hab.</h6></th>
-                            <td><h6>16</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos')
+                                                        ->avg('porcentaje');
+                                                echo number_format($acceso_salud,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($acceso_salud,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($acceso_salud,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($acceso_salud,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($acceso_salud,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($acceso_salud,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $acceso_salud = DB::table('brechas')
+                                                        ->where('variable','Camas de Hospitalización e internamientos')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($acceso_salud,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $acceso_salud = DB::table('brechas')
+                                                    ->where('variable','Camas de Hospitalización e internamientos')
+                                                    ->avg('porcentaje');
+                                            echo number_format($acceso_salud,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -14714,7 +15897,104 @@
                     <table>
                         <tr>
                             <th><h6>M/L Plazo</h6></th>
-                            <td><h6>81</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)')
+                                                        ->avg('porcentaje');
+                                                echo number_format($mlplazo,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($mlplazo,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($mlplazo,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($mlplazo,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($mlplazo,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($mlplazo,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $mlplazo = DB::table('brechas')
+                                                        ->where('variable','Locales públicos en buen estado (% del total)')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($mlplazo,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $mlplazo = DB::table('brechas')
+                                                    ->where('variable','Locales públicos en buen estado (% del total)')
+                                                    ->avg('porcentaje');
+                                            echo number_format($mlplazo,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -14723,7 +16003,180 @@
                     <table>
                         <tr>
                             <th><h6>Retorno seguro</h6></th>
-                            <td><h6>100</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias')
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar')
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE')
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                echo number_format($retorno_seguro,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                echo number_format($retorno_seguro,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                echo number_format($retorno_seguro,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                echo number_format($retorno_seguro,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                echo number_format($retorno_seguro,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                echo number_format($retorno_seguro,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $bicicletas = DB::table('brechas')
+                                                        ->where('variable','Bicicletas Rutas Solidarias')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $kitescolar = DB::table('brechas')
+                                                        ->where('variable','Kit de higiene escolar')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $mant_iiee = DB::table('brechas')
+                                                        ->where('variable','Mantenimiento de IIEE')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                echo number_format($retorno_seguro,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $bicicletas = DB::table('brechas')
+                                                    ->where('variable','Bicicletas Rutas Solidarias')
+                                                    ->avg('porcentaje');
+                                                $kitescolar = DB::table('brechas')
+                                                    ->where('variable','Kit de higiene escolar')
+                                                    ->avg('porcentaje');
+                                                $mant_iiee = DB::table('brechas')
+                                                    ->where('variable','Mantenimiento de IIEE')
+                                                    ->avg('porcentaje');
+                                            //calculos y operaciones
+                                                $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                            echo number_format($retorno_seguro,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -14917,7 +16370,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -14932,7 +16386,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -15171,7 +16624,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -15186,7 +16640,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -15428,7 +16881,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -15443,7 +16897,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -15688,7 +17141,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -15703,7 +17157,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -15947,7 +17400,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -15962,7 +17416,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -16203,7 +17656,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -16218,7 +17672,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -16459,7 +17912,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -16474,7 +17928,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -16658,7 +18111,8 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                             $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -16673,7 +18127,6 @@
                                             $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                             $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                             $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -16690,15 +18143,306 @@
                     <table>
                         <tr>
                             <th><h6>Servicios de internet (antenas)</h6></th>
-                            <td><h6>92</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet')
+                                                        ->avg('porcentaje');
+                                                echo number_format($servicio_internet,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($servicio_internet,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($servicio_internet,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($servicio_internet,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($servicio_internet,0);
+                                            } // AIO and Año and Todos
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($servicio_internet,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $servicio_internet = DB::table('brechas')
+                                                        ->where('variable','Hogares con internet')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($servicio_internet,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $servicio_internet = DB::table('brechas')
+                                                    ->where('variable','Hogares con internet')
+                                                    ->avg('porcentaje');
+                                            echo number_format($servicio_internet,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                         <tr>
                             <th><h6>Telefonía móvil</h6></th>
-                            <td><h6>22</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular')
+                                                        ->avg('porcentaje');
+                                                echo number_format($telefonia_movil,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($telefonia_movil,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($telefonia_movil,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($telefonia_movil,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($telefonia_movil,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($telefonia_movil,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $telefonia_movil = DB::table('brechas')
+                                                        ->where('variable','Hogares con telefonía celular')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($telefonia_movil,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $telefonia_movil = DB::table('brechas')
+                                                    ->where('variable','Hogares con telefonía celular')
+                                                    ->avg('porcentaje');
+                                            echo number_format($telefonia_movil,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                         <tr>
                             <th><h6>Agua</h6></th>
-                            <td><h6>49</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
+                                                        ->avg('porcentaje');
+                                                echo number_format($agua,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agua,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agua,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agua,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agua,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agua,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $agua = DB::table('brechas')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agua,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $agua = DB::table('brechas')
+                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
+                                                    ->avg('porcentaje');
+                                            echo number_format($agua,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -16707,15 +18451,306 @@
                     <table>
                         <tr>
                             <th><h6>Desagüe</h6></th>
-                            <td><h6>56</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda')
+                                                        ->avg('porcentaje');
+                                                echo number_format($desague,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($desague,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($desague,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($desague,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($desague,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($desague,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $desague = DB::table('brechas')
+                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($desague,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $desague = DB::table('brechas')
+                                                    ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda')
+                                                    ->avg('porcentaje');
+                                            echo number_format($desague,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                         <tr>
                             <th><h6>Electricidad</h6></th>
-                            <td><h6>16</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública')
+                                                        ->avg('porcentaje');
+                                                echo number_format($electricidad,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($electricidad,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($electricidad,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($electricidad,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($electricidad,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($electricidad,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $electricidad = DB::table('brechas')
+                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($electricidad,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $electricidad = DB::table('brechas')
+                                                    ->where('variable','Viviendas con alumbrado eléctrico por red pública')
+                                                    ->avg('porcentaje');
+                                            echo number_format($electricidad,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                         <tr>
                             <th><h6>PTAR</h6></th>
-                            <td><h6>95</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->avg('porcentaje');
+                                                echo number_format($ptar,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($ptar,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($ptar,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($ptar,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($ptar,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($ptar,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $ptar = DB::table('brechas')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($ptar,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $ptar = DB::table('brechas')
+                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
+                                                    ->avg('porcentaje');
+                                            echo number_format($ptar,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -16724,7 +18759,181 @@
                     <table>
                         <tr>
                             <th><h6>Vial pavimentada</h6></th>
-                            <td><h6>40</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
+                                                        ->avg('porcentaje');
+
+                                                //calculos y operaciones
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                echo number_format($vial_pavimentado,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                echo number_format($vial_pavimentado,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                echo number_format($vial_pavimentado,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                echo number_format($vial_pavimentado,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                echo number_format($vial_pavimentado,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                echo number_format($vial_pavimentado,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $red_vial_departamental = DB::table('brechas')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_nacional = DB::table('brechas')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $red_vial_vecinal = DB::table('brechas')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                echo number_format($vial_pavimentado,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $red_vial_departamental = DB::table('brechas')
+                                                    ->where('variable','Red vial departamental - Pavimentado')
+                                                    ->avg('porcentaje');
+                                                $red_vial_nacional = DB::table('brechas')
+                                                    ->where('variable','Red vial nacional - Pavimentado')
+                                                    ->avg('porcentaje');
+                                                $red_vial_vecinal = DB::table('brechas')
+                                                    ->where('variable','Red vial vecinal - Pavimentado')
+                                                    ->avg('porcentaje');
+                                            //calculos y operaciones
+                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                            echo number_format($vial_pavimentado,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -16917,7 +19126,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -16932,7 +19142,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -17171,7 +19380,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -17186,7 +19396,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -17428,7 +19637,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -17443,7 +19653,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -17688,7 +19897,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -17703,7 +19913,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -17947,7 +20156,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -17962,7 +20172,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -18203,7 +20412,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -18218,7 +20428,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -18459,7 +20668,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -18474,7 +20684,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -18658,7 +20867,8 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                             $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -18673,7 +20883,6 @@
                                             $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                             $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                             $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -18690,15 +20899,412 @@
                     <table>
                         <tr>
                             <th><h6>Agropecuaria (riego tecnificado)</h6></th>
-                            <td><h6>57</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuaria,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuaria,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuaria,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuaria,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuaria,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuaria,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $agropecuaria = DB::table('brechas')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($agropecuaria,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $agropecuaria = DB::table('brechas')
+                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
+                                                    ->avg('porcentaje');
+                                            echo number_format($agropecuaria,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                         <tr>
                             <th><h6>Turística</h6></th>
-                            <td><h6>26</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje')
+                                                        ->avg('porcentaje');
+                                                echo number_format($turistica,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                echo number_format($turistica,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($turistica,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($turistica,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($turistica,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                echo number_format($turistica,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $turistica = DB::table('brechas')
+                                                        ->where('variable','Número de establecimientos de hospedaje')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                echo number_format($turistica,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $turistica = DB::table('brechas')
+                                                    ->where('variable','Número de establecimientos de hospedaje')
+                                                    ->avg('porcentaje');
+                                            echo number_format($turistica,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                         <tr>
                             <th><h6>Académica</h6></th>
-                            <td><h6>69</h6></td>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT')
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS')
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior')
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total')
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                echo number_format($academica,0);
+                                            } // AIO and Todos and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                echo number_format($academica,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                echo number_format($academica,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                echo number_format($academica,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                echo number_format($academica,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                echo number_format($academica,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $presencia_ept = DB::table('brechas')
+                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $presencia_cetpros = DB::table('brechas')
+                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                echo number_format($academica,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $presencia_ept = DB::table('brechas')
+                                                    ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT')
+                                                    ->avg('porcentaje');
+                                                $presencia_cetpros = DB::table('brechas')
+                                                    ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS')
+                                                    ->avg('porcentaje');
+                                                $presencia_institutos = DB::table('brechas')
+                                                    ->where('variable','Presencia de Institutos de Educación Superior')
+                                                    ->avg('porcentaje');
+                                                $presencia_universidades = DB::table('brechas')
+                                                    ->where('variable','Presencia de Universidades Total')
+                                                    ->avg('porcentaje');
+                                            //calculos y operaciones
+                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                            echo number_format($academica,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -18967,7 +21573,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -18982,7 +21589,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($capital_humano,0);
                                         } // AIO and Todos and Modalidad 
@@ -19218,7 +21824,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -19233,7 +21840,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($capital_humano,0);
                                         } // AIO and Año and Modalidad 
@@ -19472,7 +22078,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -19487,7 +22094,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($capital_humano,0);
                                         } // distrito and Año and Modalidad 
@@ -19729,7 +22335,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -19744,7 +22351,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($capital_humano,0);
                                         } // distrito and Todos and Todos
@@ -19985,7 +22591,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -20000,7 +22607,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($capital_humano,0);
                                         } // AIO and Año and Todos 
@@ -20238,7 +22844,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -20253,7 +22860,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($capital_humano,0);
                                         } else {
@@ -20491,7 +23097,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -20506,7 +23113,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($capital_humano,0);
                                         }
@@ -20687,7 +23293,8 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                             $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -20702,7 +23309,6 @@
                                             $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                             $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                         echo number_format($capital_humano,0);
                                     }
@@ -20900,7 +23506,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -20915,7 +23522,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -21154,7 +23760,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -21169,7 +23776,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -21411,7 +24017,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -21426,7 +24033,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -21671,7 +24277,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -21686,7 +24293,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -21930,7 +24536,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -21945,7 +24552,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -22186,7 +24792,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -22201,7 +24808,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -22442,7 +25048,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -22457,7 +25064,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -22641,7 +25247,8 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                             $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -22656,7 +25263,6 @@
                                             $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                             $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                             $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -22691,255 +25297,11 @@
                                                 //Promedio por modalidad
                                                 $modalidad = $_POST['modalidad'];
                                                 //variables
-                                                    $dosis1 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 1ra dosis','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $dosis2 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 2da dosis','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $dosis3 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 3ra dosis','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $acceso_salud = DB::table('brechas')
-                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $seguro_salud = DB::table('brechas')
-                                                        ->where('variable','Población afiliada a algún tipo de seguro','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $agropecuario = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $agua = DB::table('brechas')
-                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $anemia = DB::table('brechas')
-                                                        ->where('variable','Anemia','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $bicicletas = DB::table('brechas')
-                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $cl_2dosecundaria = DB::table('brechas')
-                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $cl_4toprimaria = DB::table('brechas')
-                                                        ->where('variable','CL-Satisfactorio 4To primaria','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $inicial = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $climasocial = DB::table('brechas')
-                                                        ->where('variable','Clima social','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $dci = DB::table('brechas')
-                                                        ->where('variable','Desnutrición crónica infantil','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $desague = DB::table('brechas')
-                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $educacion = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $electricidad = DB::table('brechas')
-                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $esperanza = DB::table('brechas')
-                                                        ->where('variable','Esperanza de vida','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $gestion = DB::table('brechas')
-                                                        ->where('variable','Ejecución presupuestal en inversiones','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $juntos = DB::table('brechas')
-                                                        ->where('variable','Juntos, hogares afiliados','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $kitescolar = DB::table('brechas')
-                                                        ->where('variable','Kit de higiene escolar','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $localesbuenestado = DB::table('brechas')
-                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $mlplazo = DB::table('brechas')
-                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $mant_iiee = DB::table('brechas')
-                                                        ->where('variable','Mantenimiento de IIEE','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $mat_2dosecundaria = DB::table('brechas')
-                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $mat_4toprimaria = DB::table('brechas')
-                                                        ->where('variable','Mat-Satisfactorio 4To primaria','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $pdlc = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
                                                     $pea = DB::table('brechas')
                                                         ->where('variable','Poblacion economicante activa - PEA','and')
                                                         ->where('modalidad_de_intervencion',$modalidad)
                                                         ->avg('porcentaje');
-                                                    $pea_ocupada = DB::table('brechas')
-                                                        ->where('variable','PEA Ocupada','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $pei = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $pension_65 = DB::table('brechas')
-                                                        ->where('variable','Pensión 65, usuarios','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $pmi = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_edu_tecnica = DB::table('brechas')
-                                                        ->where('variable','Población con educación técnica superior','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_edu_universitaria = DB::table('brechas')
-                                                        ->where('variable','Población con educación universitaria superior','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $poi = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: POI Actualizados','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $presencia_ept = DB::table('brechas')
-                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $presencia_cetpros = DB::table('brechas')
-                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $presencia_institutos = DB::table('brechas')
-                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $presencia_universidades = DB::table('brechas')
-                                                        ->where('variable','Presencia de Universidades Total','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $primaria = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $ptar = DB::table('brechas')
-                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Red vial departamental - Pavimentado','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Red vial nacional - Pavimentado','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $salud = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $saneamiento = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $secundaria = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $servicio_internet = DB::table('brechas')
-                                                        ->where('variable','Hogares con internet','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $telefonia_movil = DB::table('brechas')
-                                                        ->where('variable','Hogares con telefonía celular','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $transporte = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                    $turistica = DB::table('brechas')
-                                                        ->where('variable','Número de establecimientos de hospedaje','and')
-                                                        ->where('modalidad_de_intervencion',$modalidad)
-                                                        ->avg('porcentaje');
-                                                //calculos y operaciones
-                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                    $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                    $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                    $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                                echo number_format($vacunacion,0);
+                                                echo number_format($pea,0);
                                             } // AIO and Año and Modalidad 
                                             elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                                 //Promedio por año y modalidad
@@ -22947,256 +25309,11 @@
                                                 $modalidad = $_POST['modalidad'];
                                                 $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
                                                 //variables
-                                                    $dosis1 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 1ra dosis','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $dosis2 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 2da dosis','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $dosis3 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 3ra dosis','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $acceso_salud = DB::table('brechas')
-                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $seguro_salud = DB::table('brechas')
-                                                        ->where('variable','Población afiliada a algún tipo de seguro','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $agropecuario = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $agua = DB::table('brechas')
-                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $anemia = DB::table('brechas')
-                                                        ->where('variable','Anemia','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $bicicletas = DB::table('brechas')
-                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $cl_2dosecundaria = DB::table('brechas')
-                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $cl_4toprimaria = DB::table('brechas')
-                                                        ->where('variable','CL-Satisfactorio 4To primaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $inicial = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $climasocial = DB::table('brechas')
-                                                        ->where('variable','Clima social','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $dci = DB::table('brechas')
-                                                        ->where('variable','Desnutrición crónica infantil','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $desague = DB::table('brechas')
-                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $educacion = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $electricidad = DB::table('brechas')
-                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $esperanza = DB::table('brechas')
-                                                        ->where('variable','Esperanza de vida','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $gestion = DB::table('brechas')
-                                                        ->where('variable','Ejecución presupuestal en inversiones','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $juntos = DB::table('brechas')
-                                                        ->where('variable','Juntos, hogares afiliados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $kitescolar = DB::table('brechas')
-                                                        ->where('variable','Kit de higiene escolar','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $localesbuenestado = DB::table('brechas')
-                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mlplazo = DB::table('brechas')
-                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mant_iiee = DB::table('brechas')
-                                                        ->where('variable','Mantenimiento de IIEE','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mat_2dosecundaria = DB::table('brechas')
-                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mat_4toprimaria = DB::table('brechas')
-                                                        ->where('variable','Mat-Satisfactorio 4To primaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pdlc = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
                                                     $pea = DB::table('brechas')
                                                         ->where('variable','Poblacion economicante activa - PEA','and')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    $pea_ocupada = DB::table('brechas')
-                                                        ->where('variable','PEA Ocupada','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pei = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pension_65 = DB::table('brechas')
-                                                        ->where('variable','Pensión 65, usuarios','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pmi = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_edu_tecnica = DB::table('brechas')
-                                                        ->where('variable','Población con educación técnica superior','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_edu_universitaria = DB::table('brechas')
-                                                        ->where('variable','Población con educación universitaria superior','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poi = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: POI Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_ept = DB::table('brechas')
-                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_cetpros = DB::table('brechas')
-                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_institutos = DB::table('brechas')
-                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_universidades = DB::table('brechas')
-                                                        ->where('variable','Presencia de Universidades Total','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $primaria = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $ptar = DB::table('brechas')
-                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Red vial departamental - Pavimentado','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Red vial nacional - Pavimentado','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $salud = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $saneamiento = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $secundaria = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $servicio_internet = DB::table('brechas')
-                                                        ->where('variable','Hogares con internet','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $telefonia_movil = DB::table('brechas')
-                                                        ->where('variable','Hogares con telefonía celular','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $transporte = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $turistica = DB::table('brechas')
-                                                        ->where('variable','Número de establecimientos de hospedaje','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-
-                                                //calculos y operaciones
-                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                    $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                    $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                    $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                                echo number_format($vacunacion,0);
+                                                echo number_format($pea,0);
                                             } // distrito and Año and Modalidad 
                                             elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                                 //Promedio por distrito, año y modalidad
@@ -23207,256 +25324,11 @@
                                                 $modalidad = $_POST['modalidad'];
                                                 $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
                                                 //variables
-                                                    $dosis1 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 1ra dosis','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $dosis2 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 2da dosis','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $dosis3 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 3ra dosis','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $acceso_salud = DB::table('brechas')
-                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $seguro_salud = DB::table('brechas')
-                                                        ->where('variable','Población afiliada a algún tipo de seguro','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $agropecuario = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $agua = DB::table('brechas')
-                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $anemia = DB::table('brechas')
-                                                        ->where('variable','Anemia','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $bicicletas = DB::table('brechas')
-                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $cl_2dosecundaria = DB::table('brechas')
-                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $cl_4toprimaria = DB::table('brechas')
-                                                        ->where('variable','CL-Satisfactorio 4To primaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $inicial = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $climasocial = DB::table('brechas')
-                                                        ->where('variable','Clima social','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $dci = DB::table('brechas')
-                                                        ->where('variable','Desnutrición crónica infantil','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $desague = DB::table('brechas')
-                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $educacion = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $electricidad = DB::table('brechas')
-                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $esperanza = DB::table('brechas')
-                                                        ->where('variable','Esperanza de vida','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $gestion = DB::table('brechas')
-                                                        ->where('variable','Ejecución presupuestal en inversiones','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $juntos = DB::table('brechas')
-                                                        ->where('variable','Juntos, hogares afiliados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $kitescolar = DB::table('brechas')
-                                                        ->where('variable','Kit de higiene escolar','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $localesbuenestado = DB::table('brechas')
-                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mlplazo = DB::table('brechas')
-                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mant_iiee = DB::table('brechas')
-                                                        ->where('variable','Mantenimiento de IIEE','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mat_2dosecundaria = DB::table('brechas')
-                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mat_4toprimaria = DB::table('brechas')
-                                                        ->where('variable','Mat-Satisfactorio 4To primaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pdlc = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
                                                     $pea = DB::table('brechas')
                                                         ->where('variable','Poblacion economicante activa - PEA','and')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    $pea_ocupada = DB::table('brechas')
-                                                        ->where('variable','PEA Ocupada','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pei = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pension_65 = DB::table('brechas')
-                                                        ->where('variable','Pensión 65, usuarios','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pmi = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_edu_tecnica = DB::table('brechas')
-                                                        ->where('variable','Población con educación técnica superior','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_edu_universitaria = DB::table('brechas')
-                                                        ->where('variable','Población con educación universitaria superior','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poi = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: POI Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_ept = DB::table('brechas')
-                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_cetpros = DB::table('brechas')
-                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_institutos = DB::table('brechas')
-                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_universidades = DB::table('brechas')
-                                                        ->where('variable','Presencia de Universidades Total','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $primaria = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $ptar = DB::table('brechas')
-                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Red vial departamental - Pavimentado','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Red vial nacional - Pavimentado','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $salud = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $saneamiento = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $secundaria = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $servicio_internet = DB::table('brechas')
-                                                        ->where('variable','Hogares con internet','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $telefonia_movil = DB::table('brechas')
-                                                        ->where('variable','Hogares con telefonía celular','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $transporte = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $turistica = DB::table('brechas')
-                                                        ->where('variable','Número de establecimientos de hospedaje','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-
-                                                //calculos y operaciones
-                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                    $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                    $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                    $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                                echo number_format($vacunacion,0);
+                                                echo number_format($pea,0);
                                             } // distrito and Todos and Todos
                                             elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                                 //Promedio por distrito y modalidad
@@ -23466,422 +25338,190 @@
                                                 $modalidad = $_POST['modalidad'];
                                                 $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
                                                 //variables
-                                                    $dosis1 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 1ra dosis','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $dosis2 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 2da dosis','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $dosis3 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 3ra dosis','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $acceso_salud = DB::table('brechas')
-                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $seguro_salud = DB::table('brechas')
-                                                        ->where('variable','Población afiliada a algún tipo de seguro','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $agropecuario = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $agua = DB::table('brechas')
-                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $anemia = DB::table('brechas')
-                                                        ->where('variable','Anemia','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $bicicletas = DB::table('brechas')
-                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $cl_2dosecundaria = DB::table('brechas')
-                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $cl_4toprimaria = DB::table('brechas')
-                                                        ->where('variable','CL-Satisfactorio 4To primaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $inicial = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $climasocial = DB::table('brechas')
-                                                        ->where('variable','Clima social','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $dci = DB::table('brechas')
-                                                        ->where('variable','Desnutrición crónica infantil','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $desague = DB::table('brechas')
-                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $educacion = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $electricidad = DB::table('brechas')
-                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $esperanza = DB::table('brechas')
-                                                        ->where('variable','Esperanza de vida','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $gestion = DB::table('brechas')
-                                                        ->where('variable','Ejecución presupuestal en inversiones','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $juntos = DB::table('brechas')
-                                                        ->where('variable','Juntos, hogares afiliados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $kitescolar = DB::table('brechas')
-                                                        ->where('variable','Kit de higiene escolar','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $localesbuenestado = DB::table('brechas')
-                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mlplazo = DB::table('brechas')
-                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mant_iiee = DB::table('brechas')
-                                                        ->where('variable','Mantenimiento de IIEE','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mat_2dosecundaria = DB::table('brechas')
-                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mat_4toprimaria = DB::table('brechas')
-                                                        ->where('variable','Mat-Satisfactorio 4To primaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pdlc = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
                                                     $pea = DB::table('brechas')
                                                         ->where('variable','Poblacion economicante activa - PEA','and')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    $pea_ocupada = DB::table('brechas')
-                                                        ->where('variable','PEA Ocupada','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pei = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pension_65 = DB::table('brechas')
-                                                        ->where('variable','Pensión 65, usuarios','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pmi = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_edu_tecnica = DB::table('brechas')
-                                                        ->where('variable','Población con educación técnica superior','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_edu_universitaria = DB::table('brechas')
-                                                        ->where('variable','Población con educación universitaria superior','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $poi = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: POI Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_ept = DB::table('brechas')
-                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_cetpros = DB::table('brechas')
-                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_institutos = DB::table('brechas')
-                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_universidades = DB::table('brechas')
-                                                        ->where('variable','Presencia de Universidades Total','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $primaria = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $ptar = DB::table('brechas')
-                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Red vial departamental - Pavimentado','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Red vial nacional - Pavimentado','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $salud = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $saneamiento = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $secundaria = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $servicio_internet = DB::table('brechas')
-                                                        ->where('variable','Hogares con internet','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $telefonia_movil = DB::table('brechas')
-                                                        ->where('variable','Hogares con telefonía celular','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $transporte = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $turistica = DB::table('brechas')
-                                                        ->where('variable','Número de establecimientos de hospedaje','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-
-                                                //calculos y operaciones
-                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                    $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                    $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                    $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                                echo number_format($vacunacion,0);
+                                                echo number_format($pea,0);
                                             } // AIO and Año and Todos 
                                             elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
                                                 //Promedio por año
                                                 $anio = $_POST['year'];
                                                 $query = ['anio' => $anio];
                                                 //variables
-                                                    $dosis1 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 1ra dosis','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $dosis2 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 2da dosis','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $dosis3 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 3ra dosis','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $acceso_salud = DB::table('brechas')
-                                                        ->where('variable','Camas de Hospitalización e internamientos','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $seguro_salud = DB::table('brechas')
-                                                        ->where('variable','Población afiliada a algún tipo de seguro','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $agropecuario = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $agua = DB::table('brechas')
-                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $anemia = DB::table('brechas')
-                                                        ->where('variable','Anemia','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $bicicletas = DB::table('brechas')
-                                                        ->where('variable','Bicicletas Rutas Solidarias','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $cl_2dosecundaria = DB::table('brechas')
-                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $cl_4toprimaria = DB::table('brechas')
-                                                        ->where('variable','CL-Satisfactorio 4To primaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $inicial = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $climasocial = DB::table('brechas')
-                                                        ->where('variable','Clima social','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $dci = DB::table('brechas')
-                                                        ->where('variable','Desnutrición crónica infantil','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $desague = DB::table('brechas')
-                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $educacion = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $electricidad = DB::table('brechas')
-                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $esperanza = DB::table('brechas')
-                                                        ->where('variable','Esperanza de vida','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $gestion = DB::table('brechas')
-                                                        ->where('variable','Ejecución presupuestal en inversiones','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $juntos = DB::table('brechas')
-                                                        ->where('variable','Juntos, hogares afiliados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $kitescolar = DB::table('brechas')
-                                                        ->where('variable','Kit de higiene escolar','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $localesbuenestado = DB::table('brechas')
-                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mlplazo = DB::table('brechas')
-                                                        ->where('variable','Locales públicos en buen estado (% del total)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mant_iiee = DB::table('brechas')
-                                                        ->where('variable','Mantenimiento de IIEE','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mat_2dosecundaria = DB::table('brechas')
-                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $mat_4toprimaria = DB::table('brechas')
-                                                        ->where('variable','Mat-Satisfactorio 4To primaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $pdlc = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PDLC Actualizados','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
                                                     $pea = DB::table('brechas')
                                                         ->where('variable','Poblacion economicante activa - PEA','and')
                                                         ->where($query)
                                                         ->avg('porcentaje');
+                                                    echo number_format($pea,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $pea = DB::table('brechas')
+                                                        ->where('variable','Poblacion economicante activa - PEA')
+                                                        ->where('distrito',$distrito_nom)
+                                                        ->avg('porcentaje');
+                                                    echo number_format($pea,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $pea = DB::table('brechas')
+                                                    ->where('variable','Poblacion economicante activa - PEA')
+                                                    ->avg('porcentaje');
+                                                echo number_format($pea,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><h6>PEA ocupada</h6></th>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada')
+                                                        ->avg('porcentaje');
+                                                echo number_format($pea_ocupada,0);
+                                            } // AIO and Todos and Modalidad
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
+                                                        ->avg('porcentaje');
+                                                    echo number_format($vacunacion,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
                                                     $pea_ocupada = DB::table('brechas')
                                                         ->where('variable','PEA Ocupada','and')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    $pei = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PEI Actualizados','and')
+                                                echo number_format($pea_ocupada,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada','and')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    $pension_65 = DB::table('brechas')
-                                                        ->where('variable','Pensión 65, usuarios','and')
+                                                echo number_format($pea_ocupada,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada','and')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    $pmi = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PMI Actualizados','and')
+                                                echo number_format($pea_ocupada,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada','and')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    $poblacion_edu_tecnica = DB::table('brechas')
-                                                        ->where('variable','Población con educación técnica superior','and')
-                                                        ->where($query)
+                                                echo number_format($pea_ocupada,0);
+                                            } else {
+                                                //Promedio de brechas de X distrito
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                //variables
+                                                    $pea_ocupada = DB::table('brechas')
+                                                        ->where('variable','PEA Ocupada')
+                                                        ->where('distrito',$distrito_nom)
                                                         ->avg('porcentaje');
-                                                    $poblacion_edu_universitaria = DB::table('brechas')
-                                                        ->where('variable','Población con educación universitaria superior','and')
-                                                        ->where($query)
+                                                echo number_format($pea_ocupada,0);
+                                            }
+                                        } else {
+                                            //Promedio total
+                                            //variables
+                                                $pea_ocupada = DB::table('brechas')
+                                                    ->where('variable','PEA Ocupada')
+                                                    ->avg('porcentaje');
+                                            echo number_format($pea_ocupada,0);
+                                        }
+                                    ?>
+                                </h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><h6>Formación Univ./Técnica</h6></th>
+                            <td>
+                                <h6>
+                                    <?php
+                                        //filtro año y distrito
+                                        if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
+                                            // AIO and Todos and Todos
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio total
+                                                //variables
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior')
                                                         ->avg('porcentaje');
-                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa','and')
-                                                        ->where($query)
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total')
                                                         ->avg('porcentaje');
-                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa','and')
-                                                        ->where($query)
+                                                //calculos y operaciones
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                echo number_format($univ_tecnica,0);
+                                            } // AIO and Todos and Modalidad
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por modalidad
+                                                $modalidad = $_POST['modalidad'];
+                                                //variables
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
                                                         ->avg('porcentaje');
-                                                    $poi = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: POI Actualizados','and')
-                                                        ->where($query)
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where('modalidad_de_intervencion',$modalidad)
                                                         ->avg('porcentaje');
-                                                    $presencia_ept = DB::table('brechas')
-                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $presencia_cetpros = DB::table('brechas')
-                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                echo number_format($univ_tecnica,0);
+                                            } // AIO and Año and Modalidad 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por año y modalidad
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
                                                     $presencia_institutos = DB::table('brechas')
                                                         ->where('variable','Presencia de Institutos de Educación Superior','and')
                                                         ->where($query)
@@ -23890,254 +25530,73 @@
                                                         ->where('variable','Presencia de Universidades Total','and')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    $primaria = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $ptar = DB::table('brechas')
-                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Red vial departamental - Pavimentado','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Red vial nacional - Pavimentado','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Red vial vecinal - Pavimentado','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $salud = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $saneamiento = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $secundaria = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $servicio_internet = DB::table('brechas')
-                                                        ->where('variable','Hogares con internet','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $telefonia_movil = DB::table('brechas')
-                                                        ->where('variable','Hogares con telefonía celular','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $transporte = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-                                                    $turistica = DB::table('brechas')
-                                                        ->where('variable','Número de establecimientos de hospedaje','and')
-                                                        ->where($query)
-                                                        ->avg('porcentaje');
-
                                                 //calculos y operaciones
-                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                     $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                    $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                    $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                    $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                                echo number_format($vacunacion,0);
+                                                echo number_format($univ_tecnica,0);
+                                            } // distrito and Año and Modalidad 
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
+                                                //Promedio por distrito, año y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $anio = $_POST['year'];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['anio' => $anio , 'modalidad_de_intervencion' => $modalidad, 'distrito' => $distrito_nom];
+                                                //variables
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                echo number_format($univ_tecnica,0);
+                                            } // distrito and Todos and Todos
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por distrito y modalidad
+                                                $location = $_POST['location'];
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                                $modalidad = $_POST['modalidad'];
+                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                //variables
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                echo number_format($univ_tecnica,0);
+                                            } // AIO and Año and Todos 
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
+                                                //Promedio por año
+                                                $anio = $_POST['year'];
+                                                $query = ['anio' => $anio];
+                                                //variables
+                                                    $presencia_institutos = DB::table('brechas')
+                                                        ->where('variable','Presencia de Institutos de Educación Superior','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                    $presencia_universidades = DB::table('brechas')
+                                                        ->where('variable','Presencia de Universidades Total','and')
+                                                        ->where($query)
+                                                        ->avg('porcentaje');
+                                                //calculos y operaciones
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                echo number_format($univ_tecnica,0);
                                             } else {
                                                 //Promedio de brechas de X distrito
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
                                                 //variables
-                                                    $dosis1 = DB::table('brechas')
-                                                                ->where('variable','Vacunación 1ra dosis')
-                                                                ->where('distrito',$distrito_nom)
-                                                                ->avg('porcentaje');
-                                                    $dosis2 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 2da dosis')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $dosis3 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 3ra dosis')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $acceso_salud = DB::table('brechas')
-                                                        ->where('variable','Camas de Hospitalización e internamientos')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $seguro_salud = DB::table('brechas')
-                                                        ->where('variable','Población afiliada a algún tipo de seguro')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $agropecuario = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $agua = DB::table('brechas')
-                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $anemia = DB::table('brechas')
-                                                        ->where('variable','Anemia')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $bicicletas = DB::table('brechas')
-                                                        ->where('variable','Bicicletas Rutas Solidarias')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $cl_2dosecundaria = DB::table('brechas')
-                                                        ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $cl_4toprimaria = DB::table('brechas')
-                                                        ->where('variable','CL-Satisfactorio 4To primaria')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $inicial = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $climasocial = DB::table('brechas')
-                                                        ->where('variable','Clima social')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $dci = DB::table('brechas')
-                                                        ->where('variable','Desnutrición crónica infantil')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $desague = DB::table('brechas')
-                                                        ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $educacion = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Educación')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $electricidad = DB::table('brechas')
-                                                        ->where('variable','Viviendas con alumbrado eléctrico por red pública')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $esperanza = DB::table('brechas')
-                                                        ->where('variable','Esperanza de vida')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $gestion = DB::table('brechas')
-                                                        ->where('variable','Ejecución presupuestal en inversiones')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $juntos = DB::table('brechas')
-                                                        ->where('variable','Juntos, hogares afiliados')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $kitescolar = DB::table('brechas')
-                                                        ->where('variable','Kit de higiene escolar')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $localesbuenestado = DB::table('brechas')
-                                                        ->where('variable','Locales públicos en buen estado (% del total)')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $mlplazo = DB::table('brechas')
-                                                        ->where('variable','Locales públicos en buen estado (% del total)')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $mant_iiee = DB::table('brechas')
-                                                        ->where('variable','Mantenimiento de IIEE')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $mat_2dosecundaria = DB::table('brechas')
-                                                        ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $mat_4toprimaria = DB::table('brechas')
-                                                        ->where('variable','Mat-Satisfactorio 4To primaria')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $pdlc = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PDLC Actualizados')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $pea = DB::table('brechas')
-                                                        ->where('variable','Poblacion economicante activa - PEA')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $pea_ocupada = DB::table('brechas')
-                                                        ->where('variable','PEA Ocupada')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $pei = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PEI Actualizados')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $pension_65 = DB::table('brechas')
-                                                        ->where('variable','Pensión 65, usuarios')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $pmi = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: PMI Actualizados')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_edu_tecnica = DB::table('brechas')
-                                                        ->where('variable','Población con educación técnica superior')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_edu_universitaria = DB::table('brechas')
-                                                        ->where('variable','Población con educación universitaria superior')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                        ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                        ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $poi = DB::table('brechas')
-                                                        ->where('variable','Planeamiento: POI Actualizados')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $presencia_ept = DB::table('brechas')
-                                                        ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $presencia_cetpros = DB::table('brechas')
-                                                        ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
                                                     $presencia_institutos = DB::table('brechas')
                                                         ->where('variable','Presencia de Institutos de Educación Superior')
                                                         ->where('distrito',$distrito_nom)
@@ -24146,299 +25605,26 @@
                                                         ->where('variable','Presencia de Universidades Total')
                                                         ->where('distrito',$distrito_nom)
                                                         ->avg('porcentaje');
-                                                    $primaria = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $ptar = DB::table('brechas')
-                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Red vial departamental - Pavimentado')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Red vial nacional - Pavimentado')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Red vial vecinal - Pavimentado')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $salud = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $saneamiento = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $secundaria = DB::table('brechas')
-                                                        ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $servicio_internet = DB::table('brechas')
-                                                        ->where('variable','Hogares con internet')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $telefonia_movil = DB::table('brechas')
-                                                        ->where('variable','Hogares con telefonía celular')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $transporte = DB::table('brechas')
-                                                        ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-                                                    $turistica = DB::table('brechas')
-                                                        ->where('variable','Número de establecimientos de hospedaje')
-                                                        ->where('distrito',$distrito_nom)
-                                                        ->avg('porcentaje');
-
                                                 //calculos y operaciones
-                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                    $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                    $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                     $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                    $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                    $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                    $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                                echo number_format($vacunacion,0);
+                                                echo number_format($univ_tecnica,0);
                                             }
                                         } else {
                                             //Promedio total
                                             //variables
-                                                $dosis1 = DB::table('brechas')
-                                                            ->where('variable','Vacunación 1ra dosis')
-                                                            ->avg('porcentaje');
-                                                $dosis2 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 2da dosis')
-                                                    ->avg('porcentaje');
-                                                $dosis3 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 3ra dosis')
-                                                    ->avg('porcentaje');
-                                                $acceso_salud = DB::table('brechas')
-                                                    ->where('variable','Camas de Hospitalización e internamientos')
-                                                    ->avg('porcentaje');
-                                                $seguro_salud = DB::table('brechas')
-                                                    ->where('variable','Población afiliada a algún tipo de seguro')
-                                                    ->avg('porcentaje');
-                                                $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
-                                                    ->avg('porcentaje');
-                                                $agropecuario = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
-                                                    ->avg('porcentaje');
-                                                $agua = DB::table('brechas')
-                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
-                                                    ->avg('porcentaje');
-                                                $anemia = DB::table('brechas')
-                                                    ->where('variable','Anemia')
-                                                    ->avg('porcentaje');
-                                                $bicicletas = DB::table('brechas')
-                                                    ->where('variable','Bicicletas Rutas Solidarias')
-                                                    ->avg('porcentaje');
-                                                $cl_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en comprensión lectora - 2do secundaria')
-                                                    ->avg('porcentaje');
-                                                $cl_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','CL-Satisfactorio 4To primaria')
-                                                    ->avg('porcentaje');
-                                                $inicial = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial')
-                                                    ->avg('porcentaje');
-                                                $climasocial = DB::table('brechas')
-                                                    ->where('variable','Clima social')
-                                                    ->avg('porcentaje');
-                                                $dci = DB::table('brechas')
-                                                    ->where('variable','Desnutrición crónica infantil')
-                                                    ->avg('porcentaje');
-                                                $desague = DB::table('brechas')
-                                                    ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda')
-                                                    ->avg('porcentaje');
-                                                $educacion = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Educación')
-                                                    ->avg('porcentaje');
-                                                $electricidad = DB::table('brechas')
-                                                    ->where('variable','Viviendas con alumbrado eléctrico por red pública')
-                                                    ->avg('porcentaje');
-                                                $esperanza = DB::table('brechas')
-                                                    ->where('variable','Esperanza de vida')
-                                                    ->avg('porcentaje');
-                                                $gestion = DB::table('brechas')
-                                                    ->where('variable','Ejecución presupuestal en inversiones')
-                                                    ->avg('porcentaje');
-                                                $juntos = DB::table('brechas')
-                                                    ->where('variable','Juntos, hogares afiliados')
-                                                    ->avg('porcentaje');
-                                                $kitescolar = DB::table('brechas')
-                                                    ->where('variable','Kit de higiene escolar')
-                                                    ->avg('porcentaje');
-                                                $localesbuenestado = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)')
-                                                    ->avg('porcentaje');
-                                                $mlplazo = DB::table('brechas')
-                                                    ->where('variable','Locales públicos en buen estado (% del total)')
-                                                    ->avg('porcentaje');
-                                                $mant_iiee = DB::table('brechas')
-                                                    ->where('variable','Mantenimiento de IIEE')
-                                                    ->avg('porcentaje');
-                                                $mat_2dosecundaria = DB::table('brechas')
-                                                    ->where('variable','Alumnos con nivel satisfactorio en matemática - 2do secundaria')
-                                                    ->avg('porcentaje');
-                                                $mat_4toprimaria = DB::table('brechas')
-                                                    ->where('variable','Mat-Satisfactorio 4To primaria')
-                                                    ->avg('porcentaje');
-                                                $pdlc = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PDLC Actualizados')
-                                                    ->avg('porcentaje');
-                                                $pea = DB::table('brechas')
-                                                    ->where('variable','Poblacion economicante activa - PEA')
-                                                    ->avg('porcentaje');
-                                                $pea_ocupada = DB::table('brechas')
-                                                    ->where('variable','PEA Ocupada')
-                                                    ->avg('porcentaje');
-                                                $pei = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PEI Actualizados')
-                                                    ->avg('porcentaje');
-                                                $pension_65 = DB::table('brechas')
-                                                    ->where('variable','Pensión 65, usuarios')
-                                                    ->avg('porcentaje');
-                                                $pmi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: PMI Actualizados')
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_tecnica = DB::table('brechas')
-                                                    ->where('variable','Población con educación técnica superior')
-                                                    ->avg('porcentaje');
-                                                $poblacion_edu_universitaria = DB::table('brechas')
-                                                    ->where('variable','Población con educación universitaria superior')
-                                                    ->avg('porcentaje');
-                                                $poblacion_rural_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población rural entre 17 y 20 años con educación secundaria completa')
-                                                    ->avg('porcentaje');
-                                                $poblacion_urbana_edu_17_20 = DB::table('brechas')
-                                                    ->where('variable','Población urbana entre 17 y 20 años con educación secundaria completa')
-                                                    ->avg('porcentaje');
-                                                $poi = DB::table('brechas')
-                                                    ->where('variable','Planeamiento: POI Actualizados')
-                                                    ->avg('porcentaje');
-                                                $presencia_ept = DB::table('brechas')
-                                                    ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT')
-                                                    ->avg('porcentaje');
-                                                $presencia_cetpros = DB::table('brechas')
-                                                    ->where('variable','Presencia de Escuelas de Educación Superior - CETPROS')
-                                                    ->avg('porcentaje');
                                                 $presencia_institutos = DB::table('brechas')
                                                     ->where('variable','Presencia de Institutos de Educación Superior')
                                                     ->avg('porcentaje');
                                                 $presencia_universidades = DB::table('brechas')
                                                     ->where('variable','Presencia de Universidades Total')
                                                     ->avg('porcentaje');
-                                                $primaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
-                                                    ->avg('porcentaje');
-                                                $ptar = DB::table('brechas')
-                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
-                                                    ->avg('porcentaje');
-                                                $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
-                                                    ->avg('porcentaje');
-                                                $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Red vial departamental - Pavimentado')
-                                                    ->avg('porcentaje');
-                                                $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Red vial nacional - Pavimentado')
-                                                    ->avg('porcentaje');
-                                                $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Red vial vecinal - Pavimentado')
-                                                    ->avg('porcentaje');
-                                                $salud = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
-                                                    ->avg('porcentaje');
-                                                $saneamiento = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento')
-                                                    ->avg('porcentaje');
-                                                $secundaria = DB::table('brechas')
-                                                    ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Secundaria')
-                                                    ->avg('porcentaje');
-                                                $servicio_internet = DB::table('brechas')
-                                                    ->where('variable','Hogares con internet')
-                                                    ->avg('porcentaje');
-                                                $telefonia_movil = DB::table('brechas')
-                                                    ->where('variable','Hogares con telefonía celular')
-                                                    ->avg('porcentaje');
-                                                $transporte = DB::table('brechas')
-                                                    ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte')
-                                                    ->avg('porcentaje');
-                                                $turistica = DB::table('brechas')
-                                                    ->where('variable','Número de establecimientos de hospedaje')
-                                                    ->avg('porcentaje');
-
                                             //calculos y operaciones
-                                                $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
-                                                $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
-                                                $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
-                                                $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
-                                                $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                            echo number_format($vacunacion,0);
+                                            echo number_format($univ_tecnica,0);
                                         }
                                     ?>
                                 </h6>
                             </td>
-                        </tr>
-                        <tr>
-                            <th><h6>PEA ocupada</h6></th>
-                            <td><h6>7</h6></td>
-                        </tr>
-                        <tr>
-                            <th><h6>Formación Univ./Técnica</h6></th>
-                            <td><h6>88</h6></td>
                         </tr>
                     </table>
                 </div>
@@ -24631,7 +25817,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -24646,7 +25833,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vacunacion,0);
                                         } // AIO and Todos and Modalidad 
@@ -24882,7 +26068,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -24897,7 +26084,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vacunacion,0);
                                         } // AIO and Año and Modalidad 
@@ -25136,7 +26322,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -25151,7 +26338,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vacunacion,0);
                                         } // distrito and Año and Modalidad 
@@ -25393,7 +26579,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -25408,7 +26595,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vacunacion,0);
                                         } // distrito and Todos and Todos
@@ -25649,7 +26835,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -25664,7 +26851,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vacunacion,0);
                                         } // AIO and Año and Todos 
@@ -25902,7 +27088,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -25917,7 +27104,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vacunacion,0);
                                         } else {
@@ -26155,7 +27341,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -26170,7 +27357,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($vacunacion,0);
                                         }
@@ -26351,7 +27537,8 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                             $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -26366,7 +27553,6 @@
                                             $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                             $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                         echo number_format($vacunacion,0);
                                     }
@@ -26564,7 +27750,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -26579,7 +27766,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -26818,7 +28004,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -26833,7 +28020,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -27075,7 +28261,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -27090,7 +28277,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -27335,7 +28521,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -27350,7 +28537,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -27594,7 +28780,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -27609,7 +28796,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -27850,7 +29036,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -27865,7 +29052,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -28106,7 +29292,8 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                                 $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -28121,7 +29308,6 @@
                                                 $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
@@ -28305,7 +29491,8 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $capital_humano = ($poblacion_edu_tecnica+$poblacion_edu_universitaria+$pea_ocupada+$pea)/4;
+                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
                                             $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
@@ -28320,7 +29507,6 @@
                                             $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                             $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                             $productiva = ($agropecuaria+$turistica+$academica)/3;
