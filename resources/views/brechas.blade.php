@@ -103,7 +103,7 @@
                         </div>
                         <div>
                             <h4 class="valor">
-                                <?php 
+                                <?php
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                         // AIO and Todos and Todos
@@ -301,7 +301,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $institucionalidad;
+                                            echo number_format($institucionalidad,0);
                                         } // AIO and Todos and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por modalidad
@@ -552,7 +552,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $institucionalidad;
+                                            echo number_format($institucionalidad,0);
                                         } // AIO and Año and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por año y modalidad
@@ -806,7 +806,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $institucionalidad;
+                                            echo number_format($institucionalidad,0);
                                         } // distrito and Año and Modalidad 
                                         elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por distrito, año y modalidad
@@ -1063,7 +1063,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $institucionalidad;
+                                            echo number_format($institucionalidad,0);
                                         } // distrito and Todos and Todos
                                         elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por distrito y modalidad
@@ -1319,7 +1319,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $institucionalidad;
+                                            echo number_format($institucionalidad,0);
                                         } // AIO and Año and Todos 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por año
@@ -1572,7 +1572,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $institucionalidad;
+                                            echo number_format($institucionalidad,0);
                                         } else {
                                             //Promedio de brechas de X distrito
                                             $location = $_POST['location'];
@@ -1825,7 +1825,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $institucionalidad;
+                                            echo number_format($institucionalidad,0);
                                         }
                                     } else {
                                         //Promedio total
@@ -2021,7 +2021,7 @@
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                             $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                        echo $institucionalidad;
+                                        echo number_format($institucionalidad,0);
                                     }
                                 ?>
                             </h4>
@@ -2035,7 +2035,7 @@
                             <th><h6>Canon Minero, Regalía Minera y otros para el desarrollo</h6></th>
                             <td>
                                 <h6>
-                                    <?php 
+                                <?php
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                         // AIO and Todos and Todos
@@ -2233,7 +2233,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         } // AIO and Todos and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por modalidad
@@ -2484,7 +2484,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         } // AIO and Año and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por año y modalidad
@@ -2738,7 +2738,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         } // distrito and Año and Modalidad 
                                         elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por distrito, año y modalidad
@@ -2995,7 +2995,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         } // distrito and Todos and Todos
                                         elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por distrito y modalidad
@@ -3251,7 +3251,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         } // AIO and Año and Todos 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por año
@@ -3504,7 +3504,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         } else {
                                             //Promedio de brechas de X distrito
                                             $location = $_POST['location'];
@@ -3757,7 +3757,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         }
                                     } else {
                                         //Promedio total
@@ -3953,7 +3953,7 @@
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                             $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                        echo $total_avg;
+                                        echo number_format($total_avg,0);
                                     }
                                 ?>
                                 </h6>
@@ -4244,7 +4244,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         } // AIO and Todos and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por modalidad
@@ -4495,7 +4495,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         } // AIO and Año and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por año y modalidad
@@ -4749,7 +4749,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         } // distrito and Año and Modalidad 
                                         elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por distrito, año y modalidad
@@ -5006,7 +5006,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         } // distrito and Todos and Todos
                                         elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por distrito y modalidad
@@ -5262,7 +5262,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         } // AIO and Año and Todos 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por año
@@ -5515,7 +5515,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         } else {
                                             //Promedio de brechas de X distrito
                                             $location = $_POST['location'];
@@ -5768,7 +5768,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $total_avg;
+                                            echo number_format($total_avg,0);
                                         }
                                     } else {
                                         //Promedio total
@@ -5964,7 +5964,7 @@
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                             $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                        echo $total_avg;
+                                        echo number_format($total_avg,0);
                                     }
                                 ?>
                             </h2>
@@ -5979,7 +5979,7 @@
                         </div>
                         <div>
                             <h4 class="valor">
-                                <?php 
+                                <?php
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                         // AIO and Todos and Todos
@@ -6177,8 +6177,8 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                $educacion = ($educacion_ebr + $vida_larga_saludable)/2; 
-                                            echo $educacion;
+                                                $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
+                                            echo number_format($oportunidades,0);
                                         } // AIO and Todos and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por modalidad
@@ -6429,8 +6429,8 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                $educacion = ($educacion_ebr + $vida_larga_saludable)/2; 
-                                            echo $educacion;
+                                                $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
+                                            echo number_format($oportunidades,0);
                                         } // AIO and Año and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por año y modalidad
@@ -6684,8 +6684,8 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                $educacion = ($educacion_ebr + $vida_larga_saludable)/2; 
-                                            echo $educacion;
+                                                $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
+                                            echo number_format($oportunidades,0);
                                         } // distrito and Año and Modalidad 
                                         elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por distrito, año y modalidad
@@ -6942,8 +6942,8 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                $educacion = ($educacion_ebr + $vida_larga_saludable)/2; 
-                                            echo $educacion;
+                                                $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
+                                            echo number_format($oportunidades,0);
                                         } // distrito and Todos and Todos
                                         elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por distrito y modalidad
@@ -7199,8 +7199,8 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                $educacion = ($educacion_ebr + $vida_larga_saludable)/2; 
-                                            echo $educacion;
+                                                $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
+                                            echo number_format($oportunidades,0);
                                         } // AIO and Año and Todos 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por año
@@ -7453,8 +7453,8 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                $educacion = ($educacion_ebr + $vida_larga_saludable)/2; 
-                                            echo $educacion;
+                                                $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
+                                            echo number_format($oportunidades,0);
                                         } else {
                                             //Promedio de brechas de X distrito
                                             $location = $_POST['location'];
@@ -7707,8 +7707,8 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                                $educacion = ($educacion_ebr + $vida_larga_saludable)/2; 
-                                            echo $educacion;
+                                                $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
+                                            echo number_format($oportunidades,0);
                                         }
                                     } else {
                                         //Promedio total
@@ -7904,8 +7904,8 @@
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                             $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            $educacion = ($educacion_ebr + $vida_larga_saludable)/2; 
-                                        echo $educacion;
+                                            $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2; 
+                                        echo number_format($oportunidades,0);
                                     }
                                 ?>
                             </h4>
@@ -8074,7 +8074,7 @@
                         </div>
                         <div>
                             <h4 class="valor">
-                                <?php 
+                                <?php
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                         // AIO and Todos and Todos
@@ -8275,7 +8275,7 @@
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                            echo $infraestructura_social;
+                                            echo number_format($infraestructura_social,0);
                                         } // AIO and Todos and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por modalidad
@@ -8529,7 +8529,7 @@
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                            echo $infraestructura_social;
+                                            echo number_format($infraestructura_social,0);
                                         } // AIO and Año and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por año y modalidad
@@ -8786,7 +8786,7 @@
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                            echo $infraestructura_social;
+                                            echo number_format($infraestructura_social,0);
                                         } // distrito and Año and Modalidad 
                                         elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por distrito, año y modalidad
@@ -9046,7 +9046,7 @@
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                            echo $infraestructura_social;
+                                            echo number_format($infraestructura_social,0);
                                         } // distrito and Todos and Todos
                                         elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por distrito y modalidad
@@ -9305,7 +9305,7 @@
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                            echo $infraestructura_social;
+                                            echo number_format($infraestructura_social,0);
                                         } // AIO and Año and Todos 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por año
@@ -9561,7 +9561,7 @@
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                            echo $infraestructura_social;
+                                            echo number_format($infraestructura_social,0);
                                         } else {
                                             //Promedio de brechas de X distrito
                                             $location = $_POST['location'];
@@ -9817,7 +9817,7 @@
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                            echo $infraestructura_social;
+                                            echo number_format($infraestructura_social,0);
                                         }
                                     } else {
                                         //Promedio total
@@ -10016,7 +10016,7 @@
                                             $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                             $productiva = ($agropecuaria+$turistica+$academica)/3;
                                             $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
-                                        echo $infraestructura_social;
+                                        echo number_format($infraestructura_social,0);
                                     }
                                 ?>
                             </h4>
@@ -10232,7 +10232,7 @@
                         </div>
                         <div>
                             <h4 class="valor">
-                                <?php 
+                                <?php
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                         // AIO and Todos and Todos
@@ -10430,7 +10430,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $capital_humano;
+                                            echo number_format($capital_humano,0);
                                         } // AIO and Todos and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por modalidad
@@ -10681,7 +10681,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $capital_humano;
+                                            echo number_format($capital_humano,0);
                                         } // AIO and Año and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por año y modalidad
@@ -10935,7 +10935,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $capital_humano;
+                                            echo number_format($capital_humano,0);
                                         } // distrito and Año and Modalidad 
                                         elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por distrito, año y modalidad
@@ -11192,7 +11192,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $capital_humano;
+                                            echo number_format($capital_humano,0);
                                         } // distrito and Todos and Todos
                                         elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por distrito y modalidad
@@ -11448,7 +11448,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $capital_humano;
+                                            echo number_format($capital_humano,0);
                                         } // AIO and Año and Todos 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por año
@@ -11701,7 +11701,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $capital_humano;
+                                            echo number_format($capital_humano,0);
                                         } else {
                                             //Promedio de brechas de X distrito
                                             $location = $_POST['location'];
@@ -11954,7 +11954,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $capital_humano;
+                                            echo number_format($capital_humano,0);
                                         }
                                     } else {
                                         //Promedio total
@@ -12150,7 +12150,7 @@
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                             $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                        echo $capital_humano;
+                                        echo number_format($capital_humano,0);
                                     }
                                 ?>
                             </h4>
@@ -12193,7 +12193,7 @@
                         </div>
                         <div>
                             <h4 class="valor">
-                                <?php 
+                                <?php
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                         // AIO and Todos and Todos
@@ -12391,7 +12391,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $vacunacion;
+                                            echo number_format($vacunacion,0);
                                         } // AIO and Todos and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por modalidad
@@ -12642,7 +12642,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $vacunacion;
+                                            echo number_format($vacunacion,0);
                                         } // AIO and Año and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por año y modalidad
@@ -12896,7 +12896,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $vacunacion;
+                                            echo number_format($vacunacion,0);
                                         } // distrito and Año and Modalidad 
                                         elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
                                             //Promedio por distrito, año y modalidad
@@ -13153,7 +13153,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $vacunacion;
+                                            echo number_format($vacunacion,0);
                                         } // distrito and Todos and Todos
                                         elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por distrito y modalidad
@@ -13409,7 +13409,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $vacunacion;
+                                            echo number_format($vacunacion,0);
                                         } // AIO and Año and Todos 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
                                             //Promedio por año
@@ -13662,7 +13662,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $vacunacion;
+                                            echo number_format($vacunacion,0);
                                         } else {
                                             //Promedio de brechas de X distrito
                                             $location = $_POST['location'];
@@ -13915,7 +13915,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                            echo $vacunacion;
+                                            echo number_format($vacunacion,0);
                                         }
                                     } else {
                                         //Promedio total
@@ -14111,7 +14111,7 @@
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                             $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                             $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
-                                        echo $vacunacion;
+                                        echo number_format($vacunacion,0);
                                     }
                                 ?>
                             </h4>
