@@ -1070,8 +1070,7 @@
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
                                             $distrito_nom = $distrito[2];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                            $query = ['distrito' => $distrito_nom];
                                             //variables
                                                 $dosis1 = DB::table('brechas')
                                                     ->where('variable','Vacunación 1ra dosis','and')
@@ -2039,7 +2038,7 @@
                                         //filtro año y distrito
                                         if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
                                             // AIO and Todos and Todos
-                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                            if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                                 //Promedio total
                                                 //variables
                                                     $recursos_desarrollo = DB::table('brechas')
@@ -2047,7 +2046,7 @@
                                                         ->avg('porcentaje');
                                                 echo number_format($recursos_desarrollo,0);
                                             } // AIO and Todos and Modalidad 
-                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todos") {
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
                                                 //Promedio por modalidad
                                                 $modalidad = $_POST['modalidad'];
                                                 //variables
@@ -2057,7 +2056,7 @@
                                                         ->avg('porcentaje');
                                                 echo number_format($recursos_desarrollo,0);
                                             } // AIO and Año and Modalidad 
-                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                                 //Promedio por año y modalidad
                                                 $anio = $_POST['year'];
                                                 $modalidad = $_POST['modalidad'];
@@ -2069,7 +2068,7 @@
                                                         ->avg('porcentaje');
                                                 echo number_format($recursos_desarrollo,0);
                                             } // distrito and Año and Modalidad 
-                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todos") {
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                                 //Promedio por distrito, año y modalidad
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
@@ -2084,13 +2083,12 @@
                                                         ->avg('porcentaje');
                                                 echo number_format($recursos_desarrollo,0);
                                             } // distrito and Todos and Todos
-                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todos") {
+                                            elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                                 //Promedio por distrito y modalidad
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $recursos_desarrollo = DB::table('brechas')
                                                         ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)','and')
@@ -2098,7 +2096,7 @@
                                                         ->avg('porcentaje');
                                                 echo number_format($recursos_desarrollo,0);
                                             } // AIO and Año and Todos 
-                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todos") {
+                                            elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
                                                 //Promedio por año
                                                 $anio = $_POST['year'];
                                                 $query = ['anio' => $anio];
@@ -2244,8 +2242,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $pdlc = DB::table('brechas')
                                                         ->where('variable','Planeamiento: PDLC Actualizados','and')
@@ -2398,8 +2395,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $gestion = DB::table('brechas')
                                                         ->where('variable','Ejecución presupuestal en inversiones','and')
@@ -2569,8 +2565,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $agropecuario = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
@@ -2742,8 +2737,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $climasocial = DB::table('brechas')
                                                         ->where('variable','Clima social','and')
@@ -2848,8 +2842,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $pdlc = DB::table('brechas')
                                                         ->where('variable','Planeamiento: PDLC Actualizados','and')
@@ -2949,8 +2942,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $saneamiento = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Saneamiento','and')
@@ -3055,8 +3047,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $poi = DB::table('brechas')
                                                         ->where('variable','Planeamiento: POI Actualizados','and')
@@ -3156,8 +3147,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $transporte = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Transporte','and')
@@ -3262,8 +3252,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $pei = DB::table('brechas')
                                                         ->where('variable','Planeamiento: PEI Actualizados','and')
@@ -3363,8 +3352,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $agropecuario = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio','and')
@@ -3469,8 +3457,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $pmi = DB::table('brechas')
                                                         ->where('variable','Planeamiento: PMI Actualizados','and')
@@ -3570,8 +3557,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $educacion = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Educación','and')
@@ -3676,8 +3662,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $salud = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Salud','and')
@@ -3732,7 +3717,7 @@
                                 <?php
                                     //filtro año y distrito
                                     if (isset($_POST['location']) or isset($_POST['year']) or isset($_POST['modalidad'])) {
-                                        // AIO and Todos and Todos
+                                        // Todos
                                         if ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio total
                                             //variables
@@ -3903,9 +3888,32 @@
                                                     ->avg('porcentaje');
 
                                             //calculos y operaciones
+                                                $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
+                                                $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro);
+                                                $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
                                                 $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
+                                                $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
+                                                $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
-                                        } // AIO and Todos and Modalidad 
+                                        } // Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por modalidad
                                             $modalidad = $_POST['modalidad'];
@@ -4156,7 +4164,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
-                                        } // AIO and Año and Modalidad 
+                                        } // Año and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por año y modalidad
                                             $anio = $_POST['year'];
@@ -4410,7 +4418,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
-                                        } // distrito and Año and Modalidad 
+                                        } // Distrito and Año and Modalidad 
                                         elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
                                             //Promedio por distrito, año y modalidad
                                             $location = $_POST['location'];
@@ -4673,8 +4681,7 @@
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
                                             $distrito_nom = $distrito[2];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                            $query = ['distrito' => $distrito_nom ];
                                             //variables
                                                 $dosis1 = DB::table('brechas')
                                                     ->where('variable','Vacunación 1ra dosis','and')
@@ -4923,7 +4930,7 @@
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                             echo number_format($total_avg,0);
-                                        } // AIO and Año and Todos 
+                                        } // Año
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
                                             //Promedio por año
                                             $anio = $_POST['year'];
@@ -6610,8 +6617,7 @@
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
                                             $distrito_nom = $distrito[2];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                            $query = ['distrito' => $distrito_nom];
                                             //variables
                                                 $dosis1 = DB::table('brechas')
                                                     ->where('variable','Vacunación 1ra dosis','and')
@@ -11429,8 +11435,7 @@
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
                                             $distrito_nom = $distrito[2];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                            $query = ['distrito' => $distrito_nom];
                                             //variables
                                                 $dosis1 = DB::table('brechas')
                                                     ->where('variable','Vacunación 1ra dosis','and')
@@ -13386,8 +13391,7 @@
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
                                             $distrito_nom = $distrito[2];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                            $query = ['distrito' => $distrito_nom];
                                             //variables
                                                 $dosis1 = DB::table('brechas')
                                                     ->where('variable','Vacunación 1ra dosis','and')
@@ -14476,8 +14480,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $bicicletas = DB::table('brechas')
                                                         ->where('variable','Bicicletas Rutas Solidarias','and')
@@ -14634,8 +14637,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $acceso_salud = DB::table('brechas')
                                                         ->where('variable','Camas de Hospitalización e internamientos','and')
@@ -14740,8 +14742,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $mlplazo = DB::table('brechas')
                                                         ->where('variable','Locales públicos en buen estado (% del total)','and')
@@ -14884,8 +14885,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $bicicletas = DB::table('brechas')
                                                         ->where('variable','Bicicletas Rutas Solidarias','and')
@@ -15955,8 +15955,7 @@
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
                                             $distrito_nom = $distrito[2];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                            $query = ['distrito' => $distrito_nom];
                                             //variables
                                                 $dosis1 = DB::table('brechas')
                                                     ->where('variable','Vacunación 1ra dosis','and')
@@ -16986,8 +16985,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $servicio_internet = DB::table('brechas')
                                                         ->where('variable','Hogares con internet','and')
@@ -17087,8 +17085,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $telefonia_movil = DB::table('brechas')
                                                         ->where('variable','Hogares con telefonía celular','and')
@@ -17188,8 +17185,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $agua = DB::table('brechas')
                                                         ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda','and')
@@ -17294,8 +17290,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $desague = DB::table('brechas')
                                                         ->where('variable','Viviendas con red pública de desagüe dentro de la vivienda','and')
@@ -17395,8 +17390,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $electricidad = DB::table('brechas')
                                                         ->where('variable','Viviendas con alumbrado eléctrico por red pública','and')
@@ -17496,8 +17490,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $ptar = DB::table('brechas')
                                                         ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)','and')
@@ -17641,8 +17634,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $red_vial_departamental = DB::table('brechas')
                                                         ->where('variable','Red vial departamental - Pavimentado','and')
@@ -18711,8 +18703,7 @@
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
                                             $distrito_nom = $distrito[2];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                            $query = ['distrito' => $distrito_nom];
                                             //variables
                                                 $dosis1 = DB::table('brechas')
                                                     ->where('variable','Vacunación 1ra dosis','and')
@@ -19742,8 +19733,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $agropecuaria = DB::table('brechas')
                                                         ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)','and')
@@ -19843,8 +19833,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $turistica = DB::table('brechas')
                                                         ->where('variable','Número de establecimientos de hospedaje','and')
@@ -19997,8 +19986,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $presencia_ept = DB::table('brechas')
                                                         ->where('variable','Presencia de Centros de Educación Técnico Productiva - Educación Para el Trabajo EPT','and')
@@ -21146,8 +21134,7 @@
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
                                             $distrito_nom = $distrito[2];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                            $query = ['distrito' => $distrito_nom];
                                             //variables
                                                 $dosis1 = DB::table('brechas')
                                                     ->where('variable','Vacunación 1ra dosis','and')
@@ -23091,8 +23078,7 @@
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
                                             $distrito_nom = $distrito[2];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                            $query = ['distrito' => $distrito_nom];
                                             //variables
                                                 $dosis1 = DB::table('brechas')
                                                     ->where('variable','Vacunación 1ra dosis','and')
@@ -24122,8 +24108,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $pea = DB::table('brechas')
                                                         ->where('variable','Poblacion economicante activa - PEA','and')
@@ -24223,8 +24208,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $pea_ocupada = DB::table('brechas')
                                                         ->where('variable','PEA Ocupada','and')
@@ -24347,8 +24331,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $presencia_institutos = DB::table('brechas')
                                                         ->where('variable','Presencia de Institutos de Educación Superior','and')
@@ -25390,8 +25373,7 @@
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
                                             $distrito_nom = $distrito[2];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                            $query = ['distrito' => $distrito_nom];
                                             //variables
                                                 $dosis1 = DB::table('brechas')
                                                     ->where('variable','Vacunación 1ra dosis','and')
@@ -27335,8 +27317,7 @@
                                             $location = $_POST['location'];
                                             $distrito = explode(",",$location);
                                             $distrito_nom = $distrito[2];
-                                            $modalidad = $_POST['modalidad'];
-                                            $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                            $query = ['distrito' => $distrito_nom];
                                             //variables
                                                 $dosis1 = DB::table('brechas')
                                                     ->where('variable','Vacunación 1ra dosis','and')
@@ -28366,8 +28347,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $dosis1 = DB::table('brechas')
                                                         ->where('variable','Vacunación 1ra dosis','and')
@@ -28467,8 +28447,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $dosis2 = DB::table('brechas')
                                                         ->where('variable','Vacunación 2da dosis','and')
@@ -28568,8 +28547,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $modalidad = $_POST['modalidad'];
-                                                $query = ['distrito' => $distrito_nom , 'modalidad_de_intervencion' => $modalidad];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //variables
                                                     $dosis3 = DB::table('brechas')
                                                         ->where('variable','Vacunación 3ra dosis','and')
