@@ -2680,7 +2680,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><h6>Clima social para el desarrollo</h6></th>
+                            <th>
+                                <a href="/climasocial"><h6>Clima social para el desarrollo</h6></a>
+                            </th>
                             <td>
                                 <h6>
                                     <?php

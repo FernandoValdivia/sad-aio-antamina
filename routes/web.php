@@ -23,6 +23,8 @@ Route::post('/resumen','ResumenController@index');
 //brechas
 Route::get('/brechas', 'BrechasController@index');
 Route::post('/brechas', 'BrechasController@index');
+//climasocial
+Route::get('/climasocial', 'BrechasController@clima');
 //proyectos
 Route::get('/proyectos', 'ProyectosController@index');
 Route::post('/proyectos', 'ProyectosController@index');
