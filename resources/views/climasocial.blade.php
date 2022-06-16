@@ -73,11 +73,12 @@
 
             <div class="container-xxl py-1 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Brechas</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Clima Social</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="/resumen" class="aactiva">Resumen</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Brechas</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Clima Social</li>
                         </ol>
                     </nav>
                 </div>
