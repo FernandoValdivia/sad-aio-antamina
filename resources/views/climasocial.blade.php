@@ -77,7 +77,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="/resumen" class="aactiva">Resumen</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Brechas</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page"><a href="/brechas" class="aactiva">Brechas</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Clima Social</li>
                         </ol>
                     </nav>
