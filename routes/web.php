@@ -2,16 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\ClimaSocialController;
 
 //
 Route::get('/', function () {
@@ -24,7 +15,8 @@ Route::post('/resumen','ResumenController@index');
 Route::get('/brechas', 'BrechasController@index');
 Route::post('/brechas', 'BrechasController@index');
 //climasocial
-Route::get('/climasocial', 'BrechasController@clima');
+Route::get('/climasocial', 'ClimaSocialController@index');
+/* Route::get('/climasocial', [ClimaSocialController::class, 'index']); */
 //proyectos
 Route::get('/proyectos', 'ProyectosController@index');
 Route::post('/proyectos', 'ProyectosController@index');

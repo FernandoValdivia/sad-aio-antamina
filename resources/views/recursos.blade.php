@@ -8,7 +8,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
+    
     <!-- Favicon -->
     <link href="https://res.cloudinary.com/lvaldivia/image/upload/v1652719812/ccd/logo-icon_pjbwon.png" rel="icon">
 

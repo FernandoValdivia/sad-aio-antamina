@@ -295,13 +295,13 @@
                                                             ->where('variable','Población afiliada a algún tipo de seguro')
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
                                                             ->where('variable','Anemia')
@@ -409,19 +409,19 @@
                                                             ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -450,17 +450,17 @@
                                                         $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                         $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                         $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                         $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
                                                         $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                         $tranferencias_monetarias = ($juntos+$pension_65)/2;
                                                         $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                         $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                         $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
                                                         $infraestructura = ($infraestructura_potencialidades+$academica)/2;
                                                         $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
                                                         $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
                                                         $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                         $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
@@ -504,7 +504,7 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
@@ -512,7 +512,7 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
@@ -656,23 +656,23 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
@@ -709,17 +709,17 @@
                                                         $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                         $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                         $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                         $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
                                                         $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                         $tranferencias_monetarias = ($juntos+$pension_65)/2;
                                                         $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                         $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                         $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
                                                         $infraestructura = ($infraestructura_potencialidades+$academica)/2;
                                                         $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
                                                         $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
                                                         $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                         $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
@@ -757,13 +757,13 @@
                                                             ->where('variable','Población afiliada a algún tipo de seguro')
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
                                                             ->where('variable','Anemia')
@@ -871,19 +871,19 @@
                                                             ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -912,17 +912,17 @@
                                                         $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                         $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                         $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                         $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
                                                         $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                         $tranferencias_monetarias = ($juntos+$pension_65)/2;
                                                         $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                         $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                         $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
                                                         $infraestructura = ($infraestructura_potencialidades+$academica)/2;
                                                         $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
                                                         $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
                                                         $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                         $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
@@ -963,7 +963,7 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
@@ -971,7 +971,7 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
@@ -1115,23 +1115,23 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
@@ -1168,17 +1168,17 @@
                                                         $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                         $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                         $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                         $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
                                                         $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                         $tranferencias_monetarias = ($juntos+$pension_65)/2;
                                                         $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                         $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                         $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
                                                         $infraestructura = ($infraestructura_potencialidades+$academica)/2;
                                                         $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
                                                         $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
                                                         $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                         $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
@@ -1226,7 +1226,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agropecuario = DB::table('brechas')
@@ -1234,7 +1234,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agua = DB::table('brechas')
-                                                        ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $anemia = DB::table('brechas')
@@ -1378,23 +1378,23 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $ptar = DB::table('brechas')
-                                                        ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $salud = DB::table('brechas')
@@ -1430,17 +1430,17 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                     $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
                                                     $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                     $tranferencias_monetarias = ($juntos+$pension_65)/2;
                                                     $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                     $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
                                                     $infraestructura = ($infraestructura_potencialidades+$academica)/2;
                                                     $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
                                                     $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
                                                     $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                     $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
@@ -1476,13 +1476,13 @@
                                                     ->where('variable','Población afiliada a algún tipo de seguro')
                                                     ->avg('porcentaje');
                                                 $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                     ->avg('porcentaje');
                                                 $agropecuario = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                     ->avg('porcentaje');
                                                 $agua = DB::table('brechas')
-                                                    ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                     ->avg('porcentaje');
                                                 $anemia = DB::table('brechas')
                                                     ->where('variable','Anemia')
@@ -1590,19 +1590,19 @@
                                                     ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                     ->avg('porcentaje');
                                                 $ptar = DB::table('brechas')
-                                                    ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                     ->avg('porcentaje');
                                                 $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                     ->avg('porcentaje');
                                                 $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                    ->where('variable','Red vial departamental - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                    ->where('variable','Red vial nacional - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                    ->where('variable','Red vial vecinal - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $salud = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -1631,17 +1631,17 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
-                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
-                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                 $tranferencias_monetarias = ($juntos+$pension_65)/2;
                                                 $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                 $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
                                                 $infraestructura = ($infraestructura_potencialidades+$academica)/2;
                                                 $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
                                                 $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
                                                 $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
                                                 $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
@@ -1690,13 +1690,13 @@
                                                         ->where('variable','Población afiliada a algún tipo de seguro')
                                                         ->avg('porcentaje');
                                                     $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                         ->avg('porcentaje');
                                                     $agropecuario = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                         ->avg('porcentaje');
                                                     $agua = DB::table('brechas')
-                                                        ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                         ->avg('porcentaje');
                                                     $anemia = DB::table('brechas')
                                                         ->where('variable','Anemia')
@@ -1804,19 +1804,19 @@
                                                         ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                         ->avg('porcentaje');
                                                     $ptar = DB::table('brechas')
-                                                        ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                         ->avg('porcentaje');
                                                     $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                         ->avg('porcentaje');
                                                     $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $salud = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -1896,7 +1896,7 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
@@ -1904,7 +1904,7 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
@@ -2048,23 +2048,23 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
@@ -2147,13 +2147,13 @@
                                                             ->where('variable','Población afiliada a algún tipo de seguro')
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
                                                             ->where('variable','Anemia')
@@ -2261,19 +2261,19 @@
                                                             ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -2351,7 +2351,7 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
@@ -2359,7 +2359,7 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
@@ -2503,23 +2503,23 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
@@ -2612,7 +2612,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agropecuario = DB::table('brechas')
@@ -2620,7 +2620,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agua = DB::table('brechas')
-                                                        ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $anemia = DB::table('brechas')
@@ -2764,23 +2764,23 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $ptar = DB::table('brechas')
-                                                        ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $salud = DB::table('brechas')
@@ -2860,13 +2860,13 @@
                                                     ->where('variable','Población afiliada a algún tipo de seguro')
                                                     ->avg('porcentaje');
                                                 $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                     ->avg('porcentaje');
                                                 $agropecuario = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                     ->avg('porcentaje');
                                                 $agua = DB::table('brechas')
-                                                    ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                     ->avg('porcentaje');
                                                 $anemia = DB::table('brechas')
                                                     ->where('variable','Anemia')
@@ -2974,19 +2974,19 @@
                                                     ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                     ->avg('porcentaje');
                                                 $ptar = DB::table('brechas')
-                                                    ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                     ->avg('porcentaje');
                                                 $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                     ->avg('porcentaje');
                                                 $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                    ->where('variable','Red vial departamental - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                    ->where('variable','Red vial nacional - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                    ->where('variable','Red vial vecinal - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $salud = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -3072,13 +3072,13 @@
                                                         ->where('variable','Población afiliada a algún tipo de seguro')
                                                         ->avg('porcentaje');
                                                     $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                         ->avg('porcentaje');
                                                     $agropecuario = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                         ->avg('porcentaje');
                                                     $agua = DB::table('brechas')
-                                                        ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                         ->avg('porcentaje');
                                                     $anemia = DB::table('brechas')
                                                         ->where('variable','Anemia')
@@ -3186,19 +3186,19 @@
                                                         ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                         ->avg('porcentaje');
                                                     $ptar = DB::table('brechas')
-                                                        ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                         ->avg('porcentaje');
                                                     $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                         ->avg('porcentaje');
                                                     $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $salud = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -3275,7 +3275,7 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
@@ -3283,7 +3283,7 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
@@ -3427,23 +3427,23 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
@@ -3523,13 +3523,13 @@
                                                             ->where('variable','Población afiliada a algún tipo de seguro')
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
                                                             ->where('variable','Anemia')
@@ -3637,19 +3637,19 @@
                                                             ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -3724,7 +3724,7 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
@@ -3732,7 +3732,7 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
@@ -3876,23 +3876,23 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
@@ -3982,7 +3982,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agropecuario = DB::table('brechas')
@@ -3990,7 +3990,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agua = DB::table('brechas')
-                                                        ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $anemia = DB::table('brechas')
@@ -4134,23 +4134,23 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $ptar = DB::table('brechas')
-                                                        ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $salud = DB::table('brechas')
@@ -4227,13 +4227,13 @@
                                                     ->where('variable','Población afiliada a algún tipo de seguro')
                                                     ->avg('porcentaje');
                                                 $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                     ->avg('porcentaje');
                                                 $agropecuario = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                     ->avg('porcentaje');
                                                 $agua = DB::table('brechas')
-                                                    ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                     ->avg('porcentaje');
                                                 $anemia = DB::table('brechas')
                                                     ->where('variable','Anemia')
@@ -4341,19 +4341,19 @@
                                                     ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                     ->avg('porcentaje');
                                                 $ptar = DB::table('brechas')
-                                                    ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                     ->avg('porcentaje');
                                                 $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                     ->avg('porcentaje');
                                                 $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                    ->where('variable','Red vial departamental - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                    ->where('variable','Red vial nacional - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                    ->where('variable','Red vial vecinal - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $salud = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -4421,8 +4421,8 @@
                                                 //Promedio brechas
                                                 //variables
                                                     $dosis1 = DB::table('brechas')
-                                                        ->where('variable','Vacunación 1ra dosis')
-                                                        ->avg('porcentaje');
+                                                                ->where('variable','Vacunación 1ra dosis')
+                                                                ->avg('porcentaje');
                                                     $dosis2 = DB::table('brechas')
                                                         ->where('variable','Vacunación 2da dosis')
                                                         ->avg('porcentaje');
@@ -4436,13 +4436,13 @@
                                                         ->where('variable','Población afiliada a algún tipo de seguro')
                                                         ->avg('porcentaje');
                                                     $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                         ->avg('porcentaje');
                                                     $agropecuario = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                         ->avg('porcentaje');
                                                     $agua = DB::table('brechas')
-                                                        ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                         ->avg('porcentaje');
                                                     $anemia = DB::table('brechas')
                                                         ->where('variable','Anemia')
@@ -4550,19 +4550,19 @@
                                                         ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                         ->avg('porcentaje');
                                                     $ptar = DB::table('brechas')
-                                                        ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                         ->avg('porcentaje');
                                                     $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                         ->avg('porcentaje');
                                                     $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Kilómetros Red vial nacional - Pavimentado')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $salud = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -4587,33 +4587,33 @@
                                                         ->avg('porcentaje');
 
                                                 //calculos y operaciones
-                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
-                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
-                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                     $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                     $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                     $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
+                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                    $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2;
+                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 echo number_format($infraestructura_social,0);
                                                 } else {
                                                     //Promedio de brechas de X distrito
@@ -4642,7 +4642,7 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
@@ -4650,7 +4650,7 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
@@ -4794,23 +4794,23 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
@@ -4843,33 +4843,33 @@
                                                             ->avg('porcentaje');
 
                                                     //calculos y operaciones
-                                                        $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                        $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                        $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                        $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                         $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                         $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
-                                                        $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                        $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                        $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
-                                                        $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                        $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                        $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                        $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                        $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                        $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                        $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                        $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                        $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                        $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                        $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                        $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                        $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                         $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                         $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                         $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
+                                                        $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                        $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                        $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                        $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                        $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                        $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                        $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                        $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                        $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                        $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                        $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                        $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                        $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                        $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                        $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2;
+                                                        $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                        $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                        $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                     echo number_format($infraestructura_social,0);
                                                 }
                                             //solo año
@@ -4893,13 +4893,13 @@
                                                             ->where('variable','Población afiliada a algún tipo de seguro')
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
                                                             ->where('variable','Anemia')
@@ -5007,19 +5007,19 @@
                                                             ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -5044,33 +5044,33 @@
                                                             ->avg('porcentaje');
 
                                                     //calculos y operaciones
-                                                        $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                        $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                        $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                        $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                         $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                         $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
-                                                        $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                        $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                        $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
-                                                        $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                        $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                        $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                        $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                        $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                        $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                        $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                        $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                        $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                        $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                        $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                        $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                        $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                         $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                         $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                         $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
+                                                        $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                        $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                        $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                        $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                        $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                        $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                        $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                        $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                        $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                        $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                        $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                        $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                        $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                        $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                        $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2;
+                                                        $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                        $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                        $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                     echo number_format($infraestructura_social,0);
                                                 } else {
                                                     //brechas por año
@@ -5097,7 +5097,7 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
@@ -5105,7 +5105,7 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
@@ -5249,23 +5249,23 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
@@ -5298,33 +5298,33 @@
                                                             ->avg('porcentaje');
 
                                                     //calculos y operaciones
-                                                        $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                        $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                        $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                        $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                         $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                         $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
-                                                        $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                        $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                        $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
-                                                        $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                        $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                        $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                        $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                        $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                        $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                        $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                        $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                        $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                        $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                        $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                        $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                        $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                         $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                         $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                         $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
+                                                        $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                        $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                        $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                        $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                        $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                        $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                        $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                        $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                        $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                        $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                        $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                        $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                        $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                        $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                        $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                        $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                        $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                        $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2;
+                                                        $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                        $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                        $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                     echo number_format($infraestructura_social,0);
                                                 }
                                             //distrito y año
@@ -5358,7 +5358,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agropecuario = DB::table('brechas')
@@ -5366,7 +5366,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agua = DB::table('brechas')
-                                                        ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $anemia = DB::table('brechas')
@@ -5510,23 +5510,23 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $ptar = DB::table('brechas')
-                                                        ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $salud = DB::table('brechas')
@@ -5558,41 +5558,41 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                 //calculos y operaciones
-                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
-                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
-                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                    $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                    $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                     $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                     $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                     $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
+                                                    $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                    $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                    $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                    $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                    $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                    $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                    $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                    $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                    $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                    $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                    $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                    $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                    $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                    $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                    $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                    $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2;
+                                                    $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                    $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                    $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                                 echo number_format($infraestructura_social,0);
                                             }
                                         } else {
                                             //Promedio total
                                             //variables
                                                 $dosis1 = DB::table('brechas')
-                                                    ->where('variable','Vacunación 1ra dosis')
-                                                    ->avg('porcentaje');
+                                                            ->where('variable','Vacunación 1ra dosis')
+                                                            ->avg('porcentaje');
                                                 $dosis2 = DB::table('brechas')
                                                     ->where('variable','Vacunación 2da dosis')
                                                     ->avg('porcentaje');
@@ -5606,13 +5606,13 @@
                                                     ->where('variable','Población afiliada a algún tipo de seguro')
                                                     ->avg('porcentaje');
                                                 $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                     ->avg('porcentaje');
                                                 $agropecuario = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                     ->avg('porcentaje');
                                                 $agua = DB::table('brechas')
-                                                    ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                     ->avg('porcentaje');
                                                 $anemia = DB::table('brechas')
                                                     ->where('variable','Anemia')
@@ -5720,19 +5720,19 @@
                                                     ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                     ->avg('porcentaje');
                                                 $ptar = DB::table('brechas')
-                                                    ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                     ->avg('porcentaje');
                                                 $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                     ->avg('porcentaje');
                                                 $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                    ->where('variable','Red vial departamental - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Kilómetros Red vial nacional - Pavimentado')
+                                                    ->where('variable','Red vial nacional - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                    ->where('variable','Red vial vecinal - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $salud = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -5757,33 +5757,33 @@
                                                     ->avg('porcentaje');
 
                                             //calculos y operaciones
-                                                $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
-                                                $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
-                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
-                                                $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
-                                                $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
-                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
-                                                $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
-                                                $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
-                                                $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
-                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
-                                                $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
-                                                $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
-                                                $infraestructura = ($infraestructura_potencialidades+$academica)/2;
-                                                $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
-                                                $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
-                                                $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
-                                                $vacunacion = ($dosis1+$dosis2+$dosis3)/3;
-                                                $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
-                                                $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
-                                                $total_avg = ($nivel_vida_digno+$educacion_ebr+$vida_larga_saludable+$institucionalidad)/4;
                                                 $social = ($adecuado_estado_iiee+$acceso_salud)/2;
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
+                                                $tranferencias_monetarias = ($juntos+$pension_65)/2;
+                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
+                                                $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
+                                                $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
+                                                $infraestructura = ($infraestructura_potencialidades+$academica)/2;
+                                                $ingresos = ($infraestructura+$capital_humano+$tranferencias_monetarias)/3;
+                                                $vial_pavimentado = ($red_vial_departamental+$red_vial_nacional+$red_vial_vecinal)/3;
+                                                $servicios_basicos = ($servicio_internet+$telefonia_movil+$agua+$desague+$electricidad+$ptar+$vial_pavimentado)/7;
+                                                $nivel_vida_digno = ($servicios_basicos+$ingresos)/2;
+                                                $vida_larga_saludable = ($esperanza+$anemia+$dci+$seguro_salud)/4;
+                                                $secundaria2do = ($mat_2dosecundaria + $cl_2dosecundaria)/2;
+                                                $primaria4to = ($mat_4toprimaria + $cl_4toprimaria)/2;
+                                                $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
+                                                $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
+                                                $acceso_educacion = ($inicial+$primaria+$secundaria)/3;
+                                                $educacion_ebr = ($acceso_educacion+$nivel_educacion+$logros_aprendizaje)/3;
+                                                $oportunidades = ($educacion_ebr + $vida_larga_saludable)/2;
+                                                $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
+                                                $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
+                                                $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
                                             echo number_format($infraestructura_social,0);
                                         }
                                     ?>
@@ -5818,13 +5818,13 @@
                                                         ->where('variable','Población afiliada a algún tipo de seguro')
                                                         ->avg('porcentaje');
                                                     $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                         ->avg('porcentaje');
                                                     $agropecuario = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                         ->avg('porcentaje');
                                                     $agua = DB::table('brechas')
-                                                        ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                         ->avg('porcentaje');
                                                     $anemia = DB::table('brechas')
                                                         ->where('variable','Anemia')
@@ -5932,19 +5932,19 @@
                                                         ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                         ->avg('porcentaje');
                                                     $ptar = DB::table('brechas')
-                                                        ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                         ->avg('porcentaje');
                                                     $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                         ->avg('porcentaje');
                                                     $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $salud = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -6024,7 +6024,7 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
@@ -6032,7 +6032,7 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
@@ -6176,23 +6176,23 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
@@ -6275,13 +6275,13 @@
                                                             ->where('variable','Población afiliada a algún tipo de seguro')
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
                                                             ->where('variable','Anemia')
@@ -6389,19 +6389,19 @@
                                                             ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -6479,7 +6479,7 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
@@ -6487,7 +6487,7 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
@@ -6631,23 +6631,23 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
@@ -6740,7 +6740,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agropecuario = DB::table('brechas')
@@ -6748,7 +6748,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agua = DB::table('brechas')
-                                                        ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $anemia = DB::table('brechas')
@@ -6892,23 +6892,23 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $ptar = DB::table('brechas')
-                                                        ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $salud = DB::table('brechas')
@@ -6988,13 +6988,13 @@
                                                     ->where('variable','Población afiliada a algún tipo de seguro')
                                                     ->avg('porcentaje');
                                                 $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                     ->avg('porcentaje');
                                                 $agropecuario = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                     ->avg('porcentaje');
                                                 $agua = DB::table('brechas')
-                                                    ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                     ->avg('porcentaje');
                                                 $anemia = DB::table('brechas')
                                                     ->where('variable','Anemia')
@@ -7102,19 +7102,19 @@
                                                     ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                     ->avg('porcentaje');
                                                 $ptar = DB::table('brechas')
-                                                    ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                     ->avg('porcentaje');
                                                 $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                     ->avg('porcentaje');
                                                 $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                    ->where('variable','Red vial departamental - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                    ->where('variable','Red vial nacional - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                    ->where('variable','Red vial vecinal - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $salud = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -7200,13 +7200,13 @@
                                                         ->where('variable','Población afiliada a algún tipo de seguro')
                                                         ->avg('porcentaje');
                                                     $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                         ->avg('porcentaje');
                                                     $agropecuario = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                         ->avg('porcentaje');
                                                     $agua = DB::table('brechas')
-                                                        ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                         ->avg('porcentaje');
                                                     $anemia = DB::table('brechas')
                                                         ->where('variable','Anemia')
@@ -7314,19 +7314,19 @@
                                                         ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                         ->avg('porcentaje');
                                                     $ptar = DB::table('brechas')
-                                                        ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                         ->avg('porcentaje');
                                                     $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                         ->avg('porcentaje');
                                                     $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
                                                         ->avg('porcentaje');
                                                     $salud = DB::table('brechas')
                                                         ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -7380,7 +7380,7 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
@@ -7388,7 +7388,7 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
@@ -7532,23 +7532,23 @@
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->where('distrito',$distrito_nom)
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
@@ -7605,13 +7605,13 @@
                                                             ->where('variable','Población afiliada a algún tipo de seguro')
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
                                                             ->where('variable','Anemia')
@@ -7719,19 +7719,19 @@
                                                             ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
                                                             ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')
@@ -7783,7 +7783,7 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agropecuaria = DB::table('brechas')
-                                                            ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                            ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agropecuario = DB::table('brechas')
@@ -7791,7 +7791,7 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $agua = DB::table('brechas')
-                                                            ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                            ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $anemia = DB::table('brechas')
@@ -7935,23 +7935,23 @@
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $ptar = DB::table('brechas')
-                                                            ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                            ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $recursos_desarrollo = DB::table('brechas')
-                                                            ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                            ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_departamental = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                            ->where('variable','Red vial departamental - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_nacional = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                            ->where('variable','Red vial nacional - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $red_vial_vecinal = DB::table('brechas')
-                                                            ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                            ->where('variable','Red vial vecinal - Pavimentado')
                                                             ->where('anio',$anio)
                                                             ->avg('porcentaje');
                                                         $salud = DB::table('brechas')
@@ -8018,7 +8018,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agropecuaria = DB::table('brechas')
-                                                        ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                        ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agropecuario = DB::table('brechas')
@@ -8026,7 +8026,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $agua = DB::table('brechas')
-                                                        ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                        ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $anemia = DB::table('brechas')
@@ -8170,23 +8170,23 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $ptar = DB::table('brechas')
-                                                        ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                        ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $recursos_desarrollo = DB::table('brechas')
-                                                        ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                        ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_departamental = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                        ->where('variable','Red vial departamental - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_nacional = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                        ->where('variable','Red vial nacional - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $red_vial_vecinal = DB::table('brechas')
-                                                        ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                        ->where('variable','Red vial vecinal - Pavimentado')
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                     $salud = DB::table('brechas')
@@ -8240,13 +8240,13 @@
                                                     ->where('variable','Población afiliada a algún tipo de seguro')
                                                     ->avg('porcentaje');
                                                 $agropecuaria = DB::table('brechas')
-                                                    ->where('variable','Hectárea de Superficie Agrícola Bajo Riego (ha)')
+                                                    ->where('variable','Producción agrícola - Superficie Agrícola Bajo Riego (ha)')
                                                     ->avg('porcentaje');
                                                 $agropecuario = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Agropecurio')
                                                     ->avg('porcentaje');
                                                 $agua = DB::table('brechas')
-                                                    ->where('variable','Viviendas por red pública de agua dentro de la vivienda')
+                                                    ->where('variable','Abastecimiento de agua en la vivienda por red pública dentro de la vivienda')
                                                     ->avg('porcentaje');
                                                 $anemia = DB::table('brechas')
                                                     ->where('variable','Anemia')
@@ -8354,19 +8354,19 @@
                                                     ->where('variable','MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria')
                                                     ->avg('porcentaje');
                                                 $ptar = DB::table('brechas')
-                                                    ->where('variable','Plantas de Tratamiento de Aguas Residuales (PTAR)')
+                                                    ->where('variable','Acceso a Planta de Tratamiento de Aguas Residuales (PTAR)')
                                                     ->avg('porcentaje');
                                                 $recursos_desarrollo = DB::table('brechas')
-                                                    ->where('variable','Brecha recursos financieros (total brecha - Canon y Regalía Minera)')
+                                                    ->where('variable','Brecha recursos financieros (total brecha – Canon y Regalía Minera)')
                                                     ->avg('porcentaje');
                                                 $red_vial_departamental = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial departamental - Pavimentado')
+                                                    ->where('variable','Red vial departamental - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $red_vial_nacional = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial nacional - Pavimentado')
+                                                    ->where('variable','Red vial nacional - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $red_vial_vecinal = DB::table('brechas')
-                                                    ->where('variable','Kilómetros de Red vial vecinal - Pavimentado')
+                                                    ->where('variable','Red vial vecinal - Pavimentado')
                                                     ->avg('porcentaje');
                                                 $salud = DB::table('brechas')
                                                     ->where('variable','Calidad de gasto presupuestal en inversiones - Salud')

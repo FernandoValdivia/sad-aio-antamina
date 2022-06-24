@@ -84,19 +84,4 @@ class BrechasController extends Controller
                 'brechas'
             ));
     }
-
-    public function clima()
-    {
-        $brechas = \DB::table('brechas')->select(
-            'variable',
-            'distrito',
-            'modalidad_de_intervencion',
-            'anio',
-            'porcentaje'
-        )
-        ->get();
-            
-        return view('climasocial',
-        compact('brechas'));
-    }
 }
