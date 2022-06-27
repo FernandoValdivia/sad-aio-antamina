@@ -35,7 +35,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/> 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 </head>
-
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Navbar -->
@@ -2787,8 +2786,8 @@
                 <div class="grid-br-7">
                     <table>
                         <tr>
-                            <th><h6>PDLC</h6></th>
-                            <td>
+                            <th id="pdlc"><h6>PDLC</h6></th>
+                            <td id="vpdlc">
                                 <h6>
                                     <?php
                                         //filtro año y distrito
@@ -2887,8 +2886,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><h6>Saneamiento</h6></th>
-                            <td>
+                            <th id="sanea"><h6>Saneamiento</h6></th>
+                            <td id="vsanea">
                                 <h6>
                                     <?php
                                         //filtro año y distrito
@@ -2992,8 +2991,8 @@
                 <div class="grid-br-8">
                     <table>
                         <tr>
-                            <th><h6>POI</h6></th>
-                            <td>
+                            <th id="poi"><h6>POI</h6></th>
+                            <td id="vpoi">
                                 <h6>
                                     <?php
                                         //filtro año y distrito
@@ -3092,8 +3091,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><h6>Transporte</h6></th>
-                            <td>
+                            <th id="trans"><h6>Transporte</h6></th>
+                            <td id="vtrans">
                                 <h6>
                                     <?php
                                         //filtro año y distrito
@@ -3197,8 +3196,8 @@
                 <div class="grid-br-9">
                     <table>
                         <tr>
-                            <th><h6>PEI</h6></th>
-                            <td>
+                            <th id="pei"><h6>PEI</h6></th>
+                            <td id="vpei">
                                 <h6>
                                     <?php
                                         //filtro año y distrito
@@ -3297,8 +3296,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><h6>Agropecuario</h6></th>
-                            <td>
+                            <th id="agro"><h6>Agropecuario</h6></th>
+                            <td id="vagro">
                                 <h6>
                                     <?php
                                         //filtro año y distrito
@@ -3402,8 +3401,8 @@
                 <div class="grid-br-10">
                     <table>
                         <tr>
-                            <th><h6>PMI</h6></th>
-                            <td>
+                            <th id="pmi"><h6>PMI</h6></th>
+                            <td id="vpmi">
                                 <h6>
                                     <?php
                                         //filtro año y distrito
@@ -3502,8 +3501,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><h6>Educación</h6></th>
-                            <td>
+                            <th id="edu"><h6>Educación</h6></th>
+                            <td id="vedu">
                                 <h6>
                                     <?php
                                         //filtro año y distrito
@@ -3607,8 +3606,8 @@
                 <div class="grid-br-11">
                     <table>
                         <tr>
-                            <th><h6>Salud</h6></th>
-                            <td>
+                            <th id="salud"><h6>Salud</h6></th>
+                            <td id="vsalud">
                                 <h6>
                                     <?php
                                         //filtro año y distrito
@@ -31524,13 +31523,17 @@
                         </tr>
                     </table>
                 </div>
-                <div class="grid-br-36"></div>
-                {{-- Potencialidades --}}
-                <div class="grid-br-37">
+                {{-- Titulo potencialidades --}}
+                <div class="grid-br-36">
                     <table>
                         <tr>
                             <th><h5>Potencialidades</h5></th>
                         </tr>
+                    </table>
+                </div>
+                {{-- Potencialidades --}}
+                <div class="grid-br-37">
+                    <table>
                         <?php
                             if (isset($_POST['location'])) {
                                 if ($_POST['location']=="AIO") {
