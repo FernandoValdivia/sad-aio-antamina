@@ -317,6 +317,19 @@
                             ->count();
                             echo $cant;
             }
+            //Año y Distrito
+            elseif ($_POST['location']!="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']!="Todos") {
+                $location = $_POST['location'];
+                $distrito = explode(",",$location);
+                $distrito_nom = $distrito[2];
+                $anio = $_POST['year'];
+
+                $query = ['distrito' => $distrito_nom, 'anio' => $anio];
+                $cant = DB::table('proyectos')
+                            ->where($query)
+                            ->count();
+                            echo $cant;
+            }
             //Total o todos 
             else {
                 //Total
@@ -443,6 +456,19 @@
                 $anio = $_POST['year'];
                 $sum = DB::table('proyectos')
                             ->where('anio',$anio)
+                            ->sum('monto_actualizado');
+                            echo number_format($sum,0);
+            }
+            //Año y Distrito
+            elseif ($_POST['location']!="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']!="Todos") {
+                $location = $_POST['location'];
+                $distrito = explode(",",$location);
+                $distrito_nom = $distrito[2];
+                $anio = $_POST['year'];
+
+                $query = ['distrito' => $distrito_nom, 'anio' => $anio];
+                $sum = DB::table('proyectos')
+                            ->where($query)
                             ->sum('monto_actualizado');
                             echo number_format($sum,0);
             }

@@ -283,7 +283,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -534,7 +534,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -788,7 +788,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -1045,7 +1045,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -1300,7 +1300,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -1553,7 +1553,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -1806,7 +1806,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -2002,7 +2002,7 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                             $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -3897,7 +3897,7 @@
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                 $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                 $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
@@ -3918,7 +3918,7 @@
                                                 $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
 
-                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano+$vacunacion)/5;
+                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano)*0.95/4+($vacunacion)*0.05;
                                             echo number_format($total_avg,0);
                                         } // Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
@@ -4153,7 +4153,7 @@
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                 $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                 $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
@@ -4174,7 +4174,7 @@
                                                 $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
 
-                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano+$vacunacion)/5;
+                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano)*0.95/4+($vacunacion)*0.05;
                                             echo number_format($total_avg,0);
                                         } // Año and Modalidad 
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
@@ -4412,7 +4412,7 @@
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                 $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                 $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
@@ -4433,7 +4433,7 @@
                                                 $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
 
-                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano+$vacunacion)/5;
+                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano)*0.95/4+($vacunacion)*0.05;
                                             echo number_format($total_avg,0);
                                         } // Distrito and Año and Modalidad 
                                         elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
@@ -4674,7 +4674,7 @@
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                 $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                 $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
@@ -4695,7 +4695,7 @@
                                                 $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
 
-                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano+$vacunacion)/5;
+                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano)*0.95/4+($vacunacion)*0.05;
                                             echo number_format($total_avg,0);
                                         } // distrito and Todos and Todos
                                         elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
@@ -4934,7 +4934,7 @@
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                 $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                 $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
@@ -4955,7 +4955,7 @@
                                                 $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
 
-                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano+$vacunacion)/5;
+                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano)*0.95/4+($vacunacion)*0.05;
                                             echo number_format($total_avg,0);
                                         } // Año
                                         elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
@@ -5192,7 +5192,7 @@
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                 $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                 $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
@@ -5213,7 +5213,7 @@
                                                 $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
 
-                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano+$vacunacion)/5;
+                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano)*0.95/4+($vacunacion)*0.05;
                                             echo number_format($total_avg,0);
                                         } else {
                                             //Promedio de brechas de X distrito
@@ -5450,7 +5450,7 @@
                                                 $productiva = ($agropecuaria+$turistica+$academica)/3;
                                                 $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                                 $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                                 $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
@@ -5471,7 +5471,7 @@
                                                 $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
                                                 $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
 
-                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano+$vacunacion)/5;
+                                                $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano)*0.95/4+($vacunacion)*0.05;
                                             echo number_format($total_avg,0);
                                         }
                                     } else {
@@ -5651,7 +5651,7 @@
                                             $productiva = ($agropecuaria+$turistica+$academica)/3;
                                             $infraestructura_social = ($social+$servicios_basicos+$productiva)/3;
                                             $tranferencias_monetarias = ($juntos+$pension_65)/2;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                             $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $academica = ($presencia_ept+$presencia_cetpros+$presencia_institutos+$presencia_universidades)/4;
                                             $infraestructura_potencialidades = ($agropecuaria+$turistica)/2;
@@ -5672,7 +5672,7 @@
                                             $planteamiento = ($pdlc+$poi+$pei+$pmi)/4;
                                             $institucionalidad = ($recursos_desarrollo+$planteamiento+$gestion+$calidad_gasto+$climasocial)/5;
 
-                                            $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano+$vacunacion)/5;
+                                            $total_avg = ($institucionalidad+$oportunidades+$infraestructura_social+$capital_humano)*0.95/4+($vacunacion)*0.05;
                                         echo number_format($total_avg,0);
                                     }
                                 ?>
@@ -5869,7 +5869,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -6121,7 +6121,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -6376,7 +6376,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -6634,7 +6634,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -6890,7 +6890,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -7144,7 +7144,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -7398,7 +7398,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -7595,7 +7595,7 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                             $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -7809,7 +7809,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -8063,7 +8063,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -8320,7 +8320,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -8580,7 +8580,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -8838,7 +8838,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -9094,7 +9094,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -9350,7 +9350,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -9549,7 +9549,7 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                             $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -9764,7 +9764,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -10018,7 +10018,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -10275,7 +10275,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -10535,7 +10535,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -10793,7 +10793,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -11049,7 +11049,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -11305,7 +11305,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -11504,7 +11504,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -11715,7 +11715,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -11969,7 +11969,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -12226,7 +12226,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -12486,7 +12486,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -12744,7 +12744,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -13000,7 +13000,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -13256,7 +13256,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -13455,7 +13455,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -13666,7 +13666,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -13920,7 +13920,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -14177,7 +14177,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -14437,7 +14437,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -14695,7 +14695,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -14951,7 +14951,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -15207,7 +15207,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -15406,7 +15406,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -15723,7 +15723,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -15977,7 +15977,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -16234,7 +16234,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -16494,7 +16494,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -16752,7 +16752,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -17008,7 +17008,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -17264,7 +17264,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -17463,7 +17463,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -17779,7 +17779,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -18033,7 +18033,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -18290,7 +18290,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -18550,7 +18550,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -18808,7 +18808,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -19064,7 +19064,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -19320,7 +19320,7 @@
                                                     $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                     $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                     $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                     $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                     $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                     $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -19519,7 +19519,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -19915,7 +19915,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -20169,7 +20169,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -20426,7 +20426,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -20686,7 +20686,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -20944,7 +20944,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -21200,7 +21200,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -21456,7 +21456,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -21655,7 +21655,7 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                             $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -22277,7 +22277,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -22531,7 +22531,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -22788,7 +22788,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -23048,7 +23048,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -23306,7 +23306,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -23562,7 +23562,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -23818,7 +23818,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -24017,7 +24017,7 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                             $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -24233,7 +24233,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -24487,7 +24487,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -24744,7 +24744,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -25004,7 +25004,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -25262,7 +25262,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -25518,7 +25518,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -25774,7 +25774,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -25973,7 +25973,7 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                             $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -26797,7 +26797,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -27051,7 +27051,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -27308,7 +27308,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -27568,7 +27568,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -27826,7 +27826,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -28082,7 +28082,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -28338,7 +28338,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                                 $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                                 $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -28537,7 +28537,7 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                             $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             $nivel_educacion = ($poblacion_rural_edu_17_20+$poblacion_urbana_edu_17_20)/2;
                                             $logros_aprendizaje = ($primaria4to+$secundaria2do)/2;
@@ -31776,7 +31776,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         } // AIO and Todos and Modalidad 
@@ -32012,7 +32012,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         } // AIO and Año and Modalidad 
@@ -32251,7 +32251,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         } // distrito and Año and Modalidad 
@@ -32493,7 +32493,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         } // distrito and Todos and Todos
@@ -32733,7 +32733,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         } // AIO and Año and Todos 
@@ -32971,7 +32971,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         } else {
@@ -33209,7 +33209,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         }
@@ -33390,7 +33390,7 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                             $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                         echo number_format($capital_humano,0);
                                     }
@@ -33588,7 +33588,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         } // AIO and Todos and Modalidad
@@ -33824,7 +33824,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         } // AIO and Año and Modalidad 
@@ -34063,7 +34063,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         } // distrito and Año and Modalidad 
@@ -34305,7 +34305,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         } // distrito and Todos and Todos
@@ -34545,7 +34545,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         } // AIO and Año and Todos
@@ -34783,7 +34783,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         } else {
@@ -35021,7 +35021,7 @@
                                                 $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                                 $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                                 $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                             echo number_format($capital_humano,0);
                                         }
@@ -35202,7 +35202,7 @@
                                             $retorno_seguro = ($kitescolar+$mant_iiee+$bicicletas)/3;
                                             $adecuado_estado_iiee = ($localesbuenestado+$retorno_seguro)/2;
                                             $calidad_gasto = ($saneamiento+$transporte+$agropecuario+$educacion+$salud)/5;
-                                            $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                            $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                             $capital_humano = ($pea_ocupada+$pea+$univ_tecnica)/3;
                                         echo number_format($capital_humano,0);
                                     }
@@ -35432,7 +35432,7 @@
                                                         ->where('variable','Presencia de Universidades Total')
                                                         ->avg('porcentaje');
                                                 //calculos y operaciones
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 echo number_format($univ_tecnica,0);
                                             } // AIO and Todos and Modalidad
                                             elseif ($_POST['location']=="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']!="Todas") {
@@ -35448,7 +35448,7 @@
                                                         ->where('modalidad_de_intervencion',$modalidad)
                                                         ->avg('porcentaje');
                                                 //calculos y operaciones
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 echo number_format($univ_tecnica,0);
                                             } // AIO and Año and Modalidad 
                                             elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
@@ -35466,7 +35466,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                 //calculos y operaciones
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 echo number_format($univ_tecnica,0);
                                             } // distrito and Año and Modalidad 
                                             elseif ($_POST['location']!="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']!="Todas") {
@@ -35487,7 +35487,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                 //calculos y operaciones
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 echo number_format($univ_tecnica,0);
                                             } // distrito and Todos and Todos
                                             elseif ($_POST['location']!="AIO" and $_POST['year']=="Todos" and $_POST['modalidad']=="Todas") {
@@ -35506,7 +35506,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                 //calculos y operaciones
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 echo number_format($univ_tecnica,0);
                                             } // AIO and Año and Todos 
                                             elseif ($_POST['location']=="AIO" and $_POST['year']!="Todos" and $_POST['modalidad']=="Todas") {
@@ -35523,7 +35523,7 @@
                                                         ->where($query)
                                                         ->avg('porcentaje');
                                                 //calculos y operaciones
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 echo number_format($univ_tecnica,0);
                                             } else {
                                                 //Promedio de brechas de X distrito
@@ -35540,7 +35540,7 @@
                                                         ->where('distrito',$distrito_nom)
                                                         ->avg('porcentaje');
                                                 //calculos y operaciones
-                                                    $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                    $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                                 echo number_format($univ_tecnica,0);
                                             }
                                         } else {
@@ -35553,7 +35553,7 @@
                                                     ->where('variable','Presencia de Universidades Total')
                                                     ->avg('porcentaje');
                                             //calculos y operaciones
-                                                $univ_tecnica = ($presencia_universidades+$presencia_institutos)/2;
+                                                $univ_tecnica = ($poblacion_edu_universitaria+$poblacion_edu_tecnica)/2;
                                             echo number_format($univ_tecnica,0);
                                         }
                                     ?>
