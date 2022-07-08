@@ -36,6 +36,9 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 </head>
 <body>
+    <div class="loader">
+        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1657142287/ccd/load-red_quymsp.gif" alt="Loading..." />
+    </div>
     <div class="container-xxl bg-white p-0">
         <!-- Navbar -->
         <div class="container-xxl position-relative p-0">
@@ -29983,7 +29986,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><h6>Hospitales: Camas por mil hab.</h6></th>
+                            <th><h6>Establecimientos de salud</h6></th>
                             <td>
                                 <h6>
                                     <?php
@@ -33303,7 +33306,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><h6>Agua</h6></th>
+                            <th><h6>Agua y Agua de Calidad</h6></th>
                             <td>
                                 <h6>
                                     <?php
@@ -33683,7 +33686,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><h6>PTAR</h6></th>
+                            <th><h6>Tratamiento de Aguas Residuales</h6></th>
                             <td>
                                 <h6>
                                     <?php
@@ -43111,5 +43114,13 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    {{-- Loader --}}
+    <script type="text/javascript">
+        window.addEventListener("load", function () {
+            const loader = document.querySelector(".loader");
+            loader.className += " hidden"; // class "loader hidden"
+        });
+    </script>
 </body>
 </html>
