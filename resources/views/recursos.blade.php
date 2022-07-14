@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Recursos</title>
@@ -34,7 +33,6 @@
 
     <!-- JChart -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
-
 </head>
 
 <body>
@@ -68,6 +66,7 @@
                         <a href="/proyectos" class="nav-item nav-link">Proyectos</a>
                         <a href="/recursos" class="nav-item nav-link active">Recursos</a>
                         <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>
+                        <a href="/trimestral" class="nav-item nav-link">Reporte Trimestral</a>
                     </div>
                 </div>
             </nav>
@@ -95,7 +94,8 @@
                             <h3>Recursos</h3>
                             <p>Evolución de recursos para el desarrollo</p>
                         </div>
-                        {{-- Filtros --}}
+                        
+                        {{-- Filtros 
                         <div class="col-3 filters">
                             <label id="label" for="unit">Unidad territorial:</label>
                             <select name="location" id="location" class="select">
@@ -129,7 +129,7 @@
                                     @endphp
                                 </optgroup>
                             </select>
-                        </div>
+                        </div>--}}
                     </div>
                     <div class="row m-3">
                         <canvas id="myChart"></canvas>

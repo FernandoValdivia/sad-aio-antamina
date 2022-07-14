@@ -69,6 +69,7 @@
                         <a href="/proyectos" class="nav-item nav-link">Proyectos</a>
                         <a href="/recursos" class="nav-item nav-link">Recursos</a>
                         <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>
+                        <a href="/trimestral" class="nav-item nav-link">Reporte Trimestral</a>
                     </div>
                 </div>
             </nav>
@@ -3478,7 +3479,7 @@
                         </tr>
                         <tr>
                             <th>
-                                <a href="/climasocial"><h6>Clima social para el desarrollo</h6></a>
+                                <h6>Clima social para el desarrollo</h6>
                             </th>
                             <td>
                                 <h6>

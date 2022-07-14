@@ -67,6 +67,7 @@
                         <a href="/proyectos" class="nav-item nav-link">Proyectos</a>
                         <a href="/recursos" class="nav-item nav-link">Recursos</a>
                         <a href="/potencialidades" class="nav-item nav-link active">Potencialidades</a>
+                        <a href="/trimestral" class="nav-item nav-link">Reporte Trimestral</a>
                     </div>
                 </div>
             </nav>
