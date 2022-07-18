@@ -33,6 +33,7 @@
 
     <!-- JChart -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+    
 </head>
 <body>
     <div class="container-xxl bg-white p-0">
@@ -84,16 +85,16 @@
         </div>
         <!-- Navbar End -->
 
-        <!-- Recursos Start -->
+        <!-- Trimestral Start -->
         <div class="container-xxl py-5">
             <div class="container-hor">
-                <div class="row g-5 align-items-center">
+                {{-- Grafico 1 --}}
+                <div class="row">
                     <div class="row">
                         <div class="col-8 text-center">
                             <h3>Indicador Global de Cierre de Brechas: AIO Antamina</h3>
                             <p>(Porcentaje)</p>
                         </div>
-                        
                         {{-- Filtros  --}}
                         <div class="col-3 filters">
                             <label id="label" for="unit">Unidad territorial:</label>
@@ -145,7 +146,49 @@
                     </div>
                 </div>
                 <hr>
-                <div class="row">
+                {{-- Grafico 2 --}}
+                <div class="row mt-5">
+                    <div class="row">
+                        <div class="col-8 text-center">
+                            <h3>Evolución de principales KPIs:</h3>
+                            <p>Grupo 1</p>
+                        </div>
+                        {{-- Filtros  --}}
+                        <div class="col-3 filters">
+                            <label id="label" for="unit">Unidad territorial:</label>
+                            <select name="location" id="location" class="select">
+                                <option value="AIO">AIO</option>
+                                {{-- <optgroup label="UGT Huallanca">
+                                    @php
+                                    foreach ($ugt_huall as $ugt) {
+                                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                    }
+                                    @endphp
+                                </optgroup>
+                                <optgroup label="UGT Huarmey">
+                                    @php
+                                    foreach ($ugt_huarmey as $ugt) {
+                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                    }
+                                    @endphp
+                                </optgroup>
+                                <optgroup label="UGT Mina / San Marcos">
+                                    @php
+                                    foreach ($ugt_mina as $ugt) {
+                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                    }
+                                    @endphp
+                                </optgroup>
+                                <optgroup label="UGT Valle Fortaleza">
+                                    @php
+                                    foreach ($ugt_valle as $ugt) {
+                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                    }
+                                    @endphp
+                                </optgroup> --}}
+                            </select>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-3 text-center">
                             <h4><b>Ejecucion de gasto de inversión municipal</b></h4>
@@ -240,9 +283,67 @@
                         </div>--}}
                     </div>
                 </div>
+                <hr>
+                {{-- Grafico 3 --}}
+                <div class="row mt-5">
+                    <div class="row text-center">
+                        <h3>Dinámica de reducción de brechas</h3>
+                    </div>
+                    <div class="row text-center">
+                        <h4><b>Brechas y variación de brechas</b></h4>
+                        <p>(Descripción)</p>
+                        <div class="row m-3">
+                            <canvas id="myChartBrechas"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                {{-- Grafico 3 --}}
+                <div class="row mt-5">
+                    <div class="row text-center">
+                        <h3>Mayores reducciones de brechas</h3>
+                        <p>Distritos</p>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6">
+                            <h4><b>Brechas y variación de brechas</b></h4>
+                            <p>(Descripción)</p>
+                            <div class="row m-3">
+                                <canvas id="myChartReduccion" style="height: 500px"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <h4><b>Contribución en la reducción de brechas: Principales KPIs</b></h4>
+                            <p>(Puntos porcentuales)</p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div id="myChartTrans" style="height: 250px"></div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="myChartRie" style="height: 250px"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div id="myChartTelef" style="height: 250px"></div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="myChartVacu" style="height: 250px"></div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                {{-- Grafico 4 --}}
+                <div class="row mt-5">
+                    <div class="row text-center">
+                        <h3>Próximos trimestres: Proyección</h3>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- Resumen End -->
+        <!-- Trimestral End -->
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -300,7 +401,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
     <script type="text/javascript">
         /** Chart Trimestral 1 **/
             var chartCanvas1 = document.getElementById("myChart1");
@@ -465,7 +567,190 @@
                 data: data,
                 options: chartOptions2
             });
+        /** Chart Trimestral 3 **/
+            var chartCanvasBrecha = document.getElementById("myChartBrechas");
 
+            var dataGlobalB = {
+                label: "Porcentajes",
+                data: [0.3,0.4,0.4,0.41,0.3],
+                lineTension: 0.2,
+                fill: false,
+                borderColor: '#0C859A'
+            };
+
+            var lineXB = {
+                labels: ['1','2','3','4','5'],
+                datasets: [dataGlobalB]
+            };
+
+            var chartOptionsB = {
+            legend: {
+                display: false,
+                position: 'top',
+                labels: {
+                boxWidth: 60,
+                fontColor: 'black'
+                }
+            },
+            scales: {
+                xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Brechas 4T-2021(%)'
+                        }
+                    }],
+                yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Variación de Brecha (2T-2022/ 1T2022 o 4T 2021) (Puntos porcentuales)'
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                            steps: 1,
+                            stepValue: 5,
+                            max: 1
+                        }
+                    }]
+                }
+            };
+
+            var lineChartBrecha = new Chart(chartCanvasBrecha, {
+                type: 'line',
+                data: lineXB,
+                options: chartOptionsB
+            });
+        /** Chart Trimestral 4 **/
+            var chartCanvasReduccion = document.getElementById("myChartReduccion");
+
+            var dataReduccion = {
+                label: "Porcentajes",
+                data: [0.6,0.55,0.51],
+                lineTension: 0.2,
+                fill: false,
+                borderColor: '#0C859A'
+            };
+
+            var lineXR = {
+                labels: ['4T-21','1T-22','2T-22'],
+                datasets: [dataReduccion]
+            };
+
+            var chartOptionsR = {
+            legend: {
+                display: false,
+                position: 'top',
+                labels: {
+                boxWidth: 60,
+                fontColor: 'black'
+                }
+            },
+            scales: {
+                xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true
+                        }
+                    }],
+                yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                            steps: 1,
+                            stepValue: 5,
+                            max: 1
+                        }
+                    }]
+                }
+            };
+
+            var lineChartBrecha = new Chart(chartCanvasReduccion, {
+                type: 'line',
+                data: lineXR,
+                options: chartOptionsR
+            });
+        /** Chart Trimestral 5 **/
+            var chart = {
+                type: 'bar',
+                rotation: 50
+            };
+            var title = {
+                text: 'Transporte'   
+            };
+            var xAxis = {
+                categories: ['1T 22', '2T 22'],
+                title: {
+                    text: null
+                }
+            };
+            var yAxis = {
+                min: 0,
+                visible: false
+            };
+            var tooltip = {
+                valueSuffix: ' millions'
+            };
+            var plotOptions = {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                },
+                series: {
+                    stacking: 'normal'
+                }
+            };
+            var legend = {
+                layout: 'horizontal',
+                align: 'right',
+                verticalAlign: 'center',
+                x: -20,
+                y: 20,
+                floating: true,
+                borderWidth: 0,
+                backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFF'),
+                shadow: false
+            };
+            var credits = {
+                enabled: false
+            };
+            
+            var series= [{
+                    name: 'KPIs Grupo 3',
+                    data: [30, 20],
+                    color: '#E46C0A'
+                    }, 
+                    {
+                    name: 'KPIs Grupo 2',
+                    data: [30, 20],
+                    color: '#93CDDD'
+                    }, 
+                    {
+                    name: 'KPIs Grupo 1',
+                    data: [30, 20],   
+                    color: '#31859C'
+                }
+            ];     
+                
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.legend = legend;
+            json.credits = credits;
+            $('#myChartTrans').highcharts(json);
+            $('#myChartRie').highcharts(json);
+            $('#myChartTelef').highcharts(json);
+            $('#myChartVacu').highcharts(json);
     </script>
+    
 </body>
 </html>
