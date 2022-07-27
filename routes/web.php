@@ -25,6 +25,4 @@ Route::get('/recursos', 'RecursosController@index');
 //potencialidades
 Route::get('/potencialidades', 'PotencialidadesController@index');
 //trimestral
-Route::get('/trimestral', function () {
-    return view('trimestral');
-});
+Route::get('/trimestral', 'TrimestralController@index');

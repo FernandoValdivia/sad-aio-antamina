@@ -91,15 +91,15 @@
                 {{-- Grafico 1 --}}
                 <div class="row">
                     <div class="row">
-                        <div class="col-8 text-center">
+                        <div class="col-12 text-center">
                             <h3>Indicador Global de Cierre de Brechas: AIO Antamina</h3>
                             <p>(Porcentaje)</p>
                         </div>
                         {{-- Filtros  --}}
-                        <div class="col-3 filters">
+                        {{-- <div class="col-3 filters">
                             <label id="label" for="unit">Unidad territorial:</label>
                             <select name="location" id="location" class="select">
-                                <option value="AIO">AIO</option>
+                                <option value="AIO">AIO</option> --}}
                                 {{-- <optgroup label="UGT Huallanca">
                                     @php
                                     foreach ($ugt_huall as $ugt) {
@@ -128,19 +128,20 @@
                                     }
                                     @endphp
                                 </optgroup> --}}
-                            </select>
-                        </div>
+                            {{-- </select>
+                        </div> --}}
                     </div>
                     <div class="row m-3">
-                        <div class="col-8">
-                            <canvas id="myChart1"></canvas>
+                        <div class="col-6">
+                            <canvas id="myChart1" height="270px"></canvas>
                         </div>
-                        <div class="col-4">
-                            <h4>El Indicador muestra el progreso del cierre de brechas en los 20 distritos del AIO Antamina.
+                        <div class="col-6">
+                            <h4 style="text-align: justify">
+                                El KPI Antamina presenta una tendencia decreciente desde el año 2017, acelerado a partir del 1T 2021 por el Pilar 5 (Emergencias) vinculado al proceso de vacunación. Asimismo, mejoras en el nivel educativo de la población, anemia, desnutrición crónica, e infraestructura de servicios básicos y productiva han contribuido en la reducción del KPI Antamina.
                                 <br><br>
-                                En relación al primer trimestre, en el segundo trimestre del 2022 se ha registrado una reducción de las brechas en AA punto porcentuales, pasando AA% a BB%.
+                                En el 2T 2022 el KPI Antamina disminuyó 0.2 puntos porcentuales respecto al 1T 2022, explicado por la reducción de los kpis vinculados al  Pilar 3 (Infraestructura social y productiva), principalmente con los proyectos: Mejora en la conectividad de internet en los distritos de San Marcos y Chavín de Huántar, así como en la continuación en la  vacunación contra el Covid-19 en todos los distritos del AIO.
                                 <br><br>
-                                Esta reducción esta explicado principalmente por la AAA, BBB y CCC correspondiente a los distritos AA, BB y CC, respectivamente.
+                                En los próximos años, «período de cosecha» de proyectos, se prevé una importante reducción de brechas que se traducirá en una disminución del KPI Antamina en 6 puntos porcentuales, principalmente en los pilares 3 y 4 (Infraestructura social y productiva, y Emprendimiento y desarrollo económico): Saneamiento, Hospital y Desembarcadero en Huarmey; Saneamiento, Centro de Salud y Carretera Carash Pujún - Juprog en San Marcos; Saneamiento en Huallanca; Saneamiento Verdecocha y Canal Tacta en San Pedro de Chaná, Centro de Salud Chiquián, entre otros.
                             </h4>
                         </div>
                     </div>
@@ -340,6 +341,42 @@
                     <div class="row text-center">
                         <h3>Próximos trimestres: Proyección</h3>
                     </div>
+                    <div class="col-6 text-center">
+                        <h4><b>Indicador Global de Cierre de Brechas: AIO Antamina</b></h4>
+                        <p>(Porcentaje)</p>
+                        <div class="row m-3">
+                            <canvas id="myChartIndicador" style="height: 500px"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-6 text-center">
+                        <h4><b>Principales proyectos e intervenciones</b></h4>
+                        <div class="grid-container-chart">
+                            <div class="grid-chart-1">
+                                <ul>
+                                    <li>AAAAAAA</li>
+                                    <li>AAAAAAA</li>
+                                    <li>AAAAAAA</li>
+                                    <li>AAAAAAA</li>
+                                </ul>
+                            </div>
+                            <div class="grid-chart-2">
+                                <ul>
+                                    <li>AAAAAAA</li>
+                                    <li>AAAAAAA</li>
+                                    <li>AAAAAAA</li>
+                                    <li>AAAAAAA</li>
+                                </ul>
+                            </div>
+                            <div class="grid-chart-3">
+                                <ul>
+                                    <li>AAAAAAA</li>
+                                    <li>AAAAAAA</li>
+                                    <li>AAAAAAA</li>
+                                    <li>AAAAAAA</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -386,7 +423,18 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
+    <?php
+        /* $kpisin = DB::table('kpitrimestral')->select(
+            'porcentaje'
+        )
+        ->where('kpi','kpi-sin')
+        ->get();
 
+        $filtered = Arr::where($kpisin, function ($value, $key) {
+            echo is_string($value);
+        }); */
+    ?>
+    
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -398,7 +446,6 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -407,26 +454,41 @@
         /** Chart Trimestral 1 **/
             var chartCanvas1 = document.getElementById("myChart1");
 
-            var dataGlobal = {
-                label: "Porcentajes",
-                data: [55,55,54,52,53,53,53,52,52,52,51,51,50,50,50,50,50,50,50,50,50,50],
+            var kpis = '['+"@foreach ($kpisin as $ks){{$ks->porcentaje}}, @endforeach"+']';
+            var kpic = '['+"@foreach ($kpicon as $kc){{$kc->porcentaje}}, @endforeach"+']';
+
+            var dataGlobal1 = {
+                label: "KPI Antanima sin proyectos",
+                data: kpis.split(','),
                 lineTension: 0.2,
-                fill: false,
+                fill: 1,
+                backgroundColor: "#f4282854",
                 borderColor: '#0C859A'
             };
 
+            var dataGlobal2 = {
+                label: "KPI Antanima con proyectos",
+                data: kpic.split(','),
+                lineTension: 0.2,
+                fill: false,
+                borderColor: '#A1011F'
+            };
+
             var lineX1 = {
-                labels: ['1T-2017','2T-2017','3T-2017','4T-2017','1T-2018','2T-2018','3T-2018','4T-2018','1T-2019','2T-2019','3T-2019','4T-2019','1T-2020','2T-2020','3T-2020','4T-2020','1T-2021','2T-2021','3T-2021','4T-2021','1T-2022','2T-2022'],
-                datasets: [dataGlobal]
+                labels: ['1T-2017','2T-2017','3T-2017','4T-2017','1T-2018','2T-2018','3T-2018','4T-2018','1T-2019','2T-2019','3T-2019','4T-2019','1T-2020','2T-2020','3T-2020','4T-2020','1T-2021','2T-2021','3T-2021','4T-2021','1T-2022','2T-2022','1T-2023','2T-2023','3T-2023','4T-2023','1T-2024','2T-2024','3T-2024','4T-2024','1T-2025','2T-2025','3T-2025','4T-2025','1T-2026','2T-2026','3T-2026','4T-2026'],
+                datasets: [dataGlobal1, dataGlobal2]
             };
 
             var chartOptions1 = {
             legend: {
                 display: true,
-                position: 'top',
+                position: 'bottom',
                 labels: {
-                boxWidth: 60,
-                fontColor: 'black'
+                    usePointStyle: true,
+                    boxWidth: 10,
+                    fontSize: 18,
+                    fontFamily: 'Calibri',
+                    fontColor: 'black'
                 }
             },
             scales: {
@@ -434,16 +496,17 @@
                         display: true,
                         scaleLabel: {
                             display: true,
-                            labelString: 'Trimestres'
+                            labelString: ''
                         }
                     }],
                 yAxes: [{
                         display: true,
                         ticks: {
-                            beginAtZero: true,
+                            beginAtZero: false,
                             steps: 10,
                             stepValue: 5,
-                            max: 100
+                            max: 70,
+                            min: 30
                         }
                     }]
                 }
@@ -750,7 +813,58 @@
             $('#myChartRie').highcharts(json);
             $('#myChartTelef').highcharts(json);
             $('#myChartVacu').highcharts(json);
+        /** Chart Trimestral 6 **/
+            var chartCanvasIndicador = document.getElementById("myChartIndicador");
+
+            var dataIndicador = {
+                label: "Porcentajes",
+                data: [55,53,52,50,49,47,46,45,44],
+                lineTension: 0.6,
+                fill: false,
+                borderColor: '#0C859A'
+            };
+
+            var lineXI = {
+                labels: ['4T-21','1T-22','2T-22','3T-22','4T-22','','','',''],
+                datasets: [dataIndicador]
+            };
+
+            var chartOptionsI = {
+                legend: {
+                    display: false,
+                    position: 'top',
+                    labels: {
+                    boxWidth: 60,
+                    fontColor: 'black'
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true
+                            }
+                        }],
+                    yAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true
+                            },
+                            ticks: {
+                                beginAtZero: true,
+                                steps: 10,
+                                stepValue: 5,
+                                max: 80
+                            }
+                        }]
+                    }
+                };
+
+            var lineChartIndic = new Chart(chartCanvasIndicador, {
+                type: 'line',
+                data: lineXI,
+                options: chartOptionsI
+            });
     </script>
-    
 </body>
 </html>
