@@ -95,41 +95,6 @@
                             <h3>Indicador Global de Cierre de Brechas: AIO Antamina</h3>
                             <p>(Porcentaje)</p>
                         </div>
-                        {{-- Filtros  --}}
-                        {{-- <div class="col-3 filters">
-                            <label id="label" for="unit">Unidad territorial:</label>
-                            <select name="location" id="location" class="select">
-                                <option value="AIO">AIO</option> --}}
-                                {{-- <optgroup label="UGT Huallanca">
-                                    @php
-                                    foreach ($ugt_huall as $ugt) {
-                                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Huarmey">
-                                    @php
-                                    foreach ($ugt_huarmey as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Mina / San Marcos">
-                                    @php
-                                    foreach ($ugt_mina as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Valle Fortaleza">
-                                    @php
-                                    foreach ($ugt_valle as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup> --}}
-                            {{-- </select>
-                        </div> --}}
                     </div>
                     <div class="row m-3">
                         <div class="col-6">
@@ -149,234 +114,64 @@
                 <hr>
                 {{-- Grafico 2 --}}
                 <div class="row mt-5">
-                    <div class="row">
-                        <div class="col-8 text-center">
-                            <h3>Evolución de principales KPIs:</h3>
-                            <p>Grupo 1</p>
+                    <div class="row text-center">
+                        <h3>KPI Antamina y Contribución en Reducción de Brecha: AIO</h3>
+                        <p>(Porcentaje)</p>
+                        <div class="col-6">
+                            <br>
+                            <h4 style="text-align: justify">
+                                Entre los años 2022-2026 se prevé una importante reducción de brechas que se traducirá en una disminución del KPI Antamina. Durante este «período de cosecha» de proyectos, se proyecta una reducción de brechas en 6 puntos porcentuales, como resultado de la entrada en operación de importantes proyectos, principalmente en los pilares 3 y 4 (Infraestructura social y productiva, y Emprendimiento y desarrollo económico): Saneamiento, Hospital y Desembarcadero en Huarmey; Saneamiento, Centro de Salud y Carretera Carash Pujún-  Juprog en San Marcos; Saneamiento en Huallanca; Saneamiento Verdecocha y Canal Tacta en San Pedro de Chaná, Centro de Salud Chiquián, entre otros.
+                            </h4>
                         </div>
-                        {{-- Filtros  --}}
-                        <div class="col-3 filters">
-                            <label id="label" for="unit">Unidad territorial:</label>
-                            <select name="location" id="location" class="select">
-                                <option value="AIO">AIO</option>
-                                {{-- <optgroup label="UGT Huallanca">
-                                    @php
-                                    foreach ($ugt_huall as $ugt) {
-                                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Huarmey">
-                                    @php
-                                    foreach ($ugt_huarmey as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Mina / San Marcos">
-                                    @php
-                                    foreach ($ugt_mina as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Valle Fortaleza">
-                                    @php
-                                    foreach ($ugt_valle as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup> --}}
-                            </select>
+                        <div class="col-6 text-center">
+                            <div id="container"></div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-3 text-center">
-                            <h4><b>Ejecucion de gasto de inversión municipal</b></h4>
-                            <p>(Porcentaje)</p>
-                            <div class="row m-3">
-                                <canvas id="myChart2" height="250"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-3 text-center">
-                            <h4><b>Ejecucion de gasto de inversión municipal</b></h4>
-                            <p>(Porcentaje)</p>
-                            <div class="row m-3">
-                                <canvas id="myChart3" height="250"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-3 text-center">
-                            <h4><b>Ejecucion de gasto de inversión municipal</b></h4>
-                            <p>(Porcentaje)</p>
-                            <div class="row m-3">
-                                <canvas id="myChart4" height="250"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-3 text-center">
-                            <h4><b>Ejecucion de gasto de inversión municipal</b></h4>
-                            <p>(Porcentaje)</p>
-                            <div class="row m-3">
-                                <canvas id="myChart5" height="250"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-3 text-center">
-                            <h4><b>Ejecucion de gasto de inversión municipal</b></h4>
-                            <p>(Porcentaje)</p>
-                            <div class="row m-3">
-                                <canvas id="myChart6" height="250"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-3 text-center">
-                            <h4><b>Ejecucion de gasto de inversión municipal</b></h4>
-                            <p>(Porcentaje)</p>
-                            <div class="row m-3">
-                                <canvas id="myChart7" height="250"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-3 text-center">
-                            <h4><b>Ejecucion de gasto de inversión municipal</b></h4>
-                            <p>(Porcentaje)</p>
-                            <div class="row m-3">
-                                <canvas id="myChart8" height="250"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-3 text-center">
-                            <h4><b>Ejecucion de gasto de inversión municipal</b></h4>
-                            <p>(Porcentaje)</p>
-                            <div class="row m-3">
-                                <canvas id="myChart9" height="250"></canvas>
-                            </div>
-                        </div>
-                        {{-- Filtros 
-                        <div class="col-3 filters">
-                            <label id="label" for="unit">Unidad territorial:</label>
-                            <select name="location" id="location" class="select">
-                                <option value="AIO">AIO</option>
-                                <optgroup label="UGT Huallanca">
-                                    @php
-                                    foreach ($ugt_huall as $ugt) {
-                                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Huarmey">
-                                    @php
-                                    foreach ($ugt_huarmey as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Mina / San Marcos">
-                                    @php
-                                    foreach ($ugt_mina as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Valle Fortaleza">
-                                    @php
-                                    foreach ($ugt_valle as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                            </select>
-                        </div>--}}
+                        
                     </div>
                 </div>
                 <hr>
                 {{-- Grafico 3 --}}
                 <div class="row mt-5">
                     <div class="row text-center">
-                        <h3>Dinámica de reducción de brechas</h3>
-                    </div>
-                    <div class="row text-center">
-                        <h4><b>Brechas y variación de brechas</b></h4>
+                        <h3>Indicadores de clima social en comunidades del AIO</h3>
                         <p>(Descripción)</p>
-                        <div class="row m-3">
-                            <canvas id="myChartBrechas"></canvas>
-                        </div>
                     </div>
-                </div>
-                <hr>
-                {{-- Grafico 3 --}}
-                <div class="row mt-5">
-                    <div class="row text-center">
-                        <h3>Mayores reducciones de brechas</h3>
-                        <p>Distritos</p>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-6">
-                            <h4><b>Brechas y variación de brechas</b></h4>
-                            <p>(Descripción)</p>
-                            <div class="row m-3">
-                                <canvas id="myChartReduccion" style="height: 500px"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <h4><b>Contribución en la reducción de brechas: Principales KPIs</b></h4>
-                            <p>(Puntos porcentuales)</p>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div id="myChartTrans" style="height: 250px"></div>
-                                </div>
-                                <div class="col-6">
-                                    <div id="myChartRie" style="height: 250px"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div id="myChartTelef" style="height: 250px"></div>
-                                </div>
-                                <div class="col-6">
-                                    <div id="myChartVacu" style="height: 250px"></div>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
+                    <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659463322/ccd/clima%20social/clima-social_gkxhgl.png" alt="Clima Social" style="padding: 0px 5% 0px 5%">
                 </div>
                 <hr>
                 {{-- Grafico 4 --}}
                 <div class="row mt-5">
                     <div class="row text-center">
-                        <h3>Próximos trimestres: Proyección</h3>
+                        <h3>Progreso Cierre de Brechas AIO Antamina</h3>
                     </div>
                     <div class="col-6 text-center">
-                        <h4><b>Indicador Global de Cierre de Brechas: AIO Antamina</b></h4>
-                        <p>(Porcentaje)</p>
+                        <h4><b>KPI Antamina Pilar 2: Oportunidades para las futuras generaciones</b></h4>
+                        <p>(Porcentajes)</p>
                         <div class="row m-3">
-                            <canvas id="myChartIndicador" style="height: 500px"></canvas>
+                            <canvas id="myChartKPIOpo" ></canvas>
                         </div>
                     </div>
                     <div class="col-6 text-center">
-                        <h4><b>Principales proyectos e intervenciones</b></h4>
-                        <div class="grid-container-chart">
-                            <div class="grid-chart-1">
-                                <ul>
-                                    <li>AAAAAAA</li>
-                                    <li>AAAAAAA</li>
-                                    <li>AAAAAAA</li>
-                                    <li>AAAAAAA</li>
-                                </ul>
-                            </div>
-                            <div class="grid-chart-2">
-                                <ul>
-                                    <li>AAAAAAA</li>
-                                    <li>AAAAAAA</li>
-                                    <li>AAAAAAA</li>
-                                    <li>AAAAAAA</li>
-                                </ul>
-                            </div>
-                            <div class="grid-chart-3">
-                                <ul>
-                                    <li>AAAAAAA</li>
-                                    <li>AAAAAAA</li>
-                                    <li>AAAAAAA</li>
-                                    <li>AAAAAAA</li>
-                                </ul>
-                            </div>
+                        <h4><b>KPI Antamina Pilar 3: Infraestructura social y productiva</b></h4>
+                        <p>(Porcentajes)</p>
+                        <div class="row m-3">
+                            <canvas id="myChartKPIInf"></canvas>
                         </div>
                     </div>
+                    <div class="col-6 text-center">
+                        <h4><b>KPI Antamina Pilar 4: Emprendimiento y desarrollo económico</b></h4>
+                        <p>(Porcentajes)</p>
+                        <div class="row m-3">
+                            <canvas id="myChartKPIEmp"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-6 text-center">
+                        <h4><b>KPI Antamina Pilar 5: Emergencias</b></h4>
+                        <p>(Porcentajes)</p>
+                        <div class="row m-3">
+                            <canvas id="myChartKPIEmerg"></canvas>
+                        </div>
+                    </div>                   
                 </div>
             </div>
         </div>
@@ -422,19 +217,7 @@
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
-    <?php
-        /* $kpisin = DB::table('kpitrimestral')->select(
-            'porcentaje'
-        )
-        ->where('kpi','kpi-sin')
-        ->get();
-
-        $filtered = Arr::where($kpisin, function ($value, $key) {
-            echo is_string($value);
-        }); */
-    ?>
-    
+    </div>   
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -481,8 +264,8 @@
 
             var chartOptions1 = {
             legend: {
-                display: true,
-                position: 'bottom',
+                display: false,
+                position: 'chartArea',
                 labels: {
                     usePointStyle: true,
                     boxWidth: 10,
@@ -497,339 +280,134 @@
                         scaleLabel: {
                             display: true,
                             labelString: ''
+                        },
+                        ticks: {
+                            autoSkip: false
+                        },
+                        gridLines: {
+                            display: false
                         }
                     }],
                 yAxes: [{
-                        display: true,
+                        display: false,
                         ticks: {
-                            beginAtZero: false,
+                            beginAtZero: true,
                             steps: 10,
                             stepValue: 5,
-                            max: 70,
-                            min: 30
+                            max: 61,
+                            min: 40
+                        },
+                        gridLines: {
+                            display: false
                         }
                     }]
                 }
             };
 
             var lineChart1 = new Chart(chartCanvas1, {
-            type: 'line',
-            data: lineX1,
-            options: chartOptions1
+                type: 'line',
+                data: lineX1,
+                options: chartOptions1
             });
 
+
+
+        
         /** Chart Trimestral 2 **/
-            var chartCanvas2 = document.getElementById("myChart2");
-            var chartCanvas3 = document.getElementById("myChart3");
-            var chartCanvas4 = document.getElementById("myChart4");
-            var chartCanvas5 = document.getElementById("myChart5");
-            var chartCanvas6 = document.getElementById("myChart6");
-            var chartCanvas7 = document.getElementById("myChart7");
-            var chartCanvas8 = document.getElementById("myChart8");
-            var chartCanvas9 = document.getElementById("myChart9");
+            var imp1 = '['+"@foreach ($impacto1 as $i1) {{$i1->porcentaje}}, @endforeach"+']';
+                imp1 = imp1.match(/\d+(?:\.\d+)?/g).map(Number);
+            var imp2 = '['+ "@foreach ($impacto2 as $i2) {{$i2->porcentaje}}, @endforeach"+']';
+                imp2 = imp2.match(/\d+(?:\.\d+)?/g).map(Number);
 
-            const labels = ['2021','T1-22','T2-22']
-            const data = {
-            labels: labels,
-            datasets: [{
-                    label: 'Ejecución de gasto de inversión municipal',
-                    data: [90, 60, 30],
-                    backgroundColor: [
-                    '#2f69b5',
-                    '#2f69b5',
-                    '#2f69b5'
-                    ],
-                    borderColor: [
-                    '#042f66',
-                    '#042f66',
-                    '#042f66'
-                    ],
-                    borderWidth: 1
-                }]
-            };
-
-            var chartOptions2 = {
-                legend: {
-                    display: true,
-                    position: 'top',
-                    labels: {
-                    boxWidth: 60,
-                    fontColor: 'black'
+                $('#container').highcharts({
+                    chart: {
+                        type: 'column',
+                        lineWidth: 2
+                    },
+                    title: {
+                        text: ''
+                    },
+                    xAxis: {
+                        categories: ['T4 - 2021', 'T1 - 2022', 'T2 - 2022', 'T3 - 2022', 'T4 - 2022','2023','2024','2025','2026']
+                    },
+                    yAxis: {
+                        visible: false,
+                        min: 40,
+                        max: 55,
+                        title: {
+                            text: 'Total'
+                        },
+                        stackLabels: {
+                            enabled: true,
+                            style: {
+                                fontWeight: 'bold',
+                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                            }
+                        }
+                    },
+                    legend: {
+                        align: 'right',
+                        x: -30,
+                        verticalAlign: 'top',
+                        y: 25,
+                        floating: true,
+                        backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                        borderColor: '#fff',
+                        borderWidth: 0,
+                        shadow: false
+                    },
+                    tooltip: {
+                        formatter: function () {
+                            return '<b>' + this.x + '</b><br/>' +
+                                this.series.name + ': ' + this.y + '<br/>' +
+                                'Total: ' + this.point.stackTotal;
+                        }
+                    },
+                    plotOptions: {
+                        column: {
+                            stacking: 'normal',
+                            dataLabels: {
+                                enabled: true,
+                                color: 'black'
+                            }
+                        },
+                    series: {
+                        animation: false,
+                        pointPadding: -0.32
                     }
-                },
-                scales: {
-                    xAxes: [{
-                            display: true,
-                            scaleLabel: {
-                                display: true,
-                                labelString: 'Trimestres'
-                            }
-                        }],
-                    yAxes: [{
-                            display: true,
-                            ticks: {
-                                beginAtZero: true,
-                                steps: 10,
-                                stepValue: 5,
-                                max: 100
-                            }
-                        }]
-                }
-            };
-
-            var barChart1 = new Chart(chartCanvas2, {
-                type: 'bar',
-                data: data,
-                options: chartOptions2
-            });
-
-            var barChart2 = new Chart(chartCanvas3, {
-                type: 'bar',
-                data: data,
-                options: chartOptions2
-            });
-
-            var barChart3 = new Chart(chartCanvas4, {
-                type: 'bar',
-                data: data,
-                options: chartOptions2
-            });
-
-            var barChart4 = new Chart(chartCanvas5, {
-                type: 'bar',
-                data: data,
-                options: chartOptions2
-            });
-
-            var barChart5 = new Chart(chartCanvas6, {
-                type: 'bar',
-                data: data,
-                options: chartOptions2
-            });
-
-            var barChart6 = new Chart(chartCanvas7, {
-                type: 'bar',
-                data: data,
-                options: chartOptions2
-            });
-
-            var barChart7 = new Chart(chartCanvas8, {
-                type: 'bar',
-                data: data,
-                options: chartOptions2
-            });
-
-            var barChart8 = new Chart(chartCanvas9, {
-                type: 'bar',
-                data: data,
-                options: chartOptions2
-            });
-
-            var barChart9 = new Chart(chartCanvas2, {
-                type: 'bar',
-                data: data,
-                options: chartOptions2
-            });
+                    },
+                    series: [{
+                        name: 'Contribución Trimestral (punto porcentual)',
+                        data: imp2,
+                        color: '#C4E4EC'
+                    }, {
+                        name: 'KPI Antamina (porcentaje)',
+                        data: imp1,
+                        color: '#93CDDD'
+                    }],
+                    credits: {
+                        enabled: false
+                    }
+                });
         /** Chart Trimestral 3 **/
-            var chartCanvasBrecha = document.getElementById("myChartBrechas");
+            var kpio = '['+"@foreach ($kpioportunidad as $ko){{$ko->porcentaje}}, @endforeach"+']';
 
-            var dataGlobalB = {
+            var chartCanvasKpiOpo = document.getElementById("myChartKPIOpo");
+
+            var dataKpiOpo = {
                 label: "Porcentajes",
-                data: [0.3,0.4,0.4,0.41,0.3],
-                lineTension: 0.2,
+                data: kpio.split(','),
+                lineTension: 0.5,
                 fill: false,
-                borderColor: '#0C859A'
-            };
-
-            var lineXB = {
-                labels: ['1','2','3','4','5'],
-                datasets: [dataGlobalB]
-            };
-
-            var chartOptionsB = {
-            legend: {
-                display: false,
-                position: 'top',
-                labels: {
-                boxWidth: 60,
-                fontColor: 'black'
-                }
-            },
-            scales: {
-                xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Brechas 4T-2021(%)'
-                        }
-                    }],
-                yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Variación de Brecha (2T-2022/ 1T2022 o 4T 2021) (Puntos porcentuales)'
-                        },
-                        ticks: {
-                            beginAtZero: true,
-                            steps: 1,
-                            stepValue: 5,
-                            max: 1
-                        }
-                    }]
-                }
-            };
-
-            var lineChartBrecha = new Chart(chartCanvasBrecha, {
-                type: 'line',
-                data: lineXB,
-                options: chartOptionsB
-            });
-        /** Chart Trimestral 4 **/
-            var chartCanvasReduccion = document.getElementById("myChartReduccion");
-
-            var dataReduccion = {
-                label: "Porcentajes",
-                data: [0.6,0.55,0.51],
-                lineTension: 0.2,
-                fill: false,
-                borderColor: '#0C859A'
-            };
-
-            var lineXR = {
-                labels: ['4T-21','1T-22','2T-22'],
-                datasets: [dataReduccion]
-            };
-
-            var chartOptionsR = {
-            legend: {
-                display: false,
-                position: 'top',
-                labels: {
-                boxWidth: 60,
-                fontColor: 'black'
-                }
-            },
-            scales: {
-                xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true
-                        }
-                    }],
-                yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true
-                        },
-                        ticks: {
-                            beginAtZero: true,
-                            steps: 1,
-                            stepValue: 5,
-                            max: 1
-                        }
-                    }]
-                }
-            };
-
-            var lineChartBrecha = new Chart(chartCanvasReduccion, {
-                type: 'line',
-                data: lineXR,
-                options: chartOptionsR
-            });
-        /** Chart Trimestral 5 **/
-            var chart = {
-                type: 'bar',
-                rotation: 50
-            };
-            var title = {
-                text: 'Transporte'   
-            };
-            var xAxis = {
-                categories: ['1T 22', '2T 22'],
-                title: {
-                    text: null
-                }
-            };
-            var yAxis = {
-                min: 0,
-                visible: false
-            };
-            var tooltip = {
-                valueSuffix: ' millions'
-            };
-            var plotOptions = {
-                bar: {
-                    dataLabels: {
-                        enabled: true
-                    }
-                },
-                series: {
-                    stacking: 'normal'
-                }
-            };
-            var legend = {
-                layout: 'horizontal',
-                align: 'right',
-                verticalAlign: 'center',
-                x: -20,
-                y: 20,
-                floating: true,
-                borderWidth: 0,
-                backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFF'),
-                shadow: false
-            };
-            var credits = {
-                enabled: false
-            };
-            
-            var series= [{
-                    name: 'KPIs Grupo 3',
-                    data: [30, 20],
-                    color: '#E46C0A'
-                    }, 
-                    {
-                    name: 'KPIs Grupo 2',
-                    data: [30, 20],
-                    color: '#93CDDD'
-                    }, 
-                    {
-                    name: 'KPIs Grupo 1',
-                    data: [30, 20],   
-                    color: '#31859C'
-                }
-            ];     
-                
-            var json = {};   
-            json.chart = chart; 
-            json.title = title;
-            json.tooltip = tooltip;
-            json.xAxis = xAxis;
-            json.yAxis = yAxis;  
-            json.series = series;
-            json.plotOptions = plotOptions;
-            json.legend = legend;
-            json.credits = credits;
-            $('#myChartTrans').highcharts(json);
-            $('#myChartRie').highcharts(json);
-            $('#myChartTelef').highcharts(json);
-            $('#myChartVacu').highcharts(json);
-        /** Chart Trimestral 6 **/
-            var chartCanvasIndicador = document.getElementById("myChartIndicador");
-
-            var dataIndicador = {
-                label: "Porcentajes",
-                data: [55,53,52,50,49,47,46,45,44],
-                lineTension: 0.6,
-                fill: false,
-                borderColor: '#0C859A'
+                borderColor: '#BD001A'
             };
 
             var lineXI = {
-                labels: ['4T-21','1T-22','2T-22','3T-22','4T-22','','','',''],
-                datasets: [dataIndicador]
+                labels: ['1T-2020','2T-2020','3T-2020','4T-2020','1T-2021','2T-2021','3T-2021','4T-2021','1T-2022','2T-2022','3T-2022','4T-2022','1T-2023','2T-2023','3T-2023','4T-2023','1T-2024','2T-2024','3T-2024','4T-2024','1T-2025','2T-2025','3T-2025','4T-2025','1T-2026','2T-2026','3T-2026','4T-2026'],
+                datasets: [dataKpiOpo]
             };
 
-            var chartOptionsI = {
+            var chartOptionsO = {
                 legend: {
                     display: false,
                     position: 'top',
@@ -843,10 +421,16 @@
                             display: true,
                             scaleLabel: {
                                 display: true
+                            },
+                            ticks: {
+                                autoSkip: false
+                            },
+                            gridLines: {
+                                display: false
                             }
                         }],
                     yAxes: [{
-                            display: true,
+                            display: false,
                             scaleLabel: {
                                 display: true
                             },
@@ -854,17 +438,204 @@
                                 beginAtZero: true,
                                 steps: 10,
                                 stepValue: 5,
-                                max: 80
+                                max: 45,
+                                min: 25
                             }
                         }]
                     }
                 };
 
-            var lineChartIndic = new Chart(chartCanvasIndicador, {
+            var lineChartKPI1 = new Chart(chartCanvasKpiOpo, {
                 type: 'line',
                 data: lineXI,
-                options: chartOptionsI
+                options: chartOptionsO
             });
+
+        /** Chart Trimestral 4 **/
+            var kpii = '['+"@foreach ($kpiinfra as $ki){{$ki->porcentaje}}, @endforeach"+']';
+
+            var chartCanvasKpiInf = document.getElementById("myChartKPIInf");
+
+            var dataKpiIS = {
+                label: "Porcentajes",
+                data: kpii.split(','),
+                lineTension: 0.5,
+                fill: false,
+                borderColor: '#BD001A'
+            };
+
+            var lineXIS = {
+                labels: ['1T-2020','2T-2020','3T-2020','4T-2020','1T-2021','2T-2021','3T-2021','4T-2021','1T-2022','2T-2022','3T-2022','4T-2022','1T-2023','2T-2023','3T-2023','4T-2023','1T-2024','2T-2024','3T-2024','4T-2024','1T-2025','2T-2025','3T-2025','4T-2025','1T-2026','2T-2026','3T-2026','4T-2026'],
+                datasets: [dataKpiIS]
+            };
+
+            var chartOptionsIS = {
+                legend: {
+                    display: false,
+                    position: 'top',
+                    labels: {
+                    boxWidth: 60,
+                    fontColor: 'black'
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true
+                            },
+                            ticks: {
+                                autoSkip: false
+                            },
+                            gridLines: {
+                                display: false
+                            }
+                        }],
+                    yAxes: [{
+                            display: false,
+                            scaleLabel: {
+                                display: true
+                            },
+                            ticks: {
+                                beginAtZero: true,
+                                steps: 10,
+                                stepValue: 5,
+                                max: 90,
+                                min: 20
+                            }
+                        }]
+                    }
+                };
+
+            var lineChartKPI2 = new Chart(chartCanvasKpiInf, {
+                type: 'line',
+                data: lineXIS,
+                options: chartOptionsIS
+            });
+
+        /** Chart Trimestral 5 **/
+            var kpie = '['+"@foreach ($kpiemp as $ke){{$ke->porcentaje}}, @endforeach"+']';
+
+            var chartCanvasKpiEmp = document.getElementById("myChartKPIEmp");
+
+            var dataKpiE = {
+                label: "Porcentajes",
+                data: kpie.split(','),
+                lineTension: 0.4,
+                fill: false,
+                borderColor: '#BD001A'
+            };
+
+            var lineXEmp = {
+                labels: ['1T-2020','2T-2020','3T-2020','4T-2020','1T-2021','2T-2021','3T-2021','4T-2021','1T-2022','2T-2022','3T-2022','4T-2022','1T-2023','2T-2023','3T-2023','4T-2023','1T-2024','2T-2024','3T-2024','4T-2024','1T-2025','2T-2025','3T-2025','4T-2025','1T-2026','2T-2026','3T-2026','4T-2026'],
+                datasets: [dataKpiE]
+            };
+
+            var chartOptionsE = {
+                legend: {
+                    display: false,
+                    position: 'top',
+                    labels: {
+                    boxWidth: 60,
+                    fontColor: 'black'
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true
+                            },
+                            ticks: {
+                                autoSkip: false
+                            },
+                            gridLines: {
+                                display: false
+                            }
+                        }],
+                    yAxes: [{
+                            display: false,
+                            scaleLabel: {
+                                display: true
+                            },
+                            ticks: {
+                                beginAtZero: true,
+                                steps: 10,
+                                stepValue: 5,
+                                max: 46,
+                                min: 44
+                            }
+                        }]
+                    }
+                };
+
+            var lineChartKPI3 = new Chart(chartCanvasKpiEmp, {
+                type: 'line',
+                data: lineXEmp,
+                options: chartOptionsE
+            });
+
+        /** Chart Trimestral 6 **/
+            var kpiem = '['+"@foreach ($kpieme as $kem){{$kem->porcentaje}}, @endforeach"+']';
+
+            var chartCanvasKpiEme = document.getElementById("myChartKPIEmerg");
+
+            var dataKpiEme = {
+                label: "Porcentajes",
+                data: kpiem.split(','),
+                lineTension: 0.5,
+                fill: false,
+                borderColor: '#BD001A'
+            };
+
+            var lineXEme = {
+                labels: ['1T-2020','2T-2020','3T-2020','4T-2020','1T-2021','2T-2021','3T-2021','4T-2021','1T-2022','2T-2022','3T-2022','4T-2022','1T-2023','2T-2023','3T-2023','4T-2023','1T-2024','2T-2024','3T-2024','4T-2024','1T-2025','2T-2025','3T-2025','4T-2025','1T-2026','2T-2026','3T-2026','4T-2026'],
+                datasets: [dataKpiEme]
+            };
+
+            var chartOptionsEm = {
+                legend: {
+                    display: false,
+                    position: 'top',
+                    labels: {
+                    boxWidth: 60,
+                    fontColor: 'black'
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true
+                            },
+                            ticks: {
+                                autoSkip: false
+                            },
+                            gridLines: {
+                                display: false
+                            }
+                        }],
+                    yAxes: [{
+                            display: false,
+                            scaleLabel: {
+                                display: true
+                            },
+                            ticks: {
+                                beginAtZero: true,
+                                steps: 10,
+                                stepValue: 5,
+                                max: 105
+                            }
+                        }]
+                    }
+                };
+
+            var lineChartKPI3 = new Chart(chartCanvasKpiEme, {
+                type: 'line',
+                data: lineXEme,
+                options: chartOptionsEm
+            });
+
     </script>
 </body>
 </html>
