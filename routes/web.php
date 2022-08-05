@@ -26,3 +26,12 @@ Route::get('/recursos', 'RecursosController@index');
 Route::get('/potencialidades', 'PotencialidadesController@index');
 //trimestral
 Route::get('/trimestral', 'TrimestralController@index');
+//descargar
+Route::get('/descargar', function() {
+    $file = public_path()."/file/reporte1.pdf";
+
+    $headers = array(
+        'Content-Type: application/pdf',
+    );
+    return Response::download($file, "Progreso de Cierre de Brechas.pdf", $headers);
+});
