@@ -109,11 +109,12 @@
                             <p>Disponer de indicadores es fundamental en todo proceso de desarrollo, permiten apoyar decisiones críticas de planificación y gestión, y proporcionan información clave para las actividades operacionales del sector público y privado.</p>
                         </div>
                         <div class="trimestre-grid-2 text-center">
-                            <b>Importancia de Inficariores en el Desarrollo</b>
+                            <b>Importancia de Indicariores en el Desarrollo</b>
                             <h6>(Descripción)</h6>
                         </div>
                         <div class="trimestre-grid-3">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004489842505289788/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659991860/ccd/reporte/Imagen1_urahqp.png" alt="">
+                            <p>Fuente: Banco Mundial, Antamina, CCD</p>
                         </div>
                         <div class="trimestre-grid-4">
                             <p>Con el objetivo de apoyar en las decisiones para el cierre de brechas y desarrollo en el AIO Antamina, se han identificado 55 indicadores (kpis), los mismos que se encuentran consolidados en el «KPI Cierre de Brechas Global» (KPI Global). El KPI Global refleja los impactos en el cierre de brechas de todos los proyectos e intervenciones público - privado ejecutados en el AIO.<br>
@@ -125,7 +126,7 @@
                             <h6>(Por factores y kpis)</h6>
                         </div>
                         <div class="trimestre-grid-6">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004872737078116503/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659983037/ccd/reporte/Imagen2_kcpjkh.png" alt="">
                         </div>
                         <div class="trimestre-grid-7">
                             <p>
@@ -139,7 +140,12 @@
                             <h6>(S/ millones)</h6>
                         </div>
                         <div class="trimestre-grid-9">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004490019253264435/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659991889/ccd/reporte/Imagen3_xbgao6.png" alt="">
+                            <p>
+                                1/  Incluye OPEX y CAPEX del 2022
+                                <br>
+                                Pública: Gobiernos Local, Regional y Nacional
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -156,7 +162,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre2-2">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004517818445860994/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659994273/ccd/reporte/Imagen4_rpuihb.png" alt="">
                             <p>
                                 1/  Incluye OPEX, CAPEX y OxI <br>
                                 AIO: Ámbito de Influencia de Antamina <br>
@@ -176,7 +182,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre2-5">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004518904342790376/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659994273/ccd/reporte/Imagen5_payffz.png" alt="">
                         </div>
                         <div class="grid-trimestre2-6">
                             <p>
@@ -188,13 +194,13 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre2-8">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004519548847923230/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659996823/ccd/reporte/Imagen6_htpszb.png" alt="">
                         </div>
                         <div class="grid-trimestre2-9 text-center">
                             <b>KPI Antamina: Aquia</b>
                             <h6>(Porcentaje)</h6></div>
                         <div class="grid-trimestre2-10">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004519700748836904/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659997044/ccd/reporte/Imagen7_nwscrm.png" alt="">
                         </div>
                     </div>
                 </section>
@@ -216,7 +222,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre3-3">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004793151208292382/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659997467/ccd/reporte/Imagen8_qocwpt.png" alt="">
                         </div>
                         <div class="grid-trimestre3-4">
                             <p>
@@ -233,14 +239,14 @@
                             </p>
                         </div>
                         <div class="grid-trimestre3-6">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004795528086818856/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659998134/ccd/reporte/Imagen10_elouap.png" alt="">
                         </div>
                         <div class="grid-trimestre3-7 text-center">
                             <b>KPI Global: AIO</b>
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre3-8">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004795958510502009/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659997467/ccd/reporte/Imagen9_dzy1bh.png" alt="">
                         </div>
                         <div class="grid-trimestre3-9"></div>
                     </div>
@@ -263,7 +269,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre4-3">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004814324562403368/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659998134/ccd/reporte/Imagen11_fo5kj0.png" alt="">
                         </div>
                         <div class="grid-trimestre4-4 text-center">
                             <b>Proyectos Antamina Concluidos en el 2T 2022: AIO</b>
@@ -369,7 +375,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre5-3">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004836081390333992/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659998523/ccd/reporte/Imagen12_d2lins.png" alt="">
                             <p>Fuente: Antamina, MEF, CCD</p>
                         </div>
                         <div class="grid-trimestre5-4 text-center">
@@ -542,7 +548,7 @@
                             <h6>(Descripción)</h6>
                         </div>
                         <div class="grid-trimestre6-2">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1004868215618404352/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659999870/ccd/reporte/Mapa_kuyfud.png" alt="">
                             <p>
                                 Fuente: Antamina
                             </p>
@@ -558,7 +564,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre7-3">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1005215245440131173/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659998856/ccd/reporte/Imagen13_o97w3x.png" alt="">
                             <p>
                                 1/  Incluye OPEX, CAPEX y OxI 
                                 <br>
@@ -579,7 +585,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre7-6">
-                            <img src="https://cdn.discordapp.com/attachments/959455678940987512/1005217993552318515/unknown.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659998856/ccd/reporte/Imagen14_qnshns.png" alt="">
                         </div>
                         <div class="grid-trimestre7-7 text-center">
                             <b>Cartera de proyectos: 2T 2022 - 2026</b>
@@ -680,7 +686,96 @@
                             </table>
                         </div>
                     </div>
-
+                    <br>
+                    <div class="trimestre8">
+                        <div class="grid-trimestre8-1 text-center">
+                            <h3>Aquia</h3>
+                        </div>
+                        <div class="grid-trimestre8-2 text-center">
+                            <b>KPI Antamina</b>
+                            <h6>(Porcentaje)</h6>
+                        </div>
+                        <div class="grid-trimestre8-3">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659999200/ccd/reporte/Imagen15_tnv3jx.png" alt="">
+                            <p>
+                                1/  Incluye OPEX, CAPEX y OxI 
+                                <br>
+                                AIO: Ámbito de Influencia de Antamina
+                                <br>
+                                Fuente: Antamina, MEF, CCD
+                            </p>
+                        </div>
+                        <div class="grid-trimestre8-4">
+                            <p>
+                                Desde el 1T 2017 hasta el 1T 2022 se observa una tendencia decreciente del KPI Antamina Aquia, de 57% a 46%. En el 2T 2022, el KPI Antamina Aquia disminuyó 0.1 puntos porcentuales respecto al trimestre anterior, explicado por la reducción en la brecha de vacunación contra el Covid-19 (476 dosis aplicadas en el trimestre).
+                                <br>
+                                En lo que resta del año 2022, se prevé culminar la construcción de la Cocina Comedor del Colegio de Aquia, la Conectividad distrital y la continuación del Programa “Más Educación”. Actualmente representantes de la Comunidad de Aquia y Antamina se viene reuniendo en los Comités de Desarrollo Económico para implementar nuevos proyectos productivos para los siguientes años.
+                            </p>
+                        </div>
+                        <div class="grid-trimestre8-5 text-center">
+                            <b>KPI Antamina y Contribución en Reducción de Brecha</b>
+                            <h6>(Porcentaje)</h6>
+                        </div>
+                        <div class="grid-trimestre8-6">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659999563/ccd/reporte/Imagen16_rq5o0l.png" alt="">
+                        </div>
+                        <div class="grid-trimestre8-7 text-center">
+                            <b>Cartera de proyectos: 2T 2022 - 2026</b>
+                            <h6>(Descripción)</h6>
+                        </div>
+                        <div class="grid-trimestre8-8 text-center">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Proyectos</td>
+                                        <td>Modalidad de Inversión</td>
+                                        <td>Fecha</td>
+                                        <td>Pilar</td>
+                                        <td>Beneficiarios</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="thead-1">
+                                        <td colspan="5">Trimestre 2T 2022:</td>
+                                    </tr>
+                                    <tr class="table-1">
+                                        <td class="proyecto-text">Plan de Vacunación contra el Covid 19 en Aquia</td>
+                                        <td>OPEX</td>
+                                        <td>Proceso</td>
+                                        <td>Pilar 5</td>
+                                        <td>476 dosis</td>
+                                    </tr>
+                                    <tr class="thead-2">
+                                        <td colspan="5">Trimestre 3T y 4T 2022:</td>
+                                    </tr>
+                                    <tr class="table-2">
+                                        <td class="proyecto-text">Construcción de la Cocina Comedor del Colegio de Aquia</td>
+                                        <td>CAPEX</td>
+                                        <td>30/09/2022</td>
+                                        <td>Pilar 3</td>
+                                        <td>1 local público</td>
+                                    </tr>
+                                    <tr class="table-2">
+                                        <td class="proyecto-text">Conectividad en Aquia</td>
+                                        <td>CAPEX</td>
+                                        <td>01/12/2022</td>
+                                        <td>Pilar 2</td>
+                                        <td>632 hogares</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="thead-3">Principales 2023 - 2026:</td>
+                                    </tr>
+                                    <tr class="table-3">
+                                        <td class="proyecto-text">Elaboración de estudios de pre-inversión e inversión para el apalancamiento de fondos</td>
+                                        <td>CAPEX</td>
+                                        <td>01/07/2023</td>
+                                        <td>Pilar 3</td>
+                                        <td>Ejecución de gasto</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </section>
                 <hr>
                 {{-- Descargar --}}
@@ -689,11 +784,71 @@
                         <h2>Descargar Reportes</h2>
                     </div>
                     <br>
-                    <div>
-                        <ul>
-                            <li><a href="/descargar" class="adescargar">Descargar Reporte Progreso Cierre de Brechas AIO Antamina</a></li>
-                        </ul>
-                    </div>
+                    <table>
+                        <thead class="text-center">
+                            <tr>
+                                <td>Periodo</td>
+                                <td>Documento</td>
+                                <td colspan="2">Descargar</td> 
+                            </tr>
+                        </thead>
+                        {{-- Descarga 1 --}}
+                        <tr>
+                            <td class="text-center"><b>2022 - 2T</b></td>
+                            <td>Progreso Cierre Brechas AIO - Reporte 2T 2022</td>
+                            <td class="text-center">
+                                <a href="/descargar-pdf1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="75.320129mm" height="92.604164mm" viewBox="0 0 75.320129 92.604164">
+                                    <g transform="translate(53.548057 -183.975276) scale(1.4843)">
+                                        <path fill="#ff2116" d="M-29.632812 123.94727c-3.551967 0-6.44336 2.89347-6.44336 6.44531v49.49804c0 3.55185 2.891393 6.44532 6.44336 6.44532H8.2167969c3.5519661 0 6.4433591-2.89335 6.4433591-6.44532v-40.70117s.101353-1.19181-.416015-2.35156c-.484969-1.08711-1.275391-1.84375-1.275391-1.84375a1.0584391 1.0584391 0 0 0-.0059-.008l-9.3906254-9.21094a1.0584391 1.0584391 0 0 0-.015625-.0156s-.8017392-.76344-1.9902344-1.27344c-1.39939552-.6005-2.8417968-.53711-2.8417968-.53711l.021484-.002z" color="#000" font-family="sans-serif" overflow="visible" paint-order="markers fill stroke" style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;white-space:normal;shape-padding:0;isolation:auto;mix-blend-mode:normal;solid-color:#000000;solid-opacity:1"/>
+                                        <path fill="#f5f5f5" d="M-29.632812 126.06445h28.3789058a1.0584391 1.0584391 0 0 0 .021484 0s1.13480448.011 1.96484378.36719c.79889772.34282 1.36536982.86176 1.36914062.86524.0000125.00001.00391.004.00391.004l9.3671868 9.18945s.564354.59582.837891 1.20899c.220779.49491.234375 1.40039.234375 1.40039a1.0584391 1.0584391 0 0 0-.002.0449v40.74609c0 2.41592-1.910258 4.32813-4.3261717 4.32813H-29.632812c-2.415914 0-4.326172-1.91209-4.326172-4.32813v-49.49804c0-2.41603 1.910258-4.32813 4.326172-4.32813z" color="#000" font-family="sans-serif" overflow="visible" paint-order="markers fill stroke" style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;white-space:normal;shape-padding:0;isolation:auto;mix-blend-mode:normal;solid-color:#000000;solid-opacity:1"/>
+                                        <path fill="#ff2116" d="M-23.40766 161.09299c-1.45669-1.45669.11934-3.45839 4.39648-5.58397l2.69124-1.33743 1.04845-2.29399c.57665-1.26169 1.43729-3.32036 1.91254-4.5748l.8641-2.28082-.59546-1.68793c-.73217-2.07547-.99326-5.19438-.52872-6.31588.62923-1.51909 2.69029-1.36323 3.50626.26515.63727 1.27176.57212 3.57488-.18329 6.47946l-.6193 2.38125.5455.92604c.30003.50932 1.1764 1.71867 1.9475 2.68743l1.44924 1.80272 1.8033728-.23533c5.72900399-.74758 7.6912472.523 7.6912472 2.34476 0 2.29921-4.4984914 2.48899-8.2760865-.16423-.8499666-.59698-1.4336605-1.19001-1.4336605-1.19001s-2.3665326.48178-3.531704.79583c-1.202707.32417-1.80274.52719-3.564509 1.12186 0 0-.61814.89767-1.02094 1.55026-1.49858 2.4279-3.24833 4.43998-4.49793 5.1723-1.3991.81993-2.86584.87582-3.60433.13733zm2.28605-.81668c.81883-.50607 2.47616-2.46625 3.62341-4.28553l.46449-.73658-2.11497 1.06339c-3.26655 1.64239-4.76093 3.19033-3.98386 4.12664.43653.52598.95874.48237 2.01093-.16792zm21.21809-5.95578c.80089-.56097.68463-1.69142-.22082-2.1472-.70466-.35471-1.2726074-.42759-3.1031574-.40057-1.1249.0767-2.9337647.3034-3.2403347.37237 0 0 .993716.68678 1.434896.93922.58731.33544 2.0145161.95811 3.0565161 1.27706 1.02785.31461 1.6224.28144 2.0729-.0409zm-8.53152-3.54594c-.4847-.50952-1.30889-1.57296-1.83152-2.3632-.68353-.89643-1.02629-1.52887-1.02629-1.52887s-.4996 1.60694-.90948 2.57394l-1.27876 3.16076-.37075.71695s1.971043-.64627 2.97389-.90822c1.0621668-.27744 3.21787-.70134 3.21787-.70134zm-2.74938-11.02573c.12363-1.0375.1761-2.07346-.15724-2.59587-.9246-1.01077-2.04057-.16787-1.85154 2.23517.0636.8084.26443 2.19033.53292 3.04209l.48817 1.54863.34358-1.16638c.18897-.64151.47882-2.02015.64411-3.06364z"/>
+                                        <path fill="#2c2c2c" d="M-20.930423 167.83862h2.364986q1.133514 0 1.840213.2169.706698.20991 1.189489.9446.482795.72769.482795 1.75625 0 .94459-.391832 1.6233-.391833.67871-1.056548.97958-.65772.30087-2.02913.30087h-.818651v3.72941h-1.581322zm1.581322 1.22447v3.33058h.783664q1.049552 0 1.44838-.39184.405826-.39183.405826-1.27345 0-.65772-.265887-1.06355-.265884-.41282-.587747-.50378-.314866-.098-1.000572-.098zm5.50664-1.22447h2.148082q1.560333 0 2.4909318.55276.9375993.55276 1.4133973 1.6443.482791 1.09153.482791 2.42096 0 1.3994-.4338151 2.49793-.4268149 1.09153-1.3154348 1.76324-.8816233.67172-2.5189212.67172h-2.267031zm1.581326 1.26645v7.018h.657715q1.378411 0 2.001144-.9516.6227329-.95858.6227329-2.5539 0-3.5125-2.6238769-3.5125zm6.4722254-1.26645h5.30372941v1.26645H-4.2075842v2.85478h2.9807225v1.26646h-2.9807225v4.16322h-1.5813254z" font-family="Franklin Gothic Medium Cond" letter-spacing="0" style="line-height:125%;-inkscape-font-specification:'Franklin Gothic Medium Cond'" word-spacing="4.26000023"/>
+                                    </g>
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a href="/descargar-excel1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="#FFF" stroke-miterlimit="10" stroke-width="2">
+                                        <path stroke="#979593" d="M67.1716,7H27c-1.1046,0-2,0.8954-2,2v78 c0,1.1046,0.8954,2,2,2h58c1.1046,0,2-0.8954,2-2V26.8284c0-0.5304-0.2107-1.0391-0.5858-1.4142L68.5858,7.5858 C68.2107,7.2107,67.702,7,67.1716,7z"/>
+                                        <path fill="none" stroke="#979593" d="M67,7v18c0,1.1046,0.8954,2,2,2h18"/>
+                                        <path fill="#C8C6C4" d="M51 61H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 60.5523 51.5523 61 51 61zM51 55H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 54.5523 51.5523 55 51 55zM51 49H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 48.5523 51.5523 49 51 49zM51 43H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 42.5523 51.5523 43 51 43zM51 67H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 66.5523 51.5523 67 51 67zM79 61H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 60.5523 79.5523 61 79 61zM79 67H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 66.5523 79.5523 67 79 67zM79 55H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 54.5523 79.5523 55 79 55zM79 49H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 48.5523 79.5523 49 79 49zM79 43H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 42.5523 79.5523 43 79 43zM65 61H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 60.5523 65.5523 61 65 61zM65 67H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 66.5523 65.5523 67 65 67zM65 55H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 54.5523 65.5523 55 65 55zM65 49H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 48.5523 65.5523 49 65 49zM65 43H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 42.5523 65.5523 43 65 43z"/>
+                                        <path fill="#107C41" d="M12,74h32c2.2091,0,4-1.7909,4-4V38c0-2.2091-1.7909-4-4-4H12c-2.2091,0-4,1.7909-4,4v32 C8,72.2091,9.7909,74,12,74z"/>
+                                        <path d="M16.9492,66l7.8848-12.0337L17.6123,42h5.8115l3.9424,7.6486c0.3623,0.7252,0.6113,1.2668,0.7471,1.6236 h0.0508c0.2617-0.58,0.5332-1.1436,0.8164-1.69L33.1943,42h5.335l-7.4082,11.9L38.7168,66H33.041l-4.5537-8.4017 c-0.1924-0.3116-0.374-0.6858-0.5439-1.1215H27.876c-0.0791,0.2684-0.2549,0.631-0.5264,1.0878L22.6592,66H16.9492z"/>
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        {{-- Descarga 2 --}}
+                        <tr>
+                            <td class="text-center"><b>2022 - 1T</b></td>
+                            <td>Progreso Cierre Brechas AIO - Reporte 1T 2022</td>
+                            <td class="text-center">
+                                <a href="/descargar-pdf1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="75.320129mm" height="92.604164mm" viewBox="0 0 75.320129 92.604164">
+                                    <g transform="translate(53.548057 -183.975276) scale(1.4843)">
+                                        <path fill="#ff2116" d="M-29.632812 123.94727c-3.551967 0-6.44336 2.89347-6.44336 6.44531v49.49804c0 3.55185 2.891393 6.44532 6.44336 6.44532H8.2167969c3.5519661 0 6.4433591-2.89335 6.4433591-6.44532v-40.70117s.101353-1.19181-.416015-2.35156c-.484969-1.08711-1.275391-1.84375-1.275391-1.84375a1.0584391 1.0584391 0 0 0-.0059-.008l-9.3906254-9.21094a1.0584391 1.0584391 0 0 0-.015625-.0156s-.8017392-.76344-1.9902344-1.27344c-1.39939552-.6005-2.8417968-.53711-2.8417968-.53711l.021484-.002z" color="#000" font-family="sans-serif" overflow="visible" paint-order="markers fill stroke" style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;white-space:normal;shape-padding:0;isolation:auto;mix-blend-mode:normal;solid-color:#000000;solid-opacity:1"/>
+                                        <path fill="#f5f5f5" d="M-29.632812 126.06445h28.3789058a1.0584391 1.0584391 0 0 0 .021484 0s1.13480448.011 1.96484378.36719c.79889772.34282 1.36536982.86176 1.36914062.86524.0000125.00001.00391.004.00391.004l9.3671868 9.18945s.564354.59582.837891 1.20899c.220779.49491.234375 1.40039.234375 1.40039a1.0584391 1.0584391 0 0 0-.002.0449v40.74609c0 2.41592-1.910258 4.32813-4.3261717 4.32813H-29.632812c-2.415914 0-4.326172-1.91209-4.326172-4.32813v-49.49804c0-2.41603 1.910258-4.32813 4.326172-4.32813z" color="#000" font-family="sans-serif" overflow="visible" paint-order="markers fill stroke" style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;white-space:normal;shape-padding:0;isolation:auto;mix-blend-mode:normal;solid-color:#000000;solid-opacity:1"/>
+                                        <path fill="#ff2116" d="M-23.40766 161.09299c-1.45669-1.45669.11934-3.45839 4.39648-5.58397l2.69124-1.33743 1.04845-2.29399c.57665-1.26169 1.43729-3.32036 1.91254-4.5748l.8641-2.28082-.59546-1.68793c-.73217-2.07547-.99326-5.19438-.52872-6.31588.62923-1.51909 2.69029-1.36323 3.50626.26515.63727 1.27176.57212 3.57488-.18329 6.47946l-.6193 2.38125.5455.92604c.30003.50932 1.1764 1.71867 1.9475 2.68743l1.44924 1.80272 1.8033728-.23533c5.72900399-.74758 7.6912472.523 7.6912472 2.34476 0 2.29921-4.4984914 2.48899-8.2760865-.16423-.8499666-.59698-1.4336605-1.19001-1.4336605-1.19001s-2.3665326.48178-3.531704.79583c-1.202707.32417-1.80274.52719-3.564509 1.12186 0 0-.61814.89767-1.02094 1.55026-1.49858 2.4279-3.24833 4.43998-4.49793 5.1723-1.3991.81993-2.86584.87582-3.60433.13733zm2.28605-.81668c.81883-.50607 2.47616-2.46625 3.62341-4.28553l.46449-.73658-2.11497 1.06339c-3.26655 1.64239-4.76093 3.19033-3.98386 4.12664.43653.52598.95874.48237 2.01093-.16792zm21.21809-5.95578c.80089-.56097.68463-1.69142-.22082-2.1472-.70466-.35471-1.2726074-.42759-3.1031574-.40057-1.1249.0767-2.9337647.3034-3.2403347.37237 0 0 .993716.68678 1.434896.93922.58731.33544 2.0145161.95811 3.0565161 1.27706 1.02785.31461 1.6224.28144 2.0729-.0409zm-8.53152-3.54594c-.4847-.50952-1.30889-1.57296-1.83152-2.3632-.68353-.89643-1.02629-1.52887-1.02629-1.52887s-.4996 1.60694-.90948 2.57394l-1.27876 3.16076-.37075.71695s1.971043-.64627 2.97389-.90822c1.0621668-.27744 3.21787-.70134 3.21787-.70134zm-2.74938-11.02573c.12363-1.0375.1761-2.07346-.15724-2.59587-.9246-1.01077-2.04057-.16787-1.85154 2.23517.0636.8084.26443 2.19033.53292 3.04209l.48817 1.54863.34358-1.16638c.18897-.64151.47882-2.02015.64411-3.06364z"/>
+                                        <path fill="#2c2c2c" d="M-20.930423 167.83862h2.364986q1.133514 0 1.840213.2169.706698.20991 1.189489.9446.482795.72769.482795 1.75625 0 .94459-.391832 1.6233-.391833.67871-1.056548.97958-.65772.30087-2.02913.30087h-.818651v3.72941h-1.581322zm1.581322 1.22447v3.33058h.783664q1.049552 0 1.44838-.39184.405826-.39183.405826-1.27345 0-.65772-.265887-1.06355-.265884-.41282-.587747-.50378-.314866-.098-1.000572-.098zm5.50664-1.22447h2.148082q1.560333 0 2.4909318.55276.9375993.55276 1.4133973 1.6443.482791 1.09153.482791 2.42096 0 1.3994-.4338151 2.49793-.4268149 1.09153-1.3154348 1.76324-.8816233.67172-2.5189212.67172h-2.267031zm1.581326 1.26645v7.018h.657715q1.378411 0 2.001144-.9516.6227329-.95858.6227329-2.5539 0-3.5125-2.6238769-3.5125zm6.4722254-1.26645h5.30372941v1.26645H-4.2075842v2.85478h2.9807225v1.26646h-2.9807225v4.16322h-1.5813254z" font-family="Franklin Gothic Medium Cond" letter-spacing="0" style="line-height:125%;-inkscape-font-specification:'Franklin Gothic Medium Cond'" word-spacing="4.26000023"/>
+                                    </g>
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a href="/descargar-excel1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="#FFF" stroke-miterlimit="10" stroke-width="2">
+                                        <path stroke="#979593" d="M67.1716,7H27c-1.1046,0-2,0.8954-2,2v78 c0,1.1046,0.8954,2,2,2h58c1.1046,0,2-0.8954,2-2V26.8284c0-0.5304-0.2107-1.0391-0.5858-1.4142L68.5858,7.5858 C68.2107,7.2107,67.702,7,67.1716,7z"/>
+                                        <path fill="none" stroke="#979593" d="M67,7v18c0,1.1046,0.8954,2,2,2h18"/>
+                                        <path fill="#C8C6C4" d="M51 61H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 60.5523 51.5523 61 51 61zM51 55H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 54.5523 51.5523 55 51 55zM51 49H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 48.5523 51.5523 49 51 49zM51 43H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 42.5523 51.5523 43 51 43zM51 67H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 66.5523 51.5523 67 51 67zM79 61H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 60.5523 79.5523 61 79 61zM79 67H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 66.5523 79.5523 67 79 67zM79 55H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 54.5523 79.5523 55 79 55zM79 49H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 48.5523 79.5523 49 79 49zM79 43H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 42.5523 79.5523 43 79 43zM65 61H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 60.5523 65.5523 61 65 61zM65 67H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 66.5523 65.5523 67 65 67zM65 55H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 54.5523 65.5523 55 65 55zM65 49H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 48.5523 65.5523 49 65 49zM65 43H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 42.5523 65.5523 43 65 43z"/>
+                                        <path fill="#107C41" d="M12,74h32c2.2091,0,4-1.7909,4-4V38c0-2.2091-1.7909-4-4-4H12c-2.2091,0-4,1.7909-4,4v32 C8,72.2091,9.7909,74,12,74z"/>
+                                        <path d="M16.9492,66l7.8848-12.0337L17.6123,42h5.8115l3.9424,7.6486c0.3623,0.7252,0.6113,1.2668,0.7471,1.6236 h0.0508c0.2617-0.58,0.5332-1.1436,0.8164-1.69L33.1943,42h5.335l-7.4082,11.9L38.7168,66H33.041l-4.5537-8.4017 c-0.1924-0.3116-0.374-0.6858-0.5439-1.1215H27.876c-0.0791,0.2684-0.2549,0.631-0.5264,1.0878L22.6592,66H16.9492z"/>
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
                 </section>
             </div>
         </div>
@@ -753,31 +908,6 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script type="text/javascript">
-        var sections = document.querySelectorAll('section');
-        onscroll = function () {
-            var scrollPosition = document.documentElement.scrollTop;
-
-            sections.forEach( section => {
-                if(scrollPosition + 210 >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
-                    var currId = section.attributes.id.value;
-                    removeAllActiveClasses();
-                    addActiveCLass(currId)
-                }
-            })
-        }
-
-        var removeAllActiveClasses = function() {
-            document.querySelectorAll("nav a").forEach( el => {
-                el.classList.remove('actual');
-            })
-        }
-
-        var addActiveCLass = function(id) {
-            console.log(id);
-            var selector = `nav a[href="#${id}"]`;
-            document.querySelector(selector).classList.add('actual')
-        }
-    </script>
+    <script src="{{ asset('js/navbar2.js') }}"></script>
 </body>
 </html>

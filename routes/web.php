@@ -25,13 +25,25 @@ Route::get('/recursos', 'RecursosController@index');
 //potencialidades
 Route::get('/potencialidades', 'PotencialidadesController@index');
 //trimestral
-Route::get('/trimestral', 'TrimestralController@index');
+Route::get('/trimestral', function () {
+    return view('trimestral');
+});
 //descargar
-Route::get('/descargar', function() {
+/* PDF 1 */
+Route::get('/descargar-pdf1', function() {
     $file = public_path()."/file/reporte1.pdf";
 
     $headers = array(
         'Content-Type: application/pdf',
     );
-    return Response::download($file, "Progreso de Cierre de Brechas.pdf", $headers);
+    return Response::download($file, "Progreso Cierre Brechas AIO - Reporte 2T 2022.pdf", $headers);
+});
+/* Excel 1 */
+Route::get('/descargar-excel1', function() {
+    $file = public_path()."/file/excel1.xlsx";
+
+    $headers = array(
+        'Content-Type: application/vnd.ms-excel',
+    );
+    return Response::download($file, "Progreso Cierre Brechas AIO - Reporte 2T 2022.xlsx", $headers);
 });
