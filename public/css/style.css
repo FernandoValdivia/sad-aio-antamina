@@ -112,6 +112,10 @@ section[id] {
     text-align: justify;
 }
 
+.trim h2 {
+    color: #a1011f;
+}
+
 .descargar-btn {
     border: none;
     border-radius: 5px;
