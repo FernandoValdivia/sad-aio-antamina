@@ -95,8 +95,8 @@
                             <p>Evolución de recursos para el desarrollo</p>
                         </div>
                         
-                        {{-- Filtros 
-                        <div class="col-3 filters">
+                        {{-- Filtros --}}
+                        <div class="col-4">
                             <label id="label" for="unit">Unidad territorial:</label>
                             <select name="location" id="location" class="select">
                                 <option value="AIO">AIO</option>
@@ -129,10 +129,29 @@
                                     @endphp
                                 </optgroup>
                             </select>
-                        </div>--}}
+                        </div>
                     </div>
-                    <div class="row m-3">
-                        <canvas id="myChart"></canvas>
+                    <br>
+                    <div class="row m-3 container-grph">
+                        <div class="col-8">
+                            <canvas id="myChart" height="180"></canvas>
+                        </div>
+                        <div class="col-4">
+                            <canvas id="barChart" height="360"></canvas>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row dwnld-div">
+                        <a href="/descargar-recursos">
+                            <svg class="dwnld-re" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="#FFF" stroke-miterlimit="10" stroke-width="2">
+                                <path stroke="#979593" d="M67.1716,7H27c-1.1046,0-2,0.8954-2,2v78 c0,1.1046,0.8954,2,2,2h58c1.1046,0,2-0.8954,2-2V26.8284c0-0.5304-0.2107-1.0391-0.5858-1.4142L68.5858,7.5858 C68.2107,7.2107,67.702,7,67.1716,7z"/>
+                                <path fill="none" stroke="#979593" d="M67,7v18c0,1.1046,0.8954,2,2,2h18"/>
+                                <path fill="#C8C6C4" d="M51 61H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 60.5523 51.5523 61 51 61zM51 55H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 54.5523 51.5523 55 51 55zM51 49H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 48.5523 51.5523 49 51 49zM51 43H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 42.5523 51.5523 43 51 43zM51 67H41v-2h10c.5523 0 1 .4477 1 1l0 0C52 66.5523 51.5523 67 51 67zM79 61H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 60.5523 79.5523 61 79 61zM79 67H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 66.5523 79.5523 67 79 67zM79 55H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 54.5523 79.5523 55 79 55zM79 49H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 48.5523 79.5523 49 79 49zM79 43H69c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C80 42.5523 79.5523 43 79 43zM65 61H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 60.5523 65.5523 61 65 61zM65 67H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 66.5523 65.5523 67 65 67zM65 55H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 54.5523 65.5523 55 65 55zM65 49H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 48.5523 65.5523 49 65 49zM65 43H55c-.5523 0-1-.4477-1-1l0 0c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1l0 0C66 42.5523 65.5523 43 65 43z"/>
+                                <path fill="#107C41" d="M12,74h32c2.2091,0,4-1.7909,4-4V38c0-2.2091-1.7909-4-4-4H12c-2.2091,0-4,1.7909-4,4v32 C8,72.2091,9.7909,74,12,74z"/>
+                                <path d="M16.9492,66l7.8848-12.0337L17.6123,42h5.8115l3.9424,7.6486c0.3623,0.7252,0.6113,1.2668,0.7471,1.6236 h0.0508c0.2617-0.58,0.5332-1.1436,0.8164-1.69L33.1943,42h5.335l-7.4082,11.9L38.7168,66H33.041l-4.5537-8.4017 c-0.1924-0.3116-0.374-0.6858-0.5439-1.1215H27.876c-0.0791,0.2684-0.2549,0.631-0.5264,1.0878L22.6592,66H16.9492z"/>
+                            </svg>
+                            Descargar data
+                        </a>
                     </div>
                 </div>
             </div>
@@ -192,11 +211,151 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
+    
     <!-- myChart -->
-    <script src="{{ asset('js/chart.js') }}"></script>
+    <script type="text/javascript">
+    /* Grafico de lineas */
+        var chartCanvas = document.getElementById("myChart");
+
+        Chart.defaults.global.defaultFontFamily = "Calibri";
+        Chart.defaults.global.defaultFontSize = 14;
+
+        var total = '['+'@foreach ($recursos as $r){{ $r -> valor}},@endforeach'+']';
+
+        // Select
+        var slcDistrito = document.getElementById("location");
+        slcDistrito.addEventListener("change", function() {
+                $location = $_POST['location'];
+                $distrito = explode(",",$location);
+                $distrito_nom = $distrito[2];
+                alert($distrito_nom)
+        });
+        //
+        
+        var data1 = {
+            label: "Canon y regalías mineras",
+            data: total.split(','),
+            lineTension: 0,
+            fill: false,
+            borderColor: '#4472C4',
+            pointHoverRadius: 6,
+            pointHoverBackgroundColor: '#bad9fd85'
+        };
+
+        var lineX = {
+            labels: ['1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026','2027','2028','2029','2030','2031','2032','2033','2034','2035','2036'],
+            datasets: [data1]
+        };
+
+        var chartOptions = {
+        legend: {
+            display: true,
+            position: 'top',
+            labels: {
+            boxWidth: 60,
+            fontColor: 'black'
+            }
+        },
+        scales: {
+                xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: ''
+                        },
+                        ticks: {
+                            autoSkip: false
+                        },
+                        gridLines: {
+                            display: false
+                        }
+                    }],
+                yAxes: [{
+                        display: true,
+                        ticks: {
+                            beginAtZero: true,
+                            max: 900
+                        },
+                        gridLines: {
+                            display: false
+                        }
+                    }]
+                }
+        };
+        
+        var lineChart = new Chart(chartCanvas, {
+            type: 'line',
+            data: lineX,
+            options: chartOptions
+        });
+
+    /* Grafico de barras */
+        var barCanvas = document.getElementById("barChart");
+
+        var bardata = {
+            label: 'Acumulado',
+            data: [80, 50],
+            backgroundColor: '#326ba8',
+            borderColor: '#326ba9',
+            borderWidth: 1,
+            hoverBorderWidth: 1,
+            hoverBackgroundColor: '#326ba8'
+        };
+
+        var barOptions = {
+            scales: {
+                xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: ''
+                        },
+                        ticks: {
+                            autoSkip: false
+                        },
+                        gridLines: {
+                            display: false
+                        }
+                    }],
+                yAxes: [{
+                        display: true,
+                        ticks: {
+                            beginAtZero: true,
+                            min: 0
+                        },
+                        gridLines: {
+                            display: false
+                        }
+                    }]
+            },
+            plugins: {
+                    datalabels: {
+                    anchor: 'end',
+                    backgroundColor: '#000',
+                    borderColor: 'white',
+                    borderRadius: 5,
+                    borderWidth: 0,
+                    color: 'white',
+                    display: "a",
+                    font: {
+                        weight: 'bold',
+                        size: '16'
+                        },
+                    }
+                }
+            };
+
+        var barChart = new Chart(barCanvas, {
+        type: 'bar',
+        data: {
+            labels: ["1996 - 2021", "2022 - 2036"],
+            datasets: [bardata]
+        },
+        options: barOptions
+        });
+
+    </script>
 </body>
 </html>

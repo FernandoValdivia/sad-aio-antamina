@@ -47,3 +47,12 @@ Route::get('/descargar-excel1', function() {
     );
     return Response::download($file, "Progreso Cierre Brechas AIO - Reporte 2T 2022.xlsx", $headers);
 });
+/* Excel Recursos */
+Route::get('/descargar-recursos', function() {
+    $file = public_path()."/file/excel-recursos.xlsx";
+
+    $headers = array(
+        'Content-Type: application/vnd.ms-excel',
+    );
+    return Response::download($file, "Canon y Regalía Minera con MEIA: AIO Áncash (17 Distritos).xlsx", $headers);
+});

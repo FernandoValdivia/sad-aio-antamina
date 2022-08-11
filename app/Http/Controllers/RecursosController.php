@@ -45,7 +45,39 @@ class RecursosController extends Controller
         )
         ->where('ugt','UGT Huarmey')
         ->get();
+
+        $recursos = \DB::table('recursos')->select(
+            'distrito',
+            'anio',
+            'valor'
+        )
+        ->where('distrito', 'Total')
+        ->get();
+
+        $acumulado = \DB::table('recurso_acumulado')->select(
+            'distrito',
+            '1996_2021',
+            '2022_2036'
+        )
+        ->where('distrito', 'Total')
+        ->get();
+
+        $promedio = \DB::table('recurso_promedio')->select(
+            'distrito',
+            '1996_2021',
+            '2022_2036'
+        )
+        ->where('distrito', 'Total')
+        ->get();
         
-        return view('recursos', compact('ugt_valle','ugt_huall','ugt_mina','ugt_huarmey'));
+        return view('recursos', 
+            compact('ugt_valle',
+                    'ugt_huall',
+                    'ugt_mina',
+                    'ugt_huarmey',
+                    'recursos',
+                    'acumulado',
+                    'promedio'
+                ));
     }
 }
