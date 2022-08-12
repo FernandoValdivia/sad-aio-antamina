@@ -98,33 +98,33 @@
                         {{-- Filtros --}}
                         <div class="col-4">
                             <label id="label" for="unit">Unidad territorial:</label>
-                            <select name="location" id="location" class="select">
+                            <select name="location" id="location" class="select" onchange="ShowSelected();">
                                 <option value="AIO">AIO</option>
                                 <optgroup label="UGT Huallanca">
                                     @php
                                     foreach ($ugt_huall as $ugt) {
-                                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                            echo '<option value="'.$ugt->distrito.'">'.$ugt->distrito.'</option>';
                                     }
                                     @endphp
                                 </optgroup>
                                 <optgroup label="UGT Huarmey">
                                     @php
                                     foreach ($ugt_huarmey as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                        echo '<option value="'.$ugt->distrito.'">'.$ugt->distrito.'</option>';
                                     }
                                     @endphp
                                 </optgroup>
                                 <optgroup label="UGT Mina / San Marcos">
                                     @php
                                     foreach ($ugt_mina as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                        echo '<option value="'.$ugt->distrito.'">'.$ugt->distrito.'</option>';
                                     }
                                     @endphp
                                 </optgroup>
                                 <optgroup label="UGT Valle Fortaleza">
                                     @php
                                     foreach ($ugt_valle as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                        echo '<option value="'.$ugt->distrito.'">'.$ugt->distrito.'</option>';
                                     }
                                     @endphp
                                 </optgroup>
@@ -212,8 +212,7 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    
+    <script src="js/main.js"></script> 
     <!-- myChart -->
     <script type="text/javascript">
     /* Grafico de lineas */
@@ -221,35 +220,134 @@
 
         Chart.defaults.global.defaultFontFamily = "Calibri";
         Chart.defaults.global.defaultFontSize = 14;
-
+       
+        //Valor total inicial
         var total = '['+'@foreach ($recursos as $r){{ $r -> valor}},@endforeach'+']';
 
         // Select
-        var slcDistrito = document.getElementById("location");
-        slcDistrito.addEventListener("change", function() {
-                $location = $_POST['location'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                alert($distrito_nom)
-        });
-        //
-        
-        var data1 = {
-            label: "Canon y regalías mineras",
-            data: total.split(','),
-            lineTension: 0,
-            fill: false,
-            borderColor: '#4472C4',
-            pointHoverRadius: 6,
-            pointHoverBackgroundColor: '#bad9fd85'
-        };
+        function ShowSelected()
+        {
+            /* Para obtener el texto */
+            var combo = document.getElementById("location");
+            var selected = combo.options[combo.selectedIndex].text;
+            /* alert(selected); */
 
-        var lineX = {
+            switch (selected) {
+                case 'AIO':
+                    var total = '['+'@foreach ($recursos as $r){{ $r -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Aquia (Bolognesi / Áncash)':
+                    var total = '['+'@foreach ($aquia as $r1){{ $r1 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'San Marcos (Huari / Áncash)':
+                    var total = '['+'@foreach ($san_marcos as $r2){{ $r2 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'San Pedro de Chaná (Huari / Áncash)':
+                    var total = '['+'@foreach ($san_pedro as $r3){{ $r3 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Huachis (Huari / Áncash)':
+                    var total = '['+'@foreach ($huachis as $r4){{ $r4 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Chavín de Huántar (Huari / Áncash)':
+                    var total = '['+'@foreach ($chavin as $r5){{ $r5 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Huallanca (Bolognesi / Áncash)':
+                    var total = '['+'@foreach ($huallanca as $r6){{ $r6 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Chiquián (Bolognesi / Áncash)':
+                    var total = '['+'@foreach ($chiquian as $r7){{ $r7 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Cátac (Recuay / Áncash)':
+                    var total = '['+'@foreach ($catac as $r8){{ $r8 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Pampas Chico (Recuay / Áncash)':
+                    var total = '['+'@foreach ($pampas_chico as $r9){{ $r9 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Marca (Recuay / Áncash)':
+                    var total = '['+'@foreach ($marca as $r10){{ $r10 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Cajacay (Bolognesi / Áncash)':
+                    var total = '['+'@foreach ($cajacay as $r11){{ $r11 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Huayllacayán (Bolognesi / Áncash)':
+                    var total = '['+'@foreach ($huayllacayan as $r12){{ $r12 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Antonio Raymondi (Bolognesi / Áncash)':
+                    var total = '['+'@foreach ($antonio as $r13){{ $r13 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Llacllín (Recuay / Áncash)':
+                    var total = '['+'@foreach ($llacllin as $r14){{ $r14 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Colquioc (Bolognesi / Áncash)':
+                    var total = '['+'@foreach ($colquioc as $r15){{ $r15 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Pararín (Recuay / Áncash)':
+                    var total = '['+'@foreach ($pararin as $r16){{ $r16 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                case 'Huarmey (Huarmey / Áncash)':
+                    var total = '['+'@foreach ($huarmey as $r17){{ $r17 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+                default:
+                    var total = '['+'@foreach ($recursos as $r){{ $r -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    break;
+            }
+        }
+        
+        /**/
+
+        var data = {
             labels: ['1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026','2027','2028','2029','2030','2031','2032','2033','2034','2035','2036'],
-            datasets: [data1]
+            datasets: [{
+                label: "Canon y regalías mineras",
+                data: total.split(','),
+                lineTension: 0,
+                fill: false,
+                borderColor: '#4472C4',
+                pointHoverRadius: 6,
+                pointHoverBackgroundColor: '#bad9fd85'
+            }]
         };
 
         var chartOptions = {
+        responsive: true,
         legend: {
             display: true,
             position: 'top',
@@ -275,8 +373,7 @@
                 yAxes: [{
                         display: true,
                         ticks: {
-                            beginAtZero: true,
-                            max: 900
+                            beginAtZero: true
                         },
                         gridLines: {
                             display: false
@@ -287,16 +384,16 @@
         
         var lineChart = new Chart(chartCanvas, {
             type: 'line',
-            data: lineX,
+            data: data,
             options: chartOptions
         });
-
+        
     /* Grafico de barras */
         var barCanvas = document.getElementById("barChart");
 
         var bardata = {
             label: 'Acumulado',
-            data: [80, 50],
+            data: [4062.629018, 8710.803814],
             backgroundColor: '#326ba8',
             borderColor: '#326ba9',
             borderWidth: 1,
