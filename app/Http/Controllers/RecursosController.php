@@ -156,22 +156,6 @@ class RecursosController extends Controller
         ->get();
         
         /** recursos end **/
-
-        $acumulado = \DB::table('recurso_acumulado')->select(
-            'distrito',
-            '1996_2021',
-            '2022_2036'
-        )
-        ->where('distrito', 'Total')
-        ->get();
-
-        $promedio = \DB::table('recurso_promedio')->select(
-            'distrito',
-            '1996_2021',
-            '2022_2036'
-        )
-        ->where('distrito', 'Total')
-        ->get();
         
         return view('recursos', 
             compact('ugt_valle',
@@ -195,9 +179,7 @@ class RecursosController extends Controller
                     'llacllin',
                     'colquioc',
                     'pararin',
-                    'huarmey',
-                    'acumulado',
-                    'promedio'
+                    'huarmey'
                 ));
     }
 }

@@ -41,7 +41,7 @@ Route::get('/descargar-pdf1', function() {
 /* Excel 1 */
 Route::get('/descargar-excel1', function() {
     $file = public_path()."/file/excel1.xlsx";
-
+    
     $headers = array(
         'Content-Type: application/vnd.ms-excel',
     );

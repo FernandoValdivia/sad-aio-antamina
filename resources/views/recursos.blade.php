@@ -137,7 +137,7 @@
                             <canvas id="myChart" height="180"></canvas>
                         </div>
                         <div class="col-4">
-                            <canvas id="barChart" height="360"></canvas>
+                            <img id="imgAcumuladoAnual" src="https://cdn.discordapp.com/attachments/695689369637486592/1007811406780968970/r1.png" alt="Gráfico acumulado y promedio anual">
                         </div>
                     </div>
                     <hr>
@@ -237,96 +237,115 @@
                     var total = '['+'@foreach ($recursos as $r){{ $r -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Aquia (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($aquia as $r1){{ $r1 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'San Marcos (Huari / Áncash)':
                     var total = '['+'@foreach ($san_marcos as $r2){{ $r2 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'San Pedro de Chaná (Huari / Áncash)':
                     var total = '['+'@foreach ($san_pedro as $r3){{ $r3 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Huachis (Huari / Áncash)':
                     var total = '['+'@foreach ($huachis as $r4){{ $r4 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Chavín de Huántar (Huari / Áncash)':
                     var total = '['+'@foreach ($chavin as $r5){{ $r5 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Huallanca (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($huallanca as $r6){{ $r6 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Chiquián (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($chiquian as $r7){{ $r7 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Cátac (Recuay / Áncash)':
                     var total = '['+'@foreach ($catac as $r8){{ $r8 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Pampas Chico (Recuay / Áncash)':
                     var total = '['+'@foreach ($pampas_chico as $r9){{ $r9 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Marca (Recuay / Áncash)':
                     var total = '['+'@foreach ($marca as $r10){{ $r10 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Cajacay (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($cajacay as $r11){{ $r11 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Huayllacayán (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($huayllacayan as $r12){{ $r12 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Antonio Raymondi (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($antonio as $r13){{ $r13 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Llacllín (Recuay / Áncash)':
                     var total = '['+'@foreach ($llacllin as $r14){{ $r14 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Colquioc (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($colquioc as $r15){{ $r15 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Pararín (Recuay / Áncash)':
                     var total = '['+'@foreach ($pararin as $r16){{ $r16 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 case 'Huarmey (Huarmey / Áncash)':
                     var total = '['+'@foreach ($huarmey as $r17){{ $r17 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
                 default:
                     var total = '['+'@foreach ($recursos as $r){{ $r -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='';
                     break;
             }
         }
@@ -338,10 +357,12 @@
             datasets: [{
                 label: "Canon y regalías mineras",
                 data: total.split(','),
-                lineTension: 0,
+                lineTension: 0.2,
                 fill: false,
                 borderColor: '#4472C4',
+                borderWidth: 2,
                 pointHoverRadius: 6,
+                backgroundColor: '#4472C4',
                 pointHoverBackgroundColor: '#bad9fd85'
             }]
         };
@@ -352,7 +373,8 @@
             display: true,
             position: 'top',
             labels: {
-            boxWidth: 60,
+            boxWidth: 5,
+            usePointStyle: true,
             fontColor: 'black'
             }
         },
@@ -387,72 +409,6 @@
             data: data,
             options: chartOptions
         });
-        
-    /* Grafico de barras */
-        var barCanvas = document.getElementById("barChart");
-
-        var bardata = {
-            label: 'Acumulado',
-            data: [4062.629018, 8710.803814],
-            backgroundColor: '#326ba8',
-            borderColor: '#326ba9',
-            borderWidth: 1,
-            hoverBorderWidth: 1,
-            hoverBackgroundColor: '#326ba8'
-        };
-
-        var barOptions = {
-            scales: {
-                xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: ''
-                        },
-                        ticks: {
-                            autoSkip: false
-                        },
-                        gridLines: {
-                            display: false
-                        }
-                    }],
-                yAxes: [{
-                        display: true,
-                        ticks: {
-                            beginAtZero: true,
-                            min: 0
-                        },
-                        gridLines: {
-                            display: false
-                        }
-                    }]
-            },
-            plugins: {
-                    datalabels: {
-                    anchor: 'end',
-                    backgroundColor: '#000',
-                    borderColor: 'white',
-                    borderRadius: 5,
-                    borderWidth: 0,
-                    color: 'white',
-                    display: "a",
-                    font: {
-                        weight: 'bold',
-                        size: '16'
-                        },
-                    }
-                }
-            };
-
-        var barChart = new Chart(barCanvas, {
-        type: 'bar',
-        data: {
-            labels: ["1996 - 2021", "2022 - 2036"],
-            datasets: [bardata]
-        },
-        options: barOptions
-        });
-
     </script>
 </body>
 </html>
