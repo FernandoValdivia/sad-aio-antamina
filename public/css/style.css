@@ -1365,7 +1365,7 @@ th.style16 {
     display: grid;
     gap: 10px;
     grid-template-columns: 12% 13% 11% 17% 9% 8% 10% 8% auto;
-    grid-template-rows: auto 16% 10% 14% 8% 10% 10% auto auto;
+    grid-template-rows: auto 16% 10% 14% 10% 10% 15% auto auto;
     padding-bottom: 10%;
 }
 
@@ -1726,15 +1726,13 @@ th.style16 {
 
 .grid-br-16 th {
     text-align: center;
-    border-top: #fff solid 40px;
-    border-bottom: #fff solid 40px;
+    border-top: #fff solid 1px;
     background-color: #bf340d;
 }
 
 .grid-br-16 td {
     width: 20%;
-    border-top: #fff solid 40px;
-    border-bottom: #fff solid 40px;
+    border-top: #fff solid 1px;
     background-color: #feb3b3;
 }
 
@@ -1755,15 +1753,13 @@ th.style16 {
 
 .grid-br-17 th {
     text-align: center;
-    border-top: #fff solid 40px;
-    border-bottom: #fff solid 40px;
+    border-top: #fff solid 1px;
     background-color: #bf340d;
 }
 
 .grid-br-17 td {
     width: 20%;
-    border-top: #fff solid 40px;
-    border-bottom: #fff solid 40px;
+    border-top: #fff solid 1px;
     background-color: #feb3b3;
 }
 
@@ -1784,13 +1780,16 @@ th.style16 {
 
 .grid-br-18 th {
     text-align: center;
-    border-bottom: #fff solid 70px;
     background-color: #bf340d;
+}
+
+.grid-br-18 tr {
+    border-bottom: #fff solid 50px;
+    border-top: #fff solid 50px;
 }
 
 .grid-br-18 td {
     width: 20%;
-    border-bottom: #fff solid 70px;
     background-color: #feb3b3;
 }
 
@@ -1798,9 +1797,34 @@ th.style16 {
     color: #bf340d;
 }
 
+.grid-br-19 {
+    grid-column: 8 / span 1;
+    grid-row: 3 / span 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.grid-br-19 table {
+    width: 100%;
+}
+
+.grid-br-19 th {
+    text-align: center;
+    background-color: #bf340d;
+}
+
+.grid-br-19 td {
+    width: 20%;
+    background-color: #feb3b3;
+}
+
+.grid-br-19 td h6 {
+    color: #bf340d;
+}
+
 .grid-br-20 {
     grid-column: 8 / span 2;
-    grid-row: 3 / span 3;
+    grid-row: 4 / span 3;
 }
 
 .grid-br-20 input {
@@ -1947,6 +1971,31 @@ th.style16 {
     padding: 5%;
 }
 
+.grid-br-25 table {
+    border: #fff solid 1px;
+    width: 100%;
+}
+
+.grid-br-25 th {
+    text-align: left;
+    border-bottom: #fff solid 1px;
+    background-color: #1f497e;
+}
+
+.grid-br-25 td {
+    width: 15%;
+    border-bottom: #fff solid 1px;
+    background-color: #bbd8ff;
+}
+
+.grid-br-25 td h6 {
+    color: #1f497e;
+}
+
+.grid-br-25 th h6 {
+    font-size: small;
+}
+
 .grid-br-26 {
     grid-column: 4 / span 1;
     grid-row: 5 / span 1;
@@ -1974,7 +2023,7 @@ th.style16 {
 }
 
 .grid-br-27 {
-    grid-column: 5 / span 1;
+    grid-column: 5 / span 2;
     grid-row: 5 / span 1;
 }
 
@@ -1989,7 +2038,7 @@ th.style16 {
 }
 
 .grid-br-27 td {
-    width: 20%;
+    width: 9%;
     border-bottom: #fff solid 1px;
     background-color: #bbd8ff;
 }
@@ -2052,6 +2101,32 @@ th.style16 {
     padding: 5%;
 }
 
+.grid-br-30 table {
+    border: #fff solid 1px;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-br-30 th {
+    text-align: left;
+    border-bottom: #fff solid 1px;
+    background-color: #1f497e;
+}
+
+.grid-br-30 td {
+    width: 15%;
+    border-bottom: #fff solid 1px;
+    background-color: #bbd8ff;
+}
+
+.grid-br-30 td h6 {
+    color: #1f497e;
+}
+
+.grid-br-30 th h6 {
+    font-size: small;
+}
+
 .grid-br-31 {
     grid-column: 4 / span 1;
     grid-row: 6 / span 1;
@@ -2079,13 +2154,17 @@ th.style16 {
 }
 
 .grid-br-32 {
-    grid-column: 5 / span 2;
+    grid-column: 5 / span 1;
     grid-row: 6 / span 1;
 }
 
 .grid-br-32 table {
     width: 100%;
     height: 100%;
+}
+
+.grid-br-32 tr {
+    height: 30%;
 }
 
 .grid-br-32 th {
@@ -2095,7 +2174,7 @@ th.style16 {
 }
 
 .grid-br-32 td {
-    width: 9%;
+    width: 20%;
     border-bottom: #fff solid 1px;
     background-color: #bbd8ff;
 }
@@ -2105,12 +2184,13 @@ th.style16 {
 }
 
 .grid-br-33 {
-    grid-column: 7 / span 2;
+    grid-column: 6 / span 1;
     grid-row: 6 / span 1;
 }
 
 .grid-br-33 table {
     width: 100%;
+    height: 100%;
 }
 
 .grid-br-33 th {
@@ -2120,7 +2200,7 @@ th.style16 {
 }
 
 .grid-br-33 td {
-    width: 9%;
+    width: 20%;
     border-bottom: #fff solid 1px;
     background-color: #bbd8ff;
 }
@@ -2129,42 +2209,53 @@ th.style16 {
     color: #1f497e;
 }
 
+.grid-br-33 tr {
+    height: 30%;
+}
+
 .grid-br-34 {
-    grid-column: 3 / span 1;
-    grid-row: 7 / span 1;
+    grid-column: 7 / span 1;
+    grid-row: 6 / span 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.grid-br-34 table {
+    width: 100%;
+}
+
+.grid-br-34 th {
     text-align: center;
-    display: grid;
-    align-items: center;
+    border-bottom: #fff solid 1px;
+    background-color: #1f497e;
 }
 
-.grid-br-34 .clave {
-    background-color: #1f497d;
-    color: #fff;
-    font-weight: bold;
-    margin: 0;
-    padding: 1%;
+.grid-br-34 td {
+    width: 20%;
+    border-bottom: #fff solid 1px;
+    background-color: #bbd8ff;
+}
+.grid-br-34 td h6 {
+    color: #1f497e;
 }
 
-.grid-br-34 .valor {
-    background-color: #c6d9f0;
-    color: #1f497d;
-    font-weight: bold;
-    margin: 0;
-    padding: 5%;
+.grid-br-34 tr {
+    height: 30%;
 }
 
 .grid-br-35 {
-    grid-column: 4 / span 1;
-    grid-row: 7 / span 1;
+    grid-column: 8 / span 1;
+    grid-row: 6 / span 1;
+    display: flex;
+    align-items: flex-end;
 }
 
 .grid-br-35 table {
     width: 100%;
-    height: 100%;
 }
 
 .grid-br-35 th {
-    text-align: left;
+    text-align: center;
     border-bottom: #fff solid 1px;
     background-color: #1f497e;
 }
@@ -2180,124 +2271,127 @@ th.style16 {
 }
 
 .grid-br-36 {
-    grid-column: 5 / span 2;
-    grid-row: 7 / span 3;
+    grid-column: 9 / span 1;
+    grid-row: 6 / span 1;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .grid-br-36 table {
     width: 100%;
 }
 
-.grid-br-36 h5 {
+.grid-br-36 th {
+    text-align: center;
+    border-bottom: #fff solid 1px;
+    background-color: #1f497e;
+}
+
+.grid-br-36 td {
+    width: 20%;
+    border-bottom: #fff solid 1px;
+    background-color: #bbd8ff;
+}
+
+.grid-br-36 td h6 {
+    color: #1f497e;
+}
+
+.grid-br-37 {
+    grid-column: 3 / span 1;
+    grid-row: 7 / span 1;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+.grid-br-37 .clave {
+    background-color: #1f497d;
+    color: #fff;
+    font-weight: bold;
+    margin: 0;
+    padding: 1%;
+}
+
+.grid-br-37 .valor {
+    background-color: #c6d9f0;
+    color: #1f497d;
+    font-weight: bold;
+    margin: 0;
+    padding: 5%;
+}
+
+.grid-br-38 {
+    grid-column: 4 / span 1;
+    grid-row: 7 / span 1;
+}
+
+.grid-br-38 table {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-br-38 th {
+    text-align: left;
+    border-bottom: #fff solid 1px;
+    background-color: #1f497e;
+}
+
+.grid-br-38 td {
+    width: 20%;
+    border-bottom: #fff solid 1px;
+    background-color: #bbd8ff;
+}
+
+.grid-br-38 td h6 {
+    color: #1f497e;
+}
+
+.grid-br-39 {
+    grid-column: 5 / span 2;
+    grid-row: 7 / span 3;
+    display: flex;
+    align-items: center;
+}
+
+.grid-br-39 table {
+    width: 100%;
+}
+
+.grid-br-39 h5 {
     background-color: #00af50;
     padding: 1%;
     border-radius: 10px;
 }
 
-.grid-br-37 {
+.grid-br-40 {
     border-radius: 25px;
     background-color: #d8e4be;
     grid-column: 7 / span 3;
-    grid-row: 7 / span 3;
+    grid-row: 7 / span 2;
     padding: 6%;
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 }
 
-.grid-br-37 p {
+.grid-br-40 p {
     color: #fff;
 }
 
-.grid-br-38 {
+.grid-br-41 {
     grid-column: 1 / span 1;
     grid-row: 8 / span 2;
 }
 
-.grid-br-39 {
-    grid-column: 2 / span 1;
-    grid-row: 8 / span 1;
-    text-align: center;
-    display: grid;
-    align-items: center;
-}
-
-.grid-br-39 .clave {
-    background-color: #585858;
-    color: #fff;
-    font-weight: bold;
-    margin: 0;
-    padding: 1%;
-}
-
-.grid-br-39 .valor {
-    background-color: #dcdcdc;
-    color: #585858;
-    font-weight: bold;
-    margin: 0;
-    padding: 5%;
-}
-
-.grid-br-40 {
-    grid-column: 3 / span 1;
-    grid-row: 8 / span 1;
-    text-align: center;
-    display: grid;
-    align-items: center;
-}
-
-.grid-br-40 .clave {
-    background-color: #585858;
-    color: #fff;
-    font-weight: bold;
-    margin: 0;
-    padding: 1%;
-}
-
-.grid-br-40 .valor {
-    background-color: #dcdcdc;
-    color: #585858;
-    font-weight: bold;
-    margin: 0;
-    padding: 5%;
-}
-
-.grid-br-41 {
-    grid-column: 4 / span 1;
-    grid-row: 8 / span 1;
-}
-
-.grid-br-41 table {
-    width: 100%;
-    height: 100%;
-}
-
-.grid-br-41 th {
-    text-align: left;
-    border-bottom: #fff solid 1px;
-    background-color: #585858;
-}
-
-.grid-br-41 td {
-    width: 20%;
-    border-bottom: #fff solid 1px;
-    background-color: #dcdcdc;
-}
-
-.grid-br-41 td h6 {
-    color: #585858;
-}
-
 .grid-br-42 {
     grid-column: 2 / span 1;
-    grid-row: 9 / span 1;
+    grid-row: 8 / span 1;
     text-align: center;
     display: grid;
     align-items: center;
 }
 
 .grid-br-42 .clave {
-    background-color: #327069;
+    background-color: #585858;
     color: #fff;
     font-weight: bold;
     margin: 0;
@@ -2305,27 +2399,8 @@ th.style16 {
 }
 
 .grid-br-42 .valor {
-    background-color: #d7eeeb;
-    color: #327069;
-    font-weight: bold;
-    margin: 0;
-    padding: 5%;
-    text-align: center;
-    display: grid;
-    align-items: center;
-}
-
-.grid-br-42 .clave {
-    background-color: #327069;
-    color: #fff;
-    font-weight: bold;
-    margin: 0;
-    padding: 1%;
-}
-
-.grid-br-42 .valor {
-    background-color: #d7eeeb;
-    color: #327069;
+    background-color: #dcdcdc;
+    color: #585858;
     font-weight: bold;
     margin: 0;
     padding: 5%;
@@ -2333,14 +2408,18 @@ th.style16 {
 
 .grid-br-43 {
     grid-column: 3 / span 1;
-    grid-row: 9 / span 1;
+    grid-row: 8 / span 1;
     text-align: center;
     display: grid;
     align-items: center;
 }
 
+.grid-br-43 .row {
+    margin-bottom: 10%;
+}
+
 .grid-br-43 .clave {
-    background-color: #327069;
+    background-color: #585858;
     color: #fff;
     font-weight: bold;
     margin: 0;
@@ -2348,6 +2427,94 @@ th.style16 {
 }
 
 .grid-br-43 .valor {
+    background-color: #dcdcdc;
+    color: #585858;
+    font-weight: bold;
+    margin: 0;
+    padding: 10%;
+}
+
+.grid-br-43 table {
+    width: 100%;
+}
+
+.grid-br-43 th {
+    text-align: left;
+    border-bottom: #fff solid 1px;
+    background-color: #585858;
+}
+
+.grid-br-43 td {
+    width: 15%;
+    border-bottom: #fff solid 1px;
+    background-color: #dcdcdc;
+}
+
+.grid-br-43 td h6 {
+    color: #585858;
+}
+
+.grid-br-44 {
+    grid-column: 4 / span 1;
+    grid-row: 8 / span 1;
+}
+
+.grid-br-44 table {
+    width: 100%;
+}
+
+.grid-br-44 th {
+    text-align: left;
+    border-bottom: #fff solid 1px;
+    background-color: #585858;
+}
+
+.grid-br-44 td {
+    width: 20%;
+    border-bottom: #fff solid 1px;
+    background-color: #dcdcdc;
+}
+
+.grid-br-44 td h6 {
+    color: #585858;
+}
+
+.grid-br-45 {
+    grid-column: 2 / span 1;
+    grid-row: 9 / span 1;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+.grid-br-45 .clave {
+    background-color: #327069;
+    color: #fff;
+    font-weight: bold;
+    margin: 0;
+    padding: 1%;
+}
+
+.grid-br-45 .valor {
+    background-color: #d7eeeb;
+    color: #327069;
+    font-weight: bold;
+    margin: 0;
+    padding: 5%;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+.grid-br-45 .clave {
+    background-color: #327069;
+    color: #fff;
+    font-weight: bold;
+    margin: 0;
+    padding: 1%;
+}
+
+.grid-br-45 .valor {
     background-color: #d7eeeb;
     color: #327069;
     font-weight: bold;
@@ -2355,29 +2522,53 @@ th.style16 {
     padding: 5%;
 }
 
-.grid-br-44 {
+.grid-br-46 {
+    grid-column: 3 / span 1;
+    grid-row: 9 / span 1;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+.grid-br-46 .clave {
+    background-color: #327069;
+    color: #fff;
+    font-weight: bold;
+    margin: 0;
+    padding: 1%;
+}
+
+.grid-br-46 .valor {
+    background-color: #d7eeeb;
+    color: #327069;
+    font-weight: bold;
+    margin: 0;
+    padding: 5%;
+}
+
+.grid-br-47 {
     grid-column: 4 / span 1;
     grid-row: 9 / span 1;
 }
 
-.grid-br-44 table {
+.grid-br-47 table {
     width: 100%;
     height: 100%;
 }
 
-.grid-br-44 th {
+.grid-br-47 th {
     text-align: left;
     border-bottom: #fff solid 1px;
     background-color: #327069;
 }
 
-.grid-br-44 td {
+.grid-br-47 td {
     width: 20%;
     border-bottom: #fff solid 1px;
     background-color: #d7eeeb;
 }
 
-.grid-br-44 td h6 {
+.grid-br-47 td h6 {
     color: #327069;
 }
 
@@ -2941,6 +3132,7 @@ div .legendp img {
     border-radius: 15px;
     box-shadow: -1px 1px 7px 0px rgb(0 0 0 / 0.75);
     background-color: #bad9fd85;
+    height: 700px;
 }
 
 #proy-card select {

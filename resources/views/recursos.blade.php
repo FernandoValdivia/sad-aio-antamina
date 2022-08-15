@@ -137,7 +137,7 @@
                             <canvas id="myChart" height="180"></canvas>
                         </div>
                         <div class="col-4">
-                            <img id="imgAcumuladoAnual" src="https://cdn.discordapp.com/attachments/695689369637486592/1007811406780968970/r1.png" alt="Gráfico acumulado y promedio anual">
+                            <img id="imgAcumuladoAnual" src="https://res.cloudinary.com/lvaldivia/image/upload/v1660584658/ccd/graficos-recursos/r1_ne0oa9.png" alt="Gráfico acumulado y promedio anual">
                         </div>
                     </div>
                     <hr>
@@ -237,115 +237,115 @@
                     var total = '['+'@foreach ($recursos as $r){{ $r -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584658/ccd/graficos-recursos/r1_ne0oa9.png';
                     break;
                 case 'Aquia (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($aquia as $r1){{ $r1 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584659/ccd/graficos-recursos/r3_gt0ujv.png';
                     break;
                 case 'San Marcos (Huari / Áncash)':
                     var total = '['+'@foreach ($san_marcos as $r2){{ $r2 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584659/ccd/graficos-recursos/r17_gp3mbi.png';
                     break;
                 case 'San Pedro de Chaná (Huari / Áncash)':
                     var total = '['+'@foreach ($san_pedro as $r3){{ $r3 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584660/ccd/graficos-recursos/r18_l6g1ly.png';
                     break;
                 case 'Huachis (Huari / Áncash)':
                     var total = '['+'@foreach ($huachis as $r4){{ $r4 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584659/ccd/graficos-recursos/r9_fyo2kc.png';
                     break;
                 case 'Chavín de Huántar (Huari / Áncash)':
                     var total = '['+'@foreach ($chavin as $r5){{ $r5 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584658/ccd/graficos-recursos/r6_sobeye.png';
                     break;
                 case 'Huallanca (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($huallanca as $r6){{ $r6 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584659/ccd/graficos-recursos/r10_kteiet.png';
                     break;
                 case 'Chiquián (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($chiquian as $r7){{ $r7 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584659/ccd/graficos-recursos/r7_kynrlk.png';
                     break;
                 case 'Cátac (Recuay / Áncash)':
                     var total = '['+'@foreach ($catac as $r8){{ $r8 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584658/ccd/graficos-recursos/r5_gcuq5m.png';
                     break;
                 case 'Pampas Chico (Recuay / Áncash)':
                     var total = '['+'@foreach ($pampas_chico as $r9){{ $r9 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584659/ccd/graficos-recursos/r15_mlcczi.png';
                     break;
                 case 'Marca (Recuay / Áncash)':
                     var total = '['+'@foreach ($marca as $r10){{ $r10 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584659/ccd/graficos-recursos/r14_sq3nre.png';
                     break;
                 case 'Cajacay (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($cajacay as $r11){{ $r11 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584658/ccd/graficos-recursos/r4_uuy3go.png';
                     break;
                 case 'Huayllacayán (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($huayllacayan as $r12){{ $r12 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584659/ccd/graficos-recursos/r12_jtfsgx.png';
                     break;
                 case 'Antonio Raymondi (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($antonio as $r13){{ $r13 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584658/ccd/graficos-recursos/r2_oipzu7.png';
                     break;
                 case 'Llacllín (Recuay / Áncash)':
                     var total = '['+'@foreach ($llacllin as $r14){{ $r14 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584659/ccd/graficos-recursos/r13_izdrh8.png';
                     break;
                 case 'Colquioc (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($colquioc as $r15){{ $r15 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584659/ccd/graficos-recursos/r8_g2wpmu.png';
                     break;
                 case 'Pararín (Recuay / Áncash)':
                     var total = '['+'@foreach ($pararin as $r16){{ $r16 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584659/ccd/graficos-recursos/r16_zf9ala.png';
                     break;
                 case 'Huarmey (Huarmey / Áncash)':
                     var total = '['+'@foreach ($huarmey as $r17){{ $r17 -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584659/ccd/graficos-recursos/r11_u9gy5v.png';
                     break;
                 default:
                     var total = '['+'@foreach ($recursos as $r){{ $r -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660584658/ccd/graficos-recursos/r1_ne0oa9.png';
                     break;
             }
         }

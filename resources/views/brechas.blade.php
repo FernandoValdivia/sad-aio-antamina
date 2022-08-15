@@ -335,7 +335,15 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><h6>4to primaria</h6></th>
+                            <th><h6>Pob. Urb. sec. comp.</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><h6>CL 4to primaria</h6></th>
                             <td>
                                 <h6>
                                     00
@@ -356,7 +364,15 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><h6>2do secundaria</h6></th>
+                            <th><h6>Pob. Ru. sec. comp.</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><h6>Mat. 4to primaria</h6></th>
                             <td>
                                 <h6>
                                     00
@@ -370,6 +386,27 @@
                     <table>
                         <tr>
                             <th><h6>Secundaria</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><h6>CL 2do sec.</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                {{-- Mat 2do sec --}}
+                <div class="grid-br-19">
+                    <table>
+                        <tr>
+                            <th><h6>Mat. 2do sec.</h6></th>
                             <td>
                                 <h6>
                                     00
@@ -427,18 +464,21 @@
                                 <label id="label2" for="">Año</label>
                                 <select id="year" name="year">
                                     <option value="Todos">Todos</option>
-                                    <option value="2017" <?php if(isset($_POST['year'])){ if($_POST['year']=="2017") echo 'selected';}?>>2017</option>
-                                    <option value="Sin impacto"></option>
+                                    <option value="2020" <?php if(isset($_POST['year'])){ if($_POST['year']=="2020") echo 'selected';}?>>2020</option>
+                                    <option value="2021" <?php if(isset($_POST['year'])){ if($_POST['year']=="2021") echo 'selected';}?>>2021</option>
+                                    <option value="2022" <?php if(isset($_POST['year'])){ if($_POST['year']=="2022") echo 'selected';}?>>2022</option>
+                                    <option value="2023" <?php if(isset($_POST['year'])){ if($_POST['year']=="2023") echo 'selected';}?>>2023</option>
+                                    <option value="2024" <?php if(isset($_POST['year'])){ if($_POST['year']=="2024") echo 'selected';}?>>2024</option>
+                                    <option value="2026" <?php if(isset($_POST['year'])){ if($_POST['year']=="2025") echo 'selected';}?>>2026</option>
                                 </select>
                             </div>
                             {{-- Impacto Antamina --}}
                             <div class="row mt-2">
-                                <label for="mod">Impacto Antamina</label>
-                                <select id="modalidad" name="modalidad">
+                                <label for="imp">Impacto Antamina</label>
+                                <select id="impacto" name="impacto">
                                     <option value="Todas">Todas</option>
-                                    <option value="Inversión Pública (GL/GR/GN)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Pública (GL/GR/GN)") echo 'selected';}?>>Inversión Pública (GL/GR/GN)</option>
-                                    <option value="Inversión Social Directa Antamina: Proyectos Sociales" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Directa Antamina: Proyectos Sociales") echo 'selected';}?>>Inversión Social Directa Antamina: Proyectos Sociales</option>
-                                    <option value="Inversión Social Gestión Pública y Privada" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Gestión Pública y Privada") echo 'selected';}?>>Inversión Social Gestión Pública y Privada (Obras por impuesto)</option>
+                                    <option value="Sin impacto" <?php if (isset($_POST['impacto'])){ if($_POST['impacto']=="Sin impacto") echo 'selected';}?>>Sin impacto</option>
+                                    <option value="Con impacto" <?php if (isset($_POST['impacto'])){ if($_POST['impacto']=="Con impacto") echo 'selected';}?>>Con impacto</option>
                                 </select>
                             </div>
                             {{-- Boton --}}
@@ -512,69 +552,8 @@
                         </div>
                     </div>
                 </div>
-                {{-- Social --}}
-                <div class="grid-br-25">
-                    <div class="row">
-                        <div>
-                            <h5 class="clave">Social</h5>
-                        </div>
-                        <div>
-                            <h4 class="valor">
-                                00
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                {{-- Colegios: Adecuado Estado IIEE --}}
-                <div class="grid-br-26">
-                    <table>
-                        <tr>
-                            <th><h6>Colegios: Adecuado Estado IIEE</h6></th>
-                            <td>
-                                <h6>
-                                    00
-                                </h6>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th><h6>Establecimientos de salud</h6></th>
-                            <td>
-                                <h6>
-                                    00
-                                </h6>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                {{-- M/L Plazo --}}
-                <div class="grid-br-27">
-                    <table>
-                        <tr>
-                            <th><h6>M/L Plazo</h6></th>
-                            <td>
-                                <h6>
-                                    00
-                                </h6>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                {{-- Retorno seguro --}}
-                <div class="grid-br-28">
-                    <table>
-                        <tr>
-                            <th><h6>Retorno seguro</h6></th>
-                            <td>
-                                <h6>
-                                    00
-                                </h6>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="grid-br-29"></div>
                 {{-- Servicios Básicos --}}
-                <div class="grid-br-30">
+                <div class="grid-br-25">
                     <div class="row">
                         <div>
                             <h5 class="clave">Servicios Básicos</h5>
@@ -585,9 +564,15 @@
                             </h4>
                         </div>
                     </div>
+                    <table>
+                        <tr>
+                            <th><h6>Tratamiento de Aguas Res.</h6></th>
+                            <td><h6>00</h6></td>
+                        </tr>
+                    </table>
                 </div>
                 {{-- Servicios de internet (antenas) --}}
-                <div class="grid-br-31">
+                <div class="grid-br-26">
                     <table>
                         <tr>
                             <th><h6>Servicios de internet (antenas)</h6></th>
@@ -606,7 +591,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><h6>Agua y Agua de Calidad</h6></th>
+                            <th><h6>Agua</h6></th>
                             <td>
                                 <h6>
                                     00
@@ -616,7 +601,7 @@
                     </table>
                 </div>
                 {{-- Desagüe --}}
-                <div class="grid-br-32">
+                <div class="grid-br-27">
                     <table>
                         <tr>
                             <th><h6>Desagüe</h6></th>
@@ -627,15 +612,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><h6>Electricidad</h6></th>
-                            <td>
-                                <h6>
-                                    00
-                                </h6>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th><h6>Tratamiento de Aguas Residuales</h6></th>
+                            <th><h6>Electrificación</h6></th>
                             <td>
                                 <h6>
                                     00
@@ -644,11 +621,133 @@
                         </tr>
                     </table>
                 </div>
-                {{-- Vial pavimentada --}}
+                {{--  --}}
+                <div class="grid-br-29"></div>
+                {{-- Social --}}
+                <div class="grid-br-30">
+                    <table>
+                        <tr>
+                            <th><h6>Vial pavimentado</h6></th>
+                            <td><h6>00</h6></td>
+                        </tr>
+                    </table>
+                    <div class="row">
+                        <div>
+                            <h5 class="clave">Social</h5>
+                        </div>
+                        <div>
+                            <h4 class="valor">
+                                00
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                {{-- Nacional --}}
+                <div class="grid-br-31">
+                    <table>
+                        <tr>
+                            <th><h6>Nacional</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><h6>Hospitales: Camas por mil hab.</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><h6>IIEE en adecuado estado</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                {{-- Departamental --}}
+                <div class="grid-br-32">
+                    <table>
+                        <tr>
+                            <th><h6>Departamental</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                            <th><h6>Mejoras de IIEE</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                {{-- Vecinal --}}
                 <div class="grid-br-33">
                     <table>
                         <tr>
-                            <th><h6>Vial pavimentada</h6></th>
+                            <th><h6>Vecinal</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                            <th><h6>Retorno seguro</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                {{-- Mant. de IIEE --}}
+                <div class="grid-br-34">
+                    <table>
+                        <tr>
+                            <th><h6>Mant. de IIEE</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                {{-- Kits de Higiene --}}
+                <div class="grid-br-35">
+                    <table>
+                        <tr>
+                            <th><h6>Kits de Higiene</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                {{-- Bicicletas Solidarias --}}
+                <div class="grid-br-36">
+                    <table>
+                        <tr>
+                            <th><h6>Bicicletas Solidarias</h6></th>
                             <td>
                                 <h6>
                                     00
@@ -658,10 +757,21 @@
                     </table>
                 </div>
                 {{-- Productiva --}}
-                <div class="grid-br-34">
+                <div class="grid-br-37">
                     <div class="row">
                         <div>
-                            <h5 class="clave">Productiva</h5>
+                            <h5 class="clave">Productiva</h4>
+                        </div>
+                        <div>
+                            <h4 class="valor">
+                                00
+                            </h4>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div>
+                            <h6 class="clave">Mantenimiento de Infraestructura Pública</h6>
                         </div>
                         <div>
                             <h4 class="valor">
@@ -671,10 +781,10 @@
                     </div>
                 </div>
                 {{-- Agropecuaria (riego tecnificado) --}}
-                <div class="grid-br-35">
+                <div class="grid-br-38">
                     <table>
                         <tr>
-                            <th><h6>Agropecuaria (riego tecnificado)</h6></th>
+                            <th><h6>Infraestructura Agropecuaria</h6></th>
                             <td>
                                 <h6>
                                     00
@@ -697,10 +807,26 @@
                                 </h6>
                             </td>
                         </tr>
+                        <tr>
+                            <th><h6>Importancia del monto asignado</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><h6>Velocidad de ejecución</h6></th>
+                            <td>
+                                <h6>
+                                    00
+                                </h6>
+                            </td>
+                        </tr>
                     </table>
                 </div>
                 {{-- Titulo potencialidades --}}
-                <div class="grid-br-36">
+                <div class="grid-br-39">
                     <table>
                         <tr>
                             <th><h5>Potencialidades</h5></th>
@@ -708,7 +834,7 @@
                     </table>
                 </div>
                 {{-- Potencialidades --}}
-                <div class="grid-br-37">
+                <div class="grid-br-40">
                     <table>
                         <?php
                             if (isset($_POST['location'])) {
@@ -762,9 +888,9 @@
                         @endforeach
                     </table>
                 </div>
-                <div class="grid-br-38"></div>
+                <div class="grid-br-41"></div>
                 {{-- Pilar 4 --}}
-                <div class="grid-br-39">
+                <div class="grid-br-42">
                     <div class="row">
                         <div>
                             <h5 class="clave">Pilar 4: Emprendimiento y desarrollo económico</h5>
@@ -777,7 +903,7 @@
                     </div>
                 </div>
                 {{-- Capital Humano --}}
-                <div class="grid-br-40">
+                <div class="grid-br-43">
                     <div class="row">
                         <div>
                             <h5 class="clave">Capital Humano</h5>
@@ -788,9 +914,15 @@
                             </h4>
                         </div>
                     </div>
+                    <table>
+                        <tr>
+                            <th><h6>Ingreso por persona</h6></th>
+                            <td><h6>00</h6></td>
+                        </tr>
+                    </table>
                 </div>
                 {{-- PEA --}}
-                <div class="grid-br-41">
+                <div class="grid-br-44">
                     <table>
                         <tr>
                             <th><h6>PEA</h6></th>
@@ -819,7 +951,7 @@
                     </table>
                 </div>
                 {{-- Pilar 5 --}}
-                <div class="grid-br-42">
+                <div class="grid-br-45">
                     <div class="row">
                         <div>
                             <h5 class="clave">Pilar 5: Emergencias</h5>
@@ -832,7 +964,7 @@
                     </div>
                 </div>
                 {{-- Vacuna Covid-19 --}}
-                <div class="grid-br-43">
+                <div class="grid-br-46">
                     <div class="row">
                         <div>
                             <h5 class="clave">Vacuna Covid-19</h5>
@@ -845,7 +977,7 @@
                     </div>
                 </div>
                 {{-- Dosis --}}
-                <div class="grid-br-44">
+                <div class="grid-br-47">
                     <table>
                         <tr>
                             <th><h6>1ra dosis</h6></th>
