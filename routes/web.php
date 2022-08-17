@@ -50,9 +50,18 @@ Route::get('/descargar-excel1', function() {
 /* Excel Recursos */
 Route::get('/descargar-recursos', function() {
     $file = public_path()."/file/excel-recursos.xlsx";
+    
+    $headers = array(
+        'Content-Type: application/vnd.ms-excel',
+    );
+    return Response::download($file, "Evolución de recursos para el desarrollo.xlsx", $headers);
+});
+/* Excel Brechas */
+Route::get('/descargar-brechas', function() {
+    $file = public_path()."/file/excel-brechas.xlsx";
 
     $headers = array(
         'Content-Type: application/vnd.ms-excel',
     );
-    return Response::download($file, "Canon y Regalía Minera con MEIA: AIO Áncash (17 Distritos).xlsx", $headers);
+    return Response::download($file, "Brechas en el AIO: Por Pilares.xlsx", $headers);
 });

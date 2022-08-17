@@ -1721,6 +1721,8 @@ th.style16 {
 }
 
 .grid-br-16 table {
+    border: 2px solid #fff;
+    height: 100%;
     width: 100%;
 }
 
@@ -1740,6 +1742,10 @@ th.style16 {
     color: #bf340d;
 }
 
+.grid-br-16 th h6 {
+    font-size: small;
+}
+
 .grid-br-17 {
     grid-column: 6 / span 1;
     grid-row: 3 / span 1;
@@ -1748,6 +1754,8 @@ th.style16 {
 }
 
 .grid-br-17 table {
+    border: 2px solid #fff;
+    height: 100%;
     width: 100%;
 }
 
@@ -1767,6 +1775,10 @@ th.style16 {
     color: #bf340d;
 }
 
+.grid-br-17 th h6 {
+    font-size: small;
+}
+
 .grid-br-18 {
     grid-column: 7 / span 1;
     grid-row: 3 / span 1;
@@ -1775,6 +1787,8 @@ th.style16 {
 }
 
 .grid-br-18 table {
+    border: 2px solid #fff;
+    height: 100%;
     width: 100%;
 }
 
@@ -1784,8 +1798,8 @@ th.style16 {
 }
 
 .grid-br-18 tr {
-    border-bottom: #fff solid 50px;
-    border-top: #fff solid 50px;
+    border-bottom: #fff solid 60px;
+    border-top: #fff solid 60px;
 }
 
 .grid-br-18 td {
@@ -1797,6 +1811,10 @@ th.style16 {
     color: #bf340d;
 }
 
+.grid-br-18 th h6 {
+    font-size: small;
+}
+
 .grid-br-19 {
     grid-column: 8 / span 1;
     grid-row: 3 / span 1;
@@ -1805,6 +1823,7 @@ th.style16 {
 }
 
 .grid-br-19 table {
+    border: 1px solid #fff;
     width: 100%;
 }
 
@@ -1820,6 +1839,10 @@ th.style16 {
 
 .grid-br-19 td h6 {
     color: #bf340d;
+}
+
+.grid-br-19 th h6 {
+    font-size: small;
 }
 
 .grid-br-20 {
