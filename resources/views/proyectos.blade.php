@@ -346,7 +346,7 @@
                                             }
                                         ?>
                                     </h2>
-                                    <p>Cantidad de proyectos <sup>1/</sup></p>
+                                    <h5>Cantidad de proyectos <sup>1/</sup></h5>
                                 </div>
                                 {{-- Monto actualizado --}}
                                 <div class="row mt-1" id="card-info">
@@ -488,7 +488,7 @@
                                             }
                                         ?>
                                     </h2>
-                                    <p>Monto actualizado</p>
+                                    <h5>Monto actualizado</h5>
                                     <small>(S/ millones)</small>
                                 </div>
                             </div>
