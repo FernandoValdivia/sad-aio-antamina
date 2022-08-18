@@ -166,10 +166,10 @@
                                         </select>
                                     </div> 
                                 </div>
-                                {{-- Modalidad de inversión --}}
+                                {{-- Modalidad de intervención --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label id="label" for="modalidad">Modalidad de inversión</label>
+                                        <label id="label" for="modalidad">Modalidad de intervención</label>
                                         <select id="modalidad" name="modalidad">
                                             <option value="Todas">Todas</option>
                                             <option value="Inversión Pública (GL/GR/GN)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Pública (GL/GR/GN)") echo 'selected';}?>>Inversión Pública (GL/GR/GN)</option>
@@ -203,291 +203,290 @@
                         </div>
                         <div class="row mt-4 mb-3" id="card-map-info">
                             <!-- Mapa -->
-                            <div class="row" id="mapproy">
-                            </div>
+                            <div class="row" id="mapproy"></div>
                             <!-- Tarjetas de cantidad y monto -->
                             <div class="row" id="row-card">
                                 {{-- Cantidad de proyectos --}}
                                 <div class="row" id="card-info">
                                     <h2>
-    <?php
-        if (isset($_POST['time_frame']) or isset($_POST['location']) or isset($_POST['factores']) or isset($_POST['modalidad'])or isset($_POST['year'])) {
-            //Todo
-            if ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
-                //Total
-                $cant = DB::table('proyectos')
-                            ->count();
-                            echo $cant;
-            }
-            //Solo por distrito
-            elseif ($_POST['location']!="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
-                $location = $_POST['location'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                $cant = DB::table('proyectos')
-                            ->where('distrito',$distrito_nom)
-                            ->count();
-                            echo $cant;
-            }
-            //Solo por Time frame y distrito
-            elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
-                $location = $_POST['location'];
-                $timeframe = $_POST['time_frame'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe];
+                                        <?php
+                                            if (isset($_POST['time_frame']) or isset($_POST['location']) or isset($_POST['factores']) or isset($_POST['modalidad'])or isset($_POST['year'])) {
+                                                //Todo
+                                                if ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
+                                                    //Total
+                                                    $cant = DB::table('proyectos')
+                                                                ->count();
+                                                                echo $cant;
+                                                }
+                                                //Solo por distrito
+                                                elseif ($_POST['location']!="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
+                                                    $location = $_POST['location'];
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                    $cant = DB::table('proyectos')
+                                                                ->where('distrito',$distrito_nom)
+                                                                ->count();
+                                                                echo $cant;
+                                                }
+                                                //Solo por Time frame y distrito
+                                                elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
+                                                    $location = $_POST['location'];
+                                                    $timeframe = $_POST['time_frame'];
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                    $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe];
 
-                $cant = DB::table('proyectos')
-                            ->where($query)
-                            ->count();
-                            echo $cant;
-            }
-            //Solo por Time frame, distrito y Factores
-            elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
-                $location = $_POST['location'];
-                $timeframe = $_POST['time_frame'];
-                $factor = $_POST['factores'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor];
+                                                    $cant = DB::table('proyectos')
+                                                                ->where($query)
+                                                                ->count();
+                                                                echo $cant;
+                                                }
+                                                //Solo por Time frame, distrito y Factores
+                                                elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
+                                                    $location = $_POST['location'];
+                                                    $timeframe = $_POST['time_frame'];
+                                                    $factor = $_POST['factores'];
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                    $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor];
 
-                $cant = DB::table('proyectos')
-                            ->where($query)
-                            ->count();
-                            echo $cant;
-            }
-            //Solo por Time frame, distrito, Factores y Tipo de inversión
-            elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']!="Todas" and $_POST['year']=="Todos") {
-                $location = $_POST['location'];
-                $timeframe = $_POST['time_frame'];
-                $factor = $_POST['factores'];
-                $modalidad = $_POST['modalidad'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad];
+                                                    $cant = DB::table('proyectos')
+                                                                ->where($query)
+                                                                ->count();
+                                                                echo $cant;
+                                                }
+                                                //Solo por Time frame, distrito, Factores y Tipo de inversión
+                                                elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']!="Todas" and $_POST['year']=="Todos") {
+                                                    $location = $_POST['location'];
+                                                    $timeframe = $_POST['time_frame'];
+                                                    $factor = $_POST['factores'];
+                                                    $modalidad = $_POST['modalidad'];
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                    $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad];
 
-                $cant = DB::table('proyectos')
-                            ->where($query)
-                            ->count();
-                            echo $cant;
-            }
-            //Time frame, distrito, Factores, Tipo de inversión y Año
-            elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']!="Todas" and $_POST['year']!="Todos") {
-                $location = $_POST['location'];
-                $timeframe = $_POST['time_frame'];
-                $factor = $_POST['factores'];
-                $modalidad = $_POST['modalidad'];
-                $anio = $_POST['year'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad, 'anio' => $anio];
+                                                    $cant = DB::table('proyectos')
+                                                                ->where($query)
+                                                                ->count();
+                                                                echo $cant;
+                                                }
+                                                //Time frame, distrito, Factores, Tipo de inversión y Año
+                                                elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']!="Todas" and $_POST['year']!="Todos") {
+                                                    $location = $_POST['location'];
+                                                    $timeframe = $_POST['time_frame'];
+                                                    $factor = $_POST['factores'];
+                                                    $modalidad = $_POST['modalidad'];
+                                                    $anio = $_POST['year'];
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                    $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad, 'anio' => $anio];
 
-                $cant = DB::table('proyectos')
-                            ->where($query)
-                            ->count();
-                            echo $cant;
-            }
-            //Solo por Time Frame
-            elseif ($_POST['location']=="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
-                $timeframe = $_POST['time_frame']; 
-                $cant = DB::table('proyectos')
-                            ->where('time_frame',$timeframe)
-                            ->count();
-                            echo $cant;
-            }
-            //Solo por Factores
-            elseif ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
-                $factor = $_POST['factores']; 
-                $cant = DB::table('proyectos')
-                            ->where('factores',$factor)
-                            ->count();
-                            echo $cant;
-            }
-            //Solo por Modalidad
-            elseif ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']!="Todas" and $_POST['year']=="Todos") {
-                $modalidad = $_POST['modalidad'];
-                $cant = DB::table('proyectos')
-                            ->where('tipo_de_inversion',$modalidad)
-                            ->count();
-                            echo $cant;
-            }
-            //Solo por Año
-            elseif ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']!="Todos") {
-                $anio = $_POST['year'];
-                $cant = DB::table('proyectos')
-                            ->where('anio',$anio)
-                            ->count();
-                            echo $cant;
-            }
-            //Año y Distrito
-            elseif ($_POST['location']!="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']!="Todos") {
-                $location = $_POST['location'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                $anio = $_POST['year'];
+                                                    $cant = DB::table('proyectos')
+                                                                ->where($query)
+                                                                ->count();
+                                                                echo $cant;
+                                                }
+                                                //Solo por Time Frame
+                                                elseif ($_POST['location']=="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
+                                                    $timeframe = $_POST['time_frame']; 
+                                                    $cant = DB::table('proyectos')
+                                                                ->where('time_frame',$timeframe)
+                                                                ->count();
+                                                                echo $cant;
+                                                }
+                                                //Solo por Factores
+                                                elseif ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
+                                                    $factor = $_POST['factores']; 
+                                                    $cant = DB::table('proyectos')
+                                                                ->where('factores',$factor)
+                                                                ->count();
+                                                                echo $cant;
+                                                }
+                                                //Solo por Modalidad
+                                                elseif ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']!="Todas" and $_POST['year']=="Todos") {
+                                                    $modalidad = $_POST['modalidad'];
+                                                    $cant = DB::table('proyectos')
+                                                                ->where('tipo_de_inversion',$modalidad)
+                                                                ->count();
+                                                                echo $cant;
+                                                }
+                                                //Solo por Año
+                                                elseif ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']!="Todos") {
+                                                    $anio = $_POST['year'];
+                                                    $cant = DB::table('proyectos')
+                                                                ->where('anio',$anio)
+                                                                ->count();
+                                                                echo $cant;
+                                                }
+                                                //Año y Distrito
+                                                elseif ($_POST['location']!="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']!="Todos") {
+                                                    $location = $_POST['location'];
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                    $anio = $_POST['year'];
 
-                $query = ['distrito' => $distrito_nom, 'anio' => $anio];
-                $cant = DB::table('proyectos')
-                            ->where($query)
-                            ->count();
-                            echo $cant;
-            }
-            //Total o todos 
-            else {
-                //Total
-                $cant = DB::table('proyectos')
-                            ->count();
-                            echo $cant;
-            }
-        } else {
-            //Obtener el monto total
-            $cant = DB::table('proyectos')
-                    ->count();
-                    echo $cant;
-        }
-    ?>
+                                                    $query = ['distrito' => $distrito_nom, 'anio' => $anio];
+                                                    $cant = DB::table('proyectos')
+                                                                ->where($query)
+                                                                ->count();
+                                                                echo $cant;
+                                                }
+                                                //Total o todos 
+                                                else {
+                                                    //Total
+                                                    $cant = DB::table('proyectos')
+                                                                ->count();
+                                                                echo $cant;
+                                                }
+                                            } else {
+                                                //Obtener el monto total
+                                                $cant = DB::table('proyectos')
+                                                        ->count();
+                                                        echo $cant;
+                                            }
+                                        ?>
                                     </h2>
-                                    <p>Cantidad de proyectos</p>
+                                    <p>Cantidad de proyectos <sup>1/</sup></p>
                                 </div>
                                 {{-- Monto actualizado --}}
                                 <div class="row mt-1" id="card-info">
                                     <h2>
-    <?php
-        if (isset($_POST['time_frame']) or isset($_POST['location']) or isset($_POST['factores']) or isset($_POST['modalidad'])or isset($_POST['year'])) {
-            //Todo
-            if ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
-                //Total
-                $sum = DB::table('proyectos')
-                    ->sum('monto_actualizado');
-                    echo number_format($sum,0);
-            }
-            //Solo por distrito
-            elseif ($_POST['location']!="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
-                $location = $_POST['location'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                $sum = DB::table('proyectos')
-                            ->where('distrito',$distrito_nom)
-                            ->sum('monto_actualizado');
-                            echo number_format($sum,0);
-            }
-            //Solo por Time frame y distrito
-            elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
-                $location = $_POST['location'];
-                $timeframe = $_POST['time_frame'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe];
+                                        <?php
+                                            if (isset($_POST['time_frame']) or isset($_POST['location']) or isset($_POST['factores']) or isset($_POST['modalidad'])or isset($_POST['year'])) {
+                                                //Todo
+                                                if ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
+                                                    //Total
+                                                    $sum = DB::table('proyectos')
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                                }
+                                                //Solo por distrito
+                                                elseif ($_POST['location']!="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
+                                                    $location = $_POST['location'];
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                    $sum = DB::table('proyectos')
+                                                                ->where('distrito',$distrito_nom)
+                                                                ->sum('monto_actualizado');
+                                                                echo number_format($sum,0);
+                                                }
+                                                //Solo por Time frame y distrito
+                                                elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
+                                                    $location = $_POST['location'];
+                                                    $timeframe = $_POST['time_frame'];
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                    $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe];
 
-                $sum = DB::table('proyectos')
-                            ->where($query)
-                            ->sum('monto_actualizado');
-                            echo number_format($sum,0);
-            }
-            //Solo por Time frame, distrito y Factores
-            elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
-                $location = $_POST['location'];
-                $timeframe = $_POST['time_frame'];
-                $factor = $_POST['factores'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor];
+                                                    $sum = DB::table('proyectos')
+                                                                ->where($query)
+                                                                ->sum('monto_actualizado');
+                                                                echo number_format($sum,0);
+                                                }
+                                                //Solo por Time frame, distrito y Factores
+                                                elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
+                                                    $location = $_POST['location'];
+                                                    $timeframe = $_POST['time_frame'];
+                                                    $factor = $_POST['factores'];
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                    $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor];
 
-                $sum = DB::table('proyectos')
-                            ->where($query)
-                            ->sum('monto_actualizado');
-                            echo number_format($sum,0);
-            }
-            //Solo por Time frame, distrito, Factores y Tipo de inversión
-            elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']!="Todas" and $_POST['year']=="Todos") {
-                $location = $_POST['location'];
-                $timeframe = $_POST['time_frame'];
-                $factor = $_POST['factores'];
-                $modalidad = $_POST['modalidad'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad];
+                                                    $sum = DB::table('proyectos')
+                                                                ->where($query)
+                                                                ->sum('monto_actualizado');
+                                                                echo number_format($sum,0);
+                                                }
+                                                //Solo por Time frame, distrito, Factores y Tipo de inversión
+                                                elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']!="Todas" and $_POST['year']=="Todos") {
+                                                    $location = $_POST['location'];
+                                                    $timeframe = $_POST['time_frame'];
+                                                    $factor = $_POST['factores'];
+                                                    $modalidad = $_POST['modalidad'];
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                    $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad];
 
-                $sum = DB::table('proyectos')
-                            ->where($query)
-                            ->sum('monto_actualizado');
-                            echo number_format($sum,0);
-            }
-            //Time frame, distrito, Factores, Tipo de inversión y Año
-            elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']!="Todas" and $_POST['year']!="Todos") {
-                $location = $_POST['location'];
-                $timeframe = $_POST['time_frame'];
-                $factor = $_POST['factores'];
-                $modalidad = $_POST['modalidad'];
-                $anio = $_POST['year'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad, 'anio' => $anio];
+                                                    $sum = DB::table('proyectos')
+                                                                ->where($query)
+                                                                ->sum('monto_actualizado');
+                                                                echo number_format($sum,0);
+                                                }
+                                                //Time frame, distrito, Factores, Tipo de inversión y Año
+                                                elseif ($_POST['location']!="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']!="Todas" and $_POST['year']!="Todos") {
+                                                    $location = $_POST['location'];
+                                                    $timeframe = $_POST['time_frame'];
+                                                    $factor = $_POST['factores'];
+                                                    $modalidad = $_POST['modalidad'];
+                                                    $anio = $_POST['year'];
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                    $query = ['distrito' => $distrito_nom, 'time_frame' => $timeframe, 'factores' => $factor, 'tipo_de_inversion' => $modalidad, 'anio' => $anio];
 
-                $sum = DB::table('proyectos')
-                            ->where($query)
-                            ->sum('monto_actualizado');
-                            echo number_format($sum,0);
-            }
-            //Solo por Time Frame
-            elseif ($_POST['location']=="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
-                $timeframe = $_POST['time_frame']; 
-                $sum = DB::table('proyectos')
-                            ->where('time_frame',$timeframe)
-                            ->sum('monto_actualizado');
-                            echo number_format($sum,0);
-            }
-            //Solo por Factores
-            elseif ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
-                $factor = $_POST['factores']; 
-                $sum = DB::table('proyectos')
-                            ->where('factores',$factor)
-                            ->sum('monto_actualizado');
-                            echo number_format($sum,0);
-            }
-            //Solo por Modalidad
-            elseif ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']!="Todas" and $_POST['year']=="Todos") {
-                $modalidad = $_POST['modalidad'];
-                $sum = DB::table('proyectos')
-                            ->where('tipo_de_inversion',$modalidad)
-                            ->sum('monto_actualizado');
-                            echo number_format($sum,0);
-            }
-            //Solo por Año
-            elseif ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']!="Todos") {
-                $anio = $_POST['year'];
-                $sum = DB::table('proyectos')
-                            ->where('anio',$anio)
-                            ->sum('monto_actualizado');
-                            echo number_format($sum,0);
-            }
-            //Año y Distrito
-            elseif ($_POST['location']!="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']!="Todos") {
-                $location = $_POST['location'];
-                $distrito = explode(",",$location);
-                $distrito_nom = $distrito[2];
-                $anio = $_POST['year'];
+                                                    $sum = DB::table('proyectos')
+                                                                ->where($query)
+                                                                ->sum('monto_actualizado');
+                                                                echo number_format($sum,0);
+                                                }
+                                                //Solo por Time Frame
+                                                elseif ($_POST['location']=="AIO" and $_POST['time_frame']!="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
+                                                    $timeframe = $_POST['time_frame']; 
+                                                    $sum = DB::table('proyectos')
+                                                                ->where('time_frame',$timeframe)
+                                                                ->sum('monto_actualizado');
+                                                                echo number_format($sum,0);
+                                                }
+                                                //Solo por Factores
+                                                elseif ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']!="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']=="Todos") {
+                                                    $factor = $_POST['factores']; 
+                                                    $sum = DB::table('proyectos')
+                                                                ->where('factores',$factor)
+                                                                ->sum('monto_actualizado');
+                                                                echo number_format($sum,0);
+                                                }
+                                                //Solo por Modalidad
+                                                elseif ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']!="Todas" and $_POST['year']=="Todos") {
+                                                    $modalidad = $_POST['modalidad'];
+                                                    $sum = DB::table('proyectos')
+                                                                ->where('tipo_de_inversion',$modalidad)
+                                                                ->sum('monto_actualizado');
+                                                                echo number_format($sum,0);
+                                                }
+                                                //Solo por Año
+                                                elseif ($_POST['location']=="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']!="Todos") {
+                                                    $anio = $_POST['year'];
+                                                    $sum = DB::table('proyectos')
+                                                                ->where('anio',$anio)
+                                                                ->sum('monto_actualizado');
+                                                                echo number_format($sum,0);
+                                                }
+                                                //Año y Distrito
+                                                elseif ($_POST['location']!="AIO" and $_POST['time_frame']=="Todos" and $_POST['factores']=="Todos" and $_POST['modalidad']=="Todas" and $_POST['year']!="Todos") {
+                                                    $location = $_POST['location'];
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                    $anio = $_POST['year'];
 
-                $query = ['distrito' => $distrito_nom, 'anio' => $anio];
-                $sum = DB::table('proyectos')
-                            ->where($query)
-                            ->sum('monto_actualizado');
-                            echo number_format($sum,0);
-            }
-            //Total o todos 
-            else {
-                //Total
-                $sum = DB::table('proyectos')
-                            ->sum('monto_actualizado');
-                            echo number_format($sum,0);
-            }
-        } else {
-            //Obtener el monto total
-            $sum = DB::table('proyectos')
-                    ->sum('monto_actualizado');
-                    echo number_format($sum,0);
-        }
-    ?>
+                                                    $query = ['distrito' => $distrito_nom, 'anio' => $anio];
+                                                    $sum = DB::table('proyectos')
+                                                                ->where($query)
+                                                                ->sum('monto_actualizado');
+                                                                echo number_format($sum,0);
+                                                }
+                                                //Total o todos 
+                                                else {
+                                                    //Total
+                                                    $sum = DB::table('proyectos')
+                                                                ->sum('monto_actualizado');
+                                                                echo number_format($sum,0);
+                                                }
+                                            } else {
+                                                //Obtener el monto total
+                                                $sum = DB::table('proyectos')
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
+                                            }
+                                        ?>
                                     </h2>
                                     <p>Monto actualizado</p>
                                     <small>(S/ millones)</small>
@@ -495,6 +494,7 @@
                             </div>
                         </div>
                     </div>
+                    <p><sup>1/</sup> Proyectos y/o intervenciones</p>
                 </div>
             </div>
         </div>

@@ -2958,6 +2958,12 @@ h6 {
     padding: 10px 100px 10px;
 }
 
+.container-fluid p {
+    font-size: small;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #card {
     background-color: #006666ce;
     border-radius: 15px;
