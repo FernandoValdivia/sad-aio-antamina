@@ -157,7 +157,7 @@
                                         <select id="factores" name="factores">
                                             <option value="Todos">Todos</option>
                                             <option value="Educación" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Educación") echo 'selected';}?>>Educación</option>
-                                            <option value="Insfraestructura" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Insfraestructura") echo 'selected';}?>>Insfraestructura</option>
+                                            <option value="Infraestructura" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Infraestructura") echo 'selected';}?>>Infraestructura</option>
                                             <option value="Institucionalidad" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Institucionalidad") echo 'selected';}?>>Institucionalidad</option>
                                             <option value="Interviniendo en emergencias" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Interviniendo en emergencias") echo 'selected';}?>>Interviniendo en emergencias</option>
                                             <option value="Nivel de vida digno (ingresos)" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Nivel de vida digno (ingresos)") echo 'selected';}?>>Nivel de vida digno (ingresos)</option>

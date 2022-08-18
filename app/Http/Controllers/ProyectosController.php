@@ -54,7 +54,6 @@ class ProyectosController extends Controller
             'codigo_unico',
             'producto_proyecto',
             'time_frame',
-            'entidad',
             'tipo_de_inversion',
             'monto_actualizado',
             'latitud',

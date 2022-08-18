@@ -117,16 +117,16 @@
                             <p>Fuente: Banco Mundial, Antamina, CCD</p>
                         </div>
                         <div class="trimestre-grid-4">
-                            <p>Con el objetivo de apoyar en las decisiones para el cierre de brechas y desarrollo en el AIO Antamina, se han identificado 55 indicadores (kpis), los mismos que se encuentran consolidados en el «KPI Cierre de Brechas Global» (KPI Global). El KPI Global refleja los impactos en el cierre de brechas de todos los proyectos e intervenciones público - privado ejecutados en el AIO.<br>
-                            Para los proyectos e intervenciones vinculadas a Antamina (proyectos sociales y OxI) se dispone el «KPI Cierre de Brechas Antamina» (KPI Antamina), el cual incluye 14 kpis, clasificados en los factores de desarrollo de Antamina como se observa en la siguiente figura.
+                            <p>
+                                Con el objetivo de apoyar en las decisiones para el cierre de brechas y desarrollo en el AIO Antamina, se han identificado 55 indicadores (kpis), los mismos que se encuentran consolidados en el «KPI Cierre de Brechas Global» (KPI Global). El KPI Global refleja los impactos en el cierre de brechas de todos los proyectos e intervenciones público - privado ejecutados en el AIO.
                             </p>
                         </div>
                         <div class="trimestre-grid-5 text-center">
-                            <b>KPI Global y KPI Antamina: Cierre de Brechas AIO</b>
+                            <b>KPI Global: Cierre de Brechas AIO</b>
                             <h6>(Por factores y kpis)</h6>
                         </div>
                         <div class="trimestre-grid-6">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659983037/ccd/reporte/Imagen2_kcpjkh.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660841324/ccd/reporte/Imagen2_ovvrcm.png" alt="">
                         </div>
                         <div class="trimestre-grid-7">
                             <p>
@@ -158,11 +158,11 @@
                     <br>
                     <div class="trimestre2">
                         <div class="grid-trimestre2-1 text-center">
-                            <b>KPI Antamina: AIO</b>
+                            <b>KPI Global: AIO</b>
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre2-2">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659994273/ccd/reporte/Imagen4_rpuihb.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660841452/ccd/reporte/Imagen4_tjvjrk.png" alt="">
                             <p>
                                 1/  Incluye OPEX, CAPEX y OxI <br>
                                 AIO: Ámbito de Influencia de Antamina <br>
@@ -178,29 +178,11 @@
                             </p>
                         </div>
                         <div class="grid-trimestre2-4 text-center">
-                            <b>KPI Antamina y Contribución en Reducción de Brecha: AIO</b>
+                            <b>KPI Global y Contribución en Reducción de Brecha: AIO</b>
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre2-5">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659994273/ccd/reporte/Imagen5_payffz.png" alt="">
-                        </div>
-                        <div class="grid-trimestre2-6">
-                            <p>
-                                Actualmente San Marcos y Aquia presentan clima social con nivel de riesgo de disconformidad y tensión.
-                            </p>
-                        </div>
-                        <div class="grid-trimestre2-7 text-center">
-                            <b>KPI Antamina: San Marcos</b>
-                            <h6>(Porcentaje)</h6>
-                        </div>
-                        <div class="grid-trimestre2-8">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659996823/ccd/reporte/Imagen6_htpszb.png" alt="">
-                        </div>
-                        <div class="grid-trimestre2-9 text-center">
-                            <b>KPI Antamina: Aquia</b>
-                            <h6>(Porcentaje)</h6></div>
-                        <div class="grid-trimestre2-10">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659997044/ccd/reporte/Imagen7_nwscrm.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660841514/ccd/reporte/Imagen5_x0vefy.png" alt="AIO">
                         </div>
                     </div>
                 </section>
@@ -212,18 +194,6 @@
                     </div>
                     <br>
                     <div class="trimestre3">
-                        <div class="grid-trimestre3-1">
-                            <p>
-                                Desde el 1T 2017 hasta el 1T 2022 se observa una tendencia decreciente del KPI Antamina, de 60% a 51% entre ambos trimestres. En la primera parte del periodo se ha registrado una disminución tendencial «smooth» o suave, principalmente explicada por la culminación de los proyectos de infraestructura ejecutada bajo el mecanismos de OxI  como la carretera Túnel Kahuish (San Marcos), el Canal Shongo-Tanin (Chavín de Huántar), entre otros.
-                            </p>
-                        </div>
-                        <div class="grid-trimestre3-2 text-center">
-                            <b>KPI Antamina: AIO</b>
-                            <h6>(Porcentaje)</h6>
-                        </div>
-                        <div class="grid-trimestre3-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659997467/ccd/reporte/Imagen8_qocwpt.png" alt="">
-                        </div>
                         <div class="grid-trimestre3-4">
                             <p>
                                 1/  Incluye OPEX, CAPEX y OxI <br>
@@ -234,21 +204,19 @@
                         <div class="grid-trimestre3-5">
                             <p>
                                 En relación al KPI Global, desde el 1T 2017 hasta el 1T 2022 se observa una tendencia decreciente, de 54% a 49% entre ambos trimestres. Al igual que el KPI Antamina, en el periodo, el KPI Global ha registrado una tendencia decreciente, lo que significa que  los kpis vinculados a los proyectos e intervenciones bajo gestión pública de los gobiernos locales, regional y nacional también ha registrado tendencias decrecientes. <br>
+                                <br>
                                 Entre el 1T 2021 y el 1T 2022, el KPI Antamina registra una disminución más acelerada, explicada por el rápido avance en el cierre de brecha de la vacunación (Pilar 5: Emergencias), así como por el inicio de operación de los proyectos de infraestructura como la carretera Túnel Kahuish, Saneamiento Pincullo, Mejoramiento de reservorio del Centro Poblado Ayash Huaripampa, caminos viales en Huaripampa, Saneamiento Letrinas en el distrito de San Marcos, y Mejoramiento de la Institución Educativa Santa Rosa en el distrito de Cajacay. <br>
+                                <br>
                                 En la siguiente figura se observa el KPI Global entre los trimestres 1T 2017 y 1T 2022. La performance trimestral de corto plazo del KPI Global muestra oscilaciones, explicado principalmente por la estacionalidad en el kpi ejecución del gasto de inversión municipal (canon y regalía minera), mayor ejecución en el cuarto trimestre de cada año, la nueva gestión municipal y regional iniciada en el primer trimestre del 2019, así como el inicio de la pandemia a principios del 2020 que generó la necesidad de establecer el kpi sobre brecha de vacunación de la población del AIO contra el Covid 19.
                             </p>
-                        </div>
-                        <div class="grid-trimestre3-6">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659998134/ccd/reporte/Imagen10_elouap.png" alt="">
                         </div>
                         <div class="grid-trimestre3-7 text-center">
                             <b>KPI Global: AIO</b>
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre3-8">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659997467/ccd/reporte/Imagen9_dzy1bh.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660841869/ccd/reporte/Imagen9_g6qfg5.png" alt="">
                         </div>
-                        <div class="grid-trimestre3-9"></div>
                     </div>
                 </section>
                 <hr>
@@ -269,7 +237,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre4-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659998134/ccd/reporte/Imagen11_fo5kj0.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842130/ccd/reporte/Imagen11_q3lm4e.png" alt="">
                         </div>
                         <div class="grid-trimestre4-4 text-center">
                             <b>Proyectos Antamina Concluidos en el 2T 2022: AIO</b>
@@ -367,7 +335,7 @@
                     <div class="trimestre5">
                         <div class="grid-trimestre5-1">
                             <p>
-                                Entre los años 2022-2026 se prevé una importante reducción de brechas que se traducirá en una disminución del KPI Antamina. Durante este «período de cosecha» de proyectos, se proyecta una reducción de brechas en 6 puntos porcentuales, como resultado de la entrada en operación de importantes proyectos, principalmente en los pilares 3 y 4 (Infraestructura social y productiva, y Emprendimiento y desarrollo económico): Saneamiento, Hospital y Desembarcadero en Huarmey; Saneamiento, Centro de Salud y Carretera Carash Pujún-  Juprog en San Marcos; Saneamiento en Huallanca; Saneamiento Verdecocha y Canal Tacta en San Pedro de Chaná, Centro de Salud Chiquián, entre otros.
+                                Entre los años 2022-2026 se prevé una importante reducción de brechas que se traducirá en una disminución del KPI Global. Durante este «período de cosecha» de proyectos, se proyecta una reducción de brechas en más de 10 puntos porcentuales al 2026, como resultado de la entrada en operación de importantes proyectos, principalmente en los pilares 3 y 4 (Infraestructura social y productiva, y Emprendimiento y desarrollo económico): Saneamiento, Hospital y Desembarcadero en Huarmey; Saneamiento, Centro de Salud y Carretera Carash Pujún-  Juprog en San Marcos; Saneamiento en Huallanca; Saneamiento Verdecocha y Canal Tacta en San Pedro de Chaná, Centro de Salud Chiquián, entre otros.
                             </p>
                         </div>
                         <div class="grid-trimestre5-2 text-center">
@@ -375,7 +343,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre5-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659998523/ccd/reporte/Imagen12_d2lins.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842403/ccd/reporte/Imagen12_zwukgd.png" alt="">
                             <p>Fuente: Antamina, MEF, CCD</p>
                         </div>
                         <div class="grid-trimestre5-4 text-center">
@@ -548,23 +516,25 @@
                             <h6>(Descripción)</h6>
                         </div>
                         <div class="grid-trimestre6-2">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659999870/ccd/reporte/Mapa_kuyfud.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842468/ccd/reporte/Mapa_w8t0j3.png" alt="">
                             <p>
                                 Fuente: Antamina
                             </p>
                         </div>
                     </div>
                     <br>
+                    {{-- San Marcos --}}
                     <div class="trimestre7">
                         <div class="grid-trimestre7-1 text-center">
                             <h3>San Marcos</h3>
                         </div>
+                        <br>
                         <div class="grid-trimestre7-2 text-center">
-                            <b>KPI Antamina</b>
+                            <b>KPI Global</b>
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre7-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659998856/ccd/reporte/Imagen13_o97w3x.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842684/ccd/reporte/Imagen13_webmgt.png" alt="">
                             <p>
                                 1/  Incluye OPEX, CAPEX y OxI 
                                 <br>
@@ -585,7 +555,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre7-6">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659998856/ccd/reporte/Imagen14_qnshns.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842684/ccd/reporte/Imagen14_pggwgy.png" alt="">
                         </div>
                         <div class="grid-trimestre7-7 text-center">
                             <b>Cartera de proyectos: 2T 2022 - 2026</b>
@@ -652,6 +622,13 @@
                                         <td>38 viviendas</td>
                                     </tr>
                                     <tr class="table-2">
+                                        <td class="proyecto-text">Proyecto de agua y saneamiento sub sector Ayash Centro</td>
+                                        <td>CAPEX</td>
+                                        <td>30/11/2022</td>
+                                        <td>Pilar 3</td>
+                                        <td>71 viviendas</td>
+                                    </tr>
+                                    <tr class="table-2">
                                         <td class="proyecto-text">Conectividad segunda etapa San Marcos</td>
                                         <td>CAPEX</td>
                                         <td>31/12/2022</td>
@@ -687,16 +664,18 @@
                         </div>
                     </div>
                     <br>
+                    {{-- Aquia --}}
                     <div class="trimestre8">
                         <div class="grid-trimestre8-1 text-center">
                             <h3>Aquia</h3>
                         </div>
+                        <br>
                         <div class="grid-trimestre8-2 text-center">
-                            <b>KPI Antamina</b>
+                            <b>KPI Global</b>
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre8-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659999200/ccd/reporte/Imagen15_tnv3jx.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842685/ccd/reporte/Imagen15_yhhrnn.png" alt="">
                             <p>
                                 1/  Incluye OPEX, CAPEX y OxI 
                                 <br>
@@ -717,7 +696,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre8-6">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659999563/ccd/reporte/Imagen16_rq5o0l.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842684/ccd/reporte/Imagen16_jc7n5i.png" alt="">
                         </div>
                         <div class="grid-trimestre8-7 text-center">
                             <b>Cartera de proyectos: 2T 2022 - 2026</b>
