@@ -697,7 +697,7 @@
                         </div>
                         <div class="grid-trimestre8-4">
                             <p>
-                                Desde el 1T 2017 hasta el 1T 2022 se observa una tendencia decreciente del KPI Global Aquia, de 56% a 48%. En el 2T 2022, el KPI Antamina Global disminuyó 0.9 puntos porcentuales respecto al trimestre anterior, explicado por la reducción en la brecha de vacunación contra el Covid-19 (476 dosis aplicadas en el trimestre).
+                                Desde el 1T 2017 hasta el 1T 2022 se observa una tendencia decreciente del KPI Global Aquia, de 56% a 48%. En el 2T 2022, el KPI Global disminuyó 0.9 puntos porcentuales respecto al trimestre anterior, explicado por la reducción en la brecha de vacunación contra el Covid-19 (476 dosis aplicadas en el trimestre).
                                 <br>
                                 En lo que resta del año 2022, se prevé culminar la construcción de la Cocina Comedor del Colegio de Aquia, la Conectividad distrital y la continuación del Programa “Más Educación”. Actualmente representantes de la Comunidad de Aquia y Antamina se viene reuniendo en los Comités de Desarrollo Económico para implementar nuevos proyectos productivos para los siguientes años.
                             </p>

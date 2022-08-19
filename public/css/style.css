@@ -2984,6 +2984,10 @@ h6 {
     font-weight: 100;
 }
 
+.container-fluid-rsm {
+    padding: 10px 100px 10px;
+}
+
 #card {
     background-color: #006666ce;
     border-radius: 15px;

@@ -116,7 +116,7 @@
         <!-- Navbar & Hero End -->
         <!-- Resumen Start -->
         <div class="container-xxl">
-            <div class="container-fluid">
+            <div class="container-fluid-rsm">
                 <div class="grid-rsm-container">
                     <div class="grid-rsm-1"></div>
                     <!-- titulo -->
