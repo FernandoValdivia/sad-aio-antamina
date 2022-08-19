@@ -82,10 +82,6 @@ lengend.onAdd = function() {
         '<table>'+
             '<tbody>'+
                 '<tr>'+
-                    '<td><img class="img-fluid" src="https://res.cloudinary.com/lvaldivia/image/upload/v1653405268/ccd/marker_fe_jza7oo.png"></td>'+
-                    '<td><h6>First Engagement</h6></td>'+
-                '</tr>'+
-                '<tr>'+
                     '<td><img class="img-fluid" src="https://res.cloudinary.com/lvaldivia/image/upload/v1652367551/ccd/marker1_hdqypn.png"></td>'+
                     '<td><h6>Short Term</h6></td>'+
                 '</tr>'+
