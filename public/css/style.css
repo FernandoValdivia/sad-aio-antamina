@@ -407,6 +407,10 @@ div .trimestre-grid-3 p {
     grid-template-rows: 10% auto 10% 60%;
 }
 
+div .footer p {
+    color: #fff;
+}
+
 .grid-trimestre4-1 {
     grid-row: 1 / span 2;
     grid-column: 1;
