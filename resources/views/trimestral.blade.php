@@ -162,7 +162,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre2-2">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660841452/ccd/reporte/Imagen4_tjvjrk.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660944956/ccd/reporte/Imagen4_qqc21x.png" alt="">
                             <p>
                                 1/  Incluye OPEX, CAPEX y OxI <br>
                                 AIO: Ámbito de Influencia de Antamina <br>
@@ -182,7 +182,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre2-5">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660841514/ccd/reporte/Imagen5_x0vefy.png" alt="AIO">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660944956/ccd/reporte/Imagen5_ylr0tm.png" alt="AIO">
                         </div>
                     </div>
                 </section>
@@ -559,7 +559,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre7-6">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660919008/ccd/reporte/Imagen14_xax6hr.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660946179/ccd/reporte/Imagen14_ryiduw.png" alt="">
                         </div>
                         <div class="grid-trimestre7-7 text-center">
                             <b>Cartera de proyectos: 2T 2022 - 2026</b>
@@ -702,7 +702,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre8-6">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660919008/ccd/reporte/Imagen16_fi8l91.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660946179/ccd/reporte/Imagen16_t4bmuu.png" alt="">
                         </div>
                         <div class="grid-trimestre8-7 text-center">
                             <b>Cartera de proyectos: 2T 2022 - 2026</b>
