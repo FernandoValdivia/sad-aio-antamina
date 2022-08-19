@@ -140,7 +140,7 @@
                             <h6>(S/ millones)</h6>
                         </div>
                         <div class="trimestre-grid-9">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659991889/ccd/reporte/Imagen3_xbgao6.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660931051/ccd/reporte/Imagen3_fvnpzi.png" alt="">
                             <p>
                                 1/  Incluye OPEX y CAPEX del 2022
                                 <br>
@@ -229,15 +229,15 @@
                     <div class="trimestre4">
                         <div class="grid-trimestre4-1">
                             <p>
-                                En el 2T 2022 el KPI Antamina alcanzó 50.8%, una disminución de 0.2 puntos porcentuales respecto al trimestre anterior, explicada principalmente por la reducción de las brechas en el Pilar 3 (Infraestructura social y productiva) por el inicio en operación de los proyectos Mejora en la conectividad de internet en los distritos de San Marcos (3,200 hogares con internet) y Chavín de Huántar (460 hogares con internet), así como por la continuación del proceso de vacunación contra el Covid-19 en todos los distritos del AIO correspondiente a la Región Áncash (más de 23,000 dosis aplicadas en el trimestre).
+                                En el 2T 2022 el KPI Global alcanzó 48.7%, una disminución de 0.2 puntos porcentuales respecto al trimestre anterior, explicada principalmente por la reducción de las brechas en el Pilar 3 (Infraestructura social y productiva) por el inicio en operación de los proyectos Mejora en la conectividad de internet en los distritos de San Marcos (3,200 hogares con internet) y Chavín de Huántar (460 hogares con internet), así como por la continuación del proceso de vacunación contra el Covid-19 en todos los distritos del AIO correspondiente a la Región Áncash (más de 23,000 dosis aplicadas en el trimestre).
                             </p>
                         </div>
                         <div class="grid-trimestre4-2 text-center">
-                            <b>KPI Antamina y Contribución en Reducción de Brecha: AIO</b>
+                            <b>KPI Global y Contribución en Reducción de Brecha: AIO</b>
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre4-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842130/ccd/reporte/Imagen11_q3lm4e.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660918581/ccd/reporte/Imagen11_ltp6rz.png" alt="">
                         </div>
                         <div class="grid-trimestre4-4 text-center">
                             <b>Proyectos Antamina Concluidos en el 2T 2022: AIO</b>
@@ -325,6 +325,7 @@
                         </div>
                     </div>
                 </section>
+                <br>
                 <hr>
                 {{-- Proyección --}}
                 <section id="proyeccion">
@@ -339,11 +340,11 @@
                             </p>
                         </div>
                         <div class="grid-trimestre5-2 text-center">
-                            <b>KPI Antamina y Contribución en Reducción de Brecha: AIO</b>
+                            <b>KPI Global y Contribución en Reducción de Brecha: AIO</b>
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre5-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842403/ccd/reporte/Imagen12_zwukgd.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660919375/ccd/reporte/Imagen12_buctkb.png" alt="">
                             <p>Fuente: Antamina, MEF, CCD</p>
                         </div>
                         <div class="grid-trimestre5-4 text-center">
@@ -523,6 +524,7 @@
                         </div>
                     </div>
                     <br>
+                    <br>
                     {{-- San Marcos --}}
                     <div class="trimestre7">
                         <div class="grid-trimestre7-1 text-center">
@@ -534,7 +536,9 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre7-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842684/ccd/reporte/Imagen13_webmgt.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660931667/ccd/reporte/Imagen13_oirqn0.png" alt="">
+                        </div>
+                        <div class="grid-trimestre7-p">
                             <p>
                                 1/  Incluye OPEX, CAPEX y OxI 
                                 <br>
@@ -545,17 +549,17 @@
                         </div>
                         <div class="grid-trimestre7-4">
                             <p>
-                                San Marcos es el distrito con mayor reducción de las brechas en el AIO. Desde el 1T 2017 hasta el 1T 2022 se observa una tendencia decreciente del KPI Antamina San Marcos, 64% a 51%. En el 2T 2022, el KPI Antamina San Marcos disminuyó 1 punto porcentual respecto al trimestre anterior, como resultado por la reducción en la brecha en conectividad distrital y la vacunación contra el Covid-19 (más de 7,057 dosis aplicadas en el trimestre).
+                                San Marcos es uno de los distrito con mayor reducción de las brechas en el AIO. Desde el 1T 2017 hasta el 1T 2022 se observa una tendencia decreciente del KPI Global San Marcos, 47% a 40.6%. En el 2T 2022, el KPI Global San Marcos disminuyó 0.6 puntos porcentuales respecto al trimestre anterior, como resultado por la reducción en la brecha en conectividad distrital y la vacunación contra el Covid-19 (más de 7,057 dosis aplicadas en el trimestre).
                                 <br>
                                 En lo que resta del año 2022, se prevé el inicio del servicio de saneamiento distrital, la construcción de pistas en Huaripampa, la construcción del proyecto de agua y saneamiento Caserío Ayash Huamanin, y agua y saneamiento en el sub sector Ishanca. En los próximos años será fundamental para el distrito la construcción de la Carretera Carash Pujún -  Juprog y la Creación del sistema de riego Agua para todos en CC Ayash y Huaripampa, y Santa Cruz de Pichiu.
                             </p>
                         </div>
                         <div class="grid-trimestre7-5 text-center">
-                            <b>KPI Antamina y Contribución en Reducción de Brecha</b>
+                            <b>KPI Global y Contribución en Reducción de Brecha</b>
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre7-6">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842684/ccd/reporte/Imagen14_pggwgy.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660919008/ccd/reporte/Imagen14_xax6hr.png" alt="">
                         </div>
                         <div class="grid-trimestre7-7 text-center">
                             <b>Cartera de proyectos: 2T 2022 - 2026</b>
@@ -675,7 +679,9 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre8-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842685/ccd/reporte/Imagen15_yhhrnn.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660931667/ccd/reporte/Imagen15_spp0fj.png" alt="">
+                        </div>
+                        <div class="grid-trimestre8-p">
                             <p>
                                 1/  Incluye OPEX, CAPEX y OxI 
                                 <br>
@@ -686,17 +692,17 @@
                         </div>
                         <div class="grid-trimestre8-4">
                             <p>
-                                Desde el 1T 2017 hasta el 1T 2022 se observa una tendencia decreciente del KPI Antamina Aquia, de 57% a 46%. En el 2T 2022, el KPI Antamina Aquia disminuyó 0.1 puntos porcentuales respecto al trimestre anterior, explicado por la reducción en la brecha de vacunación contra el Covid-19 (476 dosis aplicadas en el trimestre).
+                                Desde el 1T 2017 hasta el 1T 2022 se observa una tendencia decreciente del KPI Global Aquia, de 56% a 48%. En el 2T 2022, el KPI Antamina Global disminuyó 0.9 puntos porcentuales respecto al trimestre anterior, explicado por la reducción en la brecha de vacunación contra el Covid-19 (476 dosis aplicadas en el trimestre).
                                 <br>
                                 En lo que resta del año 2022, se prevé culminar la construcción de la Cocina Comedor del Colegio de Aquia, la Conectividad distrital y la continuación del Programa “Más Educación”. Actualmente representantes de la Comunidad de Aquia y Antamina se viene reuniendo en los Comités de Desarrollo Económico para implementar nuevos proyectos productivos para los siguientes años.
                             </p>
                         </div>
                         <div class="grid-trimestre8-5 text-center">
-                            <b>KPI Antamina y Contribución en Reducción de Brecha</b>
+                            <b>KPI Global y Contribución en Reducción de Brecha</b>
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre8-6">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842684/ccd/reporte/Imagen16_jc7n5i.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660919008/ccd/reporte/Imagen16_fi8l91.png" alt="">
                         </div>
                         <div class="grid-trimestre8-7 text-center">
                             <b>Cartera de proyectos: 2T 2022 - 2026</b>

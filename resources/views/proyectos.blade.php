@@ -156,13 +156,10 @@
                                         <label id="label" for="factores">Factores</label>
                                         <select id="factores" name="factores">
                                             <option value="Todos">Todos</option>
-                                            <option value="Educación" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Educación") echo 'selected';}?>>Educación</option>
-                                            <option value="Infraestructura" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Infraestructura") echo 'selected';}?>>Infraestructura</option>
-                                            <option value="Institucionalidad" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Institucionalidad") echo 'selected';}?>>Institucionalidad</option>
-                                            <option value="Interviniendo en emergencias" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Interviniendo en emergencias") echo 'selected';}?>>Interviniendo en emergencias</option>
-                                            <option value="Nivel de vida digno (ingresos)" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Nivel de vida digno (ingresos)") echo 'selected';}?>>Nivel de vida digno (ingresos)</option>
-                                            <option value="Nivel de vida digno (servicios básicos)" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Nivel de vida digno (servicios básicos)") echo 'selected';}?>>Nivel de vida digno (servicios básicos)</option>
-                                            <option value="Salud" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Salud") echo 'selected';}?>>Salud</option>
+                                            <option value="Emprendimiento  y desarrollo económico" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Emprendimiento  y desarrollo económico") echo 'selected';}?>>Emprendimiento  y desarrollo económico</option>
+                                            <option value="Infraestructura social productivo" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Infraestructura social productivo") echo 'selected';}?>>Infraestructura social productivo</option>
+                                            <option value="Institucionalidad Madura" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Institucionalidad Madura") echo 'selected';}?>>Institucionalidad Madura</option>
+                                            <option value="Oportunidades para las futuras generaciones" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Oportunidades para las futuras generaciones") echo 'selected';}?>>Oportunidades para las futuras generaciones</option>
                                         </select>
                                     </div> 
                                 </div>
@@ -173,8 +170,9 @@
                                         <select id="modalidad" name="modalidad">
                                             <option value="Todas">Todas</option>
                                             <option value="Inversión Pública (GL/GR/GN)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Pública (GL/GR/GN)") echo 'selected';}?>>Inversión Pública (GL/GR/GN)</option>
-                                            <option value="Inversión Social Directa Antamina: Proyectos Sociales" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Directa Antamina: Proyectos Sociales") echo 'selected';}?>>Inversión Social Directa Antamina: Proyectos Sociales</option>
-                                            <option value="Inversión Social Gestión Pública y Privada" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Gestión Pública y Privada") echo 'selected';}?>>Inversión Social Gestión Pública y Privada (Obras por impuesto)</option>
+                                            <option value="Inversión Social Directa Antamina: CAPEX" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Directa Antamina: CAPEX") echo 'selected';}?>>Inversión Social Directa Antamina: CAPEX</option>
+                                            <option value="Inversión Social Directa Antamina: OPEX" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Directa Antamina: OPEX") echo 'selected';}?>>Inversión Social Directa Antamina: OPEX</option>
+                                            <option value="Inversión Social Gestión Pública y Privada(Obras por impuesto)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Gestión Pública y Privada(Obras por impuesto)") echo 'selected';}?>>Inversión Social Gestión Pública y Privada(Obras por impuesto)</option>
                                         </select>
                                     </div>
                                 </div>
@@ -184,12 +182,12 @@
                                         <label id="label" for="year">Año</label>
                                         <select id="year" name="year">
                                             <option value="Todos">Todos</option>
-                                            <option value="2017" <?php if(isset($_POST['year'])){ if($_POST['year']=="2017") echo 'selected';}?>>2017</option>
+                                            <option value="2020" <?php if(isset($_POST['year'])){ if($_POST['year']=="2020") echo 'selected';}?>>2020</option>
                                             <option value="2021" <?php if(isset($_POST['year'])){ if($_POST['year']=="2021") echo 'selected';}?>>2021</option>
                                             <option value="2022" <?php if(isset($_POST['year'])){ if($_POST['year']=="2022") echo 'selected';}?>>2022</option>
                                             <option value="2023" <?php if(isset($_POST['year'])){ if($_POST['year']=="2023") echo 'selected';}?>>2023</option>
                                             <option value="2024" <?php if(isset($_POST['year'])){ if($_POST['year']=="2024") echo 'selected';}?>>2024</option>
-                                            <option value="2025" <?php if(isset($_POST['year'])){ if($_POST['year']=="2025") echo 'selected';}?>>2025</option>
+                                            <option value="2026" <?php if(isset($_POST['year'])){ if($_POST['year']=="2026") echo 'selected';}?>>2026</option>
                                         </select>
                                     </div>
                                 </div>

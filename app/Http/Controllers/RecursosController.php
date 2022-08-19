@@ -154,6 +154,24 @@ class RecursosController extends Controller
         )
         ->where('distrito', 'Huarmey (Huarmey / Áncash)')
         ->get();
+
+        $punos = \DB::table('recursos')->select(
+            'valor'
+        )
+        ->where('distrito', 'Puños (Huamalíes / Huánuco)')
+        ->get();
+
+        $llata = \DB::table('recursos')->select(
+            'valor'
+        )
+        ->where('distrito', 'Llata (Huamalíes / Huánuco)')
+        ->get();
+
+        $paramonga = \DB::table('recursos')->select(
+            'valor'
+        )
+        ->where('distrito', 'Paramonga (Barranca / Lima)')
+        ->get();
         
         /** recursos end **/
         
@@ -179,7 +197,10 @@ class RecursosController extends Controller
                     'llacllin',
                     'colquioc',
                     'pararin',
-                    'huarmey'
+                    'huarmey',
+                    'punos',
+                    'llata',
+                    'paramonga'
                 ));
     }
 }

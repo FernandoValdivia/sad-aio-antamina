@@ -360,10 +360,12 @@ div .trimestre-grid-3 p {
 .grid-trimestre3-4 {
     grid-row: 5 / span 1;
     grid-column: 1 / span 1;
+    display: flex;
 }
 
 .grid-trimestre3-4 p {
     text-align: left;
+    align-self: flex-end;
     font-size: xx-small;
     color: #000;
 }
@@ -402,7 +404,7 @@ div .trimestre-grid-3 p {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 10% 10% 60%;
+    grid-template-rows: 10% auto 10% 60%;
 }
 
 .grid-trimestre4-1 {
@@ -502,7 +504,7 @@ div .grid-trimestre4-5 p {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 40% 60%;
-    grid-template-rows: 5% 25% 5% 55%;
+    grid-template-rows: 5% auto 5% auto;
 }
 
 .grid-trimestre5-1 {
@@ -687,7 +689,7 @@ table {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 30% 30% 40%;
-    grid-template-rows: 5% 10% 35% 5% auto;
+    grid-template-rows: 5% 10% auto 5% auto;
 }
 
 .grid-trimestre7-1,
@@ -724,6 +726,7 @@ table {
 .grid-trimestre8-3 {
     grid-row: 3 / span 3;
     grid-column: 1 / span 1;
+    display: flex;
 }
 
 .grid-trimestre7-3 img,
@@ -732,11 +735,19 @@ table {
     height: auto;
 }
 
-.grid-trimestre7-3 p,
-.grid-trimestre8-3 p {
+.grid-trimestre8-p,
+.grid-trimestre7-p {
+    grid-row: 6;
+    grid-column: 1;
+    display: flex;
+}
+
+.grid-trimestre8-p p,
+.grid-trimestre7-p p {
     color: #000;
     text-align: left;
     font-size: xx-small;
+    align-self: flex-end;
 }
 
 .grid-trimestre7-4,

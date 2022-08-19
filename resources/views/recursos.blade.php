@@ -345,6 +345,24 @@
                     lineChart.update();
                     document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660774656/ccd/graficos-recursos/r11_lkbkmq.png';
                     break;
+                case 'Puños (Huamalíes / Huánuco)':
+                    var total = '['+'@foreach ($punos as $r18){{ $r18 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660774656/ccd/graficos-recursos/r11_lkbkmq.png';
+                    break;
+                case 'Llata (Huamalíes / Huánuco)':
+                    var total = '['+'@foreach ($llata as $r19){{ $r19 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660774656/ccd/graficos-recursos/r11_lkbkmq.png';
+                    break;
+                case 'Paramonga (Barranca / Lima)':
+                    var total = '['+'@foreach ($paramonga as $r20){{ $r20 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1660774656/ccd/graficos-recursos/r11_lkbkmq.png';
+                    break;
                 default:
                     var total = '['+'@foreach ($recursos as $r){{ $r -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
