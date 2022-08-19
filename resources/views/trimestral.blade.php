@@ -130,9 +130,11 @@
                         </div>
                         <div class="trimestre-grid-7">
                             <p>
-                                Los kpis reflejan determinantes claves del Índice de Desarrollo Humano (IDH): ingresos, educación y salud; así como determinantes de la institucionalidad e intervenciones realizadas por Antamina para atender emergencias en apoyo a la población que se encuentra expuesta a eventualidades de la naturaleza.<br>
-                                La información de los kpis se encuentra desde el 2017 (último censo peruano) hasta el 2T 2022, con frecuencia trimestral, y proyección que cubre la puesta en operación y, consecuentemente el cierre de brecha, de la cartera actual de proyectos e intervenciones de Antamina en el AIO.<br>
-                                En el proceso de avance del cierre de brechas resulta fundamental que el KPI Global y el KPI Antamina muestren tendencias decrecientes. En el corto plazo puede observarse oscilaciones en los kpis debido a componentes estacionales, cambios gubernamentales que alteran la institucionalidad, eventos exógenos atribuidos a la naturaleza, entre otros.
+                                Los kpis reflejan determinantes claves del Índice de Desarrollo Humano (IDH): ingresos, educación y salud; así como determinantes de la institucionalidad e intervenciones realizadas por Antamina para atender emergencias en apoyo a la población que se encuentra expuesta a eventualidades de la naturaleza. 
+                                <br>
+                                La información de los kpis se encuentra desde el 2017 (último censo peruano) hasta el 2T 2022, con frecuencia trimestral, y proyección que cubre la puesta en operación y, consecuentemente el cierre de brecha, de la cartera actual de proyectos e intervenciones de Antamina en el AIO.
+                                <br>
+                                En el proceso de avance del cierre de brechas resulta fundamental que el KPI Global muestre tendencia decreciente. En el corto plazo puede observarse oscilaciones en los kpis debido a componentes estacionales, cambios gubernamentales que alteran la institucionalidad, eventos exógenos atribuidos a la naturaleza, entre otros.
                             </p>
                         </div>
                         <div class="trimestre-grid-8 text-center">
@@ -171,10 +173,11 @@
                         </div>
                         <div class="grid-trimestre2-3">
                             <p>
-                                El KPI Antamina presenta una tendencia decreciente desde el año 2017, acelerado a partir del 1T 2021 por el Pilar 5 (Emergencias) vinculado al proceso de vacunación. Asimismo, mejoras en el nivel educativo de la población, anemia, desnutrición crónica, e infraestructura de servicios básicos y productiva han contribuido en la reducción del KPI Antamina. <br>
-                                En el 2T 2022 el KPI Antamina disminuyó 0.2 puntos porcentuales respecto al 1T 2022, explicado por la reducción de los kpis vinculados al  Pilar 3 (Infraestructura social y productiva), principalmente con los proyectos: Mejora en la conectividad de internet en los distritos de San Marcos y Chavín de Huántar, así como en la continuación en la  vacunación contra el Covid-19 en todos los distritos del AIO. <br>
-                                En los próximos años, «período de cosecha» de proyectos, se prevé una importante reducción de brechas que se traducirá en una disminución del KPI Antamina en 6 puntos porcentuales, principalmente en los pilares 3 y 4 (Infraestructura social y productiva, y Emprendimiento y desarrollo económico): Saneamiento, Hospital y Desembarcadero en Huarmey; Saneamiento, Centro de Salud y Carretera Carash Pujún - Juprog en San Marcos; Saneamiento en Huallanca; Saneamiento Verdecocha y Canal Tacta en San Pedro de Chaná, Centro de Salud Chiquián, entre otros.
-
+                                El KPI Global presenta una tendencia decreciente desde el año 2017, acelerado a partir del 1T 2021 por el Pilar 5 (Emergencias) vinculado al proceso de vacunación. Asimismo, mejoras en el nivel educativo de la población, anemia, desnutrición crónica, e infraestructura de servicios básicos y productiva han contribuido en la reducción del KPI Global.
+                                <br>
+                                En el 2T 2022 el KPI Global disminuyó 0.2 puntos porcentuales respecto al 1T 2022, explicado por la reducción de los kpis vinculados al  Pilar 3 (Infraestructura social y productiva), principalmente con los proyectos: Mejora en la conectividad de internet en los distritos de San Marcos y Chavín de Huántar, así como en la continuación en la  vacunación contra el Covid-19 en todos los distritos del AIO.
+                                <br>
+                                En los próximos años, «período de cosecha» de proyectos, se prevé una importante reducción de brechas que se traducirá en una disminución del KPI Global en más de 10 puntos porcentuales al 2026, principalmente en los pilares 3 y 4 (Infraestructura social y productiva, y Emprendimiento y desarrollo económico): Saneamiento, Hospital y Desembarcadero en Huarmey; Saneamiento, Centro de Salud y Carretera Carash Pujún - Juprog en San Marcos; Saneamiento en Huallanca; Saneamiento Verdecocha y Canal Tacta en San Pedro de Chaná, Centro de Salud Chiquián, entre otros.
                             </p>
                         </div>
                         <div class="grid-trimestre2-4 text-center">
@@ -325,6 +328,8 @@
                         </div>
                     </div>
                 </section>
+                <br>
+                <br>
                 <br>
                 <hr>
                 {{-- Proyección --}}
