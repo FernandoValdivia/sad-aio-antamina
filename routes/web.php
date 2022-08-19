@@ -65,3 +65,12 @@ Route::get('/descargar-brechas', function() {
     );
     return Response::download($file, "Brechas en el AIO: Por Pilares.xlsx", $headers);
 });
+/* Excel Proyectos */
+Route::get('/descargar-proyectos', function() {
+    $file = public_path()."/file/excel-proyectos.xlsx";
+
+    $headers = array(
+        'Content-Type: application/vnd.ms-excel',
+    );
+    return Response::download($file, "Proyectos y o intervenciones en el AIO.xlsx", $headers);
+});
