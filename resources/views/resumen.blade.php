@@ -884,7 +884,7 @@
                     <div class="grid-rsm-12">
                         <table>
                             <tr>
-                                <th><h5>Proyectos</h5></th>
+                                <th><h5>Proyectos <sup>1/</sup></h5></th>
                                 <th class="text-center"><h6>Número</h6></th>
                                 <td class="text-center">
                                     <h6>Monto</h6>
@@ -1447,7 +1447,8 @@
                                             if ($_POST['location']=="AIO") {
                                             //Total proyectos
                                             $count1 = DB::table('proyectos')
-                                                    ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                                    ->where('tipo_de_inversion','Inversión Social Directa Antamina: OPEX')
+                                                    ->orWhere('tipo_de_inversion', 'Inversión Social Directa Antamina: CAPEX')
                                                     ->count();
                                                     echo $count1;
                                             } else {
@@ -1455,10 +1456,12 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $query = ['distrito' => $distrito_nom, 'tipo_de_inversion' => 'Inversión Social Directa Antamina: Proyectos sociales'];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //
+                                                $tipos = ['Inversión Social Directa Antamina: OPEX','Inversión Social Directa Antamina: CAPEX'];
                                                 $count1 = DB::table('proyectos')
                                                         ->where($query)
+                                                        ->whereIn('tipo_de_inversion',$tipos)
                                                         ->count();
                                                         echo $count1;
                                             }
@@ -1467,16 +1470,19 @@
                                             if ($_POST['years']=="Todos") {
                                             //Total de proyectos
                                             $count1 = DB::table('proyectos')
-                                                    ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                                    ->where('tipo_de_inversion','Inversión Social Directa Antamina: OPEX')
+                                                    ->orWhere('tipo_de_inversion', 'Inversión Social Directa Antamina: CAPEX')
                                                     ->count();
                                                     echo $count1;
                                             } else {
                                                 //Proyectos por año
                                                 $anio = $_POST['years'];
-                                                $query = ['anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Directa Antamina: Proyectos sociales'];
+                                                $query = ['anio' => $anio];
                                                 //
+                                                $tipos = ['Inversión Social Directa Antamina: OPEX','Inversión Social Directa Antamina: CAPEX'];
                                                 $count1 = DB::table('proyectos')
                                                         ->where($query)
+                                                        ->whereIn('tipo_de_inversion',$tipos)
                                                         ->count();
                                                         echo $count1;
                                             }
@@ -1488,17 +1494,20 @@
                                             $distrito_nom = $distrito[2];
                                             $anio = $_POST['years'];
                                             //Query
-                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Directa Antamina: Proyectos sociales'];
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio];
                                             //
+                                            $tipos = ['Inversión Social Directa Antamina: OPEX','Inversión Social Directa Antamina: CAPEX'];
                                             $count1 = DB::table('proyectos')
-                                                    ->where($query)
-                                                    ->count();
-                                                    echo $count1;
+                                                        ->where($query)
+                                                        ->whereIn('tipo_de_inversion',$tipos)
+                                                        ->count();
+                                                        echo $count1;
                                         }
                                     } else {
                                         //Total de proyectos
                                         $count1 = DB::table('proyectos')
-                                                ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                                ->where('tipo_de_inversion','Inversión Social Directa Antamina: OPEX')
+                                                ->orWhere('tipo_de_inversion', 'Inversión Social Directa Antamina: CAPEX')
                                                 ->count();
                                                 echo $count1;
                                     }
@@ -1514,7 +1523,8 @@
                                             if ($_POST['location']=="AIO") {
                                             //Total proyectos
                                             $sum = DB::table('proyectos')
-                                                    ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                                    ->where('tipo_de_inversion','Inversión Social Directa Antamina: OPEX')
+                                                    ->orWhere('tipo_de_inversion', 'Inversión Social Directa Antamina: CAPEX')
                                                     ->sum('monto_actualizado');
                                                     echo number_format($sum,0);
                                             } else {
@@ -1522,30 +1532,35 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $query = ['distrito' => $distrito_nom, 'tipo_de_inversion' => 'Inversión Social Directa Antamina: Proyectos sociales'];
+                                                $query = ['distrito' => $distrito_nom];
                                                 //
+                                                $tipos = ['Inversión Social Directa Antamina: OPEX','Inversión Social Directa Antamina: CAPEX'];
                                                 $sum = DB::table('proyectos')
-                                                        ->where($query)
-                                                        ->sum('monto_actualizado');
-                                                        echo number_format($sum,0);
+                                                            ->where($query)
+                                                            ->whereIn('tipo_de_inversion',$tipos)
+                                                            ->sum('monto_actualizado');
+                                                            echo number_format($sum,0);
                                             }
                                         //solo año
                                         } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
                                             if ($_POST['years']=="Todos") {
                                             //Total de proyectos
                                             $sum = DB::table('proyectos')
-                                                    ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                                    ->where('tipo_de_inversion','Inversión Social Directa Antamina: OPEX')
+                                                    ->orWhere('tipo_de_inversion', 'Inversión Social Directa Antamina: CAPEX')
                                                     ->sum('monto_actualizado');
                                                     echo number_format($sum,0);
                                             } else {
                                                 //Proyectos por año
                                                 $anio = $_POST['years'];
-                                                $query = ['anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Directa Antamina: Proyectos sociales'];
+                                                $query = ['anio' => $anio];
                                                 //
+                                                $tipos = ['Inversión Social Directa Antamina: OPEX','Inversión Social Directa Antamina: CAPEX'];
                                                 $sum = DB::table('proyectos')
-                                                        ->where($query)
-                                                        ->sum('monto_actualizado');
-                                                        echo number_format($sum,0);
+                                                            ->where($query)
+                                                            ->whereIn('tipo_de_inversion',$tipos)
+                                                            ->sum('monto_actualizado');
+                                                            echo number_format($sum,0);
                                             }
                                         //distrito y año
                                         } else {
@@ -1555,17 +1570,20 @@
                                             $distrito_nom = $distrito[2];
                                             $anio = $_POST['years'];
                                             //Query
-                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Directa Antamina: Proyectos sociales'];
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio];
                                             //
+                                            $tipos = ['Inversión Social Directa Antamina: OPEX','Inversión Social Directa Antamina: CAPEX'];
                                             $sum = DB::table('proyectos')
-                                                    ->where($query)
-                                                    ->sum('monto_actualizado');
-                                                    echo number_format($sum,0);
+                                                        ->where($query)
+                                                        ->whereIn('tipo_de_inversion',$tipos)
+                                                        ->sum('monto_actualizado');
+                                                        echo number_format($sum,0);
                                         }
                                     } else {
                                         //Total de proyectos
                                         $sum = DB::table('proyectos')
-                                                ->where('tipo_de_inversion','Inversión Social Directa Antamina: Proyectos sociales')
+                                                ->where('tipo_de_inversion','Inversión Social Directa Antamina: OPEX')
+                                                ->orWhere('tipo_de_inversion', 'Inversión Social Directa Antamina: CAPEX')
                                                 ->sum('monto_actualizado');
                                                 echo number_format($sum,0);
                                     }
@@ -1584,7 +1602,7 @@
                                             if ($_POST['location']=="AIO") {
                                             //Total proyectos
                                             $count1 = DB::table('proyectos')
-                                                    ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                                    ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada(Obras por impuesto)')
                                                     ->count();
                                                     echo $count1;
                                             } else {
@@ -1592,7 +1610,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $query = ['distrito' => $distrito_nom, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada'];
+                                                $query = ['distrito' => $distrito_nom, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada(Obras por impuesto)'];
                                                 //
                                                 $count1 = DB::table('proyectos')
                                                         ->where($query)
@@ -1604,13 +1622,13 @@
                                             if ($_POST['years']=="Todos") {
                                             //Total de proyectos
                                             $count1 = DB::table('proyectos')
-                                                    ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                                    ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada(Obras por impuesto)')
                                                     ->count();
                                                     echo $count1;
                                             } else {
                                                 //Proyectos por año
                                                 $anio = $_POST['years'];
-                                                $query = ['anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada'];
+                                                $query = ['anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada(Obras por impuesto)'];
                                                 //
                                                 $count1 = DB::table('proyectos')
                                                         ->where($query)
@@ -1625,7 +1643,7 @@
                                             $distrito_nom = $distrito[2];
                                             $anio = $_POST['years'];
                                             //Query
-                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada'];
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada(Obras por impuesto)'];
                                             //
                                             $count1 = DB::table('proyectos')
                                                     ->where($query)
@@ -1635,7 +1653,7 @@
                                     } else {
                                         //Total de proyectos
                                         $count1 = DB::table('proyectos')
-                                                ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                                ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada(Obras por impuesto)')
                                                 ->count();
                                                 echo $count1;
                                     }
@@ -1651,7 +1669,7 @@
                                             if ($_POST['location']=="AIO") {
                                             //Total proyectos
                                             $sum = DB::table('proyectos')
-                                                    ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                                    ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada(Obras por impuesto)')
                                                     ->sum('monto_actualizado');
                                                     echo number_format($sum,0);
                                             } else {
@@ -1659,7 +1677,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $query = ['distrito' => $distrito_nom, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada'];
+                                                $query = ['distrito' => $distrito_nom, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada(Obras por impuesto)'];
                                                 //
                                                 $sum = DB::table('proyectos')
                                                         ->where($query)
@@ -1671,13 +1689,13 @@
                                             if ($_POST['years']=="Todos") {
                                             //Total de proyectos
                                             $sum = DB::table('proyectos')
-                                                    ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                                    ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada(Obras por impuesto)')
                                                     ->sum('monto_actualizado');
                                                     echo number_format($sum,0);
                                             } else {
                                                 //Proyectos por año
                                                 $anio = $_POST['years'];
-                                                $query = ['anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada'];
+                                                $query = ['anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada(Obras por impuesto)'];
                                                 //
                                                 $sum = DB::table('proyectos')
                                                         ->where($query)
@@ -1692,7 +1710,7 @@
                                             $distrito_nom = $distrito[2];
                                             $anio = $_POST['years'];
                                             //Query
-                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada'];
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'tipo_de_inversion' => 'Inversión Social Gestión Pública y Privada(Obras por impuesto)'];
                                             //
                                             $sum = DB::table('proyectos')
                                                     ->where($query)
@@ -1702,7 +1720,7 @@
                                     } else {
                                         //Total de proyectos
                                         $sum = DB::table('proyectos')
-                                                ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada')
+                                                ->where('tipo_de_inversion','Inversión Social Gestión Pública y Privada(Obras por impuesto)')
                                                 ->sum('monto_actualizado');
                                                 echo number_format($sum,0);
                                     }
@@ -2048,6 +2066,7 @@
                         </table>
                     </div>
                 </div>
+                <p id="referencia"><sup>1/</sup> Proyectos y/o intervenciones</p>
             </div>
         </div>
         <!-- Resumen End -->
