@@ -541,7 +541,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre7-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660931667/ccd/reporte/Imagen13_oirqn0.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1661301711/ccd/reporte/Imagen13_dwatrw.png" alt="">
                         </div>
                         <div class="grid-trimestre7-p">
                             <p>
@@ -684,7 +684,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre8-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660931667/ccd/reporte/Imagen15_spp0fj.png" alt="">
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1661301710/ccd/reporte/Imagen15_qwbuii.png" alt="">
                         </div>
                         <div class="grid-trimestre8-p">
                             <p>

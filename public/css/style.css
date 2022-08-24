@@ -404,7 +404,7 @@ div .trimestre-grid-3 p {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10% auto 10% 60%;
+    grid-template-rows: 5% auto 5% 60%;
 }
 
 div .footer p {
@@ -508,7 +508,7 @@ div .grid-trimestre4-5 p {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 40% 60%;
-    grid-template-rows: 5% auto 5% auto;
+    grid-template-rows: 5% auto auto auto;
 }
 
 .grid-trimestre5-1 {
@@ -693,7 +693,7 @@ table {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 30% 30% 40%;
-    grid-template-rows: 5% 10% auto 5% auto;
+    grid-template-rows: 5% 5% auto 5% auto;
 }
 
 .grid-trimestre7-1,
@@ -736,7 +736,7 @@ table {
 .grid-trimestre7-3 img,
 .grid-trimestre8-3 img {
     width: 100%;
-    height: auto;
+    height: max-content;
 }
 
 .grid-trimestre8-p,

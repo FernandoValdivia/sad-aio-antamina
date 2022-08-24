@@ -610,7 +610,7 @@
                     $proy->time_frame,
                     '</br><strong>Distrito: </strong>',
                     $proy->distrito,
-                    '</br><strong>Monto Actualizado: </strong>',
+                    '</br><strong>Monto Actualizado (S/ millones): </strong>',
                     round($proy->monto_actualizado,2),
                     '</br><strong>Proyecto: </strong>',
                     $proy->producto_proyecto,
