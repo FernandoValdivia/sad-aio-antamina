@@ -3099,6 +3099,23 @@ div .legend table {
 }
 
 /* Proyectos */
+div div .end-form {
+    align-items: flex-end;
+}
+
+div .row div .graph-btn {
+    background-color: #fff;
+    border: #ddebfc 3px solid;
+    border-radius: 5px;
+    padding: 6px 10px 6px;
+    color: #000;
+}
+
+div .row div .graph-btn:hover {
+    color: #000;
+    background-color: #ddebfc;
+}
+
 div .row .pt-3 {
     margin: 0;
 }
@@ -3117,6 +3134,11 @@ div form div input {
     border: solid rgba(255, 255, 255, 0.5) 1px;
     border-radius: 10px;
     background-color: #bad9fd;
+}
+
+div form div input:hover {
+    background-color: #fff;
+    border: #ddebfc 3px solid;
 }
 
 /* Leyenda proyectos */
