@@ -136,8 +136,10 @@
                     <div class="row m-3 container-grph">
                         <div class="col-8 text-center">
                             <b>Anual</b>
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1661355807/ccd/graficos-recursos/Proyectado_lfijg3.png" alt="Proyectado" width="100%">
+                            {{--
+                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1661355807/ccd/graficos-recursos/Proyectado_lfijg3.png" alt="Proyectado" width="100%">--}}
                             <canvas id="myChart" height="170"></canvas>
+                            <p>2022 - Proyectado</p>
                         </div>
                         <div class="col-4 text-center">
                             <b>Acumulado y promedio Anual</b>

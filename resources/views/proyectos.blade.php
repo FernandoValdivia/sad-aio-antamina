@@ -340,6 +340,7 @@
                     </div>
                     <p><sup>1/</sup> Proyectos y/o intervenciones</p>
                     <hr> 
+                    <!--
                     <div class="row text-center">
                         <h3>Cierre de brechas</h3>
                         <p>(S/ millones)</p>
@@ -433,7 +434,7 @@
                         </div>
                         
                     </div>
-                    <hr>
+                    <hr> -->
                     <div class="row dwnld-div">
                         <a href="/descargar-proyectos">
                             <svg class="dwnld-re" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="#FFF" stroke-miterlimit="10" stroke-width="2">

@@ -3237,6 +3237,11 @@ div .col-4 select {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.container-grph .col-8 p {
+    text-align: left;
+    color: #000;
+}
+
 .container-grph .col-8 h6 {
     font-size: small;
     font-weight: lighter;
