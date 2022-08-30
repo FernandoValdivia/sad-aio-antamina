@@ -61,7 +61,6 @@ class ProyectosController extends Controller
             'anio',
             'factores'
         )
-        /* ->where('time_frame','First Engagement') */
         ->get();
         return view('proyectos', compact('proyectos','ugt_valle','ugt_huall','ugt_mina','ugt_huarmey'));
     }

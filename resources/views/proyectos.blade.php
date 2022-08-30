@@ -285,6 +285,29 @@
                                                                 ->where(queryAnio($anio))
                                                                 ->count('producto_proyecto');
                                                                 echo $cant;
+                                                
+                                                //Filtrar pines
+                                                $proyectos = DB::table('proyectos')->select(
+                                                    'departamento',
+                                                    'provincia',
+                                                    'distrito',
+                                                    'ugt',
+                                                    'codigo_unico',
+                                                    'producto_proyecto',
+                                                    'time_frame',
+                                                    'tipo_de_inversion',
+                                                    'monto_actualizado',
+                                                    'latitud',
+                                                    'longitud',
+                                                    'anio',
+                                                    'factores'
+                                                )
+                                                ->where(queryUnidadTerritorial($distrito_nom))
+                                                ->where(queryTimeFrame($timeframe))
+                                                ->where(queryFactor($factor))
+                                                ->where(queryModalidad($modalidad))
+                                                ->where(queryAnio($anio))
+                                                ->get();
                                             } else {
                                                 //Obtener el monto total
                                                 $cant = DB::table('proyectos')
@@ -536,7 +559,7 @@
                     break;
             }
         }
-        
+
         //Bucle para colocar marcadores en el mapa según el time_frame
         foreach ($proyectos as $proy) {
             $p = '['.$proy->latitud.','.$proy->longitud.']';
