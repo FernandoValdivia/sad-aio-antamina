@@ -3240,6 +3240,7 @@ div .col-4 select {
 .container-grph .col-8 p {
     text-align: left;
     color: #000;
+    font-size: small;
 }
 
 .container-grph .col-8 h6 {

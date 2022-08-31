@@ -139,7 +139,7 @@
                             {{--
                             <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1661355807/ccd/graficos-recursos/Proyectado_lfijg3.png" alt="Proyectado" width="100%">--}}
                             <canvas id="myChart" height="170"></canvas>
-                            <p>2022 - Proyectado</p>
+                            <p>Nota: Valores proyectados desde el año 2022 al 2036</p>
                         </div>
                         <div class="col-4 text-center">
                             <b>Acumulado y promedio Anual</b>
@@ -243,7 +243,7 @@
                     var total = '['+'@foreach ($recursos as $r){{ $r -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');
                     lineChart.update();
-                    document.getElementById("imgAcumuladoAnual").src='hhttps://res.cloudinary.com/lvaldivia/image/upload/v1661310874/ccd/graficos-recursos/r1_tndmvw.png';
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1661310874/ccd/graficos-recursos/r1_tndmvw.png';
                     break;
                 case 'Antonio Raymondi (Bolognesi / Áncash)':
                     var total = '['+'@foreach ($antonio as $r2){{ $r2 -> valor}},@endforeach'+']';
@@ -417,7 +417,7 @@
                         meta.data.forEach(function(bar, index) {
                             var data = dataset.data[index];
                             ctx.fillStyle = "#5a5a5a";
-                            var dataString = parseFloat(Math.round(dataset.data[index].toString() * 100) / 100).toFixed(1)
+                            var dataString = parseFloat(Math.round(dataset.data[index].toString() * 100) / 100).toFixed(0)
                             ctx.fillText(dataString, bar._model.x, bar._model.y - 5);
                         });
                     });

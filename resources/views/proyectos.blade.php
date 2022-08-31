@@ -576,6 +576,8 @@
                     $proy->distrito,
                     '</br><strong>Monto Actualizado (S/ millones): </strong>',
                     round($proy->monto_actualizado,2),
+                    '</br><strong>Fecha: </strong>',
+                    $proy->anio,
                     '</br><strong>Proyecto: </strong>',
                     $proy->producto_proyecto,
                     '");',
