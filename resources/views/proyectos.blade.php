@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Proyectos</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <meta content="" name="keywords">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
@@ -361,6 +361,7 @@
                             </div>
                         </div>
                     </div>
+                    <p>Short Term: 2022 / Medium Term: 2023 / Long Term: al 2026</p>
                     <p><sup>1/</sup> Proyectos y/o intervenciones</p>
                     <hr> 
                     <!--

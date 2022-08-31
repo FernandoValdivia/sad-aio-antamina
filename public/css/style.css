@@ -2609,6 +2609,51 @@ h3 {
     font-weight: bolder;
 }
 
+strong {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Resposive Design */
+/* Home */
+
+@media screen and (max-width:530px) {
+    div .divlogo .col-9 {
+        font-size: 1rem;
+        line-height: 55px;
+    }
+
+    div .logo p {
+        font-size: 0.3rem;
+        margin-top: 15%;
+        line-height: 0;
+        margin-bottom: 0px;
+    }
+
+    .navbar-dark .navbar-brand {
+        width: 79%;
+    }
+
+    .navbar-dark .navbar-toggler {
+        margin-right: 0.2rem;
+    }
+
+    .mb-2 {
+        word-break: break-all;
+    }
+
+    #home-text {
+        font-size: 1.8rem;
+    }
+
+    .text-white {
+        font-size: 0.9rem;
+    }
+
+    .pt-5 {
+        padding-top: 1rem !important;
+    }
+}
+
 /* Resumen */
 .grid-rsm-container > * {
     padding: 1%;
@@ -2795,7 +2840,6 @@ h3 {
     border-radius: 10px;
     padding: 7px 10px 7px;
 }
-/**/
 
 .grid-rsm-11 {
     grid-column: 4 / span 1;
@@ -2951,7 +2995,6 @@ h3 {
     color: #fff;
     font-weight: normal;
 }
-/**/
 
 .text-center {
     text-align: center;
@@ -2977,6 +3020,8 @@ h6 {
     font-size: small;
     color: #000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 2%;
+    margin-bottom: 0;
 }
 
 .container-fluid h5 {
@@ -3035,7 +3080,7 @@ h6 {
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 }
 
-/* Map */
+/* Map rsm*/
 #map-rsm {
     position: relative;
     width: 100%;
@@ -3096,6 +3141,33 @@ div .legend table {
     width: 60%;
     height: 700px;
     border-radius: 30px;
+}
+
+/* Resposive Resumen */
+@media screen and (max-width:530px) {
+    .container-fluid-rsm {
+        padding: 0px 0px 0px;
+    }
+
+    .grid-rsm-container > * {
+        padding: 1%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .grid-rsm-container {
+        padding-bottom: 10%;
+        display: grid;
+        gap: 7px;
+        grid-template-columns: 25% 28% 28% auto;
+        grid-template-rows: auto 10% 10% 13% 10% 13% 10% 14% 14%;
+    }
+
+    .grid-rsm-4 {
+        grid-column: 1 / span 4;
+    }
 }
 
 /* Proyectos */
