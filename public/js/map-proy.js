@@ -25,7 +25,7 @@ var marker3 = L.icon ({
 
 var marker4 = L.icon ({
     iconUrl: 'https://res.cloudinary.com/lvaldivia/image/upload/v1652367552/ccd/marker3_ekcmkc.png',
-    iconSize: [30,45]
+    iconSize: [25,35]
 })
 
 //Añadir capa en formato Geojson

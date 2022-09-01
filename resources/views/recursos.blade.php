@@ -135,16 +135,16 @@
                     <br>
                     <div class="row m-3 container-grph">
                         <div class="col-8 text-center">
-                            <b>Anual</b>
+                            <h5>Anual</h5>
                             {{--
                             <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1661355807/ccd/graficos-recursos/Proyectado_lfijg3.png" alt="Proyectado" width="100%">--}}
                             <canvas id="myChart" height="170"></canvas>
-                            <p>Nota: Valores proyectados desde el año 2022 al 2036</p>
+                            <p><b>Nota: </b>Montos proyectados desde el año 2022 al 2036</p>
                         </div>
                         <div class="col-4 text-center">
-                            <b>Acumulado y promedio Anual</b>
+                            <h5>Acumulado histórico y proyectado</h5>
                             <img id="imgAcumuladoAnual" src="https://res.cloudinary.com/lvaldivia/image/upload/v1661310874/ccd/graficos-recursos/r1_tndmvw.png" alt="Gráfico acumulado y promedio anual">
-                            <p>Fuente: Banco Mundial, Antamina, CCD</p>
+                            <p>Fuente: Antamina, MEF</p>
                         </div>
                     </div>
                     <hr>
@@ -408,7 +408,7 @@
                     var chartInstance = this.chart,
                     ctx = chartInstance.ctx;
                     
-                    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+                    ctx.font = Chart.helpers.fontString(12, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'bottom';
 

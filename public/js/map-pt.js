@@ -27,24 +27,25 @@ fetch(
 )
 
 //Diseño del iconos
+//First Engagement
 var marker1 = L.icon ({
     iconUrl: 'https://res.cloudinary.com/lvaldivia/image/upload/v1653405268/ccd/marker_fe_jza7oo.png',
     iconSize: [25,35]
 })
-
+// Short Term
 var marker2 = L.icon ({
     iconUrl: 'https://res.cloudinary.com/lvaldivia/image/upload/v1652367551/ccd/marker1_hdqypn.png',
     iconSize: [25,35]
 })
-
+// Medium Term
 var marker3 = L.icon ({
     iconUrl: 'https://res.cloudinary.com/lvaldivia/image/upload/v1652367551/ccd/marker2_weqa0n.png',
     iconSize: [25,35]
 })
-
+// Long Term
 var marker4 = L.icon ({
     iconUrl: 'https://res.cloudinary.com/lvaldivia/image/upload/v1652367552/ccd/marker3_ekcmkc.png',
-    iconSize: [30,45]
+    iconSize: [25,35]
 })
 
 //Filtro para moverse entre ubicaciones

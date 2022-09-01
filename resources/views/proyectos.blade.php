@@ -33,8 +33,7 @@
     <!-- Mapa -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/> 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-    <!-- JChart -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+
 </head>
 <body>
     <div class="container-xxl bg-white p-0">
@@ -105,38 +104,34 @@
                                     <label id="label" for="location">Unidad territorial</label>
                                     <select id="location" name="location" class="select">
                                         <option value="AIO">AIO</option>
-                                        <optgroup label="UGT Huallanca">
+                                        <option value="-9.96885060854611,-77.09381103515626,UGT Huallanca" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=="-9.96885060854611,-77.09381103515626,UGT Huallanca") echo 'selected';}?>>UGT Huallanca</option>
                                             @foreach ($ugt_huall as $ugt)
                                             @php
                                                 $value = $ugt->coords.",".$ugt->distrito;
                                             @endphp
                                             <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
                                             @endforeach
-                                        </optgroup>
-                                        <optgroup label="UGT Huarmey">
+                                        <option value="-10.072642780669092,-78.14849853515626,UGT Huarmey" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-10.072642780669092,-78.14849853515626,UGT Huarmey') echo 'selected';}?>>UGT Huarmey</option>
                                             @foreach ($ugt_huarmey as $ugt)
                                             @php
                                                 $value = $ugt->coords.",".$ugt->distrito;
                                             @endphp
                                             <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
                                             @endforeach
-                                        </optgroup>
-                                        <optgroup label="UGT Mina / San Marcos">
+                                        <option value="-9.522205574667476,-77.16384887695314,UGT Mina / San Marcos" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-9.522205574667476,-77.16384887695314,UGT Mina / San Marcos') echo 'selected';}?>>UGT Mina / San Marcos</option>
                                             @foreach ($ugt_mina as $ugt)
                                             @php
                                                 $value = $ugt->coords.",".$ugt->distrito;
                                             @endphp
                                             <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
                                             @endforeach
-                                        </optgroup>
-                                        <optgroup label="UGT Valle Fortaleza">
+                                        <option value="-10.451350331922376,-77.72140502929688,UGT Valle Fortaleza" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-10.451350331922376,-77.72140502929688,UGT Valle Fortaleza') echo 'selected';}?>>UGT Valle Fortaleza</option>
                                             @foreach ($ugt_valle as $ugt)
                                             @php
                                                 $value = $ugt->coords.",".$ugt->distrito;
                                             @endphp
                                             <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
                                             @endforeach
-                                        </optgroup>
                                     </select>
                                     </div> 
                                 </div>
@@ -212,11 +207,14 @@
                                         <?php
                                             function queryUnidadTerritorial($unidadt)
                                             {
-                                                if ($unidadt!='AIO') {
+                                                if ($unidadt!='AIO' and $unidadt!='UGT Huallanca' and $unidadt!='UGT Mina / San Marcos' and $unidadt!='UGT Valle Fortaleza' and $unidadt!='UGT Huarmey') {
                                                     $query = ['distrito' => $unidadt];
                                                     return $query;
-                                                } else {
+                                                } elseif ($unidadt=='AIO') {
                                                     return null;
+                                                } else {
+                                                    $query = ['ugt' => $unidadt];
+                                                    return $query;
                                                 }
                                             }
 
@@ -260,11 +258,14 @@
                                                 }
                                             }
 
-                                            if (isset($_POST['time_frame']) or isset($_POST['location']) or isset($_POST['factores']) or isset($_POST['modalidad'])or isset($_POST['year'])) {
+                                            if (isset($_POST['time_frame']) || isset($_POST['location']) || isset($_POST['factores']) || isset($_POST['modalidad'])|| isset($_POST['year'])) {
 
                                                 $location = $_POST['location'];
 
-                                                if ($location == 'AIO') {
+                                                if ($location!='AIO' and $location!='UGT Huallanca' and $location!='UGT Mina / San Marcos' and $location!='UGT Valle Fortaleza' and $location!='UGT Huarmey') {
+                                                    $distrito = explode(",",$location);
+                                                    $distrito_nom = $distrito[2];
+                                                } elseif($location == 'AIO') {
                                                     $distrito_nom = 'AIO';
                                                 } else {
                                                     $distrito = explode(",",$location);
@@ -300,7 +301,8 @@
                                                     'latitud',
                                                     'longitud',
                                                     'anio',
-                                                    'factores'
+                                                    'factores',
+                                                    'conclusion'
                                                 )
                                                 ->where(queryUnidadTerritorial($distrito_nom))
                                                 ->where(queryTimeFrame($timeframe))
@@ -361,7 +363,7 @@
                             </div>
                         </div>
                     </div>
-                    <p>Short Term: 2022 / Medium Term: 2023 / Long Term: al 2026</p>
+                    <p><b>Nota:</b> Short Term: 2022 / Medium Term: 2023 / Long Term: al 2026</p>
                     <p><sup>1/</sup> Proyectos y/o intervenciones</p>
                     <hr> 
                     <!--
@@ -576,9 +578,9 @@
                     '</br><strong>Distrito: </strong>',
                     $proy->distrito,
                     '</br><strong>Monto Actualizado (S/ millones): </strong>',
-                    round($proy->monto_actualizado,2),
-                    '</br><strong>Fecha: </strong>',
-                    $proy->anio,
+                    number_format($proy->monto_actualizado,2),
+                    '</br><strong>Fecha de conclusión: </strong>',
+                    $proy->conclusion,
                     '</br><strong>Proyecto: </strong>',
                     $proy->producto_proyecto,
                     '");',
@@ -587,6 +589,7 @@
         }
     ?>
 
+    <!--
     <script type="text/javascript">
     Chart.defaults.global.defaultFontFamily = "Calibri";
     Chart.defaults.global.defaultFontSize = 14;
@@ -820,5 +823,6 @@
             options: barOptions3
         });
     </script>
+    -->
 </body>
 </html>

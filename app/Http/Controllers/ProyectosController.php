@@ -59,7 +59,8 @@ class ProyectosController extends Controller
             'latitud',
             'longitud',
             'anio',
-            'factores'
+            'factores',
+            'conclusion'
         )
         ->get();
         return view('proyectos', compact('proyectos','ugt_valle','ugt_huall','ugt_mina','ugt_huarmey'));
