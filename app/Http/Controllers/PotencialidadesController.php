@@ -60,7 +60,8 @@ class PotencialidadesController extends Controller
             'latitud',
             'longitud',
             'anio',
-            'factores'
+            'factores',
+            'conclusion'
         )
         ->get();
 

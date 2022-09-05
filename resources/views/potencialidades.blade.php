@@ -134,7 +134,7 @@
                     </div>
                     <div class="row mb-2" id="img-map">
                         {{-- Imagen --}}
-                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1654022678/ccd/potencialidades/distritos/san_marcos_q8t4je.png" alt="Potencialidades"  id="img-potencialidad">
+                        <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1654022679/ccd/potencialidades/distritos/huallanca_mt0bag.png" alt="Potencialidades"  id="img-potencialidad">
                         {{-- Mapa --}}
                         <div id="map-pt"></div>
                     </div>
@@ -242,8 +242,10 @@
                     $proy->time_frame,
                     '</br><strong>Distrito: </strong>',
                     $proy->distrito,
-                    '</br><strong>Monto Actualizado: </strong>',
+                    '</br><strong>Monto Actualizado (S/ millones): </strong>',
                     round($proy->monto_actualizado,2),
+                    '</br><strong>Fecha de conclusión: </strong>',
+                    $proy->conclusion,
                     '</br><strong>Proyecto: </strong>',
                     $proy->producto_proyecto,
                     '");',
