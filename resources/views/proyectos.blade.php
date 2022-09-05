@@ -93,7 +93,7 @@
                         <h3>Proyectos para el cierre de brechas y puesta en valor las potencialidades</h3>
                         <p>(Descripción)</p>
                     </div>
-                    <div class="row" id="proy-card">
+                    <div class="row ptop" id="proy-card">
                         <!-- Filtros -->
                         <div class="row pt-3">
                             <form action="/proyectos" method="post">
@@ -103,7 +103,7 @@
                                     <div class="row"  id="select-location">
                                     <label id="label" for="location">Unidad territorial</label>
                                     <select id="location" name="location" class="select">
-                                        <option value="AIO">AIO</option>
+                                        <option value="AIO" class="optgroup-ut">AIO</option>
                                         <option value="-9.96885060854611,-77.09381103515626,UGT Huallanca" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=="-9.96885060854611,-77.09381103515626,UGT Huallanca") echo 'selected';}?>>UGT Huallanca</option>
                                             @foreach ($ugt_huall as $ugt)
                                             @php
@@ -147,10 +147,10 @@
                                         </select>
                                     </div> 
                                 </div>
-                                {{-- Factores --}}
+                                {{-- Pilar --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label id="label" for="factores">Factores</label>
+                                        <label id="label" for="factores">Pilar</label>
                                         <select id="factores" name="factores">
                                             <option value="Todos">Todos</option>
                                             <option value="Emprendimiento  y desarrollo económico" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Emprendimiento  y desarrollo económico") echo 'selected';}?>>Emprendimiento  y desarrollo económico</option>
@@ -321,7 +321,7 @@
                                     <h5>Cantidad de proyectos <sup>1/</sup></h5>
                                 </div>
                                 {{-- Monto actualizado --}}
-                                <div class="row mt-1" id="card-info">
+                                <div class="row mt-1 pt-3" id="card-info">
                                     <h2>
                                         <?php
                                             if (isset($_POST['time_frame']) or isset($_POST['location']) or isset($_POST['factores']) or isset($_POST['modalidad'])or isset($_POST['year'])) {
@@ -364,8 +364,10 @@
                         </div>
                     </div>
                     <p><b>Nota:</b> Short Term: 2022 / Medium Term: 2023 / Long Term: al 2026</p>
-                    <p><sup>1/</sup> Proyectos y/o intervenciones</p>
-                    <hr> 
+                    <p class="ptop"><sup>1/</sup> Proyectos y/o intervenciones</p>
+                    <hr>
+                    {{-- <a href="#" class="btn-flotante">PDF 1</a>
+                    <a href="#" class="btn-flotante2">PDF 2</a> --}}
                     <!--
                     <div class="row text-center">
                         <h3>Cierre de brechas</h3>

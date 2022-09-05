@@ -96,34 +96,35 @@
                         <div class="col-3">
                             <label id="label" for="unit">Unidad territorial:</label>
                             <select name="location" id="location" class="select" onchange="ShowSelected();">
-                                <option value="AIO">AIO</option>
-                                <optgroup label="UGT Huallanca">
+                                <option value="AIO" class="optgroup-ut">AIO</option>
+                                <option value="-9.96885060854611,-77.09381103515626,UGT Huallanca" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=="-9.96885060854611,-77.09381103515626,UGT Huallanca") echo 'selected';}?>>UGT Huallanca</option>
+                                    @foreach ($ugt_huall as $ugt)
                                     @php
-                                    foreach ($ugt_huall as $ugt) {
-                                            echo '<option value="'.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                    }
+                                        $value = $ugt->coords.",".$ugt->distrito;
                                     @endphp
-                                </optgroup>
-                                <optgroup label="UGT Huarmey">
+                                    <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                    @endforeach
+                                <option value="-10.072642780669092,-78.14849853515626,UGT Huarmey" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-10.072642780669092,-78.14849853515626,UGT Huarmey') echo 'selected';}?>>UGT Huarmey</option>
+                                    @foreach ($ugt_huarmey as $ugt)
                                     @php
-                                    foreach ($ugt_huarmey as $ugt) {
-                                        echo '<option value="'.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                    }
+                                        $value = $ugt->coords.",".$ugt->distrito;
                                     @endphp
-                                </optgroup>
-                                <optgroup label="UGT Mina / San Marcos">
+                                    <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                    @endforeach
+                                <option value="-9.522205574667476,-77.16384887695314,UGT Mina / San Marcos" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-9.522205574667476,-77.16384887695314,UGT Mina / San Marcos') echo 'selected';}?>>UGT Mina / San Marcos</option>
+                                    @foreach ($ugt_mina as $ugt)
                                     @php
-                                    foreach ($ugt_mina as $ugt) {
-                                        echo '<option value="'.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                    }
+                                        $value = $ugt->coords.",".$ugt->distrito;
                                     @endphp
-                                </optgroup>
-                                <optgroup label="UGT Valle Fortaleza">
+                                    <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                    @endforeach
+                                <option value="-10.451350331922376,-77.72140502929688,UGT Valle Fortaleza" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-10.451350331922376,-77.72140502929688,UGT Valle Fortaleza') echo 'selected';}?>>UGT Valle Fortaleza</option>
+                                    @foreach ($ugt_valle as $ugt)
                                     @php
-                                    foreach ($ugt_valle as $ugt) {
-                                        echo '<option value="'.$ugt->distrito.'">'.$ugt->distrito.'</option>';
-                                    }
+                                        $value = $ugt->coords.",".$ugt->distrito;
                                     @endphp
+                                    <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                    @endforeach
                                 </optgroup>
                             </select>
                         </div>
@@ -136,8 +137,6 @@
                     <div class="row m-3 container-grph">
                         <div class="col-8 text-center">
                             <h5>Anual</h5>
-                            {{--
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1661355807/ccd/graficos-recursos/Proyectado_lfijg3.png" alt="Proyectado" width="100%">--}}
                             <canvas id="myChart" height="170"></canvas>
                             <p><b>Nota: </b>Montos proyectados desde el año 2022 al 2036</p>
                         </div>
@@ -365,7 +364,31 @@
                     lineChart.update();
                     document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1661310872/ccd/graficos-recursos/r18_sxoo3y.png';
                     break;
-                
+                //UGT's
+                case 'UGT Huallanca':
+                    var total = '['+'@foreach ($v_ugt_huallanca as $rugt1){{ $rugt1 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1662395076/ccd/graficos-recursos/rugt1_cr66ui.png';
+                    break;
+                case 'UGT Huarmey':
+                    var total = '['+'@foreach ($v_ugt_huarmey as $rugt2){{ $rugt2 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1661310874/ccd/graficos-recursos/r11_eq39eq.png';
+                    break;
+                case 'UGT Mina / San Marcos':
+                    var total = '['+'@foreach ($v_ugt_san_marcos as $rugt3){{ $rugt3 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1662395076/ccd/graficos-recursos/rugt3_v0xoap.png';
+                    break;
+                case 'UGT Valle Fortaleza':
+                    var total = '['+'@foreach ($v_valle_fortaleza as $rugt4){{ $rugt4 -> valor}},@endforeach'+']';
+                    lineChart.data.datasets[0].data=total.split(',');
+                    lineChart.update();
+                    document.getElementById("imgAcumuladoAnual").src='https://res.cloudinary.com/lvaldivia/image/upload/v1662395076/ccd/graficos-recursos/rugt4_fqnkam.png';
+                    break;
                 default:
                     var total = '['+'@foreach ($recursos as $r){{ $r -> valor}},@endforeach'+']';
                     lineChart.data.datasets[0].data=total.split(',');

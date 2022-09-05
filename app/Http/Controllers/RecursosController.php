@@ -172,6 +172,30 @@ class RecursosController extends Controller
         )
         ->where('distrito', 'Paramonga (Barranca / Lima)')
         ->get();
+
+        $v_ugt_huallanca = \DB::table('recursos')->select(
+            'valor'
+        )
+        ->where('ugt', 'UGT Huallanca')
+        ->get();
+
+        $v_ugt_huarmey = \DB::table('recursos')->select(
+            'valor'
+        )
+        ->where('ugt', 'UGT Huarmey')
+        ->get();
+
+        $v_ugt_san_marcos = \DB::table('recursos')->select(
+            'valor'
+        )
+        ->where('ugt', 'UGT Mina / San Marcos')
+        ->get();
+
+        $v_valle_fortaleza = \DB::table('recursos')->select(
+            'valor'
+        )
+        ->where('ugt', 'UGT Valle Fortaleza')
+        ->get();
         
         /** recursos end **/
         
@@ -200,7 +224,11 @@ class RecursosController extends Controller
                     'huarmey',
                     'punos',
                     'llata',
-                    'paramonga'
+                    'paramonga',
+                    'v_ugt_huallanca',
+                    'v_ugt_huarmey',
+                    'v_ugt_san_marcos',
+                    'v_valle_fortaleza'
                 ));
     }
 }
