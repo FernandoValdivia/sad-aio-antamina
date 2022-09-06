@@ -43,9 +43,9 @@ document.body.onload = function() {
     var coords = document.getElementById('location').value.split(',');
     //Si el select es AIO muestra todo, sino muestra el seleccionado
     if (coords=="AIO") {
-        mappt.flyTo([-9.979670961528786,-77.4041748046875], 9);
+        map.flyTo([-9.979670961528786,-77.4041748046875], 9);
     } else {
-        mappt.flyTo(coords, 13);
+        map.flyTo(coords, 13);
     }
     document.getElementById('select').value=coords[2];
 }
