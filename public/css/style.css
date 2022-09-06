@@ -2365,7 +2365,9 @@ th.style16 {
     border-radius: 25px;
     background-color: #d8e4be;
     grid-column: 7 / span 3;
-    grid-row: 7 / span 2;
+    grid-row: 7 / span 3;
+    display: flex;
+    align-items: center;
     padding: 6%;
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 }
@@ -3461,6 +3463,10 @@ div .col-3 select {
     color: #a1011f;
 }
 
+.link svg {
+    margin-left: 2%;
+}
+
 .btn.btn-primary,
 .btn.btn-secondary {
     color: #ffffff;
@@ -3592,7 +3598,7 @@ div .col-3 select {
 /*** Hero Header ***/
 .hero-header {
     background: linear-gradient(rgba(15, 23, 43, 0.9), #17304af2),
-        url(https://res.cloudinary.com/lvaldivia/image/upload/v1652719827/ccd/Ancash_go086r.jpg);
+        url(/img/Ancash.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

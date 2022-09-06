@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Favicon -->
-    <link href="https://res.cloudinary.com/lvaldivia/image/upload/v1652719812/ccd/logo-icon_pjbwon.png" rel="icon">
+    <link href="/img/logo-icon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
                     {{-- Logo --}}
                     <div class="row m-4 divlogo">
                         <div class="col-3 logo">
-                            <img class="img-logo" src="https://res.cloudinary.com/lvaldivia/image/upload/v1652720473/ccd/logo-navbar2_iblh54.png" alt="logoccd">
+                            <img class="img-logo" src="/img/logo-navbar2.png" alt="logoccd">
                             <p>CENTRO PARA</p>
                             <p>LA COMPETITIVIDAD</p>
                             <p>Y EL DESARROLLO</p>
@@ -113,7 +113,7 @@
                             <h6>(Descripción)</h6>
                         </div>
                         <div class="trimestre-grid-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1659991860/ccd/reporte/Imagen1_urahqp.png" alt="">
+                            <img src="/img/reporte/Imagen1.png" alt="">
                             <p>Fuente: Banco Mundial, Antamina, CCD</p>
                         </div>
                         <div class="trimestre-grid-4">
@@ -126,7 +126,7 @@
                             <h6>(Por factores y kpis)</h6>
                         </div>
                         <div class="trimestre-grid-6">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660841324/ccd/reporte/Imagen2_ovvrcm.png" alt="">
+                            <img src="/img/reporte/Imagen2.png" alt="">
                         </div>
                         <div class="trimestre-grid-7">
                             <p>
@@ -142,7 +142,7 @@
                             <h6>(S/ millones)</h6>
                         </div>
                         <div class="trimestre-grid-9">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660931051/ccd/reporte/Imagen3_fvnpzi.png" alt="">
+                            <img src="/img/reporte/Imagen3.png" alt="">
                             <p>
                                 1/  Incluye OPEX y CAPEX del 2022
                                 <br>
@@ -164,7 +164,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre2-2">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660944956/ccd/reporte/Imagen4_qqc21x.png" alt="">
+                            <img src="/img/reporte/Imagen4.png" alt="">
                             <p>
                                 1/  Incluye OPEX, CAPEX y OxI <br>
                                 AIO: Ámbito de Influencia de Antamina <br>
@@ -185,7 +185,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre2-5">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660944956/ccd/reporte/Imagen5_ylr0tm.png" alt="AIO">
+                            <img src="/img/reporte/Imagen5.png" alt="AIO">
                         </div>
                     </div>
                 </section>
@@ -218,7 +218,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre3-8">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660841869/ccd/reporte/Imagen9_g6qfg5.png" alt="">
+                            <img src="/img/reporte/Imagen9.png" alt="">
                         </div>
                     </div>
                 </section>
@@ -240,7 +240,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre4-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660918581/ccd/reporte/Imagen11_ltp6rz.png" alt="">
+                            <img src="/img/reporte/Imagen11.png" alt="">
                         </div>
                         <div class="grid-trimestre4-4 text-center">
                             <b>Proyectos Antamina Concluidos en el 2T 2022: AIO</b>
@@ -349,7 +349,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre5-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660919375/ccd/reporte/Imagen12_buctkb.png" alt="">
+                            <img src="/img/reporte/Imagen12.png" alt="">
                             <p>Fuente: Antamina, MEF, CCD</p>
                         </div>
                         <div class="grid-trimestre5-4 text-center">
@@ -522,7 +522,7 @@
                             <h6>(Descripción)</h6>
                         </div>
                         <div class="grid-trimestre6-2">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660842468/ccd/reporte/Mapa_w8t0j3.png" alt="">
+                            <img src="/img/reporte/Mapa.png" alt="">
                             <p>
                                 Fuente: Antamina
                             </p>
@@ -541,7 +541,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre7-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1661301711/ccd/reporte/Imagen13_dwatrw.png" alt="">
+                            <img src="/img/reporte/Imagen13.png" alt="">
                         </div>
                         <div class="grid-trimestre7-p">
                             <p>
@@ -564,7 +564,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre7-6">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660946179/ccd/reporte/Imagen14_ryiduw.png" alt="">
+                            <img src="/img/reporte/Imagen14.png" alt="">
                         </div>
                         <div class="grid-trimestre7-7 text-center">
                             <b>Cartera de proyectos: 2T 2022 - 2026</b>
@@ -684,7 +684,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre8-3">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1661301710/ccd/reporte/Imagen15_qwbuii.png" alt="">
+                            <img src="/img/reporte/Imagen15.png" alt="">
                         </div>
                         <div class="grid-trimestre8-p">
                             <p>
@@ -707,7 +707,7 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre8-6">
-                            <img src="https://res.cloudinary.com/lvaldivia/image/upload/v1660946179/ccd/reporte/Imagen16_t4bmuu.png" alt="">
+                            <img src="/img/reporte/Imagen16.png" alt="">
                         </div>
                         <div class="grid-trimestre8-7 text-center">
                             <b>Cartera de proyectos: 2T 2022 - 2026</b>

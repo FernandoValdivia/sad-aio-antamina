@@ -9,22 +9,22 @@ L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
 
 //Diseño del iconos
 var marker1 = L.icon ({
-    iconUrl: 'https://res.cloudinary.com/lvaldivia/image/upload/v1653405268/ccd/marker_fe_jza7oo.png',
+    iconUrl: '/img/markers/marker_fe.png',
     iconSize: [25,35]
 })
 
 var marker2 = L.icon ({
-    iconUrl: 'https://res.cloudinary.com/lvaldivia/image/upload/v1652367551/ccd/marker1_hdqypn.png',
+    iconUrl: '/img/markers/marker1.png',
     iconSize: [25,35]
 })
 
 var marker3 = L.icon ({
-    iconUrl: 'https://res.cloudinary.com/lvaldivia/image/upload/v1652367551/ccd/marker2_weqa0n.png',
+    iconUrl: '/img/markers/marker2.png',
     iconSize: [25,35]
 })
 
 var marker4 = L.icon ({
-    iconUrl: 'https://res.cloudinary.com/lvaldivia/image/upload/v1652367552/ccd/marker3_ekcmkc.png',
+    iconUrl: '/img/markers/marker3.png',
     iconSize: [25,35]
 })
 
@@ -93,15 +93,15 @@ lengend.onAdd = function() {
         '<table>'+
             '<tbody>'+
                 '<tr>'+
-                    '<td><img class="img-fluid" src="https://res.cloudinary.com/lvaldivia/image/upload/v1652367551/ccd/marker1_hdqypn.png"></td>'+
+                    '<td><img class="img-fluid" src="/img/markers/marker1.png"></td>'+
                     '<td><h6>Short Term</h6></td>'+
                 '</tr>'+
                 '<tr>'+
-                    '<td><img class="img-fluid" src="https://res.cloudinary.com/lvaldivia/image/upload/v1652367551/ccd/marker2_weqa0n.png"></td>'+
+                    '<td><img class="img-fluid" src="/img/markers/marker2.png"></td>'+
                     '<td><h6>Medium Term</h6></td>'+
                 '</tr>'+
                 '<tr>'+
-                    '<td><img class="img-fluid" src="https://res.cloudinary.com/lvaldivia/image/upload/v1652367552/ccd/marker3_ekcmkc.png"></td>'+
+                    '<td><img class="img-fluid" src="/img/markers/marker3.png"></td>'+
                     '<td><h6>Long Term</h6></td>'+
                 '</tr>'+
             '</tbody>'+

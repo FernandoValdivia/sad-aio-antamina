@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Favicon -->
-    <link href="https://res.cloudinary.com/lvaldivia/image/upload/v1652719812/ccd/logo-icon_pjbwon.png" rel="icon">
+    <link href="/img/logo-icon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@
                     {{-- Logo --}}
                     <div class="row m-4 divlogo">
                         <div class="col-3 logo">
-                            <img class="img-logo" src="https://res.cloudinary.com/lvaldivia/image/upload/v1652720473/ccd/logo-navbar2_iblh54.png" alt="logoccd">
+                            <img class="img-logo" src="/img/logo-navbar2.png" alt="logoccd">
                             <p>CENTRO PARA</p>
                             <p>LA COMPETITIVIDAD</p>
                             <p>Y EL DESARROLLO</p>

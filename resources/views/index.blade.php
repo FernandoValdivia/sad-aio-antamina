@@ -5,12 +5,11 @@
     <meta charset="utf-8">
     <title>SAD AIO Antamina</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Sistema de Administración del Desarrollo" name="description">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Favicon -->
-    <link href="https://res.cloudinary.com/lvaldivia/image/upload/v1652719812/ccd/logo-icon_pjbwon.png" rel="icon">
+    <link href="/img/logo-icon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +41,7 @@
                     {{-- Logo --}}
                     <div class="row m-4 divlogo">
                         <div class="col-3 logo">
-                            <img class="img-logo" src="https://res.cloudinary.com/lvaldivia/image/upload/v1652720473/ccd/logo-navbar2_iblh54.png" alt="logoccd">
+                            <img class="img-logo" src="/img/logo-navbar2.png" alt="logoccd">
                             <p>CENTRO PARA</p>
                             <p>LA COMPETITIVIDAD</p>
                             <p>Y EL DESARROLLO</p>
@@ -76,10 +75,14 @@
                         <div class="col-lg-6 text-center text-lg-start">
                             <p class="display-3 animated slideInLeft text-white" id="home-text">Dales calidad, <br>es el mejor tipo de publicidad</p>
                             <p class="text-white animated slideInLeft mb-4 pb-2">El centro para la Competitividad y el Desarrollo (CCD) es una institución cuyo fin es promover el desarrollo sostenible del país en base al principio de la competitividad y de esta forma mejorar la calidad de vida de los ciudadanos.</p>
-                            <a href="/resumen" class="link me-3 animated slideInLeft"><strong>SAD AIO Antamina</strong><img src="https://res.cloudinary.com/lvaldivia/image/upload/v1653584421/ccd/arrow_g6j19c.svg" alt="Flecha inicio" class="img-fluid ms-2"></a>
+                            <a href="/resumen" class="link me-3 animated slideInLeft"><strong>SAD AIO Antamina</strong>
+                                <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.6781 15.0212C20.6724 14.7732 20.6068 14.624 20.5229 14.5168L15.9103 8.05962C15.6925 7.71027 15.1988 7.65481 14.8901 7.93857C14.5815 8.22233 14.5652 8.75269 14.8127 9.06855L18.4828 14.2139H5.06649C4.67446 14.2139 4.35693 14.5753 4.35693 15.0209C4.35693 15.4668 4.67472 15.828 5.06649 15.828H18.4828L14.8127 20.9733C14.5317 21.2922 14.6117 21.8513 14.9082 22.1514C15.1364 22.3822 15.7447 22.3087 15.9105 21.9822L20.5231 15.525C20.6432 15.3578 20.6798 15.2334 20.6783 15.0206L20.6781 15.0212Z" fill="currentColor"/>
+                                </svg>
+                            </a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid" src="https://res.cloudinary.com/lvaldivia/image/upload/v1653583881/ccd/home_fosq4i.png" alt="Volquete">
+                            <img class="img-fluid" src="/img/home.png" alt="Volquete CCD">
                         </div>
                     </div>
                 </div>
