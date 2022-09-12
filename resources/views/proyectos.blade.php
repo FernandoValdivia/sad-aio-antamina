@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Proyectos</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta content="Sistema de Administración del Desarrollo - Proyectos" name="description">
+
     <meta content="" name="keywords">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
@@ -87,7 +89,7 @@
 
         <!-- Proyectos Start -->
         <div class="container-xxl py-5">
-            <div class="container-fluid">
+            <div class="container-fluid" id="container-proy">
                 <div class="row g-5 align-items-center">
                     <div class="row text-center">
                         <h3>Proyectos para el cierre de brechas y puesta en valor las potencialidades</h3>

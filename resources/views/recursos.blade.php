@@ -5,7 +5,7 @@
     <title>Recursos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="SAD AIO Antamina - Recursos" name="description">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     
     <!-- Favicon -->
@@ -93,7 +93,7 @@
                         <div class="col-9">
                         </div>
                         {{-- Filtros --}}
-                        <div class="col-3">
+                        <div class="col-3" id="filterec">
                             <label id="label" for="unit">Unidad territorial:</label>
                             <select name="location" id="location" class="select" onchange="ShowSelected();">
                                 <option value="AIO" class="optgroup-ut">AIO</option>
@@ -138,13 +138,13 @@
                         <div class="col-8 text-center">
                             <h5>Anual</h5>
                             <canvas id="myChart" height="170"></canvas>
-                            <p><b>Nota: </b>Montos proyectados desde el año 2022 al 2036</p>
                         </div>
                         <div class="col-4 text-center">
                             <h5>Acumulado histórico y proyectado</h5>
                             <img id="imgAcumuladoAnual" src="/img/recursos/r1.png" alt="Gráfico acumulado y promedio anual">
                             <p>Fuente: Antamina, MEF</p>
                         </div>
+                        <p><b>Nota: </b>Montos proyectados desde el año 2022 al 2036</p>
                     </div>
                     <hr>
                     <div class="row dwnld-div">
