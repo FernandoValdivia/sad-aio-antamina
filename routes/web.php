@@ -38,6 +38,15 @@ Route::get('/descargar-pdf1', function() {
     );
     return Response::download($file, "Progreso Cierre Brechas AIO - Reporte 2T 2022.pdf", $headers);
 });
+/* PDF 1.2 */
+Route::get('/descargar-pdf2', function() {
+    $file = public_path()."/file/reporte1.2.pdf";
+
+    $headers = array(
+        'Content-Type: application/pdf',
+    );
+    return Response::download($file, "EC Monitoreo de KPIs y Vacunación - Reporte 2T 2022.pdf", $headers);
+});
 /* Excel 1 */
 Route::get('/descargar-excel1', function() {
     $file = public_path()."/file/excel1.xlsx";
