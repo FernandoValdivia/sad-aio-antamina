@@ -30,6 +30,23 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    {{-- Chat whatsapp --}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="{{ asset('css/chat.css') }}" rel="stylesheet">
+
+    {{-- Slider --}}
+    <link rel="stylesheet" href="css/slider.css">
+	<link rel="stylesheet" href="css/mi-slider.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+	<script src="js/jquery.slider.js"></script>
+
+	<script type="text/javascript"> 
+		$(window).on('load', function() {
+		    $('#slider').nivoSlider();
+		}); 
+	</script>
+
 </head>
 
 <body>
@@ -40,7 +57,7 @@
                 <a href="/" class="navbar-brand p-0">
                     {{-- Logo --}}
                     <div class="row m-4 divlogo">
-                        <div class="col-3 logo">
+                        {{-- <div class="col-3 logo">
                             <img class="img-logo" src="/img/logo-navbar2.png" alt="logoccd">
                             <p>CENTRO PARA</p>
                             <p>LA COMPETITIVIDAD</p>
@@ -48,7 +65,8 @@
                         </div>
                         <div class="col-9">
                             <p> SAD AIO Antamina</p>
-                        </div>
+                        </div> --}}
+                        <img src="/img/logo-sad.png" alt="Logo SAD" class="img-fluid">
                     </div>
                     {{-- End Logo --}}
                 </a>
@@ -69,10 +87,10 @@
             </nav>
             <!-- Navbar End -->
             <!-- Index -->
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
-                <div class="container my-5 py-5">
+            <div class="container-xxl bg-dark hero-header">
+               {{-- <div class="container my-5 py-5">
                     <div class="row align-items-center g-5">
-                        <div class="col-lg-6 text-center text-lg-start">
+                         <div class="col-lg-6 text-center text-lg-start">
                             <p class="display-3 animated slideInLeft text-white" id="home-text">Dales calidad, <br>es el mejor tipo de publicidad</p>
                             <p class="text-white animated slideInLeft mb-4 pb-2">El centro para la Competitividad y el Desarrollo (CCD) es una institución cuyo fin es promover el desarrollo sostenible del país en base al principio de la competitividad y de esta forma mejorar la calidad de vida de los ciudadanos.</p>
                             <a href="/resumen" class="link me-3 animated slideInLeft"><strong>SAD AIO Antamina</strong>
@@ -83,7 +101,37 @@
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                             <img class="img-fluid" src="/img/home.png" alt="Volquete CCD">
-                        </div>
+                        </div> 
+                    </div>
+                </div> --}}
+
+                <div class="slider-wrapper theme-mi-slider">
+                    <div id="slider" class="nivoSlider">     
+                        <img src="/img/6.png" alt="" title="#htmlcaption1" />    
+                        <img src="/img/2.png" alt="" title="#htmlcaption2" />    
+                        <img src="/img/3.png" alt="" title="#htmlcaption3" />
+                        <img src="/img/4.png" alt="" title="#htmlcaption4" />
+                        <img src="/img/5.png" alt="" title="#htmlcaption5" />
+                    </div>
+                    <div id="htmlcaption1" class="nivo-html-caption">     
+                        <h1>Sistema de Administración del Desarrollo</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                    <div id="htmlcaption2" class="nivo-html-caption">     
+                        <h1>Progreso</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                    <div id="htmlcaption3" class="nivo-html-caption">     
+                        <h1>Empredimiento</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                    <div id="htmlcaption4" class="nivo-html-caption">     
+                        <h1>Crecimiento</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                    <div id="htmlcaption5" class="nivo-html-caption">     
+                        <h1>Progreso</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                     </div>
                 </div>
             </div>
@@ -91,7 +139,7 @@
         </div>
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-6 col-md-6">
@@ -129,11 +177,15 @@
         <!-- Footer End -->
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        {{-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> --}}
+        
     </div>
+    
+    <a href="https://api.whatsapp.com/send?phone=51922753771&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20SAD." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
@@ -143,9 +195,25 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    {{-- Chat Bot --}}
+    <script src="widget.js"></script>
+    <script type="text/javascript">
+        var botmanWidget = {
+            frameEndpoint: 'chat.html',
+            headerTextColor: '#fff',
+            title: 'Chatea con nosotros!',
+            introMessage: "✋ Hola, ¿En que te podemos ayudar?",
+            aboutText: 'Administrador',
+            aboutLink: '',
+            placeholderText: 'Escribe un mensaje...',
+            mainColor: '#0F172B',
+            bubbleBackground: '#0F172B',
+            mobileHeight: '100%',
+            mobileWidth: '100%'
+        };
+    </script>
 </body>
-
 </html>

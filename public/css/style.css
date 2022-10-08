@@ -2885,6 +2885,7 @@ th.style16 {
     width: 100%;
 }
 
+
 /* Home */
 #home-text {
     font-family: Bower, Georgia, Times New Roman, serif;
@@ -2909,6 +2910,11 @@ strong {
 
 /* Resposive Design */
 /* Home */
+
+body, html {
+    background-color: #fff;
+    background-image: url('') !important;
+}
 
 @media screen and (max-width:530px) {
 
@@ -4126,7 +4132,7 @@ div .col-3 select {
         top: 0;
         left: 0;
         z-index: 999;
-        background: transparent !important;
+        /* background: transparent !important; */
     }
 
     .navbar-dark2 {
@@ -4157,8 +4163,8 @@ div .col-3 select {
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(15, 23, 43, 0.9), #17304af2),
-        url(/img/Ancash.jpg);
+    background: linear-gradient(rgba(15, 23, 43, 0.9), #17304af2), url(/img/Ancash2.jpg);
+    /* background: linear-gradient(rgba(15, 23, 43, 0.9), #17304af2); */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4333,6 +4339,8 @@ div .col-3 select {
     border: 1px solid #ffffff;
     border-radius: 35px;
     transition: 0.3s;
+    background-color: #ffffff00 !important;
+    min-width: auto !important;
 }
 
 .footer .btn.btn-social:hover {
@@ -4349,6 +4357,7 @@ div .col-3 select {
     font-weight: normal;
     text-transform: capitalize;
     transition: 0.3s;
+    background-color: #ffffff00 !important;
 }
 
 .footer .btn.btn-link::before {

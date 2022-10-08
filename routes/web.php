@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ClimaSocialController;
+use App\Http\Controllers\BotManController;
 
 //
 Route::get('/', function () {
@@ -25,9 +25,14 @@ Route::get('/recursos', 'RecursosController@index');
 //potencialidades
 Route::get('/potencialidades', 'PotencialidadesController@index');
 //trimestral
+Route::get('/404', function () {
+    return view('404');
+});
+//http 404
 Route::get('/trimestral', function () {
     return view('trimestral');
 });
+
 //descargar
 /* PDF 1 */
 Route::get('/descargar-pdf1', function() {
@@ -83,3 +88,8 @@ Route::get('/descargar-proyectos', function() {
     );
     return Response::download($file, "Proyectos y o intervenciones en el AIO.xlsx", $headers);
 });
+
+//Bot
+Route::get('/botman',[BotManController::class,"handle"]);
+
+Route::post('/botman',[BotManController::class,"handle"]);
