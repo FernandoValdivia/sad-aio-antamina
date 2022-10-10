@@ -39,38 +39,38 @@
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Navbar -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="/" class="navbar-brand p-0">
-                    {{-- Logo --}}
-                    <div class="row m-4 divlogo">
-                        <div class="col-3 logo">
-                            <img class="img-logo" src="/img/logo-navbar2.png" alt="logoccd">
-                            <p>CENTRO PARA</p>
-                            <p>LA COMPETITIVIDAD</p>
-                            <p>Y EL DESARROLLO</p>
-                        </div>
-                        <div class="col-9">
-                            <p> SAD AIO Antamina</p>
-                        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
+            <a href="/" class="navbar-brand p-0">
+                {{-- Logo --}}
+                <div class="row m-4 divlogo">
+                    {{-- <div class="col-3 logo">
+                        <img class="img-logo" src="/img/logo-navbar2.png" alt="logoccd">
+                        <p>CENTRO PARA</p>
+                        <p>LA COMPETITIVIDAD</p>
+                        <p>Y EL DESARROLLO</p>
                     </div>
-                    {{-- End Logo --}}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="/" class="nav-item nav-link">Home</a>
-                        <a href="/resumen" class="nav-item nav-link">Resumen</a>
-                        <a href="/brechas" class="nav-item nav-link">Brechas</a>
-                        <a href="/proyectos" class="nav-item nav-link">Proyectos</a>
-                        <a href="/recursos" class="nav-item nav-link">Recursos</a>
-                        <a href="/potencialidades" class="nav-item nav-link active">Potencialidades</a>
-                        <a href="/trimestral" class="nav-item nav-link">Reportes</a>
-                    </div>
+                    <div class="col-9">
+                        <p> SAD AIO Antamina</p>
+                    </div> --}}
+                    <img src="/img/logo-sad.png" alt="Logo SAD" class="img-fluid">
                 </div>
-            </nav>
+                {{-- End Logo --}}
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0 pe-4">
+                    <a href="/" class="nav-item nav-link">Home</a>
+                    <a href="/resumen" class="nav-item nav-link">Resumen</a>
+                    <a href="/brechas" class="nav-item nav-link">Brechas</a>
+                    <a href="/proyectos" class="nav-item nav-link">Proyectos</a>
+                    <a href="/recursos" class="nav-item nav-link">Recursos</a>
+                    <a href="/potencialidades" class="nav-item nav-link active">Potencialidades</a>
+                    <a href="/trimestral" class="nav-item nav-link">Reportes</a>
+                </div>
+            </div>
+        </nav>
 
             <div class="container-xxl py-1 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">

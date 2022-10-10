@@ -2919,7 +2919,7 @@ body, html {
 @media screen and (max-width:530px) {
 
     .navbar-dark .navbar-brand {
-        width: 79%;
+        width: 70%;
     }
 
     .navbar-dark .navbar-toggler {
@@ -4132,7 +4132,7 @@ div .col-3 select {
         top: 0;
         left: 0;
         z-index: 999;
-        /* background: transparent !important; */
+        background: transparent !important;
     }
 
     .navbar-dark2 {
@@ -4142,7 +4142,7 @@ div .col-3 select {
         left: 0;
         z-index: 999;
         padding: 10px 0 0 0;
-        margin-top: 100px;
+        margin-top: 90px;
         background: transparent !important;
     }
 

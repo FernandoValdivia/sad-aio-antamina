@@ -39,11 +39,11 @@
     <div class="container-xxl bg-white p-0">
         <!-- Navbar -->
         <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
                 <a href="/" class="navbar-brand p-0">
                     {{-- Logo --}}
                     <div class="row m-4 divlogo">
-                        <div class="col-3 logo">
+                        {{-- <div class="col-3 logo">
                             <img class="img-logo" src="/img/logo-navbar2.png" alt="logoccd">
                             <p>CENTRO PARA</p>
                             <p>LA COMPETITIVIDAD</p>
@@ -51,7 +51,8 @@
                         </div>
                         <div class="col-9">
                             <p> SAD AIO Antamina</p>
-                        </div>
+                        </div> --}}
+                        <img src="/img/logo-sad.png" alt="Logo SAD" class="img-fluid">
                     </div>
                     {{-- End Logo --}}
                 </a>

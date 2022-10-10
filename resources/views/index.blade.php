@@ -53,7 +53,7 @@
     <div class="container-xxl bg-white p-0">
         <div class="container-xxl position-relative p-0">
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
                 <a href="/" class="navbar-brand p-0">
                     {{-- Logo --}}
                     <div class="row m-4 divlogo">
@@ -107,7 +107,7 @@
 
                 <div class="slider-wrapper theme-mi-slider">
                     <div id="slider" class="nivoSlider">     
-                        <img src="/img/6.png" alt="" title="#htmlcaption1" />    
+                        <img src="/img/1.png" alt="" title="#htmlcaption1" />    
                         <img src="/img/2.png" alt="" title="#htmlcaption2" />    
                         <img src="/img/3.png" alt="" title="#htmlcaption3" />
                         <img src="/img/4.png" alt="" title="#htmlcaption4" />
@@ -204,6 +204,7 @@
         var botmanWidget = {
             frameEndpoint: 'chat.html',
             headerTextColor: '#fff',
+            bubbleAvatarUrl: '/img/botlogo.png',
             title: 'Chatea con nosotros!',
             introMessage: "✋ Hola, ¿En que te podemos ayudar?",
             aboutText: 'Administrador',
