@@ -13,58 +13,26 @@ class BotManController extends Controller
         $botman = app('botman');
         $botman->hears('{message}',function($botman,$message){
             
-            switch ($message) {
-                case "Hola":
-                    $this->askQuestion($botman);
-                    break;
-                case "Buenas tardes":
-                    $this->askQuestion($botman);
-                    break;
-                case "Buenos días":
-                    $this->askQuestion($botman);
-                    break;
-                case "Buenas noches":
-                    $this->askQuestion($botman);
-                    break;
-                case "Buenas noches":
-                    $this->askQuestion($botman);
-                    break;
-                default:
-                    $this->askQuestion($botman);
-                    break;
-            }
-        });
-
-        $botman->listen();
-    }
-
-    public function askName($botman)
-    {
-        $botman->ask("Hola, cual es su nombre?", function(Answer $answer){
-            $name = $answer->getText();
-
-            $this->say('Un gusto conocerte '.$name);
-        });
-    }
-
-    public function askQuestion($botman)
-    {
-        $botman->ask("¿En qué puedo ayudarte?", function(Answer $answer){
-            if ($answer == "resumen") {
-                $this->say('Lo puedes encontrar aquí: <a href=`/resumen` target=`_blank`>Resumen</a>');
+            if (strpos($message, "resumen") !== false || strpos($message, "Resumen") !== false) {
+                $botman->reply('Lo puedes encontrar aquí:</br><a href="https://sad-aio-antamina.competitividadccd.com/resumen" target="_blank">Resumen</a>');
+            } elseif (strpos($message, "brechas") !== false) {
+                $botman->reply('Lo puedes encontrar aquí:</br><a href="https://sad-aio-antamina.competitividadccd.com/brechas" target="_blank">Brechas</a>');
+            } elseif (strpos($message, "proyectos") !== false) {
+                $botman->reply('Lo puedes encontrar aquí:</br><a href="https://sad-aio-antamina.competitividadccd.com/proyectos" target="_blank">Proyectos</a>');
+            } elseif (strpos($message, "recursos") !== false) {
+                $botman->reply('Lo puedes encontrar aquí:</br><a href="https://sad-aio-antamina.competitividadccd.com/recursos" target="_blank">Recursos</a>');
+            } elseif (strpos($message, "Potencialidades") !== false) {
+                $botman->reply('Lo puedes encontrar aquí:</br><a href="https://sad-aio-antamina.competitividadccd.com/potencialidades" target="_blank">Potencialidades</a>');
+            } elseif (strpos($message, "reportes") !== false || strpos($message, "reporte") !== false) {
+                $botman->reply('Lo puedes encontrar aquí:</br><a href="https://sad-aio-antamina.competitividadccd.com/trimestral#descarga" target="_blank">Reportes</a>');
+            } elseif (strpos($message, "gracias") !== false) {
+                $botman->reply('Estoy para servirle! 😊');
+            } elseif (strpos($message, "ccd") !== false) {
+                $botman->reply('<img src="/img/logo-icon.png" class="img-fluid">');
             } else {
-                $this->say('Lo siento, no entiendo tu mensaje 😢');
+                $botman->reply('Lo siento, no entiendo tu mensaje 😢');
             }
         });
-
-        /* $mystring = "This is a PHP program.";
-
-        if (strpos($mystring, "program.") !== false) {
-            echo("True");
-        } */
-    }
-
-
-    
-
+        $botman->listen();
+    }   
 }

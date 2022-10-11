@@ -31,6 +31,9 @@
     <!-- Template Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
+    {{-- Chat whatsapp --}}
+    <link href="{{ asset('css/chat.css') }}" rel="stylesheet">
+
     <!-- Mapa -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/> 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
@@ -8602,12 +8605,12 @@
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>01 612 - 1700</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>melissa.sanchez@ccdcompetitividad.com</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>melissa.sanchez@competitividadccd.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/Centro-para-la-Competitividad-y-el-Desarrollo-CCD-151040740434523?_rdc=1&_rdr"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://api.whatsapp.com/send?phone=51922753771"><i class="fab fa-whatsapp"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/centro-para-la-competitividad-y-el-desarrollo-434799214/"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="mailto:melissa.sanchez@ccdcompetitividad.com"><i class="fa fa-envelope"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="mailto:melissa.sanchez@competitividadccd.com"><i class="fa fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
@@ -8617,18 +8620,18 @@
                     <div class="row">
                         <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
                             &copy; <a class="border-bottom" href="#">CCD</a>, Todos los derechos reservados. 
-							Desarrollado por <a class="border-bottom" href="https://lfvaldivia.ml" target="_blank">LValdivia</a> & <a class="border-bottom" href="https://ivanoscco.wixsite.com/my-site" target="_blank">IOscco</a><br><br>
+							Desarrollado por <a class="border-bottom" href="https://fernandovaldivia.github.io/about-me/" target="_blank">LValdivia</a> & <a class="border-bottom" href="https://ivanoscco.wixsite.com/my-site" target="_blank">IOscco</a><br><br>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Footer End -->
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-
+    {{-- Chat Whatsapp --}}
+    <a href="https://api.whatsapp.com/send?phone=51922753771&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20SAD." class="float" target="_blank">
+        <i class="fab fa-whatsapp my-float"></i>
+    </a>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -8650,6 +8653,25 @@
             const loader = document.querySelector(".loader");
             loader.className += " hidden"; // class "loader hidden"
         });
+    </script>
+
+    {{-- Chat Bot --}}
+    <script src="widget.js"></script>
+    <script type="text/javascript">
+        var botmanWidget = {
+            frameEndpoint: 'chat.html',
+            headerTextColor: '#fff',
+            bubbleAvatarUrl: '/img/botlogo.png',
+            title: 'Chatea con nosotros!',
+            introMessage: "✋ Hola, ¿En que te podemos ayudar?",
+            aboutText: 'Powered by LFValdivia',
+            aboutLink: 'https://fernandovaldivia.github.io/about-me/',
+            placeholderText: 'Escribe un mensaje...',
+            mainColor: '#0F172B',
+            bubbleBackground: '#0F172B',
+            mobileHeight: '100%',
+            mobileWidth: '100%'
+        };
     </script>
 </body>
 </html>
