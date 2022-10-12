@@ -704,7 +704,7 @@ div .trimestre-grid-3 p {
 }
 
 div .footer p {
-    color: #fff;
+    color: #fff !important;
 }
 
 .grid-trimestre4-1 {
@@ -3320,7 +3320,7 @@ h6 {
     padding: 10px 100px 10px;
 }
 
-.container-fluid p, #referencia {
+.container-fluid p #referencia {
     font-size: small;
     color: #000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
