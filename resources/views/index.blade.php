@@ -112,25 +112,20 @@
                         <img src="/img/4.png" alt="" title="#htmlcaption4" />
                         <img src="/img/5.png" alt="" title="#htmlcaption5" />
                     </div>
-                    <div id="htmlcaption1" class="nivo-html-caption">     
-                        <h1>Sistema de Administración del Desarrollo</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <div id="htmlcaption1" class="nivo-html-caption">
+                        <h1>Sistema de Administración <br> del Desarrollo</h1>
                     </div>
-                    <div id="htmlcaption2" class="nivo-html-caption">     
-                        <h1>Progreso</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <div id="htmlcaption2" class="nivo-html-caption">
+                        <h3><em>“El progreso y el desarrollo son imposibles <br> si uno sigue haciendo las cosas tal como siempre las ha hecho”</em> </h3>
                     </div>
-                    <div id="htmlcaption3" class="nivo-html-caption">     
-                        <h1>Empredimiento</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <div id="htmlcaption3" class="nivo-html-caption">
+                        <h3><em>“Para tener éxito, tu deseo de éxito debe ser mayor <br> que tu miedo al fracaso”</em> </h3>
                     </div>
-                    <div id="htmlcaption4" class="nivo-html-caption">     
-                        <h1>Crecimiento</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <div id="htmlcaption4" class="nivo-html-caption">
+                        <h3><em>“El éxito es la suma de pequeños esfuerzos repetidos <br> un día sí y otro también”</em> </h3>
                     </div>
-                    <div id="htmlcaption5" class="nivo-html-caption">     
-                        <h1>Progreso</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <div id="htmlcaption5" class="nivo-html-caption">
+                        <h3><em>“El verdadero progreso es el que pone <br> la tecnología al alcance de todos.”</em> </h3>
                     </div>
                 </div>
             </div>
