@@ -34,7 +34,7 @@ function style(feature){
         opacity: 0.5,
         color: 'white',
         dashArray: '1',
-        fillOpacity: 0.6
+        fillOpacity: 0.41
     };
 }
 

@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #a1011f;
+    --primary: #2271da;
     --light: #f1f8ff;
-    --dark: #a1011eef;
-    --secondary: #9c2137;
+    --dark: #1c58a7;
+    --secondary: #377fdd;
 }
 
 .ff-secondary {
@@ -47,10 +47,27 @@
 
 /* */
 ol li .aactiva {
-    color: #a1011f;
+    color: #2271da;
 }
 
 /* logo */
+.divlogo {
+    position: relative;
+    align-items: center;
+    height: 80px;
+    width: 280px;
+}
+
+.divlogo img {
+    position: absolute;
+    left: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.divlogo img.top:hover {
+    opacity: 0;
+}
+
 div .logo p {
     font-family: Bower, Georgia, Times New Roman, serif;
     font-size: 0.5rem;
@@ -113,7 +130,7 @@ section[id] {
 }
 
 .trim h2 {
-    color: #a1011f;
+    color: #2271da;
     font-weight: bold;
 }
 
@@ -249,10 +266,6 @@ div .trimestre-grid-3 p {
 
     #trimestre-head .col-10, #trimestre-head .col-2 {
         width: 100% !important;
-    }
-
-    #trimestre-head .col-10 h6 {
-        padding-bottom: 3% !important;
     }
 
     .titleTrim {
@@ -2912,6 +2925,7 @@ strong {
 /* Home */
 
 body, html {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #fff;
     background-image: url('') !important;
 }
@@ -3947,7 +3961,7 @@ div .col-4 select {
 }
 
 .dwnld-div a:hover {
-    color: #a1011f;
+    color: #2271da;
 }
 
 .dwnld-re {
@@ -4026,7 +4040,7 @@ div .col-3 select {
 }
 
 .link:hover {
-    color: #a1011f;
+    color: #2271da;
 }
 
 .link svg {
@@ -4072,9 +4086,10 @@ div .col-3 select {
     font-size: 15px;
     color: var(--light) !important;
     text-transform: initial;
-    font-weight: 500;
+    font-weight: bolder;
     outline: none;
     transition: 0.5s;
+    text-shadow: 0 0 3px #000, 0 0 5px #CCC;
 }
 
 .second-nav {
@@ -4087,6 +4102,7 @@ div .col-3 select {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
+    text-shadow: none !important;
     color: var(--primary) !important;
 }
 
@@ -4096,10 +4112,18 @@ div .col-3 select {
 }
 
 .sticky-top.navbar-dark .navbar-brand img {
-    max-height: 45px;
+    max-height: 60px;
 }
 
 @media (max-width: 991.98px) {
+    .divlogo img.top {
+        opacity: 0;
+    }
+
+    .divlogo img {
+        width: 80%;
+    }
+
     .sticky-top.navbar-dark {
         position: relative;
     }
@@ -4116,12 +4140,24 @@ div .col-3 select {
     }
 
     .navbar-dark .navbar-brand img {
-        max-height: 45px;
+        max-height: 60px;
+    }
+
+    .nivo-caption h3, .nivo-caption h1 {
+        font-size: 90%;
+    }
+
+    .nivo-directionNav {
+        display: none;
+    }
+
+    .container-fluid {
+        padding: 10px 50px 10px;
     }
 }
 
 .actual {
-    color: #a1011f;
+    color: #2271da;
     font-weight: bolder;
 }
 
@@ -4148,7 +4184,7 @@ div .col-3 select {
 
     .sticky-top.navbar-dark {
         position: fixed;
-        background: rgba(0, 0, 0, 0.3) !important;
+        /* background: rgba(0, 0, 0, 0.3); */
     }
 
     .sticky-top.navbar-dark2 {
@@ -4163,7 +4199,7 @@ div .col-3 select {
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(15, 23, 43, 0.9), #17304af2), url(/img/Ancash2.jpg);
+    background: linear-gradient(rgb(185 203 246 / 90%), #2271da), url(/img/Ancash2.jpg);
     /* background: linear-gradient(rgba(15, 23, 43, 0.9), #17304af2); */
     background-position: center center;
     background-repeat: no-repeat;
@@ -4187,17 +4223,6 @@ div .col-3 select {
     height: 2px;
     top: 50%;
     left: -55px;
-    margin-top: -1px;
-    background: var(--primary);
-}
-
-.section-title::after {
-    position: absolute;
-    content: "";
-    width: 45px;
-    height: 2px;
-    top: 50%;
-    right: -55px;
     margin-top: -1px;
     background: var(--primary);
 }

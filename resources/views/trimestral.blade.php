@@ -43,16 +43,8 @@
                 <a href="/" class="navbar-brand p-0">
                     {{-- Logo --}}
                     <div class="row m-4 divlogo">
-                        {{-- <div class="col-3 logo">
-                            <img class="img-logo" src="/img/logo-navbar2.png" alt="logoccd">
-                            <p>CENTRO PARA</p>
-                            <p>LA COMPETITIVIDAD</p>
-                            <p>Y EL DESARROLLO</p>
-                        </div>
-                        <div class="col-9">
-                            <p> SAD AIO Antamina</p>
-                        </div> --}}
-                        <img src="/img/logo-sad.png" alt="Logo SAD" class="img-fluid">
+                        <img src="/img/logo-sad-w.png"/>
+                        <img class="top" src="/img/logo-sad.png" />
                     </div>
                     {{-- End Logo --}}
                 </a>
@@ -83,9 +75,8 @@
             </nav>
             <div class="container-xxl py-1 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5">
-                    <h1 class="display-3 text-white mb-3 animated titleTrim"><b>Progreso Cierre de Brechas</b>
-                        <br>AIO Antamina
-                    </h1>
+                    <h1 class="display-3 text-white mb-3 animated titleTrim mt-1"><b>Progreso Cierre de Brechas</b></h1>
+                    <h1 class="display-3 text-white mb-3 animated">AIO Antamina - 2T 2022</h1>
                 </div>
             </div>
         </div>
@@ -95,7 +86,6 @@
         <div class="container-xxl py-5">
             <div class="row" id="trimestre-head">
                 <div class="col-10">
-                    <h6 style="float: left; color: rgb(92, 92, 92); padding-left: 5%;">Segundo Trimestre 2022 <br>Reporte, agosto 2022</h6>
                 </div>
                 <div class="col-2">
                     <a class="descargar-btn" href="#descarga">Descargar Reportes</a>
@@ -849,27 +839,18 @@
         <!-- Trimestral End -->
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-6 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Nosotros</h4>
-                        <a class="btn btn-link" href="">Nosotros</a>
-                        <a class="btn btn-link" href="">Contactanos</a>
-                        <a class="btn btn-link" href="">Politica de privacidad</a>
-                        <a class="btn btn-link" href="">Terminos & Condiciones</a>
+                        <p class="col-lg-10">El SAD es un Sistema de Administración del Desarrollo enfocado a la mejora de las municipalidades mediante proyectos de mejora.</p>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>01 612 - 1700</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>melissa.sanchez@competitividadccd.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/Centro-para-la-Competitividad-y-el-Desarrollo-CCD-151040740434523?_rdc=1&_rdr"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://api.whatsapp.com/send?phone=51922753771"><i class="fab fa-whatsapp"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/centro-para-la-competitividad-y-el-desarrollo-434799214/"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="mailto:melissa.sanchez@competitividadccd.com"><i class="fa fa-envelope"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -877,14 +858,14 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">CCD</a>, Todos los derechos reservados. 
-							Desarrollado por <a class="border-bottom" href="https://fernandovaldivia.github.io/about-me/" target="_blank">LValdivia</a> & <a class="border-bottom" href="https://ivanoscco.wixsite.com/my-site" target="_blank">IOscco</a><br><br>
+                            &copy; <a class="border-bottom" href="#">SAD</a>, Sistema de Administración del Desarrollo. Desarrollado por <a class="border-bottom" href="https://fernandovaldivia.github.io/about-me/" target="_blank">LValdivia</a> & <a class="border-bottom" href="https://ivanoscco.wixsite.com/my-site" target="_blank">IOscco</a><br><br>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Footer End -->
+        
     </div>
     {{-- Chat Whatsapp --}}
     <a href="https://api.whatsapp.com/send?phone=51922753771&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20SAD." class="float" target="_blank">

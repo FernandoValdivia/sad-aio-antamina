@@ -15,11 +15,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
-
+    
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
+    
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -56,16 +56,8 @@
                 <a href="/" class="navbar-brand p-0">
                     {{-- Logo --}}
                     <div class="row m-4 divlogo">
-                        {{-- <div class="col-3 logo">
-                            <img class="img-logo" src="/img/logo-navbar2.png" alt="logoccd">
-                            <p>CENTRO PARA</p>
-                            <p>LA COMPETITIVIDAD</p>
-                            <p>Y EL DESARROLLO</p>
-                        </div>
-                        <div class="col-9">
-                            <p> SAD AIO Antamina</p>
-                        </div> --}}
-                        <img src="/img/logo-sad.png" alt="Logo SAD" class="img-fluid">
+                        <img src="/img/logo-sad-w.png"/>
+                        <img class="top" src="/img/logo-sad.png" />
                     </div>
                     {{-- End Logo --}}
                 </a>
@@ -138,22 +130,13 @@
                 <div class="row g-5">
                     <div class="col-lg-6 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Nosotros</h4>
-                        <a class="btn btn-link" href="">Nosotros</a>
-                        <a class="btn btn-link" href="">Contactanos</a>
-                        <a class="btn btn-link" href="">Politica de privacidad</a>
-                        <a class="btn btn-link" href="">Terminos & Condiciones</a>
+                        <p class="col-lg-10">El SAD es un Sistema de Administración del Desarrollo enfocado a la mejora de las municipalidades mediante proyectos de mejora.</p>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>01 612 - 1700</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>melissa.sanchez@competitividadccd.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/Centro-para-la-Competitividad-y-el-Desarrollo-CCD-151040740434523?_rdc=1&_rdr"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://api.whatsapp.com/send?phone=51922753771"><i class="fab fa-whatsapp"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/centro-para-la-competitividad-y-el-desarrollo-434799214/"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="mailto:melissa.sanchez@competitividadccd.com"><i class="fa fa-envelope"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -161,8 +144,7 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">CCD</a>, Todos los derechos reservados. 
-							Desarrollado por <a class="border-bottom" href="https://fernandovaldivia.github.io/about-me/" target="_blank">LValdivia</a> & <a class="border-bottom" href="https://ivanoscco.wixsite.com/my-site" target="_blank">IOscco</a><br><br>
+                            &copy; <a class="border-bottom" href="#">SAD</a>, Sistema de Administración del Desarrollo. Desarrollado por <a class="border-bottom" href="https://fernandovaldivia.github.io/about-me/" target="_blank">LValdivia</a> & <a class="border-bottom" href="https://ivanoscco.wixsite.com/my-site" target="_blank">IOscco</a><br><br>
                         </div>
                     </div>
                 </div>
