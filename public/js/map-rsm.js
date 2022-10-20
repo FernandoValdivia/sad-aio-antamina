@@ -18,8 +18,8 @@ fetch(
         let geojsonlayer = L.geoJson(data, {
             style: style,
             //Configuración popup distrito
-            onEachFeature: function(feature, layer) {
-                layer.bindPopup('<strong>Departamento: </strong>' + feature.properties.NOMBDEP.charAt(0).toUpperCase()+feature.properties.NOMBDEP.slice(1).toLowerCase()+ '</br>' + '<strong>Distrito: </strong>' + feature.properties.NOMBDIST.charAt(0).toUpperCase()+feature.properties.NOMBDIST.slice(1).toLowerCase());
+            onEachFeature: function({properties}, layer) {
+                layer.bindPopup(`<strong>Distrito: </strong> ${properties.NOMBDIST[0].toUpperCase()+properties.NOMBDIST.slice(1).toLowerCase()}`);
             }
         }).addTo(map)
         map.fitBounds(geojsonlayer.getBounds())

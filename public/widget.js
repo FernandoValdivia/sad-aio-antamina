@@ -856,7 +856,7 @@
             zIndex: 2147483647,
             borderRadius: "5px",
             boxSizing: "content-box",
-            boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
+            boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.9)",
             overflow: "hidden"
         },
         r = {
@@ -915,7 +915,7 @@
             width: "60px",
             border: 0,
             borderRadius: "50%",
-            boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)"
+            boxShadow: "0px 0px 20px rgba(0, 0, 0, 1)"
         },
         u = {
             display: "block",

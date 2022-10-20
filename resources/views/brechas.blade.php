@@ -3488,10 +3488,11 @@
                             </div>
                             {{-- Año --}}
                             <div class="row mt-2">
-                                <label id="label2" for="">Año</label>
+                                <label id="label2" for="">Periodo</label>
                                 <select id="year" name="year">
                                     <option value="2021" <?php if(isset($_POST['year'])){ if($_POST['year']=="2021") echo 'selected';}?>>2021</option>
                                     <option value="2022" <?php if(isset($_POST['year'])){ if($_POST['year']=="2022") echo 'selected';}?>>2022</option>
+                                    <option value="22022" <?php if(isset($_POST['year'])){ if($_POST['year']=="22022") echo 'selected';}?>>2T-2022</option>
                                     <option value="2023" <?php if(isset($_POST['year'])){ if($_POST['year']=="2023") echo 'selected';}?>>2023</option>
                                     <option value="2024" <?php if(isset($_POST['year'])){ if($_POST['year']=="2024") echo 'selected';}?>>2024</option>
                                     <option value="2025" <?php if(isset($_POST['year'])){ if($_POST['year']=="2025") echo 'selected';}?>>2025</option>
@@ -8640,21 +8641,6 @@
 
     {{-- Chat Bot --}}
     <script src="widget.js"></script>
-    <script type="text/javascript">
-        var botmanWidget = {
-            frameEndpoint: 'chat.html',
-            headerTextColor: '#fff',
-            bubbleAvatarUrl: '/img/botlogo.png',
-            title: 'Chatea con nosotros!',
-            introMessage: "✋ Hola, ¿En que te podemos ayudar?",
-            aboutText: 'Powered by LFValdivia',
-            aboutLink: 'https://fernandovaldivia.github.io/about-me/',
-            placeholderText: 'Escribe un mensaje...',
-            mainColor: '#0F172B',
-            bubbleBackground: '#0F172B',
-            mobileHeight: '100%',
-            mobileWidth: '100%'
-        };
-    </script>
+    <script src="botman.js"></script>
 </body>
 </html>
