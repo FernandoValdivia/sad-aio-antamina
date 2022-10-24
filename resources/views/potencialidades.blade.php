@@ -42,15 +42,13 @@
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Navbar -->
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
-            <a href="/" class="navbar-brand p-0">
-                {{-- Logo --}}
-                <div class="row m-4 divlogo">
-                    <img src="/img/logo-sad-w.png"/>
-                    <img class="top" src="/img/logo-sad.png" />
-                </div>
-                {{-- End Logo --}}
+            {{-- Logo --}}
+            <a class="navbar-brand" href="/">
+                <img src="img/logo-sad.png" width="90%" class="d-inline-block align-top" alt="">
             </a>
+            {{-- End Logo --}}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
@@ -64,107 +62,93 @@
                     <a href="/potencialidades" class="nav-item nav-link active">Potencialidades</a>
                     <a href="/trimestral" class="nav-item nav-link">Reportes</a>
                 </div>
-            </div>
+            </div> 
         </nav>
-
-            <div class="container-xxl py-1 bg-dark hero-header mb-5">
-                <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Potencialidades</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="/resumen" class="aactiva">Resumen</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Potencialidades</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
         <!-- Navbar End -->
+    </div>
+    <!-- Navbar End -->
 
-        <!-- Potencialidades -->
-        <div id="div-potenc" class="container-xxl py-5">
-            <div class="container-hor">
-                <div class="row g-5 align-items-center">
-                    <div class="row">
-                        <div class="col-8">
-                            <h3>Potencialidades</h3>
-                            <p id="titulo" name="titulo">Cadenas productivas en Huallanca (Bolognesi / Áncash)</p>
-                        </div>
-                        <div class="col-4">
-                            <div class="row" id="select-location">
-                                <label for="location">Unidad territorial</label>
-                                <select name="location" id="location" class="select">
-                                    <option value="AIO">AIO</option>
-                                    <optgroup label="UGT Huallanca">
-                                        @php
-                                        foreach ($ugt_huall as $ugt) {
-                                                echo '<option value="'.$ugt->coords.'" selected>'.$ugt->distrito.'</option>';
-                                        }
-                                        @endphp
-                                    </optgroup>
-                                    <optgroup label="UGT Huarmey">
-                                        @php
-                                        foreach ($ugt_huarmey as $ugt) {
-                                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                        }
-                                        @endphp
-                                    </optgroup>
-                                    <optgroup label="UGT Mina / San Marcos">
-                                        @php
-                                        foreach ($ugt_mina as $ugt) {
-                                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                        }
-                                        @endphp
-                                    </optgroup>
-                                    <optgroup label="UGT Valle Fortaleza">
-                                        @php
-                                        foreach ($ugt_valle as $ugt) {
-                                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                        }
-                                        @endphp
-                                    </optgroup>
-                                </select>
-                            </div>
+    <!-- Potencialidades -->
+    <div id="div-potenc" class="container-xxl py-5">
+        <div class="container-hor">
+            <div class="row g-5 align-items-center">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Potencialidades</h3>
+                        <p id="titulo" name="titulo">Cadenas productivas en Huallanca (Bolognesi / Áncash)</p>
+                    </div>
+                    <div class="col-4">
+                        <div class="row" id="select-location">
+                            <label for="location">Unidad territorial</label>
+                            <select name="location" id="location" class="select">
+                                <option value="AIO">AIO</option>
+                                <optgroup label="UGT Huallanca">
+                                    @php
+                                    foreach ($ugt_huall as $ugt) {
+                                            echo '<option value="'.$ugt->coords.'" selected>'.$ugt->distrito.'</option>';
+                                    }
+                                    @endphp
+                                </optgroup>
+                                <optgroup label="UGT Huarmey">
+                                    @php
+                                    foreach ($ugt_huarmey as $ugt) {
+                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                    }
+                                    @endphp
+                                </optgroup>
+                                <optgroup label="UGT Mina / San Marcos">
+                                    @php
+                                    foreach ($ugt_mina as $ugt) {
+                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                    }
+                                    @endphp
+                                </optgroup>
+                                <optgroup label="UGT Valle Fortaleza">
+                                    @php
+                                    foreach ($ugt_valle as $ugt) {
+                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                                    }
+                                    @endphp
+                                </optgroup>
+                            </select>
                         </div>
                     </div>
-                    <div class="row mb-2" id="img-map">
-                        {{-- Imagen --}}
-                        <img src="/img/potencialidad/distrito/huallanca.png" alt="Potencialidades"  id="img-potencialidad">
-                        {{-- Mapa --}}
-                        <div id="map-pt"></div>
+                </div>
+                <div class="row mb-2" id="img-map">
+                    {{-- Imagen --}}
+                    <img src="/img/potencialidad/distrito/huallanca.png" alt="Potencialidades"  id="img-potencialidad">
+                    {{-- Mapa --}}
+                    <div id="map-pt"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Potencialidades End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-12">
+                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>melissa.sanchez@competitividadccd.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-12 text-center text-center mb-3 mb-md-0">
+                        <a href="/">SAD</a> (Sistema de Administración del Desarrollo)
+                        <p>&copy; 2022 | Todos los derechos reservados.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Potencialidades End -->
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-6 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Nosotros</h4>
-                        <p class="col-lg-10">El SAD es un Sistema de Administración del Desarrollo enfocado a la mejora de las municipalidades mediante proyectos de mejora.</p>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>melissa.sanchez@competitividadccd.com</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">SAD</a>, Sistema de Administración del Desarrollo. Desarrollado por <a class="border-bottom" href="https://fernandovaldivia.github.io/about-me/" target="_blank">LValdivia</a> & <a class="border-bottom" href="https://ivanoscco.wixsite.com/my-site" target="_blank">IOscco</a><br><br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
+    </div>
+    <!-- Footer End -->
         
     </div>
     {{-- Chat Whatsapp --}}

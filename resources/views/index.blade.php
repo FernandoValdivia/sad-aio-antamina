@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>SAD AIO Antamina</title>
@@ -53,14 +52,11 @@
         <div class="container-xxl position-relative p-0">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
-                <a href="/" class="navbar-brand p-0">
-                    {{-- Logo --}}
-                    <div class="row m-4 divlogo">
-                        <img src="/img/logo-sad-w.png"/>
-                        <img class="top" src="/img/logo-sad.png" />
-                    </div>
-                    {{-- End Logo --}}
+                {{-- Logo --}}
+                <a class="navbar-brand" href="/">
+                    <img src="img/logo-sad.png" width="90%" class="d-inline-block align-top" alt="">
                 </a>
+                {{-- End Logo --}}
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
@@ -74,7 +70,7 @@
                         <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>
                         <a href="/trimestral" class="nav-item nav-link">Reportes</a>
                     </div>
-                </div>
+                </div> 
             </nav>
             <!-- Navbar End -->
             <!-- Index -->
@@ -98,11 +94,11 @@
 
                 <div class="slider-wrapper theme-mi-slider">
                     <div id="slider" class="nivoSlider">     
-                        <img src="/img/1.png" alt="" title="#htmlcaption1" />    
-                        <img src="/img/2.png" alt="" title="#htmlcaption2" />    
-                        <img src="/img/3.png" alt="" title="#htmlcaption3" />
-                        <img src="/img/4.png" alt="" title="#htmlcaption4" />
-                        <img src="/img/5.png" alt="" title="#htmlcaption5" />
+                        <img src="/img/1.webp" alt="" title="#htmlcaption1" />    
+                        <img src="/img/2.webp" alt="" title="#htmlcaption2" />    
+                        <img src="/img/3.webp" alt="" title="#htmlcaption3" />
+                        <img src="/img/4.webp" alt="" title="#htmlcaption4" />
+                        <img src="/img/5.webp" alt="" title="#htmlcaption5" />
                     </div>
                     <div id="htmlcaption1" class="nivo-html-caption">
                         <h1>Sistema de Administración <br> del Desarrollo</h1>
@@ -128,11 +124,7 @@
         <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
-                    <div class="col-lg-6 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Nosotros</h4>
-                        <p class="col-lg-10">El SAD es un Sistema de Administración del Desarrollo enfocado a la mejora de las municipalidades mediante proyectos de mejora.</p>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-12">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
@@ -143,8 +135,9 @@
             <div class="container">
                 <div class="copyright">
                     <div class="row">
-                        <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">SAD</a>, Sistema de Administración del Desarrollo. Desarrollado por <a class="border-bottom" href="https://fernandovaldivia.github.io/about-me/" target="_blank">LValdivia</a> & <a class="border-bottom" href="https://ivanoscco.wixsite.com/my-site" target="_blank">IOscco</a><br><br>
+                        <div class="col-md-12 text-center text-center mb-3 mb-md-0">
+                            <a href="/">SAD</a> (Sistema de Administración del Desarrollo)
+                            <p>&copy; 2022 | Todos los derechos reservados.</p>
                         </div>
                     </div>
                 </div>

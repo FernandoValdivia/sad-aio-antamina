@@ -45,15 +45,13 @@
     <div class="container-xxl bg-white p-0">
         <!-- Navbar -->
         <div class="container-xxl position-relative p-0">
+            <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
-                <a href="/" class="navbar-brand p-0">
-                    {{-- Logo --}}
-                    <div class="row m-4 divlogo">
-                        <img src="/img/logo-sad-w.png"/>
-                        <img class="top" src="/img/logo-sad.png" />
-                    </div>
-                    {{-- End Logo --}}
+                {{-- Logo --}}
+                <a class="navbar-brand" href="/">
+                    <img src="img/logo-sad.png" width="90%" class="d-inline-block align-top" alt="">
                 </a>
+                {{-- End Logo --}}
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
@@ -67,20 +65,9 @@
                         <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>
                         <a href="/trimestral" class="nav-item nav-link">Reportes</a>
                     </div>
-                </div>
+                </div> 
             </nav>
-
-            <div class="container-xxl py-1 bg-dark hero-header mb-5">
-                <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Brechas</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="/resumen" class="aactiva">Resumen</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Brechas</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+            <!-- Navbar End -->
         </div>
         <!-- Navbar End -->
         <!-- Brechas Start -->
@@ -3490,22 +3477,22 @@
                             <div class="row mt-2">
                                 <label id="label2" for="">Periodo</label>
                                 <select id="year" name="year">
-                                    <option value="2021" <?php if(isset($_POST['year'])){ if($_POST['year']=="2021") echo 'selected';}?>>2021</option>
-                                    <option value="2022" <?php if(isset($_POST['year'])){ if($_POST['year']=="2022") echo 'selected';}?>>2022</option>
+                                    <option value="2021" <?php if(isset($_POST['year'])){ if($_POST['year']=="2021") echo 'selected';}?>><strong>2021 (Línea de base)</strong></option>
                                     <option value="22022" <?php if(isset($_POST['year'])){ if($_POST['year']=="22022") echo 'selected';}?>>2T-2022</option>
                                     <option value="32022" <?php if(isset($_POST['year'])){ if($_POST['year']=="32022") echo 'selected';}?>>3T-2022</option>
+                                    <option value="2022" <?php if(isset($_POST['year'])){ if($_POST['year']=="2022") echo 'selected';}?>>2022</option>
                                     <option value="2023" <?php if(isset($_POST['year'])){ if($_POST['year']=="2023") echo 'selected';}?>>2023</option>
                                     <option value="2024" <?php if(isset($_POST['year'])){ if($_POST['year']=="2024") echo 'selected';}?>>2024</option>
                                     <option value="2025" <?php if(isset($_POST['year'])){ if($_POST['year']=="2025") echo 'selected';}?>>2025</option>
                                     <option value="2026" <?php if(isset($_POST['year'])){ if($_POST['year']=="2026") echo 'selected';}?>>2026</option>
                                 </select>
                             </div>
-                            {{-- Impacto Antamina --}}
+                            {{-- Impactos --}}
                             <div class="row mt-2">
-                                <label for="imp">Impacto Antamina</label>
+                                <label for="imp">Impactos</label>
                                 <select id="impacto" name="impacto">
-                                    <option value="Con impacto" <?php if (isset($_POST['impacto'])){ if($_POST['impacto']=="Con impacto") echo 'selected';}?>>Con impacto</option>
-                                    <option value="Sin impacto" <?php if (isset($_POST['impacto'])){ if($_POST['impacto']=="Sin impacto") echo 'selected';}?>>Sin impacto</option>
+                                    <option value="Con impacto" <?php if (isset($_POST['impacto'])){ if($_POST['impacto']=="Con impacto") echo 'selected';}?>>Con Antamina</option>
+                                    <option value="Sin impacto" <?php if (isset($_POST['impacto'])){ if($_POST['impacto']=="Sin impacto") echo 'selected';}?>>Sin Antamina</option>
                                 </select>
                             </div>
                             {{-- Boton --}}
@@ -8588,11 +8575,7 @@
         <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
-                    <div class="col-lg-6 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Nosotros</h4>
-                        <p class="col-lg-10">El SAD es un Sistema de Administración del Desarrollo enfocado a la mejora de las municipalidades mediante proyectos de mejora.</p>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-12">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
@@ -8603,8 +8586,9 @@
             <div class="container">
                 <div class="copyright">
                     <div class="row">
-                        <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">SAD</a>, Sistema de Administración del Desarrollo. Desarrollado por <a class="border-bottom" href="https://fernandovaldivia.github.io/about-me/" target="_blank">LValdivia</a> & <a class="border-bottom" href="https://ivanoscco.wixsite.com/my-site" target="_blank">IOscco</a><br><br>
+                        <div class="col-md-12 text-center text-center mb-3 mb-md-0">
+                            <a href="/">SAD</a> (Sistema de Administración del Desarrollo)
+                            <p>&copy; 2022 | Todos los derechos reservados.</p>
                         </div>
                     </div>
                 </div>

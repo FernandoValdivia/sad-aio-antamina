@@ -1,8 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #2271da;
+    --sadcolor: #2271da; 
+    --primary: rgb(0,78,89);
     --light: #f1f8ff;
-    --dark: #1c58a7;
+    --dark: #122b4d;
     --secondary: #377fdd;
 }
 
@@ -47,7 +48,7 @@
 
 /* */
 ol li .aactiva {
-    color: #2271da;
+    color: var(--primary);
 }
 
 /* logo */
@@ -55,7 +56,7 @@ ol li .aactiva {
     position: relative;
     align-items: center;
     height: 80px;
-    width: 280px;
+    width: 340px;
 }
 
 .divlogo img {
@@ -130,24 +131,21 @@ section[id] {
 }
 
 .trim h2 {
-    color: #2271da;
+    color: var(--primary);
     font-weight: bold;
 }
 
 .descargar-btn {
     border: none;
-    border-radius: 5px;
+    border-radius: 45px;
     padding: 10px 30px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    display: grid;
     margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
     cursor: pointer;
+    color: var(--primary);
     background-color: white;
-    color: black;
     border: 2px solid #e7e7e7;
 }
 
@@ -1645,6 +1643,7 @@ th.style16 {
 }
 
 .grid-container {
+    padding: 7% 0px;
     display: grid;
     gap: 10px;
     grid-template-columns: 12% 13% 11% 17% 9% 8% 10% 8% auto;
@@ -2926,7 +2925,7 @@ strong {
 
 body, html {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fff;
+    background-color: rgb(255,255,255);
     background-image: url('') !important;
 }
 
@@ -3334,19 +3333,23 @@ h6 {
     padding: 10px 100px 10px;
 }
 
+.container-fluid-py {
+    padding: 7% 100px 10px;
+}
+
 .container-fluid p #referencia {
     font-size: small;
     color: #000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.container-fluid h5 {
+.container-fluid-py h5 {
     color: #000;
     font-weight: 100;
 }
 
 .container-fluid-rsm {
-    padding: 10px 100px 10px;
+    padding: 7% 100px;
 }
 
 #card {
@@ -3705,9 +3708,9 @@ div .legendp img {
     margin-top: 0px !important;
 }
 
- /* Resposive Design */
- /* Proyectos */
- @media screen and (max-width:990px) {
+/* Resposive Design */
+/* Proyectos */
+@media screen and (max-width:990px) {
     div div .end-form {
         align-items: flex-end;
     }
@@ -3727,9 +3730,9 @@ div .legendp img {
     }
 
     #container-proy {
-        padding: 0% 3% 0% 10%;
+        padding: 7% 0px !important;
     }
-    
+
     div .row div .graph-btn {
         background-color: #fff;
         border: #ddebfc 3px solid;
@@ -3737,24 +3740,24 @@ div .legendp img {
         padding: 6px 10px 6px;
         color: #000;
     }
-    
+
     div .row div .graph-btn:hover {
         color: #000;
         background-color: #ddebfc;
     }
-    
+
     div .row .pt-3 {
         margin: 0;
     }
-    
+
     div form {
         display: flex;
     }
-    
+
     div form div {
         padding: 0 1% 0 1%;
     }
-    
+
     div form div input {
         padding: 1%;
         color: #000;
@@ -3768,47 +3771,48 @@ div .legendp img {
         height: auto;
         padding-bottom: 100%;
     }
-    
+
     #mapproy {
         width: 100%;
         height: 120%;
     }
-    
+
     #row-card {
         padding: 1% 8% 1% 0px;
         margin-top: 1%;
         height: 30%;
         width: auto;
     }
-    
+
     #row-card h2 {
         margin-bottom: 6%;
     }
-    
+
     #card-info {
         height: 200%;
     }
-    
+
     #card-info h2 {
         font-size: 3rem;
         font-weight: 400;
     }
-    
+
     #card-info small {
         margin-top: 0;
         margin-bottom: 2%;
     }
- }
+    }
 
- @media screen and (max-width:360px) {
+    @media screen and (max-width:360px) {
     #card-info {
         height: 180%;
     }
 
     #proy-card {
-        padding-bottom: 130%;
+        padding-bottom: 100%;
     }
- }
+}
+
 
 /* descarga flotante */
 .btn-flotante {
@@ -3961,7 +3965,7 @@ div .col-4 select {
 }
 
 .dwnld-div a:hover {
-    color: #2271da;
+    color: var(--primary);
 }
 
 .dwnld-re {
@@ -3969,6 +3973,15 @@ div .col-4 select {
 }
 
 .container-hor {
+    padding-top: 7%;
+    width: 90%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-trim {
     width: 90%;
     padding-right: var(--bs-gutter-x, 0.75rem);
     padding-left: var(--bs-gutter-x, 0.75rem);
@@ -4040,7 +4053,7 @@ div .col-3 select {
 }
 
 .link:hover {
-    color: #2271da;
+    color: var(--primary);
 }
 
 .link svg {
@@ -4082,14 +4095,8 @@ div .col-3 select {
 .navbar-dark .navbar-nav .nav-link {
     position: relative;
     margin-left: 25px;
-    padding: 35px 0;
-    font-size: 15px;
+    padding: 25px 0px 20px 0px;
     color: var(--light) !important;
-    text-transform: initial;
-    font-weight: bolder;
-    outline: none;
-    transition: 0.5s;
-    text-shadow: 0 0 3px #000, 0 0 5px #CCC;
 }
 
 .second-nav {
@@ -4102,8 +4109,8 @@ div .col-3 select {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    text-shadow: none !important;
-    color: var(--primary) !important;
+    text-decoration: underline;
+    color: var(--sadcolor) !important;
 }
 
 .navbar-dark .navbar-brand img {
@@ -4164,10 +4171,14 @@ div .col-3 select {
     .container-fluid {
         padding: 10px 50px 10px;
     }
+
+    .container-fluid-py {
+        padding: 10px 50px 10px;
+    }
 }
 
 .actual {
-    color: #2271da;
+    color: var(--primary);
     font-weight: bolder;
 }
 
@@ -4178,7 +4189,9 @@ div .col-3 select {
         top: 0;
         left: 0;
         z-index: 999;
-        background: transparent !important;
+        background: rgb(0,78,89) !important;
+        box-shadow: inset 0 -3em 3em rgb(0 0 0 / 5%), 0.3em 0.3em 1em rgb(0 0 0 / 30%);
+        border-radius: 0px 0px 10px 10px;
     }
 
     .navbar-dark2 {
@@ -4189,11 +4202,11 @@ div .col-3 select {
         z-index: 999;
         padding: 10px 0 0 0;
         margin-top: 90px;
-        background: transparent !important;
+        background: rgb(0,78,89) !important;
     }
 
     .sticky-top.navbar-dark {
-        position: fixed;
+        position: absolute;
         /* background: rgba(0, 0, 0, 0.3); */
     }
 
@@ -4209,7 +4222,7 @@ div .col-3 select {
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgb(185 203 246 / 90%), #2271da), url(/img/Ancash2.jpg);
+    background: linear-gradient(rgb(185 203 246 / 90%), var(--primary)), url(/img/Ancash2.jpg);
     /* background: linear-gradient(rgba(15, 23, 43, 0.9), #17304af2); */
     background-position: center center;
     background-repeat: no-repeat;

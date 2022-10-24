@@ -39,15 +39,13 @@
     <div class="container-xxl bg-white p-0">
         <!-- Navbar -->
         <div class="container-xxl position-relative p-0 bg-black">
+            <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
-                <a href="/" class="navbar-brand p-0">
-                    {{-- Logo --}}
-                    <div class="row m-4 divlogo">
-                        <img src="/img/logo-sad-w.png"/>
-                        <img class="top" src="/img/logo-sad.png" />
-                    </div>
-                    {{-- End Logo --}}
+                {{-- Logo --}}
+                <a class="navbar-brand" href="/">
+                    <img src="img/logo-sad.png" width="90%" class="d-inline-block align-top" alt="">
                 </a>
+                {{-- End Logo --}}
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
@@ -61,9 +59,11 @@
                         <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>
                         <a href="/trimestral" class="nav-item nav-link active">Reportes</a>
                     </div>
-                </div>
+                </div> 
             </nav>
-            <nav class="navbar navbar-expand-lg navbar-dark2 second-nav navigation">
+            <!-- Navbar End -->
+            {{-- Navbar2 --}}
+            {{-- <nav class="navbar navbar-expand-lg navbar-dark2 second-nav navigation">
                 <ul class="breadcrumb justify-content-center collapse navbar-collapse">
                     <li class="breadcrumb-item"><a href="#introduccion">Introducción</a></li>
                     <li class="breadcrumb-item text-white" aria-current="page"><a href="#resumen">Resumen</a></li>
@@ -72,9 +72,9 @@
                     <li class="breadcrumb-item text-white" aria-current="page"><a href="#proyeccion">Proyección</a></li>
                     <li class="breadcrumb-item text-white" aria-current="page"><a href="#distritos">Distritos</a></li>
                 </ul>
-            </nav>
+            </nav> --}}
             <div class="container-xxl py-1 bg-dark hero-header mb-5">
-                <div class="container text-center my-5 pt-5">
+                <div class="container text-center my-5">
                     <h1 class="display-3 text-white mb-3 animated titleTrim mt-1"><b>Progreso Cierre de Brechas</b></h1>
                     <h1 class="display-3 text-white mb-3 animated">AIO Antamina - 2T 2022</h1>
                 </div>
@@ -83,15 +83,15 @@
         <!-- Navbar End -->
 
         <!-- Trimestral Start -->      
-        <div class="container-xxl py-5">
+        <div class="container-xxl">
             <div class="row" id="trimestre-head">
                 <div class="col-10">
                 </div>
                 <div class="col-2">
-                    <a class="descargar-btn" href="#descarga">Descargar Reportes</a>
+                    <a class="descargar-btn" href="#descarga"><i class="fas fa-cloud-download-alt"></i> Descargar Reportes</a>
                 </div>
             </div>
-            <div class="container-hor trim">
+            <div class="container-trim trim">
                 {{-- Introducción --}}
                 <section id="introduccion">
                     <div class="row text-center">
@@ -834,6 +834,7 @@
                         </tr>
                     </table>
                 </section>
+                <br>
             </div>
         </div>
         <!-- Trimestral End -->
@@ -842,11 +843,7 @@
         <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
-                    <div class="col-lg-6 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Nosotros</h4>
-                        <p class="col-lg-10">El SAD es un Sistema de Administración del Desarrollo enfocado a la mejora de las municipalidades mediante proyectos de mejora.</p>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-12">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
@@ -857,8 +854,9 @@
             <div class="container">
                 <div class="copyright">
                     <div class="row">
-                        <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">SAD</a>, Sistema de Administración del Desarrollo. Desarrollado por <a class="border-bottom" href="https://fernandovaldivia.github.io/about-me/" target="_blank">LValdivia</a> & <a class="border-bottom" href="https://ivanoscco.wixsite.com/my-site" target="_blank">IOscco</a><br><br>
+                        <div class="col-md-12 text-center text-center mb-3 mb-md-0">
+                            <a href="/">SAD</a> (Sistema de Administración del Desarrollo)
+                            <p>&copy; 2022 | Todos los derechos reservados.</p>
                         </div>
                     </div>
                 </div>

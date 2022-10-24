@@ -76,11 +76,7 @@
         <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
-                    <div class="col-lg-6 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Nosotros</h4>
-                        <p class="col-lg-10">El SAD es un Sistema de Administración del Desarrollo enfocado a la mejora de las municipalidades mediante proyectos de mejora.</p>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-12">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
@@ -91,8 +87,9 @@
             <div class="container">
                 <div class="copyright">
                     <div class="row">
-                        <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">SAD</a>, Sistema de Administración del Desarrollo. Desarrollado por <a class="border-bottom" href="https://fernandovaldivia.github.io/about-me/" target="_blank">LValdivia</a> & <a class="border-bottom" href="https://ivanoscco.wixsite.com/my-site" target="_blank">IOscco</a><br><br>
+                        <div class="col-md-12 text-center text-center mb-3 mb-md-0">
+                            <a href="/">SAD</a> (Sistema de Administración del Desarrollo)
+                            <p>&copy; 2022 | Todos los derechos reservados.</p>
                         </div>
                     </div>
                 </div>

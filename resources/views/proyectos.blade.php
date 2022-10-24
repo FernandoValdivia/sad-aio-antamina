@@ -44,15 +44,13 @@
     <div class="container-xxl bg-white p-0">
         <!-- Navbar -->
         <div class="container-xxl position-relative p-0">
+            <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
-                <a href="/" class="navbar-brand p-0">
-                    {{-- Logo --}}
-                    <div class="row m-4 divlogo">
-                        <img src="/img/logo-sad-w.png"/>
-                        <img class="top" src="/img/logo-sad.png" />
-                    </div>
-                    {{-- End Logo --}}
+                {{-- Logo --}}
+                <a class="navbar-brand" href="/">
+                    <img src="img/logo-sad.png" width="90%" class="d-inline-block align-top" alt="">
                 </a>
+                {{-- End Logo --}}
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
@@ -66,27 +64,16 @@
                         <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>
                         <a href="/trimestral" class="nav-item nav-link">Reportes</a>
                     </div>
-                </div>
+                </div> 
             </nav>
-
-            <div class="container-xxl py-1 bg-dark hero-header mb-5">
-                <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Proyectos</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="/resumen" class="aactiva">Resumen</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Proyectos</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+            <!-- Navbar End -->
         </div>
         <!-- Navbar End -->
 
         <!-- Proyectos Start -->
         <div class="container-xxl py-5">
-            <div class="container-fluid" id="container-proy">
-                <div class="row g-5 align-items-center">
+            <div class="container-fluid-py" id="container-proy">
+                <div class="row g-4 align-items-center">
                     <div class="row text-center">
                         <h3>Proyectos para el cierre de brechas y puesta en valor las potencialidades</h3>
                         <p>(Descripción)</p>
@@ -171,14 +158,16 @@
                                         </select>
                                     </div>
                                 </div>
-                                {{-- Año --}}
+                                {{-- Periodo --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label id="label" for="year">Año</label>
+                                        <label id="label" for="year">Periodo</label>
                                         <select id="year" name="year">
                                             <option value="Todos">Todos</option>
                                             <option value="2020" <?php if(isset($_POST['year'])){ if($_POST['year']=="2020") echo 'selected';}?>>2020</option>
                                             <option value="2021" <?php if(isset($_POST['year'])){ if($_POST['year']=="2021") echo 'selected';}?>>2021</option>
+                                            <option value="2022" <?php if(isset($_POST['year'])){ if($_POST['year']=="2022") echo 'selected';}?>>2T-2022</option>
+                                            <option value="2022" <?php if(isset($_POST['year'])){ if($_POST['year']=="2022") echo 'selected';}?>>3T-2022</option>
                                             <option value="2022" <?php if(isset($_POST['year'])){ if($_POST['year']=="2022") echo 'selected';}?>>2022</option>
                                             <option value="2023" <?php if(isset($_POST['year'])){ if($_POST['year']=="2023") echo 'selected';}?>>2023</option>
                                             <option value="2024" <?php if(isset($_POST['year'])){ if($_POST['year']=="2024") echo 'selected';}?>>2024</option>
@@ -364,103 +353,7 @@
                     <p><b>Nota:</b> Short Term: 2022 / Medium Term: 2023 / Long Term: al 2026</p>
                     <p class="ptop"><sup>1/</sup> Proyectos y/o intervenciones</p>
                     <hr>
-                    {{-- <a href="#" class="btn-flotante">PDF 1</a>
-                    <a href="#" class="btn-flotante2">PDF 2</a> --}}
-                    <!--
-                    <div class="row text-center">
-                        <h3>Cierre de brechas</h3>
-                        <p>(S/ millones)</p>
-                        <div class="row text-center">
-                            <form action="#"  class="end-form">
-                                @csrf
-                                {{-- Unidad territorial --}}
-                                <div class="col-3">
-                                    <div class="row"  id="select-location">
-                                    <label id="label" for="location">Unidad territorial</label>
-                                    <select id="location" name="location" class="select">
-                                        <option value="AIO">AIO</option>
-                                        <optgroup label="UGT Huallanca">
-                                            @foreach ($ugt_huall as $ugt)
-                                            @php
-                                                $value = $ugt->coords.",".$ugt->distrito;
-                                            @endphp
-                                            <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                            @endforeach
-                                        </optgroup>
-                                        <optgroup label="UGT Huarmey">
-                                            @foreach ($ugt_huarmey as $ugt)
-                                            @php
-                                                $value = $ugt->coords.",".$ugt->distrito;
-                                            @endphp
-                                            <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                            @endforeach
-                                        </optgroup>
-                                        <optgroup label="UGT Mina / San Marcos">
-                                            @foreach ($ugt_mina as $ugt)
-                                            @php
-                                                $value = $ugt->coords.",".$ugt->distrito;
-                                            @endphp
-                                            <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                            @endforeach
-                                        </optgroup>
-                                        <optgroup label="UGT Valle Fortaleza">
-                                            @foreach ($ugt_valle as $ugt)
-                                            @php
-                                                $value = $ugt->coords.",".$ugt->distrito;
-                                            @endphp
-                                            <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                            @endforeach
-                                        </optgroup>
-                                    </select>
-                                    </div> 
-                                </div>
-                                {{-- Modalidad de intervención --}}
-                                <div class="col-3">
-                                    <div class="row">
-                                        <label id="label" for="modalidad2">Modalidad de intervención</label>
-                                        <select id="modalidad" name="modalidad2">
-                                            <option value="Todas">Todas</option>
-                                            <option value="Inversión Pública (GL/GR/GN)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Pública (GL/GR/GN)") echo 'selected';}?>>Inversión Pública (GL/GR/GN)</option>
-                                            <option value="Inversión Social Directa Antamina: CAPEX" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Directa Antamina: CAPEX") echo 'selected';}?>>Inversión Social Directa Antamina: CAPEX</option>
-                                            <option value="Inversión Social Directa Antamina: OPEX" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Directa Antamina: OPEX") echo 'selected';}?>>Inversión Social Directa Antamina: OPEX</option>
-                                            <option value="Inversión Social Gestión Pública y Privada(Obras por impuesto)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Gestión Pública y Privada(Obras por impuesto)") echo 'selected';}?>>Inversión Social Gestión Pública y Privada(Obras por impuesto)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                {{-- Proyecto --}}
-                                <div class="col-3">
-                                    <div class="row">
-                                        <label id="label" for="proyectos">Proyectos</label>
-                                        <select id="proyectos" name="proyectos">
-                                            <option value="Todos">Todos</option>
-                                            @foreach ($proyectos as $p)
-                                            <option value="{{ $p->producto_proyecto }}" <?php if (isset($_POST['proyectos'])){ if($_POST['proyectos']==$value) echo 'selected';}?>>{{ $p->producto_proyecto }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                                {{-- Botón filtrar --}}
-                                <div class="col-3">
-                                    <div class="row mt-2">
-                                        <input class="graph-btn" type="button" value="Buscar">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="row pt-5">
-                            <div class="col-4">
-                                <canvas id="chartIndicador" height="350"></canvas>
-                            </div>
-                            <div class="col-4">
-                                <canvas id="chartDistrito" height="350"></canvas>
-                            </div>
-                            <div class="col-4">
-                                <canvas id="chartAIO" height="350"></canvas>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <hr> -->
+                    
                     <div class="row dwnld-div">
                         <a href="/descargar-proyectos">
                             <svg class="dwnld-re" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="#FFF" stroke-miterlimit="10" stroke-width="2">
@@ -482,11 +375,7 @@
         <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
-                    <div class="col-lg-6 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Nosotros</h4>
-                        <p class="col-lg-10">El SAD es un Sistema de Administración del Desarrollo enfocado a la mejora de las municipalidades mediante proyectos de mejora.</p>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-12">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
@@ -497,8 +386,9 @@
             <div class="container">
                 <div class="copyright">
                     <div class="row">
-                        <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">SAD</a>, Sistema de Administración del Desarrollo. Desarrollado por <a class="border-bottom" href="https://fernandovaldivia.github.io/about-me/" target="_blank">LValdivia</a> & <a class="border-bottom" href="https://ivanoscco.wixsite.com/my-site" target="_blank">IOscco</a><br><br>
+                        <div class="col-md-12 text-center text-center mb-3 mb-md-0">
+                            <a href="/">SAD</a> (Sistema de Administración del Desarrollo)
+                            <p>&copy; 2022 | Todos los derechos reservados.</p>
                         </div>
                     </div>
                 </div>
