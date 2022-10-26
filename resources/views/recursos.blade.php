@@ -163,7 +163,7 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-12 text-center text-center mb-3 mb-md-0">
-                            <a href="/">SAD</a> (Sistema de Administración del Desarrollo)
+                            <a href="/">SAD</a>, Sistema de Administración del Desarrollo
                             <p>&copy; 2022 | Todos los derechos reservados.</p>
                         </div>
                     </div>
