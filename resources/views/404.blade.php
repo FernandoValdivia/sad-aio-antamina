@@ -39,7 +39,6 @@
                 <a href="/" class="navbar-brand p-0">
                     {{-- Logo --}}
                     <div class="row m-4 divlogo">
-                        <img src="/img/logo-sad-w.png"/>
                         <img class="top" src="/img/logo-sad.png" />
                     </div>
                     {{-- End Logo --}}

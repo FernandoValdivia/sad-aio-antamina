@@ -270,7 +270,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     } else {
                                                         //Promedio de brechas de X distrito
                                                         $location = $_POST['location'];
@@ -280,7 +280,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     }
                                                 //solo año
                                                 } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
@@ -290,7 +290,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     } else {
                                                         //brechas por año
                                                         $anio = $_POST['years'];
@@ -298,7 +298,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     }
                                                 //distrito y año
                                                 } else {
@@ -311,7 +311,7 @@
                                                     $total = DB::table('brechasbd')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    echo number_format($total,0);
+                                                    echo number_format($total,1);
                                                 }
                                             } else {
                                                 //Promedio total
@@ -319,7 +319,7 @@
                                                 $total = DB::table('brechasbd')
                                                     ->where($query)
                                                     ->avg('porcentaje');
-                                                echo number_format($total,0);
+                                                echo number_format($total,1);
                                             }
                                         ?>
                                     </h5>
@@ -340,7 +340,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     } else {
                                                         //Promedio de brechas de X distrito
                                                         $location = $_POST['location'];
@@ -350,7 +350,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     }
                                                 //solo año
                                                 } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
@@ -360,7 +360,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     } else {
                                                         //brechas por año
                                                         $anio = $_POST['years'];
@@ -368,7 +368,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     }
                                                 //distrito y año
                                                 } else {
@@ -381,7 +381,7 @@
                                                     $total = DB::table('brechasbd')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    echo number_format($total,0);
+                                                    echo number_format($total,1);
                                                 }
                                             } else {
                                                 //Promedio total
@@ -389,7 +389,7 @@
                                                 $total = DB::table('brechasbd')
                                                     ->where($query)
                                                     ->avg('porcentaje');
-                                                echo number_format($total,0);
+                                                echo number_format($total,1);
                                             }
                                         ?>
                                     </p>
@@ -410,7 +410,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     } else {
                                                         //Promedio de brechas de X distrito
                                                         $location = $_POST['location'];
@@ -420,7 +420,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     }
                                                 //solo año
                                                 } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
@@ -430,7 +430,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     } else {
                                                         //brechas por año
                                                         $anio = $_POST['years'];
@@ -438,7 +438,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     }
                                                 //distrito y año
                                                 } else {
@@ -451,7 +451,7 @@
                                                     $total = DB::table('brechasbd')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    echo number_format($total,0);
+                                                    echo number_format($total,1);
                                                 }
                                             } else {
                                                 //Promedio total
@@ -459,7 +459,7 @@
                                                 $total = DB::table('brechasbd')
                                                     ->where($query)
                                                     ->avg('porcentaje');
-                                                echo number_format($total,0);
+                                                echo number_format($total,1);
                                             }
                                         ?>
                                     </p>
@@ -480,7 +480,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     } else {
                                                         //Promedio de brechas de X distrito
                                                         $location = $_POST['location'];
@@ -490,7 +490,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     }
                                                 //solo año
                                                 } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
@@ -500,7 +500,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     } else {
                                                         //brechas por año
                                                         $anio = $_POST['years'];
@@ -508,7 +508,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     }
                                                 //distrito y año
                                                 } else {
@@ -521,7 +521,7 @@
                                                     $total = DB::table('brechasbd')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    echo number_format($total,0);
+                                                    echo number_format($total,1);
                                                 }
                                             } else {
                                                 //Promedio total
@@ -529,7 +529,7 @@
                                                 $total = DB::table('brechasbd')
                                                     ->where($query)
                                                     ->avg('porcentaje');
-                                                echo number_format($total,0);
+                                                echo number_format($total,1);
                                             }
                                         ?>
                                     </p>
@@ -550,7 +550,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     } else {
                                                         //Promedio de brechas de X distrito
                                                         $location = $_POST['location'];
@@ -560,7 +560,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     }
                                                 //solo año
                                                 } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
@@ -570,7 +570,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     } else {
                                                         //brechas por año
                                                         $anio = $_POST['years'];
@@ -578,7 +578,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     }
                                                 //distrito y año
                                                 } else {
@@ -591,7 +591,7 @@
                                                     $total = DB::table('brechasbd')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    echo number_format($total,0);
+                                                    echo number_format($total,1);
                                                 }
                                             } else {
                                                 //Promedio total
@@ -599,7 +599,7 @@
                                                 $total = DB::table('brechasbd')
                                                     ->where($query)
                                                     ->avg('porcentaje');
-                                                echo number_format($total,0);
+                                                echo number_format($total,1);
                                             }
                                         ?>
                                     </p>
@@ -620,7 +620,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     } else {
                                                         //Promedio de brechas de X distrito
                                                         $location = $_POST['location'];
@@ -630,7 +630,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     }
                                                 //solo año
                                                 } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
@@ -640,7 +640,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     } else {
                                                         //brechas por año
                                                         $anio = $_POST['years'];
@@ -648,7 +648,7 @@
                                                         $total = DB::table('brechasbd')
                                                             ->where($query)
                                                             ->avg('porcentaje');
-                                                        echo number_format($total,0);
+                                                        echo number_format($total,1);
                                                     }
                                                 //distrito y año
                                                 } else {
@@ -661,7 +661,7 @@
                                                     $total = DB::table('brechasbd')
                                                         ->where($query)
                                                         ->avg('porcentaje');
-                                                    echo number_format($total,0);
+                                                    echo number_format($total,1);
                                                 }
                                             } else {
                                                 //Promedio total
@@ -669,7 +669,7 @@
                                                 $total = DB::table('brechasbd')
                                                     ->where($query)
                                                     ->avg('porcentaje');
-                                                echo number_format($total,0);
+                                                echo number_format($total,1);
                                             }
                                         ?>
                                     </p>
