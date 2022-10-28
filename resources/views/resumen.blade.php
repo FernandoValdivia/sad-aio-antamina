@@ -1,4 +1,4 @@
-<?php 
+<?php
     error_reporting(E_ALL);
     session_start();
     //variables de select para cambiar título
@@ -33,7 +33,6 @@
     <title>Resumen</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Sistema de Administración del Desarrollo - Resumen" name="description">
-    <meta content="" name="keywords">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Favicon -->

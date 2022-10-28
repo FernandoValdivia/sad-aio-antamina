@@ -76,7 +76,7 @@
             <div class="container-xxl py-1 bg-dark hero-header mb-5">
                 <div class="container text-center my-5">
                     <h1 class="display-3 text-white mb-3 animated titleTrim mt-1"><b>Progreso Cierre de Brechas</b></h1>
-                    <h1 class="display-3 text-white mb-3 animated">AIO Antamina - 2T 2022</h1>
+                    <h1 class="display-3 text-white mb-3 animated">AIO Antamina 2T 2022</h1>
                 </div>
             </div>
         </div>
