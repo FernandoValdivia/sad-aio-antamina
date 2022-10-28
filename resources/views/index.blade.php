@@ -36,11 +36,8 @@
 	<link rel="stylesheet" href="css/mi-slider.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
 	<script src="js/jquery.slider.js"></script>
-
-	<script type="text/javascript"> 
-		$(window).on('load', function() {
-		    $('#slider').nivoSlider();
-		}); 
+	<script> 
+		$(window).on('load', () => { $('#slider').nivoSlider()})
 	</script>
 
 </head>
