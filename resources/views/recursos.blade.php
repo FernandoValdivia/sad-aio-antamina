@@ -113,7 +113,7 @@
                         </div>
                     </div>
                     <div class="row text-center">
-                        <h3>Transferencias de canon y regalías mineras</h3>
+                        <h3 id="titulo">Transferencias de canon y regalías mineras</h3>
                         <p>(S/ millones)</p>
                     </div>
                     <br>

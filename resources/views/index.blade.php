@@ -20,8 +20,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
@@ -75,30 +73,13 @@
             <!-- Navbar End -->
             <!-- Index -->
             <div class="container-xxl bg-dark hero-header">
-               {{-- <div class="container my-5 py-5">
-                    <div class="row align-items-center g-5">
-                         <div class="col-lg-6 text-center text-lg-start">
-                            <p class="display-3 animated slideInLeft text-white" id="home-text">Dales calidad, <br>es el mejor tipo de publicidad</p>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">El centro para la Competitividad y el Desarrollo (CCD) es una institución cuyo fin es promover el desarrollo sostenible del país en base al principio de la competitividad y de esta forma mejorar la calidad de vida de los ciudadanos.</p>
-                            <a href="/resumen" class="link me-3 animated slideInLeft"><strong>SAD AIO Antamina</strong>
-                                <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.6781 15.0212C20.6724 14.7732 20.6068 14.624 20.5229 14.5168L15.9103 8.05962C15.6925 7.71027 15.1988 7.65481 14.8901 7.93857C14.5815 8.22233 14.5652 8.75269 14.8127 9.06855L18.4828 14.2139H5.06649C4.67446 14.2139 4.35693 14.5753 4.35693 15.0209C4.35693 15.4668 4.67472 15.828 5.06649 15.828H18.4828L14.8127 20.9733C14.5317 21.2922 14.6117 21.8513 14.9082 22.1514C15.1364 22.3822 15.7447 22.3087 15.9105 21.9822L20.5231 15.525C20.6432 15.3578 20.6798 15.2334 20.6783 15.0206L20.6781 15.0212Z" fill="currentColor"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid" src="/img/home.png" alt="Volquete CCD">
-                        </div> 
-                    </div>
-                </div> --}}
-
                 <div class="slider-wrapper theme-mi-slider">
                     <div id="slider" class="nivoSlider">     
-                        <img src="/img/1.webp" alt="" title="#htmlcaption1" />    
-                        <img src="/img/2.webp" alt="" title="#htmlcaption2" />    
-                        <img src="/img/3.webp" alt="" title="#htmlcaption3" />
-                        <img src="/img/4.webp" alt="" title="#htmlcaption4" />
-                        <img src="/img/5.webp" alt="" title="#htmlcaption5" />
+                        <img src="/img/1.webp" alt="Imagen 1" title="#htmlcaption1" />    
+                        <img src="/img/2.webp" alt="Imagen 2" title="#htmlcaption2" />    
+                        <img src="/img/3.webp" alt="Imagen 3" title="#htmlcaption3" />
+                        <img src="/img/4.webp" alt="Imagen 4" title="#htmlcaption4" />
+                        <img src="/img/5.webp" alt="Imagen 5" title="#htmlcaption5" />
                     </div>
                     <div id="htmlcaption1" class="nivo-html-caption">
                         <h1>Sistema de Administración <br> del Desarrollo</h1>
@@ -144,10 +125,6 @@
             </div>
         </div>
         <!-- Footer End -->
-
-        <!-- Back to Top -->
-        {{-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> --}}
-        
     </div>
     
     {{-- Chat Whatsapp --}}
@@ -161,7 +138,6 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>

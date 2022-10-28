@@ -75,7 +75,7 @@
             <div class="container-fluid-py" id="container-proy">
                 <div class="row g-4 align-items-center">
                     <div class="row text-center">
-                        <h3>Proyectos para el cierre de brechas y puesta en valor las potencialidades</h3>
+                        <h3 id="titulo">Proyectos para el cierre de brechas y puesta en valor las potencialidades</h3>
                         <p>(Descripción)</p>
                     </div>
                     <div class="row ptop" id="proy-card">
@@ -120,15 +120,15 @@
                                     </select>
                                     </div> 
                                 </div>
-                                {{-- Time frame --}}
+                                {{-- Periodo de Tiempo --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label id="label" for="time_frame">Time frame</label>
+                                        <label id="label" for="time_frame">Periodo de Tiempo</label>
                                         <select id="time_frame" name="time_frame">
                                             <option value="Todos">Todos</option>
-                                            <option value="Short Term" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Short Term") echo 'selected';}?>>Short Term</option>
-                                            <option value="Medium Term" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Medium Term") echo 'selected';}?>>Medium Term</option>
-                                            <option value="Long Term" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Long Term") echo 'selected';}?>>Long Term</option>
+                                            <option value="Corto Plazo" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Corto Plazo") echo 'selected';}?>>Corto Plazo</option>
+                                            <option value="Mediano Plazo" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Mediano Plazo") echo 'selected';}?>>Mediano Plazo</option>
+                                            <option value="Largo Plazo" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Largo Plazo") echo 'selected';}?>>Largo Plazo</option>
                                         </select>
                                     </div> 
                                 </div>
@@ -367,7 +367,7 @@
                             </div>
                         </div>
                     </div>
-                    <p><b>Nota:</b> Short Term: 2022 / Medium Term: 2023 / Long Term: al 2026</p>
+                    <p><b>Nota:</b> Corto Plazo: 2022 / Mediano Plazo: 2023 / Largo Plazo: al 2026</p>
                     <p class="ptop"><sup>1/</sup> Proyectos y/o intervenciones</p>
                     <hr>
                     
@@ -445,13 +445,13 @@
                 case "First Engagement":
                     return 1;
                     break;
-                case "Short Term":
+                case "Corto Plazo":
                     return 2;
                     break;
-                case "Medium Term":
+                case "Mediano Plazo":
                     return 3;
                     break;
-                case "Long Term":
+                case "Largo Plazo":
                     return 4;
                     break;
                 default:
@@ -470,7 +470,7 @@
                 $p,
                 ',{icon:marker',
                 markerType($proy->time_frame),
-                '}).addTo(mapp).bindPopup("<strong>Time frame: </strong>',
+                '}).addTo(mapp).bindPopup("<strong>Periodo de Tiempo: </strong>',
                     $proy->time_frame,
                     '</br><strong>Distrito: </strong>',
                     $proy->distrito,
@@ -485,242 +485,6 @@
             $num = $num + $num;
         }
     ?>
-
-    <!--
-    <script type="text/javascript">
-    Chart.defaults.global.defaultFontFamily = "Calibri";
-    Chart.defaults.global.defaultFontSize = 14;
-    /* Chart Indicador */
-        var indicadorCanvas = document.getElementById("chartIndicador");
-
-        var indicadorData = {
-            data: [43, 35],
-            backgroundColor: '#fe0000',
-        };
-
-        var barOptions1 = {
-            responsive: true,
-            title: {
-                display: true,
-                text: 'Indicador',
-                position: 'top',
-                fontStyle: 'bold',
-                fontColor: '#000',
-                fontFamily: 'Calibri',
-                fontSize: 18
-            },
-            legend: {
-                display: false
-            },
-            animation: {
-                onComplete: function() {
-                    var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    
-                    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'bottom';
-                    ctx.fontWeight = 100;
-
-                    this.data.datasets.forEach(function(dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function(bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillStyle = "#fe0000";
-                            var dataString = parseFloat(Math.round(dataset.data[index].toString() * 100) / 100).toFixed(1)
-                            ctx.fillText(dataString, bar._model.x, bar._model.y + 1);
-                        });
-                    });
-                }
-            },
-            scales: {
-                    xAxes: [{
-                            display: true,
-                            scaleLabel: {
-                                display: true,
-                            },
-                            ticks: {
-                                autoSkip: false
-                            },
-                            gridLines: {
-                                display: false
-                            }
-                        }],
-                    yAxes: [{
-                            display: false,
-                            ticks: {
-                                beginAtZero: true
-                            },
-                            gridLines: {
-                                display: false
-                            }
-                        }]
-                    }
-            };
-
-        var barChart1 = new Chart(indicadorCanvas, {
-            type: 'bar',
-            data: {
-                labels: ["2T 2022", "3T 2023"],
-                datasets: [indicadorData]
-            },
-            options: barOptions1
-        });
-
-    /* Chart Distrito */
-        var distritoCanvas = document.getElementById("chartDistrito");
-
-        var distritoData = {
-            data: [35, 30],
-            backgroundColor: '#fe0000',
-        };
-
-        var barOptions2 = {
-            responsive: true,
-            title: {
-                display: true,
-                text: 'Distrito',
-                position: 'top',
-                fontStyle: 'bold',
-                fontColor: '#000',
-                fontFamily: 'Calibri',
-                fontSize: 18
-            },
-            legend: {
-                display: false
-            },
-            animation: {
-                onComplete: function() {
-                    var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    
-                    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'bottom';
-                    ctx.fontWeight = 100;
-
-                    this.data.datasets.forEach(function(dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function(bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillStyle = "#fe0000";
-                            var dataString = parseFloat(Math.round(dataset.data[index].toString() * 100) / 100).toFixed(1)
-                            ctx.fillText(dataString, bar._model.x, bar._model.y + 1);
-                        });
-                    });
-                }
-            },
-            scales: {
-                    xAxes: [{
-                            display: true,
-                            scaleLabel: {
-                                display: true,
-                            },
-                            ticks: {
-                                autoSkip: false
-                            },
-                            gridLines: {
-                                display: false
-                            }
-                        }],
-                    yAxes: [{
-                            display: false,
-                            ticks: {
-                                beginAtZero: true
-                            },
-                            gridLines: {
-                                display: false
-                            }
-                        }]
-                    }
-            };
-
-        var barChart2 = new Chart(distritoCanvas, {
-            type: 'bar',
-            data: {
-                labels: ["2T 2022", "3T 2023"],
-                datasets: [distritoData]
-            },
-            options: barOptions2
-        });
-    /* Chart AIO */
-        var aioCanvas = document.getElementById("chartAIO");
-
-        var aioData = {
-            data: [48, 40],
-            backgroundColor: '#fe0000',
-        };
-
-        var barOptions3 = {
-            responsive: true,
-            title: {
-                display: true,
-                text: 'AIO',
-                position: 'top',
-                fontStyle: 'bold',
-                fontColor: '#000',
-                fontFamily: 'Calibri',
-                fontSize: 18
-            },
-            legend: {
-                display: false
-            },
-            animation: {
-                onComplete: function() {
-                    var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    
-                    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'bottom';
-                    ctx.fontWeight = 100;
-
-                    this.data.datasets.forEach(function(dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function(bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillStyle = "#fe0000";
-                            var dataString = parseFloat(Math.round(dataset.data[index].toString() * 100) / 100).toFixed(1)
-                            ctx.fillText(dataString, bar._model.x, bar._model.y + 1);
-                        });
-                    });
-                }
-            },
-            scales: {
-                    xAxes: [{
-                            display: true,
-                            scaleLabel: {
-                                display: true,
-                            },
-                            ticks: {
-                                autoSkip: false
-                            },
-                            gridLines: {
-                                display: false
-                            }
-                        }],
-                    yAxes: [{
-                            display: false,
-                            ticks: {
-                                beginAtZero: true
-                            },
-                            gridLines: {
-                                display: false
-                            }
-                        }]
-                    }
-            };
-
-        var barChart3 = new Chart(aioCanvas, {
-            type: 'bar',
-            data: {
-                labels: ["2T 2022", "3T 2023"],
-                datasets: [aioData]
-            },
-            options: barOptions3
-        });
-    </script>
-    -->
 
     {{-- Chat Bot --}}
     <script src="widget.js"></script>

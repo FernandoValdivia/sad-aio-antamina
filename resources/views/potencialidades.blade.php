@@ -183,13 +183,13 @@
                 case "First Engagement":
                     return 1;
                     break;
-                case "Short Term":
+                case "Corto Plazo":
                     return 2;
                     break;
-                case "Medium Term":
+                case "Mediano Plazo":
                     return 3;
                     break;
-                case "Long Term":
+                case "Largo Plazo":
                     return 4;
                     break;
                 default:
@@ -208,7 +208,7 @@
                 $p,
                 ',{icon:marker',
                 markerType($proy->time_frame),
-                '}).addTo(mappt).bindPopup("<strong>Time frame: </strong>',
+                '}).addTo(mappt).bindPopup("<strong>Periodo de Tiempo: </strong>',
                     $proy->time_frame,
                     '</br><strong>Distrito: </strong>',
                     $proy->distrito,

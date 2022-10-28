@@ -94,15 +94,15 @@ lengend.onAdd = function() {
             '<tbody>'+
                 '<tr>'+
                     '<td><img class="img-fluid" src="/img/markers/marker1.png"></td>'+
-                    '<td><h6>Short Term</h6></td>'+
+                    '<td><h6>Corto Plazo</h6></td>'+
                 '</tr>'+
                 '<tr>'+
                     '<td><img class="img-fluid" src="/img/markers/marker2.png"></td>'+
-                    '<td><h6>Medium Term</h6></td>'+
+                    '<td><h6>Mediano Plazo</h6></td>'+
                 '</tr>'+
                 '<tr>'+
                     '<td><img class="img-fluid" src="/img/markers/marker3.png"></td>'+
-                    '<td><h6>Long Term</h6></td>'+
+                    '<td><h6>Largo Plazo</h6></td>'+
                 '</tr>'+
             '</tbody>'+
         '</table>'+

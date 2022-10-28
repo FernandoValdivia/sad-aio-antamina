@@ -76,7 +76,7 @@
                 <div class="grid-br-1"></div>
                 {{-- titulo --}}
                 <div class="grid-br-2">
-                    <h3>Brechas en el AIO: Por Pilares</h3>
+                    <h3 id="titulo">Brechas en el AIO: Por Pilares</h3>
                     <p>(Porcentajes)</p>
                 </div>
                 <div class="grid-br-3"></div>

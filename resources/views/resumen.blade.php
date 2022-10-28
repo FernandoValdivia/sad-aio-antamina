@@ -119,7 +119,7 @@
                         </div>
                         <div class="col-3">
                             <h4>
-                            <?php                           
+                            <?php
                                 //filtro año y distrito
                                 if (isset($_POST['location']) or isset($_POST['years'])) {
                                     //solo distrito
@@ -127,6 +127,7 @@
                                         if ($_POST['location']=="AIO") {
                                         //Promedio idh
                                         $idh = DB::table('idh')
+                                                ->where('distrito','AIO')
                                                 ->avg('idh');
                                             echo number_format($idh,2);
                                         } else {
@@ -145,6 +146,7 @@
                                         if ($_POST['years']=="Todos") {
                                         //Promedio idh
                                         $idh = DB::table('idh')
+                                                ->where('distrito','AIO')
                                                 ->avg('idh');
                                             echo number_format($idh,2);
                                         } else {
@@ -152,6 +154,7 @@
                                             $anio = $_POST['years'];
                                             //
                                             $idh = DB::table('idh')
+                                                    ->where('distrito','AIO')
                                                     ->where('anio',$anio)
                                                     ->avg('idh');
                                                 echo number_format($idh,2);
@@ -173,8 +176,9 @@
                                     }
                                 } else {
                                     $idh = DB::table('idh')
-                                                ->avg('idh');
-                                            echo number_format($idh,2);
+                                            ->where('distrito','AIO')
+                                            ->avg('idh');
+                                        echo number_format($idh,2);
                                 }
                             ?>
                             </h4>
@@ -196,6 +200,7 @@
                                         if ($_POST['location']=="AIO") {
                                         //Promedio idh
                                         $ingr = DB::table('idh')
+                                                ->where('distrito','AIO')
                                                 ->avg('ingreso_per_capita');
                                             echo number_format($ingr,0);
                                         } else {
@@ -214,6 +219,7 @@
                                         if ($_POST['years']=="Todos") {
                                         //Promedio idh
                                         $ingr = DB::table('idh')
+                                                ->where('distrito','AIO')
                                                 ->avg('ingreso_per_capita');
                                             echo number_format($ingr,0);
                                         } else {
@@ -222,6 +228,7 @@
                                             //
                                             $ingr = DB::table('idh')
                                                     ->where('anio',$anio)
+                                                    ->where('distrito','AIO')
                                                     ->avg('ingreso_per_capita');
                                                 echo number_format($ingr,0);
                                         }
@@ -242,8 +249,9 @@
                                     }
                                 } else {
                                     $ingr = DB::table('idh')
-                                                ->avg('ingreso_per_capita');
-                                            echo number_format($ingr,0);
+                                            ->where('distrito','AIO')
+                                            ->avg('ingreso_per_capita');
+                                        echo number_format($ingr,0);
                                 }
                             ?>
                             </h4>
@@ -1021,7 +1029,7 @@
                             </tr>
                             {{-- First engagement - deleted --}}
                             <tr>
-                                <td>Short Term</td>
+                                <td>Corto Plazo</td>
                                 <td class="text-center">
                                 <?php
                                     //filtro año y distrito
@@ -1031,7 +1039,7 @@
                                             if ($_POST['location']=="AIO") {
                                             //Total proyectos
                                             $count1 = DB::table('proyectos')
-                                                    ->where('time_frame','Short Term')
+                                                    ->where('time_frame','Corto Plazo')
                                                     ->count();
                                                     echo $count1;
                                             } else {
@@ -1039,7 +1047,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Short Term'];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Corto Plazo'];
                                                 //
                                                 $count1 = DB::table('proyectos')
                                                         ->where($query)
@@ -1051,13 +1059,13 @@
                                             if ($_POST['years']=="Todos") {
                                             //Total de proyectos
                                             $count1 = DB::table('proyectos')
-                                                    ->where('time_frame','Short Term')
+                                                    ->where('time_frame','Corto Plazo')
                                                     ->count();
                                                     echo $count1;
                                             } else {
                                                 //Proyectos por año
                                                 $anio = $_POST['years'];
-                                                $query = ['anio' => $anio, 'time_frame' => 'Short Term'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'Corto Plazo'];
                                                 //
                                                 $count1 = DB::table('proyectos')
                                                         ->where($query)
@@ -1072,7 +1080,7 @@
                                             $distrito_nom = $distrito[2];
                                             $anio = $_POST['years'];
                                             //Query
-                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Short Term'];
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Corto Plazo'];
                                             //
                                             $count1 = DB::table('proyectos')
                                                     ->where($query)
@@ -1082,7 +1090,7 @@
                                     } else {
                                         //Total de proyectos
                                         $count1 = DB::table('proyectos')
-                                                ->where('time_frame','Short Term')
+                                                ->where('time_frame','Corto Plazo')
                                                 ->count();
                                                 echo $count1;
                                     }
@@ -1097,7 +1105,7 @@
                                             if ($_POST['location']=="AIO") {
                                             //Total proyectos
                                             $sum = DB::table('proyectos')
-                                                    ->where('time_frame','Short Term')
+                                                    ->where('time_frame','Corto Plazo')
                                                     ->sum('monto_actualizado');
                                                     echo number_format($sum,0);
                                             } else {
@@ -1105,7 +1113,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Short Term'];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Corto Plazo'];
                                                 //
                                                 $sum = DB::table('proyectos')
                                                         ->where($query)
@@ -1117,13 +1125,13 @@
                                             if ($_POST['years']=="Todos") {
                                             //Total de proyectos
                                             $sum = DB::table('proyectos')
-                                                    ->where('time_frame','Short Term')
+                                                    ->where('time_frame','Corto Plazo')
                                                     ->sum('monto_actualizado');
                                                     echo number_format($sum,0);
                                             } else {
                                                 //Proyectos por año
                                                 $anio = $_POST['years'];
-                                                $query = ['anio' => $anio, 'time_frame' => 'Short Term'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'Corto Plazo'];
                                                 //
                                                 $sum = DB::table('proyectos')
                                                         ->where($query)
@@ -1138,7 +1146,7 @@
                                             $distrito_nom = $distrito[2];
                                             $anio = $_POST['years'];
                                             //Query
-                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Short Term'];
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Corto Plazo'];
                                             //
                                             $sum = DB::table('proyectos')
                                                     ->where($query)
@@ -1148,7 +1156,7 @@
                                     } else {
                                         //Total de proyectos
                                         $sum = DB::table('proyectos')
-                                                ->where('time_frame','Short Term')
+                                                ->where('time_frame','Corto Plazo')
                                                 ->sum('monto_actualizado');
                                                 echo number_format($sum,0);
                                     }
@@ -1156,7 +1164,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Medium Term</td>
+                                <td>Mediano Plazo</td>
                                 <td class="text-center">
                                 <?php
                                     //filtro año y distrito
@@ -1166,7 +1174,7 @@
                                             if ($_POST['location']=="AIO") {
                                             //Total proyectos
                                             $count1 = DB::table('proyectos')
-                                                    ->where('time_frame','Medium Term')
+                                                    ->where('time_frame','Mediano Plazo')
                                                     ->count();
                                                     echo $count1;
                                             } else {
@@ -1174,7 +1182,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Medium Term'];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Mediano Plazo'];
                                                 //
                                                 $count1 = DB::table('proyectos')
                                                         ->where($query)
@@ -1186,13 +1194,13 @@
                                             if ($_POST['years']=="Todos") {
                                             //Total de proyectos
                                             $count1 = DB::table('proyectos')
-                                                    ->where('time_frame','Medium Term')
+                                                    ->where('time_frame','Mediano Plazo')
                                                     ->count();
                                                     echo $count1;
                                             } else {
                                                 //Proyectos por año
                                                 $anio = $_POST['years'];
-                                                $query = ['anio' => $anio, 'time_frame' => 'Medium Term'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'Mediano Plazo'];
                                                 //
                                                 $count1 = DB::table('proyectos')
                                                         ->where($query)
@@ -1207,7 +1215,7 @@
                                             $distrito_nom = $distrito[2];
                                             $anio = $_POST['years'];
                                             //Query
-                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Medium Term'];
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Mediano Plazo'];
                                             //
                                             $count1 = DB::table('proyectos')
                                                     ->where($query)
@@ -1217,7 +1225,7 @@
                                     } else {
                                         //Total de proyectos
                                         $count1 = DB::table('proyectos')
-                                                ->where('time_frame','Medium Term')
+                                                ->where('time_frame','Mediano Plazo')
                                                 ->count();
                                                 echo $count1;
                                     }
@@ -1232,7 +1240,7 @@
                                             if ($_POST['location']=="AIO") {
                                             //Total proyectos
                                             $sum = DB::table('proyectos')
-                                                    ->where('time_frame','Medium Term')
+                                                    ->where('time_frame','Mediano Plazo')
                                                     ->sum('monto_actualizado');
                                                     echo number_format($sum,0);
                                             } else {
@@ -1240,7 +1248,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Medium Term'];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Mediano Plazo'];
                                                 //
                                                 $sum = DB::table('proyectos')
                                                         ->where($query)
@@ -1252,13 +1260,13 @@
                                             if ($_POST['years']=="Todos") {
                                             //Total de proyectos
                                             $sum = DB::table('proyectos')
-                                                    ->where('time_frame','Medium Term')
+                                                    ->where('time_frame','Mediano Plazo')
                                                     ->sum('monto_actualizado');
                                                     echo number_format($sum,0);
                                             } else {
                                                 //Proyectos por año
                                                 $anio = $_POST['years'];
-                                                $query = ['anio' => $anio, 'time_frame' => 'Medium Term'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'Mediano Plazo'];
                                                 //
                                                 $sum = DB::table('proyectos')
                                                         ->where($query)
@@ -1273,7 +1281,7 @@
                                             $distrito_nom = $distrito[2];
                                             $anio = $_POST['years'];
                                             //Query
-                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Medium Term'];
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Mediano Plazo'];
                                             //
                                             $sum = DB::table('proyectos')
                                                     ->where($query)
@@ -1283,7 +1291,7 @@
                                     } else {
                                         //Total de proyectos
                                         $sum = DB::table('proyectos')
-                                                ->where('time_frame','Medium Term')
+                                                ->where('time_frame','Mediano Plazo')
                                                 ->sum('monto_actualizado');
                                                 echo number_format($sum,0);
                                     }
@@ -1291,7 +1299,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Long Term</td>
+                                <td>Largo Plazo</td>
                                 <td class="text-center">
                                 <?php
                                     //filtro año y distrito
@@ -1301,7 +1309,7 @@
                                             if ($_POST['location']=="AIO") {
                                             //Total proyectos
                                             $count1 = DB::table('proyectos')
-                                                    ->where('time_frame','Long Term')
+                                                    ->where('time_frame','Largo Plazo')
                                                     ->count();
                                                     echo $count1;
                                             } else {
@@ -1309,7 +1317,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Long Term'];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Largo Plazo'];
                                                 //
                                                 $count1 = DB::table('proyectos')
                                                         ->where($query)
@@ -1321,13 +1329,13 @@
                                             if ($_POST['years']=="Todos") {
                                             //Total de proyectos
                                             $count1 = DB::table('proyectos')
-                                                    ->where('time_frame','Long Term')
+                                                    ->where('time_frame','Largo Plazo')
                                                     ->count();
                                                     echo $count1;
                                             } else {
                                                 //Proyectos por año
                                                 $anio = $_POST['years'];
-                                                $query = ['anio' => $anio, 'time_frame' => 'Long Term'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'Largo Plazo'];
                                                 //
                                                 $count1 = DB::table('proyectos')
                                                         ->where($query)
@@ -1342,7 +1350,7 @@
                                             $distrito_nom = $distrito[2];
                                             $anio = $_POST['years'];
                                             //Query
-                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Long Term'];
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Largo Plazo'];
                                             //
                                             $count1 = DB::table('proyectos')
                                                     ->where($query)
@@ -1352,7 +1360,7 @@
                                     } else {
                                         //Total de proyectos
                                         $count1 = DB::table('proyectos')
-                                                ->where('time_frame','Long Term')
+                                                ->where('time_frame','Largo Plazo')
                                                 ->count();
                                                 echo $count1;
                                     }
@@ -1367,7 +1375,7 @@
                                             if ($_POST['location']=="AIO") {
                                             //Total proyectos
                                             $sum = DB::table('proyectos')
-                                                    ->where('time_frame','Long Term')
+                                                    ->where('time_frame','Largo Plazo')
                                                     ->sum('monto_actualizado');
                                                     echo number_format($sum,0);
                                             } else {
@@ -1375,7 +1383,7 @@
                                                 $location = $_POST['location'];
                                                 $distrito = explode(",",$location);
                                                 $distrito_nom = $distrito[2];
-                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Long Term'];
+                                                $query = ['distrito' => $distrito_nom, 'time_frame' => 'Largo Plazo'];
                                                 //
                                                 $sum = DB::table('proyectos')
                                                         ->where($query)
@@ -1387,13 +1395,13 @@
                                             if ($_POST['years']=="Todos") {
                                             //Total de proyectos
                                             $sum = DB::table('proyectos')
-                                                    ->where('time_frame','Long Term')
+                                                    ->where('time_frame','Largo Plazo')
                                                     ->sum('monto_actualizado');
                                                     echo number_format($sum,0);
                                             } else {
                                                 //Proyectos por año
                                                 $anio = $_POST['years'];
-                                                $query = ['anio' => $anio, 'time_frame' => 'Long Term'];
+                                                $query = ['anio' => $anio, 'time_frame' => 'Largo Plazo'];
                                                 //
                                                 $sum = DB::table('proyectos')
                                                         ->where($query)
@@ -1408,7 +1416,7 @@
                                             $distrito_nom = $distrito[2];
                                             $anio = $_POST['years'];
                                             //Query
-                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Long Term'];
+                                            $query = ['distrito' => $distrito_nom, 'anio' => $anio, 'time_frame' => 'Largo Plazo'];
                                             //
                                             $sum = DB::table('proyectos')
                                                     ->where($query)
@@ -1418,7 +1426,7 @@
                                     } else {
                                         //Total de proyectos
                                         $sum = DB::table('proyectos')
-                                                ->where('time_frame','Long Term')
+                                                ->where('time_frame','Largo Plazo')
                                                 ->sum('monto_actualizado');
                                                 echo number_format($sum,0);
                                     }
@@ -1427,7 +1435,7 @@
                             </tr>
                         </table>
                     </div>
-                    <!-- Modalidad de intervención -->
+                    <!-- Modalidad de intervención 
                     <div class="grid-rsm-13">
                         <table>
                             <tr>
@@ -1868,7 +1876,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </div>
+                    </div>-->
                     <!-- Canon y regalía -->
                     <div class="grid-rsm-14">
                         <table>

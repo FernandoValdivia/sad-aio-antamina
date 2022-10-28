@@ -37,12 +37,12 @@ var marker2 = L.icon ({
     iconUrl: '/img/markers/marker1.png',
     iconSize: [25,35]
 })
-// Medium Term
+// Mediano Plazo
 var marker3 = L.icon ({
     iconUrl: '/img/markers/marker2.png',
     iconSize: [25,35]
 })
-// Long Term
+// Largo Plazo
 var marker4 = L.icon ({
     iconUrl: '/img/markers/marker3.png',
     iconSize: [25,35]
