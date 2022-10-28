@@ -8371,7 +8371,7 @@
                             <td class="column1 style4 s">San Marcos</td>
                             <td class="column2 style5 s">51/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8390,7 +8390,7 @@
                             </td>
                             <td class="column3 style5 s">31/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8409,7 +8409,7 @@
                             </td>
                             <td class="column4 style5 s">60/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8428,7 +8428,7 @@
                             </td>
                             <td class="column5 style5 s">44/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8447,7 +8447,7 @@
                             </td>
                             <td class="column6 style5 s">43/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8466,7 +8466,7 @@
                             </td>
                             <td class="column7 style6 s">47/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8488,7 +8488,7 @@
                             <td class="column1 style7 s">San Pedro de Chaná</td>
                             <td class="column2 style8 s">47/
                                 <?php
-                                if(isset($_POST['year'])){
+                                if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                     $anio = $_POST['year'];
                                     $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                     $total = DB::table('brechasbd')
@@ -8507,7 +8507,7 @@
                             </td>
                             <td class="column3 style8 s">34/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8526,7 +8526,7 @@
                             </td>
                             <td class="column4 style8 s">68/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8545,7 +8545,7 @@
                             </td>
                             <td class="column5 style8 s">57/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8564,7 +8564,7 @@
                             </td>
                             <td class="column6 style8 s">55/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8583,7 +8583,7 @@
                             </td>
                             <td class="column7 style9 s">52/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8605,7 +8605,7 @@
                             <td class="column1 style4 s">Huachis</td>
                             <td class="column2 style5 s">47/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8624,7 +8624,7 @@
                             </td>
                             <td class="column3 style5 s">39/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8643,7 +8643,7 @@
                             </td>
                             <td class="column4 style5 s">62/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8662,7 +8662,7 @@
                             </td>
                             <td class="column5 style5 s">55/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8681,7 +8681,7 @@
                             </td>
                             <td class="column6 style5 s">70/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8700,7 +8700,7 @@
                             </td>
                             <td class="column7 style6 s">52/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8722,7 +8722,7 @@
                             <td class="column1 style7 s">Chavín de Huántar</td>
                             <td class="column2 style8 s">48/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8741,7 +8741,7 @@
                             </td>
                             <td class="column3 style8 s">28/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8760,7 +8760,7 @@
                             </td>
                             <td class="column4 style8 s">65/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8779,7 +8779,7 @@
                             </td>
                             <td class="column5 style8 s">55/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8798,7 +8798,7 @@
                             </td>
                             <td class="column6 style8 s">53/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8817,7 +8817,7 @@
                             </td>
                             <td class="column7 style9 s">49/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8840,7 +8840,7 @@
                             <td class="column1 style4 s">Huallanca</td>
                             <td class="column2 style5 s">56/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8859,7 +8859,7 @@
                             </td>
                             <td class="column3 style5 s">28/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8878,7 +8878,7 @@
                             </td>
                             <td class="column4 style5 s">67/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8897,7 +8897,7 @@
                             </td>
                             <td class="column5 style5 s">49/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8916,7 +8916,7 @@
                             </td>
                             <td class="column6 style5 s">42/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8935,7 +8935,7 @@
                             </td>
                             <td class="column7 style6 s">49/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8957,7 +8957,7 @@
                             <td class="column1 style7 s">Aquia</td>
                             <td class="column2 style8 s">67/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8976,7 +8976,7 @@
                             </td>
                             <td class="column3 style8 s">33/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -8995,7 +8995,7 @@
                             </td>
                             <td class="column4 style8 s">61/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9014,7 +9014,7 @@
                             </td>
                             <td class="column5 style8 s">51/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9033,7 +9033,7 @@
                             </td>
                             <td class="column6 style8 s">52/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9052,7 +9052,7 @@
                             </td>
                             <td class="column7 style9 s">53/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9074,7 +9074,7 @@
                             <td class="column1 style4 s">Chiquián</td>
                             <td class="column2 style5 s">59/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9093,7 +9093,7 @@
                             </td>
                             <td class="column3 style5 s">30/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9112,7 +9112,7 @@
                             </td>
                             <td class="column4 style5 s">51/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9131,7 +9131,7 @@
                             </td>
                             <td class="column5 style5 s">44/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9150,7 +9150,7 @@
                             </td>
                             <td class="column6 style5 s">36/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9169,7 +9169,7 @@
                             </td>
                             <td class="column7 style6 s">45/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9191,7 +9191,7 @@
                             <td class="column1 style7 s">Puños</td>
                             <td class="column2 style8 s">54/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9210,7 +9210,7 @@
                             </td>
                             <td class="column3 style8 s">36/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9229,7 +9229,7 @@
                             </td>
                             <td class="column4 style8 s">74/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9248,7 +9248,7 @@
                             </td>
                             <td class="column5 style8 s">54/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9267,7 +9267,7 @@
                             </td>
                             <td class="column6 style8 s">72/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9286,7 +9286,7 @@
                             </td>
                             <td class="column7 style9 s">56/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9308,7 +9308,7 @@
                             <td class="column1 style4 s">Llata</td>
                             <td class="column2 style5 s">57/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9327,7 +9327,7 @@
                             </td>
                             <td class="column3 style5 s">30/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9346,7 +9346,7 @@
                             </td>
                             <td class="column4 style5 s">57/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9365,7 +9365,7 @@
                             </td>
                             <td class="column5 style5 s">60/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9384,7 +9384,7 @@
                             </td>
                             <td class="column6 style5 s">47/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9403,7 +9403,7 @@
                             </td>
                             <td class="column7 style6 s">51/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9426,7 +9426,7 @@
                             <td class="column1 style7 s">Pampas Chico</td>
                             <td class="column2 style8 s">63/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9445,7 +9445,7 @@
                             </td>
                             <td class="column3 style8 s">37/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9464,7 +9464,7 @@
                             </td>
                             <td class="column4 style8 s">62/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9483,7 +9483,7 @@
                             </td>
                             <td class="column5 style8 s">47/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9502,7 +9502,7 @@
                             </td>
                             <td class="column6 style8 s">64/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9521,7 +9521,7 @@
                             </td>
                             <td class="column7 style9 s">53/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9543,7 +9543,7 @@
                             <td class="column1 style4 s">Marca</td>
                             <td class="column2 style5 s">60/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9562,7 +9562,7 @@
                             </td>
                             <td class="column3 style5 s">43/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9581,7 +9581,7 @@
                             </td>
                             <td class="column4 style5 s">70/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9600,7 +9600,7 @@
                             </td>
                             <td class="column5 style5 s">58/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9619,7 +9619,7 @@
                             </td>
                             <td class="column6 style5 s">70/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9638,7 +9638,7 @@
                             </td>
                             <td class="column7 style6 s">58/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9660,7 +9660,7 @@
                             <td class="column1 style7 s">Cajacay</td>
                             <td class="column2 style8 s">74/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9679,7 +9679,7 @@
                             </td>
                             <td class="column3 style8 s">33/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9698,7 +9698,7 @@
                             </td>
                             <td class="column4 style8 s">71/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9717,7 +9717,7 @@
                             </td>
                             <td class="column5 style8 s">47/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9736,7 +9736,7 @@
                             </td>
                             <td class="column6 style8 s">47/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9755,7 +9755,7 @@
                             </td>
                             <td class="column7 style9 s">56/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9777,7 +9777,7 @@
                             <td class="column1 style4 s">Huayllacayán</td>
                             <td class="column2 style5 s">56/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9796,7 +9796,7 @@
                             </td>
                             <td class="column3 style5 s">42/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9815,7 +9815,7 @@
                             </td>
                             <td class="column4 style5 s">65/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9834,7 +9834,7 @@
                             </td>
                             <td class="column5 style5 s">49/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9853,7 +9853,7 @@
                             </td>
                             <td class="column6 style5 s">54/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9872,7 +9872,7 @@
                             </td>
                             <td class="column7 style6 s">53/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9894,7 +9894,7 @@
                             <td class="column1 style7 s">Antonio Raymondi</td>
                             <td class="column2 style8 s">55/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9913,7 +9913,7 @@
                             </td>
                             <td class="column3 style8 s">29/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9932,7 +9932,7 @@
                             </td>
                             <td class="column4 style8 s">77/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9951,7 +9951,7 @@
                             </td>
                             <td class="column5 style8 s">48/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9970,7 +9970,7 @@
                             </td>
                             <td class="column6 style8 s">62/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -9989,7 +9989,7 @@
                             </td>
                             <td class="column7 style9 s">53/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10011,7 +10011,7 @@
                             <td class="column1 style4 s">Llacllín</td>
                             <td class="column2 style5 s">48/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10030,7 +10030,7 @@
                             </td>
                             <td class="column3 style5 s">48/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10049,7 +10049,7 @@
                             </td>
                             <td class="column4 style5 s">63/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10068,7 +10068,7 @@
                             </td>
                             <td class="column5 style5 s">54/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10087,7 +10087,7 @@
                             </td>
                             <td class="column6 style5 s">62/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10106,7 +10106,7 @@
                             </td>
                             <td class="column7 style6 s">53/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10128,7 +10128,7 @@
                             <td class="column1 style7 s">Colquioc</td>
                             <td class="column2 style8 s">61/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10147,7 +10147,7 @@
                             </td>
                             <td class="column3 style8 s">28/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10166,7 +10166,7 @@
                             </td>
                             <td class="column4 style8 s">56/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10185,7 +10185,7 @@
                             </td>
                             <td class="column5 style8 s">45/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10204,7 +10204,7 @@
                             </td>
                             <td class="column6 style8 s">40/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10223,7 +10223,7 @@
                             </td>
                             <td class="column7 style9 s">47/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10245,7 +10245,7 @@
                             <td class="column1 style4 s">Pararín</td>
                             <td class="column2 style5 s">57/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10264,7 +10264,7 @@
                             </td>
                             <td class="column3 style5 s">50/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10283,7 +10283,7 @@
                             </td>
                             <td class="column4 style5 s">67/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10302,7 +10302,7 @@
                             </td>
                             <td class="column5 style5 s">47/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10321,7 +10321,7 @@
                             </td>
                             <td class="column6 style5 s">71/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10340,7 +10340,7 @@
                             </td>
                             <td class="column7 style6 s">56/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10362,7 +10362,7 @@
                             <td class="column1 style7 s">Paramonga</td>
                             <td class="column2 style8 s">39/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10381,7 +10381,7 @@
                             </td>
                             <td class="column3 style8 s">28/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10400,7 +10400,7 @@
                             </td>
                             <td class="column4 style8 s">57/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10419,7 +10419,7 @@
                             </td>
                             <td class="column5 style8 s">35/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10438,7 +10438,7 @@
                             </td>
                             <td class="column6 style8 s">30/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10457,7 +10457,7 @@
                             </td>
                             <td class="column7 style9 s">39/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10479,7 +10479,7 @@
                             <td class="column1 style4 s">Cátac</td>
                             <td class="column2 style5 s">66/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10498,7 +10498,7 @@
                             </td>
                             <td class="column3 style5 s">24/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10517,7 +10517,7 @@
                             </td>
                             <td class="column4 style5 s">49/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10536,7 +10536,7 @@
                             </td>
                             <td class="column5 style5 s">51/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10555,7 +10555,7 @@
                             </td>
                             <td class="column6 style5 s">60/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10574,7 +10574,7 @@
                             </td>
                             <td class="column7 style6 s">48/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10597,7 +10597,7 @@
                             <td class="column1 style11 s">Huarmey</td>
                             <td class="column2 style8 s">61/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10616,7 +10616,7 @@
                             </td>
                             <td class="column3 style8 s">22/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10635,7 +10635,7 @@
                             </td>
                             <td class="column4 style8 s">61/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10654,7 +10654,7 @@
                             </td>
                             <td class="column5 style8 s">34/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10673,7 +10673,7 @@
                             </td>
                             <td class="column6 style8 s">39/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10692,7 +10692,7 @@
                             </td>
                             <td class="column7 style9 s">44/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10714,7 +10714,7 @@
                             <td class="column0 style15 s style16" colspan="2">Total</td>
                             <td class="column2 style12 s">56/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10733,7 +10733,7 @@
                             </td>
                             <td class="column3 style12 s">34/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10752,7 +10752,7 @@
                             </td>
                             <td class="column4 style12 s">63/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10771,7 +10771,7 @@
                             </td>
                             <td class="column5 style12 s">49/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emprendimiento  y desarrollo económico', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10790,7 +10790,7 @@
                             </td>
                             <td class="column6 style12 s">54/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Emergencias', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10809,7 +10809,7 @@
                             </td>
                             <td class="column7 style12 s">51/
                                 <?php
-                                    if(isset($_POST['year'])){
+                                    if(isset($_POST['year']) and $_POST['year']!='Todos'){
                                         $anio = $_POST['year'];
                                         $query = ['variable' => 'Total', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => $anio ];
                                         $total = DB::table('brechasbd')
@@ -10831,7 +10831,7 @@
                 </table>
                 <br>
                 <h6>
-                    2021 <b>/ <?php if(isset($_POST['year'])){ if($_POST['year']=="32022"){echo '3T 2022';} elseif($_POST['year']=="22022"){echo '2T 2022';} else { echo $_POST['year'];}} else { echo '2T 2022';} ?> /</b> 2026
+                    2021 <b>/ <?php if(isset($_POST['year']) and $_POST['year']!='Todos'){ if($_POST['year']=="32022"){echo '3T 2022';} elseif($_POST['year']=="22022"){echo '2T 2022';} else { echo $_POST['year'];}} else { echo '2T 2022';} ?> /</b> 2026
                 </h6>
                 <p class="fuente">Fuente: PNUD, INEI, CCD, elaboración propia</p>
             </div>
@@ -10845,8 +10845,34 @@
                         <path fill="#107C41" d="M12,74h32c2.2091,0,4-1.7909,4-4V38c0-2.2091-1.7909-4-4-4H12c-2.2091,0-4,1.7909-4,4v32 C8,72.2091,9.7909,74,12,74z"/>
                         <path d="M16.9492,66l7.8848-12.0337L17.6123,42h5.8115l3.9424,7.6486c0.3623,0.7252,0.6113,1.2668,0.7471,1.6236 h0.0508c0.2617-0.58,0.5332-1.1436,0.8164-1.69L33.1943,42h5.335l-7.4082,11.9L38.7168,66H33.041l-4.5537-8.4017 c-0.1924-0.3116-0.374-0.6858-0.5439-1.1215H27.876c-0.0791,0.2684-0.2549,0.631-0.5264,1.0878L22.6592,66H16.9492z"/>
                     </svg>
-                    Descargar data
+                     DATA
                 </a>
+            </div>
+            <div class="p-4">
+                <h3>Documentos de interés de 
+                    <b id="unidadt"><?php
+                        if(isset($_POST['location'])) {
+                            $location = $_POST['location'];
+                            $distrito = explode(",",$location);
+                            $distrito_nom = $distrito[2];
+                            echo $distrito_nom;
+                        } else {
+                            echo "AIO";
+                        }
+                        ?></b>
+                </h3>
+                <ul id="utAIO" class="class-list-block">
+                    <li><a href="#">Documento sobre tema 1</a></li>
+                    <li><a href="#">Documento sobre tema 2</a></li>
+                    <li><a href="#">Documento sobre tema 3</a></li>
+                    <li><a href="#">Documento sobre tema 4</a></li>
+                </ul>
+                <ul id="utAquia" class="class-list-none">
+                    <li><a href="#">Documento sobre Aquia 1</a></li>
+                    <li><a href="#">Documento sobre Aquia 2</a></li>
+                    <li><a href="#">Documento sobre Aquia 3</a></li>
+                    <li><a href="#">Documento sobre Aquia 4</a></li>
+                </ul>
             </div>
         </div>
         <!-- Brechas End -->
@@ -10892,10 +10918,10 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
+    <!-- Documentos de interés -->
+    <script src="js/docs.js"></script>
     {{-- Loader --}}
     <script type="text/javascript">
         window.addEventListener("load", function () {
@@ -10903,7 +10929,6 @@
             loader.className += " hidden"; // class "loader hidden"
         });
     </script>
-
     {{-- Chat Bot --}}
     <script src="widget.js"></script>
     <script src="botman.js"></script>

@@ -1224,6 +1224,26 @@ table {
 }
 
 /* Brechas */
+.class-list-block ul { 
+    list-style-image: url("https://www.freeiconspng.com/thumbs/blue-arrow-png/blue-arrow-right-png-6.png");
+}
+
+.class-list-block a {
+    color: rgb(130, 130, 130);
+}
+
+.class-list-block a:hover {
+    color: var(--primary);
+}
+
+.class-list-none {
+    display: none !important;
+}
+
+.class-list-block {
+    display: block !important;
+}
+
 table.sheet0 {
     width: 100%;
     height: 100%;
@@ -3962,10 +3982,12 @@ div .col-4 select {
 }
 
 .dwnld-div a {
-    color: rgb(170, 170, 170);
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
     text-transform: uppercase;
+    padding-left: 1%;
+    color: rgb(170, 170, 170);
 }
 
 .dwnld-div a:hover {
