@@ -113,9 +113,9 @@
                         </div>
                         <div class="trimestre-grid-7">
                             <p>
-                                Los kpis reflejan determinantes claves del Índice de Desarrollo Humano (IDH): ingresos, educación y salud; así como determinantes de la institucionalidad e intervenciones realizadas por Antamina para atender emergencias en apoyo a la población que se encuentra expuesta a eventualidades de la naturaleza. 
+                                Los kpis reflejan determinantes claves del Índice de Desarrollo Humano (IDH): ingresos, educación y salud; así como determinantes de la institucionalidad e intervenciones realizadas por Antamina para atender emergencias en apoyo a la población que se encuentra expuesta a eventualidades de la naturaleza.
                                 <br>
-                                La información de los kpis se encuentra desde el 2017 (último censo peruano) hasta el 2T 2022, con frecuencia trimestral, y proyección que cubre la puesta en operación y, consecuentemente el cierre de brecha, de la cartera actual de proyectos e intervenciones de Antamina en el AIO.
+                                La información de los kpis se encuentra desde el 2017 (último censo peruano) hasta el 3T2022, con frecuencia trimestral, y proyección que cubre la puesta en operación y, consecuentemente el cierre de brecha, de la cartera actual de proyectos e intervenciones de Antamina en el AIO.
                                 <br>
                                 En el proceso de avance del cierre de brechas resulta fundamental que el KPI Global muestre tendencia decreciente. En el corto plazo puede observarse oscilaciones en los kpis debido a componentes estacionales, cambios gubernamentales que alteran la institucionalidad, eventos exógenos atribuidos a la naturaleza, entre otros.
                             </p>
@@ -156,11 +156,14 @@
                         </div>
                         <div class="grid-trimestre2-3">
                             <p>
-                                El KPI Global presenta una tendencia decreciente desde el año 2017, acelerado a partir del 1T 2021 por el Pilar 5 (Emergencias) vinculado al proceso de vacunación. Asimismo, mejoras en el nivel educativo de la población, anemia, desnutrición crónica, e infraestructura de servicios básicos y productiva han contribuido en la reducción del KPI Global.
+                                En el 3T2022 el KPI Global disminuyó 1.6 puntos porcentuales, explicado principalmente por el mayor el avance en la ejecución de la inversión pública (Pilar 1, Institucionalidad Madura ), en vista que se aproxima el fin del mandato de los gobiernos locales; así como por la reducción de los kpis vinculados a los proyectos Wiñantsik relacionado al Pilar 2 (anemia y desnutrición crónica infantil) y el Efecto Áncash (logros de aprendizaje). 
                                 <br>
-                                En el 2T 2022 el KPI Global disminuyó 0.2 puntos porcentuales respecto al 1T 2022, explicado por la reducción de los kpis vinculados al  Pilar 3 (Infraestructura social y productiva), principalmente con los proyectos: Mejora en la conectividad de internet en los distritos de San Marcos y Chavín de Huántar, así como en la continuación en la  vacunación contra el Covid-19 en todos los distritos del AIO.
+                                Asimismo, se aprecia una reducción de los kpis vinculados al Pilar 3 (Infraestructura social y productiva), principalmente por el proyecto de mejoramiento y ampliación del servicio de agua del sistema de riego Yamor y Jarachacra en el distrito de Antonio Raymondi mediante OxI.
                                 <br>
-                                En los próximos años, «período de cosecha» de proyectos, se prevé una importante reducción de brechas que se traducirá en una disminución del KPI Global en más de 10 puntos porcentuales al 2026, principalmente en los pilares 3 y 4 (Infraestructura social y productiva, y Emprendimiento y desarrollo económico): Saneamiento, Hospital y Desembarcadero en Huarmey; Saneamiento, Centro de Salud y Carretera Carash Pujún - Juprog en San Marcos; Saneamiento en Huallanca; Saneamiento Verdecocha y Canal Tacta en San Pedro de Chaná, Centro de Salud Chiquián, entre otros.
+                                De la misma manera, en el trimestre aumentó del empleo vinculado al Pilar 4 (Emprendimiento y desarrollo económico) como resultado de la implementación de los 16 planes de negocios que resultaron ganadoras en Procompite GORE Áncash y Procompite de la municipalidad de San Marcos. También se aprecia un avance del proceso de vacunación relacionado al Pilar 5 contra el Covid-19 en todos los distritos del AIO.
+                                <br>
+                                Para el siguiente trimestre y los próximos años, «período de cosecha de proyectos», se prevé una importante reducción de brechas que se traducirá en una disminución del KPI Global en aproximadamente 10 puntos porcentuales al 2026, principalmente en los pilares 3 y 4 (Infraestructura social y productiva, y Emprendimiento y desarrollo económico): Saneamiento, Hospital y Desembarcadero en Huarmey; Saneamiento, Centro de Salud en San Marcos; Saneamiento en Huallanca; Saneamiento Verdecocha y Canal Tacta en San Pedro de Chaná, Centro de Salud Chiquián, entre otros, los mismos que son financiados principalmente por OxI.
+
                             </p>
                         </div>
                         <div class="grid-trimestre2-4 text-center">
@@ -189,11 +192,16 @@
                         </div>
                         <div class="grid-trimestre3-5">
                             <p>
-                                En relación al KPI Global, desde el 1T 2017 hasta el 1T 2022 se observa una tendencia decreciente, de 54% a 49% entre ambos trimestres. Al igual que el KPI Antamina, en el periodo, el KPI Global ha registrado una tendencia decreciente, lo que significa que  los kpis vinculados a los proyectos e intervenciones bajo gestión pública de los gobiernos locales, regional y nacional también ha registrado tendencias decrecientes. <br>
+                                El KPI Global, desde el 1T2017 hasta el 2T2022, observa una tendencia decreciente, con valores de 54% a 48.7%, respectivamente. Dicha tendencia decreciente es explicada por la ejecución de proyectos e intervenciones bajo las modalidades de gestión pública de los gobiernos locales, regional y nacional; así como por la ejecución y puesta en operación de proyectos e intervenciones de Antamina a través de Obras por Impuestos, OPEX y CAPEX.
                                 <br>
-                                Entre el 1T 2021 y el 1T 2022, el KPI Antamina registra una disminución más acelerada, explicada por el rápido avance en el cierre de brecha de la vacunación (Pilar 5: Emergencias), así como por el inicio de operación de los proyectos de infraestructura como la carretera Túnel Kahuish, Saneamiento Pincullo, Mejoramiento de reservorio del Centro Poblado Ayash Huaripampa, caminos viales en Huaripampa, Saneamiento Letrinas en el distrito de San Marcos, y Mejoramiento de la Institución Educativa Santa Rosa en el distrito de Cajacay. <br>
                                 <br>
-                                En la siguiente figura se observa el KPI Global entre los trimestres 1T 2017 y 1T 2022. La performance trimestral de corto plazo del KPI Global muestra oscilaciones, explicado principalmente por la estacionalidad en el kpi ejecución del gasto de inversión municipal (canon y regalía minera), mayor ejecución en el cuarto trimestre de cada año, la nueva gestión municipal y regional iniciada en el primer trimestre del 2019, así como el inicio de la pandemia a principios del 2020 que generó la necesidad de establecer el kpi sobre brecha de vacunación de la población del AIO contra el Covid 19.
+                                Entre el 1T2021 y el 2T2022 el KPI Global registra una disminución más acelerada por el rápido avance en el cierre de brecha de la vacunación contra el Covid-19 (Pilar 5: Emergencias), así como por el inicio de operación de los proyectos de infraestructura como la carretera Túnel Kahuish, Saneamiento Pincullo, Mejoramiento de reservorio del Centro Poblado Ayash Huaripampa, Saneamiento Letrinas en el distrito de San Marcos, Mejoramiento de la Institución Educativa Santa Rosa en el distrito de Cajacay y el  Mejoramiento de la conectividad en el distrito de Chavín de Huántar y San Marcos.
+                                <br>
+                                <br>
+                                Asimismo, en el 2T2022 el KPI Global alcanzó 48.7%, una disminución de 0.2 puntos porcentuales, explicada principalmente por la reducción de las brechas en el Pilar 3 (Infraestructura social y productiva) por el inicio en operación de los proyectos Mejora en la conectividad de internet en los distritos de San Marcos (3,200 hogares con internet) y Chavín de Huántar (460 hogares con internet), así como por la continuación del proceso de vacunación contra el Covid-19 en todos los distritos del AIO correspondiente a la Región Áncash (más de 23,000 dosis aplicadas en el trimestre).
+                                <br>
+                                <br>
+                                En la siguiente figura se observa el KPI Global entre los trimestres 1T2017 y 2T2022. La performance trimestral de corto plazo del KPI Global muestra oscilaciones, explicado principalmente por la estacionalidad en el kpi ejecución del gasto de inversión municipal (canon y regalía minera), mayor ejecución en el cuarto trimestre de cada año, la nueva gestión municipal y regional iniciada en el primer trimestre del 2019, así como el inicio de la pandemia a principios del 2020 que generó la necesidad de establecer el kpi sobre brecha de vacunación de la población del AIO contra el Covid 19.
                             </p>
                         </div>
                         <div class="grid-trimestre3-7 text-center">
@@ -201,21 +209,25 @@
                             <h6>(Porcentaje)</h6>
                         </div>
                         <div class="grid-trimestre3-8">
+                            <p></p>
                             <img src="/img/reporte/Imagen9.png" alt="">
                         </div>
                     </div>
                 </section>
                 <hr>
-                {{-- 2T 2022 --}}
-                <section id="2t2022">
+                {{-- 3T 2022 --}}
+                <section id="3t2022">
                     <div class="row text-center">
-                        <h2>2T 2022</h2>
+                        <h2>3T 2022</h2>
                     </div>
                     <br>
                     <div class="trimestre4">
                         <div class="grid-trimestre4-1">
                             <p>
-                                En el 2T 2022 el KPI Global alcanzó 48.7%, una disminución de 0.2 puntos porcentuales respecto al trimestre anterior, explicada principalmente por la reducción de las brechas en el Pilar 3 (Infraestructura social y productiva) por el inicio en operación de los proyectos Mejora en la conectividad de internet en los distritos de San Marcos (3,200 hogares con internet) y Chavín de Huántar (460 hogares con internet), así como por la continuación del proceso de vacunación contra el Covid-19 en todos los distritos del AIO correspondiente a la Región Áncash (más de 23,000 dosis aplicadas en el trimestre).
+                                En el 3T2022 el KPI Global alcanzó 47.1%, una disminución de 1.6 puntos porcentuales respecto al trimestre anterior, explicada principalmente por la reducción de las brechas en el Pilar 3 (Infraestructura social y productiva) por el inicio en operación de los proyectos de mejoramiento y ampliación del servicio de agua del sistema de riego Yamor y Jarachacra en el distrito de Antonio Raymondi ejecutado bajo la modalidad de OxI. De la misma manera, se aprecia un avance del proceso de vacunación relacionado al Pilar 5 contra el Covid-19 en todos los distritos del AIO. 
+                                <br>
+                                Asimismo, ha contribuido en la reducción del KPI Global el aumento del empleo vinculado al Pilar 4 (Emprendimiento y desarrollo económico) por la implementación de los 16 planes de negocios ganadoras en Procompite GORE Áncash y Procompite de la municipalidad de San Marcos, ambos programas para mejorar la competitividad productiva financiados con recursos públicos: San Marcos (vacunos, granos andinos, apicultura y flores), Cajacay (vacunos), Huallanca (vacunos), Huayllapampa (cuy), Huayllacayan (palta), Colquioc (cuy), Huarmey (turismo y cuy), Antonio Raymondi (melocotón), Pararín (palta) y Pampa Chico (vacunos). 
+
                             </p>
                         </div>
                         <div class="grid-trimestre4-2 text-center">
@@ -226,7 +238,7 @@
                             <img src="/img/reporte/Imagen11.png" alt="">
                         </div>
                         <div class="grid-trimestre4-4 text-center">
-                            <b>Proyectos Antamina Concluidos en el 2T 2022: AIO</b>
+                            <b>Proyectos Antamina Concluidos en el 3T 2022: AIO</b>
                             <h6>(Descripción)</h6>
                         </div>
                         <div class="grid-trimestre4-5 text-center">
@@ -244,13 +256,13 @@
                                 <tbody>
                                     <tr class="tr-color">
                                         <td class="proyecto-text">
-                                            Mejoramiento de la conectividad en el distrito de Chavín de Huántar
+                                            Sistema de riego Yamor y Jarachacra de las en el distrito de Antonio Raymondi
                                         </td>
                                         <td>
-                                            Chavín de Huántar
+                                            Antonio Raymondi
                                         </td>
                                         <td>
-                                            CAPEX
+                                            OXI
                                         </td>
                                         <td>
                                             1/06/2022
@@ -259,30 +271,10 @@
                                             Pilar 3: Infraestructura social y productiva
                                         </td>
                                         <td>
-                                            460 hogares con internet
+                                            72 hectáreas incorporadas al sistema de riego
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="proyecto-text">
-                                            Mejoramiento de la conectividad en el distrito de San Marcos
-                                        </td>
-                                        <td>
-                                            San Marcos
-                                        </td>
-                                        <td>
-                                            CAPEX
-                                        </td>
-                                        <td>
-                                            1/06/2022
-                                        </td>
-                                        <td>
-                                            Pilar 3: Infraestructura social y productiva
-                                        </td>
-                                        <td>
-                                            3,200 hogares con internet
-                                        </td>
-                                    </tr>
-                                    <tr class="tr-color">
                                         <td class="proyecto-text">
                                             Apoyo al Gobierno Regional de Áncash en la ejecución del Plan de Vacunación contra el Covid 19 en todos los distritos del AIO y en la Región Áncash
                                         </td>
@@ -299,7 +291,7 @@
                                             Pilar 5: Emergencias
                                         </td>
                                         <td>
-                                            23,059 dosis aplicadas
+                                            6,728 dosis aplicadas
                                         </td>
                                     </tr>
                                 </tbody>
@@ -324,7 +316,7 @@
                     <div class="trimestre5">
                         <div class="grid-trimestre5-1">
                             <p>
-                                Entre los años 2022-2026 se prevé una importante reducción de brechas que se traducirá en una disminución del KPI Global. Durante este «período de cosecha» de proyectos, se proyecta una reducción de brechas en más de 10 puntos porcentuales al 2026, como resultado de la entrada en operación de importantes proyectos, principalmente en los pilares 3 y 4 (Infraestructura social y productiva, y Emprendimiento y desarrollo económico): Saneamiento, Hospital y Desembarcadero en Huarmey; Saneamiento, Centro de Salud y Carretera Carash Pujún-  Juprog en San Marcos; Saneamiento en Huallanca; Saneamiento Verdecocha y Canal Tacta en San Pedro de Chaná, Centro de Salud Chiquián, entre otros.
+                                Entre los años 2022-2026 se prevé una importante reducción de brechas que se traducirá en una disminución del KPI Global. Durante este «período de cosecha de proyectos», se proyecta una reducción de brechas en más de 10 puntos porcentuales, como resultado de la entrada en operación de importantes proyectos, principalmente en los pilares 3 y 4 (Infraestructura social y productiva, y Emprendimiento y desarrollo económico): Saneamiento, Hospital y Desembarcadero en Huarmey; Saneamiento, Centro de Salud y Carretera Carash Pujún -  Juprog en San Marcos; Saneamiento en Huallanca; Saneamiento Verdecocha y Canal Tacta en San Pedro de Chaná, Centro de Salud Chiquián, entre otros.
                             </p>
                         </div>
                         <div class="grid-trimestre5-2 text-center">
@@ -353,139 +345,130 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td colspan="6" class="subtext">Trimestres 3T y 4T 2022:</td>
+                                        <td colspan="6" class="subtext">Trimestres 4T 2022:</td>
                                     </tr>
                                     <tr class="color1">
-                                        <td class="proyecto-text">Mejoramiento y ampliación del servicio de agua de riego en Yamor y Jarachara</td>
-                                        <td>Antonio Raymondi</td>
-                                        <td>OxI</td>
-                                        <td>26/07/2022</td>
-                                        <td>Pilar 3: Infraestructura social y productiva</td>
-                                        <td>72 hectáreas de superficie agrícola bajo riego</td>
-                                    </tr>
-                                    <tr class="color2">
                                         <td class="proyecto-text">Mejoramiento y ampliación del servicio de agua y alcantarillado en Wishllac</td>
                                         <td>San Pedro de Chaná</td>
                                         <td>OxI</td>
-                                        <td>21/08/2022</td>
+                                        <td>31/10/2022</td>
                                         <td>Pilar 3: Infraestructura social y productiva</td>
                                         <td>26 viviendas con red publica de agua y desagüe</td>
-                                    </tr>
-                                    <tr class="color1">
-                                        <td class="proyecto-text">Mejoramiento y ampliación del servicio de agua y alcantarillado en zona urbana de San Marcos</td>
-                                        <td>San Marcos</td>
-                                        <td>OxI</td>
-                                        <td>21/09/2022</td>
-                                        <td>Pilar 3: Infraestructura social y productiva</td>
-                                        <td>412 viviendas con red publica de agua y desague</td>
                                     </tr>
                                     <tr class="color2">
                                         <td class="proyecto-text">Mejoramiento y ampliación del servicio de agua para riego en el valle Purisima</td>
                                         <td>Huayllacayán</td>
                                         <td>OxI</td>
-                                        <td>1/10/2022</td>
+                                        <td>30/11/2022</td>
                                         <td>Pilar 3: Infraestructura social y productiva</td>
                                         <td>65 hectáreas de superficie agrícola bajo riego</td>
                                     </tr>
                                     <tr class="color1">
-                                        <td class="proyecto-text">Mejoramiento del servicio de agua para riego en Vinuc, Shillpo y Colca</td>
-                                        <td>Cajacay</td>
-                                        <td>OxI</td>
-                                        <td>1/10/2022</td>
-                                        <td>Pilar 3: Infraestructura social y productiva</td>
-                                        <td>42 hectáreas de superficie agrícola bajo riego</td>
-                                    </tr>
-                                    <tr class="color2">
-                                        <td class="proyecto-text">Hospital de Llata</td>
-                                        <td>Llata</td>
-                                        <td>OxI</td>
-                                        <td>26/10/2022</td>
-                                        <td>Pilar 3: Infraestructura social y productiva</td>
-                                        <td>31 camas para atención medica</td>
-                                    </tr>
-                                    <tr class="color1">
-                                        <td class="proyecto-text">Conectividad Huachis</td>
+                                        <td class="proyecto-text">Mejoramiento de los 07  sistemas de agua potable del centro poblado de Ayash</td>
                                         <td>Huachis</td>
-                                        <td>CAPEX</td>
-                                        <td>31/12/2022</td>
+                                        <td>OPEX</td>
+                                        <td>31/10/2022</td>
                                         <td>Pilar 3: Infraestructura social y productiva</td>
-                                        <td>320 Hogares con acceso a internet</td>
+                                        <td>273 Viviendas con red pública de agua</td>
                                     </tr>
                                     <tr class="color2">
-                                        <td class="proyecto-text">Conectividad San Pedro de Chaná</td>
-                                        <td>San Pedro de Chaná</td>
-                                        <td>CAPEX</td>
-                                        <td>31/12/2022</td>
-                                        <td>Pilar 3: Infraestructura social y productiva</td>
-                                        <td>655 Hogares con acceso a internet</td>
-                                    </tr>
-                                    <tr class="color1">
-                                        <td class="proyecto-text">Conectividad segunda etapa San Marcos</td>
+                                        <td class="proyecto-text">Proyecto de agua y saneamiento Caserío Ayash Huamanin</td>
                                         <td>San Marcos</td>
                                         <td>CAPEX</td>
-                                        <td>31/12/2022</td>
+                                        <td>31/10/2022</td>
                                         <td>Pilar 3: Infraestructura social y productiva</td>
-                                        <td>405 Hogares con acceso a internet</td>
+                                        <td>70 Viviendas con red pública de agua</td>
+                                    </tr>
+                                    <tr class="color1">
+                                        <td class="proyecto-text">Proyecto de agua y saneamiento sub sector Ayash Centro</td>
+                                        <td>San Marcos</td>
+                                        <td>CAPEX</td>
+                                        <td>30/11/2022</td>
+                                        <td>Pilar 3: Infraestructura social y productiva</td>
+                                        <td>71 Viviendas con red pública de agua</td>
                                     </tr>
                                     <tr class="color2">
-                                        <td class="proyecto-text">Conectividad Aquia</td>
+                                        <td class="proyecto-text">Construcción de cocina comedor del colegio de Aquia</td>
                                         <td>Aquia</td>
                                         <td>CAPEX</td>
                                         <td>31/12/2022</td>
                                         <td>Pilar 3: Infraestructura social y productiva</td>
-                                        <td>632 Hogares con acceso a internet</td>
+                                        <td>109 estudiantes</td>
+                                    </tr>
+                                    <tr class="color1">
+                                        <td class="proyecto-text">Proyecto de agua y saneamiento sub sector Ishanca</td>
+                                        <td>San Marcos</td>
+                                        <td>CAPEX</td>
+                                        <td>31/12/2022</td>
+                                        <td>Pilar 3: Infraestructura social y productiva</td>
+                                        <td>38 Viviendas con red pública de agua</td>
+                                    </tr>
+                                    <tr class="color2">
+                                        <td class="proyecto-text">Obras de  Mejoramiento de IIEE en SPC (11 IIEE).</td>
+                                        <td>San Pedro de Chaná</td>
+                                        <td>CAPEX</td>
+                                        <td>31/12/2022</td>
+                                        <td>Pilar 3: Infraestructura social y productiva</td>
+                                        <td>11 Instituciones educativas mejoradas</td>
                                     </tr>
                                     <tr>
                                         <td colspan="6" class="subtext2">Principales 2023 - 2026:</td>
                                     </tr>
                                     <tr class="color4">
-                                        <td class="proyecto-text">Mejoramiento y ampliación de sistema de agua, alcantarillado y tratamiento de agua residual</td>
-                                        <td>Huarmey</td>
+                                        <td class="proyecto-text">Hospital de Llata</td>
+                                        <td>Llata</td>
                                         <td>OxI</td>
-                                        <td>27/01/2023</td>
+                                        <td>30/03/2023</td>
                                         <td>Pilar 3: Infraestructura social y productiva</td>
-                                        <td>3070 viviendas con red publica de agua y desagüe</td>
+                                        <td>31 camas para atención medica</td>
                                     </tr>
                                     <tr class="color3">
                                         <td class="proyecto-text">Mejoramiento del hospital Huarmey</td>
                                         <td>Huarmey</td>
                                         <td>OxI</td>
-                                        <td>11/04/2023</td>
+                                        <td>11/05/2023</td>
                                         <td>Pilar 3: Infraestructura social y productiva</td>
                                         <td>28 camas para atención medica</td>
                                     </tr>
                                     <tr class="color4">
-                                        <td class="proyecto-text">Mejoramiento de los canales de riego Huantun y Quechas</td>
-                                        <td>Pararín</td>
-                                        <td>CAPEX</td>
-                                        <td>28/04/2023</td>
-                                        <td>Pilar 3: Infraestructura social y productiva</td>
-                                        <td>108 hectáreas de superficie agrícola bajo riego</td>
-                                    </tr>
-                                    <tr class="color3">
                                         <td class="proyecto-text">Creación de sistema de riego en Yacupashtag</td>
                                         <td>Llata</td>
                                         <td>OxI</td>
-                                        <td>29/09/2023</td>
+                                        <td>24/07/2023</td>
                                         <td>Pilar 3: Infraestructura social y productiva</td>
                                         <td>156.5 hectáreas de superficie agrícola bajo riego</td>
                                     </tr>
-                                    <tr class="color4">
-                                        <td class="proyecto-text">Mejoramiento y ampliación del sistema de agua y alcantarillado Huallanca</td>
-                                        <td>Huallanca</td>
+                                    <tr class="color3">
+                                        <td class="proyecto-text">Mejoramiento y ampliación de sistema de agua, alcantarillado y tratamiento de agua residual</td>
+                                        <td>Huarmey</td>
                                         <td>OxI</td>
-                                        <td>29/12/2023</td>
+                                        <td>27/08/2023</td>
+                                        <td>Pilar 3: Infraestructura social y productiva</td>
+                                        <td>3070 viviendas con red publica de agua y desagüe</td>
+                                    </tr>
+                                    <tr class="color4">
+                                        <td class="proyecto-text">Mejoramiento y ampliación del servicio de agua y alcantarillado en zona urbana de San Marcos</td>
+                                        <td>San Marcos</td>
+                                        <td>OxI</td>
+                                        <td>26/09/2023</td>
                                         <td>Pilar 3: Infraestructura social y productiva</td>
                                         <td>1707 viviendas con red publica de agua y desagüe</td>
                                     </tr>
                                     <tr class="color3">
-                                        <td class="proyecto-text">Construcción y mejoramiento de carretera 
-                                            <br>Carash - Pujun - Juprog</td>
+                                        <td class="proyecto-text">Mantenimiento de la vía carrozable - Shiquip Huaripampa Alto</td>
                                         <td>San Marcos</td>
-                                        <td>OxI</td>
+                                        <td>CAPEX</td>
                                         <td>31/12/2023</td>
                                         <td>Pilar 3: Infraestructura social y productiva</td>
-                                        <td>34  kilómetros de red vial vecinal</td>
+                                        <td>4.2 Km de red vial vecinal</td>
+                                    </tr>
+                                    <tr class="color4">
+                                        <td class="proyecto-text">Desembarcadero Portuario Artesanal Huarmey</td>
+                                        <td>Huarmey</td>
+                                        <td>OxI</td>
+                                        <td>23/08/2024</td>
+                                        <td>Pilar 3: Infraestructura social y productiva</td>
+                                        <td>2.5% incremento de ingresos de la población beneficiada</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -537,9 +520,11 @@
                         </div>
                         <div class="grid-trimestre7-4">
                             <p>
-                                San Marcos es uno de los distrito con mayor reducción de las brechas en el AIO. Desde el 1T 2017 hasta el 1T 2022 se observa una tendencia decreciente del KPI Global San Marcos, 47% a 40.6%. En el 2T 2022, el KPI Global San Marcos disminuyó 0.6 puntos porcentuales respecto al trimestre anterior, como resultado por la reducción en la brecha en conectividad distrital y la vacunación contra el Covid-19 (más de 7,057 dosis aplicadas en el trimestre).
+                                San Marcos es uno de los distritos con mayor reducción de las brechas en el AIO. Desde el 1T2017 hasta el 2T2022 se observa una tendencia decreciente del KPI Global San Marcos, 47% a 40%. 
                                 <br>
-                                En lo que resta del año 2022, se prevé el inicio del servicio de saneamiento distrital, la construcción de pistas en Huaripampa, la construcción del proyecto de agua y saneamiento Caserío Ayash Huamanin, y agua y saneamiento en el sub sector Ishanca. En los próximos años será fundamental para el distrito la construcción de la Carretera Carash Pujún -  Juprog y la Creación del sistema de riego Agua para todos en CC Ayash y Huaripampa, y Santa Cruz de Pichiu.
+                                En el 3T2022, el KPI Global San Marcos disminuyó 1.7 puntos porcentuales respecto al trimestre anterior, como resultado de la reducción de la brecha ejecución del gasto de inversión pública municipal, así como por la mejora de empleo por el apalancamiento de recursos para el financiamiento de planes de negocio con Procompite local y vacunación contra el Covid-19.
+                                <br>
+                                En lo que resta del año 2022, se prevé el inicio del servicio de saneamiento distrital, la construcción del proyecto de agua y saneamiento Caserío Ayash Huamanin, y agua y saneamiento en el sub sector Ishanca. En los próximos años será fundamental para el distrito la creación del sistema de riego agua para todos en CC Ayash y Huaripampa, y Santa Cruz de Pichiu.
                             </p>
                         </div>
                         <div class="grid-trimestre7-5 text-center">
@@ -550,7 +535,7 @@
                             <img src="/img/reporte/Imagen14.png" alt="">
                         </div>
                         <div class="grid-trimestre7-7 text-center">
-                            <b>Cartera de proyectos: 2T 2022 - 2026</b>
+                            <b>Cartera de proyectos: 3T 2022 - 2026</b>
                             <h6>(Descripción)</h6>
                         </div>
                         <div class="grid-trimestre7-8 text-center">
@@ -566,38 +551,24 @@
                                 </thead>
                                 <tbody>
                                     <tr class="thead-1">
-                                        <td colspan="5">Trimestre 2T 2022:</td>
-                                    </tr>
-                                    <tr class="table-1">
-                                        <td class="proyecto-text">Mejora de la conectividad (antenas)</td>
-                                        <td>CAPEX</td>
-                                        <td>01/06/2022</td>
-                                        <td>Pilar 3</td>
-                                        <td>3,200 hogares</td>
+                                        <td colspan="5">Trimestre 3T 2022:</td>
                                     </tr>
                                     <tr class="table-1">
                                         <td class="proyecto-text">Plan de Vacunación contra el Covid 19 en San Marcos</td>
                                         <td>OPEX</td>
                                         <td>Proceso</td>
                                         <td>Pilar 5</td>
-                                        <td>7,057 dosis</td>
+                                        <td>366 dosis</td>
                                     </tr>
                                     <tr class="thead-2">
-                                        <td colspan="5">Trimestre 3T y 4T 2022:</td>
+                                        <td colspan="5">Trimestre 4T 2022:</td>
                                     </tr>
                                     <tr class="table-2">
-                                        <td class="proyecto-text">Saneamiento San Marcos</td>
+                                        <td class="proyecto-text">Saneamiento Carhuayoc</td>
                                         <td>OxI</td>
-                                        <td>21/09/2022</td>
+                                        <td>30/11/2022</td>
                                         <td>Pilar 3</td>
                                         <td>412 viviendas</td>
-                                    </tr>
-                                    <tr class="table-2">
-                                        <td class="proyecto-text">Pistas Huaripampa</td>
-                                        <td>OxI</td>
-                                        <td>18/10/2022</td>
-                                        <td>Pilar 3</td>
-                                        <td>1 kilómetro</td>
                                     </tr>
                                     <tr class="table-2">
                                         <td class="proyecto-text">Proyecto de agua y saneamiento caserío Ayash Huamanin</td>
@@ -607,7 +578,7 @@
                                         <td>70 viviendas</td>
                                     </tr>
                                     <tr class="table-2">
-                                        <td class="proyecto-text">Proyecto de agua y saneamiento<br>sub sector Ishanca</td>
+                                        <td class="proyecto-text">Proyecto de agua y saneamiento sub sector Ishanca</td>
                                         <td>CAPEX</td>
                                         <td>31/12/2022</td>
                                         <td>Pilar 3</td>
@@ -631,11 +602,11 @@
                                         <td colspan="5" class="thead-3">Principales 2023 - 2026:</td>
                                     </tr>
                                     <tr class="table-3">
-                                        <td class="proyecto-text">Carretera Carash Pujún -  Juprog</td>
+                                        <td class="proyecto-text">Saneamiento San Marcos</td>
                                         <td>OxI</td>
-                                        <td>31/12/2023</td>
+                                        <td>26/09/2023</td>
                                         <td>Pilar 3</td>
-                                        <td>334 kilómetros</td>
+                                        <td>752 viviendas</td>
                                     </tr>
                                     <tr class="table-3">
                                         <td class="proyecto-text">Creación del sistema de riego Agua para todos, CC Ayash Huaripampa, Santa Cruz de Pichiu</td>
@@ -645,11 +616,11 @@
                                         <td>870 hectáreas</td>
                                     </tr>
                                     <tr class="table-3">
-                                        <td class="proyecto-text">Centro de Salud San Marcos</td>
+                                        <td class="proyecto-text">TIC San Marcos</td>
                                         <td>OxI</td>
-                                        <td>01/06/2024</td>
+                                        <td>28/08/2026</td>
                                         <td>Pilar 3</td>
-                                        <td>20 camas</td>
+                                        <td>1,803 alumnos</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -680,9 +651,11 @@
                         </div>
                         <div class="grid-trimestre8-4">
                             <p>
-                                Desde el 1T 2017 hasta el 1T 2022 se observa una tendencia decreciente del KPI Global Aquia, de 56% a 48%. En el 2T 2022, el KPI Global disminuyó 0.9 puntos porcentuales respecto al trimestre anterior, explicado por la reducción en la brecha de vacunación contra el Covid-19 (476 dosis aplicadas en el trimestre).
+                                Desde el 1T2017 hasta el 2T2022 se observa una tendencia decreciente del KPI Global Aquia, de 56% a 47%. En el 2T2022, el KPI Antamina Global disminuyó 0.8 puntos porcentuales respecto al trimestre anterior, explicado en la reducción de la brecha en ejecución del gasto municipal dada a una aceleración en el proceso de ejecución de inversión pública y la reducción en la brecha de vacunación contra el Covid-19.
                                 <br>
-                                En lo que resta del año 2022, se prevé culminar la construcción de la Cocina Comedor del Colegio de Aquia, la Conectividad distrital y la continuación del Programa “Más Educación”. Actualmente representantes de la Comunidad de Aquia y Antamina se viene reuniendo en los Comités de Desarrollo Económico para implementar nuevos proyectos productivos para los siguientes años.
+                                En lo que resta del año 2022, se prevé culminar la construcción de la Cocina Comedor del Colegio de Aquia, y durante el 2023 la Conectividad distrital y la continuación del Programa “Más Educación”. 
+                                <br>
+                                Actualmente representantes de la Comunidad de Aquia y Antamina se viene reuniendo en los Comités de Desarrollo Económico para implementar nuevos proyectos productivos para los siguientes años.                                
                             </p>
                         </div>
                         <div class="grid-trimestre8-5 text-center">
@@ -693,7 +666,7 @@
                             <img src="/img/reporte/Imagen16.png" alt="">
                         </div>
                         <div class="grid-trimestre8-7 text-center">
-                            <b>Cartera de proyectos: 2T 2022 - 2026</b>
+                            <b>Cartera de proyectos: 3T 2022 - 2026</b>
                             <h6>(Descripción)</h6>
                         </div>
                         <div class="grid-trimestre8-8 text-center">
@@ -709,34 +682,34 @@
                                 </thead>
                                 <tbody>
                                     <tr class="thead-1">
-                                        <td colspan="5">Trimestre 2T 2022:</td>
+                                        <td colspan="5">Trimestre 3T 2022:</td>
                                     </tr>
                                     <tr class="table-1">
                                         <td class="proyecto-text">Plan de Vacunación contra el Covid 19 en Aquia</td>
                                         <td>OPEX</td>
                                         <td>Proceso</td>
                                         <td>Pilar 5</td>
-                                        <td>476 dosis</td>
+                                        <td>37 dosis</td>
                                     </tr>
                                     <tr class="thead-2">
-                                        <td colspan="5">Trimestre 3T y 4T 2022:</td>
+                                        <td colspan="5">Trimestre 4T 2022:</td>
                                     </tr>
                                     <tr class="table-2">
                                         <td class="proyecto-text">Construcción de la Cocina Comedor del Colegio de Aquia</td>
                                         <td>CAPEX</td>
-                                        <td>30/09/2022</td>
+                                        <td>31/12/2022</td>
                                         <td>Pilar 3</td>
                                         <td>1 local público</td>
                                     </tr>
-                                    <tr class="table-2">
-                                        <td class="proyecto-text">Conectividad en Aquia</td>
-                                        <td>CAPEX</td>
-                                        <td>01/12/2022</td>
-                                        <td>Pilar 2</td>
-                                        <td>632 hogares</td>
-                                    </tr>
                                     <tr>
                                         <td colspan="5" class="thead-3">Principales 2023 - 2026:</td>
+                                    </tr>
+                                    <tr class="table-3">
+                                        <td class="proyecto-text">Conectividad en Aquia</td>
+                                        <td>CAPEX</td>
+                                        <td>28/02/2023</td>
+                                        <td>Pilar 2</td>
+                                        <td>632 hogares</td>
                                     </tr>
                                     <tr class="table-3">
                                         <td class="proyecto-text">Elaboración de estudios de pre-inversión e inversión para el apalancamiento de fondos</td>

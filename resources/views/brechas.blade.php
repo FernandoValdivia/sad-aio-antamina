@@ -10844,10 +10844,14 @@
                 <h3>Documentos de interés de 
                     <b id="unidadt"><?php
                         if(isset($_POST['location'])) {
-                            $location = $_POST['location'];
-                            $distrito = explode(",",$location);
-                            $distrito_nom = $distrito[2];
-                            echo $distrito_nom;
+                            if ($_POST['location'] != "AIO") {
+                                $location = $_POST['location'];
+                                $distrito = explode(",",$location);
+                                $distrito_nom = $distrito[2];
+                                echo $distrito_nom;
+                            } else {
+                                echo "AIO";
+                            }
                         } else {
                             echo "AIO";
                         }

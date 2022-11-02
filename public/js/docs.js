@@ -1,5 +1,5 @@
 var distrito = document.getElementById('unidadt').innerHTML;
-alert(distrito)
+
 switch (distrito) {
     case 'Aquia (Bolognesi / Áncash)':
         document.getElementById("utAIO").className = "class-list-none";
