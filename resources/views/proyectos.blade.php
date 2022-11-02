@@ -161,8 +161,8 @@
                                 {{-- Periodo --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label id="label" for="year">Periodo</label>
-                                        <select id="year" name="year">
+                                        <label id="label" for="years">Periodo</label>
+                                        <select id="years" name="years">
                                             <option value="Todos">Todos</option>
                                             <option value="2021" <?php if (isset($_POST['years'])){ if($_POST['years']=="2021") echo 'selected';}?> >2021 (Línea de Base)</option>
                                             <option value="22022" <?php if (isset($_POST['years'])){ if($_POST['years']=="22022") echo 'selected';}?> >2T-2022</option>
@@ -262,7 +262,7 @@
                                                 }
                                             }
 
-                                            if (isset($_POST['time_frame']) || isset($_POST['location']) || isset($_POST['factores']) || isset($_POST['modalidad'])|| isset($_POST['year'])) {
+                                            if (isset($_POST['time_frame']) || isset($_POST['location']) || isset($_POST['factores']) || isset($_POST['modalidad'])|| isset($_POST['years'])) {
 
                                                 $location = $_POST['location'];
 
@@ -280,7 +280,7 @@
                                                 $timeframe = $_POST['time_frame']; // time frame
                                                 $factor = $_POST['factores']; // factor
                                                 $modalidad = $_POST['modalidad']; // modalidad
-                                                $anio = $_POST['year']; // año
+                                                $anio = $_POST['years']; // año
 
                                                 $cant = DB::table('proyectos')
                                                                 ->where(queryUnidadTerritorial($distrito_nom))
@@ -328,7 +328,7 @@
                                 <div class="row mt-1 pt-3" id="card-info">
                                     <h2>
                                         <?php
-                                            if (isset($_POST['time_frame']) or isset($_POST['location']) or isset($_POST['factores']) or isset($_POST['modalidad'])or isset($_POST['year'])) {
+                                            if (isset($_POST['time_frame']) or isset($_POST['location']) or isset($_POST['factores']) or isset($_POST['modalidad'])or isset($_POST['years'])) {
 
                                                 $location = $_POST['location'];
 
@@ -343,7 +343,7 @@
                                                 $timeframe = $_POST['time_frame']; // time frame
                                                 $factor = $_POST['factores']; // factor
                                                 $modalidad = $_POST['modalidad']; // modalidad
-                                                $anio = $_POST['year']; // año
+                                                $anio = $_POST['years']; // año
 
                                                 $cant = DB::table('proyectos')
                                                                 ->where(queryUnidadTerritorial($distrito_nom))
