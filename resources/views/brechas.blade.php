@@ -3469,7 +3469,6 @@
                             <div class="row mt-2">
                                 <label id="label2" for="years">Periodo</label>
                                 <select id="years" name="years">
-                                    <option value="Todos">Todos</option>
                                     <option value="2021" <?php if (isset($_POST['years'])){ if($_POST['years']=="2021") echo 'selected';}?> >2021 (Línea de Base)</option>
                                     <option value="22022" <?php if (isset($_POST['years'])){ if($_POST['years']=="22022") echo 'selected';}?> >2T-2022</option>
                                     <option value="32022" <?php if (isset($_POST['years'])){ if($_POST['years']=="32022") echo 'selected';}?> >3T-2022</option>

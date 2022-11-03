@@ -174,8 +174,13 @@
                                             echo number_format($idh,2);
                                     }
                                 } else {
+                                    $distrito_nom = 'AIO';
+                                    $anio = '2021';
+                                    //Query
+                                    $query = ['distrito' => $distrito_nom, 'anio' => $anio];
+                                    //
                                     $idh = DB::table('idh')
-                                            ->where('distrito','AIO')
+                                            ->where($query)
                                             ->avg('idh');
                                         echo number_format($idh,2);
                                 }
@@ -247,8 +252,12 @@
                                             echo number_format($ingr,0);
                                     }
                                 } else {
+                                    $distrito_nom = 'AIO';
+                                    $anio = '2021';
+                                    //Query
+                                    $query = ['distrito' => $distrito_nom, 'anio' => $anio];
                                     $ingr = DB::table('idh')
-                                            ->where('distrito','AIO')
+                                            ->where($query)
                                             ->avg('ingreso_per_capita');
                                         echo number_format($ingr,0);
                                 }
@@ -745,8 +754,11 @@
                                                     echo number_format($financiera,2);
                                         }
                                     } else {
+                                        //Query
+                                        $query = ['anio' => '2021'];
                                         //Total de brecha financiera
                                         $financiera = DB::table('brecha_financiera')
+                                                    ->where($query)
                                                     ->avg('monto');
                                                     echo number_format($financiera,2);
                                     }
@@ -801,7 +813,6 @@
                                 </select>
                                 <label for="years" class="mt-3">Periodo</label>
                                 <select name="years" id="yrs">
-                                    <option value="Todos">Todos</option>
                                     <option value="2021" <?php if (isset($_POST['years'])){ if($_POST['years']=="2021") echo 'selected';}?> >2021 (Línea de Base)</option>
                                     <option value="22022" <?php if (isset($_POST['years'])){ if($_POST['years']=="22022") echo 'selected';}?> >2T-2022</option>
                                     <option value="32022" <?php if (isset($_POST['years'])){ if($_POST['years']=="32022") echo 'selected';}?> >3T-2022</option>
@@ -957,8 +968,12 @@
                                                     echo $count1;
                                         }
                                     } else {
+                                        $anio = '2021';
+                                        //Query
+                                        $query = ['anio' => $anio];
                                         //Total de proyectos
                                         $count1 = DB::table('proyectos')
+                                                ->where($query)
                                                 ->count();
                                                 echo $count1;
                                     }
@@ -1018,8 +1033,12 @@
                                                     echo number_format($sum,0);
                                         }
                                     } else {
+                                        $anio = '2021';
+                                        //Query
+                                        $query = ['anio' => $anio];
                                         //Total de proyectos
                                         $sum = DB::table('proyectos')
+                                                ->where($query)
                                                 ->sum('monto_actualizado');
                                                 echo number_format($sum,0);
                                     }
@@ -1087,9 +1106,12 @@
                                                     echo $count1;
                                         }
                                     } else {
+                                        $anio = '2021';
+                                        //Query
+                                        $query = ['anio' => $anio, 'time_frame' => 'Corto Plazo'];
                                         //Total de proyectos
                                         $count1 = DB::table('proyectos')
-                                                ->where('time_frame','Corto Plazo')
+                                                ->where($query)
                                                 ->count();
                                                 echo $count1;
                                     }
@@ -1153,9 +1175,12 @@
                                                     echo number_format($sum,0);
                                         }
                                     } else {
+                                        $anio = '2021';
+                                        //Query
+                                        $query = ['anio' => $anio, 'time_frame' => 'Corto Plazo'];
                                         //Total de proyectos
                                         $sum = DB::table('proyectos')
-                                                ->where('time_frame','Corto Plazo')
+                                                ->where($query)
                                                 ->sum('monto_actualizado');
                                                 echo number_format($sum,0);
                                     }
@@ -1222,9 +1247,12 @@
                                                     echo $count1;
                                         }
                                     } else {
+                                        $anio = '2021';
+                                        //Query
+                                        $query = ['anio' => $anio, 'time_frame' => 'Mediano Plazo'];
                                         //Total de proyectos
                                         $count1 = DB::table('proyectos')
-                                                ->where('time_frame','Mediano Plazo')
+                                                ->where($query)
                                                 ->count();
                                                 echo $count1;
                                     }
@@ -1288,9 +1316,12 @@
                                                     echo number_format($sum,0);
                                         }
                                     } else {
+                                        $anio = '2021';
+                                        //Query
+                                        $query = ['anio' => $anio, 'time_frame' => 'Mediano Plazo'];
                                         //Total de proyectos
                                         $sum = DB::table('proyectos')
-                                                ->where('time_frame','Mediano Plazo')
+                                                ->where($query)
                                                 ->sum('monto_actualizado');
                                                 echo number_format($sum,0);
                                     }
@@ -1357,9 +1388,12 @@
                                                     echo $count1;
                                         }
                                     } else {
+                                        $anio = '2021';
+                                        //Query
+                                        $query = ['anio' => $anio, 'time_frame' => 'Largo Plazo'];
                                         //Total de proyectos
                                         $count1 = DB::table('proyectos')
-                                                ->where('time_frame','Largo Plazo')
+                                                ->where($query)
                                                 ->count();
                                                 echo $count1;
                                     }
@@ -1423,9 +1457,12 @@
                                                     echo number_format($sum,0);
                                         }
                                     } else {
+                                        $anio = '2021';
+                                        //Query
+                                        $query = ['anio' => $anio, 'time_frame' => 'Largo Plazo'];
                                         //Total de proyectos
                                         $sum = DB::table('proyectos')
-                                                ->where('time_frame','Largo Plazo')
+                                                ->where($query)
                                                 ->sum('monto_actualizado');
                                                 echo number_format($sum,0);
                                     }
