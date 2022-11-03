@@ -3775,7 +3775,7 @@ div .legendp img {
     }
 
     div form {
-        display: flex;
+        display: block;
     }
 
     div form div {
@@ -4150,13 +4150,17 @@ div .col-3 select {
 
 @media (max-width: 991.98px) {
     /* Brechas */
+    div td .row .col-9 {
+        width: 60%;
+    }
+
     table.sheet0 {
         font-size: 45%;
         padding: 0px;
     }
 
     .grid-container {
-        display: none;
+        display: block;
     }
 
     .divlogo img.top {
