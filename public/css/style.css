@@ -2048,6 +2048,10 @@ th.style16 {
     font-size: small;
 }
 
+.grid-br-16 tr, .grid-br-17 tr {
+    height: 30%;
+}
+
 .grid-br-17 {
     grid-column: 6 / span 1;
     grid-row: 3 / span 1;
@@ -2100,8 +2104,7 @@ th.style16 {
 }
 
 .grid-br-18 tr {
-    border-bottom: #fff solid 60px;
-    border-top: #fff solid 60px;
+    border-bottom: #fff solid 75px;
 }
 
 .grid-br-18 td {
