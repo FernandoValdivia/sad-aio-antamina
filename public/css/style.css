@@ -2352,6 +2352,7 @@ th.style16 {
 }
 
 .grid-br-27 table {
+    height: 100%;
     width: 100%;
 }
 
@@ -2399,6 +2400,31 @@ th.style16 {
 .grid-br-29 {
     grid-column: 7 / span 1;
     grid-row: 5 / span 1;
+}
+
+.grid-br-29 th {
+    text-align: center;
+    border-bottom: #fff solid 1px;
+    background-color: #1f497e;
+}
+
+.grid-br-29 td {
+    width: 20%;
+    border-bottom: #fff solid 1px;
+    background-color: #bbd8ff;
+}
+
+.grid-br-29 td h6 {
+    color: #1f497e;
+}
+
+.grid-br-29 table {
+    height: 100%;
+    width: 100%;
+}
+
+.grid-br-29 tr {
+    height: 30%;
 }
 
 .grid-br-30 {
@@ -2477,6 +2503,10 @@ th.style16 {
     color: #1f497e;
 }
 
+.grid-br-31 tr {
+    height: 50%;
+}
+
 .grid-br-32 {
     grid-column: 5 / span 1;
     grid-row: 6 / span 1;
@@ -2488,7 +2518,7 @@ th.style16 {
 }
 
 .grid-br-32 tr {
-    height: 30%;
+    height: 50%;
 }
 
 .grid-br-32 th {
@@ -2534,7 +2564,7 @@ th.style16 {
 }
 
 .grid-br-33 tr {
-    height: 30%;
+    height: 50%;
 }
 
 .grid-br-34 {
