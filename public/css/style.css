@@ -4168,12 +4168,13 @@ div .col-3 select {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
+    font-weight: 900;
     text-decoration: underline;
-    color: var(--sadcolor) !important;
+    color: #ffffff !important;
 }
 
 .navbar-dark .navbar-brand img {
-    max-height: 45px;
+    max-height: 60px;
     transition: 0.5s;
 }
 
