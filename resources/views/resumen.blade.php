@@ -709,7 +709,7 @@
                                             if ($_POST['location']=="AIO") {
                                             //Total de brecha financiera
                                             $financiera = DB::table('brecha_financiera')
-                                                    ->avg('monto');
+                                                    ->sum('monto');
                                                     echo number_format($financiera,2);
                                             } else {
                                                 //Brecha financiera por distrito
@@ -719,7 +719,7 @@
                                                 //
                                                 $financiera = DB::table('brecha_financiera')
                                                     ->where('distrito',$distrito_nom)
-                                                    ->avg('monto');
+                                                    ->sum('monto');
                                                     echo number_format($financiera,2);
                                             }
                                         //solo año
@@ -727,7 +727,7 @@
                                             if ($_POST['years']=="Todos") {
                                             //Total de proyectos
                                             $financiera = DB::table('brecha_financiera')
-                                                    ->avg('monto');
+                                                    ->sum('monto');
                                                     echo number_format($financiera,2);
                                             } else {
                                                 //Proyectos por año
@@ -735,7 +735,7 @@
                                                 //
                                                 $financiera = DB::table('brecha_financiera')
                                                     ->where('anio',$anio)
-                                                    ->avg('monto');
+                                                    ->sum('monto');
                                                     echo number_format($financiera,2);
                                             }
                                         //distrito y año
@@ -750,7 +750,7 @@
                                             //
                                             $financiera = DB::table('brecha_financiera')
                                                     ->where($query)
-                                                    ->avg('monto');
+                                                    ->sum('monto');
                                                     echo number_format($financiera,2);
                                         }
                                     } else {
@@ -759,7 +759,7 @@
                                         //Total de brecha financiera
                                         $financiera = DB::table('brecha_financiera')
                                                     ->where($query)
-                                                    ->avg('monto');
+                                                    ->sum('monto');
                                                     echo number_format($financiera,2);
                                     }
                                 @endphp
