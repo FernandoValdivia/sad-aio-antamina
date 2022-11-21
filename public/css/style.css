@@ -3030,7 +3030,6 @@ body, html {
 }
 
 .grid-rsm-container > * {
-    padding: 1%;
     display: flex;
     text-align: center;
     align-items: center;
@@ -3059,9 +3058,9 @@ body, html {
 }
 
 .grid-rsm-4 {
-    border-radius: 15px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     background-color: #006666ce;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 }
 
 .grid-rsm-4 .col-9 {
@@ -3085,9 +3084,9 @@ body, html {
 
 .grid-rsm-5 {
     grid-column: 1 / span 1;
-    border-radius: 15px;
     background-color: #006666ce;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .grid-rsm-5 .col-9 {
@@ -3112,9 +3111,9 @@ body, html {
 .grid-rsm-6 {
     grid-column: 1 / span 1;
     grid-row: 4 / span 3;
-    border-radius: 15px;
     background-color: #00666680;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .grid-rsm-6 .col-9 {
@@ -3154,9 +3153,9 @@ body, html {
 .grid-rsm-7 {
     grid-column: 1 / span 1;
     grid-row: 7 / span 1;
-    border-radius: 15px;
     background-color: #00666680;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .grid-rsm-7 .col-8 {
@@ -3188,8 +3187,8 @@ body, html {
     grid-row: 2 / span 3;
     height: 80%;
     background-color: #bad9fd81;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-    border-radius: 15px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .grid-rsm-9 .row {
@@ -3220,8 +3219,8 @@ body, html {
     grid-row: 7 / span 4;
     background-color: #00666680;
     padding: 0 7% 0 7%;
-    border-radius: 15px;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .grid-rsm-11 td {
@@ -3232,8 +3231,8 @@ body, html {
     grid-column: 1 / span 2;
     grid-row: 8 / span 2;
     background-color: #203864c9;
-    border-radius: 15px;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .grid-rsm-12 table {
@@ -3273,8 +3272,8 @@ body, html {
     grid-column: 2 / span 1;
     grid-row: 8 / span 2;
     background-color: #203864c9;
-    border-radius: 15px;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .grid-rsm-13 table {
@@ -3305,8 +3304,8 @@ body, html {
     grid-column: 3 / span 1;
     grid-row: 8 / span 1;
     background-color: #00666680;
-    border-radius: 15px;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .grid-rsm-14 td {
@@ -3336,8 +3335,8 @@ body, html {
     grid-column: 3 / span 1;
     grid-row: 9 / span 1;
     background-color: #00666680;
-    border-radius: 15px;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .grid-rsm-15 table {
@@ -3461,8 +3460,8 @@ h6 {
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 /* Leyenda resumen*/
@@ -3510,13 +3509,18 @@ div .legend table {
 
 #map-pt {
     width: 40%;
-    border-radius: 15px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+#img-map {
+    padding-top: 2%;
 }
 
 #img-potencialidad {
     width: 60%;
-    height: 700px;
-    border-radius: 30px;
+    height: 100%;
+    border-radius: 4px;
 }
 
 #pot1 .col-9 {
@@ -3707,10 +3711,10 @@ div .legendp img {
 
 #proy-card {
     text-align: center;
-    border-radius: 15px;
-    box-shadow: -1px 1px 7px 0px rgb(0 0 0 / 0.75);
     background-color: #bad9fd85;
     height: 700px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 #proy-card select {
@@ -4153,9 +4157,8 @@ div .col-3 select {
 /*** Navbar ***/
 .navbar-dark .navbar-nav .nav-link {
     position: relative;
-    margin-left: 25px;
-    padding: 25px 0px 20px 0px;
-    color: var(--light) !important;
+    padding: 25px 20px 20px;
+    color: #b0b0b0 !important;
 }
 
 .second-nav {
@@ -4168,9 +4171,9 @@ div .col-3 select {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    font-weight: 900;
-    text-decoration: underline;
+    font-weight: bold;
     color: #ffffff !important;
+    background: #0f3a3f;
 }
 
 .navbar-dark .navbar-brand img {
@@ -4216,7 +4219,7 @@ div .col-3 select {
 
     .navbar-dark .navbar-nav .nav-link,
     .sticky-top.navbar-dark .navbar-nav .nav-link {
-        padding: 10px 0;
+        padding: 15px 10px;
         margin-left: 0;
     }
 
@@ -4251,11 +4254,12 @@ div .col-3 select {
         position: absolute;
         width: 100%;
         top: 0;
+        height: 70px;
         left: 0;
         z-index: 999;
         background: rgb(0,78,89) !important;
-        box-shadow: inset 0 -3em 3em rgb(0 0 0 / 5%), 0.3em 0.3em 1em rgb(0 0 0 / 30%);
-        border-radius: 0px 0px 10px 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        border-radius: 0px;
     }
 
     .navbar-dark2 {
