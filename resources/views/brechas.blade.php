@@ -8,7 +8,7 @@
     <meta content="" name="description">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <!-- Favicon -->
-    <link href="/img/logo-icon.png" rel="icon">
+    <link href="/img/favicon.ico" rel="icon" type="image/x-icon">
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
