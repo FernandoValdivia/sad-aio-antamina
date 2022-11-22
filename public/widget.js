@@ -905,6 +905,7 @@
             mozBoxSizing: "content-box",
             webkitBoxSizing: "content-box"
         },
+        /*Styles Chat*/
         c = {
             display: "flex",
             justifyContent: "center",
@@ -915,7 +916,7 @@
             width: "60px",
             border: 0,
             borderRadius: "50%",
-            boxShadow: "0px 0px 20px rgba(0, 0, 0, 1)"
+            boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"
         },
         u = {
             display: "block",

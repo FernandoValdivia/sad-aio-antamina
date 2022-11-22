@@ -218,8 +218,5 @@ div.loading-dots .dot-lg{
 }
 
 .desktop-closed-message-avatar{
-    box-shadow: rgb(0 0 0) 0px 0px 20px !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
 }
-
-
-/*# sourceMappingURL=/sm/7c9c120ae2d5b15e3da4e0825a551c32ef16068680518fd0f4ba94cf2c6d7a01.map */
