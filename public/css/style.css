@@ -2166,7 +2166,7 @@ th.style16 {
 .grid-br-20 select {
     background-color: #bad9fd;
     border: #ddebfc 3px solid;
-    border-radius: 10px;
+    border-radius: 4px;
     padding: 7px 10px 7px;
 }
 
@@ -2719,14 +2719,14 @@ th.style16 {
 }
 
 .grid-br-40 {
-    border-radius: 25px;
+    border-radius: 4px;
     background-color: #d8e4be;
     grid-column: 7 / span 3;
     grid-row: 7 / span 3;
     display: flex;
     align-items: center;
     padding: 6%;
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
 }
 
 .grid-br-40 p {
@@ -3674,10 +3674,9 @@ div form div {
 }
 
 div form div input {
-    padding: 5%;
     color: #000;
     border: solid rgba(255, 255, 255, 0.5) 1px;
-    border-radius: 10px;
+    border-radius: 4px;
     background-color: #bad9fd;
 }
 
