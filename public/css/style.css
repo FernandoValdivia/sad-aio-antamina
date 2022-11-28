@@ -3228,6 +3228,10 @@ body, html {
     color: #fff;
 }
 
+.grid-rsm-11 table {
+    width: 80%;
+}
+
 .grid-rsm-12 {
     grid-column: 1 / span 2;
     grid-row: 8 / span 2;

@@ -1660,7 +1660,7 @@
                         </table>
                     </div>
                 </div>
-                <p id="referencia"><sup>1/</sup> Proyectos y/o intervenciones</p>
+                <p id="referencia"><sup>1/</sup> Proyectos y/o intervenciones en Cartera</p>
             </div>
         </div>
         <!-- Resumen End -->
