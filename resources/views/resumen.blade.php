@@ -65,7 +65,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
                 {{-- Logo --}}
                 <a class="navbar-brand" href="/">
-                    <img src="img/logo-sad.png" width="90%" class="d-inline-block align-top" alt="">
+                    <img src="img/logo-sad.png"  class="d-inline-block align-top" alt="">
                 </a>
                 {{-- End Logo --}}
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -699,7 +699,7 @@
                                             //Total de brecha financiera
                                             $financiera = DB::table('brecha_financiera')
                                                     ->sum('monto');
-                                                    echo number_format($financiera,2);
+                                                    echo number_format($financiera,0);
                                             } else {
                                                 //Brecha financiera por distrito
                                                 $location = $_POST['location'];
@@ -709,7 +709,7 @@
                                                 $financiera = DB::table('brecha_financiera')
                                                     ->where('distrito',$distrito_nom)
                                                     ->sum('monto');
-                                                    echo number_format($financiera,2);
+                                                    echo number_format($financiera,0);
                                             }
                                         //solo año
                                         } elseif (isset($_POST['years']) and $_POST['location']=='AIO') {
@@ -717,7 +717,7 @@
                                             //Total de proyectos
                                             $financiera = DB::table('brecha_financiera')
                                                     ->sum('monto');
-                                                    echo number_format($financiera,2);
+                                                    echo number_format($financiera,0);
                                             } else {
                                                 //Proyectos por año
                                                 $anio = $_POST['years'];
@@ -725,7 +725,7 @@
                                                 $financiera = DB::table('brecha_financiera')
                                                     ->where('anio',$anio)
                                                     ->sum('monto');
-                                                    echo number_format($financiera,2);
+                                                    echo number_format($financiera,0);
                                             }
                                         //distrito y año
                                         } else {
@@ -740,7 +740,7 @@
                                             $financiera = DB::table('brecha_financiera')
                                                     ->where($query)
                                                     ->sum('monto');
-                                                    echo number_format($financiera,2);
+                                                    echo number_format($financiera,0);
                                         }
                                     } else {
                                         //Query
@@ -749,7 +749,7 @@
                                         $financiera = DB::table('brecha_financiera')
                                                     ->where($query)
                                                     ->sum('monto');
-                                                    echo number_format($financiera,2);
+                                                    echo number_format($financiera,0);
                                     }
                                 @endphp
                             </h4>
@@ -894,7 +894,7 @@
                     <div class="grid-rsm-12">
                         <table>
                             <tr>
-                                <th><h5>Proyectos <sup>1/</sup></h5></th>
+                                <th><h5>Proyectos en Cartera <sup>1/</sup></h5></th>
                                 <th class="text-center"><h6>Número</h6></th>
                                 <td class="text-center">
                                     <h6>Monto</h6>
@@ -1660,7 +1660,7 @@
                         </table>
                     </div>
                 </div>
-                <p id="referencia"><sup>1/</sup> Proyectos y/o intervenciones en Cartera</p>
+                <p id="referencia"><sup>1/</sup> Proyectos y/o intervenciones</p>
             </div>
         </div>
         <!-- Resumen End -->

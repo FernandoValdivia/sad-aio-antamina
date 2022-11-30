@@ -48,7 +48,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
                 {{-- Logo --}}
                 <a class="navbar-brand" href="/">
-                    <img src="img/logo-sad.png" width="90%" class="d-inline-block align-top" alt="">
+                    <img src="img/logo-sad.png"  class="d-inline-block align-top" alt="">
                 </a>
                 {{-- End Logo --}}
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -75,7 +75,7 @@
             <div class="container-fluid-py" id="container-proy">
                 <div class="row g-4 align-items-center">
                     <div class="row text-center">
-                        <h3 id="titulo">Proyectos para el cierre de brechas y puesta en valor las potencialidades</h3>
+                        <h3 id="titulo">Cartera de proyectos para el cierre de brechas y puesta en valor las potencialidades</h3>
                         <p>(Descripción)</p>
                     </div>
                     <div class="row ptop" id="proy-card">
@@ -161,10 +161,10 @@
                                 {{-- Periodo --}}
                                 <div class="col-2">
                                     <div class="row">
-                                        <label id="label" for="years">Conclusión</label>
+                                        <label id="label" for="years">Periodo</label>
                                         <select id="years" name="years">
                                             <option value="Todos">Todos</option>
-                                            <option value="2021" <?php if (isset($_POST['years'])){ if($_POST['years']=="2021") echo 'selected';}?> >2021</option>
+                                            <option value="2021" <?php if (isset($_POST['years'])){ if($_POST['years']=="2021") echo 'selected';}?> >2021 (Línea de Base)</option>
                                             <option value="22022" <?php if (isset($_POST['years'])){ if($_POST['years']=="22022") echo 'selected';}?> >2T-2022</option>
                                             <option value="32022" <?php if (isset($_POST['years'])){ if($_POST['years']=="32022") echo 'selected';}?> >3T-2022</option>
                                             <option value="42022" <?php if (isset($_POST['years'])){ if($_POST['years']=="42022") echo 'selected';}?> >4T-2022</option>
@@ -195,7 +195,7 @@
                                 {{-- Botón filtrar --}}
                                 <div class="col-2">
                                     <div class="row mt-2">
-                                        <input type="submit" value="Filtrar">
+                                        <input type="submit" value="Filtrar" id="filter">
                                     </div>
                                 </div>
                             </form>
@@ -255,7 +255,7 @@
                                             function queryAnio($qanio)
                                             {
                                                 if ($qanio!='Todos') {
-                                                    $query = ['anio' => $qanio];
+                                                    $query = ['_'.$qanio => $qanio];
                                                     return $query;
                                                 } else {
                                                     return null;

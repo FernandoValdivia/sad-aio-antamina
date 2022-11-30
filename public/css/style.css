@@ -2157,10 +2157,12 @@ th.style16 {
 
 .grid-br-20 input {
     padding: 2%;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .grid-br-20 input:hover {
-    background-color: #bad9fd85;
+    background-color: #a9d1ff;;
 }
 
 .grid-br-20 select {
@@ -2733,6 +2735,11 @@ th.style16 {
     color: #fff;
 }
 
+.grid-br-40 table {
+    width: 95%;
+    margin: 0px auto;
+}
+
 .grid-br-41 {
     grid-column: 1 / span 1;
     grid-row: 8 / span 2;
@@ -3200,6 +3207,8 @@ body, html {
     border: #ddebfc 3px solid;
     border-radius: 10px;
     padding: 7px 10px 7px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .grid-rsm-9 input:hover {
@@ -3229,7 +3238,7 @@ body, html {
 }
 
 .grid-rsm-11 table {
-    width: 80%;
+    width: 90%;
 }
 
 .grid-rsm-12 {
@@ -3771,6 +3780,18 @@ div .legendp img {
 
 .ptop {
     margin-top: 0px !important;
+}
+
+.col-2 #filter{
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: 3px solid rgb(221, 235, 252);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.col-2 #filter:hover {
+    background-color: #a9d1ff;
 }
 
 /* Resposive Design */

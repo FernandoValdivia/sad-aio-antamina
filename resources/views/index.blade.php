@@ -49,7 +49,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
                 {{-- Logo --}}
                 <a class="navbar-brand" href="/">
-                    <img src="img/logo-sad.png" width="90%" class="d-inline-block align-top" alt="">
+                    <img src="img/logo-sad.png"  class="d-inline-block align-top" alt="">
                 </a>
                 {{-- End Logo --}}
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
