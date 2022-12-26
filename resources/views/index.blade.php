@@ -39,7 +39,8 @@
 	<script> 
 		$(window).on('load', () => { $('#slider').nivoSlider()})
 	</script>
-
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 
 <body>
@@ -102,11 +103,19 @@
         <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>melissa.sanchez@competitividadccd.com</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Sugerencias</h4>
+                        <br>
+                        <button class="sugg__button" onclick="abrirModal()">
+                            <i class="fa-solid bi-chat-dots-fill"></i>
+                                Enviar sugerencia
+                        </button>
                     </div>
                 </div>
             </div>
@@ -123,7 +132,28 @@
         </div>
         <!-- Footer End -->
     </div>
-    
+    {{-- Modal Sugerencias --}}
+    <section class="modal containermodal" id="main__modal">
+        <div class="modal__container" id="modal-container">
+            <div class="modal__content">
+                <div class="modal__close close-modal" title="Cerrar">
+                    <i class="bx bx-x"></i>
+                </div>
+                <form action="">
+                    <label for="nombre_sug">Nombres</label>
+                    <input name="nombre_sug" id="nombre_sug" type="text">
+                    <label for="apellido_sug">Apellidos</label>
+                    <input name="apellido_sug" id="apellido_sug" type="text">
+                    <label for="nombre_sug">Sugerencias</label>
+                    <textarea name="sug_description" cols="30" rows="5"></textarea>
+                    <button class="modal__button modal__button-width">Enviar</button>
+                </form>
+                <br>
+                <p class="modal__description">Tu sugerencia será enviada a Administración</p>
+            </div>
+        </div>
+    </section>
+
     {{-- Chat Whatsapp --}}
     <a href="https://api.whatsapp.com/send?phone=51922753771&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20SAD." class="float" target="_blank">
         <i class="fab fa-whatsapp my-float"></i>
@@ -144,5 +174,6 @@
     {{-- Chat Bot --}}
     <script src="widget.js"></script>
     <script src="botman.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>
