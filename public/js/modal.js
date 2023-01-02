@@ -1,23 +1,10 @@
-/*=============== SHOW MODAL ===============*/
-/* const showModal = (openButton, modalContent) => {
-    const openBtn = document.getElementById(openButton), 
-    modalContainer = document.getElementById(modalContent)
-
-    if (openBtn && modalContainer) {
-        openBtn.addEventListener('click', () =>{
-            modalContainer.classList.add('show-modal');
-        })
-    }
-} */
-
+/* ================ ABRIR MODAL ================ */
 function abrirModal() {
     mainModal = document.getElementById("main__modal")
     modalContainer = document.getElementById("modal-container")
     mainModal.classList.add("mainModal")
     modalContainer.classList.add('show-modal')
 }
-
-/* showModal('open-modal','modal-container') */
 
 /*=============== CLOSE MODAL ===============*/
 const closeBtn = document.querySelectorAll('.close-modal')

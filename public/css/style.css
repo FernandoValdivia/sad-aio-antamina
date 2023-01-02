@@ -4581,7 +4581,7 @@ div .col-3 select {
 }
 
 .mainModal {
-    z-index: 100;
+    z-index: 1100;
 }
 
 .modal__button{
@@ -4633,34 +4633,22 @@ div .col-3 select {
 }
 
 .modal__content {
+    align-items: center;
+    justify-content: center;
     position: relative;
     background-color: var(--container-color);
-    text-align: center;
     padding: 3rem 2rem 2rem;
     border-radius: 1rem 1rem 0 0;
-    transition: all .3s;
+    transition: all .3s;;
 
     /* Efecto 1 */
     transform: translateY(10%);
 }
 
-.modal__content form {
-    display: grid;
-    align-items: center;
-}
-
-.modal__img {
-    max-width: 100%;
-    height: auto;
-    width: 150px;
-    margin-bottom: .75rem;
-}
-
 .modal__close {
     display: inline-flex;
-    background-color: var(--first-color);
     border-radius: .25rem;
-    color: #FFF;
+    color: var(--dark);
     font-size: 1.5rem;
     position: absolute;
     top: 2rem;
@@ -4695,7 +4683,7 @@ div .col-3 select {
 
 /* Show modal */
 .show-modal {
-    z-index: 100;
+    z-index: 1100;
     visibility: visible;
     opacity: 1;
 }
@@ -4704,6 +4692,125 @@ div .col-3 select {
     transform: translateY(0);
 }
 
+.modal__content form {
+    display: table-cell !important;
+}
+
+.modal__content form div {
+    padding: initial !important;
+}
+
+.modal__content .text {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--sadcolor);
+}
+
+.modal__content form {
+    padding: 30px 0 0 0;
+}
+
+.modal__content form .form-row {
+    display: flex;
+    margin: 34px 0;
+}
+
+form .form-row .input-data {
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative;
+}
+
+form .form-row .textarea {
+    height: 70px;
+}
+
+.input-data input, 
+.textarea textarea {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(187 181 181 / 12%) !important;
+    padding-left: 8px;
+    border-radius: 0 !important;
+    outline: none !important;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    background: transparent;
+}
+.textarea textarea {
+    scrollbar-width: none;
+    overflow-y: scroll;
+    resize: none;
+    padding-top: 10px;
+}
+
+.input-data label {
+    position: absolute;
+    bottom: 10px;
+    padding-left: 8px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.textarea label {
+    width: 100%;
+    bottom: 10px;
+    background: transparent;
+}
+
+.input-data .underline {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+
+.input-data .underline:before,
+.input-data .underline:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: var(--sadcolor);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ label,
+.textarea textarea:focus ~ label,
+.input-data input:valid ~ label,
+.textarea textarea:valid ~ label {
+    transform: translateY(-20px);
+    color: var(--sadcolor);
+    font-size: 14px;
+}
+
+.input-data input:focus  ~ .underline:before, .underline:after,
+.textarea textarea:focus ~ .underline:before, .underline:after,
+.input-data input:valid ~ .underline:before, .underline:after,
+.textarea textarea:valid ~ .underline:before, .underline:after{
+    transform: scaleX(1);
+}
+
+.submit-btn .input-data input {
+    background: var(--sadcolor);
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.submit-btn .input-data input:hover{
+    background: var(--secondary);
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
@@ -4711,11 +4818,26 @@ div .col-3 select {
 @media screen and (min-width: 576px){
     .modal__content{
         margin: auto;
-        width: 500px;
-        border-radius: 1.25rem;
+        width: 550px;
+        max-width: 550px;
+        border-radius: 0.5rem;
+    }
+}
+@media (max-width: 550px) {
+    .modal__content form {
+        display: block !important;
+        padding: 10px 0 0 0 0;
     }
 
-    .modal__img {
-        width: 170px;
+    .modal__content form .form-row {
+        display: block;
+    }
+
+    form .form-row .input-data {
+        margin: 35px 0 !important;
+    }
+
+    .submit-btn .input-data {
+        width: 100% !important;
     }
 }

@@ -132,6 +132,7 @@
         </div>
         <!-- Footer End -->
     </div>
+    
     {{-- Modal Sugerencias --}}
     <section class="modal containermodal" id="main__modal">
         <div class="modal__container" id="modal-container">
@@ -139,17 +140,51 @@
                 <div class="modal__close close-modal" title="Cerrar">
                     <i class="bx bx-x"></i>
                 </div>
-                <form action="">
-                    <label for="nombre_sug">Nombres</label>
-                    <input name="nombre_sug" id="nombre_sug" type="text">
-                    <label for="apellido_sug">Apellidos</label>
-                    <input name="apellido_sug" id="apellido_sug" type="text">
-                    <label for="nombre_sug">Sugerencias</label>
-                    <textarea name="sug_description" cols="30" rows="5"></textarea>
-                    <button class="modal__button modal__button-width">Enviar</button>
+                <div class="text">Envíanos una sugerencia o recomendación</div>
+                <form action="phpmailer.php" method="post">
+                    @csrf
+                    <div class="form-row">
+                        <div class="input-data">
+                            <input type="text" name="__sname" id="__sname" required>
+                            <div class="underline"></div>
+                            <label for="__sname">Nombres</label>
+                        </div>
+                        <div class="input-data">
+                            <input type="text" name="__sfullname" id="__sfullname" required>
+                            <div class="underline"></div>
+                            <label for="__sfullname">Apellidos</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-data">
+                            <input type="text" name="__semail" id="__semail" required>
+                            <div class="underline"></div>
+                            <label for="__semail">Correo</label>
+                        </div>
+                        <div class="input-data">
+                            <input type="text" name="__ssubject" id="__ssubject" required>
+                            <div class="underline"></div>
+                            <label for="__ssubject">Asunto</label>
+                        </div>
+                    </div>
+                    <div class="form-row textarea">
+                        <div class="input-data">
+                            <textarea name="__smessage" id="__smessage" cols="30" rows="10" required></textarea>
+                            <div class="underline"></div>
+                            <label for="__smessage">Mensaje</label>
+                        </div>
+                    </div>
+                    <div class="form-row submit-btn">
+                        <div class="input-data">
+                            <input type="submit" value="Enviar sugerencia">
+                        </div>
+                    </div>
                 </form>
-                <br>
-                <p class="modal__description">Tu sugerencia será enviada a Administración</p>
+                @if (session('info'))
+                    <script>
+                        alert("{{session('info')}}");
+                    </script>
+                @endif
             </div>
         </div>
     </section>
