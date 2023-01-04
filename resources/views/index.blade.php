@@ -161,11 +161,6 @@
                             <div class="underline"></div>
                             <label for="__semail">Correo</label>
                         </div>
-                        <div class="input-data">
-                            <input type="text" name="__ssubject" id="__ssubject" required>
-                            <div class="underline"></div>
-                            <label for="__ssubject">Asunto</label>
-                        </div>
                     </div>
                     <div class="form-row textarea">
                         <div class="input-data">

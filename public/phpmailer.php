@@ -20,8 +20,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 $name = $_POST['__sname'];
 $fullname = $_POST['__sfullname'];
 $email = $_POST['__semail'];
-$subject = $_POST['__ssubject'];
 $message = $_POST['__smessage'];
+
+/* Fecha Actual para el Asunto del Formulario */
+date_default_timezone_set('America/Lima');
+$fechaActual = date('y-m-d h:i:s');
 
 /* no coloca nombres */
 if(empty(trim($name))) $name = 'Anonymous';
@@ -29,10 +32,10 @@ if(empty(trim($fullname))) $name = '';
 
 /* cuerpo del correo */
 $body = <<<HTML
-    <h1>Sugerencia desde la web</h1>
+    <h1>Sugerencia desde la web SAD AIO Antamina</h1>
     <h2>De: $name $fullname / $email</h2>
     <h2>Sugerencia:</h2>
-    <p>$message</p>
+    <p>$message</p> 
 HTML;
 
 /* PHPMailer */
@@ -41,7 +44,7 @@ $mailer->CharSet = 'UTF-8';
 $mailer->Encoding = 'base64';
 $mailer->setFrom($email, "$name $fullname");
 $mailer->addAddress('administracion@competitividadccd.com', 'Administración CCD');
-$mailer->Subject = "Sugerencia de la web: $subject";
+$mailer->Subject = "Sugerencia de la web $fechaActual";
 $mailer->msgHTML($body);
 $mailer->AltBody = strip_tags($body);
 
@@ -50,7 +53,7 @@ $res = $mailer->send();
 /* correo enviado o no enviado */
 if($res){
     echo'<script type="text/javascript">
-        alert("Sugerencia de '.$email.' enviada correctamente");
+        alert("Su sugerencia fue enviada correctamente, muchas gracias por sus comentarios!");
         window.location.href = "/";
         </script>';
 } else {
