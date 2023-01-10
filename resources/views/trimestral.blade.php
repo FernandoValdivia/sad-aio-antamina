@@ -863,7 +863,7 @@
                     <div class="row">
                         <div class="col-md-12 text-center text-center mb-3 mb-md-0">
                             <a href="/">SAD</a>, Sistema de Administración del Desarrollo
-                            <p>&copy; 2022 | Todos los derechos reservados.</p>
+                            <p>&copy; <script>document.write(new Date().getFullYear());</script> | Todos los derechos reservados.</p>
                         </div>
                     </div>
                 </div>
