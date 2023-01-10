@@ -32,13 +32,8 @@
     <link href="{{ asset('css/chat.css') }}" rel="stylesheet">
 
     {{-- Slider --}}
-    <link rel="stylesheet" href="css/slider.css">
-	<link rel="stylesheet" href="css/mi-slider.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
-	<script src="js/jquery.slider.js"></script>
-	<script> 
-		$(window).on('load', () => { $('#slider').nivoSlider()})
-	</script>
+    <link rel="stylesheet" href="css/homeslider.css">
+
     <!--=============== BOXICONS ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
@@ -70,31 +65,17 @@
             </nav>
             <!-- Navbar End -->
             <!-- Index -->
-            <div class="container-xxl bg-dark hero-header">
-                <div class="slider-wrapper theme-mi-slider">
-                    <div id="slider" class="nivoSlider">     
-                        <img src="/img/1.webp" alt="Imagen 1" title="#htmlcaption1" />    
-                        <img src="/img/2.webp" alt="Imagen 2" title="#htmlcaption2" />    
-                        <img src="/img/3.webp" alt="Imagen 3" title="#htmlcaption3" />
-                        <img src="/img/4.webp" alt="Imagen 4" title="#htmlcaption4" />
-                        <img src="/img/5.webp" alt="Imagen 5" title="#htmlcaption5" />
+            <div class="home_container">
+                <div class="_home_container">
+                    <div class="col-6 home_left">
+                        <h1>Sistema de <br>Administración del <br>Desarrollo</h1>
+                        <p>Área de Influencia Operativa <br><a href="http://www.antamina.com" target="_blank">Antamina</a></p>
                     </div>
-                    <div id="htmlcaption1" class="nivo-html-caption">
-                        <h1>Sistema de Administración <br> del Desarrollo</h1>
-                    </div>
-                    <div id="htmlcaption2" class="nivo-html-caption">
-                        <h3><em>“El progreso y el desarrollo son imposibles <br> si uno sigue haciendo las cosas tal como siempre las ha hecho”</em> </h3>
-                    </div>
-                    <div id="htmlcaption3" class="nivo-html-caption">
-                        <h3><em>“Para tener éxito, tu deseo de éxito debe ser mayor <br> que tu miedo al fracaso”</em> </h3>
-                    </div>
-                    <div id="htmlcaption4" class="nivo-html-caption">
-                        <h3><em>“El éxito es la suma de pequeños esfuerzos repetidos <br> un día sí y otro también”</em> </h3>
-                    </div>
-                    <div id="htmlcaption5" class="nivo-html-caption">
-                        <h3><em>“El verdadero progreso es el que pone <br> la tecnología al alcance de todos.”</em> </h3>
+                    <div class="col-6 home_right">
+                        <img alt="Imagen Mapa Slide" name="slide" src="img/1.png">
                     </div>
                 </div>
+                
             </div>
             <!-- Index End -->
         </div>
@@ -161,6 +142,11 @@
                             <div class="underline"></div>
                             <label for="__semail">Correo</label>
                         </div>
+                        <div class="input-data">
+                            <input type="text" name="__ssubject" id="__ssubject" required>
+                            <div class="underline"></div>
+                            <label for="__ssubject">Asunto</label>
+                        </div>
                     </div>
                     <div class="form-row textarea">
                         <div class="input-data">
@@ -205,5 +191,6 @@
     <script src="widget.js"></script>
     <script src="botman.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
