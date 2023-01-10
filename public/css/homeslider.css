@@ -42,8 +42,12 @@
 }
 
 .home_right {
-	position: static;
+	display: flex;
+	align-items: center;
+	justify-content: center;
     width: 100%;
+	max-width: 970px;
+	margin: 0 auto;
 	grid-column: 2;
     grid-row: 1;
 }
