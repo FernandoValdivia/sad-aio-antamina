@@ -20,9 +20,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
@@ -42,7 +44,6 @@
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Navbar -->
-        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
             {{-- Logo --}}
             <a class="navbar-brand" href="/">
@@ -54,7 +55,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0 pe-4">
-                    <a href="/" class="nav-item nav-link">Home</a>
+                    <a href="/" class="nav-item nav-link">Inicio</a>
                     <a href="/resumen" class="nav-item nav-link">Resumen</a>
                     <a href="/brechas" class="nav-item nav-link">Brechas</a>
                     <a href="/proyectos" class="nav-item nav-link">Proyectos</a>
@@ -119,56 +120,22 @@
                     <img src="/img/potencialidad/distrito/huallanca.png" alt="Potencialidades"  id="img-potencialidad">
                     {{-- Mapa --}}
                     <div id="map-pt"></div>
-                </div>
+            </div>
             </div>
         </div>
     </div>
     <!-- Potencialidades End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-12">
-                    <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>melissa.sanchez@competitividadccd.com</p>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-12 text-center text-center mb-3 mb-md-0">
-                        <a href="/">SAD</a>, Sistema de Administración del Desarrollo
-                        <p>&copy; <script>document.write(new Date().getFullYear());</script> | Todos los derechos reservados.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-        
-    </div>
+    @extends('layouts.footer')
+
     {{-- Chat Whatsapp --}}
     <a href="https://api.whatsapp.com/send?phone=51922753771&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20SAD." class="float" target="_blank">
         <i class="fab fa-whatsapp my-float"></i>
     </a>
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 
     <!-- Script Map -->
     <script src="{{ asset('js/map-pt.js')  }}"></script>
@@ -223,9 +190,6 @@
             $num = $num + $num;
         }
     ?>
-    {{-- Zoom Libraries --}}
-    <script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js" ></script>
-    <script src="{{ asset('js/zoom.js')  }}"></script>
 
     {{-- Chat Bot --}}
     <script src="widget.js"></script>

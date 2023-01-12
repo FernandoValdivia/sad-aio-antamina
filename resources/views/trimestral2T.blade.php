@@ -51,7 +51,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="/" class="nav-item nav-link">Home</a>
+                        <a href="/" class="nav-item nav-link">Inicio</a>
                         <a href="/resumen" class="nav-item nav-link">Resumen</a>
                         <a href="/brechas" class="nav-item nav-link">Brechas</a>
                         <a href="/proyectos" class="nav-item nav-link">Proyectos</a>

@@ -15,7 +15,7 @@
     --container-color: #FFF;
 
     /*========== Font and typography ==========*/
-    --body-font: 'Poppins', sans-serif;
+    --body-font: 'Montserrat';
     --big-font-size: 1.5rem;
     --normal-font-size: .938rem;
 
@@ -24,7 +24,7 @@
 }
 
 .ff-secondary {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    font-family: var(--body-font),
         sans-serif;
 }
 
@@ -86,7 +86,7 @@ ol li .aactiva {
 }
 
 div .logo p {
-    font-family: Bower, Georgia, Times New Roman, serif;
+    font-family: var(--body-font);
     font-size: 0.5rem;
     margin-top: 10%;
     line-height: 0;
@@ -98,7 +98,7 @@ div .logo p {
 }
 
 div .divlogo .col-9 {
-    font-family: Bower, Georgia, Times New Roman, serif;
+    font-family: var(--body-font);
     font-size: 1.6rem;
     line-height: 55px;
 }
@@ -554,11 +554,6 @@ div .trimestre-grid-3 p {
         width: 1.8rem !important;
         height: 1.8rem !important;
     }
-
-    #descarga td {
-        font-size: small !important;
-    }
-
 }
 
 
@@ -1213,7 +1208,7 @@ table {
 
 #descarga table {
     width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--body-font);
 }
 
 #descarga thead {
@@ -1663,7 +1658,7 @@ th.style16 {
 .cierre-brechas h6 {
     text-align: center;
     color: #000;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    font-family: var(--body-font),
         sans-serif;
 }
 .cierre-brechas .fuente {
@@ -2976,11 +2971,11 @@ th.style16 {
 
 /* Home */
 #home-text {
-    font-family: Bower, Georgia, Times New Roman, serif;
+    font-family: var(--body-font);
 }
 
 #font-tnr {
-    font-family: Bower, Georgia, Times New Roman, serif;
+    font-family: var(--body-font);
     font-size: 1.6rem;
 }
 
@@ -2989,18 +2984,18 @@ th.style16 {
 }
 
 h3 {
-    font-weight: bolder;
+    font-weight: 500;
 }
 
 strong {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
 }
 
 /* Resposive Design */
 /* Home */
 
 body, html {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--body-font);
     background-color: rgb(255,255,255);
     background-image: url('') !important;
 }
@@ -3409,7 +3404,7 @@ body, html {
 
 h5,
 h6 {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    font-family: var(--body-font),
         sans-serif;
     color: #fff;
     font-weight: bold;
@@ -3426,7 +3421,7 @@ h6 {
 .container-fluid p #referencia {
     font-size: small;
     color: #000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--body-font);
 }
 
 .container-fluid-py h5 {
@@ -4022,7 +4017,7 @@ div .col-4 select {
     font-size: larger;
     font-weight: bold;
     color: #000;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
 }
 
 .container-grph p {
@@ -4035,33 +4030,33 @@ div .col-4 select {
     font-size: small;
     font-weight: lighter;
     color: #000;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
 }
 
 .container-grph .col-4 b {
     font-size: larger;
     font-weight: bold;
     color: #000;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
 }
 
 .container-grph .col-4 h6 {
     font-size: small;
     font-weight: lighter;
     color: #000;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
 }
 
 .container-grph .col-4 p {
     text-align: right;
     font-size: small;
     color: #000;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
 }
 
 .dwnld-div a {
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-family: var(--body-font);
     font-size: x-large;
     text-transform: uppercase;
     padding-left: 1%;
@@ -4139,14 +4134,14 @@ div .col-3 select {
 
 /*** Button ***/
 .btn {
-    font-family: "Nunito", sans-serif;
+    font-family: var(--body-font);
     font-weight: 500;
     text-transform: uppercase;
     transition: 0.5s;
 }
 
 .link {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    font-family: var(--body-font),
         sans-serif;
     font-weight: 500;
     font-size: larger;
@@ -4526,7 +4521,7 @@ div .col-3 select {
 .footer .btn.btn-link::before {
     position: relative;
     content: "\f105";
-    font-family: "Calibri";
+    font-family: var(--body-font);
     font-weight: 900;
     margin-right: 10px;
 }
