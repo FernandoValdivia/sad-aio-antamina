@@ -105,7 +105,7 @@
                     <div class="grid-rsm-3"></div>
                     <!-- IDH -->
                     <div class="grid-rsm-4">
-                        <div class="col-9">
+                        <div class="col-8">
                             <h4>IDH</h4>
                             <small>(Índice)</small>
                         </div>
@@ -183,7 +183,7 @@
                     </div>
                     <!-- Ingresos per cápita -->
                     <div class="grid-rsm-5">
-                        <div class="col-9">
+                        <div class="col-8">
                             <h4>Ingresos per cápita</h4>
                             <small>(Soles mensual)</small>
                         </div>
