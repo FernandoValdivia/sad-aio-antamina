@@ -25,76 +25,53 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="container-xxl bg-white p-0">
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
-                <a href="/" class="navbar-brand p-0">
-                    {{-- Logo --}}
-                    <div class="row m-4 divlogo">
-                        <img class="top" src="/img/logo-sad.png" />
-                    </div>
-                    {{-- End Logo --}}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="/" class="nav-item nav-link">Inicio</a>
-                        <a href="/resumen" class="nav-item nav-link">Resumen</a>
-                        <a href="/brechas" class="nav-item nav-link">Brechas</a>
-                        <a href="/proyectos" class="nav-item nav-link">Proyectos</a>
-                        <a href="/recursos" class="nav-item nav-link">Recursos</a>
-                        <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>
-                        <a href="/trimestral" class="nav-item nav-link">Reportes</a>
-                    </div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
+            {{-- Logo --}}
+            <a class="navbar-brand" href="/">
+                <img loading="lazy" src="img/logo-sad.png"  class="d-inline-block align-top" alt="">
+            </a>
+            {{-- End Logo --}}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0 pe-4">
+                    <a href="/" class="nav-item nav-link">Inicio</a>
+                    <a href="/resumen" class="nav-item nav-link">Resumen</a>
+                    <a href="/brechas" class="nav-item nav-link">Brechas</a>
+                    <a href="/proyectos" class="nav-item nav-link">Proyectos</a>
+                    <a href="/recursos" class="nav-item nav-link">Recursos</a>
+                    <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>
+                    <a href="/reporte" class="nav-item nav-link active">Reportes</a>
                 </div>
-            </nav>
+            </div> 
+        </nav>
+        <!-- Navbar End -->
 
-            <div class="container-xxl py-1 bg-dark hero-header mb-1">
-                <div class="container text-center my-4 pt-5 pb-2">
-                </div>
-            </div>
         </div>
         <!-- Navbar & Hero End -->
         <!-- Resumen Start -->
-        <div class="container-xxl text-center">
-            <img class="img-fluid mt-5" src="/img/http-errors/404.png" alt="404">
+        <div class="container-404 text-center">
+            <h1 class="title">404</h1>
+            <h1 class="subtitle">Página no encontrada</h1>
+            <p>Redirigir al <a href="/">inicio</a></p>
         </div>
         <!-- Resumen End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-12">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>melissa.sanchez@competitividadccd.com</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-12 text-center text-center mb-3 mb-md-0">
-                            <a href="/">SAD</a>, Sistema de Administración del Desarrollo
-                            <p>&copy; <script>document.write(new Date().getFullYear());</script> | Todos los derechos reservados.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
+        @extends('layouts.footer')
+
     </div>
     
     <!-- JavaScript Libraries -->

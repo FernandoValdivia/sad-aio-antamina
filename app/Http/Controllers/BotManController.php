@@ -24,7 +24,7 @@ class BotManController extends Controller
             } elseif (strpos(strtolower($message), "potencialidades") !== false) {
                 $botman->reply('Lo puedes encontrar aquí:</br><a href="/potencialidades" target="_blank">Potencialidades</a>');
             } elseif (strpos(strtolower($message), "reportes") !== false || strpos(strtolower($message), "reporte") !== false || strpos(strtolower($message), "trimestral") !== false) {
-                $botman->reply('Lo puedes encontrar aquí:</br><a href="/trimestral#descarga" target="_blank">Reportes</a>');
+                $botman->reply('Lo puedes encontrar aquí:</br><a href="/reporte#descarga" target="_blank">Reportes</a>');
             } elseif (strpos(strtolower($message), "gracias") !== false) {
                 $botman->reply('Estoy para servirle! 😊');
             } elseif (strpos(strtolower($message), "sad") !== false) {

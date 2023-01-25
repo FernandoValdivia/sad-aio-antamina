@@ -21,10 +21,14 @@ Route::post('/proyectos', 'ProyectosController@index');
 Route::get('/recursos', 'RecursosController@index');
 //potencialidades
 Route::get('/potencialidades', 'PotencialidadesController@index');
-//trimestral
-Route::get('/trimestral', function () {
-    return view('trimestral');
+//reporte
+Route::get('/reporte', function () {
+    return view('reporte');
 });
+//Errores
+/* Route::get('/404', function () {
+    return view('404');
+}); */
 
 //descargar
 /* Excel Recursos */

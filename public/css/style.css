@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap%27');
 
 :root {
+    --antaminaGradient: linear-gradient(90deg, rgba(0,78,89,1) 0%, rgba(0,116,133,1) 31%, rgba(0,101,116,1) 64%, rgba(0,158,180,1) 100%);
     --sadcolor: #2271da; 
     --primary: rgb(0,78,89);
     --light: #f1f8ff;
@@ -137,7 +138,24 @@ div .divlogo .col-9 {
 /* Trimestral */
 
 section[id] {
-    scroll-margin-top: 155px;
+    scroll-margin-top: 0;
+}
+
+#descarga a {
+    font-size: xx-large;
+    background: var(--antaminaGradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#descarga a:hover {
+    background: linear-gradient(90deg, rgba(0,120,138,1) 0%, rgba(61,172,187,1) 52%, rgba(0,158,180,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tableDescargas {
+    overflow-x: auto;
 }
 
 .adescargar {
@@ -153,7 +171,13 @@ section[id] {
     font-weight: bold;
 }
 
+.container-descarga {
+    text-align: -webkit-right;
+    padding: 0 0 2vh 0;
+}
+
 .descargar-btn {
+    width: fit-content;
     border: none;
     border-radius: 45px;
     padding: 10px 30px;
@@ -552,9 +576,12 @@ div .trimestre-grid-3 p {
 
     /* Descarga */
 
-    #descarga svg {
-        width: 1.8rem !important;
-        height: 1.8rem !important;
+    .container-descarga {
+        text-align: -webkit-center;
+    }
+
+    .descargar-btn {
+        width: auto;
     }
 }
 
@@ -1218,6 +1245,7 @@ table {
 
 #descarga table {
     width: 100%;
+    min-width: 800px;
     font-family: var(--body-font);
 }
 
@@ -4219,7 +4247,7 @@ div .col-3 select {
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     color: #ffffff !important;
-    background: #0f3a3f;
+    background: linear-gradient(90deg, rgba(0,67,76,1) 0%, rgba(0,67,76,1) 50%, rgba(0,67,76,1) 100%);
 }
 
 .navbar-dark .navbar-brand img {
@@ -4302,7 +4330,7 @@ div .col-3 select {
         top: 0;
         height: 70px;
         left: 0;
-        background: rgb(0,78,89) !important;
+        background: linear-gradient(90deg, rgba(0,82,93,0.95) 0%, rgba(0,69,79,1) 50%, rgba(0,82,93,0.95) 100%) !important;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
         border-radius: 0px;
     }
@@ -4315,7 +4343,7 @@ div .col-3 select {
         z-index: 999;
         padding: 10px 0 0 0;
         margin-top: 90px;
-        background: rgb(0,78,89) !important;
+        background: var(--primary) !important;
     }
 
     .sticky-top.navbar-dark {
@@ -4847,3 +4875,31 @@ form .form-row .textarea {
         width: 100% !important;
     }
 }
+
+/* Página de Error */
+.container-404 {
+    height: 100vh;
+    padding: 20%;
+    background: honeydew;
+}
+
+.container-404 h1 {
+    color: var(--sadcolor);
+}
+
+.container-404 .title {
+    border: 10px solid var(--sadcolor);
+    font-size: 128px !important;
+}
+
+.container-404 p, .container-404 a {
+    color: #000;
+}
+
+.container-404 a {
+    text-decoration: underline;
+}
+
+.container-404 a:hover {
+    color: var(--sadcolor);
+} 
