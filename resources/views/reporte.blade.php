@@ -76,7 +76,7 @@
                 </div>
                 {{-- Introducción --}}
                 <section id="introduccion">
-                    <iframe src="file/reporte42022.pdf#view=FitH&toolbar=0" width="100%" height="800" name="reporte"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1pxMrV-ChtzWXhw_EZJPQFpPIwEtkIILU/preview?embedded=true&view=FitH&toolbar=0" name="reporte" style="width:100%; height: 800px;"></iframe>
                 </section>
                 <hr>
                 {{-- Descargar --}}
@@ -109,7 +109,7 @@
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a href="file/reporte22022.pdf#view=FitH&toolbar=0" target="reporte" title="Ver Reporte">
+                                    <a href="https://drive.google.com/file/d/1FEvILx8jPbG2bPFhLGeCcKTe7px0q_b5/preview" target="reporte" title="Ver Reporte">
                                         <i class="far fa-eye"></i>
                                     </a>
                                 </td>
@@ -124,7 +124,7 @@
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a href="file/reporte22022A.pdf#view=FitH&toolbar=0" target="reporte" title="Ver Reporte">
+                                    <a href="https://drive.google.com/file/d/12yeNRiNajCMTIgtHlgwKqJ_kNtPdM1L2/preview" target="reporte" title="Ver Reporte">
                                         <i class="far fa-eye"></i>
                                     </a>
                                 </td>
@@ -144,7 +144,7 @@
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a href="file/reporte32022.pdf#view=FitH&toolbar=0" target="reporte" title="Ver Reporte">
+                                    <a href="https://drive.google.com/file/d/1oYa_DsXVJlu9dLU9BO_zvG3vl6Whl_oJ/preview" target="reporte" title="Ver Reporte">
                                         <i class="far fa-eye"></i>
                                     </a>
                                 </td>
@@ -164,7 +164,7 @@
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a href="file/reporte42022.pdf#view=FitH&toolbar=0" target="reporte" title="Ver Reporte">
+                                    <a href="https://drive.google.com/file/d/1pxMrV-ChtzWXhw_EZJPQFpPIwEtkIILU/preview" target="reporte" title="Ver Reporte">
                                         <i class="far fa-eye"></i>
                                     </a>
                                 </td>
