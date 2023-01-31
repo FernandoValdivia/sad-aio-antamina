@@ -41,6 +41,10 @@
 	letter-spacing: .05rem;
 }
 
+.home_left a:hover {
+	color: rgb(0,78,89);
+}
+
 .home_right {
 	display: flex;
 	align-items: center;

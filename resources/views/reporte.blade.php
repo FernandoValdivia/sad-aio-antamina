@@ -91,7 +91,8 @@
                                 <tr>
                                     <td>Periodo</td>
                                     <td>Documento</td>
-                                    <td colspan="3">Descargar</td> 
+                                    <td colspan="2">Descargar</td> 
+                                    <td>Ver</td> 
                                 </tr>
                             </thead>
                             {{-- Descarga 2T 2022 --}}
@@ -110,21 +111,6 @@
                                 </td>
                                 <td class="text-center">
                                     <a href="https://drive.google.com/file/d/1FEvILx8jPbG2bPFhLGeCcKTe7px0q_b5/preview" target="reporte" title="Ver Reporte">
-                                        <i class="far fa-eye"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            {{-- Descarga 2T 2022 Antamina --}}
-                            <tr>
-                                <td class="text-center"><b>2T 2022</b></td>
-                                <td>EC Monitoreo de KPIs y Vacunación - Reporte 2T 2022</td>
-                                <td class="text-center" colspan="2">
-                                    <a href="/descargar-pdf22022A" title="Descargar PDF">
-                                        <i class="far fa-file-pdf"></i>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="https://drive.google.com/file/d/12yeNRiNajCMTIgtHlgwKqJ_kNtPdM1L2/preview" target="reporte" title="Ver Reporte">
                                         <i class="far fa-eye"></i>
                                     </a>
                                 </td>
@@ -154,7 +140,7 @@
                                 <td class="text-center"><b>4T 2022</b></td>
                                 <td>Progreso Cierre Brechas AIO - Reporte 4T 2022</td>
                                 <td class="text-center">
-                                    <a href="/descargar-pdf42022" title="Descargar PDF">
+                                    <a id="" href="/descargar-pdf42022" title="Descargar PDF">
                                         <i class="far fa-file-pdf"></i>
                                     </a>
                                 </td>
