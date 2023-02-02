@@ -20,8 +20,8 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <!--=============== BOXICONS ===============-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    {{-- BOXICONS --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Template Stylesheet -->
@@ -30,10 +30,6 @@
     <link href="{{ asset('css/chat.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="loader">
-        <img src="/img/load-red.gif" alt="Loading..." />
-    </div>
-
     <div class="container-xxl bg-white p-0">
         <!-- Navbar -->
         <div class="container-xxl position-relative p-0">
@@ -9741,6 +9737,7 @@
                 <p class="fuente">Fuente: PNUD, INEI, CCD, elaboración propia</p>
             </div>
             <hr>
+            {{-- Descarga --}}
             <div class="row dwnld-div" id="descarga">
                 <a href="/descargar-brechas">
                         <i class="far fa-file-excel"></i>
@@ -9764,17 +9761,28 @@
                         }
                         ?></b>
                 </h3>
+                {{-- <ul>
+                    @php
+                        $location = $_POST['location'];
+                        $distrito = explode(",",$location);
+                        $distrito_nom = $distrito[2];
+
+                        $query = ['distrito' => $distrito_nom];
+                        $doc = DB::table('documentos')
+                            ->where($query)
+                            ->get();
+                    @endphp
+                    @foreach ($doc as $d)
+                        <li><a href="{{$d->doc_url}}">{{$d->doc_nombre}}</a></li>
+                    @endforeach
+                </ul> --}}
                 <ul id="utAIO" class="class-list-block">
                     <li><a href="#">Documento sobre tema 1</a></li>
-                    <li><a href="#">Documento sobre tema 2</a></li>
-                    <li><a href="#">Documento sobre tema 3</a></li>
-                    <li><a href="#">Documento sobre tema 4</a></li>
+                    <li><a href="#">...</a></li>
                 </ul>
                 <ul id="utAquia" class="class-list-none">
                     <li><a href="#">Documento sobre Aquia 1</a></li>
-                    <li><a href="#">Documento sobre Aquia 2</a></li>
-                    <li><a href="#">Documento sobre Aquia 3</a></li>
-                    <li><a href="#">Documento sobre Aquia 4</a></li>
+                    <li><a href="#">...</a></li>
                 </ul>
             </div>
         </div>

@@ -25,7 +25,7 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-    <!--=============== BOXICONS ===============-->
+    {{-- BOXICONS --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
     <!-- Customized Bootstrap Stylesheet -->
@@ -60,7 +60,7 @@
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="/" class="nav-item nav-link">Inicio</a>
                         <a href="/resumen" class="nav-item nav-link">Resumen</a>
-                        <a href="/brechas" class="nav-item nav-link">Brechas</a>
+                        <a href="/brechas" class="nav-item nav-link" onclick="onLoad()">Brechas</a>
                         <a href="/proyectos" class="nav-item nav-link active">Proyectos</a>
                         <a href="/recursos" class="nav-item nav-link">Recursos</a>
                         <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>

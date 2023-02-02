@@ -1,3 +1,8 @@
+{{-- Loader --}}
+<div id="containerLoad" class="loader hidden">
+    <img src="/img/load-red.gif" alt="Loading..." />
+</div>
+<script src="js/loader.js"></script>
 {{-- Modal Sugerencias --}}
 <section class="modal containermodal" id="main__modal">
     <div class="modal__container" id="modal-container">
