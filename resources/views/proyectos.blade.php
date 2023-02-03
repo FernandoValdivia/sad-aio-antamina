@@ -75,297 +75,286 @@
         <!-- Proyectos Start -->
         <div class="container-xxl py-5">
             <div class="container-fluid-py" id="container-proy">
-                <div class="row g-4 align-items-center">
-                    <div class="row text-center">
+                <div class="g-4 align-items-center justify-content">
+                    <div class="text-center">
                         <h3 id="titulo">Cartera de proyectos para el cierre de brechas y puesta en valor las potencialidades</h3>
                         <p>(Descripción)</p>
                     </div>
-                    <div class="row ptop" id="proy-card">
+                    <div class="contenedor-esquema" id="proy-card">
                         <!-- Filtros -->
-                        <div class="row pt-3">
-                            <form action="/proyectos" method="post">
-                                @csrf
-                                {{-- Unidad territorial --}}
-                                <div class="col-2">
-                                    <div class="row"  id="select-location">
-                                    <label id="label" for="location">Unidad territorial</label>
-                                    <select id="location" name="location" class="select">
-                                        <option value="AIO" class="optgroup-ut">AIO</option>
-                                        <option value="-9.96885060854611,-77.09381103515626,UGT Huallanca" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=="-9.96885060854611,-77.09381103515626,UGT Huallanca") echo 'selected';}?>>UGT Huallanca</option>
-                                            @foreach ($ugt_huall as $ugt)
-                                            @php
-                                                $value = $ugt->coords.",".$ugt->distrito;
-                                            @endphp
-                                            <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                            @endforeach
-                                        <option value="-10.072642780669092,-78.14849853515626,UGT Huarmey" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-10.072642780669092,-78.14849853515626,UGT Huarmey') echo 'selected';}?>>UGT Huarmey</option>
-                                            @foreach ($ugt_huarmey as $ugt)
-                                            @php
-                                                $value = $ugt->coords.",".$ugt->distrito;
-                                            @endphp
-                                            <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                            @endforeach
-                                        <option value="-9.522205574667476,-77.16384887695314,UGT Mina / San Marcos" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-9.522205574667476,-77.16384887695314,UGT Mina / San Marcos') echo 'selected';}?>>UGT Mina / San Marcos</option>
-                                            @foreach ($ugt_mina as $ugt)
-                                            @php
-                                                $value = $ugt->coords.",".$ugt->distrito;
-                                            @endphp
-                                            <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                            @endforeach
-                                        <option value="-10.451350331922376,-77.72140502929688,UGT Valle Fortaleza" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-10.451350331922376,-77.72140502929688,UGT Valle Fortaleza') echo 'selected';}?>>UGT Valle Fortaleza</option>
-                                            @foreach ($ugt_valle as $ugt)
-                                            @php
-                                                $value = $ugt->coords.",".$ugt->distrito;
-                                            @endphp
-                                            <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                            @endforeach
-                                    </select>
-                                    </div> 
-                                </div>
-                                {{-- Periodo de Tiempo --}}
-                                <div class="col-2">
-                                    <div class="row">
-                                        <label id="label" for="time_frame">Periodo de Tiempo</label>
-                                        <select id="time_frame" name="time_frame">
-                                            <option value="Todos">Todos</option>
-                                            <option value="Corto Plazo" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Corto Plazo") echo 'selected';}?>>Corto Plazo</option>
-                                            <option value="Mediano Plazo" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Mediano Plazo") echo 'selected';}?>>Mediano Plazo</option>
-                                            <option value="Largo Plazo" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Largo Plazo") echo 'selected';}?>>Largo Plazo</option>
-                                        </select>
-                                    </div> 
-                                </div>
-                                {{-- Pilar --}}
-                                <div class="col-2">
-                                    <div class="row">
-                                        <label id="label" for="factores">Pilar</label>
-                                        <select id="factores" name="factores">
-                                            <option value="Todos">Todos</option>
-                                            <option value="Emprendimiento  y desarrollo económico" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Emprendimiento  y desarrollo económico") echo 'selected';}?>>Emprendimiento  y desarrollo económico</option>
-                                            <option value="Infraestructura social productivo" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Infraestructura social productivo") echo 'selected';}?>>Infraestructura social productivo</option>
-                                            <option value="Institucionalidad Madura" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Institucionalidad Madura") echo 'selected';}?>>Institucionalidad Madura</option>
-                                            <option value="Oportunidades para las futuras generaciones" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Oportunidades para las futuras generaciones") echo 'selected';}?>>Oportunidades para las futuras generaciones</option>
-                                        </select>
-                                    </div> 
-                                </div>
-                                {{-- Modalidad de intervención --}}
-                                <div class="col-2">
-                                    <div class="row">
-                                        <label id="label" for="modalidad">Modalidad de intervención</label>
-                                        <select id="modalidad" name="modalidad">
-                                            <option value="Todas">Todas</option>
-                                            <option value="Inversión Pública (GL/GR/GN)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Pública (GL/GR/GN)") echo 'selected';}?>>Inversión Pública (GL/GR/GN)</option>
-                                            <option value="Inversión Social Directa Antamina: CAPEX" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Directa Antamina: CAPEX") echo 'selected';}?>>Inversión Social Directa Antamina: CAPEX</option>
-                                            <option value="Inversión Social Directa Antamina: OPEX" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Directa Antamina: OPEX") echo 'selected';}?>>Inversión Social Directa Antamina: OPEX</option>
-                                            <option value="Inversión Social Gestión Pública y Privada(Obras por impuesto)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Gestión Pública y Privada(Obras por impuesto)") echo 'selected';}?>>Inversión Social Gestión Pública y Privada(Obras por impuesto)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                {{-- Periodo --}}
-                                <div class="col-2">
-                                    <div class="row">
-                                        <label id="label" for="years">Periodo</label>
-                                        <select id="years" name="years">
-                                            <option value="Todos">Todos</option>
-                                            <option value="42021" <?php if (isset($_POST['years'])){ if($_POST['years']=="42021") echo 'selected';}?> >2021 (Línea de Base)</option>
-                                            <option value="22022" <?php if (isset($_POST['years'])){ if($_POST['years']=="22022") echo 'selected';}?> >2T-2022</option>
-                                            <option value="32022" <?php if (isset($_POST['years'])){ if($_POST['years']=="32022") echo 'selected';}?> >3T-2022</option>
-                                            <option value="42022" <?php if (isset($_POST['years'])){ if($_POST['years']=="42022") echo 'selected';}?> >4T-2022</option>
-                                            <option value="2022" <?php if (isset($_POST['years'])){ if($_POST['years']=="2022") echo 'selected';}?> >2022</option>
-                                            <option value="12023" <?php if (isset($_POST['years'])){ if($_POST['years']=="12023") echo 'selected';}?> >1T-2023</option>
-                                            <option value="22023" <?php if (isset($_POST['years'])){ if($_POST['years']=="22023") echo 'selected';}?> >2T-2023</option>
-                                            <option value="32023" <?php if (isset($_POST['years'])){ if($_POST['years']=="32023") echo 'selected';}?> >3T-2023</option>
-                                            <option value="42023" <?php if (isset($_POST['years'])){ if($_POST['years']=="42023") echo 'selected';}?> >4T-2023</option>                                    
-                                            <option value="2023" <?php if (isset($_POST['years'])){ if($_POST['years']=="2023") echo 'selected';}?> >2023</option>
-                                            <option value="12024" <?php if (isset($_POST['years'])){ if($_POST['years']=="12024") echo 'selected';}?> >1T-2024</option>
-                                            <option value="22024" <?php if (isset($_POST['years'])){ if($_POST['years']=="22024") echo 'selected';}?> >2T-2024</option>
-                                            <option value="32024" <?php if (isset($_POST['years'])){ if($_POST['years']=="32024") echo 'selected';}?> >3T-2024</option>
-                                            <option value="42024" <?php if (isset($_POST['years'])){ if($_POST['years']=="42024") echo 'selected';}?> >4T-2024</option>
-                                            <option value="2024" <?php if (isset($_POST['years'])){ if($_POST['years']=="2024") echo 'selected';}?> >2024</option>
-                                            <option value="12025" <?php if (isset($_POST['years'])){ if($_POST['years']=="12025") echo 'selected';}?> >1T-2025</option>
-                                            <option value="22025" <?php if (isset($_POST['years'])){ if($_POST['years']=="22025") echo 'selected';}?> >2T-2025</option>
-                                            <option value="32025" <?php if (isset($_POST['years'])){ if($_POST['years']=="32025") echo 'selected';}?> >3T-2025</option>
-                                            <option value="42025" <?php if (isset($_POST['years'])){ if($_POST['years']=="42025") echo 'selected';}?> >4T-2025</option>
-                                            <option value="2025" <?php if (isset($_POST['years'])){ if($_POST['years']=="2025") echo 'selected';}?> >2025</option>
-                                            <option value="12026" <?php if (isset($_POST['years'])){ if($_POST['years']=="12026") echo 'selected';}?> >1T-2026</option>
-                                            <option value="22026" <?php if (isset($_POST['years'])){ if($_POST['years']=="22026") echo 'selected';}?> >2T-2026</option>
-                                            <option value="32026" <?php if (isset($_POST['years'])){ if($_POST['years']=="32026") echo 'selected';}?> >3T-2026</option>
-                                            <option value="42026" <?php if (isset($_POST['years'])){ if($_POST['years']=="42026") echo 'selected';}?> >4T-2026</option>
-                                            <option value="2026" <?php if (isset($_POST['years'])){ if($_POST['years']=="2026") echo 'selected';}?> >2026</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                {{-- Botón filtrar --}}
-                                <div class="col-2">
-                                    <div class="row mt-2">
-                                        <input type="submit" value="Filtrar" id="filter">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="row mt-4 mb-3" id="card-map-info">
+                        <form action="/proyectos" method="post">
+                            @csrf
+                            {{-- Unidad territorial --}}
+                            <div class="width-filter">
+                                <div id="select-location">
+                                <label id="label" for="location">Unidad territorial</label>
+                                <select id="location" name="location" class="select">
+                                    <option value="AIO" class="optgroup-ut">AIO</option>
+                                    <option value="-9.96885060854611,-77.09381103515626,UGT Huallanca" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=="-9.96885060854611,-77.09381103515626,UGT Huallanca") echo 'selected';}?>>UGT Huallanca</option>
+                                        @foreach ($ugt_huall as $ugt)
+                                        @php
+                                            $value = $ugt->coords.",".$ugt->distrito;
+                                        @endphp
+                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                        @endforeach
+                                    <option value="-10.072642780669092,-78.14849853515626,UGT Huarmey" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-10.072642780669092,-78.14849853515626,UGT Huarmey') echo 'selected';}?>>UGT Huarmey</option>
+                                        @foreach ($ugt_huarmey as $ugt)
+                                        @php
+                                            $value = $ugt->coords.",".$ugt->distrito;
+                                        @endphp
+                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                        @endforeach
+                                    <option value="-9.522205574667476,-77.16384887695314,UGT Mina / San Marcos" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-9.522205574667476,-77.16384887695314,UGT Mina / San Marcos') echo 'selected';}?>>UGT Mina / San Marcos</option>
+                                        @foreach ($ugt_mina as $ugt)
+                                        @php
+                                            $value = $ugt->coords.",".$ugt->distrito;
+                                        @endphp
+                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                        @endforeach
+                                    <option value="-10.451350331922376,-77.72140502929688,UGT Valle Fortaleza" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-10.451350331922376,-77.72140502929688,UGT Valle Fortaleza') echo 'selected';}?>>UGT Valle Fortaleza</option>
+                                        @foreach ($ugt_valle as $ugt)
+                                        @php
+                                            $value = $ugt->coords.",".$ugt->distrito;
+                                        @endphp
+                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                        @endforeach
+                                </select>
+                                </div> 
+                            </div>
+                            {{-- Periodo de Tiempo --}}
+                            <div class="width-filter">
+                                <label id="label" for="time_frame">Periodo de Tiempo</label>
+                                <select id="time_frame" name="time_frame">
+                                    <option value="Todos">Todos</option>
+                                    <option value="Corto Plazo" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Corto Plazo") echo 'selected';}?>>Corto Plazo</option>
+                                    <option value="Mediano Plazo" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Mediano Plazo") echo 'selected';}?>>Mediano Plazo</option>
+                                    <option value="Largo Plazo" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Largo Plazo") echo 'selected';}?>>Largo Plazo</option>
+                                </select>
+                            </div> 
+                            {{-- Pilar --}}
+                            <div class="width-filter">
+                                <label id="label" for="factores">Pilar</label>
+                                <select id="factores" name="factores">
+                                    <option value="Todos">Todos</option>
+                                    <option value="Emprendimiento  y desarrollo económico" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Emprendimiento  y desarrollo económico") echo 'selected';}?>>Emprendimiento  y desarrollo económico</option>
+                                    <option value="Infraestructura social productivo" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Infraestructura social productivo") echo 'selected';}?>>Infraestructura social productivo</option>
+                                    <option value="Institucionalidad Madura" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Institucionalidad Madura") echo 'selected';}?>>Institucionalidad Madura</option>
+                                    <option value="Oportunidades para las futuras generaciones" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Oportunidades para las futuras generaciones") echo 'selected';}?>>Oportunidades para las futuras generaciones</option>
+                                </select>
+                            </div> 
+                            {{-- Modalidad de intervención --}}
+                            <div class="width-filter">
+                                <label id="label" for="modalidad">Modalidad de intervención</label>
+                                <select id="modalidad" name="modalidad">
+                                    <option value="Todas">Todas</option>
+                                    <option value="Inversión Pública (GL/GR/GN)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Pública (GL/GR/GN)") echo 'selected';}?>>Inversión Pública (GL/GR/GN)</option>
+                                    <option value="Inversión Social Directa Antamina: CAPEX" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Directa Antamina: CAPEX") echo 'selected';}?>>Inversión Social Directa Antamina: CAPEX</option>
+                                    <option value="Inversión Social Directa Antamina: OPEX" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Directa Antamina: OPEX") echo 'selected';}?>>Inversión Social Directa Antamina: OPEX</option>
+                                    <option value="Inversión Social Gestión Pública y Privada(Obras por impuesto)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Social Gestión Pública y Privada(Obras por impuesto)") echo 'selected';}?>>Inversión Social Gestión Pública y Privada(Obras por impuesto)</option>
+                                </select>
+                            </div>
+                            {{-- Periodo --}}
+                            <div class="width-filter">
+                                <label id="label" for="years">Periodo</label>
+                                <select id="years" name="years">
+                                    <option value="Todos">Todos</option>
+                                    <option value="42021" <?php if (isset($_POST['years'])){ if($_POST['years']=="42021") echo 'selected';}?> >2021 (Línea de Base)</option>
+                                    <option value="22022" <?php if (isset($_POST['years'])){ if($_POST['years']=="22022") echo 'selected';}?> >2T-2022</option>
+                                    <option value="32022" <?php if (isset($_POST['years'])){ if($_POST['years']=="32022") echo 'selected';}?> >3T-2022</option>
+                                    <option value="42022" <?php if (isset($_POST['years'])){ if($_POST['years']=="42022") echo 'selected';}?> >4T-2022</option>
+                                    <option value="2022" <?php if (isset($_POST['years'])){ if($_POST['years']=="2022") echo 'selected';}?> >2022</option>
+                                    <option value="12023" <?php if (isset($_POST['years'])){ if($_POST['years']=="12023") echo 'selected';}?> >1T-2023</option>
+                                    <option value="22023" <?php if (isset($_POST['years'])){ if($_POST['years']=="22023") echo 'selected';}?> >2T-2023</option>
+                                    <option value="32023" <?php if (isset($_POST['years'])){ if($_POST['years']=="32023") echo 'selected';}?> >3T-2023</option>
+                                    <option value="42023" <?php if (isset($_POST['years'])){ if($_POST['years']=="42023") echo 'selected';}?> >4T-2023</option>                                    
+                                    <option value="2023" <?php if (isset($_POST['years'])){ if($_POST['years']=="2023") echo 'selected';}?> >2023</option>
+                                    <option value="12024" <?php if (isset($_POST['years'])){ if($_POST['years']=="12024") echo 'selected';}?> >1T-2024</option>
+                                    <option value="22024" <?php if (isset($_POST['years'])){ if($_POST['years']=="22024") echo 'selected';}?> >2T-2024</option>
+                                    <option value="32024" <?php if (isset($_POST['years'])){ if($_POST['years']=="32024") echo 'selected';}?> >3T-2024</option>
+                                    <option value="42024" <?php if (isset($_POST['years'])){ if($_POST['years']=="42024") echo 'selected';}?> >4T-2024</option>
+                                    <option value="2024" <?php if (isset($_POST['years'])){ if($_POST['years']=="2024") echo 'selected';}?> >2024</option>
+                                    <option value="12025" <?php if (isset($_POST['years'])){ if($_POST['years']=="12025") echo 'selected';}?> >1T-2025</option>
+                                    <option value="22025" <?php if (isset($_POST['years'])){ if($_POST['years']=="22025") echo 'selected';}?> >2T-2025</option>
+                                    <option value="32025" <?php if (isset($_POST['years'])){ if($_POST['years']=="32025") echo 'selected';}?> >3T-2025</option>
+                                    <option value="42025" <?php if (isset($_POST['years'])){ if($_POST['years']=="42025") echo 'selected';}?> >4T-2025</option>
+                                    <option value="2025" <?php if (isset($_POST['years'])){ if($_POST['years']=="2025") echo 'selected';}?> >2025</option>
+                                    <option value="12026" <?php if (isset($_POST['years'])){ if($_POST['years']=="12026") echo 'selected';}?> >1T-2026</option>
+                                    <option value="22026" <?php if (isset($_POST['years'])){ if($_POST['years']=="22026") echo 'selected';}?> >2T-2026</option>
+                                    <option value="32026" <?php if (isset($_POST['years'])){ if($_POST['years']=="32026") echo 'selected';}?> >3T-2026</option>
+                                    <option value="42026" <?php if (isset($_POST['years'])){ if($_POST['years']=="42026") echo 'selected';}?> >4T-2026</option>
+                                    <option value="2026" <?php if (isset($_POST['years'])){ if($_POST['years']=="2026") echo 'selected';}?> >2026</option>
+                                </select>
+                            </div>
+                            {{-- Botón filtrar --}}
+                            <div class="width-filter" class="mt-2">
+                                <input type="submit" value="Filtrar" id="filter">
+                            </div>
+                        </form>
+                        {{-- End Filtros --}}
+                        <div id="card-map-info">
                             <!-- Mapa -->
-                            <div class="row" id="mapproy"></div>
-                            <!-- Tarjetas de cantidad y monto -->
-                            <div class="row" id="row-card">
-                                {{-- Cantidad de proyectos --}}
-                                <div class="row" id="card-info">
-                                    <h2>
-                                        <?php
-                                            function queryUnidadTerritorial($unidadt)
-                                            {
-                                                if ($unidadt!='AIO' and $unidadt!='UGT Huallanca' and $unidadt!='UGT Mina / San Marcos' and $unidadt!='UGT Valle Fortaleza' and $unidadt!='UGT Huarmey') {
-                                                    $query = ['distrito' => $unidadt];
-                                                    return $query;
-                                                } elseif ($unidadt=='AIO') {
-                                                    return null;
-                                                } else {
-                                                    $query = ['ugt' => $unidadt];
-                                                    return $query;
-                                                }
-                                            }
-
-                                            function queryTimeFrame($timef)
-                                            {
-                                                if ($timef!='Todos') {
-                                                    $query = ['time_frame' => $timef];
-                                                    return $query;
-                                                } else {
-                                                    return null;
-                                                }
-                                            }
-
-                                            function queryFactor($fact)
-                                            {
-                                                if ($fact!='Todos') {
-                                                    $query = ['factores' => $fact];
-                                                    return $query;
-                                                } else {
-                                                    return null;
-                                                }
-                                            }
-
-                                            function queryModalidad($tipodei)
-                                            {
-                                                if ($tipodei!='Todas') {
-                                                    $query = ['tipo_de_inversion' => $tipodei];
-                                                    return $query;
-                                                } else {
-                                                    return null;
-                                                }
-                                            }
-
-                                            function queryAnio($qanio)
-                                            {
-                                                if ($qanio!='Todos') {
-                                                    $query = ['_'.$qanio => $qanio];
-                                                    return $query;
-                                                } else {
-                                                    return null;
-                                                }
-                                            }
-
-                                            if (isset($_POST['time_frame']) || isset($_POST['location']) || isset($_POST['factores']) || isset($_POST['modalidad'])|| isset($_POST['years'])) {
-
-                                                $location = $_POST['location'];
-
-                                                if ($location!='AIO' and $location!='UGT Huallanca' and $location!='UGT Mina / San Marcos' and $location!='UGT Valle Fortaleza' and $location!='UGT Huarmey') {
-                                                    $distrito = explode(",",$location);
-                                                    $distrito_nom = $distrito[2];
-                                                } elseif($location == 'AIO') {
-                                                    $distrito_nom = 'AIO';
-                                                } else {
-                                                    $distrito = explode(",",$location);
-                                                    $distrito_nom = $distrito[2];
-                                                }
-
-                                                //distrito
-                                                $timeframe = $_POST['time_frame']; // time frame
-                                                $factor = $_POST['factores']; // factor
-                                                $modalidad = $_POST['modalidad']; // modalidad
-                                                $anio = $_POST['years']; // año
-
-                                                $cant = DB::table('proyectos')
-                                                                ->where(queryUnidadTerritorial($distrito_nom))
-                                                                ->where(queryTimeFrame($timeframe))
-                                                                ->where(queryFactor($factor))
-                                                                ->where(queryModalidad($modalidad))
-                                                                ->where(queryAnio($anio))
-                                                                ->count('producto_proyecto');
-                                                                echo $cant;
-                                                
-                                                //Filtrar pines
-                                                $proyectos = DB::table('proyectos')->select(
-                                                    'departamento',
-                                                    'provincia',
-                                                    'distrito',
-                                                    'ugt',
-                                                    'codigo_unico',
-                                                    'producto_proyecto',
-                                                    'time_frame',
-                                                    'tipo_de_inversion',
-                                                    'monto_actualizado',
-                                                    'latitud',
-                                                    'longitud',
-                                                    'anio',
-                                                    'factores',
-                                                    'conclusion'
-                                                )
-                                                ->where(queryUnidadTerritorial($distrito_nom))
-                                                ->where(queryTimeFrame($timeframe))
-                                                ->where(queryFactor($factor))
-                                                ->where(queryModalidad($modalidad))
-                                                ->where(queryAnio($anio))
-                                                ->get();
+                            <div id="mapproy"></div>
+                        </div>
+                        <!-- Tarjetas de cantidad y monto -->
+                        <div id="row-card">
+                            {{-- Cantidad de proyectos --}}
+                            <div id="card-info">
+                                <h2>
+                                    <?php
+                                        function queryUnidadTerritorial($unidadt)
+                                        {
+                                            if ($unidadt!='AIO' and $unidadt!='UGT Huallanca' and $unidadt!='UGT Mina / San Marcos' and $unidadt!='UGT Valle Fortaleza' and $unidadt!='UGT Huarmey') {
+                                                $query = ['distrito' => $unidadt];
+                                                return $query;
+                                            } elseif ($unidadt=='AIO') {
+                                                return null;
                                             } else {
-                                                //Obtener el monto total
-                                                $cant = DB::table('proyectos')
-                                                        ->count();
-                                                        echo $cant;
+                                                $query = ['ugt' => $unidadt];
+                                                return $query;
                                             }
-                                        ?>
-                                    </h2>
-                                    <h5>Cantidad de proyectos <sup>1/</sup></h5>
-                                </div>
-                                {{-- Monto actualizado --}}
-                                <div class="row mt-1 pt-3" id="card-info">
-                                    <h2>
-                                        <?php
-                                            if (isset($_POST['time_frame']) or isset($_POST['location']) or isset($_POST['factores']) or isset($_POST['modalidad'])or isset($_POST['years'])) {
-
-                                                $location = $_POST['location'];
-
-                                                if ($location == 'AIO') {
-                                                    $distrito_nom = 'AIO';
-                                                } else {
-                                                    $distrito = explode(",",$location);
-                                                    $distrito_nom = $distrito[2];
-                                                }
-
-                                                //distrito
-                                                $timeframe = $_POST['time_frame']; // time frame
-                                                $factor = $_POST['factores']; // factor
-                                                $modalidad = $_POST['modalidad']; // modalidad
-                                                $anio = $_POST['years']; // año
-
-                                                $cant = DB::table('proyectos')
-                                                                ->where(queryUnidadTerritorial($distrito_nom))
-                                                                ->where(queryTimeFrame($timeframe))
-                                                                ->where(queryFactor($factor))
-                                                                ->where(queryModalidad($modalidad))
-                                                                ->where(queryAnio($anio))
-                                                                ->sum('monto_actualizado');
-                                                                echo number_format($cant);
+                                        }
+                    
+                                        function queryTimeFrame($timef)
+                                        {
+                                            if ($timef!='Todos') {
+                                                $query = ['time_frame' => $timef];
+                                                return $query;
                                             } else {
-                                                //Obtener el monto total
-                                                $cant = DB::table('proyectos')
-                                                        ->sum('monto_actualizado');
-                                                        echo number_format($cant);
+                                                return null;
                                             }
-                                        ?>
-                                    </h2>
-                                    <h5>Monto actualizado</h5>
-                                    <small>(S/ millones)</small>
-                                </div>
+                                        }
+                    
+                                        function queryFactor($fact)
+                                        {
+                                            if ($fact!='Todos') {
+                                                $query = ['factores' => $fact];
+                                                return $query;
+                                            } else {
+                                                return null;
+                                            }
+                                        }
+                    
+                                        function queryModalidad($tipodei)
+                                        {
+                                            if ($tipodei!='Todas') {
+                                                $query = ['tipo_de_inversion' => $tipodei];
+                                                return $query;
+                                            } else {
+                                                return null;
+                                            }
+                                        }
+                    
+                                        function queryAnio($qanio)
+                                        {
+                                            if ($qanio!='Todos') {
+                                                $query = ['_'.$qanio => $qanio];
+                                                return $query;
+                                            } else {
+                                                return null;
+                                            }
+                                        }
+                    
+                                        if (isset($_POST['time_frame']) || isset($_POST['location']) || isset($_POST['factores']) || isset($_POST['modalidad'])|| isset($_POST['years'])) {
+                    
+                                            $location = $_POST['location'];
+                    
+                                            if ($location!='AIO' and $location!='UGT Huallanca' and $location!='UGT Mina / San Marcos' and $location!='UGT Valle Fortaleza' and $location!='UGT Huarmey') {
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                            } elseif($location == 'AIO') {
+                                                $distrito_nom = 'AIO';
+                                            } else {
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                            }
+                    
+                                            //distrito
+                                            $timeframe = $_POST['time_frame']; // time frame
+                                            $factor = $_POST['factores']; // factor
+                                            $modalidad = $_POST['modalidad']; // modalidad
+                                            $anio = $_POST['years']; // año
+                    
+                                            $cant = DB::table('proyectos')
+                                                            ->where(queryUnidadTerritorial($distrito_nom))
+                                                            ->where(queryTimeFrame($timeframe))
+                                                            ->where(queryFactor($factor))
+                                                            ->where(queryModalidad($modalidad))
+                                                            ->where(queryAnio($anio))
+                                                            ->count('producto_proyecto');
+                                                            echo $cant;
+                                            
+                                            //Filtrar pines
+                                            $proyectos = DB::table('proyectos')->select(
+                                                'departamento',
+                                                'provincia',
+                                                'distrito',
+                                                'ugt',
+                                                'codigo_unico',
+                                                'producto_proyecto',
+                                                'time_frame',
+                                                'tipo_de_inversion',
+                                                'monto_actualizado',
+                                                'latitud',
+                                                'longitud',
+                                                'anio',
+                                                'factores',
+                                                'conclusion'
+                                            )
+                                            ->where(queryUnidadTerritorial($distrito_nom))
+                                            ->where(queryTimeFrame($timeframe))
+                                            ->where(queryFactor($factor))
+                                            ->where(queryModalidad($modalidad))
+                                            ->where(queryAnio($anio))
+                                            ->get();
+                                        } else {
+                                            //Obtener el monto total
+                                            $cant = DB::table('proyectos')
+                                                    ->count();
+                                                    echo $cant;
+                                        }
+                                    ?>
+                                </h2>
+                                <h5>Cantidad de proyectos <sup>1/</sup></h5>
+                            </div>
+                            {{-- Monto actualizado --}}
+                            <div id="card-info">
+                                <h2>
+                                    <?php
+                                        if (isset($_POST['time_frame']) or isset($_POST['location']) or isset($_POST['factores']) or isset($_POST['modalidad'])or isset($_POST['years'])) {
+                    
+                                            $location = $_POST['location'];
+                    
+                                            if ($location == 'AIO') {
+                                                $distrito_nom = 'AIO';
+                                            } else {
+                                                $distrito = explode(",",$location);
+                                                $distrito_nom = $distrito[2];
+                                            }
+                    
+                                            //distrito
+                                            $timeframe = $_POST['time_frame']; // time frame
+                                            $factor = $_POST['factores']; // factor
+                                            $modalidad = $_POST['modalidad']; // modalidad
+                                            $anio = $_POST['years']; // año
+                    
+                                            $cant = DB::table('proyectos')
+                                                            ->where(queryUnidadTerritorial($distrito_nom))
+                                                            ->where(queryTimeFrame($timeframe))
+                                                            ->where(queryFactor($factor))
+                                                            ->where(queryModalidad($modalidad))
+                                                            ->where(queryAnio($anio))
+                                                            ->sum('monto_actualizado');
+                                                            echo number_format($cant);
+                                        } else {
+                                            //Obtener el monto total
+                                            $cant = DB::table('proyectos')
+                                                    ->sum('monto_actualizado');
+                                                    echo number_format($cant);
+                                        }
+                                    ?>
+                                </h2>
+                                <h5>Monto actualizado</h5>
+                                <small>(S/ millones)</small>
                             </div>
                         </div>
                     </div>
@@ -373,7 +362,7 @@
                     <p class="ptop"><sup>1/</sup> Proyectos y/o intervenciones</p>
                     <hr>
                     
-                    <div class="row dwnld-div" id="descarga">
+                    <div class="dwnld-div" id="descarga">
                         <a href="/descargar-proyectos">
                             <i class="far fa-file-excel"></i>
                             DATA

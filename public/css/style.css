@@ -3734,10 +3734,6 @@ div form {
     display: flex;
 }
 
-div form div {
-    padding: 0 1% 0 1%;
-}
-
 div form div input {
     color: #000;
     border: solid rgba(255, 255, 255, 0.5) 1px;
@@ -3770,14 +3766,18 @@ div .legendp img {
 }
 
 /* Cards */
+.justify-content {
+    justify-content: center;
+}
+
 #card-map-info {
-    padding: 0px 0px 0.5% 2.5%;
+    padding: 0;
 }
 
 #proy-card {
+    height: 100%;
     text-align: center;
     background-color: #bad9fd85;
-    height: 700px;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
@@ -3795,30 +3795,24 @@ div .legendp img {
 
 #mapproy {
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     margin-right: auto;
 }
 
 #row-card {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 20%;
+    height: auto;
+    width: 100%;
 }
 
 #row-card h2 {
-    font-weight: normal;
-    margin-bottom: -60px;
 }
 
 #card-info {
-    height: 245px;
     background-color: #fff;
     text-align: center;
     align-items: center;
-    border-radius: 10px;
-    padding: 0;
-    margin: 0;
+    justify-content: center;
+    border-radius: 5px;
 }
 
 #card-info h2 {
@@ -3827,11 +3821,15 @@ div .legendp img {
 }
 
 #card-info small {
-    margin-top: -120px;
 }
 
-.ptop {
-    margin-top: 0px !important;
+.contenedor-esquema {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contenedor-esquema label {
+    display: block !important;
 }
 
 .col-2 #filter{
@@ -3848,7 +3846,22 @@ div .legendp img {
 
 /* Resposive Design */
 /* Proyectos */
+@media (min-width: 990px) {
+    .contenedor-esquema .width-filter {
+        width: 16.66%;
+    }
+
+    .width-filter select, .width-filter input {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width:990px) {
+
+    .contenedor-esquema select, .contenedor-esquema input {
+        width: 100%;
+    }
+
     div div .end-form {
         align-items: flex-end;
     }
@@ -3859,12 +3872,14 @@ div .legendp img {
 
     #proy-card form {
         align-items: flex-end;
-        display: inline-block;
+        display: block;
     }
 
     #card-map-info {
-        padding: 0px 0px 0% 13%;;
-        display: inline-flex;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        min-height: 400px;
     }
 
     #container-proy {
@@ -3892,62 +3907,16 @@ div .legendp img {
         display: block;
     }
 
-    div form div {
-        padding: 0 1% 0 1%;
-    }
-
-    div form div input {
-        padding: 1%;
-        color: #000;
-        border: solid rgba(255, 255, 255, 0.5) 1px;
-        border-radius: 10px;
-        background-color: #bad9fd;
-    }    
-
     /* Cards */
     #proy-card {
         height: auto;
-        padding-bottom: 100%;
+        display: grid;
+        row-gap: 1rem;
     }
 
     #mapproy {
         width: 100%;
-        height: 120%;
-    }
-
-    #row-card {
-        padding: 1% 8% 1% 0px;
-        margin-top: 1%;
-        height: 30%;
-        width: auto;
-    }
-
-    #row-card h2 {
-        margin-bottom: 6%;
-    }
-
-    #card-info {
-        height: 200%;
-    }
-
-    #card-info h2 {
-        font-size: 3rem;
-        font-weight: 400;
-    }
-
-    #card-info small {
-        margin-top: 0;
-        margin-bottom: 2%;
-    }
-    }
-
-    @media screen and (max-width:360px) {
-    #card-info {
-        height: 180%;
-    }
-
-    #proy-card {
-        padding-bottom: 100%;
+        height: 100%;
     }
 }
 
