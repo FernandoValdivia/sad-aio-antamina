@@ -82,7 +82,7 @@
                     </div>
                     <div class="contenedor-esquema" id="proy-card">
                         <!-- Filtros -->
-                        <form action="/proyectos" method="post">
+                        <form action="/proyectos" method="post" id="card-filters">
                             @csrf
                             {{-- Unidad territorial --}}
                             <div class="width-filter">
@@ -144,7 +144,7 @@
                             </div> 
                             {{-- Modalidad de intervención --}}
                             <div class="width-filter">
-                                <label id="label" for="modalidad">Modalidad de intervención</label>
+                                <label id="label" for="modalidad">Modalidad de inversión</label>
                                 <select id="modalidad" name="modalidad">
                                     <option value="Todas">Todas</option>
                                     <option value="Inversión Pública (GL/GR/GN)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Pública (GL/GR/GN)") echo 'selected';}?>>Inversión Pública (GL/GR/GN)</option>
@@ -186,7 +186,7 @@
                                 </select>
                             </div>
                             {{-- Botón filtrar --}}
-                            <div class="width-filter" class="mt-2">
+                            <div class="width-filter">
                                 <input type="submit" value="Filtrar" id="filter">
                             </div>
                         </form>
@@ -317,7 +317,7 @@
                                 <h5>Cantidad de proyectos <sup>1/</sup></h5>
                             </div>
                             {{-- Monto actualizado --}}
-                            <div id="card-info">
+                            <div id="card-info" class="mt-3">
                                 <h2>
                                     <?php
                                         if (isset($_POST['time_frame']) or isset($_POST['location']) or isset($_POST['factores']) or isset($_POST['modalidad'])or isset($_POST['years'])) {
