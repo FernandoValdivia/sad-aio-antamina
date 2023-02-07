@@ -3530,7 +3530,6 @@ h6 {
 
 /* Leyenda resumen*/
 div .legend {
-    background-color: rgb(255, 255, 255);
     width: 90%;
     padding: 1%;
 }
@@ -3541,6 +3540,7 @@ div .legend h6 {
 }
 
 div .legend table {
+    background: #fff;
     width: 100%;
 }
 
