@@ -67,73 +67,67 @@
         <!-- Navbar End -->
 
         <!-- Recursos Start -->
-        <div class="container-xxl py-5">
-            <div class="container-hor">
-                <div class="row g-5 align-items-center">
-                    <div class="row">
-                        <div class="col-9">
-                        </div>
-                        {{-- Filtros --}}
-                        <div class="col-3" id="filterec">
-                            <label id="label" for="unit">Unidad territorial:</label>
-                            <select name="location" id="location" class="select" onchange="ShowSelected();">
-                                <option value="AIO" class="optgroup-ut">AIO</option>
-                                <option value="-9.96885060854611,-77.09381103515626,UGT Huallanca" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=="-9.96885060854611,-77.09381103515626,UGT Huallanca") echo 'selected';}?>>UGT Huallanca</option>
-                                    @foreach ($ugt_huall as $ugt)
-                                    @php
-                                        $value = $ugt->coords.",".$ugt->distrito;
-                                    @endphp
-                                    <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                    @endforeach
-                                <option value="-10.072642780669092,-78.14849853515626,UGT Huarmey" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-10.072642780669092,-78.14849853515626,UGT Huarmey') echo 'selected';}?>>UGT Huarmey</option>
-                                    @foreach ($ugt_huarmey as $ugt)
-                                    @php
-                                        $value = $ugt->coords.",".$ugt->distrito;
-                                    @endphp
-                                    <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                    @endforeach
-                                <option value="-9.522205574667476,-77.16384887695314,UGT Mina / San Marcos" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-9.522205574667476,-77.16384887695314,UGT Mina / San Marcos') echo 'selected';}?>>UGT Mina / San Marcos</option>
-                                    @foreach ($ugt_mina as $ugt)
-                                    @php
-                                        $value = $ugt->coords.",".$ugt->distrito;
-                                    @endphp
-                                    <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                    @endforeach
-                                <option value="-10.451350331922376,-77.72140502929688,UGT Valle Fortaleza" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-10.451350331922376,-77.72140502929688,UGT Valle Fortaleza') echo 'selected';}?>>UGT Valle Fortaleza</option>
-                                    @foreach ($ugt_valle as $ugt)
-                                    @php
-                                        $value = $ugt->coords.",".$ugt->distrito;
-                                    @endphp
-                                    <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                    @endforeach
-                                </optgroup>
-                            </select>
-                        </div>
+        <div class="container-hor">
+            <div class="align-items-center">
+                    {{-- Filtros --}}
+                    <div id="filterec">
+                        <label id="label" for="location">Unidad territorial:</label>
+                        <select name="location" id="location" class="select" onchange="ShowSelected();">
+                            <option value="AIO" class="optgroup-ut">AIO</option>
+                            <option value="-9.96885060854611,-77.09381103515626,UGT Huallanca" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=="-9.96885060854611,-77.09381103515626,UGT Huallanca") echo 'selected';}?>>UGT Huallanca</option>
+                                @foreach ($ugt_huall as $ugt)
+                                @php
+                                    $value = $ugt->coords.",".$ugt->distrito;
+                                @endphp
+                                <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                @endforeach
+                            <option value="-10.072642780669092,-78.14849853515626,UGT Huarmey" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-10.072642780669092,-78.14849853515626,UGT Huarmey') echo 'selected';}?>>UGT Huarmey</option>
+                                @foreach ($ugt_huarmey as $ugt)
+                                @php
+                                    $value = $ugt->coords.",".$ugt->distrito;
+                                @endphp
+                                <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                @endforeach
+                            <option value="-9.522205574667476,-77.16384887695314,UGT Mina / San Marcos" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-9.522205574667476,-77.16384887695314,UGT Mina / San Marcos') echo 'selected';}?>>UGT Mina / San Marcos</option>
+                                @foreach ($ugt_mina as $ugt)
+                                @php
+                                    $value = $ugt->coords.",".$ugt->distrito;
+                                @endphp
+                                <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                @endforeach
+                            <option value="-10.451350331922376,-77.72140502929688,UGT Valle Fortaleza" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=='-10.451350331922376,-77.72140502929688,UGT Valle Fortaleza') echo 'selected';}?>>UGT Valle Fortaleza</option>
+                                @foreach ($ugt_valle as $ugt)
+                                @php
+                                    $value = $ugt->coords.",".$ugt->distrito;
+                                @endphp
+                                <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                @endforeach
+                            </optgroup>
+                        </select>
                     </div>
-                    <div class="row text-center">
-                        <h3 id="titulo">Transferencias de canon y regalías mineras</h3>
-                        <p>(S/ millones)</p>
+                <div class="text-center">
+                    <h3 id="titulo">Transferencias de canon y regalías mineras</h3>
+                    <p>(S/ millones)</p>
+                </div>
+                <br>
+                <div class="container-grph">
+                    <div class="text-center graph1">
+                        <h5>Anual</h5>
+                        <canvas id="myChart" height="170"></canvas>
                     </div>
-                    <br>
-                    <div class="row m-3 container-grph">
-                        <div class="col-8 text-center">
-                            <h5>Anual</h5>
-                            <canvas id="myChart" height="170"></canvas>
-                        </div>
-                        <div class="col-4 text-center">
-                            <h5>Acumulado histórico y proyectado</h5>
-                            <img id="imgAcumuladoAnual" src="/img/recursos/r1.png" alt="Gráfico acumulado y promedio anual" title="Gráfico acumulado y promedio anual">
-                            <p>Fuente: Antamina, MEF</p>
-                        </div>
-                        <p><b>Nota: </b>Montos proyectados desde el año 2022 al 2036</p>
+                    <div class="text-center graph2">
+                        <h5>Acumulado histórico y proyectado</h5>
+                        <img id="imgAcumuladoAnual" src="/img/recursos/r1.png" alt="Gráfico acumulado y promedio anual" title="Gráfico acumulado y promedio anual">
+                        <p>Fuente: Antamina, MEF</p>
                     </div>
-                    <hr>
-                    <div class="row dwnld-div" id="descarga">
-                        <a href="/descargar-recursos">
-                            <i class="far fa-file-excel"></i>
-                            DATA
-                        </a>
-                    </div>
+                    <p><b>Nota: </b>Montos proyectados desde el año 2022 al 2036</p>
+                </div>
+                <hr>
+                <div class="row dwnld-div" id="descarga">
+                    <a href="/descargar-recursos">
+                        <i class="far fa-file-excel"></i>
+                        DATA
+                    </a>
                 </div>
             </div>
         </div>

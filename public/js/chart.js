@@ -1,7 +1,7 @@
 var chartCanvas = document.getElementById("myChart");
 
 Chart.defaults.global.defaultFontFamily = "Calibri";
-Chart.defaults.global.defaultFontSize = 14;
+Chart.defaults.global.defaultFontSize = 16;
 
 var data1 = {
     label: "Canon y regalías mineras",
