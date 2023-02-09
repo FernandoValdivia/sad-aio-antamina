@@ -15,7 +15,9 @@
     --title-color: hsl(var(--hue), 8%, 15%);
     --text-color: hsl(var(--hue), 8%, 35%);
     --body-color: hsl(var(--hue), 100%, 99%);
-    --container-color: #FFF;
+    --container-color:#FFF;
+    --input-color:#bad9fd;
+    --input-color-hover:rgb(186 217 253 / 60%);
 
     /*========== Font and typography ==========*/
     --body-font: 'Montserrat';
@@ -1722,6 +1724,14 @@ th.style16 {
     padding-bottom: 10%;
 }
 
+.grid-container h6 {
+    font-size: .8rem;
+}
+
+.grid-container h5 {
+    font-size: 1rem;
+}
+
 .grid-br-1 {
     grid-column: 1 / span 2;
     grid-row: 1 / span 1;
@@ -1743,27 +1753,32 @@ th.style16 {
 }
 
 .grid-br-5 {
-    text-align: center;
     display: grid;
-    align-items: center;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
 }
 
+.grid-br-5 div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .grid-br-5 .clave {
     background-color: #8270d6;
+}
+
+.grid-br-5 .clave h5 {
     color: #fff;
-    font-weight: bold;
-    margin: 0;
-    padding: 1%;
 }
 
 .grid-br-5 .valor {
     background-color: #ddd9f3;
+}
+
+.grid-br-5 .valor h4 {
     color: #8270d6;
-    font-weight: bold;
-    margin: 0;
-    padding: 5%;
 }
 
 .grid-br-6 {
@@ -1979,8 +1994,6 @@ th.style16 {
     padding: 30%;
     background-color: #31859d;
     color: #fff;
-    font-weight: bold;
-    font-size: 2.5rem;
 }
 
 .grid-br-12 .valor {
@@ -1988,7 +2001,6 @@ th.style16 {
     padding: 30%;
     background-color: #daeff1;
     color: #31859d;
-    font-weight: bold;
     font-size: 3.5rem;
 }
 
@@ -2000,20 +2012,28 @@ th.style16 {
     align-items: center;
 }
 
+.grid-br-13 div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .grid-br-13 .clave {
     background-color: #bf340d;
+}
+
+.grid-br-13 .clave h5{
     color: #fff;
-    font-weight: bold;
-    margin: 0;
     padding: 1%;
 }
 
 .grid-br-13 .valor {
     background-color: #feb3b3;
+}
+
+.grid-br-13 .valor h4{
     color: #bf340d;
-    font-weight: bold;
-    margin: 0;
-    padding: 5%;
 }
 
 .grid-br-14 {
@@ -2027,7 +2047,6 @@ th.style16 {
 .grid-br-14 .clave {
     background-color: #bf340d;
     color: #fff;
-    font-weight: bold;
     margin: 0;
     padding: 1%;
 }
@@ -2035,7 +2054,6 @@ th.style16 {
 .grid-br-14 .valor {
     background-color: #feb3b3;
     color: #bf340d;
-    font-weight: bold;
     margin: 0;
     padding: 5%;
 }
@@ -2207,13 +2225,15 @@ th.style16 {
 }
 
 .grid-br-20 input {
+    background: var(--input-color);
+    border: none;
     padding: 2%;
     text-transform: uppercase;
-    font-weight: bold;
+    transition: .3s ease all;
 }
 
 .grid-br-20 input:hover {
-    background-color: #a9d1ff;;
+    background-color: var(--input-color-hover);
 }
 
 .grid-br-20 select {
@@ -2232,9 +2252,7 @@ th.style16 {
 }
 
 #potb {
-    /* 
-    background-color: #008080; */
-    border-radius: 15px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
 }
@@ -2248,25 +2266,31 @@ th.style16 {
 .grid-br-21 {
     grid-column: 3 / span 1;
     grid-row: 4 / span 1;
-    text-align: center;
     display: grid;
+}
+
+.grid-br-21 div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .grid-br-21 .clave {
     background-color: #bf340d;
+}
+
+.grid-br-21 .clave h5 {
     color: #fff;
-    font-weight: bold;
-    margin: 0;
     padding: 1%;
 }
 
 .grid-br-21 .valor {
     background-color: #feb3b3;
+}
+
+.grid-br-21 .valor h4 {
     color: #bf340d;
-    font-weight: bold;
-    margin: 0;
-    padding: 5%;
 }
 
 .grid-br-22 {
@@ -2308,20 +2332,28 @@ th.style16 {
     align-items: center;
 }
 
+.grid-br-24 div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .grid-br-24 .clave {
     background-color: #1f497d;
+}
+
+.grid-br-24 .clave h5 {
     color: #fff;
-    font-weight: bold;
-    margin: 0;
     padding: 1%;
 }
 
 .grid-br-24 .valor {
     background-color: #c6d9f0;
+}
+
+.grid-br-24 .valor h4 {
     color: #1f497d;
-    font-weight: bold;
-    margin: 0;
-    padding: 5%;
 }
 
 .grid-br-25 {
@@ -2335,7 +2367,6 @@ th.style16 {
 .grid-br-25 .clave {
     background-color: #1f497d;
     color: #fff;
-    font-weight: bold;
     margin: 0;
     padding: 1%;
 }
@@ -2343,7 +2374,6 @@ th.style16 {
 .grid-br-25 .valor {
     background-color: #c6d9f0;
     color: #1f497d;
-    font-weight: bold;
     margin: 0;
     padding: 5%;
 }
@@ -2491,7 +2521,6 @@ th.style16 {
 .grid-br-30 .clave {
     background-color: #1f497d;
     color: #fff;
-    font-weight: bold;
     margin: 0;
     padding: 1%;
 }
@@ -2499,7 +2528,6 @@ th.style16 {
 .grid-br-30 .valor {
     background-color: #c6d9f0;
     color: #1f497d;
-    font-weight: bold;
     margin: 0;
     padding: 5%;
 }
@@ -2715,7 +2743,6 @@ th.style16 {
 .grid-br-37 .clave {
     background-color: #1f497d;
     color: #fff;
-    font-weight: bold;
     margin: 0;
     padding: 1%;
 }
@@ -2723,7 +2750,6 @@ th.style16 {
 .grid-br-37 .valor {
     background-color: #c6d9f0;
     color: #1f497d;
-    font-weight: bold;
     margin: 0;
     padding: 5%;
 }
@@ -2787,8 +2813,9 @@ th.style16 {
 }
 
 .grid-br-40 table {
+    height: 100%;
     width: 95%;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 .grid-br-41 {
@@ -2804,20 +2831,27 @@ th.style16 {
     align-items: center;
 }
 
+.grid-br-42 div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .grid-br-42 .clave {
     background-color: #585858;
+}
+
+.grid-br-42 .clave h5 {
     color: #fff;
-    font-weight: bold;
-    margin: 0;
-    padding: 1%;
 }
 
 .grid-br-42 .valor {
     background-color: #dcdcdc;
+}
+
+.grid-br-42 .valor h4 {
     color: #585858;
-    font-weight: bold;
-    margin: 0;
-    padding: 5%;
 }
 
 .grid-br-43 {
@@ -2835,7 +2869,6 @@ th.style16 {
 .grid-br-43 .clave {
     background-color: #585858;
     color: #fff;
-    font-weight: bold;
     margin: 0;
     padding: 1%;
 }
@@ -2843,7 +2876,6 @@ th.style16 {
 .grid-br-43 .valor {
     background-color: #dcdcdc;
     color: #585858;
-    font-weight: bold;
     margin: 0;
     padding: 10%;
 }
@@ -2901,29 +2933,32 @@ th.style16 {
     align-items: center;
 }
 
-.grid-br-45 .clave {
-    background-color: #327069;
-    color: #fff;
-    font-weight: bold;
-    margin: 0;
-    padding: 1%;
-}
-
-.grid-br-45 .valor {
-    background-color: #d7eeeb;
-    color: #327069;
-    font-weight: bold;
-    margin: 0;
-    padding: 5%;
-    text-align: center;
-    display: grid;
+.grid-br-45 div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .grid-br-45 .clave {
     background-color: #327069;
+}
+
+.grid-br-45 .clave h5 {
     color: #fff;
-    font-weight: bold;
+}
+
+.grid-br-45 .valor {
+    background-color: #d7eeeb;
+}
+
+.grid-br-45 .valor h4 {
+    color: #327069;
+}
+
+.grid-br-45 .clave {
+    background-color: #327069;
+    color: #fff;
     margin: 0;
     padding: 1%;
 }
@@ -2931,7 +2966,6 @@ th.style16 {
 .grid-br-45 .valor {
     background-color: #d7eeeb;
     color: #327069;
-    font-weight: bold;
     margin: 0;
     padding: 5%;
 }
@@ -2947,7 +2981,6 @@ th.style16 {
 .grid-br-46 .clave {
     background-color: #327069;
     color: #fff;
-    font-weight: bold;
     margin: 0;
     padding: 1%;
 }
@@ -2955,7 +2988,6 @@ th.style16 {
 .grid-br-46 .valor {
     background-color: #d7eeeb;
     color: #327069;
-    font-weight: bold;
     margin: 0;
     padding: 5%;
 }
@@ -3443,10 +3475,8 @@ body, html {
 
 h5,
 h6 {
-    font-family: var(--body-font),
-        sans-serif;
+    font-family: var(--body-font), sans-serif;
     color: #fff;
-    font-weight: bold;
 }
 
 .container-fluid {
@@ -3732,18 +3762,6 @@ div form {
     display: flex;
 }
 
-div form div input {
-    color: #000;
-    border: solid rgba(255, 255, 255, 0.5) 1px;
-    border-radius: 4px;
-    background-color: #bad9fd;
-}
-
-div form div input:hover {
-    background-color: #fff;
-    border: #ddebfc 3px solid;
-}
-
 .optgroup-ut {
     font-weight: bold;
 }
@@ -3781,9 +3799,8 @@ div .legendp img {
 }
 
 #proy-card select {
-    background-color: #bad9fd;
+    background-color: var(--input-color);
     border: #ddebfc 3px solid;
-    border-radius: 10px;
     padding: 7px 10px 7px;
 }
 
@@ -3804,9 +3821,11 @@ div .legendp img {
 }
 
 .width-filter input {
-    text-transform: uppercase;
+    background-color: var(--input-color);
     padding: 5px 0;
     border: 3px solid rgb(221, 235, 252);
+    text-transform: uppercase;
+    transition: .3s ease all;
 }
 
 #row-card {
@@ -3886,7 +3905,7 @@ div .legendp img {
     }
 
     .width-filter input:hover {
-        background-color: rgb(186 217 253 / 60%);
+        background-color: var(--input-color-hover);
     }
 
     /* Recursos */
