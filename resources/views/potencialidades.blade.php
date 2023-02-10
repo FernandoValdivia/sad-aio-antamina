@@ -70,58 +70,52 @@
     <!-- Navbar End -->
 
     <!-- Potencialidades -->
-    <div id="div-potenc" class="container-xxl py-5">
-        <div class="container-hor">
-            <div class="row g-5 align-items-center">
-                <div class="row">
-                    <div class="col-8">
-                        <h3>Potencialidades</h3>
-                        <p id="titulo" name="titulo">Cadenas productivas en Huallanca (Bolognesi / Áncash)</p>
-                    </div>
-                    <div class="col-4">
-                        <div class="row" id="select-location">
-                            <label for="location">Unidad territorial</label>
-                            <select name="location" id="location" class="select">
-                                <option value="AIO">AIO</option>
-                                <optgroup label="UGT Huallanca">
-                                    @php
-                                    foreach ($ugt_huall as $ugt) {
-                                            echo '<option value="'.$ugt->coords.'" selected>'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Huarmey">
-                                    @php
-                                    foreach ($ugt_huarmey as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Mina / San Marcos">
-                                    @php
-                                    foreach ($ugt_mina as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                                <optgroup label="UGT Valle Fortaleza">
-                                    @php
-                                    foreach ($ugt_valle as $ugt) {
-                                        echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
-                                    }
-                                    @endphp
-                                </optgroup>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-2" id="img-map">
-                    {{-- Imagen --}}
-                    <img src="/img/potencialidad/distrito/huallanca.png" alt="Potencialidades"  id="img-potencialidad">
-                    {{-- Mapa --}}
-                    <div id="map-pt"></div>
+    <div class="container-xxl">
+        <div class="container-pot">
+            <div class="gridpt-1">
+                <h3>Potencialidades</h3>
+                <p id="titulo" name="titulo">Cadenas productivas en Huallanca (Bolognesi / Áncash)</p>
             </div>
+            <div class="gridpt-2" id="select-location">
+                <label for="location">Unidad territorial</label>
+                <select name="location" id="location" class="select">
+                    <option value="AIO">AIO</option>
+                    <optgroup label="UGT Huallanca">
+                        @php
+                        foreach ($ugt_huall as $ugt) {
+                                echo '<option value="'.$ugt->coords.'" selected>'.$ugt->distrito.'</option>';
+                        }
+                        @endphp
+                    </optgroup>
+                    <optgroup label="UGT Huarmey">
+                        @php
+                        foreach ($ugt_huarmey as $ugt) {
+                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                        }
+                        @endphp
+                    </optgroup>
+                    <optgroup label="UGT Mina / San Marcos">
+                        @php
+                        foreach ($ugt_mina as $ugt) {
+                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                        }
+                        @endphp
+                    </optgroup>
+                    <optgroup label="UGT Valle Fortaleza">
+                        @php
+                        foreach ($ugt_valle as $ugt) {
+                            echo '<option value="'.$ugt->coords.'">'.$ugt->distrito.'</option>';
+                        }
+                        @endphp
+                    </optgroup>
+                </select>
             </div>
+            {{-- Imagen --}}
+            <div class="gridpt-3">
+                <img src="/img/potencialidad/distrito/huallanca.png" alt="Potencialidades"  id="img-potencialidad">
+            </div>
+            {{-- Mapa --}}
+            <div class="gridpt-4" id="map-pt"></div>
         </div>
     </div>
     <!-- Potencialidades End -->

@@ -73,7 +73,7 @@
         <!-- Navbar End -->
 
         <!-- Proyectos Start -->
-        <div class="container-xxl py-5">
+        <div class="container-xxl">
             <div class="container-fluid-py" id="container-proy">
                 <div class="g-4 align-items-center justify-content">
                     <div class="text-center">
