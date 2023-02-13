@@ -39,9 +39,7 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
                 {{-- Logo --}}
-                <a class="navbar-brand" href="/">
-                    <img loading="lazy" src="img/logo-sad.png"  class="d-inline-block align-top" alt="">
-                </a>
+                <a id="sadlogo" class="navbar-brand" href="/"></a>
                 {{-- End Logo --}}
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -61,7 +59,7 @@
             <!-- Navbar End -->
             <div class="container-xxl py-1 bg-dark hero-header">
                 <div class="container text-center my-5">
-                    <h1 class="display-3 text-white mb-3 animated titleTrim mt-1"><b>Progreso Cierre de Brechas</b></h1>
+                    <h1 class="display-3 text-white mb-3 animated mt-1"><b>Progreso Cierre de Brechas</b></h1>
                     <h1 class="display-3 text-white mb-3 animated">AIO Antamina 4T 2022</h1>
                 </div>
             </div>

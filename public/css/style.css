@@ -147,12 +147,14 @@ section[id] {
 #descarga a {
     font-size: xx-large;
     background: var(--antaminaGradient);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 #descarga a:hover {
     background: linear-gradient(90deg, rgba(0,120,138,1) 0%, rgba(61,172,187,1) 52%, rgba(0,158,180,1) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -1716,7 +1718,7 @@ th.style16 {
 }
 
 .grid-container {
-    padding: 7% 0px;
+    padding: 0 0px;
     display: grid;
     gap: 10px;
     grid-template-columns: 12% 13% 11% 17% 9% 8% 10% 8% auto;
@@ -3484,7 +3486,7 @@ h6 {
 }
 
 .container-fluid-py {
-    padding: 7% 100px 10px;
+    padding: 3% 100px 10px;
 }
 
 .container-fluid p #referencia {
@@ -3499,7 +3501,7 @@ h6 {
 }
 
 .container-fluid-rsm {
-    padding: 7% 100px;
+    padding: 2% 100px;
 }
 
 #card {
@@ -4081,7 +4083,7 @@ div .legendp img {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
     row-gap: 1rem;
-    padding: 7% 0 7% 0;
+    padding: 3% 0 7% 0;
     text-align: center;
 }
 
@@ -4169,7 +4171,7 @@ div .legendp img {
 }
 
 .container-hor {
-    padding: 7% 0 3% 0;
+    padding: 3% 0 3% 0;
     width: 90%;
     padding-right: var(--bs-gutter-x, 0.75rem);
     padding-left: var(--bs-gutter-x, 0.75rem);
@@ -4338,13 +4340,12 @@ div .legendp img {
 
 @media (min-width: 992px) {
     .navbar-dark {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        height: 70px;
-        left: 0;
-        background: linear-gradient(90deg, rgba(0,82,93,0.95) 0%, rgba(0,69,79,1) 50%, rgba(0,82,93,0.95) 100%) !important;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        background: rgb(0,78,89) !important;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px;
         border-radius: 0px;
     }
 
@@ -4904,4 +4905,23 @@ form .form-row .textarea {
 #introduccion iframe {
     width: 100%;
     height: 100vh;
+}
+
+/* Cambiar logo según el tamaño del dispositivo */
+#sadlogo {
+    background: url(/img/logo-sad.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 330px;
+    height: 60px;
+}
+
+@media (max-width: 440px) {
+    #sadlogo {
+        background: url(/img/favicon.ico);
+        background-position: left;
+        background-repeat: no-repeat;
+        width: 60px;
+    }
 }

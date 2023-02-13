@@ -39,9 +39,7 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
             {{-- Logo --}}
-            <a class="navbar-brand" href="/">
-                <img loading="lazy" src="img/logo-sad.png"  class="d-inline-block align-top" alt="">
-            </a>
+            <a id="sadlogo" class="navbar-brand" href="/"></a>
             {{-- End Logo --}}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>

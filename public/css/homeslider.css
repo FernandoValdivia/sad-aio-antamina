@@ -9,7 +9,7 @@
 ._home_container {
 	display: grid;
     width: 90%;
-    height: 850px;
+    height: 95vh;
     align-items: center;
 	filter: brightness(0.75) rgb(0,78,89) !important;
 	grid-template-rows: 1fr;
