@@ -110,13 +110,19 @@
             </div>
             {{-- Imagen --}}
             <div class="gridpt-3">
-                <img src="/img/potencialidad/distrito/huallanca.png" alt="Potencialidades"  id="img-potencialidad">
+                <img src="/img/potencialidad/distrito/huallanca.png" alt="Imagen de Potencialidad"  id="img-potencialidad">
             </div>
             {{-- Mapa --}}
             <div class="gridpt-4" id="map-pt"></div>
         </div>
     </div>
     <!-- Potencialidades End -->
+
+    <!-- Agrega el modal -->
+    <div id="modal">
+        <span class="cerrar">&times;</span>
+        <img src="/img/potencialidad/distrito/huallanca.png" id="potencialidad-modal" alt="Imagen Modal de Potencialidad de Distrito">
+    </div>
 
     @extends('layouts.footer')
 
@@ -186,6 +192,7 @@
     {{-- Chat Bot --}}
     <script src="widget.js"></script>
     <script src="botman.js"></script>
+    <script src="js/modal-pt.js"></script>
 </body>
 </html>
 

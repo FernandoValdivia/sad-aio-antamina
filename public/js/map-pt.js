@@ -75,69 +75,91 @@ document.getElementById('select-location').addEventListener('change', function(e
     switch (distr) {
         case 'Antonio Raymondi (Bolognesi / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/antonio_raymondi.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/antonio_raymondi.png';
             break;
         case 'Aquia (Bolognesi / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/aquia.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/aquia.png';
             break;
         case 'Cajacay (Bolognesi / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/cajacay.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/cajacay.png';
             break;
         case 'Cátac (Recuay / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/catac.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/catac.png';
             break;
         case 'Chavín de Huántar (Huari / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/chavin_de_huantar.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/chavin_de_huantar.png';
             break;
         case 'Chiquián (Bolognesi / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/chiquian.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/chiquian.png';
             break;
         case 'Colquioc (Bolognesi / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/colquioc.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/colquioc.png';
             break;
         case 'Huachis (Huari / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/huachis.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/huachis.png';
             break;
         case 'Huallanca (Bolognesi / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/huallanca.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/huallanca.png';
             break;
         case 'Huarmey (Huarmey / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/huarmey.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/huarmey.png';
             break;
         case 'Huayllacayán (Bolognesi / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/huayllacayan.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/huayllacayan.png';
             break;
         case 'Llacllín (Recuay / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/llacllin.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/llacllin.png';
             break;
         case 'Llata (Huamalíes / Huánuco)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/llata.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/llata.png';
             break;
         case 'Marca (Recuay / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/marca.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/marca.png';
             break;
         case 'Pampas Chico (Recuay / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/pampas_chico.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/pampas_chico.png';
             break;
         case 'Paramonga (Barranca / Lima)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/paramonga.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/paramonga.png';
             break;
         case 'Pararín (Recuay / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/pararin.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/pararin.png';
             break;
         case 'Puños (Huamalíes / Huánuco)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/punios.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/punios.png';
             break;
         case 'San Marcos (Huari / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/san_marcos.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/san_marcos.png';
             break;
         case 'San Pedro de Chaná (Huari / Áncash)':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/san_pedro_de_chana.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/san_pedro_de_chana.png';
             break;
         case 'AIO':
             document.getElementById("img-potencialidad").src='/img/potencialidad/distrito/General-AIO.png';
+            document.getElementById("potencialidad-modal").src='/img/potencialidad/distrito/General-AIO.png';
             break;
         default:
             document.getElementById("img-potencialidad").src='';
+            document.getElementById("potencialidad-modal").src='';
             break;
     }
 
