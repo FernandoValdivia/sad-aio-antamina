@@ -859,10 +859,11 @@
             boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.9)",
             overflow: "hidden"
         },
+        /* Contenedor Chat */
         r = {
             position: "fixed",
             bottom: "0px",
-            right: "20px",
+            right: "0px",
             zIndex: 1000,
             minWidth: "400px",
             boxSizing: "content-box",
