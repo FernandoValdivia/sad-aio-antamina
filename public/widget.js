@@ -924,8 +924,8 @@
             position: "absolute",
             top: "46px",
             right: "20px",
-            height: "52px",
-            width: "52px",
+            height: "60px",
+            width: "60px",
             border: 0,
             borderRadius: "50%",
             boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)"
