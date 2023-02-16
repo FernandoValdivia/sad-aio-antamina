@@ -1,6 +1,7 @@
 var i = 0;
 var images = [];
-var time = 2500;
+var time = 4000;
+var slideshow = document.getElementById('slideshow');
 
 //Image List
 images[0] = 'img/1.png';
@@ -11,14 +12,19 @@ images[4] = 'img/5.png';
 
 //Change Image
 function changeImg() {
-    document.slide.src = images[i];
+    slideshow.classList.add('previous');
+    setTimeout(function() {
+        slideshow.src = images[i];
+        slideshow.classList.remove('previous');
+    }, 1000);
+
     if (i < images.length - 1) {
         i++;
     } else {
         i = 0;
     }
 
-    setTimeout("changeImg()", time);
+    setTimeout(changeImg, time);
 }
 
 window.onload = changeImg;

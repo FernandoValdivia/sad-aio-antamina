@@ -57,20 +57,28 @@
                 </div> 
             </nav>
             <!-- Navbar End -->
-            <div class="container-xxl py-1 bg-dark hero-header">
+            {{-- <div class="container-xxl py-1 bg-dark hero-header">
                 <div class="container text-center my-5">
-                    <h1 class="display-3 text-white mb-3 animated mt-1"><b>Progreso Cierre de Brechas</b></h1>
-                    <h1 class="display-3 text-white mb-3 animated">AIO Antamina 4T 2022</h1>
+                    <h1 class="text-white"><b>Progreso Cierre de Brechas</b></h1>
+                    <h1 class="text-white">AIO Antamina 4T 2022</h1>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <!-- Navbar End -->
 
         <!-- Trimestral Start -->      
         <div class="container-xxl">
-            <div class="container-trim pt-4 trim">
+            <div class="container-trim trim">
+
                 <div class="container-descarga">
-                    <a class="descargar-btn" href="#descarga"><i class="fas fa-cloud-download-alt"></i> Descargar Reportes</a>
+                    <div class="grid-r-1">
+                        <h3 id="titulo">Progreso de Cierre de Brechas</h3>
+                        <p>AIO Antamina 4T 2022</p>
+                    </div>
+
+                    <div class="grid-r-2">
+                        <a class="descargar-btn" href="#descarga"><i class="fas fa-cloud-download-alt"></i>Reportes</a>
+                    </div>
                 </div>
                 {{-- Introducción --}}
                 <section id="introduccion">
@@ -80,11 +88,12 @@
                 {{-- Descargar --}}
                 <section id="descarga">
                     <div class="row text-center">
-                        <h2>Descargar Reportes</h2>
+                        <h2>Reportes</h2>
                     </div>
                     <br>
                     <div class="tableDescargas">
                         <table>
+                            {{-- Encabezado --}}
                             <thead class="text-center">
                                 <tr>
                                     <td>Periodo</td>

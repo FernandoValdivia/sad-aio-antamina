@@ -70,7 +70,7 @@
                         <p>Área de Influencia Operativa <br><a href="http://www.antamina.com" target="_blank">Antamina</a></p>
                     </div>
                     <div class="col-6 home_right">
-                        <img alt="Imagen Mapa Slide" name="slide" src="img/1.png">
+                        <img id="slideshow" alt="Imagen Mapa Slide" name="slide" src="img/1.png">
                     </div>
                 </div>
                 
