@@ -36,7 +36,7 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Favicon -->
-    <link href="/img/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="/img/logo-sad.svg" rel="icon" type="image/x-icon">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">

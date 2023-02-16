@@ -4918,7 +4918,7 @@ form .form-row .textarea {
 
 /* Cambiar logo según el tamaño del dispositivo */
 #sadlogo {
-    background: url(/img/logo-sad.png);
+    background: url(/img/logo-large.svg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -4928,7 +4928,7 @@ form .form-row .textarea {
 
 @media (max-width: 440px) {
     #sadlogo {
-        background: url(/img/favicon.ico);
+        background: url(/img/logo-sad.svg);
         background-position: left;
         background-repeat: no-repeat;
         width: 60px;

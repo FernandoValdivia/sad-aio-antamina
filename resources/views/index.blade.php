@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Favicon -->
-    <link href="/img/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="/img/logo-sad.svg" rel="icon" type="image/x-icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

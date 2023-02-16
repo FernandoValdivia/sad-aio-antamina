@@ -1,7 +1,7 @@
 var botmanWidget = {
     frameEndpoint: 'chat.html',
     headerTextColor: '#fff',
-    bubbleAvatarUrl: '/img/favicon.ico',
+    bubbleAvatarUrl: '/img/logo-sad.svg',
     title: 'Bienvenido al SADbot',
     introMessage: "✋ Hola, ¿En que te podemos ayudar?",
     aboutText: 'Powered by LFValdivia',
