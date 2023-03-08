@@ -1,4 +1,4 @@
-<p align="center"><a href="https://sad-aio-antamina.competitividadccd.com" target="_blank"><img src="https://sad-aio-antamina.competitividadccd.com/img/logo-sad.png" width="400"></a></p>
+<p align="center"><a href="https://sad-aio-antamina.competitividadccd.com" target="_blank"><img src="https://sad-aio-antamina.competitividadccd.com/img/logo-large.svg" width="400"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
