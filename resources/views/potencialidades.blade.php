@@ -5,7 +5,7 @@
     <title>Potencialidades</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta content="SAD AIO Antamina - Potencialidades" name="description">
+    <meta content="SAD AIO - Potencialidades" name="description">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Favicon -->

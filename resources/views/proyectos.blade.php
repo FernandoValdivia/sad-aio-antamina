@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Proyectos</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta content="Sistema de Administración del Desarrollo - Proyectos" name="description">
+    <meta content="SAD AIO - Proyectos" name="description">
 
     <meta content="" name="keywords">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">

@@ -5,7 +5,7 @@
     <title>Recursos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta content="SAD AIO Antamina - Recursos" name="description">
+    <meta content="SAD AIO - Recursos" name="description">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     
     <!-- Favicon -->

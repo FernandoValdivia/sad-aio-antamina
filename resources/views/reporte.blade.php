@@ -5,7 +5,7 @@
     <title>Reporte Trimestral</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta content="SAD AIO Antamina - Reporte Trimestral" name="description">
+    <meta content="SAD AIO - Reporte Trimestral" name="description">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Favicon -->

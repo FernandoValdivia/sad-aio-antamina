@@ -4669,17 +4669,8 @@ form .form-row .textarea {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 330px;
+    width: 200px;
     height: 60px;
-}
-
-@media (max-width: 440px) {
-    #sadlogo {
-        background: url(/img/logo-sad.svg);
-        background-position: left;
-        background-repeat: no-repeat;
-        width: 60px;
-    }
 }
 
 /* Modal Imagen Potencialidad */

@@ -32,7 +32,7 @@ if(empty(trim($fullname))) $name = '';
 
 /* cuerpo del correo */
 $body = <<<HTML
-    <h1>Sugerencia desde la web SAD AIO Antamina</h1>
+    <h1>Sugerencia desde la web SAD AIO</h1>
     <h2>De: $name $fullname / $email</h2>
     <h2>Sugerencia:</h2>
     <p>$message</p> 

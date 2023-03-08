@@ -32,7 +32,7 @@
     <meta charset="utf-8">
     <title>Resumen</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Sistema de Administración del Desarrollo - Resumen" name="description">
+    <meta content="SAD AIO - Resumen" name="description">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Favicon -->

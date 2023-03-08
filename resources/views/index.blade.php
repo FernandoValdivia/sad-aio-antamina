@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SAD AIO Antamina</title>
+    <title>SAD AIO</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Sistema de Administración del Desarrollo" name="description">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -67,7 +67,7 @@
                 <div class="_home_container">
                     <div class="col-6 home_left">
                         <h1>Sistema de <br>Administración del <br>Desarrollo</h1>
-                        <p>Área de Influencia Operativa <br><a href="http://www.antamina.com" target="_blank">Antamina</a></p>
+                        <p>Área de Influencia Operativa</p>
                     </div>
                     <div class="col-6 home_right">
                         <img id="slideshow" alt="Imagen Mapa Slide" name="slide" src="img/1.png">
