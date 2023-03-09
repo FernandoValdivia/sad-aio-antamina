@@ -59,9 +59,6 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 </head>
 <body>
-    <div class="loader">
-        <img src="/img/load-red.gif" alt="Loading..." />
-    </div>
     <div class="container-xxl bg-white p-0">
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">

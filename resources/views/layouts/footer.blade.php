@@ -1,6 +1,6 @@
 {{-- Loader --}}
 <div id="containerLoad" class="loader hidden">
-    <img src="/img/load-red.gif" alt="Loading..." />
+    <h2>Cargando...</h2>
 </div>
 <script src="js/loader.js"></script>
 {{-- Modal Sugerencias --}}

@@ -123,6 +123,49 @@ div .divlogo .col-9 {
     overflow: hidden;
 }
 
+.loader h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--sadcolor);
+    animation: blinkCursor .8s steps(3) infinite;
+}
+
+@keyframes blinkCursor {
+    0%, 75%
+    {
+        opacity: 1;
+    }
+    76%,100%
+    {
+        opacity: 0;
+    }
+}
+
+.loader h2 {
+    position: relative;
+    color: var(--sadcolor);
+    letter-spacing: 5px;
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: typing 8s steps(11) infinite;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    0%,90%,100%
+    {
+        width: 0;
+    }
+    30%,60%
+    {
+        width: 275px;
+    }
+}
+
 .loader > img {
     width: 400px;
 }
