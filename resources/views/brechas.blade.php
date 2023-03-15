@@ -63,6 +63,94 @@
                 <div class="grid-br-2">
                     <h3 id="titulo">Brechas en el AIO: Por Pilares</h3>
                     <p>(Porcentajes)</p>
+                    {{-- Filtros --}}
+                    <div class="form-container">
+                        <form action="/brechas" method="POST">
+                            @csrf
+                            {{-- Unidad Territorial --}}
+                            <div>
+                                <label for="location">Unidad Territorial</label>
+                                <select id="location" name="location" class="select">
+                                    <option value="AIO">AIO</option>
+                                    <optgroup label="UGT Huallanca">
+                                        @foreach ($ugt_huall as $ugt)
+                                        @php
+                                            $value = $ugt->coords.",".$ugt->distrito;
+                                        @endphp
+                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                        @endforeach
+                                    </optgroup>
+                                    <optgroup label="UGT Huarmey">
+                                        @foreach ($ugt_huarmey as $ugt)
+                                        @php
+                                            $value = $ugt->coords.",".$ugt->distrito;
+                                        @endphp
+                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                        @endforeach
+                                    </optgroup>
+                                    <optgroup label="UGT Mina / San Marcos">
+                                        @foreach ($ugt_mina as $ugt)
+                                        @php
+                                            $value = $ugt->coords.",".$ugt->distrito;
+                                        @endphp
+                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                        @endforeach
+                                    </optgroup>
+                                    <optgroup label="UGT Valle Fortaleza">
+                                        @foreach ($ugt_valle as $ugt)
+                                        @php
+                                            $value = $ugt->coords.",".$ugt->distrito;
+                                        @endphp
+                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
+                                        @endforeach
+                                    </optgroup>
+                                </select>
+                            </div>
+                            {{-- Año --}}
+                            <div>
+                                <label id="label2" for="years">Periodo</label>
+                                <select id="years" name="years">
+                                    <option value="22022" <?php if (isset($_POST['years'])){ if($_POST['years']=="22022") echo 'selected';}?> >2T 2022</option>
+                                    <option value="32022" <?php if (isset($_POST['years'])){ if($_POST['years']=="32022") echo 'selected';}?> >3T 2022</option>
+                                    <option value="42022" <?php if (isset($_POST['years'])){ if($_POST['years']=="42022") echo 'selected';}?> >4T 2022</option>
+                                    <option value="12023" <?php if (isset($_POST['years'])){ if($_POST['years']=="12023") echo 'selected';}?> >1T 2023</option>
+                                    <option value="22023" <?php if (isset($_POST['years'])){ if($_POST['years']=="22023") echo 'selected';}?> >2T 2023</option>
+                                    <option value="32023" <?php if (isset($_POST['years'])){ if($_POST['years']=="32023") echo 'selected';}?> >3T 2023</option>
+                                    <option value="42023" <?php if (isset($_POST['years'])){ if($_POST['years']=="42023") echo 'selected';}?> >4T 2023</option>                                    
+                                    <option value="12024" <?php if (isset($_POST['years'])){ if($_POST['years']=="12024") echo 'selected';}?> >1T 2024</option>
+                                    <option value="22024" <?php if (isset($_POST['years'])){ if($_POST['years']=="22024") echo 'selected';}?> >2T 2024</option>
+                                    <option value="32024" <?php if (isset($_POST['years'])){ if($_POST['years']=="32024") echo 'selected';}?> >3T 2024</option>
+                                    <option value="42024" <?php if (isset($_POST['years'])){ if($_POST['years']=="42024") echo 'selected';}?> >4T 2024</option>
+                                    <option value="12025" <?php if (isset($_POST['years'])){ if($_POST['years']=="12025") echo 'selected';}?> >1T 2025</option>
+                                    <option value="22025" <?php if (isset($_POST['years'])){ if($_POST['years']=="22025") echo 'selected';}?> >2T 2025</option>
+                                    <option value="32025" <?php if (isset($_POST['years'])){ if($_POST['years']=="32025") echo 'selected';}?> >3T 2025</option>
+                                    <option value="42025" <?php if (isset($_POST['years'])){ if($_POST['years']=="42025") echo 'selected';}?> >4T 2025</option>
+                                    <option value="12026" <?php if (isset($_POST['years'])){ if($_POST['years']=="12026") echo 'selected';}?> >1T 2026</option>
+                                    <option value="22026" <?php if (isset($_POST['years'])){ if($_POST['years']=="22026") echo 'selected';}?> >2T 2026</option>
+                                    <option value="32026" <?php if (isset($_POST['years'])){ if($_POST['years']=="32026") echo 'selected';}?> >3T 2026</option>
+                                    <option value="42026" <?php if (isset($_POST['years'])){ if($_POST['years']=="42026") echo 'selected';}?> >4T 2026</option>
+                                    <option value="42021" <?php if (isset($_POST['years'])){ if($_POST['years']=="42021") echo 'selected';}?> selected>2021</option>
+                                    <option value="42022" <?php if (isset($_POST['years'])){ if($_POST['years']=="42022") echo 'selected';}?> >2022</option>
+                                    <option value="42023" <?php if (isset($_POST['years'])){ if($_POST['years']=="42023") echo 'selected';}?> >2023</option>
+                                    <option value="42024" <?php if (isset($_POST['years'])){ if($_POST['years']=="42024") echo 'selected';}?> >2024</option>
+                                    <option value="42025" <?php if (isset($_POST['years'])){ if($_POST['years']=="42025") echo 'selected';}?> >2025</option>
+                                    <option value="42026" <?php if (isset($_POST['years'])){ if($_POST['years']=="42026") echo 'selected';}?> >2026</option>
+                                </select>
+                            </div>
+                            {{-- Impactos --}}
+                            <div>
+                                <label for="impacto">Impactos</label>
+                                <select id="impacto" name="impacto">
+                                    <option value="Con impacto" <?php if (isset($_POST['impacto'])){ if($_POST['impacto']=="Con impacto") echo 'selected';}?>>Con Antamina</option>
+                                    <option value="Sin impacto" <?php if (isset($_POST['impacto'])){ if($_POST['impacto']=="Sin impacto") echo 'selected';}?>>Sin Antamina</option>
+                                </select>
+                            </div>
+                            {{-- Boton --}}
+                            <div>
+                                <input type="submit" value="Filtrar" onclick="onLoad()">
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <div class="grid-br-3"></div>
                 <div class="grid-br-4"></div>
@@ -2979,96 +3067,6 @@
                 </div>
                 {{-- Mat 2do sec --}}
                 <div class="grid-br-19">
-                </div>
-                {{-- Filtros --}}
-                <div class="grid-br-20">
-                    <form action="/brechas" method="POST">
-                        @csrf
-                        <div>
-                            {{-- Unidad Territorial --}}
-                            <div class="row">
-                                <label for="location">Unidad Territorial</label>
-                                <select id="location" name="location" class="select">
-                                    <option value="AIO">AIO</option>
-                                    <optgroup label="UGT Huallanca">
-                                        @foreach ($ugt_huall as $ugt)
-                                        @php
-                                            $value = $ugt->coords.",".$ugt->distrito;
-                                        @endphp
-                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                        @endforeach
-                                    </optgroup>
-                                    <optgroup label="UGT Huarmey">
-                                        @foreach ($ugt_huarmey as $ugt)
-                                        @php
-                                            $value = $ugt->coords.",".$ugt->distrito;
-                                        @endphp
-                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                        @endforeach
-                                    </optgroup>
-                                    <optgroup label="UGT Mina / San Marcos">
-                                        @foreach ($ugt_mina as $ugt)
-                                        @php
-                                            $value = $ugt->coords.",".$ugt->distrito;
-                                        @endphp
-                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                        @endforeach
-                                    </optgroup>
-                                    <optgroup label="UGT Valle Fortaleza">
-                                        @foreach ($ugt_valle as $ugt)
-                                        @php
-                                            $value = $ugt->coords.",".$ugt->distrito;
-                                        @endphp
-                                        <option value="{{ $ugt->coords.','.$ugt->distrito }}" <?php if (isset($_POST['location'])){ if($_POST['location']==$value) echo 'selected';}?>>{{ $ugt->distrito }}</option>
-                                        @endforeach
-                                    </optgroup>
-                                </select>
-                            </div>
-                            {{-- Año --}}
-                            <div class="row mt-2">
-                                <label id="label2" for="years">Periodo</label>
-                                <select id="years" name="years">
-                                    <option value="42021" <?php if (isset($_POST['years'])){ if($_POST['years']=="42021") echo 'selected';}?> >2021 (Línea de Base)</option>
-                                    <option value="22022" <?php if (isset($_POST['years'])){ if($_POST['years']=="22022") echo 'selected';}?> >2T-2022</option>
-                                    <option value="32022" <?php if (isset($_POST['years'])){ if($_POST['years']=="32022") echo 'selected';}?> >3T-2022</option>
-                                    <option value="42022" <?php if (isset($_POST['years'])){ if($_POST['years']=="42022") echo 'selected';}?> >4T-2022</option>
-                                    <option value="42022" <?php if (isset($_POST['years'])){ if($_POST['years']=="42022") echo 'selected';}?> >2022</option>
-                                    <option value="12023" <?php if (isset($_POST['years'])){ if($_POST['years']=="12023") echo 'selected';}?> >1T-2023</option>
-                                    <option value="22023" <?php if (isset($_POST['years'])){ if($_POST['years']=="22023") echo 'selected';}?> >2T-2023</option>
-                                    <option value="32023" <?php if (isset($_POST['years'])){ if($_POST['years']=="32023") echo 'selected';}?> >3T-2023</option>
-                                    <option value="42023" <?php if (isset($_POST['years'])){ if($_POST['years']=="42023") echo 'selected';}?> >4T-2023</option>                                    
-                                    <option value="42023" <?php if (isset($_POST['years'])){ if($_POST['years']=="42023") echo 'selected';}?> >2023</option>
-                                    <option value="12024" <?php if (isset($_POST['years'])){ if($_POST['years']=="12024") echo 'selected';}?> >1T-2024</option>
-                                    <option value="22024" <?php if (isset($_POST['years'])){ if($_POST['years']=="22024") echo 'selected';}?> >2T-2024</option>
-                                    <option value="32024" <?php if (isset($_POST['years'])){ if($_POST['years']=="32024") echo 'selected';}?> >3T-2024</option>
-                                    <option value="42024" <?php if (isset($_POST['years'])){ if($_POST['years']=="42024") echo 'selected';}?> >4T-2024</option>
-                                    <option value="42024" <?php if (isset($_POST['years'])){ if($_POST['years']=="42024") echo 'selected';}?> >2024</option>
-                                    <option value="12025" <?php if (isset($_POST['years'])){ if($_POST['years']=="12025") echo 'selected';}?> >1T-2025</option>
-                                    <option value="22025" <?php if (isset($_POST['years'])){ if($_POST['years']=="22025") echo 'selected';}?> >2T-2025</option>
-                                    <option value="32025" <?php if (isset($_POST['years'])){ if($_POST['years']=="32025") echo 'selected';}?> >3T-2025</option>
-                                    <option value="42025" <?php if (isset($_POST['years'])){ if($_POST['years']=="42025") echo 'selected';}?> >4T-2025</option>
-                                    <option value="42025" <?php if (isset($_POST['years'])){ if($_POST['years']=="42025") echo 'selected';}?> >2025</option>
-                                    <option value="12026" <?php if (isset($_POST['years'])){ if($_POST['years']=="12026") echo 'selected';}?> >1T-2026</option>
-                                    <option value="22026" <?php if (isset($_POST['years'])){ if($_POST['years']=="22026") echo 'selected';}?> >2T-2026</option>
-                                    <option value="32026" <?php if (isset($_POST['years'])){ if($_POST['years']=="32026") echo 'selected';}?> >3T-2026</option>
-                                    <option value="42026" <?php if (isset($_POST['years'])){ if($_POST['years']=="42026") echo 'selected';}?> >4T-2026</option>
-                                    <option value="42026" <?php if (isset($_POST['years'])){ if($_POST['years']=="42026") echo 'selected';}?> >2026</option>
-                                </select>
-                            </div>
-                            {{-- Impactos --}}
-                            <div class="row mt-2">
-                                <label for="imp">Impactos</label>
-                                <select id="impacto" name="impacto">
-                                    <option value="Con impacto" <?php if (isset($_POST['impacto'])){ if($_POST['impacto']=="Con impacto") echo 'selected';}?>>Con Antamina</option>
-                                    <option value="Sin impacto" <?php if (isset($_POST['impacto'])){ if($_POST['impacto']=="Sin impacto") echo 'selected';}?>>Sin Antamina</option>
-                                </select>
-                            </div>
-                            {{-- Boton --}}
-                            <div class="row mt-3">
-                                <input type="submit" value="Filtrar" onclick="onLoad()">
-                            </div>
-                        </div>
-                    </form>
                 </div>
                 {{-- Vida larga y saludable --}}
                 <div class="grid-br-21">
