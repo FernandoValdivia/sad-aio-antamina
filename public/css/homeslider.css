@@ -9,6 +9,7 @@
 
 body.dark .home_container {
 	background: linear-gradient(rgb(185 203 246 / 90%), #242424), url(/img/Ancash2.jpg);
+	background-size: cover;
 }
 
 ._home_container {

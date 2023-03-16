@@ -29,7 +29,7 @@
     <link href="{{ asset('css/chat.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="container-xxl bg-white p-0">
+    <div class="container-xxl p-0">
         <!-- Navbar -->
         <div class="container-xxl position-relative p-0">
             <!-- Navbar -->
@@ -76,7 +76,7 @@
                             @csrf
                             {{-- Unidad Territorial --}}
                             <div>
-                                <label for="location">Unidad Territorial</label>
+                                <label id="label" for="location">Unidad Territorial</label>
                                 <select id="location" name="location" class="select">
                                     <option value="AIO">AIO</option>
                                     <optgroup label="UGT Huallanca">
@@ -115,7 +115,7 @@
                             </div>
                             {{-- Año --}}
                             <div>
-                                <label id="label2" for="years">Periodo</label>
+                                <label id="label" for="years">Periodo</label>
                                 <select id="years" name="years">
                                     <option value="22022" <?php if (isset($_POST['years'])){ if($_POST['years']=="22022") echo 'selected';}?> >2T 2022</option>
                                     <option value="32022" <?php if (isset($_POST['years'])){ if($_POST['years']=="32022") echo 'selected';}?> >3T 2022</option>
@@ -146,7 +146,7 @@
                             </div>
                             {{-- Impactos --}}
                             <div>
-                                <label for="impacto">Impactos</label>
+                                <label id="label" for="impacto">Impactos</label>
                                 <select id="impacto" name="impacto">
                                     <option value="Con impacto" <?php if (isset($_POST['impacto'])){ if($_POST['impacto']=="Con impacto") echo 'selected';}?>>Con Antamina</option>
                                     <option value="Sin impacto" <?php if (isset($_POST['impacto'])){ if($_POST['impacto']=="Sin impacto") echo 'selected';}?>>Sin Antamina</option>

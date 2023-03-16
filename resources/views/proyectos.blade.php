@@ -43,7 +43,7 @@
 
 </head>
 <body>
-    <div class="container-xxl bg-white p-0">
+    <div class="container-xxl p-0">
         <!-- Navbar -->
         <div class="container-xxl position-relative p-0">
             <!-- Navbar -->
@@ -92,7 +92,7 @@
                             {{-- Unidad territorial --}}
                             <div class="width-filter">
                                 <div id="select-location">
-                                <label id="label" for="location">Unidad territorial</label>
+                                <label for="location">Unidad territorial</label>
                                 <select id="location" name="location" class="select">
                                     <option value="AIO" class="optgroup-ut">AIO</option>
                                     <option value="-9.96885060854611,-77.09381103515626,UGT Huallanca" class="optgroup-ut" <?php if (isset($_POST['location'])){ if($_POST['location']=="-9.96885060854611,-77.09381103515626,UGT Huallanca") echo 'selected';}?>>UGT Huallanca</option>
@@ -128,7 +128,7 @@
                             </div>
                             {{-- Periodo de Tiempo --}}
                             <div class="width-filter">
-                                <label id="label" for="time_frame">Periodo de Tiempo</label>
+                                <label for="time_frame">Periodo de Tiempo</label>
                                 <select id="time_frame" name="time_frame">
                                     <option value="Todos">Todos</option>
                                     <option value="Corto Plazo" <?php if (isset($_POST['time_frame'])){ if($_POST['time_frame']=="Corto Plazo") echo 'selected';}?>>Corto Plazo</option>
@@ -138,7 +138,7 @@
                             </div> 
                             {{-- Pilar --}}
                             <div class="width-filter">
-                                <label id="label" for="factores">Pilar</label>
+                                <label for="factores">Pilar</label>
                                 <select id="factores" name="factores">
                                     <option value="Todos">Todos</option>
                                     <option value="Emprendimiento  y desarrollo económico" <?php if (isset($_POST['factores'])){ if($_POST['factores']=="Emprendimiento  y desarrollo económico") echo 'selected';}?>>Emprendimiento  y desarrollo económico</option>
@@ -149,7 +149,7 @@
                             </div> 
                             {{-- Modalidad de intervención --}}
                             <div class="width-filter">
-                                <label id="label" for="modalidad">Modalidad de inversión</label>
+                                <label for="modalidad">Modalidad de inversión</label>
                                 <select id="modalidad" name="modalidad">
                                     <option value="Todas">Todas</option>
                                     <option value="Inversión Pública (GL/GR/GN)" <?php if (isset($_POST['modalidad'])){ if($_POST['modalidad']=="Inversión Pública (GL/GR/GN)") echo 'selected';}?>>Inversión Pública (GL/GR/GN)</option>
@@ -160,7 +160,7 @@
                             </div>
                             {{-- Periodo --}}
                             <div class="width-filter">
-                                <label id="label" for="years">Periodo</label>
+                                <label for="years">Periodo</label>
                                 <select id="years" name="years">
                                     <option value="Todos">Todos</option>
                                     <option value="22022" <?php if (isset($_POST['years'])){ if($_POST['years']=="22022") echo 'selected';}?> >2T 2022</option>

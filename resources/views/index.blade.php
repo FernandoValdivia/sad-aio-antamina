@@ -39,7 +39,7 @@
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
+    <div class="container-xxl p-0">
         <div class="container-xxl position-relative p-0">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">

@@ -33,7 +33,7 @@
     
 </head>
 <body>
-    <div class="container-xxl bg-white p-0">
+    <div class="container-xxl p-0">
         <!-- Navbar general -->
         <div class="container-xxl position-relative p-0 bg-black">
             <!-- Navbar -->

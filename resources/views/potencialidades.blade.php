@@ -42,7 +42,7 @@
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
+    <div class="container-xxl p-0">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
             {{-- Logo --}}
@@ -82,7 +82,7 @@
                 <p id="titulo" name="titulo">Cadenas productivas en Huallanca (Bolognesi / Áncash)</p>
             </div>
             <div class="gridpt-2" id="select-location">
-                <label for="location">Unidad territorial</label>
+                <label id="label" for="location">Unidad territorial</label>
                 <select name="location" id="location" class="select">
                     <option value="AIO">AIO</option>
                     <optgroup label="UGT Huallanca">
