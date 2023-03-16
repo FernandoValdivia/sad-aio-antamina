@@ -102,9 +102,11 @@ body.dark .grid-br-18 tr {
 }
 
 /*--select color --*/
+body.dark .grid-br-2 input,
 body.dark .grid-br-2 select,
 body.dark .gridpt-2 select, 
 body.dark #filterec select {
+    background: var(--body-dark);
     color: var(--light);
 }
 
@@ -113,11 +115,6 @@ body.dark .grid-br-2 select:hover {
 }
 
 /*--input color--*/
-body.dark .grid-br-2 input {
-    background: var(--dark);
-    color: var(--light);
-}
-
 body.dark .grid-br-2 input:hover {
     background: #484848;
 }
