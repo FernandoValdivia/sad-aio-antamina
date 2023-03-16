@@ -1,9 +1,14 @@
 .home_container {
 	display: flex;
-	background: linear-gradient(rgb(185 203 246 / 90%), var(--primary)), url(/img/Ancash2.jpg);
+	background: linear-gradient(rgb(185 203 246 / 90%), var(--sadcolor)), url(/img/Ancash2.jpg);
     background-size: cover;
 	justify-content: center;
 	align-items: center;
+	transition: .3s ease all;
+}
+
+body.dark .home_container {
+	background: linear-gradient(rgb(185 203 246 / 90%), #242424), url(/img/Ancash2.jpg);
 }
 
 ._home_container {

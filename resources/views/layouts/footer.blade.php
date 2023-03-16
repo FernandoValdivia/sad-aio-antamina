@@ -54,6 +54,8 @@
     </div>
 </section>
 <script src="js/modal.js"></script>
+{{-- Switch Dark/Light Mode --}}
+<script src="js/switch.js"></script>
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">

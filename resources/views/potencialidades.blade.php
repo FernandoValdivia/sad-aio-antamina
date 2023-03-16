@@ -52,7 +52,7 @@
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0 pe-4">
+                <div class="navbar-nav ms-auto py-0">
                     <a href="/" class="nav-item nav-link">Inicio</a>
                     <a href="/resumen" class="nav-item nav-link">Resumen</a>
                     <a href="/brechas" class="nav-item nav-link" onclick="onLoad()">Brechas</a>
@@ -60,6 +60,13 @@
                     <a href="/recursos" class="nav-item nav-link">Recursos</a>
                     <a href="/potencialidades" class="nav-item nav-link active">Potencialidades</a>
                     <a href="/reporte" class="nav-item nav-link">Reportes</a>
+                    {{-- Dark/Light Mode --}}
+                    <div class="btn-switch">
+                        <button class="switch" id="switch">
+                            <span><i class="fas fa-sun"></i></span>
+                            <span><i class="fas fa-moon"></i></span>
+                        </button>
+                    </div>
                 </div>
             </div> 
         </nav>

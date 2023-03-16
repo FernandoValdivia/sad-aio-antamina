@@ -6,7 +6,7 @@
     --sadcolor: #2271da; 
     --primary: rgb(0,78,89);
     --light: #f1f8ff;
-    --dark: #122b4d;
+    --dark: #242424;
     --secondary: #377fdd;
     /*========== Colors ==========*/
     --hue: 240;
@@ -27,6 +27,29 @@
     /*========== z index ==========*/
     --z-modal: 1;
 }
+
+/* Dark Mode Styles */
+body.dark .navbar-dark,
+body.dark .bg-dark {
+    background: var(--dark) !important;
+}
+
+body.dark .navbar-dark .navbar-nav .nav-link:hover, body.dark .navbar-dark .navbar-nav .nav-link.active {
+    color: #fff !important;
+}
+
+body.dark .modal__content {
+    background: var(--dark);
+}
+
+body.dark .modal__close {
+    color: var(--light);
+}
+
+body.dark #titulo, body.dark p {
+    color: var(--light);
+}
+
 
 .ff-secondary {
     font-family: var(--body-font),
@@ -4070,8 +4093,63 @@ div .legendp img {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #ffffff !important;
-    background: linear-gradient(90deg, rgba(0,67,76,1) 0%, rgba(0,67,76,1) 50%, rgba(0,67,76,1) 100%);
+    color: var(--primary) !important;
+    /* background: linear-gradient(90deg, rgba(0,67,76,1) 0%, rgba(0,67,76,1) 50%, rgba(0,67,76,1) 100%); */
+    background: #cccccc40;
+}
+
+/* Switch Dark/Light Mode*/
+
+.btn-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch {
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    height: fit-content;
+    margin-left: 1rem;
+}
+
+.switch span {
+    width: 26px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+.switch::after {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgb(0, 0, 0, .2);
+}
+
+.switch.active {
+    background: orange;
+    color: #000;
+}
+
+.switch.active::after {
+    right: 0;
+    left: unset;
 }
 
 .navbar-dark .navbar-brand img {
@@ -4108,6 +4186,7 @@ div .legendp img {
     .navbar-dark .navbar-collapse {
         margin-top: 15px;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
     }
 
     .navbar-dark .navbar-nav .nav-link,
@@ -4155,8 +4234,12 @@ div .legendp img {
         width: 100%;
         min-width: 100%;
     }
-
-
+    
+    /* Switch */
+    .switch {
+        margin-left: none !important;
+        margin: 0.6rem 1rem 0 1em !important;
+    }
 }
 
 .actual {
@@ -4166,13 +4249,14 @@ div .legendp img {
 
 @media (min-width: 992px) {
     .navbar-dark {
-        background: rgb(0,78,89) !important;
+        background: #fbfbfb !important;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
         box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px;
         border-radius: 0px;
+        transition: .3s ease all;
     }
 
     .sticky-top.navbar-dark {
@@ -4406,6 +4490,11 @@ div .legendp img {
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+.bg-dark {
+    background: var(--sadcolor);
+    transition: .3s ease all;
 }
 
 /* Modal CSS */
@@ -4731,8 +4820,16 @@ form .form-row .textarea {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 200px;
+    width: 340px;
     height: 60px;
+}
+
+@media (max-width: 450px) {
+    #sadlogo {
+        background: url(/img/logo-sad.svg);
+        background-repeat: no-repeat;
+        width: 60px;
+    }
 }
 
 /* Modal Imagen Potencialidad */
