@@ -138,6 +138,10 @@ body.dark .grid-rsm-4, body.dark .grid-rsm-5, body.dark .grid-rsm-6, body.dark .
     box-shadow: var(--light-shadow);
 }
 
+body.dark .modal form, body.dark .modal form input, body.dark .modal form textarea {
+    color: var(--light);
+}
+
 /*--------------------------------*/
 
 .ff-secondary {
