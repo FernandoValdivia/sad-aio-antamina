@@ -63,11 +63,8 @@ class ResumenController extends Controller
             'anio',
             'factores',
             '_42021',
-            'c42021',
             '_22022',
-            'c22022',
             '_32022',
-            'c32022'
         )
         ->get();
 

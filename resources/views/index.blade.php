@@ -58,6 +58,7 @@
                         <a href="/recursos" class="nav-item nav-link">Recursos</a>
                         <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>
                         <a href="/reporte" class="nav-item nav-link">Reportes</a>
+                        <a href="#simulacion" class="nav-item nav-link">Simulación</a>
                         {{-- Dark/Light Mode --}}
                         <div class="btn-switch">
                             <button class="switch" id="switch">
