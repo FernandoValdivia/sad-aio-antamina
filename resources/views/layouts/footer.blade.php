@@ -53,7 +53,66 @@
         </div>
     </div>
 </section>
+{{-- Modal Simulación --}}
+<section class="modal2 containermodal2" id="main__modal2">
+    <div class="modal__container2" id="modal-container2">
+        <div class="modal__content2">
+            <div class="modal__close2 close-modal2" title="Cerrar">
+                <i class="bx bx-x"></i>
+            </div>
+            <div class="text">Simulación</div>
+            <form action="#" method="post">
+                @csrf
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" name="__sname" id="__sname" required>
+                        <div class="underline"></div>
+                        <label for="__sname">Nombre del Proyecto</label>
+                    </div>
+                    <div class="input-data">
+                        <input type="text" name="__sfullname" id="__sfullname" required>
+                        <div class="underline"></div>
+                        <label for="__sfullname">Región</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" name="__semail" id="__semail" required>
+                        <div class="underline"></div>
+                        <label for="__semail">Indicador</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" name="__semail" id="__semail" required>
+                        <div class="underline"></div>
+                        <label for="__semail">Numero de Beneficiarios</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" name="__semail" id="__semail" required>
+                        <div class="underline"></div>
+                        <label for="__semail">Inicio de Operación</label>
+                    </div>
+                </div>
+                <div class="form-row submit-btn">
+                    <div class="input-data">
+                        <input type="submit" value="Simular">
+                    </div>
+                </div>
+            </form>
+            @if (session('info'))
+                <script>
+                    alert("{{session('info')}}");
+                </script>
+            @endif
+        </div>
+    </div>
+</section>
 <script src="js/modal.js"></script>
+<script src="js/modal2.js"></script>
+{{-- End Modal  --}}
 {{-- Switch Dark/Light Mode --}}
 <audio id="audio" src="audio/switch.mp3"></audio>
 <script src="js/switch.js"></script>

@@ -78,8 +78,15 @@
                         <a href="/proyectos" class="nav-item nav-link">Proyectos</a>
                         <a href="/recursos" class="nav-item nav-link">Recursos</a>
                         <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>
-                        <a href="/reporte" class="nav-item nav-link">Reportes</a>
-                        <a href="#simulacion" class="nav-item nav-link">Simulación</a>
+                        <div class="dropwdown-container">
+                            <a href="#reportes" class="nav-item nav-link">Reportes</a>
+                            <div class="drop-menu">
+                                <a href="/reporte" class="nav-item nav-link drop-item">Brechas</a>
+                                <a href="#general" class="nav-item nav-link drop-item">Desarrollo</a>
+                                <a href="#coyuntura" class="nav-item nav-link drop-item">Coyuntura</a>
+                            </div>
+                        </div>
+                        <button class="nav-item nav-link nav-modal" onclick="abrirModal2()">Simulación</button>
                         {{-- Dark/Light Mode --}}
                         <div class="btn-switch">
                             <button class="switch" id="switch">

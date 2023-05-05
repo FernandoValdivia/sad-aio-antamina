@@ -52,8 +52,15 @@
                         <a href="/proyectos" class="nav-item nav-link">Proyectos</a>
                         <a href="/recursos" class="nav-item nav-link">Recursos</a>
                         <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>
-                        <a href="/reporte" class="nav-item nav-link active">Reportes</a>
-                        <a href="#simulacion" class="nav-item nav-link">Simulación</a>
+                        <div class="dropwdown-container">
+                            <a href="#reportes" class="nav-item nav-link active">Reportes</a>
+                            <div class="drop-menu">
+                                <a href="/reporte" class="nav-item nav-link drop-item active">Brechas</a>
+                                <a href="#general" class="nav-item nav-link drop-item">Desarrollo</a>
+                                <a href="#coyuntura" class="nav-item nav-link drop-item">Coyuntura</a>
+                            </div>
+                        </div>
+                        <button class="nav-item nav-link nav-modal" onclick="abrirModal2()">Simulación</button>
                         {{-- Dark/Light Mode --}}
                         <div class="btn-switch">
                             <button class="switch" id="switch">
@@ -90,7 +97,7 @@
                 </div>
                 {{-- Introducción --}}
                 <section id="introduccion">
-                    <iframe src="https://drive.google.com/file/d/1pxMrV-ChtzWXhw_EZJPQFpPIwEtkIILU/preview?embedded=true&view=FitH&toolbar=0" name="reporte" style="width:100%; height: 800px;"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1CpV-dzWEtcUBAO28Akw8DC3WGvpt24Gp/preview" name="reporte" style="width:100%; height: 800px;"></iframe>
                 </section>
                 <hr>
                 {{-- Descargar --}}
@@ -166,6 +173,26 @@
                                 </td>
                                 <td class="text-center">
                                     <a href="https://drive.google.com/file/d/1pxMrV-ChtzWXhw_EZJPQFpPIwEtkIILU/preview" target="reporte" title="Ver Reporte">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            {{-- Descarga 1T 2023 --}}
+                            <tr>
+                                <td class="text-center"><b>1T 2023</b></td>
+                                <td>Progreso Cierre Brechas AIO - Reporte 1T 2023</td>
+                                <td class="text-center">
+                                    <a id="" href="/descargar-pdf12023" title="Descargar PDF">
+                                        <i class="far fa-file-pdf"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="/descargar-excel12023" title="Descargar Excel">
+                                        <i class="far fa-file-excel"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="https://drive.google.com/file/d/1CpV-dzWEtcUBAO28Akw8DC3WGvpt24Gp/preview" target="reporte" title="Ver Reporte">
                                         <i class="far fa-eye"></i>
                                     </a>
                                 </td>

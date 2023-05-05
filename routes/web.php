@@ -95,6 +95,15 @@ Route::get('/descargar-pdf42022', function() {
     );
     return Response::download($file, "Progreso Cierre Brechas AIO - Reporte 4T 2022.pdf", $headers);
 });
+/* PDF 1T 2023 */
+Route::get('/descargar-pdf12023', function() {
+    $file = public_path()."/file/reporte12023.pdf";
+
+    $headers = array(
+        'Content-Type: application/pdf',
+    );
+    return Response::download($file, "Progreso Cierre Brechas AIO - Reporte 1T 2023.pdf", $headers);
+});
 /* Excel 2T 2022 */
 Route::get('/descargar-excel22022', function() {
     $file = public_path()."/file/excel22022.xlsx";
@@ -121,6 +130,15 @@ Route::get('/descargar-excel42022', function() {
         'Content-Type: application/vnd.ms-excel',
     );
     return Response::download($file, "Progreso Cierre Brechas AIO - Reporte 4T 2022.xlsx", $headers);
+});
+/* Excel 1T 2023 */
+Route::get('/descargar-excel12022', function() {
+    $file = public_path()."/file/excel12023.xlsx";
+    
+    $headers = array(
+        'Content-Type: application/vnd.ms-excel',
+    );
+    return Response::download($file, "Progreso Cierre Brechas AIO - Reporte 1T 2023.xlsx", $headers);
 });
 
 //Bot
