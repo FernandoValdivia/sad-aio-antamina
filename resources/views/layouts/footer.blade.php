@@ -1,3 +1,7 @@
+{{-- Chat Whatsapp --}}
+<a href="https://api.whatsapp.com/send?phone=51922753771&text=Hola%21%20vengo%20del%20SAD%20AIO%20Antamina." class="float" target="_blank">
+    <i class="fab fa-whatsapp my-float"></i>
+</a>
 {{-- Loader --}}
 <div id="containerLoad" class="loader hidden">
     <h2>Cargando...</h2>

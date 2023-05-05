@@ -92,14 +92,8 @@
             </div>
             <!-- Index End -->
         </div>
-
         @extends('layouts.footer')
     </div>
-
-    {{-- Chat Whatsapp --}}
-    <a href="https://api.whatsapp.com/send?phone=51922753771&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20SAD." class="float" target="_blank">
-        <i class="fab fa-whatsapp my-float"></i>
-    </a>
 
     <!-- JavaScript Libraries Menu -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
