@@ -117,9 +117,6 @@
 <script src="js/modal.js"></script>
 <script src="js/modal2.js"></script>
 {{-- End Modal  --}}
-{{-- Switch Dark/Light Mode --}}
-<audio id="audio" src="audio/switch.mp3"></audio>
-<script src="js/switch.js"></script>
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">

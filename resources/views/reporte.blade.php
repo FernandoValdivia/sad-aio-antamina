@@ -34,53 +34,7 @@
 </head>
 <body>
     <div class="container-xxl p-0">
-        <!-- Navbar general -->
-        <div class="container-xxl position-relative p-0 bg-black">
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
-                {{-- Logo --}}
-                <a id="sadlogo" class="navbar-brand" href="/"></a>
-                {{-- End Logo --}}
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="/" class="nav-item nav-link">Inicio</a>
-                        <a href="/resumen" class="nav-item nav-link">Resumen</a>
-                        <a href="/brechas" class="nav-item nav-link" onclick="onLoad()">Brechas</a>
-                        <a href="/proyectos" class="nav-item nav-link">Proyectos</a>
-                        <a href="/recursos" class="nav-item nav-link">Recursos</a>
-                        <a href="/potencialidades" class="nav-item nav-link">Potencialidades</a>
-                        <div class="dropwdown-container">
-                            <a href="#reportes" class="nav-item nav-link active">Reportes</a>
-                            <div class="drop-menu">
-                                <a href="/reporte" class="nav-item nav-link drop-item active">Brechas</a>
-                                <a href="#general" class="nav-item nav-link drop-item">Desarrollo</a>
-                                <a href="#coyuntura" class="nav-item nav-link drop-item">Coyuntura</a>
-                            </div>
-                        </div>
-                        <button class="nav-item nav-link nav-modal" onclick="abrirModal2()">Simulación</button>
-                        {{-- Dark/Light Mode --}}
-                        <div class="btn-switch">
-                            <button class="switch" id="switch">
-                                <span><i class="fas fa-sun"></i></span>
-                                <span><i class="fas fa-moon"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>  
-            </nav>
-            <!-- Navbar End -->
-            {{-- <div class="container-xxl py-1 bg-dark hero-header">
-                <div class="container text-center my-5">
-                    <h1 class="text-white"><b>Progreso Cierre de Brechas</b></h1>
-                    <h1 class="text-white">AIO Antamina 4T 2022</h1>
-                </div>
-            </div> --}}
-        </div>
-        <!-- Navbar End -->
-
+        @extends('layouts.navbar')
         <!-- Trimestral Start -->      
         <div class="container-xxl">
             <div class="container-trim trim">

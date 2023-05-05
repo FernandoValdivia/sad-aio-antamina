@@ -4383,14 +4383,18 @@ div .legendp img {
 
 @media (min-width: 992px) {
     .navbar-dark {
-        background: var(--navcolor) !important;
-        position: relative;
+        position: absolute; 
         display: flex;
+        top: 0 !important; 
+        left: 0 !important; 
+        right: 0 !important;
         align-items: center;
         justify-content: space-between;
+        background: var(--navcolor) !important;
         box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px;
         border-radius: 0px;
         transition: .3s ease all;
+        z-index: 450;
     }
 
     .sticky-top.navbar-dark {
@@ -4414,6 +4418,16 @@ div .legendp img {
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, 0.5);
+}
+
+.home_container, 
+.container-fluid-rsm, 
+.grid-container, 
+.container-fluid-py, 
+.container-hor, 
+.container-pot, 
+.container-trim {
+    margin-top: 3.75rem;
 }
 
 /*** Section Title ***/
