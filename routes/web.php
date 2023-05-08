@@ -145,3 +145,8 @@ Route::get('/descargar-excel12022', function() {
 Route::get('/botman',[BotManController::class,"handle"]);
 
 Route::post('/botman',[BotManController::class,"handle"]);
+
+// Redirección ante rutas inexistentes
+Route::any('{catchall}', function () {
+    return redirect('/');
+})->where('catchall', '(.*)');

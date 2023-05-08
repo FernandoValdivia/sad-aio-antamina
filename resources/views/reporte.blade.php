@@ -42,7 +42,7 @@
                 <div class="container-descarga">
                     <div class="grid-r-1">
                         <h3 id="titulo">Progreso de Cierre de Brechas</h3>
-                        <p>AIO Antamina 4T 2022</p>
+                        <p>AIO Antamina 1T 2023</p>
                     </div>
 
                     <div class="grid-r-2">
