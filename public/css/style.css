@@ -1668,6 +1668,17 @@ th.style16 {
     font-size: 0.9rem;
 }
 
+.title-grid {
+    display: flex; 
+    width: 100%; 
+    align-items: center;
+}
+
+.text-grid {
+    margin-left: 15%;
+    width: 70%;
+}
+
 .grid-br-5 {
     display: grid;
     grid-column: 2 / span 1;
@@ -4295,7 +4306,7 @@ div .legendp img {
     max-height: 60px;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1140px) {
     /* Brechas */
     div td .row .col-9 {
         width: 60%;
@@ -4368,7 +4379,20 @@ div .legendp img {
         width: 100%;
         min-width: 100%;
     }
+
+    .title-grid {
+        display: block !important;
+    }
+
+    .text-grid {
+        margin-left: 0;
+        width: 100% !important;
+    }
     
+    .btn-grid {
+        padding: 0.5rem 0 2rem;
+    }
+
     /* Switch */
     .switch {
         margin-left: none !important;

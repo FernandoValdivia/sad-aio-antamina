@@ -37,8 +37,18 @@
                 <div class="grid-br-1"></div>
                 {{-- titulo --}}
                 <div class="grid-br-2">
-                    <h3 id="titulo">Brechas en el AIO: Por Pilares</h3>
-                    <p>(Porcentajes)</p>
+                    <div class="title-grid">
+                        <div class="text-grid">
+                            <h3 id="titulo">Brechas en el AIO: Por Pilares</h3>
+                            <p>(Porcentajes)</p>
+                        </div>
+                        <div class="btn-grid">
+                            <a class="descargar-btn" href="#interested" role="button">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                Documentos de interés
+                            </a>
+                        </div>
+                    </div>
                     {{-- Filtros --}}
                     <div class="form-container">
                         <form action="/brechas" method="POST">
@@ -9705,7 +9715,7 @@
                         DATA
                 </a>
             </div>
-            <div class="p-4">
+            <div class="p-4" id="interested">
                 <h3>Documentos de interés de 
                     <b id="unidadt"><?php
                         if(isset($_POST['location'])) {
