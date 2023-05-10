@@ -148,105 +148,38 @@
                     <div class="valor">
                         <h4 >
                             <?php
-                                //filtro año y distrito
-                                if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                    // Todos
-                                    if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                        //Promedio total
-                                        $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por impacto
-                                        $impacto = $_POST['impacto'];
-                                        $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año and impacto 
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por año y impacto
-                                        $impacto = $_POST['impacto'];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito and Año and Impacto 
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por distrito, año y impacto
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $impacto = $_POST['impacto'];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Institucionalidad Madura', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $query = ['variable' => 'Institucionalidad Madura', 'distrito' => $distrito_nom];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                        //Promedio por año
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'AIO', 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito e impacto
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $impacto = $_POST['impacto'];
-                                        $query = ['variable' => 'Institucionalidad Madura', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año y Distrito
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Institucionalidad Madura', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } //Total
-                                    else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                $variable = 'Institucionalidad Madura';
+                                if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                    $location = $_POST['location'];
+                                    $years = $_POST['years'];
+                                    $impacto = $_POST['impacto'];
+                                    $query = ['variable' => $variable];
+                                    
+                                    if ($location !== 'AIO') {
+                                        $distrito = explode(',', $location)[2];
+                                        $query['distrito'] = $distrito;
+                                    } else {
+                                        $query['distrito'] = 'AIO';
                                     }
+
+                                    if ($years !== 'Todos') {
+                                        $query['anio'] = $years;
+                                    } else {
+                                        $query['anio'] = '222022';
+                                    }
+
+                                    if ($impacto !== 'Todos') {
+                                        $query['impacto'] = $impacto;
+                                    } else {
+                                        $query['impacto'] = 'Con impacto';
+                                    }
+
+                                    $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                    echo number_format($total, 0);
                                 } else {
-                                    //Promedio total
-                                    $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                    $total = DB::table('brechasbd')
-                                        ->where($query)
-                                        ->avg('porcentaje');
-                                    echo number_format($total,0);
+                                    $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                    $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                    echo number_format($total, 0);
                                 }
                             ?>
                         </h4>
@@ -260,105 +193,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Canon Minero. Regalía Minera y otros para el desarrollo', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Canon Minero. Regalía Minera y otros para el desarrollo', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Canon Minero. Regalía Minera y otros para el desarrollo', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Canon Minero. Regalía Minera y otros para el desarrollo', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Canon Minero. Regalía Minera y otros para el desarrollo', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Canon Minero. Regalía Minera y otros para el desarrollo', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Canon Minero. Regalía Minera y otros para el desarrollo', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Canon Minero. Regalía Minera y otros para el desarrollo', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Canon Minero. Regalía Minera y otros para el desarrollo', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Canon Minero. Regalía Minera y otros para el desarrollo';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Canon Minero. Regalía Minera y otros para el desarrollo', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -369,105 +235,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Instrumentos de Planeamiento Municipal', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Instrumentos de Planeamiento Municipal', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Instrumentos de Planeamiento Municipal', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Instrumentos de Planeamiento Municipal', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Instrumentos de Planeamiento Municipal', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Instrumentos de Planeamiento Municipal', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Instrumentos de Planeamiento Municipal', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Instrumentos de Planeamiento Municipal', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Instrumentos de Planeamiento Municipal', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Instrumentos de Planeamiento Municipal';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Instrumentos de Planeamiento Municipal', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -478,105 +277,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Ejecución presupuestal en inversiones', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Ejecución presupuestal en inversiones', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Ejecución presupuestal en inversiones', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Ejecución presupuestal en inversiones', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Ejecución presupuestal en inversiones', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Ejecución presupuestal en inversiones', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Ejecución presupuestal en inversiones', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Ejecución presupuestal en inversiones', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Ejecución presupuestal en inversiones', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Ejecución presupuestal en inversiones';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Ejecución presupuestal en inversiones', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -587,105 +319,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Calidad del gasto de inversión municipal', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Calidad del gasto de inversión municipal', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad del gasto de inversión municipal', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad del gasto de inversión municipal', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Calidad del gasto de inversión municipal', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad del gasto de inversión municipal', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Calidad del gasto de inversión municipal', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad del gasto de inversión municipal', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Calidad del gasto de inversión municipal', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Calidad del gasto de inversión municipal';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Calidad del gasto de inversión municipal', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -698,105 +363,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Clima social para el desarrollo', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Clima social para el desarrollo', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Clima social para el desarrollo', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Clima social para el desarrollo', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Clima social para el desarrollo', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Clima social para el desarrollo', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Clima social para el desarrollo', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Clima social para el desarrollo', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Clima social para el desarrollo', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Clima social para el desarrollo';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Clima social para el desarrollo', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -812,105 +410,38 @@
                             <td id="vpdlc">
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Planeamiento: PDLC Actualizados', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Planeamiento: PDLC Actualizados', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: PDLC Actualizados', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: PDLC Actualizados', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Planeamiento: PDLC Actualizados', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: PDLC Actualizados', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Planeamiento: PDLC Actualizados', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: PDLC Actualizados', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Planeamiento: PDLC Actualizados', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Planeamiento: PDLC Actualizados';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Planeamiento: PDLC Actualizados', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -921,105 +452,38 @@
                             <td id="vsanea">
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Saneamiento', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Saneamiento', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Saneamiento', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Saneamiento', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Saneamiento', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Saneamiento', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Saneamiento', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Saneamiento', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Saneamiento', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Calidad de gasto presupuestal en inversiones - Saneamiento';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Saneamiento', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -1035,105 +499,38 @@
                             <td id="vpoi">
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Planeamiento: POI Actualizados', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Planeamiento: POI Actualizados', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: POI Actualizados', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: POI Actualizados', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Planeamiento: POI Actualizados', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: POI Actualizados', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Planeamiento: POI Actualizados', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: POI Actualizados', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Planeamiento: POI Actualizados', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Planeamiento: POI Actualizados';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Planeamiento: POI Actualizados', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -1144,105 +541,38 @@
                             <td id="vtrans">
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Transporte', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Transporte', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Transporte', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Transporte', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Transporte', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Transporte', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Transporte', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Transporte', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Transporte', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Calidad de gasto presupuestal en inversiones - Transporte';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Transporte', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -1258,105 +588,38 @@
                             <td id="vpei">
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Planeamiento: PEI Actualizados', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Planeamiento: PEI Actualizados', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: PEI Actualizados', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: PEI Actualizados', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Planeamiento: PEI Actualizados', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: PEI Actualizados', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Planeamiento: PEI Actualizados', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: PEI Actualizados', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Planeamiento: PEI Actualizados', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Planeamiento: PEI Actualizados';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Planeamiento: PEI Actualizados', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -1367,105 +630,38 @@
                             <td id="vagro">
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Agropecurio', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Agropecurio', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Agropecurio', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Agropecurio', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Agropecurio', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Agropecurio', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Agropecurio', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Agropecurio', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Agropecurio', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Calidad de gasto presupuestal en inversiones - Agropecurio';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Agropecurio', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -1481,105 +677,38 @@
                             <td id="vpmi">
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Planeamiento: PMI Actualizados', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Planeamiento: PMI Actualizados', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: PMI Actualizados', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: PMI Actualizados', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Planeamiento: PMI Actualizados', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: PMI Actualizados', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Planeamiento: PMI Actualizados', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Planeamiento: PMI Actualizados', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Planeamiento: PMI Actualizados', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Planeamiento: PMI Actualizados';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Planeamiento: PMI Actualizados', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -1590,105 +719,38 @@
                             <td id="vedu">
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Educación', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Educación', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Educación', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Educación', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Educación', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Educación', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Educación', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Educación', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Educación', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Calidad de gasto presupuestal en inversiones - Educación';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Educación', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -1704,105 +766,38 @@
                             <td id="vsalud">
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Salud', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Salud', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Salud', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Salud', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Salud', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Salud', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Salud', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Salud', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Salud', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Calidad de gasto presupuestal en inversiones - Salud';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Calidad de gasto presupuestal en inversiones - Salud', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -1819,106 +814,38 @@
                         <div>
                             <h2 class="valor">
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            //Promedio por año y impacto
-                                            $query = ['variable' => 'Total', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Total', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Total', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Total', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Total';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Total', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                             </h2>
@@ -1933,105 +860,38 @@
                     <div class="valor">
                         <h4>
                             <?php
-                                //filtro año y distrito
-                                if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                    // Todos
-                                    if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                        //Promedio total
-                                        $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por impacto
-                                        $impacto = $_POST['impacto'];
-                                        $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año and impacto 
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por año y impacto
-                                        $impacto = $_POST['impacto'];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito and Año and Impacto 
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por distrito, año y impacto
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $impacto = $_POST['impacto'];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => $distrito_nom];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                        //Promedio por año
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'AIO', 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito e impacto
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $impacto = $_POST['impacto'];
-                                        $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año y Distrito
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } //Total
-                                    else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                $variable = 'Oportunidades para las futuras generaciones';
+                                if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                    $location = $_POST['location'];
+                                    $years = $_POST['years'];
+                                    $impacto = $_POST['impacto'];
+                                    $query = ['variable' => $variable];
+                                    
+                                    if ($location !== 'AIO') {
+                                        $distrito = explode(',', $location)[2];
+                                        $query['distrito'] = $distrito;
+                                    } else {
+                                        $query['distrito'] = 'AIO';
                                     }
+
+                                    if ($years !== 'Todos') {
+                                        $query['anio'] = $years;
+                                    } else {
+                                        $query['anio'] = '222022';
+                                    }
+
+                                    if ($impacto !== 'Todos') {
+                                        $query['impacto'] = $impacto;
+                                    } else {
+                                        $query['impacto'] = 'Con impacto';
+                                    }
+
+                                    $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                    echo number_format($total, 0);
                                 } else {
-                                    //Promedio total
-                                    $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                    $total = DB::table('brechasbd')
-                                        ->where($query)
-                                        ->avg('porcentaje');
-                                    echo number_format($total,0);
+                                    $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                    $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                    echo number_format($total, 0);
                                 }
                             ?>
                         </h4>
@@ -2046,105 +906,38 @@
                         <div>
                             <h4 class="valor">
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Educación: EBR y años de educación', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Educación: EBR y años de educación', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Educación: EBR y años de educación', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Educación: EBR y años de educación', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Educación: EBR y años de educación', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Educación: EBR y años de educación', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Educación: EBR y años de educación', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Educación: EBR y años de educación', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Educación: EBR y años de educación', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Educación: EBR y años de educación';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Educación: EBR y años de educación', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                             </h4>
@@ -2159,105 +952,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Acceso educación (matriculados)', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Acceso educación (matriculados)', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Acceso educación (matriculados)', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Acceso educación (matriculados)', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Acceso educación (matriculados)', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Acceso educación (matriculados)', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Acceso educación (matriculados)', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Acceso educación (matriculados)', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Acceso educación (matriculados)', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Acceso educación (matriculados)';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Acceso educación (matriculados)', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -2268,105 +994,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Nivel de educación de la población', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Nivel de educación de la población', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Nivel de educación de la población', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Nivel de educación de la población', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Nivel de educación de la población', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Nivel de educación de la población', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Nivel de educación de la población', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Nivel de educación de la población', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Nivel de educación de la población', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Nivel de educación de la población';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Nivel de educación de la población', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -2377,105 +1036,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Logros de Aprendizaje', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Logros de Aprendizaje', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Logros de Aprendizaje', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Logros de Aprendizaje', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Logros de Aprendizaje', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Logros de Aprendizaje', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Logros de Aprendizaje', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Logros de Aprendizaje', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Logros de Aprendizaje', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Logros de Aprendizaje';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Logros de Aprendizaje', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -2491,105 +1083,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel Inicial', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -2602,105 +1127,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => '4to prim.', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => '4to prim.', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => '4to prim.', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => '4to prim.', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => '4to prim.', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => '4to prim.', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => '4to prim.', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => '4to prim.', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => '4to prim.', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = '4to prim.';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => '4to prim.', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -2716,105 +1174,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel primaria', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -2827,105 +1218,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => '2do sec.', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => '2do sec.', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => '2do sec.', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => '2do sec.', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => '2do sec.', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => '2do sec.', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => '2do sec.', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => '2do sec.', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => '2do sec.', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = '2do sec.';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => '2do sec.', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -2941,105 +1265,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel secundaria', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel secundaria', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel secundaria', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel secundaria', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel secundaria', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel secundaria', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel secundaria', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel secundaria', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel secundaria', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel secundaria';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'MATRÍCULA EN EL SISTEMA EDUCATIVO TOTAL - Nivel secundaria', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -3062,105 +1319,38 @@
                     <div class="valor">
                         <h4>
                             <?php
-                                //filtro año y distrito
-                                if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                    // Todos
-                                    if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                        //Promedio total
-                                        $query = ['variable' => 'Vida larga y saludable', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por impacto
-                                        $impacto = $_POST['impacto'];
-                                        $query = ['variable' => 'Vida larga y saludable', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año and impacto 
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por año y impacto
-                                        $impacto = $_POST['impacto'];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Vida larga y saludable', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito and Año and Impacto 
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por distrito, año y impacto
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $impacto = $_POST['impacto'];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Vida larga y saludable', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $query = ['variable' => 'Vida larga y saludable', 'distrito' => $distrito_nom];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                        //Promedio por año
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Vida larga y saludable', 'distrito' => 'AIO', 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito e impacto
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $impacto = $_POST['impacto'];
-                                        $query = ['variable' => 'Vida larga y saludable', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año y Distrito
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Vida larga y saludable', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } //Total
-                                    else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Vida larga y saludable', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                $variable = 'Vida larga y saludable';
+                                if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                    $location = $_POST['location'];
+                                    $years = $_POST['years'];
+                                    $impacto = $_POST['impacto'];
+                                    $query = ['variable' => $variable];
+                                    
+                                    if ($location !== 'AIO') {
+                                        $distrito = explode(',', $location)[2];
+                                        $query['distrito'] = $distrito;
+                                    } else {
+                                        $query['distrito'] = 'AIO';
                                     }
+
+                                    if ($years !== 'Todos') {
+                                        $query['anio'] = $years;
+                                    } else {
+                                        $query['anio'] = '222022';
+                                    }
+
+                                    if ($impacto !== 'Todos') {
+                                        $query['impacto'] = $impacto;
+                                    } else {
+                                        $query['impacto'] = 'Con impacto';
+                                    }
+
+                                    $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                    echo number_format($total, 0);
                                 } else {
-                                    //Promedio total
-                                    $query = ['variable' => 'Vida larga y saludable', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                    $total = DB::table('brechasbd')
-                                        ->where($query)
-                                        ->avg('porcentaje');
-                                    echo number_format($total,0);
+                                    $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                    $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                    echo number_format($total, 0);
                                 }
                             ?>
                         </h4>
@@ -3174,105 +1364,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Esperanza de vida', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Esperanza de vida', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Esperanza de vida', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Esperanza de vida', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Esperanza de vida', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Esperanza de vida', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Esperanza de vida', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Esperanza de vida', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Esperanza de vida', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Esperanza de vida';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Esperanza de vida', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -3283,105 +1406,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Anemia', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Anemia', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Anemia', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Anemia', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Anemia', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Anemia', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Anemia', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Anemia', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Anemia', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Anemia';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Anemia', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -3392,105 +1448,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Desnutrición crónica infantil', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Desnutrición crónica infantil', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Desnutrición crónica infantil', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Desnutrición crónica infantil', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Desnutrición crónica infantil', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Desnutrición crónica infantil', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Desnutrición crónica infantil', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Desnutrición crónica infantil', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Desnutrición crónica infantil', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Desnutrición crónica infantil';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Desnutrición crónica infantil', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -3501,105 +1490,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Población afiliada a algún tipo de seguro', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Población afiliada a algún tipo de seguro', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Población afiliada a algún tipo de seguro', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Población afiliada a algún tipo de seguro', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Población afiliada a algún tipo de seguro', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Población afiliada a algún tipo de seguro', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Población afiliada a algún tipo de seguro', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Población afiliada a algún tipo de seguro', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Población afiliada a algún tipo de seguro', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Población afiliada a algún tipo de seguro';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Población afiliada a algún tipo de seguro', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -3616,105 +1538,38 @@
                     <div class="valor">
                         <h4>
                             <?php
-                                //filtro año y distrito
-                                if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                    // Todos
-                                    if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                        //Promedio total
-                                        $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por impacto
-                                        $impacto = $_POST['impacto'];
-                                        $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año and impacto 
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por año y impacto
-                                        $impacto = $_POST['impacto'];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito and Año and Impacto 
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por distrito, año y impacto
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $impacto = $_POST['impacto'];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => $distrito_nom];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                        //Promedio por año
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'AIO', 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito e impacto
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $impacto = $_POST['impacto'];
-                                        $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año y Distrito
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } //Total
-                                    else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                $variable = 'Infraestructura social y productiva';
+                                if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                    $location = $_POST['location'];
+                                    $years = $_POST['years'];
+                                    $impacto = $_POST['impacto'];
+                                    $query = ['variable' => $variable];
+                                    
+                                    if ($location !== 'AIO') {
+                                        $distrito = explode(',', $location)[2];
+                                        $query['distrito'] = $distrito;
+                                    } else {
+                                        $query['distrito'] = 'AIO';
                                     }
+
+                                    if ($years !== 'Todos') {
+                                        $query['anio'] = $years;
+                                    } else {
+                                        $query['anio'] = '222022';
+                                    }
+
+                                    if ($impacto !== 'Todos') {
+                                        $query['impacto'] = $impacto;
+                                    } else {
+                                        $query['impacto'] = 'Con impacto';
+                                    }
+
+                                    $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                    echo number_format($total, 0);
                                 } else {
-                                    //Promedio total
-                                    $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                    $total = DB::table('brechasbd')
-                                        ->where($query)
-                                        ->avg('porcentaje');
-                                    echo number_format($total,0);
+                                    $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                    $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                    echo number_format($total, 0);
                                 }
                             ?>
                         </h4>
@@ -3729,105 +1584,38 @@
                         <div>
                             <h4 class="valor">
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Servicios Básicos', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Servicios Básicos', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Servicios Básicos', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Servicios Básicos', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Servicios Básicos', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Servicios Básicos', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Servicios Básicos', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Servicios Básicos', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Servicios Básicos', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Servicios Básicos';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Servicios Básicos', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                             </h4>
@@ -3842,105 +1630,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Hogares con internet', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Hogares con internet', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Hogares con internet', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Hogares con internet', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Hogares con internet', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Hogares con internet', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Hogares con internet', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Hogares con internet', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Hogares con internet', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Hogares con internet';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Hogares con internet', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -3951,105 +1672,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Hogares con telefonía celular', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Hogares con telefonía celular', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Hogares con telefonía celular', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Hogares con telefonía celular', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Hogares con telefonía celular', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Hogares con telefonía celular', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Hogares con telefonía celular', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Hogares con telefonía celular', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Hogares con telefonía celular', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Hogares con telefonía celular';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Hogares con telefonía celular', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -4060,105 +1714,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Viviendas por red pública de agua dentro de la vivienda', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Viviendas por red pública de agua dentro de la vivienda', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Viviendas por red pública de agua dentro de la vivienda', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Viviendas por red pública de agua dentro de la vivienda', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Viviendas por red pública de agua dentro de la vivienda', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Viviendas por red pública de agua dentro de la vivienda', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Viviendas por red pública de agua dentro de la vivienda', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Viviendas por red pública de agua dentro de la vivienda', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Viviendas por red pública de agua dentro de la vivienda', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Viviendas por red pública de agua dentro de la vivienda';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Viviendas por red pública de agua dentro de la vivienda', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -4174,105 +1761,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Viviendas con red pública de desagüe dentro de la vivienda', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Viviendas con red pública de desagüe dentro de la vivienda', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Viviendas con red pública de desagüe dentro de la vivienda', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Viviendas con red pública de desagüe dentro de la vivienda', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Viviendas con red pública de desagüe dentro de la vivienda', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Viviendas con red pública de desagüe dentro de la vivienda', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Viviendas con red pública de desagüe dentro de la vivienda', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Viviendas con red pública de desagüe dentro de la vivienda', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Viviendas con red pública de desagüe dentro de la vivienda', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Viviendas con red pública de desagüe dentro de la vivienda';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Viviendas con red pública de desagüe dentro de la vivienda', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -4283,105 +1803,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Viviendas con alumbrado eléctrico por red pública', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Viviendas con alumbrado eléctrico por red pública', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Viviendas con alumbrado eléctrico por red pública', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Viviendas con alumbrado eléctrico por red pública', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Viviendas con alumbrado eléctrico por red pública', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Viviendas con alumbrado eléctrico por red pública', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Viviendas con alumbrado eléctrico por red pública', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Viviendas con alumbrado eléctrico por red pública', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Viviendas con alumbrado eléctrico por red pública', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Viviendas con alumbrado eléctrico por red pública';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Viviendas con alumbrado eléctrico por red pública', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -4392,105 +1845,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Plantas de Tratamiento de Aguas Residuales (PTAR)', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Plantas de Tratamiento de Aguas Residuales (PTAR)', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Plantas de Tratamiento de Aguas Residuales (PTAR)', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Plantas de Tratamiento de Aguas Residuales (PTAR)', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Plantas de Tratamiento de Aguas Residuales (PTAR)', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Plantas de Tratamiento de Aguas Residuales (PTAR)', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Plantas de Tratamiento de Aguas Residuales (PTAR)', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Plantas de Tratamiento de Aguas Residuales (PTAR)', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Plantas de Tratamiento de Aguas Residuales (PTAR)', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Plantas de Tratamiento de Aguas Residuales (PTAR)';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Plantas de Tratamiento de Aguas Residuales (PTAR)', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -4506,105 +1892,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Vial pavimentada', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Vial pavimentada', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vial pavimentada', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vial pavimentada', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Vial pavimentada', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vial pavimentada', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Vial pavimentada', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vial pavimentada', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Vial pavimentada', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Vial pavimentada';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Vial pavimentada', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -4624,105 +1943,38 @@
                         <div>
                             <h4 class="valor">
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Social', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Social', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Social', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Social', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Social', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Social', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Social', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Social', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Social', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Social';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Social', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                             </h4>
@@ -4737,105 +1989,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Camas de Hospitalización e internamientos', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Camas de Hospitalización e internamientos', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Camas de Hospitalización e internamientos', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Camas de Hospitalización e internamientos', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Camas de Hospitalización e internamientos', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Camas de Hospitalización e internamientos', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Camas de Hospitalización e internamientos', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Camas de Hospitalización e internamientos', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Camas de Hospitalización e internamientos', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Camas de Hospitalización e internamientos';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Camas de Hospitalización e internamientos', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -4846,105 +2031,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Mejoras de IIEE', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Mejoras de IIEE', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Mejoras de IIEE', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Mejoras de IIEE', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Mejoras de IIEE', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Mejoras de IIEE', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Mejoras de IIEE', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Mejoras de IIEE', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Mejoras de IIEE', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Mejoras de IIEE';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Mejoras de IIEE', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -4962,105 +2080,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Locales públicos en buen estado (% del total)', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Locales públicos en buen estado (% del total)', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Locales públicos en buen estado (% del total)', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Locales públicos en buen estado (% del total)', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Locales públicos en buen estado (% del total)', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Locales públicos en buen estado (% del total)', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Locales públicos en buen estado (% del total)', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Locales públicos en buen estado (% del total)', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Locales públicos en buen estado (% del total)', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Locales públicos en buen estado (% del total)';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Locales públicos en buen estado (% del total)', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -5078,105 +2129,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Retorno seguro', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Retorno seguro', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Retorno seguro', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Retorno seguro', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Retorno seguro', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Retorno seguro', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Retorno seguro', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Retorno seguro', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Retorno seguro', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Retorno seguro';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Retorno seguro', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -5202,105 +2186,38 @@
                         <div>
                             <h4 class="valor">
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Productiva', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Productiva', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Productiva', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Productiva', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Productiva', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Productiva', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Productiva', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Productiva', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Productiva', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Productiva';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Productiva', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                             </h4>
@@ -5314,97 +2231,38 @@
                         <div>
                             <h4 class="valor">
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Mantenimiento', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo '-';
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Mantenimiento', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Mantenimiento', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Mantenimiento', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Mantenimiento', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Mantenimiento', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Mantenimiento', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Mantenimiento', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            echo '-';
+                                    $variable = 'Mantenimiento';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        echo '-';
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                             </h4>
@@ -5419,105 +2277,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Agropecuaria (riego tecnificado)', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Agropecuaria (riego tecnificado)', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Agropecuaria (riego tecnificado)', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Agropecuaria (riego tecnificado)', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Agropecuaria (riego tecnificado)', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Agropecuaria (riego tecnificado)', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Agropecuaria (riego tecnificado)', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Agropecuaria (riego tecnificado)', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Agropecuaria (riego tecnificado)', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Agropecuaria (riego tecnificado)';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Agropecuaria (riego tecnificado)', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -5528,105 +2319,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Turística', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Turística', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Turística', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Turística', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Turística', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Turística', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Turística', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Turística', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Turística', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Turística';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Turística', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -5637,105 +2361,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Académica', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Académica', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Académica', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Académica', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Académica', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Académica', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Académica', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Académica', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Académica', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Académica';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Académica', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -5746,93 +2403,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            echo '-';
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Importancia del monto asignado', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Importancia del monto asignado', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Importancia del monto asignado', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Importancia del monto asignado', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Importancia del monto asignado', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Importancia del monto asignado', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Importancia del monto asignado', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            echo '-';
+                                    $variable = 'Importancia del monto asignado';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        echo '-';
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -5843,93 +2445,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            echo '-';
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Velocidad de ejecución', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Velocidad de ejecución', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Velocidad de ejecución', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Velocidad de ejecución', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Velocidad de ejecución', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Velocidad de ejecución', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Velocidad de ejecución', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            echo '-';
+                                    $variable = 'Velocidad de ejecución';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        echo '-';
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -6011,105 +2558,38 @@
                     <div class="valor">
                         <h4>
                             <?php
-                                //filtro año y distrito
-                                if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                    // Todos
-                                    if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                        //Promedio total
-                                        $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por impacto
-                                        $impacto = $_POST['impacto'];
-                                        $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año and impacto 
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por año y impacto
-                                        $impacto = $_POST['impacto'];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito and Año and Impacto 
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por distrito, año y impacto
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $impacto = $_POST['impacto'];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => $distrito_nom];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                        //Promedio por año
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'AIO', 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito e impacto
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $impacto = $_POST['impacto'];
-                                        $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año y Distrito
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } //Total
-                                    else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                $variable = 'Emprendimiento y desarrollo económico';
+                                if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                    $location = $_POST['location'];
+                                    $years = $_POST['years'];
+                                    $impacto = $_POST['impacto'];
+                                    $query = ['variable' => $variable];
+                                    
+                                    if ($location !== 'AIO') {
+                                        $distrito = explode(',', $location)[2];
+                                        $query['distrito'] = $distrito;
+                                    } else {
+                                        $query['distrito'] = 'AIO';
                                     }
+
+                                    if ($years !== 'Todos') {
+                                        $query['anio'] = $years;
+                                    } else {
+                                        $query['anio'] = '222022';
+                                    }
+
+                                    if ($impacto !== 'Todos') {
+                                        $query['impacto'] = $impacto;
+                                    } else {
+                                        $query['impacto'] = 'Con impacto';
+                                    }
+
+                                    $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                    echo number_format($total, 0);
                                 } else {
-                                    //Promedio total
-                                    $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                    $total = DB::table('brechasbd')
-                                        ->where($query)
-                                        ->avg('porcentaje');
-                                    echo number_format($total,0);
+                                    $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                    $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                    echo number_format($total, 0);
                                 }
                             ?>
                         </h4>
@@ -6124,105 +2604,38 @@
                         <div>
                             <h4 class="valor">
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Capital Humano', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Capital Humano', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Capital Humano', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Capital Humano', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Capital Humano', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Capital Humano', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Capital Humano', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Capital Humano', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Capital Humano', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Capital Humano';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Capital Humano', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                             </h4>
@@ -6234,93 +2647,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            echo '-';
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Ingreso por persona', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Ingreso por persona', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Ingreso por persona', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Ingreso por persona', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Ingreso por persona', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Ingreso por persona', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Ingreso por persona', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            echo '-';
+                                    $variable = 'Ingreso por persona';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        echo '-';
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -6336,105 +2694,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Poblacion economicante activa - PEA', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Poblacion economicante activa - PEA', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Poblacion economicante activa - PEA', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Poblacion economicante activa - PEA', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Poblacion economicante activa - PEA', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Poblacion economicante activa - PEA', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Poblacion economicante activa - PEA', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Poblacion economicante activa - PEA', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Poblacion economicante activa - PEA', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Poblacion economicante activa - PEA';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Poblacion economicante activa - PEA', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -6445,105 +2736,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'PEA Ocupada', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'PEA Ocupada', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'PEA Ocupada', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'PEA Ocupada', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'PEA Ocupada', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'PEA Ocupada', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'PEA Ocupada', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'PEA Ocupada', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'PEA Ocupada', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'PEA Ocupada';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'PEA Ocupada', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -6554,105 +2778,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Formación Univ./Técnica', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Formación Univ./Técnica', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Formación Univ./Técnica', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Formación Univ./Técnica', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Formación Univ./Técnica', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Formación Univ./Técnica', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Formación Univ./Técnica', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Formación Univ./Técnica', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Formación Univ./Técnica', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Formación Univ./Técnica';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Formación Univ./Técnica', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -6668,105 +2825,38 @@
                     <div class="valor">
                         <h4>
                             <?php
-                                //filtro año y distrito
-                                if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                    // Todos
-                                    if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                        //Promedio total
-                                        $query = ['variable' => 'Emergencias', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por impacto
-                                        $impacto = $_POST['impacto'];
-                                        $query = ['variable' => 'Emergencias', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año and impacto 
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por año y impacto
-                                        $impacto = $_POST['impacto'];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Emergencias', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito and Año and Impacto 
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                        //Promedio por distrito, año y impacto
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $impacto = $_POST['impacto'];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Emergencias', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $query = ['variable' => 'Emergencias', 'distrito' => $distrito_nom];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año
-                                    elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                        //Promedio por año
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Emergencias', 'distrito' => 'AIO', 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Distrito e impacto
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $impacto = $_POST['impacto'];
-                                        $query = ['variable' => 'Emergencias', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } // Año y Distrito
-                                    elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Emergencias', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } //Total
-                                    else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Emergencias', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                $variable = 'Emergencias';
+                                if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                    $location = $_POST['location'];
+                                    $years = $_POST['years'];
+                                    $impacto = $_POST['impacto'];
+                                    $query = ['variable' => $variable];
+                                    
+                                    if ($location !== 'AIO') {
+                                        $distrito = explode(',', $location)[2];
+                                        $query['distrito'] = $distrito;
+                                    } else {
+                                        $query['distrito'] = 'AIO';
                                     }
+
+                                    if ($years !== 'Todos') {
+                                        $query['anio'] = $years;
+                                    } else {
+                                        $query['anio'] = '222022';
+                                    }
+
+                                    if ($impacto !== 'Todos') {
+                                        $query['impacto'] = $impacto;
+                                    } else {
+                                        $query['impacto'] = 'Con impacto';
+                                    }
+
+                                    $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                    echo number_format($total, 0);
                                 } else {
-                                    //Promedio total
-                                    $query = ['variable' => 'Emergencias', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                    $total = DB::table('brechasbd')
-                                        ->where($query)
-                                        ->avg('porcentaje');
-                                    echo number_format($total,0);
+                                    $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                    $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                    echo number_format($total, 0);
                                 }
                             ?>
                         </h4>
@@ -6781,105 +2871,38 @@
                         <div>
                             <h4 class="valor">
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Vacuna Covid-19', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Vacuna Covid-19', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacuna Covid-19', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacuna Covid-19', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Vacuna Covid-19', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacuna Covid-19', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Vacuna Covid-19', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacuna Covid-19', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Vacuna Covid-19', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Vacuna Covid-19';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Vacuna Covid-19', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                             </h4>
@@ -6894,105 +2917,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Vacunación 1ra dosis', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Vacunación 1ra dosis', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacunación 1ra dosis', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacunación 1ra dosis', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Vacunación 1ra dosis', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacunación 1ra dosis', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Vacunación 1ra dosis', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacunación 1ra dosis', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Vacunación 1ra dosis', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Vacunación 1ra dosis';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Vacunación 1ra dosis', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -7003,105 +2959,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Vacunación 2da dosis', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Vacunación 2da dosis', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacunación 2da dosis', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacunación 2da dosis', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Vacunación 2da dosis', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacunación 2da dosis', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Vacunación 2da dosis', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacunación 2da dosis', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Vacunación 2da dosis', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Vacunación 2da dosis';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Vacunación 2da dosis', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
@@ -7112,105 +3001,38 @@
                             <td>
                                 <h6>
                                 <?php
-                                    //filtro año y distrito
-                                    if (isset($_POST['location']) or isset($_POST['years']) or isset($_POST['impacto'])) {
-                                        // Todos
-                                        if ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio total
-                                            $query = ['variable' => 'Vacunación 3ra dosis', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } elseif ($_POST['years']=="2021" and $_POST['impacto']=="Sin impacto") {echo '-';} // Impacto
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por impacto
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Vacunación 3ra dosis', 'distrito' => 'AIO', 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año and impacto 
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por año y impacto
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacunación 3ra dosis', 'distrito' => 'AIO', 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito and Año and Impacto 
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']!="Todos") {
-                                            //Promedio por distrito, año y impacto
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacunación 3ra dosis', 'distrito' => $distrito_nom, 'impacto' => $impacto, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $query = ['variable' => 'Vacunación 3ra dosis', 'distrito' => $distrito_nom];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año
-                                        elseif ($_POST['location']=="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            //Promedio por año
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacunación 3ra dosis', 'distrito' => 'AIO', 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Distrito e impacto
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']=="Todos" and $_POST['impacto']!="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $impacto = $_POST['impacto'];
-                                            $query = ['variable' => 'Vacunación 3ra dosis', 'distrito' => $distrito_nom, 'impacto' => $impacto];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } // Año y Distrito
-                                        elseif ($_POST['location']!="AIO" and $_POST['years']!="Todos" and $_POST['impacto']=="Todos") {
-                                            $location = $_POST['location'];
-                                            $distrito = explode(",",$location);
-                                            $distrito_nom = $distrito[2];
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Vacunación 3ra dosis', 'distrito' => $distrito_nom, 'anio' => $anio];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } //Total
-                                        else {
-                                            //Promedio total
-                                            $query = ['variable' => 'Vacunación 3ra dosis', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
+                                    $variable = 'Vacunación 3ra dosis';
+                                    if (isset($_POST['location'], $_POST['years'], $_POST['impacto'])) {
+                                        $location = $_POST['location'];
+                                        $years = $_POST['years'];
+                                        $impacto = $_POST['impacto'];
+                                        $query = ['variable' => $variable];
+                                        
+                                        if ($location !== 'AIO') {
+                                            $distrito = explode(',', $location)[2];
+                                            $query['distrito'] = $distrito;
+                                        } else {
+                                            $query['distrito'] = 'AIO';
                                         }
+
+                                        if ($years !== 'Todos') {
+                                            $query['anio'] = $years;
+                                        } else {
+                                            $query['anio'] = '222022';
+                                        }
+
+                                        if ($impacto !== 'Todos') {
+                                            $query['impacto'] = $impacto;
+                                        } else {
+                                            $query['impacto'] = 'Con impacto';
+                                        }
+
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     } else {
-                                        //Promedio total
-                                        $query = ['variable' => 'Vacunación 3ra dosis', 'distrito' => 'AIO', 'impacto' => 'Con impacto',  'anio' => '22022'];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
+                                        $query = ['variable' => $variable, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
+                                        $total = DB::table('brechasbd')->where($query)->avg('porcentaje');
+                                        echo number_format($total, 0);
                                     }
                                 ?>
                                 </h6>
