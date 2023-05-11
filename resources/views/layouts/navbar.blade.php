@@ -17,9 +17,9 @@
             <div class="dropwdown-container">
                 <a href="#reportes" class="nav-item nav-link {{ Request::is('reporte*') ? 'active' : '' }}">Reportes</a>
                 <div class="drop-menu">
-                    <a href="/reporte" class="nav-item nav-link drop-item {{ Request::is('reporte*') ? 'active' : '' }}">Brechas</a>
-                    <a href="#general" class="nav-item nav-link drop-item {{ Request::is('general*') ? 'active' : '' }}">Desarrollo</a>
                     <a href="#coyuntura" class="nav-item nav-link drop-item {{ Request::is('coyuntura*') ? 'active' : '' }}">Coyuntura</a>
+                    <a href="#general" class="nav-item nav-link drop-item {{ Request::is('general*') ? 'active' : '' }}">Desarrollo</a>
+                    <a href="/reporte" class="nav-item nav-link drop-item {{ Request::is('reporte*') ? 'active' : '' }}">Brechas</a>
                 </div>
             </div>
             <button class="nav-item nav-link nav-modal" onclick="abrirModal2()">Simulación</button>
