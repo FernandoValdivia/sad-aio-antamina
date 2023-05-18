@@ -115,12 +115,11 @@
                                     <option value="22026" <?php if (isset($_POST['years'])){ if($_POST['years']=="22026") echo 'selected';}?> >2T 2026</option>
                                     <option value="32026" <?php if (isset($_POST['years'])){ if($_POST['years']=="32026") echo 'selected';}?> >3T 2026</option>
                                     <option value="42026" <?php if (isset($_POST['years'])){ if($_POST['years']=="42026") echo 'selected';}?> >4T 2026</option>
-                                    <option value="42021" <?php if (isset($_POST['years'])){ if($_POST['years']=="42021") echo 'selected';}?>>2021</option>
-                                    <option value="42022" <?php if (isset($_POST['years'])){ if($_POST['years']=="42022") echo 'selected';}?> >2022</option>
-                                    <option value="42023" <?php if (isset($_POST['years'])){ if($_POST['years']=="42023") echo 'selected';}?> >2023</option>
-                                    <option value="42024" <?php if (isset($_POST['years'])){ if($_POST['years']=="42024") echo 'selected';}?> >2024</option>
-                                    <option value="42025" <?php if (isset($_POST['years'])){ if($_POST['years']=="42025") echo 'selected';}?> >2025</option>
-                                    <option value="42026" <?php if (isset($_POST['years'])){ if($_POST['years']=="42026") echo 'selected';}?> >2026</option>
+                                    <option value="2022" <?php if (isset($_POST['years'])){ if($_POST['years']=="2022") echo 'selected';}?> >2022</option>
+                                    <option value="2023" <?php if (isset($_POST['years'])){ if($_POST['years']=="2023") echo 'selected';}?> >2023</option>
+                                    <option value="2024" <?php if (isset($_POST['years'])){ if($_POST['years']=="2024") echo 'selected';}?> >2024</option>
+                                    <option value="2025" <?php if (isset($_POST['years'])){ if($_POST['years']=="2025") echo 'selected';}?> >2025</option>
+                                    <option value="2026" <?php if (isset($_POST['years'])){ if($_POST['years']=="2026") echo 'selected';}?> >2026</option>
                                 </select>
                             </div>
                             {{-- Impactos --}}
@@ -921,468 +920,108 @@
                                 <td class="column0 style13 s style13" rowspan="4">UGT Mina / San Marcos</td>
                                 <td class="column1 style4 s">San Marcos</td>
                                 <td class="column2 style5 s">51/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['San Marcos (Huari / Áncash)']}}
                                     / 38
                                 </td>
                                 <td class="column3 style5 s">31/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['San Marcos (Huari / Áncash)']}}
                                     /26
                                 </td>
                                 <td class="column4 style5 s">60/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['San Marcos (Huari / Áncash)']}}
                                     /42
                                 </td>
                                 <td class="column5 style5 s">44/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['San Marcos (Huari / Áncash)']}}
                                     /46
                                 </td>
                                 <td class="column6 style5 s">43/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['San Marcos (Huari / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style6 s">47/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'San Marcos (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['San Marcos (Huari / Áncash)']}}
                                     /30
                                 </td>
                             </tr>
                             <tr class="row2">
                                 <td class="column1 style7 s">San Pedro de Chaná</td>
                                 <td class="column2 style8 s">47/
-                                    <?php
-                                    if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                        $anio = $_POST['years'];
-                                        $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    } else {
-                                        $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                        $total = DB::table('brechasbd')
-                                            ->where($query)
-                                            ->avg('porcentaje');
-                                        echo number_format($total,0);
-                                    }
-                                    ?> 
+                                    {{ $resultados['Institucionalidad Madura']['San Pedro de Chaná (Huari / Áncash)']}}
                                     /30
                                 </td>
                                 <td class="column3 style8 s">34/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['San Pedro de Chaná (Huari / Áncash)']}}
                                     /25
                                 </td>
                                 <td class="column4 style8 s">68/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['San Pedro de Chaná (Huari / Áncash)']}}
                                     /41
                                 </td>
                                 <td class="column5 style8 s">57/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['San Pedro de Chaná (Huari / Áncash)']}}
                                     /72
                                 </td>
                                 <td class="column6 style8 s">55/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>    
+                                    {{ $resultados['Emergencias']['San Pedro de Chaná (Huari / Áncash)']}}  
                                     /0
                                 </td>
                                 <td class="column7 style9 s">52/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'San Pedro de Chaná (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>    
+                                    {{ $resultados['Total']['San Pedro de Chaná (Huari / Áncash)']}}  
                                     /34
                                 </td>
                             </tr>
                             <tr class="row3">
                                 <td class="column1 style4 s">Huachis</td>
                                 <td class="column2 style5 s">47/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Huachis (Huari / Áncash)']}}
                                     /40
                                 </td>
                                 <td class="column3 style5 s">39/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Huachis (Huari / Áncash)']}}
                                     /30
                                 </td>
                                 <td class="column4 style5 s">62/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Huachis (Huari / Áncash)']}}
                                     /46
                                 </td>
                                 <td class="column5 style5 s">55/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Huachis (Huari / Áncash)']}}
                                     /69
                                 </td>
                                 <td class="column6 style5 s">70/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Huachis (Huari / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style6 s">52/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Huachis (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Huachis (Huari / Áncash)']}}
                                     /37
                                 </td>
                             </tr>
                             <tr class="row4">
                                 <td class="column1 style7 s">Chavín de Huántar</td>
                                 <td class="column2 style8 s">48/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Chavín de Huántar (Huari / Áncash)']}}
                                     /41
                                 </td>
                                 <td class="column3 style8 s">28/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Chavín de Huántar (Huari / Áncash)']}}
                                     /23
                                 </td>
                                 <td class="column4 style8 s">65/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Chavín de Huántar (Huari / Áncash)']}}
                                     /46
                                 </td>
                                 <td class="column5 style8 s">55/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Chavín de Huántar (Huari / Áncash)']}}
                                     /67
                                 </td>
                                 <td class="column6 style8 s">53/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Chavín de Huántar (Huari / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style9 s">49/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Chavín de Huántar (Huari / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Chavín de Huántar (Huari / Áncash)']}}
                                     /36
                                 </td>
                             </tr>
@@ -1390,585 +1029,135 @@
                                 <td class="column0 style14 s style14" rowspan="5">UGT Huallanca</td>
                                 <td class="column1 style4 s">Huallanca</td>
                                 <td class="column2 style5 s">56/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Huallanca (Bolognesi / Áncash)']}}
                                     /53
                                 </td>
                                 <td class="column3 style5 s">28/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Huallanca (Bolognesi / Áncash)']}}
                                     /24
                                 </td>
                                 <td class="column4 style5 s">67/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Huallanca (Bolognesi / Áncash)']}}
                                     /50
                                 </td>
                                 <td class="column5 style5 s">49/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Huallanca (Bolognesi / Áncash)']}}
                                     /52
                                 </td>
                                 <td class="column6 style5 s">42/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Huallanca (Bolognesi / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style6 s">49/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Huallanca (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Huallanca (Bolognesi / Áncash)']}}
                                     /36
                                 </td>
                             </tr>
                             <tr class="row6">
                                 <td class="column1 style7 s">Aquia</td>
                                 <td class="column2 style8 s">67/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Aquia (Bolognesi / Áncash)']}}
                                     /58
                                 </td>
                                 <td class="column3 style8 s">33/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Aquia (Bolognesi / Áncash)']}}
                                     /23
                                 </td>
                                 <td class="column4 style8 s">61/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Aquia (Bolognesi / Áncash)']}}
                                     /49
                                 </td>
                                 <td class="column5 style8 s">51/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Aquia (Bolognesi / Áncash)']}}
                                     /54
                                 </td>
                                 <td class="column6 style8 s">52/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Aquia (Bolognesi / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style9 s">53/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Aquia (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Aquia (Bolognesi / Áncash)']}}
                                     /37
                                 </td>
                             </tr>
                             <tr class="row7">
                                 <td class="column1 style4 s">Chiquián</td>
                                 <td class="column2 style5 s">59/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Chiquián (Bolognesi / Áncash)']}}
                                     /48
                                 </td>
                                 <td class="column3 style5 s">30/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Chiquián (Bolognesi / Áncash)']}}
                                     /28
                                 </td>
                                 <td class="column4 style5 s">51/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Chiquián (Bolognesi / Áncash)']}}
                                     /36
                                 </td>
                                 <td class="column5 style5 s">44/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Chiquián (Bolognesi / Áncash)']}}
                                     /49
                                 </td>
                                 <td class="column6 style5 s">36/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Chiquián (Bolognesi / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style6 s">45/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Chiquián (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Chiquián (Bolognesi / Áncash)']}}
                                     /32
                                 </td>
                             </tr>
                             <tr class="row8">
                                 <td class="column1 style7 s">Puños</td>
                                 <td class="column2 style8 s">54/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Puños (Huamalíes / Huánuco)']}}
                                     /57
                                 </td>
                                 <td class="column3 style8 s">36/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Puños (Huamalíes / Huánuco)']}}
                                     /27
                                 </td>
                                 <td class="column4 style8 s">74/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Puños (Huamalíes / Huánuco)']}}
                                     /50
                                 </td>
                                 <td class="column5 style8 s">54/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Puños (Huamalíes / Huánuco)']}}
                                     /71
                                 </td>
                                 <td class="column6 style8 s">72/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Puños (Huamalíes / Huánuco)']}}
                                     /0
                                 </td>
                                 <td class="column7 style9 s">56/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Puños (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Puños (Huamalíes / Huánuco)']}}
                                     /41
                                 </td>
                             </tr>
                             <tr class="row9">
                                 <td class="column1 style4 s">Llata</td>
                                 <td class="column2 style5 s">57/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Llata (Huamalíes / Huánuco)']}}
                                     /52
                                 </td>
                                 <td class="column3 style5 s">30/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Llata (Huamalíes / Huánuco)']}}
                                     /21
                                 </td>
                                 <td class="column4 style5 s">57/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Llata (Huamalíes / Huánuco)']}}
                                     /41
                                 </td>
                                 <td class="column5 style5 s">60/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Llata (Huamalíes / Huánuco)']}}
                                     /62
                                 </td>
                                 <td class="column6 style5 s">47/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Llata (Huamalíes / Huánuco)']}}
                                     /0
                                 </td>
                                 <td class="column7 style6 s">51/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Llata (Huamalíes / Huánuco)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Llata (Huamalíes / Huánuco)']}}
                                     /35
                                 </td>
                             </tr>
@@ -1976,1170 +1165,270 @@
                                 <td class="column0 style13 s style13" rowspan="10">UGT Valle fortaleza</td>
                                 <td class="column1 style7 s">Pampas Chico</td>
                                 <td class="column2 style8 s">63/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Pampas Chico (Recuay / Áncash)']}}
                                     /57
                                 </td>
                                 <td class="column3 style8 s">37/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Pampas Chico (Recuay / Áncash)']}}
                                     /31
                                 </td>
                                 <td class="column4 style8 s">62/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Pampas Chico (Recuay / Áncash)']}}
                                     /52
                                 </td>
                                 <td class="column5 style8 s">47/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Pampas Chico (Recuay / Áncash)']}}
                                     /61
                                 </td>
                                 <td class="column6 style8 s">64/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Pampas Chico (Recuay / Áncash)']}}
                                     /15
                                 </td>
                                 <td class="column7 style9 s">53/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Pampas Chico (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Pampas Chico (Recuay / Áncash)']}}
                                     /43
                                 </td>
                             </tr>
                             <tr class="row11">
                                 <td class="column1 style4 s">Marca</td>
                                 <td class="column2 style5 s">60/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Marca (Recuay / Áncash)']}}
                                     /44
                                 </td>
                                 <td class="column3 style5 s">43/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Marca (Recuay / Áncash)']}}
                                     /41
                                 </td>
                                 <td class="column4 style5 s">70/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Marca (Recuay / Áncash)']}}
                                     /66
                                 </td>
                                 <td class="column5 style5 s">58/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Marca (Recuay / Áncash)']}}
                                     /66
                                 </td>
                                 <td class="column6 style5 s">70/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Marca (Recuay / Áncash)']}}
                                     /17
                                 </td>
                                 <td class="column7 style6 s">58/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Marca (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Marca (Recuay / Áncash)']}}
                                     /47
                                 </td>
                             </tr>
                             <tr class="row12">
                                 <td class="column1 style7 s">Cajacay</td>
                                 <td class="column2 style8 s">74/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Cajacay (Bolognesi / Áncash)']}}
                                     /51
                                 </td>
                                 <td class="column3 style8 s">33/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Cajacay (Bolognesi / Áncash)']}}
                                     /19
                                 </td>
                                 <td class="column4 style8 s">71/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Cajacay (Bolognesi / Áncash)']}}
                                     /46
                                 </td>
                                 <td class="column5 style8 s">47/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Cajacay (Bolognesi / Áncash)']}}
                                     /54
                                 </td>
                                 <td class="column6 style8 s">47/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Cajacay (Bolognesi / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style9 s">56/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Cajacay (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Cajacay (Bolognesi / Áncash)']}}
                                     /34
                                 </td>
                             </tr>
                             <tr class="row13">
                                 <td class="column1 style4 s">Huayllacayán</td>
                                 <td class="column2 style5 s">56/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Huayllacayán (Bolognesi / Áncash)']}}
                                     /56
                                 </td>
                                 <td class="column3 style5 s">42/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Huayllacayán (Bolognesi / Áncash)']}}
                                     /25
                                 </td>
                                 <td class="column4 style5 s">65/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Huayllacayán (Bolognesi / Áncash)']}}
                                     /57
                                 </td>
                                 <td class="column5 style5 s">49/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Huayllacayán (Bolognesi / Áncash)']}}
                                     /67
                                 </td>
                                 <td class="column6 style5 s">54/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Huayllacayán (Bolognesi / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style6 s">53/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Huayllacayán (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Huayllacayán (Bolognesi / Áncash)']}}
                                     /41
                                 </td>
                             </tr>
                             <tr class="row14">
                                 <td class="column1 style7 s">Antonio Raymondi</td>
                                 <td class="column2 style8 s">55/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Antonio Raymondi (Bolognesi / Áncash)']}}
                                     /52
                                 </td>
                                 <td class="column3 style8 s">29/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Antonio Raymondi (Bolognesi / Áncash)']}}
                                     /19
                                 </td>
                                 <td class="column4 style8 s">77/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Antonio Raymondi (Bolognesi / Áncash)']}}
                                     /52
                                 </td>
                                 <td class="column5 style8 s">48/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Antonio Raymondi (Bolognesi / Áncash)']}}
                                     /63
                                 </td>
                                 <td class="column6 style8 s">62/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Antonio Raymondi (Bolognesi / Áncash)']}}
                                     /8
                                 </td>
                                 <td class="column7 style9 s">53/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Antonio Raymondi (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Antonio Raymondi (Bolognesi / Áncash)']}}
                                     /39
                                 </td>
                             </tr>
                             <tr class="row15">
                                 <td class="column1 style4 s">Llacllín</td>
                                 <td class="column2 style5 s">48/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Llacllín (Recuay / Áncash)']}}
                                     /56
                                 </td>
                                 <td class="column3 style5 s">48/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Llacllín (Recuay / Áncash)']}}
                                     /34
                                 </td>
                                 <td class="column4 style5 s">63/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Llacllín (Recuay / Áncash)']}}
                                     /56
                                 </td>
                                 <td class="column5 style5 s">54/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Llacllín (Recuay / Áncash)']}}
                                     /61
                                 </td>
                                 <td class="column6 style5 s">62/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Llacllín (Recuay / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style6 s">53/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Llacllín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Llacllín (Recuay / Áncash)']}}
                                     /41
                                 </td>
                             </tr>
                             <tr class="row16">
                                 <td class="column1 style7 s">Colquioc</td>
                                 <td class="column2 style8 s">61/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Colquioc (Bolognesi / Áncash)']}}
                                     /56
                                 </td>
                                 <td class="column3 style8 s">28/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Colquioc (Bolognesi / Áncash)']}}
                                     /26
                                 </td>
                                 <td class="column4 style8 s">56/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Colquioc (Bolognesi / Áncash)']}}
                                     /49
                                 </td>
                                 <td class="column5 style8 s">45/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Colquioc (Bolognesi / Áncash)']}}
                                     /48
                                 </td>
                                 <td class="column6 style8 s">40/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Colquioc (Bolognesi / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style9 s">47/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Colquioc (Bolognesi / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Colquioc (Bolognesi / Áncash)']}}
                                     /36
                                 </td>
                             </tr>
                             <tr class="row17">
                                 <td class="column1 style4 s">Pararín</td>
                                 <td class="column2 style5 s">57/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Pararín (Recuay / Áncash)']}}
                                     /50
                                 </td>
                                 <td class="column3 style5 s">50/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Pararín (Recuay / Áncash)']}}
                                     /42
                                 </td>
                                 <td class="column4 style5 s">67/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Pararín (Recuay / Áncash)']}}
                                     /48
                                 </td>
                                 <td class="column5 style5 s">47/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Pararín (Recuay / Áncash)']}}
                                     /65
                                 </td>
                                 <td class="column6 style5 s">71/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Pararín (Recuay / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style6 s">56/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Pararín (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Pararín (Recuay / Áncash)']}}
                                     /41
                                 </td>
                             </tr>
                             <tr class="row18">
                                 <td class="column1 style7 s">Paramonga</td>
                                 <td class="column2 style8 s">39/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Paramonga (Barranca / Lima)']}}
                                     /49
                                 </td>
                                 <td class="column3 style8 s">28/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Paramonga (Barranca / Lima)']}}
                                     /30
                                 </td>
                                 <td class="column4 style8 s">57/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Paramonga (Barranca / Lima)']}}
                                     /58
                                 </td>
                                 <td class="column5 style8 s">35/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Paramonga (Barranca / Lima)']}}
                                     /37
                                 </td>
                                 <td class="column6 style8 s">30/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Paramonga (Barranca / Lima)']}}
                                     /0
                                 </td>
                                 <td class="column7 style9 s">39/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Paramonga (Barranca / Lima)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Paramonga (Barranca / Lima)']}}
                                     /35
                                 </td>
                             </tr>
                             <tr class="row19">
                                 <td class="column1 style4 s">Cátac</td>
                                 <td class="column2 style5 s">66/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Cátac (Recuay / Áncash)']}}
                                     /53
                                 </td>
                                 <td class="column3 style5 s">24/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Cátac (Recuay / Áncash)']}}
                                     /21
                                 </td>
                                 <td class="column4 style5 s">49/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Cátac (Recuay / Áncash)']}}
                                     /47
                                 </td>
                                 <td class="column5 style5 s">51/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Cátac (Recuay / Áncash)']}}
                                     /60
                                 </td>
                                 <td class="column6 style5 s">60/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Cátac (Recuay / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style6 s">48/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Cátac (Recuay / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Cátac (Recuay / Áncash)']}}
                                     /36
                                 </td>
                             </tr>
@@ -3147,234 +1436,54 @@
                                 <td class="column0 style10 s">UGT Huarmey</td>
                                 <td class="column1 style11 s">Huarmey</td>
                                 <td class="column2 style8 s">61/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['Huarmey (Huarmey / Áncash)']}}
                                     /42
                                 </td>
                                 <td class="column3 style8 s">22/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['Huarmey (Huarmey / Áncash)']}}
                                     /20
                                 </td>
                                 <td class="column4 style8 s">61/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['Huarmey (Huarmey / Áncash)']}}
                                     /49
                                 </td>
                                 <td class="column5 style8 s">34/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['Huarmey (Huarmey / Áncash)']}}
                                     /43
                                 </td>
                                 <td class="column6 style8 s">39/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['Huarmey (Huarmey / Áncash)']}}
                                     /0
                                 </td>
                                 <td class="column7 style9 s">44/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'Huarmey (Huarmey / Áncash)', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['Huarmey (Huarmey / Áncash)']}}
                                     /31
                                 </td>
                             </tr>
                             <tr class="row21">
                                 <td class="column0 style15 s style16" colspan="2">Total</td>
                                 <td class="column2 style12 s">56/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Institucionalidad Madura', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Institucionalidad Madura']['AIO']}}
                                     /53
                                 </td>
                                 <td class="column3 style12 s">34/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Oportunidades para las futuras generaciones', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Oportunidades para las futuras generaciones']['AIO']}}
                                     /27
                                 </td>
                                 <td class="column4 style12 s">63/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Infraestructura social y productiva', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Infraestructura social y productiva']['AIO']}}
                                     /49
                                 </td>
                                 <td class="column5 style12 s">49/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emprendimiento y desarrollo económico', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emprendimiento y desarrollo económico']['AIO']}}
                                     /58
                                 </td>
                                 <td class="column6 style12 s">54/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Emergencias', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Emergencias']['AIO']}}
                                     /2
                                 </td>
                                 <td class="column7 style12 s">51/
-                                    <?php
-                                        if(isset($_POST['years']) and $_POST['years']!='Todos'){
-                                            $anio = $_POST['years'];
-                                            $query = ['variable' => 'Total', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => $anio ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        } else {
-                                            $query = ['variable' => 'Total', 'distrito' => 'AIO', 'impacto' => 'Con impacto', 'anio' => '22022' ];
-                                            $total = DB::table('brechasbd')
-                                                ->where($query)
-                                                ->avg('porcentaje');
-                                            echo number_format($total,0);
-                                        }
-                                    ?>
+                                    {{ $resultados['Total']['AIO']}}
                                     /38
                                 </td>
                             </tr>
@@ -3383,7 +1492,7 @@
                 </div>
                 <br>
                 <h6>
-                    2021 <b>/ <?php if(isset($_POST['years']) and $_POST['years']!='Todos'){ if($_POST['years']=="32022"){echo '3T 2022';} elseif($_POST['years']=="22022"){echo '2T 2022';} else { echo $_POST['years'];}} else { echo '2T 2022';} ?> /</b> 2026
+                    2021 <b>/ {{ $period }} /</b> 2026
                 </h6>
                 <p class="fuente">Fuente: PNUD, INEI, CCD, elaboración propia</p>
             </div>
