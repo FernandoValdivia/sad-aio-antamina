@@ -14,6 +14,9 @@ Route::post('/resumen','ResumenController@index');
 //brechas
 Route::get('/brechas', 'BrechasController@index');
 Route::post('/brechas', 'BrechasController@index');
+//indicadores
+Route::get('/brechas/indicadores', 'IndicadorController@index');
+Route::post('/brechas/indicadores', 'IndicadorController@index');
 //proyectos
 Route::get('/proyectos', 'ProyectosController@index');
 Route::post('/proyectos', 'ProyectosController@index');

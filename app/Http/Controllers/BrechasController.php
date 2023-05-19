@@ -48,33 +48,17 @@ class BrechasController extends Controller
         ->where('ugt','UGT Huarmey')
         ->get();
 
-        //filtros
+        //filtros   
         function getVariable($v, $location, $years, $impacto) {
-            if (isset($location, $years, $impacto)) {
-                $query['variable'] = $v;
-                if ($location !== 'AIO' && isset($location)) {
-                    $distrito = explode(',', $location)[2];
-                    $query['distrito'] = $distrito;
-                } else {
-                    $query['distrito'] = 'AIO';
-                }
-
-                if ($years !== 'Todos') {
-                    $query['anio'] = $years;
-                } else {
-                    $query['anio'] = '22022';
-                }
-
-                if ($impacto !== 'Todos') {
-                    $query['impacto'] = $impacto;
-                } else {
-                    $query['impacto'] = 'Con impacto';
-                }
-            } else {
-                $query = ['variable' => $v, 'distrito' => 'AIO', 'anio' => '22022', 'impacto' => 'Con impacto'];
-            }
+            $query = [
+                'variable' => $v,
+                'distrito' => ($location !== 'AIO' && isset($location)) ? explode(',', $location)[2] : 'AIO',
+                'anio' => ($years !== 'Todos' && isset($years)) ? $years : '22022',
+                'impacto' => ($impacto !== 'Todos' && isset($impacto)) ? $impacto : 'Con impacto'
+            ];
+        
             $total = \DB::table('brechasbd')->where($query)->avg('porcentaje');
-            $res = number_format($total, 0);
+            $res = ($total !== null) ? number_format($total, 0) : '';
             return $res;
         }
 
@@ -240,7 +224,7 @@ class BrechasController extends Controller
                 if(strlen($year) == 6) {
                     $quarter = substr($year, 0, 1);
                     $formatted_year = substr($year, 1);
-                    echo $quarter.'T '.$formatted_year;
+                    $period = $quarter.'T '.$formatted_year;
                 } else {
                     $period = $year;
                 }
@@ -248,6 +232,7 @@ class BrechasController extends Controller
                 $period = '2T 2022';
             }
 
+            // valor de la tabla 
             $anio = ($years ?? '22022'); // Valor seleccionado desde un select
             $resultados = []; // Array para almacenar los resultados
 

@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('canon', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('brechasbd', function (Blueprint $table) {
+            $table->index(['variable', 'distrito','impacto','anio','porcentaje']);
         });
     }
+
 
     /**
      * Reverse the migrations.
@@ -26,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('canon');
+        Schema::table('brechasbd', function (Blueprint $table) {
+            //
+        });
     }
 };
