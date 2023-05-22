@@ -325,6 +325,7 @@ section[id] {
 
 .tableDescargas, .tablePilares {
     overflow-x: auto;
+    padding: 0 1rem;
 }
 
 .adescargar {
@@ -1581,12 +1582,14 @@ th.style16 {
     background-color: #1f497d;
 }
 .cierre-brechas h6 {
+    margin-top: 5.5rem;
     text-align: center;
     color: #000;
     font-family: var(--body-font),
         sans-serif;
 }
 .cierre-brechas .fuente {
+    margin-left: 1rem;
     font-size: x-small;
     text-align: left;
     color: #000;
