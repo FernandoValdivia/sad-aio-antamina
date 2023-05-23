@@ -10,7 +10,12 @@
         <div class="navbar-nav ms-auto py-0">
             <a href="{{ url('/') }}" class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Inicio</a>
             <a href="/resumen" class="nav-item nav-link {{ Request::is('resumen*') ? 'active' : '' }}">Resumen</a>
-            <a href="/brechas" class="nav-item nav-link {{ Request::is('brechas*') ? 'active' : '' }}" onclick="onLoad()">Brechas</a>
+            <div class="dropwdown-container">
+                <a href="/brechas" class="nav-item nav-link {{ Request::is('brechas*') ? 'active' : '' }}">Brechas</a>
+                <div class="drop-menu">
+                    <a href="/reduccion" class="nav-item nav-link drop-item {{ Request::is('reduccion*') ? 'active' : '' }}">Reducción</a>
+                </div>
+            </div>
             <a href="/proyectos" class="nav-item nav-link {{ Request::is('proyectos*') ? 'active' : '' }}">Proyectos</a>
             <a href="/recursos" class="nav-item nav-link {{ Request::is('recursos*') ? 'active' : '' }}">Recursos</a>
             <a href="/potencialidades" class="nav-item nav-link {{ Request::is('potencialidades*') ? 'active' : '' }}">Potencialidades</a>
@@ -35,5 +40,5 @@
 </nav>
 <!-- Navbar End -->
 {{-- Switch Dark/Light Mode --}}
-<audio id="audio" src="audio/switch.mp3"></audio>
-<script src="js/switch.js"></script>
+<audio id="audio" src="{{ asset('audio/switch.mp3') }}"></audio>
+<script src="{{ asset('js/switch.js') }}"></script>

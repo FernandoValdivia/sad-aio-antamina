@@ -383,9 +383,5 @@
         });
 
     </script>
-
-    {{-- Chat Bot --}}
-    <script src="widget.js"></script>
-    <script src="botman.js"></script>
 </body>
 </html>

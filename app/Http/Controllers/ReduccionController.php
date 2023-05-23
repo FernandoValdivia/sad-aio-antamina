@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 ini_set('max_execution_time', 500);
 
-class IndicadorController extends Controller
+class ReduccionController extends Controller
 {
     public function index(Request $request) {
         $ugt_valle = \DB::table('distritos')->select(
@@ -177,7 +177,7 @@ class IndicadorController extends Controller
         }
 
         // return
-        return view('indicadores',
+        return view('reduccion',
         compact('ugt_valle',
                 'ugt_huall',
                 'ugt_mina',

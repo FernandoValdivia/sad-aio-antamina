@@ -108,7 +108,9 @@ body.dark .grid-br-18 tr {
 body.dark .grid-br-2 input,
 body.dark .grid-br-2 select,
 body.dark .gridpt-2 select, 
-body.dark #filterec select {
+body.dark #filterec select,
+body.dark .form-container select,
+body.dark .title-reduccion form input {
     background: var(--body-dark);
     color: var(--light);
 }
@@ -118,7 +120,8 @@ body.dark .grid-br-2 select:hover {
 }
 
 /*--input color--*/
-body.dark .grid-br-2 input:hover {
+body.dark .grid-br-2 input:hover,
+body.dark .title-reduccion form input:hover {
     background: #484848;
 }
 
@@ -325,7 +328,6 @@ section[id] {
 
 .tableDescargas, .tablePilares {
     overflow-x: auto;
-    padding: 0 1rem;
 }
 
 .adescargar {
@@ -1581,15 +1583,18 @@ th.style16 {
     color: #ffffff;
     background-color: #1f497d;
 }
+
+.cierre-brechas {
+    padding: 5.5rem 1rem 0rem 1rem;
+}
+
 .cierre-brechas h6 {
-    margin-top: 5.5rem;
     text-align: center;
     color: #000;
     font-family: var(--body-font),
         sans-serif;
 }
 .cierre-brechas .fuente {
-    margin-left: 1rem;
     font-size: x-small;
     text-align: left;
     color: #000;
@@ -1629,7 +1634,7 @@ th.style16 {
 }
 
 .grid-br-2 .form-container {
-    width: 51rem;
+    width: auto;
     float: right;
 }
 
@@ -1641,7 +1646,7 @@ th.style16 {
     width: 12rem;
 }
 
-.grid-br-2 select {
+.grid-br-2 select, .form-container select {
     border: #ededed solid 1px;
     padding: 5px;
     appearance: none;
@@ -1649,12 +1654,37 @@ th.style16 {
     transition: .3s ease all;
 }
 
-.grid-br-2 input {
+.form-container div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 12rem;
+    justify-content: flex-end;
+}
+
+.title-reduccion {
+    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.title-text {
+    text-align: left;
+}
+
+.grid-br-2 input,  .title-reduccion form input {
     background: #ededed;
     border: #ededed solid 1px;
     padding: 3px;
     text-transform: uppercase;
     transition: .3s ease all;
+}
+
+.title-reduccion .form-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .grid-br-2 input:hover {
@@ -4391,7 +4421,25 @@ div .legendp img {
         margin-left: 0;
         width: 100% !important;
     }
+
+    .title-reduccion {
+        display: block !important;
+    }
+
+    .title-text {
+        text-align: center !important;
+    }
     
+    .form-container form {
+        display: block;
+        width: 100%;
+    }
+
+    .form-container div {
+        width: auto !important;
+        margin-left: 0 !important;
+    }
+
     .btn-grid {
         padding: 0.5rem 0 2rem;
     }

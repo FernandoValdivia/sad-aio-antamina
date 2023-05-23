@@ -157,10 +157,6 @@
             $num = $num + $num;
         }
     ?>
-
-    {{-- Chat Bot --}}
-    <script src="widget.js"></script>
-    <script src="botman.js"></script>
     <script src="js/modal-pt.js"></script>
 </body>
 </html>

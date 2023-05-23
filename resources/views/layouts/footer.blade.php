@@ -6,7 +6,7 @@
 <div id="containerLoad" class="loader hidden">
     <h2>Cargando...</h2>
 </div>
-<script src="js/loader.js"></script>
+<script src="{{ asset('js/loader.js') }}"></script>
 {{-- Modal Sugerencias --}}
 <section class="modal containermodal" id="main__modal">
     <div class="modal__container" id="modal-container">
@@ -114,8 +114,11 @@
         </div>
     </div>
 </section>
-<script src="js/modal.js"></script>
-<script src="js/modal2.js"></script>
+<script src="{{ asset('js/modal.js') }}"></script>
+<script src="{{ asset('js/modal2.js') }}"></script>
+{{-- Chat Bot --}}
+<script src="{{ asset('widget.js') }}"></script>
+<script src="{{ asset('botman.js') }}"></script>
 {{-- End Modal  --}}
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s">

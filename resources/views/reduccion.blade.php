@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Brechas | Indicadores</title>
+        <title>Reducción</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="SAD AIO - Brechas" name="description">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -38,7 +38,7 @@
                 <p>(Porcentajes)</p>
             </div>
             <div class="form-container">
-                <form action="/brechas/indicadores" method="POST">
+                <form action="/reduccion" method="POST">
                     @csrf
                     {{-- Año --}}
                     <div>
@@ -677,9 +677,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Documentos de interés -->
-    <script src="js/docs.js"></script>
-
     {{-- Loader --}}
     <script type="text/javascript">
         window.addEventListener("load", function () {
@@ -687,9 +684,5 @@
             loader.className += " hidden"; // class "loader hidden"
         });
     </script>
-
-    {{-- Chat Bot --}}
-    <script src="widget.js"></script>
-    <script src="botman.js"></script>
 </body>
 </html>
