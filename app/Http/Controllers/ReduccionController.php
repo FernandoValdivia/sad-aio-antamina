@@ -139,20 +139,6 @@ class ReduccionController extends Controller
             'Huarmey (Huarmey / Áncash)',
             'AIO'];
 
-        // Formatear periodo (2T 2023)
-        if(isset($years) && $years != 'Todos') {
-            $year = $years;
-            if(strlen($year) == 6) {
-                $quarter = substr($year, 0, 1);
-                $formatted_year = substr($year, 1);
-                $period = $quarter.'T '.$formatted_year;
-            } else {
-                $period = $year;
-            }
-        } else {
-            $period = '2T 2022';
-        }
-
         // valor de la tabla 
         $anio = ($years ?? '22022'); // Valor seleccionado desde un select
         $resultados = []; // Array para almacenar los resultados
@@ -182,8 +168,7 @@ class ReduccionController extends Controller
                 'ugt_huall',
                 'ugt_mina',
                 'ugt_huarmey',
-                'resultados',
-                'period'
+                'resultados'
             ));
     }
 }
