@@ -593,6 +593,7 @@ class ComposerStaticInit67fe81661db5d4dfa48cf70503d1d3fd
         'App\\Http\\Controllers\\PotencialidadesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PotencialidadesController.php',
         'App\\Http\\Controllers\\ProyectosController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProyectosController.php',
         'App\\Http\\Controllers\\RecursosController' => __DIR__ . '/../..' . '/app/Http/Controllers/RecursosController.php',
+        'App\\Http\\Controllers\\ReduccionController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReduccionController.php',
         'App\\Http\\Controllers\\ResumenController' => __DIR__ . '/../..' . '/app/Http/Controllers/ResumenController.php',
         'App\\Http\\Controllers\\TrimestralController' => __DIR__ . '/../..' . '/app/Http/Controllers/TrimestralController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
