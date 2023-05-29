@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <title>Reducción</title>
@@ -666,7 +666,7 @@
         </div>
         <br>
         <h6>
-            2021 <b>/ {{ $period }} /</b> 2026
+            2021 / <b id="period">  </b> / 2026
         </h6>
         <p class="fuente">Fuente: PNUD, INEI, CCD, elaboración propia</p>
     </div>
@@ -674,15 +674,16 @@
     @extends('layouts.footer')
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
     {{-- Loader --}}
-    <script type="text/javascript">
+    <script>
         window.addEventListener("load", function () {
             const loader = document.querySelector(".loader");
             loader.className += " hidden"; // class "loader hidden"
         });
     </script>
+    <script src="{{ asset('js/period.js') }}"></script>
 </body>
 </html>

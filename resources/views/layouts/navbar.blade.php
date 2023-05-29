@@ -11,9 +11,9 @@
             <a href="{{ url('/') }}" class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Inicio</a>
             <a href="/resumen" class="nav-item nav-link {{ Request::is('resumen*') ? 'active' : '' }}">Resumen</a>
             <div class="dropwdown-container">
-                <a href="/brechas" class="nav-item nav-link {{ Request::is('brechas*') ? 'active' : '' }}">Brechas</a>
+                <a href="/brechas" class="nav-item nav-link {{ Request::is('brechas*') ? 'active' : '' }}" onclick="onLoad()">Brechas</a>
                 <div class="drop-menu">
-                    <a href="/reduccion" class="nav-item nav-link drop-item {{ Request::is('reduccion*') ? 'active' : '' }}">Reducción</a>
+                    <a href="/reduccion" class="nav-item nav-link drop-item {{ Request::is('reduccion*') ? 'active' : '' }}" onclick="onLoad()">Reducción</a>
                 </div>
             </div>
             <a href="/proyectos" class="nav-item nav-link {{ Request::is('proyectos*') ? 'active' : '' }}">Proyectos</a>

@@ -14,6 +14,7 @@ return array(
     'App\\Http\\Controllers\\PotencialidadesController' => $baseDir . '/app/Http/Controllers/PotencialidadesController.php',
     'App\\Http\\Controllers\\ProyectosController' => $baseDir . '/app/Http/Controllers/ProyectosController.php',
     'App\\Http\\Controllers\\RecursosController' => $baseDir . '/app/Http/Controllers/RecursosController.php',
+    'App\\Http\\Controllers\\ReduccionController' => $baseDir . '/app/Http/Controllers/ReduccionController.php',
     'App\\Http\\Controllers\\ResumenController' => $baseDir . '/app/Http/Controllers/ResumenController.php',
     'App\\Http\\Controllers\\TrimestralController' => $baseDir . '/app/Http/Controllers/TrimestralController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

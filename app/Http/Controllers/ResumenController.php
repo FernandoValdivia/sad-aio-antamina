@@ -61,10 +61,7 @@ class ResumenController extends Controller
             'latitud',
             'longitud',
             'anio',
-            'factores',
-            '_42021',
-            '_22022',
-            '_32022',
+            'factores'
         )
         ->get();
 
