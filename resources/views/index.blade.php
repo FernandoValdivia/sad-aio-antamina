@@ -47,7 +47,8 @@
                 <div class="_home_container">
                     <div class="col-6 home_left">
                         <h1>Sistema de <br>Administración del <br>Desarrollo</h1>
-                        <p>Área de Influencia Operativa</p>
+                        <p class="mb-0">Área de Influencia Operativa</p>
+                        <p>Antamina</p>
                     </div>
                     <div class="col-6 home_right">
                         <img id="slideshow" alt="Imagen Mapa Slide" name="slide" src="img/1.png">
