@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-lg-0 position-fixed">
     {{-- Logo --}}
     <a id="sadlogo" class="navbar-brand" href="/"></a>
     {{-- End Logo --}}
@@ -40,5 +40,4 @@
 </nav>
 <!-- Navbar End -->
 {{-- Switch Dark/Light Mode --}}
-<audio id="audio" src="{{ asset('audio/switch.mp3') }}"></audio>
 <script src="{{ asset('js/switch.js') }}"></script>

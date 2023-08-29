@@ -58,7 +58,7 @@ class BrechasController extends Controller
             ];
         
             $total = \DB::table('brechasbd')->where($query)->avg('porcentaje');
-            $res = ($total !== null) ? number_format($total, 0) : '';
+            $res = ($total !== null) ? number_format($total, 1) : '';
             return $res;
         }
 
@@ -249,7 +249,7 @@ class BrechasController extends Controller
                         ->where($query)
                         ->avg('porcentaje');
 
-                    $resultado = number_format($total, 0);
+                    $resultado = number_format($total, 1);
 
                     $resultados[$var][$distrito] = $resultado;
                 }

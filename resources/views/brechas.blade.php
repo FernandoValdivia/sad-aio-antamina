@@ -718,68 +718,11 @@
                 </div>
                 {{-- Titulo potencialidades --}}
                 <div class="grid-br-39">
-                    <table>
-                        <tr>
-                            <th><h5>Potencialidades</h5></th>
-                        </tr>
-                    </table>
+                    
                 </div>
                 {{-- Potencialidades --}}
                 <div class="grid-br-40">
-                    <div class="c-br-40">
-                        <table>
-                            <?php
-                                if (isset($_POST['location'])) {
-                                    if ($_POST['location']=="AIO") {
-                                        //Todos las potencialidades
-                                        $potencialidad = DB::table('aiopotenc')->select(
-                                            'distrito',
-                                            'potencialidad',
-                                            'url',
-                                            'hexcolor'
-                                        )
-                                        ->get();
-                                    } else {
-                                        //Potencialidades de X distrito
-                                        $location = $_POST['location'];
-                                        $distrito = explode(",",$location);
-                                        $distrito_nom = $distrito[2];
-                                        $potencialidad = DB::table('potencialidades')->select(
-                                            'distrito',
-                                            'potencialidad',
-                                            'url',
-                                            'hexcolor'
-                                        )
-                                        ->where('distrito',$distrito_nom)
-                                        ->get();
-                                    }
-                                } else {
-                                    //Todos las potencialidades
-                                    $potencialidad = DB::table('aiopotenc')->select(
-                                            'distrito',
-                                            'potencialidad',
-                                            'url',
-                                            'hexcolor'
-                                        )
-                                        ->get();
-                                }
-                            ?>
-                            @foreach ($potencialidad as $poten)
-                                <tr>
-                                    <td>
-                                        <div class="row mb-2" id="potb" style="background-color: {{$poten->hexcolor}};">
-                                            <div class="col-3">
-                                                <img src="{{ $poten->url }}" class="img-pt">
-                                            </div>
-                                            <div class="col-9">
-                                                <p id="idpotencialidad">{{ $poten->potencialidad }}</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </table>
-                    </div>
+                    
                 </div>
                 <div class="grid-br-41"></div>
                 {{-- Pilar 4 --}}

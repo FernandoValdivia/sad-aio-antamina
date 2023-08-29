@@ -1,10 +1,8 @@
 const btnSwitch = document.querySelector("#switch");
-const audio = document.getElementById("audio");
 
 btnSwitch.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     btnSwitch.classList.toggle('active');
-    audio.play();
 
     // Guardar en localstorage.
     if (document.body.classList.contains('dark')) {

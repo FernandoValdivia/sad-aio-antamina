@@ -234,7 +234,7 @@
                         <table>
                             <tr>
                                 <th>
-                                    <h4>Brecha física</h4>
+                                    <h4><a href="/brechas">Brecha física</a></h4>
                                     <small>(%)</small>
                                 </th>
                                 <td>
@@ -811,7 +811,7 @@
                     <div class="grid-rsm-11">
                         <table>
                             <thead>
-                                <th><h5 class="mt-2">Potencialidades</h5></th>
+                                <th><h5 class="mt-2"><a href="/potencialidades">Potencialidades</a></h5></th>
                             </thead>
                             <?php
                                 if (isset($_POST['location'])) {
@@ -869,7 +869,7 @@
                     <div class="grid-rsm-12">
                         <table>
                             <tr>
-                                <th><h5>Proyectos en Cartera <sup>1/</sup></h5></th>
+                                <th><h5><a href="/proyectos">Proyectos en Cartera</a></h5></th>
                                 <th class="text-center"><h6>Número</h6></th>
                                 <td class="text-center">
                                     <h6>Monto</h6>
@@ -1439,8 +1439,8 @@
                     <div class="grid-rsm-14">
                         <table>
                             <tr>
-                                <th><h5>Canon y Regalía</h5></th>
-                                <th class="text-center"><h6>2007-2021</h6></th>
+                                <th><h5><a href="/recursos">Canon y Regalía</a></h5></th>
+                                <th class="text-center"><h6>2007-2022</h6></th>
                                 <th class="text-center"><h6>2022</h6></th>
                                 <th class="text-center"><h6>2023-2036</h6></th>
                             </tr>
@@ -1449,7 +1449,7 @@
                                     <h5>Mineria y otros</h5>
                                     <small>(Millones de Soles)</small>
                                 </th>
-                                {{-- 2007-2021 --}}
+                                {{-- 2007-2022 --}}
                                 <td class="text-center">
                                 <?php
                                     //filtro año y distrito
@@ -1457,7 +1457,7 @@
                                         if ($_POST['location']=="AIO") {
                                             //Total canon
                                             $canon = DB::table('canon')
-                                                    ->where('anio','<=',2021,'and')
+                                                    ->where('anio','<=',2022,'and')
                                                     ->where('anio','>=',2007)
                                                     ->sum('monto');
                                                     echo number_format($canon,0);
@@ -1468,7 +1468,7 @@
                                                 $distrito_nom = $distrito[2];
                                                 //
                                                 $canon = DB::table('canon')
-                                                        ->where('anio','<=',2021,'and')
+                                                        ->where('anio','<=',2022,'and')
                                                         ->where('anio','>=',2007, 'and')
                                                         ->where('distrito',$distrito_nom)
                                                         ->sum('monto');
@@ -1477,14 +1477,14 @@
                                     } else {
                                         //Total canon
                                         $canon = DB::table('canon')
-                                                    ->where('anio','<=',2021,'and')
+                                                    ->where('anio','<=',2022,'and')
                                                     ->where('anio','>=',2007)
                                                     ->sum('monto');
                                                     echo number_format($canon,0);
                                     }
                                 ?>
                                 </td>
-                                {{-- 2022 --}}
+                                {{-- 2023 --}}
                                 <td class="text-center">
                                 <?php
                                     //filtro año y distrito
@@ -1492,7 +1492,7 @@
                                         if ($_POST['location']=="AIO") {
                                             //Total canon
                                             $canon = DB::table('canon')
-                                                    ->where('anio',2022)
+                                                    ->where('anio',2023)
                                                     ->sum('monto');
                                                     echo number_format($canon,0);
                                             } else {
@@ -1502,7 +1502,7 @@
                                                 $distrito_nom = $distrito[2];
                                                 //
                                                 $canon = DB::table('canon')
-                                                        ->where('anio',2022,'and')
+                                                        ->where('anio',2023,'and')
                                                         ->where('distrito',$distrito_nom)
                                                         ->sum('monto');
                                                         echo number_format($canon,0);
@@ -1510,13 +1510,13 @@
                                     } else {
                                         //Total canon
                                         $canon = DB::table('canon')
-                                                    ->where('anio',2022)
+                                                    ->where('anio',2023)
                                                     ->sum('monto');
                                                     echo number_format($canon,0);
                                     }
                                 ?>
                                 </td>
-                                {{-- 2023-2036 --}}
+                                {{-- 2024-2036 --}}
                                 <td class="text-center">
                                 <?php
                                     //filtro año y distrito
@@ -1525,7 +1525,7 @@
                                             //Total canon
                                             $canon = DB::table('canon')
                                                     ->where('anio','<=',2036,'and')
-                                                    ->where('anio','>=',2023)
+                                                    ->where('anio','>=',2024)
                                                     ->sum('monto');
                                                     echo number_format($canon,0);
                                             } else {
@@ -1536,7 +1536,7 @@
                                                 //
                                                 $canon = DB::table('canon')
                                                         ->where('anio','<=',2036,'and')
-                                                        ->where('anio','>=',2023,'and')
+                                                        ->where('anio','>=',2024,'and')
                                                         ->where('distrito',$distrito_nom)
                                                         ->sum('monto');
                                                         echo number_format($canon,0);
@@ -1545,7 +1545,7 @@
                                         //Total canon
                                         $canon = DB::table('canon')
                                                     ->where('anio','<=',2036,'and')
-                                                    ->where('anio','>=',2023)
+                                                    ->where('anio','>=',2024)
                                                     ->sum('monto');
                                                     echo number_format($canon,0);
                                     }
@@ -1635,7 +1635,6 @@
                         </table>
                     </div>
                 </div>
-                <p id="referencia"><sup>1/</sup> Proyectos y/o intervenciones</p>
             </div>
         </div>
         <!-- Resumen End -->
