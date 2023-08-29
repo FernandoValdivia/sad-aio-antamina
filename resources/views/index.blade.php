@@ -51,7 +51,7 @@
                         <p>Antamina</p>
                     </div>
                     <div class="col-6 home_right">
-                        <img id="slideshow" alt="Imagen Mapa Slide" name="slide" src="img/1.png">
+                        <img id="slideshow" alt="Imagen Mapa Slide" name="slide">
                     </div>
                 </div>
                 
