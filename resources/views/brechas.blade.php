@@ -37,17 +37,9 @@
                 <div class="grid-br-1"></div>
                 {{-- titulo --}}
                 <div class="grid-br-2">
-                    <div class="title-grid">
-                        <div class="text-grid">
-                            <h3 id="titulo">Brechas en el AIO: Por Pilares</h3>
-                            <p>(Porcentajes)</p>
-                        </div>
-                        <div class="btn-grid">
-                            <a class="descargar-btn" href="#interested" role="button">
-                                <i class="fas fa-cloud-download-alt"></i>
-                                Documentos de interés
-                            </a>
-                        </div>
+                    <div class="text-grid">
+                        <h3 id="titulo">Brechas en el AIO: Por Pilares</h3>
+                        <p>(Porcentajes)</p>
                     </div>
                     {{-- Filtros --}}
                     <div class="form-container">

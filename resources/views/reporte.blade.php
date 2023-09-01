@@ -51,7 +51,7 @@
                 </div>
                 {{-- Introducción --}}
                 <section id="introduccion">
-                    <iframe src="https://drive.google.com/file/d/1CpV-dzWEtcUBAO28Akw8DC3WGvpt24Gp/preview" name="reporte" style="width:100%; height: 800px;"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1bh6V5kNiSw-eJyFvQ6OB3TUKFEvQX8dw/preview" name="reporte" style="width:100%; height: 800px;"></iframe>
                 </section>
                 <hr>
                 {{-- Descargar --}}
@@ -147,6 +147,26 @@
                                 </td>
                                 <td class="text-center">
                                     <a href="https://drive.google.com/file/d/1CpV-dzWEtcUBAO28Akw8DC3WGvpt24Gp/preview" target="reporte" title="Ver Reporte">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            {{-- Descarga 2T 2023 --}}
+                            <tr>
+                                <td class="text-center"><b>2T 2023</b></td>
+                                <td>Progreso Cierre Brechas AIO - Reporte 2T 2023</td>
+                                <td class="text-center">
+                                    <a id="" href="/descargar-pdf22023" title="Descargar PDF">
+                                        <i class="far fa-file-pdf"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="/descargar-excel22023" title="Descargar Excel">
+                                        <i class="far fa-file-excel"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="https://drive.google.com/file/d/1bh6V5kNiSw-eJyFvQ6OB3TUKFEvQX8dw/preview" target="reporte" title="Ver Reporte">
                                         <i class="far fa-eye"></i>
                                     </a>
                                 </td>
