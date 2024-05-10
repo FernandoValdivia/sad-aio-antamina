@@ -127,8 +127,8 @@
             <div class="col-lg-6">
                 <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>San Isidro, Lima - Perú</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 922 753 771</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>melissa.sanchez@competitividadccd.com</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 959 468 741</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>luis.valdivia@sadglobalcompany.com</p>
             </div>
             <div class="col-lg-6">
                 <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Sugerencias</h4>

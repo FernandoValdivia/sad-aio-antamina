@@ -1965,7 +1965,7 @@ td #vpmi {
 
 .grid-br-12 .valor {
     margin: 0;
-    padding: 30%;
+    padding: 2rem 0rem;
     background-color: #daeff1;
     color: #31859d;
     font-size: 3.5rem;
@@ -3422,7 +3422,7 @@ body, html {
 }
 
 .img-pt {
-    width: 60%;
+    width: 90%;
 }
 
 h5,
@@ -5053,11 +5053,9 @@ form .form-row .textarea {
     height: 60px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
     #sadlogo {
-        background: url(/img/logo-sad.svg);
-        background-repeat: no-repeat;
-        width: 60px;
+        width: 70%;
     }
 }
 

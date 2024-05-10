@@ -92,5 +92,13 @@ body.dark .home_container {
 	.home_right img {
 		filter: brightness(0.5);
 	}
-	
+}
+
+/* Agregar CSS para la transición suave */
+#slideshow {
+    opacity: 0.1;
+    transition: opacity 1s ease-in-out;
+}
+#slideshow.show {
+    opacity: 1;
 }

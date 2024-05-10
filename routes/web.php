@@ -62,6 +62,7 @@ Route::get('/descargar-proyectos', function() {
     return Response::download($file, "Proyectos y o intervenciones en el AIO.xlsx", $headers);
 });
 /* ---------------- REPORTES ---------------- */
+/* PDF */
 /* PDF 2T 2022 */
 Route::get('/descargar-pdf22022', function() {
     $file = public_path()."/file/reporte22022.pdf";
@@ -70,15 +71,6 @@ Route::get('/descargar-pdf22022', function() {
         'Content-Type: application/pdf',
     );
     return Response::download($file, "Progreso Cierre Brechas AIO - Reporte 2T 2022.pdf", $headers);
-});
-/* PDF 2T 2022 Antamina */
-Route::get('/descargar-pdf22022A', function() {
-    $file = public_path()."/file/reporte22022A.pdf";
-
-    $headers = array(
-        'Content-Type: application/pdf',
-    );
-    return Response::download($file, "EC Monitoreo de KPIs y Vacunación - Reporte 2T 2022.pdf", $headers);
 });
 /* PDF 3T 2022 */
 Route::get('/descargar-pdf32022', function() {
@@ -107,6 +99,16 @@ Route::get('/descargar-pdf12023', function() {
     );
     return Response::download($file, "Progreso Cierre Brechas AIO - Reporte 1T 2023.pdf", $headers);
 });
+/* PDF 2T 2023 */
+Route::get('/descargar-pdf22023', function() {
+    $file = public_path()."/file/reporte22023.pdf";
+
+    $headers = array(
+        'Content-Type: application/pdf',
+    );
+    return Response::download($file, "Progreso Cierre Brechas AIO - Reporte 2T 2023.pdf", $headers);
+});
+/* EXCEL */
 /* Excel 2T 2022 */
 Route::get('/descargar-excel22022', function() {
     $file = public_path()."/file/excel22022.xlsx";
