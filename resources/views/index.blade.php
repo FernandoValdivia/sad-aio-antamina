@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <title>SAD AIO</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Sistema de Administración del Desarrollo" name="description">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
     <link href="/img/logo-sad.svg" rel="icon" type="image/x-icon">
@@ -14,14 +16,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
-    
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    
+
     <!-- Libraries Stylesheet -->
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -53,7 +55,7 @@
                         <img id="slideshow" alt="Imagen Mapa Slide" name="slide" src="img/1.png">
                     </div>
                 </div>
-                
+
             </div>
             <!-- Index End -->
         </div>
@@ -66,4 +68,5 @@
     {{-- Chat Bot --}}
     <script src="js/slider.js"></script>
 </body>
+
 </html>

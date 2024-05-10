@@ -44,114 +44,30 @@
                         <h3 id="titulo">Progreso de Cierre de Brechas</h3>
                         <p>AIO Antamina 1T 2023</p>
                     </div>
-
-                    <div class="grid-r-2">
-                        <a class="descargar-btn" href="#descarga"><i class="fas fa-cloud-download-alt"></i>Reportes</a>
-                    </div>
                 </div>
                 {{-- Introducción --}}
                 <section id="introduccion">
-                    <iframe src="https://drive.google.com/file/d/1CpV-dzWEtcUBAO28Akw8DC3WGvpt24Gp/preview" name="reporte" style="width:100%; height: 800px;"></iframe>
-                </section>
-                <hr>
-                {{-- Descargar --}}
-                <section id="descarga">
-                    <div class="row text-center">
-                        <h2>Reportes</h2>
-                    </div>
-                    <br>
-                    <div class="tableDescargas">
-                        <table>
-                            {{-- Encabezado --}}
-                            <thead class="text-center">
-                                <tr>
-                                    <td>Periodo</td>
-                                    <td>Documento</td>
-                                    <td colspan="2">Descargar</td> 
-                                    <td>Ver</td> 
-                                </tr>
-                            </thead>
-                            {{-- Descarga 2T 2022 --}}
-                            <tr>
-                                <td class="text-center"><b>2T 2022</b></td>
-                                <td>Progreso Cierre Brechas AIO - Reporte 2T 2022</td>
-                                <td class="text-center">
-                                    <a href="/descargar-pdf22022" title="Descargar PDF">
-                                        <i class="far fa-file-pdf"></i>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="/descargar-excel22022" title="Descargar Excel">
-                                        <i class="far fa-file-excel"></i>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="https://drive.google.com/file/d/1FEvILx8jPbG2bPFhLGeCcKTe7px0q_b5/preview" target="reporte" title="Ver Reporte">
-                                        <i class="far fa-eye"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            {{-- Descarga 3T 2022 --}}
-                            <tr>
-                                <td class="text-center"><b>3T 2022</b></td>
-                                <td>Progreso Cierre Brechas AIO - Reporte 3T 2022</td>
-                                <td class="text-center">
-                                    <a href="/descargar-pdf32022" title="Descargar PDF">
-                                        <i class="far fa-file-pdf"></i>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="/descargar-excel32022" title="Descargar Excel">
-                                        <i class="far fa-file-excel"></i>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="https://drive.google.com/file/d/1oYa_DsXVJlu9dLU9BO_zvG3vl6Whl_oJ/preview" target="reporte" title="Ver Reporte">
-                                        <i class="far fa-eye"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            {{-- Descarga 4T 2022 --}}
-                            <tr>
-                                <td class="text-center"><b>4T 2022</b></td>
-                                <td>Progreso Cierre Brechas AIO - Reporte 4T 2022</td>
-                                <td class="text-center">
-                                    <a id="" href="/descargar-pdf42022" title="Descargar PDF">
-                                        <i class="far fa-file-pdf"></i>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="/descargar-excel42022" title="Descargar Excel">
-                                        <i class="far fa-file-excel"></i>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="https://drive.google.com/file/d/1pxMrV-ChtzWXhw_EZJPQFpPIwEtkIILU/preview" target="reporte" title="Ver Reporte">
-                                        <i class="far fa-eye"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            {{-- Descarga 1T 2023 --}}
-                            <tr>
-                                <td class="text-center"><b>1T 2023</b></td>
-                                <td>Progreso Cierre Brechas AIO - Reporte 1T 2023</td>
-                                <td class="text-center">
-                                    <a id="" href="/descargar-pdf12023" title="Descargar PDF">
-                                        <i class="far fa-file-pdf"></i>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="/descargar-excel12023" title="Descargar Excel">
-                                        <i class="far fa-file-excel"></i>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <a href="https://drive.google.com/file/d/1CpV-dzWEtcUBAO28Akw8DC3WGvpt24Gp/preview" target="reporte" title="Ver Reporte">
-                                        <i class="far fa-eye"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
+                    <iframe id="pdfPreview" src="https://drive.google.com/file/d/1CpV-dzWEtcUBAO28Akw8DC3WGvpt24Gp/preview" name="reporte"></iframe>
+                    <div class="descargar__container">
+                        <h3>Progreso Cierre Brechas AIO</h3>
+                        <select id="selectReporte" onchange="cambiarReporte()">
+                            <option value="reporte1">Reporte 2T 2022</option>
+                            <option value="reporte2">Reporte 3T 2022</option>
+                            <option value="reporte3">Reporte 4T 2022</option>
+                            <option value="reporte4">Reporte 1T 2023</option>
+                        </select>
+                        <h3>Descargar</h3>
+                        <div id="contenedorEtiquetas">
+                            <a id="reporte__pdf" href="/descargar-pdf22022" download>
+                                <i class="far fa-file-pdf"></i>
+                                <p id="name__reporte__1">Reporte 2T 2022</p>
+                            </a>
+                            <br>
+                            <a id="reporte__xlsx" href="/descargar-excel22022" download>
+                                <i class="far fa-file-excel"></i>
+                                <p id="name__reporte__2">Reporte 2T 2022</p>
+                            </a>
+                        </div>                        
                     </div>
                 </section>
                 <br>
@@ -159,9 +75,9 @@
         </div>
         <!-- Trimestral End -->
         @extends('layouts.footer')
-        
     </div>
     <!-- JavaScript Libraries -->
+    <script src="{{ asset('js/descargas.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -143,7 +143,7 @@
     <div class="container">
         <div class="copyright">
             <div class="row">
-                <div class="col-md-12 text-center text-center mb-3 mb-md-0">
+                <div class="col-md-12 text-center mb-3 mb-md-0">
                     <a href="/">SAD</a>, Sistema de Administración del Desarrollo
                     <p>&copy; <script>document.write(new Date().getFullYear());</script> | Todos los derechos reservados.</p>
                 </div>

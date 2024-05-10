@@ -1,7 +1,7 @@
 var map = L.map('map-rsm');
 
 L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
-    attribution:'Centro para la Competitividad y el Desarrollo',
+    attribution:'Sistema de Administración del Desarrollo',
     minZoom: 1,
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3'],

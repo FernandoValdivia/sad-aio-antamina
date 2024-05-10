@@ -27,7 +27,7 @@
                     <a href="/reporte" class="nav-item nav-link drop-item {{ Request::is('reporte*') ? 'active' : '' }}">Brechas</a>
                 </div>
             </div>
-            <button class="nav-item nav-link nav-modal" onclick="abrirModal2()">Simulación</button>
+            {{-- <button class="nav-item nav-link nav-modal" onclick="abrirModal2()">Simulación</button> --}}
             {{-- Dark/Light Mode --}}
             <div class="btn-switch">
                 <button class="switch" id="switch">
@@ -36,9 +36,8 @@
                 </button>
             </div>
         </div>
-    </div> 
+    </div>
 </nav>
 <!-- Navbar End -->
 {{-- Switch Dark/Light Mode --}}
-<audio id="audio" src="{{ asset('audio/switch.mp3') }}"></audio>
 <script src="{{ asset('js/switch.js') }}"></script>

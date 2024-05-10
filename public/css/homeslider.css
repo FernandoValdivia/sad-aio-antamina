@@ -34,7 +34,7 @@ body.dark .home_container {
 }
 
 .home_left h1 {
-	font-size: 270%;
+	font-size: 6vh;
     font-weight: 600;
     color: #fff;
     font-family: inherit;

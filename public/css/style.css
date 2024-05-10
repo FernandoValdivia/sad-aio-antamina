@@ -2988,6 +2988,17 @@ strong {
     opacity: 0;
 }
 
+#introduccion {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#introduccion iframe {
+    width: 100%;
+    height: 100vh;
+}
+
 /* Resposive Design */
 /* Home */
 
@@ -3008,6 +3019,10 @@ body, html {
 
     .drop-menu, .dropwdown-container:hover .drop-item {
         width: 100% !important;
+    }
+
+    #introduccion {
+        flex-direction: column-reverse !important;
     }
 }
 
@@ -3046,6 +3061,7 @@ body, html {
     .pt-5 {
         padding-top: 1rem !important;
     }
+
 }
 
 
@@ -4458,7 +4474,7 @@ div .legendp img {
 
 @media (min-width: 992px) {
     .navbar-dark {
-        position: absolute; 
+        position: fixed; 
         display: flex;
         top: 0 !important; 
         left: 0 !important; 
@@ -4469,7 +4485,7 @@ div .legendp img {
         box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px;
         border-radius: 0px;
         transition: .3s ease all;
-        z-index: 450;
+        z-index: 9999;
     }
 
     .sticky-top.navbar-dark {
@@ -5027,11 +5043,6 @@ form .form-row .textarea {
     color: var(--sadcolor);
 }
 
-#introduccion iframe {
-    width: 100%;
-    height: 100vh;
-}
-
 /* Cambiar logo según el tamaño del dispositivo */
 #sadlogo {
     background: url(/img/logo-large.svg);
@@ -5095,4 +5106,66 @@ p {
 
 .no-scroll {
     overflow-y: hidden;
+}
+
+.descargar__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: fit-content;
+    min-width: 400px;
+    border-radius: 5px;
+    gap: .5rem;
+}
+
+.descargar__container h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+.descargar__container select {
+    padding: .5rem;
+    border: #CCCCCC 1px solid;
+    border-radius: 5px;
+}
+
+.descargar__container select:hover {
+    background-color: #f3f4f6;
+}
+
+.descargar__container #reporte__pdf {
+    border-radius: 5px;
+    color: #ef4444;
+    background-color: #fee2e2;
+    gap: 1rem;
+}
+
+.descargar__container #reporte__pdf:hover {
+    background-color: #fecaca;
+}
+
+.descargar__container #reporte__xlsx {
+    border-radius: 5px;
+    color: #22c55e;
+    background-color: #dcfce7;
+    gap: 1rem;
+}
+
+.descargar__container #reporte__xlsx:hover {
+    background-color: #bbf7d0;
+}
+
+#contenedorEtiquetas a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000;
+}
+
+#contenedorEtiquetas p {
+    margin: .5rem 0;
 }
