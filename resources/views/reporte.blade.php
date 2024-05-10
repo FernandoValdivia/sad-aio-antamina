@@ -47,6 +47,30 @@
                 </div>
                 {{-- Introducción --}}
                 <section id="introduccion">
+                    <iframe id="pdfPreview" src="https://drive.google.com/file/d/1CpV-dzWEtcUBAO28Akw8DC3WGvpt24Gp/preview" name="reporte"></iframe>
+                    <div class="descargar__container">
+                        <h3>Progreso Cierre Brechas AIO</h3>
+                        <select id="selectReporte" onchange="cambiarReporte()">
+                            <option value="reporte1">Reporte 2T 2022</option>
+                            <option value="reporte2">Reporte 3T 2022</option>
+                            <option value="reporte3">Reporte 4T 2022</option>
+                            <option value="reporte4">Reporte 1T 2023</option>
+                        </select>
+                        <h3>Descargar</h3>
+                        <div id="contenedorEtiquetas">
+                            <a id="reporte__pdf" href="/descargar-pdf22022" download>
+                                <i class="far fa-file-pdf"></i>
+                                <p id="name__reporte__1">Reporte 2T 2022</p>
+                            </a>
+                            <br>
+                            <a id="reporte__xlsx" href="/descargar-excel22022" download>
+                                <i class="far fa-file-excel"></i>
+                                <p id="name__reporte__2">Reporte 2T 2022</p>
+                            </a>
+                        </div>                        
+                    </div>
+                </section>
+                <br>
             </div>
         </div>
         <!-- Trimestral End -->
